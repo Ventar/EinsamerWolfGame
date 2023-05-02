@@ -4,7 +4,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class UIService {
-
+    /**
+     * Renders things
+     * @param text
+     * @param options
+     * @return
+     */
     public int render(String text, int options) {
 
         // VALDIERUNG
@@ -34,6 +39,15 @@ public class UIService {
 
 
         return 0;
+    }
+
+    /**
+     * Wait for player input
+     * @return
+     */
+    public String waitForUserInput(){
+
+        return null;
     }
 
 

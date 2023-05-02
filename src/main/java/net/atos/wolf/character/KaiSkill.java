@@ -1,4 +1,4 @@
-package net.atos.wolf;
+package net.atos.wolf.character;
 
 public enum KaiSkill {
 
