@@ -1,7 +1,10 @@
 package net.atos.wolf.services;
 
+import net.atos.wolf.framework.Service;
+
 import java.util.Random;
 
+@Service
 public class DiceService {
 
     private static final Random RANDOM = new Random();
