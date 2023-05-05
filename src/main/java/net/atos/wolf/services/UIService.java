@@ -50,5 +50,23 @@ public class UIService {
         return null;
     }
 
+    public static void main(String[] args) {
+        String s = """                
+                Willkommen zum Einsamer Wolf Spiel.
+                Möchtest du ein neues Spiel starten (1) oder
+                einen bestehenden Character laden (2) ?              
+                """;
+
+        System.out.println(s);
+        System.out.println(">");
+
+
+        UIService service = new UIService();
+
+        int selection = service.render(s,2);
+
+
+    }
+
 
 }

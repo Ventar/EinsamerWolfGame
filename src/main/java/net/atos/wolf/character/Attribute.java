@@ -1,5 +1,7 @@
 package net.atos.wolf.character;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,6 +12,8 @@ import lombok.Setter;
  * @since 2023-05-04
  */
 @Getter
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Attribute {
 
     /**
@@ -21,6 +25,10 @@ public class Attribute {
      * The current value of the attribute.
      */
     private int value = 0;
+
+    private Attribute() {
+
+    }
 
     /**
      * Creates a new instance of this class
@@ -64,7 +72,6 @@ public class Attribute {
         value = value + addNumber;
 
         return value;
-
     }
 
     /**
@@ -76,21 +83,16 @@ public class Attribute {
     public int remove(int removeNumber) {
 
         if (removeNumber < 0) {
-
             throw new IllegalArgumentException("The removed value has to be positive for attribute ::= [" + name + "]");
-
         }
 
         if (value - removeNumber < 0) {
-
             throw new IllegalArgumentException("You cannot remove number ::= [" + removeNumber + "] from the current value of ::= [" + value + "] for attribute ::= [" + name + "]");
-
         }
 
         value = value - removeNumber;
 
         return value;
-
     }
 
     /**
@@ -114,10 +116,5 @@ public class Attribute {
                 ", value=" + value +
                 '}';
     }
-
-    public static void main(String[] args) {
-
-    }
-
 
 }

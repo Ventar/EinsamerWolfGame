@@ -1,6 +1,14 @@
 package net.atos.wolf.services;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import net.atos.wolf.character.Character;
+import net.atos.wolf.character.Item;
+import net.atos.wolf.character.KaiSkill;
+import net.atos.wolf.character.SpecialItem;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 /**
  * handles character options
@@ -28,5 +36,29 @@ public class CharacterService {
      */
     public void loadCharacter(String loadedCharacter){
 
+    }
+
+
+
+    public static void main(String[] args) throws IOException {
+
+        Character juli = new Character();
+        juli.addItemToBackpack(Item.CINDER);
+        juli.addItemToBackpack(Item.FIREBOTTLE);
+        juli.addItemToBackpack(Item.GOLDENKEY);
+        juli.addSpecialItem(SpecialItem.CHAIN_MAIL);
+        juli.addSkill(KaiSkill.HEALING);
+        juli.addSkill(KaiSkill.HUNTING);
+        juli.addSkill(KaiSkill.MENTAL_DEFENCE);
+
+        ObjectMapper mapper = new ObjectMapper();
+        String fileName = "C:\\Development\\EinsamerWolfGame\\juli.char";
+        Path filePath = Path.of(fileName);
+
+        //Files.write(filePath, mapper.writerWithDefaultPrettyPrinter().writeValueAsString(juli).getBytes(StandardCharsets.UTF_8));
+
+        String content = Files.readString(filePath);
+
+        System.out.println(mapper.readValue(content, Character.class));
     }
 }

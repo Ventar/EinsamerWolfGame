@@ -1,10 +1,24 @@
 package net.atos.wolf.character;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Getter;
 
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 
 @Getter
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Character {
 
     public static final int BASE_STRENGTH = 10;
@@ -13,7 +27,7 @@ public class Character {
 
     private boolean hasBackpack = true;
 
-    private Weapon weaponOne = null;
+    private Weapon weaponOne = Weapon.AXE;
     private Weapon weaponTwo = null;
 
     private ArrayList backpack = new ArrayList<Item>();
@@ -30,17 +44,13 @@ public class Character {
     private int section = 0;
 
     /**
-     * add a skill from the catogery to the character
+     * Add a skill to the character
      *
      * @param kaiSkill
      * @return
      */
     public void addSkill(KaiSkill kaiSkill) {
-
         skills.add(kaiSkill);
-
-
-
     }
 
 
@@ -116,43 +126,22 @@ public class Character {
 
     }
 
-
-    public static void main(String[] args) {
-
-        Character juli = new Character();
-        juli.getGold().add(5);
-
-        System.out.println(juli.getGold());
-
-
-        Character noel = new Character();
-        noel.getGold().add(10);
-
-        System.out.println(noel.getGold());
-
-
-        noel.getGold().remove(3);
-
-        System.out.println(noel.getGold());
-
-        juli.addItemToBackpack(Item.CINDER);
-        juli.addItemToBackpack(Item.FIREBOTTLE);
-
-
-        System.out.println(juli.backpack);
-
-
-        juli.addSpecialItem(SpecialItem.CHAIN_MAIL);
-        System.out.println(juli.specialItemsList);
-
-
-        juli.addSkill(KaiSkill.HEALING);
-        juli.addSkill(KaiSkill.HUNTING);
-        juli.addSkill(KaiSkill.MENTAL_DEFENCE);
-
-        System.out.println(juli.skills);
-
-
+    @Override
+    public String toString() {
+        return "Character{" +
+                "hasBackpack=" + hasBackpack +
+                ", weaponOne=" + weaponOne +
+                ", weaponTwo=" + weaponTwo +
+                ", backpack=" + backpack +
+                ", specialItemsList=" + specialItemsList +
+                ", skills=" + skills +
+                ", gold=" + gold +
+                ", food=" + food +
+                ", combatStrength=" + combatStrength +
+                ", endurance=" + endurance +
+                ", section=" + section +
+                '}';
     }
+
 
 }
