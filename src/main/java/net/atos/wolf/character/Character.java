@@ -1,218 +1,158 @@
 package net.atos.wolf.character;
 
+import lombok.Getter;
+
 import java.util.ArrayList;
 
+@Getter
 public class Character {
-
-
-    Boolean hasBackpack = false;
-
-    private int food;
-
-    private int gold;
-
-    private Weapon weaponOne = Weapon.AXE;
-    private Weapon weaponTwo = Weapon.DAGGER;
-
-    private ArrayList backpack = new ArrayList<Item>();
-
-    private ArrayList specialItems = new ArrayList<SpecialItem>();
-
-    private ArrayList skills = new ArrayList<KaiSkill>();
 
     public static final int BASE_STRENGTH = 10;
 
     public static final int BASE_ENDURANCE = 20;
 
-    private int combantStrenght;
+    private boolean hasBackpack = true;
 
-    private int endurance;
+    private Weapon weaponOne = null;
+    private Weapon weaponTwo = null;
 
-    private int section;
+    private ArrayList backpack = new ArrayList<Item>();
+
+    private ArrayList specialItemsList = new ArrayList<SpecialItem>();
+
+    private ArrayList skills = new ArrayList<KaiSkill>();
+
+    private Attribute gold = new Attribute("Gold", 0);
+    private Attribute food = new Attribute("Food", 0);
+    private Attribute combatStrength = new Attribute("CombatStrength", 0);
+    private Attribute endurance = new Attribute("Endurance", 0);
+
+    private int section = 0;
 
     /**
      * add a skill from the catogery to the character
+     *
      * @param kaiSkill
      * @return
      */
-    public KaiSkill addSkill(KaiSkill kaiSkill) {
+    public void addSkill(KaiSkill kaiSkill) {
 
-        return kaiSkill;
+        skills.add(kaiSkill);
+
+
+
     }
 
-    /**
-     * get the current weapon on the first weapon slot
-     * @return
-     */
-    public Weapon getWeaponOne() {
-        return weaponOne;
-    }
-
-    /**
-     * get the current weapon on the second weapon slot
-     * @return
-     */
-    public Weapon getWeaponTwo() {
-        return weaponTwo;
-    }
 
     /**
      * remove the item from the backpack
      */
     public void removeBackpack() {
-
-
+        backpack.clear();
+        hasBackpack = false;
     }
 
     /**
      * add a item to the backpack
+     *
      * @param item
      */
     public void addItemToBackpack(Item item) {
-
+        if (hasBackpack == true) {
+            backpack.add(item);
+        }
     }
 
     /**
-     * remove a item from the backpack
+     * Remove an item from the backpack
+     *
      * @param item
      */
     public void removeItemFromBackpack(Item item) {
-
+        if (hasBackpack == true && backpack.contains(item)) {
+            backpack.remove(item);
+        }
     }
 
+
     /**
-     * checks if the item that requirred is given
+     * Checks if the item that requirred is given
+     *
      * @param item
      */
-    public void hasItem(Item item){
+    public void hasItem(Item item) {
 
 
     }
 
     /**
      * add a special / rare item to the list
+     *
      * @param specialItem
      */
-    public void addSpecialItem(SpecialItem specialItem){
+    public void addSpecialItem(SpecialItem specialItem) {
 
-
+        specialItemsList.add(specialItem);
 
     }
 
     /**
      * remove a special / rare item from the list
+     *
      * @param specialItem
      */
-    public void removeSpecialItem(SpecialItem specialItem){
-
+    public void removeSpecialItem(SpecialItem specialItem) {
+        if (specialItemsList.contains(specialItem)) {
+            specialItemsList.remove(specialItem);
+        }
     }
 
     /**
      * checks if the rare special item that needed is given
+     *
      * @param item
      */
-    public void hasSpecialItem(Item item){
+    public void hasSpecialItem(Item item) {
 
     }
 
-    /**
-     * add gold to the character
-     * @param gold
-     * @return
-     */
-    public int addGold (int gold){
-        return gold;
+
+    public static void main(String[] args) {
+
+        Character juli = new Character();
+        juli.getGold().add(5);
+
+        System.out.println(juli.getGold());
+
+
+        Character noel = new Character();
+        noel.getGold().add(10);
+
+        System.out.println(noel.getGold());
+
+
+        noel.getGold().remove(3);
+
+        System.out.println(noel.getGold());
+
+        juli.addItemToBackpack(Item.CINDER);
+        juli.addItemToBackpack(Item.FIREBOTTLE);
+
+
+        System.out.println(juli.backpack);
+
+
+        juli.addSpecialItem(SpecialItem.CHAIN_MAIL);
+        System.out.println(juli.specialItemsList);
+
+
+        juli.addSkill(KaiSkill.HEALING);
+        juli.addSkill(KaiSkill.HUNTING);
+        juli.addSkill(KaiSkill.MENTAL_DEFENCE);
+
+        System.out.println(juli.skills);
+
+
     }
 
-    /**
-     * remove gold from the character
-     * @param gold
-     * @return
-     */
-    public int removeGold(int gold){
-
-        return gold;
-    }
-
-    /**
-     * get the current amount of gold from the character
-     * @return
-     */
-    public int getGold() {
-        return gold;
-    }
-
-    /**
-     * add food to the character
-     * @param food
-     * @return
-     */
-    public int addFood(int food){
-        return food;
-    }
-
-    /**
-     * remove food from the character
-     * @param food
-     * @return
-     */
-    public int removeFood(int food){
-        return food;
-    }
-
-    /**
-     * get the current amount of food from the character
-     * @return
-     */
-    public int getFood() {
-        return food;
-    }
-
-    /**
-     * get the current combat strenght from the character
-     * @return
-     */
-    public int getCombantStrenght() {
-        return combantStrenght;
-    }
-
-    /**
-     * set the combat strenght
-     * @param combantStrenght
-     */
-    public void setCombantStrenght(int combantStrenght) {
-        this.combantStrenght = combantStrenght;
-    }
-
-    /**
-     * get the current endurance from the character
-     * @return
-     */
-    public int getEndurance() {
-        return endurance;
-    }
-
-    /**
-     * set the endurance for the character
-     * @param endurance
-     */
-    public void setEndurance(int endurance) {
-        this.endurance = endurance;
-    }
-
-    /**
-     * give the current section of the book/story
-     * @return
-     */
-    public int getSection() {
-        return section;
-    }
-
-    /**
-     * set/go to the next section from the book/story
-     * @param section
-     */
-    public void setSection(int section) {
-        this.section = section;
-    }
 }

@@ -61,7 +61,7 @@ public abstract class AbstractApplication implements Runnable {
             Object serviceToInjectTo = entry.getValue();
             Class<?> clazz = entry.getKey();
 
-            log.debug("Perform dependency injection for class ::= [{}]", clazz.getName());
+            log.debug("Perform dependency injection for class ::= [{}].", clazz.getName());
 
             Arrays.stream(clazz.getDeclaredFields()).filter(f -> f.isAnnotationPresent(Inject.class)).forEach(f ->
             {

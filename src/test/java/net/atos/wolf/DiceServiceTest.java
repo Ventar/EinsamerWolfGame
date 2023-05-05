@@ -57,7 +57,7 @@ public class DiceServiceTest {
 
     }
 
-
+    @Test
     public void testGenerateMinMax_MAXIsToHigh() {
         DiceService diceService = new DiceService();
 

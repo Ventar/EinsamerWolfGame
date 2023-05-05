@@ -1,5 +1,6 @@
 package net.atos.wolf;
 
+import net.atos.wolf.character.Character;
 import net.atos.wolf.framework.AbstractApplication;
 import net.atos.wolf.framework.Inject;
 import net.atos.wolf.framework.Service;
@@ -25,6 +26,7 @@ public class Application extends AbstractApplication {
     public static void main(String[] args) {
         Application app = new Application();
         app.run();
+
     }
 
 }

@@ -35,7 +35,7 @@ public class DiceService {
         }
 
         if (max > 100) {
-            throw new IllegalArgumentException("Max value must be less or equal to 100 0");
+            throw new IllegalArgumentException("Max value must be less or equal to 100");
         }
 
         if (max < min) {
