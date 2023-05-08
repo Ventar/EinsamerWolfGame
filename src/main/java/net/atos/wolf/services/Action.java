@@ -1,6 +1,2 @@
-package net.atos.wolf.services;
-
-public interface Action {
-
-
+package net.atos.wolf.services;public class Action {
 }
