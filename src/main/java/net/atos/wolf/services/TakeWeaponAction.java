@@ -1,4 +1,4 @@
 package net.atos.wolf.services;
 
-public class TakeWeaponAction implements Action{
+public class TakeWeaponAction {
 }
