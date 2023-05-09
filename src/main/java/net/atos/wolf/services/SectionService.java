@@ -1,34 +1,25 @@
 package net.atos.wolf.services;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class SectionService {
-    /**
-     * Loads book, with every section given
-     */
-    public void loadBook(){
 
-
-    }
+    private HashMap<Integer, Section> sections = new HashMap<>();
 
     /**
-     * Get the current section
-     * @param i
+     * Get the section with the passed number
+     *
+     * @param idToLoad the {@link Section#getSectionNumber()} if the section to load
      * @return Section
      */
-    public Section getSection(int i){
-        return null;
+    public Section getSection(int idToLoad) {
+        return sections.get(idToLoad);
     }
 
-    /**
-     * Starts the first section
-     */
-    public void getStartSection(){
-
+    public void addSection(Section section) {
+        sections.put(section.getSectionNumber(), section);
     }
 
-    /**
-     * Loads the Prolog text
-     */
-    public void getProlog(){
 
-    }
 }

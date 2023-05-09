@@ -16,13 +16,17 @@ public class Action {
 
     private KaiSkill skill;
 
+    private String text;
 
-    public void setMandatory(boolean mandatory) {
+
+    public Action setMandatory(boolean mandatory) {
         this.mandatory = mandatory;
+        return this;
     }
 
-    public void setTargetSection(int targetSection) {
+    public Action setTargetSection(int targetSection) {
         this.targetSection = targetSection;
+        return this;
     }
 
     public int getTargetSection() {
@@ -37,23 +41,50 @@ public class Action {
         return type;
     }
 
-    public void setType(ActionType type) {
+    public Action setType(ActionType type) {
         this.type = type;
+        return this;
     }
 
-    public void setSkill(KaiSkill skill) {
+    public Action setSkill(KaiSkill skill) {
         this.skill = skill;
+        return this;
     }
 
     public KaiSkill isSkill() {
         return skill;
     }
 
+    public String getText() {
+        return text;
+    }
+
+    public Action setText(String text) {
+        this.text = text;
+        return this;
+    }
+
+
+
     public String toString() {
+        String s = "";
+
+
+        if (text == null) {
+            s = s + "text = null \n";
+        } else if (text.length() < 15) {
+            s = s + "text=" + this.text + "\n";
+        } else {
+            s = s + "text=" + this.text.substring(0, 15) + "...\n";
+        }
+
+
         return "Action{" +
                 "mandatory=" + mandatory +
                 ", targetSection=" + targetSection +
                 ", type=" + type +
+                ", text=" + s +
+                ", skill=" + skill +
                 '}';
     }
 }

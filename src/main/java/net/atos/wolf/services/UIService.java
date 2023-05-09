@@ -1,16 +1,19 @@
 package net.atos.wolf.services;
 
+import java.sql.SQLOutput;
+import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
 
 public class UIService {
     /**
      * Renders things
+     *
      * @param text
      * @param options
      * @return
      */
-    public int render(String text, int options) {
+    public int render(String text, Collection<AnswerOption> options) {
 
         // VALDIERUNG
         // --------------------------------------------------------------
@@ -24,12 +27,19 @@ public class UIService {
 
         // TEXT AUSGABE
         // --------------------------------------------------------------
-
+        System.out.println(text);
         // Ausgabe des Textes auf der KOmmandozeile
         // Schleife und Ausgabe der Optionen, rendern von Nummern
-
+        for (AnswerOption answerOption : options) {
+            System.out.println("(" + answerOption.getAnswer() + ") " + answerOption.getText());
+        }
         // EINGABE
         // --------------------------------------------------------------
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Wähle einen Weg");
+
+        int userChoice = scanner.nextInt();
+
 
         // Anlegen eines Scanners
         // Überprüfen pb gültige Werte eingegeben wurden
@@ -38,34 +48,17 @@ public class UIService {
         // Rückgabe eines integer Wertes
 
 
-        return 0;
+        return userChoice;
     }
 
     /**
      * Wait for player input
+     *
      * @return
      */
-    public String waitForUserInput(){
+    public String waitForUserInput() {
 
         return null;
-    }
-
-    public static void main(String[] args) {
-        String s = """                
-                Willkommen zum Einsamer Wolf Spiel.
-                Möchtest du ein neues Spiel starten (1) oder
-                einen bestehenden Character laden (2) ?              
-                """;
-
-        System.out.println(s);
-        System.out.println(">");
-
-
-        UIService service = new UIService();
-
-        int selection = service.render(s,2);
-
-
     }
 
 
