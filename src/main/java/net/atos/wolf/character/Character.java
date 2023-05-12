@@ -27,7 +27,7 @@ public class Character {
 
     private boolean hasBackpack = true;
 
-    private Weapon weaponOne = Weapon.AXE;
+    private Weapon weaponOne = null;
     private Weapon weaponTwo = null;
 
     private ArrayList backpack = new ArrayList<Item>();
@@ -60,6 +60,10 @@ public class Character {
     public void removeBackpack() {
         backpack.clear();
         hasBackpack = false;
+    }
+
+    public void addWeapon(Weapon weapon){
+
     }
 
     /**
@@ -124,6 +128,22 @@ public class Character {
      */
     public void hasSpecialItem(Item item) {
 
+    }
+
+    public Attribute getCombatStrength() {
+        return combatStrength;
+    }
+
+    public void setCombatStrength(Attribute combatStrength) {
+        this.combatStrength = combatStrength;
+    }
+
+    public Attribute getEndurance() {
+        return endurance;
+    }
+
+    public void setEndurance(Attribute endurance) {
+        this.endurance = endurance;
     }
 
     @Override

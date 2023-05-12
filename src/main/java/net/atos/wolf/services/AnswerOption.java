@@ -11,4 +11,11 @@ public class AnswerOption {
     private int answer = 0;
 
 
+    @Override
+    public String toString() {
+        return "AnswerOption{" +
+                "text='" + text + '\'' +
+                ", answer=" + answer +
+                '}';
+    }
 }

@@ -3,8 +3,7 @@ package net.atos.wolf.services;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import net.atos.wolf.character.KaiSkill;
-
-import java.lang.reflect.Type;
+import net.atos.wolf.character.Weapon;
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -17,6 +16,8 @@ public class Action {
     private KaiSkill skill;
 
     private String text;
+
+    private Weapon weapon;
 
 
     public Action setMandatory(boolean mandatory) {
@@ -64,7 +65,14 @@ public class Action {
         return this;
     }
 
+    public Weapon getWeapon() {
+        return weapon;
+    }
 
+    public Action setWeapon(Weapon weapon) {
+        this.weapon = weapon;
+        return this;
+    }
 
     public String toString() {
         String s = "";
@@ -85,6 +93,7 @@ public class Action {
                 ", type=" + type +
                 ", text=" + s +
                 ", skill=" + skill +
+                ", weapon=" + weapon +
                 '}';
     }
 }

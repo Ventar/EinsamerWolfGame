@@ -4,8 +4,8 @@ public class Enemy {
 
 
     private String name;
-    private int combatStrength;
-    private int endurance;
+    private Attribute combatStrength;
+    private Attribute endurance;
 
     /**
      * Returns the name of the enemy.
@@ -25,9 +25,10 @@ public class Enemy {
 
     /**
      * get the enemies combatstrenght
+     *
      * @return
      */
-    public int getCombatStrength() {
+    public Attribute getCombatStrength() {
         return combatStrength;
     }
 
@@ -35,15 +36,16 @@ public class Enemy {
      * set enemys combatstrength
      * @param combatStrength
      */
-    public void setCombatStrength(int combatStrength) {
+    public void setCombatStrength(Attribute combatStrength) {
         this.combatStrength = combatStrength;
     }
 
     /**
      * get enemys Endurance
+     *
      * @return
      */
-    public int getEndurance() {
+    public Attribute getEndurance() {
         return endurance;
     }
 
@@ -51,7 +53,7 @@ public class Enemy {
      * set enemys endurance
      * @param endurance
      */
-    public void setEndurance(int endurance) {
+    public void setEndurance(Attribute endurance) {
         this.endurance = endurance;
     }
 }

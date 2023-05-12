@@ -1,10 +1,8 @@
 package net.atos.wolf.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import net.atos.wolf.character.*;
 import net.atos.wolf.character.Character;
-import net.atos.wolf.character.Item;
-import net.atos.wolf.character.KaiSkill;
-import net.atos.wolf.character.SpecialItem;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -43,6 +41,8 @@ public class CharacterService {
     public static void main(String[] args) throws IOException {
 
         Character juli = new Character();
+        Enemy enemy = new Enemy();
+
         juli.addItemToBackpack(Item.CINDER);
         juli.addItemToBackpack(Item.FIREBOTTLE);
         juli.addItemToBackpack(Item.GOLDENKEY);
@@ -50,6 +50,10 @@ public class CharacterService {
         juli.addSkill(KaiSkill.HEALING);
         juli.addSkill(KaiSkill.HUNTING);
         juli.addSkill(KaiSkill.MENTAL_DEFENCE);
+
+
+        juli.setEndurance(new Attribute("", 10));
+        enemy.setEndurance(10);
 
         ObjectMapper mapper = new ObjectMapper();
         String fileName = "C:\\Development\\EinsamerWolfGame\\juli.char";

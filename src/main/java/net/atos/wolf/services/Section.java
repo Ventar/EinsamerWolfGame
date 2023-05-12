@@ -3,6 +3,7 @@ package net.atos.wolf.services;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import net.atos.wolf.character.KaiSkill;
+import net.atos.wolf.character.Weapon;
 
 import java.util.ArrayList;
 
@@ -43,7 +44,8 @@ public class Section {
         actions.add(action);
     }
 
-    public Section addAction(int targetSectionNumber, boolean mandatory, ActionType actionType, String actionText, KaiSkill skill) {
+
+    public Section addAction(int targetSectionNumber, boolean mandatory, ActionType actionType, String actionText, KaiSkill skill, Weapon weapon) {
 
         Action action = new Action();
 
@@ -52,10 +54,15 @@ public class Section {
         action.setType(actionType);
         action.setText(actionText);
         action.setSkill(skill);
+        action.setWeapon(weapon);
 
         addAction(action);
 
         return this;
+    }
+    public Action accusation(int i){
+        return actions.get(i);
+        
     }
 
 

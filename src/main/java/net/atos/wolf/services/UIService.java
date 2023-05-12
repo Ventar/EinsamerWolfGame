@@ -2,6 +2,7 @@ package net.atos.wolf.services;
 
 import java.sql.SQLOutput;
 import java.util.Collection;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,7 +14,7 @@ public class UIService {
      * @param options
      * @return
      */
-    public int render(String text, Collection<AnswerOption> options) {
+    public AnswerOption render(String text, Collection<AnswerOption> options) {
 
         // VALDIERUNG
         // --------------------------------------------------------------
@@ -27,6 +28,7 @@ public class UIService {
 
         // TEXT AUSGABE
         // --------------------------------------------------------------
+        System.out.println("\n--------------------------------------------------------------\n");
         System.out.println(text);
         // Ausgabe des Textes auf der KOmmandozeile
         // Schleife und Ausgabe der Optionen, rendern von Nummern
@@ -36,9 +38,26 @@ public class UIService {
         // EINGABE
         // --------------------------------------------------------------
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Wähle einen Weg");
+        System.out.println("\nWähle einen Option");
 
-        int userChoice = scanner.nextInt();
+
+        for (; ; ) {
+
+            try {
+                String userChoice = scanner.nextLine();
+                int i = Integer.parseInt(userChoice);
+                for (AnswerOption a : options) {
+                    if (i == a.getAnswer()) {
+                        return a;
+                    }
+                }
+                System.out.println("Bitte wähle eine gültige Option");
+            } catch (NumberFormatException e) {
+                System.out.println("Nur Zahlenwerte sind gültig.");
+            }
+
+
+        }
 
 
         // Anlegen eines Scanners
@@ -48,7 +67,6 @@ public class UIService {
         // Rückgabe eines integer Wertes
 
 
-        return userChoice;
     }
 
     /**
