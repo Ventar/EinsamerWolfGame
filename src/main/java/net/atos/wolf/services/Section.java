@@ -100,7 +100,7 @@ public class Section {
 
 
 
-file = new File("C:EinsamerWolfGame/src/main/resources/lw1.data.json");
+file = new File("C:/Development/EinsamerWolfGame/src/main/resources/sections.json");
 
         try {
             file.createNewFile();

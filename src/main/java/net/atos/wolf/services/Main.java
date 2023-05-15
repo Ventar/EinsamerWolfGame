@@ -146,6 +146,9 @@ public class Main {
 
         List<Section> sections = sectionService.getSections();
         System.out.println(MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(sections));
+        Section section = new Section();
+        List<Section> sectionslist = new ArrayList<>();
+        section.storeSections(sectionslist);
 
 
 
