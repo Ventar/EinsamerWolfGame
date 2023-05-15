@@ -144,6 +144,28 @@ public class Main {
         sectionService.addSection(generateSection332());
         sectionService.addSection(generateSection4());
 
+        List<Section> sections = sectionService.getSections();
+        System.out.println(MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(sections));
+
+
+
+
+
+
+
+
+
+
+
+
+        // 1. Store section list in JSON file in C:\Development\EinsamerWolfGame\src\main\resources\lw1.data
+        // 2. Load sections from that file and convert it to a list in Java
+        // 3. print that list on the command line
+        // FRAMEWORK: JACKSON
+        // Gute Hilfe Baeldung
+
+        /*
+
         Section section = sectionService.getSection(15);
         List<AnswerOption> answerOptions = new LinkedList<>();
 
@@ -170,9 +192,11 @@ public class Main {
             case CHANGE_SECTION_IF_WEAPON: break;
         }
 
+*/
 
 
 
     }
+//    private static String filePath =
 
 }

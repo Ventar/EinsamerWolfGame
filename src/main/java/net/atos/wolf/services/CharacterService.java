@@ -53,7 +53,7 @@ public class CharacterService {
 
 
         juli.setEndurance(new Attribute("", 10));
-        enemy.setEndurance(10);
+        //enemy.setEndurance(10);
 
         ObjectMapper mapper = new ObjectMapper();
         String fileName = "C:\\Development\\EinsamerWolfGame\\juli.char";
