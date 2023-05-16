@@ -1,0 +1,91 @@
+[ {
+  "sectionNumber" : 192,
+  "text" : "Der Schlafsaal ist nun leer. Die Kai-Kadetten, die dir im Korridor\nbegegnet sind, waren die letzten Initianden auf dem Weg zu ihren\nGefechtsstationen. Du gehst zu deiner Pritsche und ziehst den\nkleinen Lederkoffer hervor, der darunter verstaut ist. Er enthält\ndeine wenigen persönlichen Besitztümer.\nVon deinen Büchern beschließt du keine mitzunehmen, da sie zu\nschwer sind und dich vermutlich nur behindern würden. Aber du\nnimmst die 10 Goldkronen, die du in der Zeit gespart hast, seit du\nhier in der Abtei bist, und steckst sie in deine Tasche. (Notiere sie\nauf deinem Aktionsblatt.)\nDer einzige Gegenstand, den du sonst noch besitzt und der sich als\nnützlich erweisen könnte, ist deine Axt. Zwar hast du sie bisher stets\nnur für das Greel-Spiel oder zum Holzhacken benutzt, aber jetzt\nkönntest du sie möglicherweise dazu einsetzen, wofür sie eigentlich\ngedacht war: für die Schlacht! (Wenn du die Axt mitnehmen willst,\nvergiss nicht, sie als Waffe auf deinem Aktionsblatt einzutragen.\nFalls du schon zwei Waffen besitzt, musst du eine davon ablegen.)\nNachdem du deinen Koffer geschlossen und ihn wieder unter die\nPritsche geschoben hast, blickst du dich noch einmal im\nDormitorium um – du hast das ungute Gefühl, dass es das allerletzte\nMal sein könnte. Die Geräusche der Schlacht werden nun immer\nlauter und veranlassen dich, den Schlafsaal schleunigst zu verlassen\nund dich durch den Korridor auf den Weg zur Rüstkammer der Abtei\nzu machen.",
+  "actions" : [ {
+    "type" : "CHANGE_SECTION",
+    "mandatory" : true,
+    "targetSection" : 15,
+    "skill" : null,
+    "text" : "Lies Weiter",
+    "weapon" : "AXE"
+  } ]
+}, {
+  "sectionNumber" : 4,
+  "text" : "Du folgst dem Oberst, während er  sein  Pferd durch die Menschenmenge treibt und sich dabei wenig darum schert, ob ihm die Leute noch rechtzeitig ausweichen können. Dir ist es unmöglich,deinen sommerlendischen Landsleuten gegenüber ein  derartgewissenloses Verhalten an den Tag zu legen, und so hast du den rücksichtslosen Offizier schon bald aus den Augen verloren.Die  breite Prachtstraße, die  sich  am  anderen Ende  des  Platzesanschließt, ist ebenso bevölkert wie der Platz selbst, und dein Pferdist dir auch hier nicht von Vorteil, so dass du widerwillig beschließtabzusteigen und deinen Weg zu Fuß fortzusetzen.Nach etwa fünfzig Metern siehst du eine weitere Straße, die nachlinks  führt.  Auf  einem Schild, das  an  der  Ecke  einer  Taverneangebracht ist, steht \"Farisallee\".",
+  "actions" : [ {
+    "type" : "CHANGE_SECTION",
+    "mandatory" : false,
+    "targetSection" : 289,
+    "skill" : null,
+    "text" : "Biege in diese Seitenstraße ab",
+    "weapon" : null
+  }, {
+    "type" : "CHANGE_SECTION",
+    "mandatory" : false,
+    "targetSection" : 203,
+    "skill" : null,
+    "text" : "Bleibe auf der Hauptstraße",
+    "weapon" : null
+  } ]
+}, {
+  "sectionNumber" : 332,
+  "text" : "Du durchquerst den Wald, bis du an eine Stelle kommst, an der sich der Pfad in zwei Richtungen teilt.",
+  "actions" : [ {
+    "type" : "CHANGE_SECTION_IF_SKILL",
+    "mandatory" : true,
+    "targetSection" : 96,
+    "skill" : "TRACKING",
+    "text" : "Gehe nach Osten",
+    "weapon" : null
+  }, {
+    "type" : "CHANGE_SECTION",
+    "mandatory" : false,
+    "targetSection" : 197,
+    "skill" : null,
+    "text" : null,
+    "weapon" : null
+  }, {
+    "type" : "CHANGE_SECTION",
+    "mandatory" : false,
+    "targetSection" : 380,
+    "skill" : null,
+    "text" : null,
+    "weapon" : null
+  } ]
+}, {
+  "sectionNumber" : 333,
+  "text" : "Du öffnest die Tür und betrittst den Bogengang. Fünf deiner Mitkadetten eilen dir mit gezogenen Waffen entgegen, entschlossen, die Kammern der Kai-Meister zu verteidigen. Du trittst beiseite, um sie passieren zu lassen, und während sie an dir vorbeilaufen, informierst du sie noch über den Angriff, der gerade über der Klosterküche stattfindet. Sie danken dir für die Warnung und ziehen ihre Kapuzen über, während sie den Gang entlangeilen, den du gerade gekommen bist. Schließlich gelangst du zu einer Abzweigung, an der ein weiterer Korridor zur Waffenkammer führt. Direkt vor dir siehst du die offene Tür zu deinem Dormitorium.",
+  "actions" : [ {
+    "type" : "CHANGE_SECTION",
+    "mandatory" : false,
+    "targetSection" : 192,
+    "skill" : null,
+    "text" : "Betrete das Domitorium",
+    "weapon" : null
+  }, {
+    "type" : "CHANGE_SECTION",
+    "mandatory" : false,
+    "targetSection" : 15,
+    "skill" : null,
+    "text" : "Folge dem Korridor zur Rüstkammer",
+    "weapon" : null
+  } ]
+}, {
+  "sectionNumber" : 15,
+  "text" : "Du näherst dich gerade einer Gangbiegung nach rechts, als du\ngedämpften Kampflärm vernimmst, der aus nicht allzu weiter\nEntfernung zu kommen scheint. Mit gezogener Waffe spähst du\nvorsichtig um die Ecke, besorgt darüber, was dich dahinter erwarten\nmag.\nAm anderen Ende des Korridors, nahe der Tür zur Rüstkammer,\nerblickst du einen deiner Freunde. Sein Name ist Schneefalke, und er\nist wie du ein Initiand. Zwar wurden die Wandfackeln bereits alle\ngelöscht, so dass der Gang im Dunkeln liegt, aber dennoch erkennst\ndu ohne jeden Zweifel deinen Freund. Sein schneeweißes Albinohaar\nist im schwachen Licht der Morgendämmerung, das durch das\nzerstörte Fenster in den Korridors fällt, gut zu sehen.\nSchneefalke hat einen Giak-Krieger gepackt und ringt mit ihm. Die\nregungslosen Körper zweier weiterer Eindringlinge liegen in der\nNähe, erschlagen von deinem tapferen Freund. Plötzlich holt der\nGiak zu einem Schlag aus und streift Schneefalke mit dem\nSchwertknauf am Kopf. Schneefalke taumelt zurück, und du siehst,\nwie ihm das Blut von seiner Stirn in die Augen läuft und ihm die\nSicht raubt. Als er hilflos gegen die Tür der Rüstkammer prallt, stößt\nder Giak-Soldat ein hämisches Lachen aus und hebt sein Schwert\nzum tödlichen Hieb.",
+  "actions" : [ {
+    "type" : "CHANGE_SECTION_IF_WEAPON",
+    "mandatory" : false,
+    "targetSection" : 166,
+    "skill" : null,
+    "text" : "Wenn du eine Axt hast",
+    "weapon" : "AXE"
+  }, {
+    "type" : "CHANGE_SECTION",
+    "mandatory" : false,
+    "targetSection" : 477,
+    "skill" : null,
+    "text" : "Wenn du keine Axt hast",
+    "weapon" : null
+  } ]
+} ]

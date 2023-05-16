@@ -11,9 +11,11 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -53,7 +55,6 @@ public class Section {
     }
 
 
-
     public Section addAction(int targetSectionNumber, boolean mandatory, ActionType actionType, String actionText, KaiSkill skill, Weapon weapon) {
 
         Action action = new Action();
@@ -69,23 +70,22 @@ public class Section {
 
         return this;
     }
-    public Action accusation(int i){
+
+    public Action accusation(int i) {
         return actions.get(i);
-        
+
     }
-    public void storeSections(List<Section> sections){
+
+    public void storeSections(List<Section> sections) {
         File file = null;
         JSONArray jsonArray = new JSONArray();
         JSONObject object = new JSONObject();
         JSONObject objectItem = new JSONObject();
-        //Initialize new Instance of an Json Array
-        //Initialize new Instance of an Json Object as object
-        //Initialize new Instance of an Json Object as objectItem
-        for(int i = 0; i < sections.size(); i++) {
-            objectItem.put("sectionNumber",sections.get(i).getSectionNumber());
-            objectItem.put("text",sections.get(i).getText());
-            objectItem.put("actions",sections.get(i).getActions());
-            object.put("list",objectItem);
+        for (int i = 0; i < sections.size(); i++) {
+            objectItem.put("sectionNumber", sections.get(i).getSectionNumber());
+            objectItem.put("text", sections.get(i).getText());
+            objectItem.put("actions", sections.get(i).getActions());
+            object.put("list", objectItem);
             jsonArray.put(object);
 
 
@@ -99,8 +99,7 @@ public class Section {
         // Write Json Array into File
 
 
-
-file = new File("C:/Development/EinsamerWolfGame/src/main/resources/sections.json");
+        file = new File("C:/Development/EinsamerWolfGame/src/main/resources/sections.json");
 
         try {
             file.createNewFile();
@@ -108,9 +107,82 @@ file = new File("C:/Development/EinsamerWolfGame/src/main/resources/sections.jso
             fileWriter.write(jsonArray.toString());
             fileWriter.flush();
             fileWriter.close();
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public List<Section> Filetoread() throws FileNotFoundException {
+        List<Section> list = new ArrayList<>();
+        Section section = new Section();
+        int maus = 0;
+        JSONObject obj = new JSONObject();
+
+        JSONObject jobject = new JSONObject();
+        File file = selectFile();
+        Scanner scanner = new Scanner(file);
+        System.out.println(scanner);
+        while (scanner.hasNextLine()) {
+            String s = scanner.nextLine();
+            JSONArray fileArray = new JSONArray(s);
+            for (int i = 0; i < fileArray.length(); i++) {
+                jobject = fileArray.getJSONObject(i);
+                obj = jobject.getJSONObject("list");
+             maus =  Integer.parseInt(String.valueOf(obj.getInt("sectionNumber"))) ;
+                JSONArray aktion = obj.getJSONArray("actions");
+                ArrayList<Object> actionlist = new ArrayList<>();
+             for (int p = 0; i < aktion.length(); i++){
+                 actionlist.add( aktion.get(p));
+
+             }
+
+
+
+             section.setSectionNumber(maus);
+             section.setText("text");
+
+
+             list.add(section);
+
+
+
+
+
+            }
+        }
+        return list;
+    }
+
+
+    public File selectFile() {
+
+
+
+        int counter = 1;
+        boolean loop = false;
+        int fileAtPlace = 0;
+        File fileToLoad = null;
+
+        File directory = new File("C:/Development/EinsamerWolfGame/src/main/resources");
+        File[] directoryFiles = directory.listFiles();
+
+        while (!loop) {
+            for (File f : directoryFiles) {
+                System.out.println(counter + "." + f);
+                counter++;
+            }
+
+            try {
+
+                fileToLoad = directoryFiles[fileAtPlace];
+                loop = true;
+            } catch (Exception e) {
+                System.out.println("...");
+                continue;
+            }
+        }
+        return fileToLoad;
+
 
     }
 

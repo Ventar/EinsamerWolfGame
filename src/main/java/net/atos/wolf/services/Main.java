@@ -1,14 +1,16 @@
 package net.atos.wolf.services;
 
+import ch.qos.logback.classic.net.SMTPAppender;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import net.atos.wolf.character.KaiSkill;
 import net.atos.wolf.character.Weapon;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.util.*;
 
 public class Main {
 
@@ -134,7 +136,7 @@ public class Main {
         return section;
     }
 
-    public static void main(String[] args) throws JsonProcessingException {
+    public static void main(String[] args) throws Exception {
         SectionService sectionService = new SectionService();
         UIService uiService = new UIService();
 
@@ -146,26 +148,30 @@ public class Main {
 
         List<Section> sections = sectionService.getSections();
         System.out.println(MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(sections));
-        Section section = new Section();
-        List<Section> sectionslist = new ArrayList<>();
-        section.storeSections(sectionslist);
+
+        FileWriter writer = new FileWriter(new File("C:/Development/EinsamerWolfGame/src/main/resources/ew1.json"));
+        writer.write(MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(sections));
+        writer.close();
 
 
+        List<Section> sections1 = MAPPER.readValue(new File("C:/Development/EinsamerWolfGame/src/main/resources/ew1.json"), new TypeReference<List<Section>>() {
+        });
+
+        System.out.println(sections1);
+
+//        Section section = new Section();
+//        List<Section> sectionslist = new ArrayList<>();
+//        sectionslist.add(generateSection4());
+//        section.storeSections(sectionslist);
+//        section.Filetoread();
+    }
 
 
-
-
-
-
-
-
-
-
-        // 1. Store section list in JSON file in C:\Development\EinsamerWolfGame\src\main\resources\lw1.data
-        // 2. Load sections from that file and convert it to a list in Java
-        // 3. print that list on the command line
-        // FRAMEWORK: JACKSON
-        // Gute Hilfe Baeldung
+    // 1. Store section list in JSON file in C:\Development\EinsamerWolfGame\src\main\resources\lw1.data
+    // 2. Load sections from that file and convert it to a list in Java
+    // 3. print that list on the command line
+    // FRAMEWORK: JACKSON
+    // Gute Hilfe Baeldung
 
         /*
 
@@ -198,8 +204,7 @@ public class Main {
 */
 
 
-
-    }
+}
 //    private static String filePath =
 
-}
+
