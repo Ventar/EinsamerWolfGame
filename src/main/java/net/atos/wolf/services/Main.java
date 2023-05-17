@@ -10,6 +10,7 @@ import net.atos.wolf.character.Weapon;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 public class Main {
@@ -138,72 +139,66 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         SectionService sectionService = new SectionService();
+
         UIService uiService = new UIService();
 
-        sectionService.addSection(generateSection15());
-        sectionService.addSection(generateSection192());
-        sectionService.addSection(generateSection333());
-        sectionService.addSection(generateSection332());
-        sectionService.addSection(generateSection4());
+//        sectionService.addSection(generateSection15());
+//        sectionService.addSection(generateSection192());
+//        sectionService.addSection(generateSection333());
+//        sectionService.addSection(generateSection332());
+//        sectionService.addSection(generateSection4());
+//
+//        List<Section> sections = sectionService.getSections();
+//        System.out.println(MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(sections));
 
-        List<Section> sections = sectionService.getSections();
-        System.out.println(MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(sections));
+        //FileWriter writer = new FileWriter(new File("C:/Development/EinsamerWolfGame/src/main/resources/ew1.json"));
+        //writer.write(MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(sections));
+        //writer.close();
 
-        FileWriter writer = new FileWriter(new File("C:/Development/EinsamerWolfGame/src/main/resources/ew1.json"));
-        writer.write(MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(sections));
-        writer.close();
-
-
-        List<Section> sections1 = MAPPER.readValue(new File("C:/Development/EinsamerWolfGame/src/main/resources/ew1.json"), new TypeReference<List<Section>>() {
-        });
-
-        System.out.println(sections1);
 
 //        Section section = new Section();
 //        List<Section> sectionslist = new ArrayList<>();
 //        sectionslist.add(generateSection4());
 //        section.storeSections(sectionslist);
 //        section.Filetoread();
+//    }
+
+        int sectionToRender = 333;
+
+        while (true) {
+
+            Section section = sectionService.getSection(sectionToRender);
+            List<AnswerOption> answerOptions = new LinkedList<>();
+
+            int i = 1;
+            for (Action action : section.getActions()) {
+                AnswerOption answerOption = new AnswerOption();
+                answerOption.setText(action.getText());
+                answerOption.setAnswer(i++);
+                answerOptions.add(answerOption);
+            }
+
+
+
+            AnswerOption answerOption = uiService.render(section.getText(), answerOptions);
+            Action a = section.getActions().get(answerOption.getAnswer() - 1);
+
+            System.out.println(a);
+
+            switch (a.getType()) {
+                case CHANGE_SECTION:
+                    sectionToRender = a.getTargetSection();
+                    break;
+                case CHANGE_SECTION_IF_SKILL:
+                    sectionToRender = a.getTargetSection();
+                    break;
+                case CHANGE_SECTION_IF_WEAPON:
+                    sectionToRender = a.getTargetSection();
+                    break;
+            }
+        }
+
     }
-
-
-    // 1. Store section list in JSON file in C:\Development\EinsamerWolfGame\src\main\resources\lw1.data
-    // 2. Load sections from that file and convert it to a list in Java
-    // 3. print that list on the command line
-    // FRAMEWORK: JACKSON
-    // Gute Hilfe Baeldung
-
-        /*
-
-        Section section = sectionService.getSection(15);
-        List<AnswerOption> answerOptions = new LinkedList<>();
-
-        int i = 1;
-        for (Action action : section.getActions()) {
-            AnswerOption answerOption = new AnswerOption();
-            answerOption.setText(action.getText());
-            answerOption.setAnswer(i++);
-            answerOptions.add(answerOption);
-        }
-
-        AnswerOption answerOption = uiService.render(section.getText(), answerOptions);
-//        String json = MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(sectionService.getSection(333));
-//
-        System.out.println(answerOption);
-
-        Action a = section.getActions().get(answerOption.getAnswer() - 1);
-
-        System.out.println(a);
-
-        switch (a.getType()) {
-            case CHANGE_SECTION: break;
-            case CHANGE_SECTION_IF_SKILL: break;
-            case CHANGE_SECTION_IF_WEAPON: break;
-        }
-
-*/
-
-
 }
 //    private static String filePath =
 

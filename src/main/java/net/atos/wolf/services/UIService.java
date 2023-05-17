@@ -1,10 +1,7 @@
 package net.atos.wolf.services;
 
 import java.sql.SQLOutput;
-import java.util.Collection;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class UIService {
     /**
@@ -29,7 +26,21 @@ public class UIService {
         // TEXT AUSGABE
         // --------------------------------------------------------------
         System.out.println("\n--------------------------------------------------------------\n");
+
+        int breakValue = 20;
+
+        text = text.substring(0, breakValue)+ '\n'+ text.substring(breakValue);
+
+//        StringTokenizer stringTokenizer = new StringTokenizer(text,"");
+//
+//
+//        while (stringTokenizer.hasMoreTokens()) {
+//            System.out.println(stringTokenizer.nextToken());
+//        }
         System.out.println(text);
+
+
+
         // Ausgabe des Textes auf der KOmmandozeile
         // Schleife und Ausgabe der Optionen, rendern von Nummern
         for (AnswerOption answerOption : options) {

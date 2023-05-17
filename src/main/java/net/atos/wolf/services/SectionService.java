@@ -1,14 +1,36 @@
 package net.atos.wolf.services;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.SneakyThrows;
 import lombok.val;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class SectionService {
 
-    private HashMap<Integer, Section> sections = new HashMap<>();
+    private static final ObjectMapper MAPPER = new ObjectMapper();
+
+    private final HashMap<Integer, Section> sections = new HashMap<>();
+
+
+    public SectionService() {
+
+        try {
+            List<Section> sectionList = MAPPER.readValue(Main.class.getResourceAsStream("/ew1.json"), new TypeReference<List<Section>>() {
+            });
+
+            for (Section s : sectionList) {
+                sections.put(s.getSectionNumber(), s);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Could not load ew1.json file: ", e);
+        }
+
+    }
 
     /**
      * Get the section with the passed number
