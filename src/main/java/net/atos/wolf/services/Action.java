@@ -2,15 +2,22 @@ package net.atos.wolf.services;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Getter;
 import net.atos.wolf.character.KaiSkill;
+import net.atos.wolf.character.SpecialItem;
 import net.atos.wolf.character.Weapon;
+
+import java.util.Objects;
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Getter
 public class Action {
+
     private ActionType type;
 
     private boolean mandatory;
+
     private int targetSection;
 
     private KaiSkill skill;
@@ -19,81 +26,19 @@ public class Action {
 
     private Weapon weapon;
 
+    private SpecialItem specialItem;
 
-    public Action setMandatory(boolean mandatory) {
-        this.mandatory = mandatory;
-        return this;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Action action = (Action) o;
+        return mandatory == action.mandatory && targetSection == action.targetSection && type == action.type && skill == action.skill && Objects.equals(text, action.text) && weapon == action.weapon && specialItem == action.specialItem;
     }
 
-    public Action setTargetSection(int targetSection) {
-        this.targetSection = targetSection;
-        return this;
-    }
-
-    public int getTargetSection() {
-        return targetSection;
-    }
-
-    public boolean isMandatory() {
-        return mandatory;
-    }
-
-    public ActionType getType() {
-        return type;
-    }
-
-    public Action setType(ActionType type) {
-        this.type = type;
-        return this;
-    }
-
-    public Action setSkill(KaiSkill skill) {
-        this.skill = skill;
-        return this;
-    }
-
-    public KaiSkill isSkill() {
-        return skill;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public Action setText(String text) {
-        this.text = text;
-        return this;
-    }
-
-    public Weapon getWeapon() {
-        return weapon;
-    }
-
-    public Action setWeapon(Weapon weapon) {
-        this.weapon = weapon;
-        return this;
-    }
-
-    public String toString() {
-        String s = "";
-
-
-        if (text == null) {
-            s = s + "text = null \n";
-        } else if (text.length() < 15) {
-            s = s + "text=" + this.text + "\n";
-        } else {
-            s = s + "text=" + this.text.substring(0, 15) + "...\n";
-        }
-
-
-        return "Action{" +
-                "mandatory=" + mandatory +
-                ", targetSection=" + targetSection +
-                ", type=" + type +
-                ", text=" + s +
-                ", skill=" + skill +
-                ", weapon=" + weapon +
-                '}';
+    @Override
+    public int hashCode() {
+        return Objects.hash(type, mandatory, targetSection, skill, text, weapon, specialItem);
     }
 }

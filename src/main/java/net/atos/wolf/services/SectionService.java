@@ -27,7 +27,7 @@ public class SectionService {
     public SectionService(String jsonFile) {
 
         try {
-            List<Section> sectionList = ServiceUtilities.OBJECT_MAPPER.readValue(Main.class.getResourceAsStream(jsonFile), new TypeReference<List<Section>>() {
+            List<Section> sectionList = ServiceUtilities.OBJECT_MAPPER.readValue(SectionService.class.getResourceAsStream(jsonFile), new TypeReference<List<Section>>() {
             });
 
             for (Section s : sectionList) {

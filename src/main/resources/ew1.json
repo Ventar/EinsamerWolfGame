@@ -1,19 +1,5 @@
 [
   {
-    "sectionNumber": 192,
-    "text": "Der Schlafsaal ist nun leer. Die Kai-Kadetten, die dir im Korridor begegnet sind, waren die letzten Initianden auf dem Weg zu ihren Gefechtsstationen. Du gehst zu deiner Pritsche und ziehst den kleinen Lederkoffer hervor, der darunter verstaut ist. Er enthält deine wenigen persönlichen Besitztümer. Von deinen Büchern beschließt du keine mitzunehmen, da sie zu schwer sind und dich vermutlich nur behindern würden. Aber du nimmst die 10 Goldkronen, die du in der Zeit gespart hast, seit du hier in der Abtei bist, und steckst sie in deine Tasche. (Notiere sie auf deinem Aktionsblatt.) Der einzige Gegenstand, den du sonst noch besitzt und der sich als nützlich erweisen könnte, ist deine Axt. Zwar hast du sie bisher stets nur für das Greel-Spiel oder zum Holzhacken benutzt, aber jetzt könntest du sie möglicherweise dazu einsetzen, wofür sie eigentlich gedacht war: für die Schlacht! (Wenn du die Axt mitnehmen willst, vergiss nicht, sie als Waffe auf deinem Aktionsblatt einzutragen. Falls du schon zwei Waffen besitzt, musst du eine davon ablegen.) Nachdem du deinen Koffer geschlossen und ihn wieder unter die Pritsche geschoben hast, blickst du dich noch einmal im Dormitorium um â€“ du hast das ungute Gefühl, dass es das allerletzte Mal sein könnte. Die Geräusche der Schlacht werden nun immer lauter und veranlassen dich, den Schlafsaal schleunigst zu verlassen und dich durch den Korridor auf den Weg zur Rüstkammer der Abtei zu machen.",
-    "actions": [
-      {
-        "type": "CHANGE_SECTION",
-        "mandatory": true,
-        "targetSection": 15,
-        "skill": null,
-        "text": "Lies Weiter",
-        "weapon": "AXE"
-      }
-    ]
-  },
-  {
     "sectionNumber": 4,
     "text": "Du folgst dem Oberst, während er  sein  Pferd durch die Menschenmenge treibt und sich dabei wenig darum schert, ob ihm die Leute noch rechtzeitig ausweichen können. Dir ist es unmöglich,deinen sommerlendischen Landsleuten gegenüber ein  derartgewissenloses Verhalten an den Tag zu legen, und so hast du den rücksichtslosen Offizier schon bald aus den Augen verloren.Die  breite Prachtstraße, die  sich  am  anderen Ende  des  Platzesanschließt, ist ebenso bevölkert wie der Platz selbst, und dein Pferdist dir auch hier nicht von Vorteil, so dass du widerwillig beschließtabzusteigen und deinen Weg zu Fuß fortzusetzen.Nach etwa fünfzig Metern siehst du eine weitere Straße, die nachlinks  führt.  Auf  einem Schild, das  an  der  Ecke  einer  Taverneangebracht ist, steht \"Farisallee\".",
     "actions": [
@@ -32,6 +18,66 @@
         "skill": null,
         "text": "Bleibe auf der Hauptstraße",
         "weapon": null
+      }
+    ]
+  },
+  {
+    "sectionNumber": 15,
+    "text": "Du näherst dich gerade einer Gangbiegung nach rechts, als du gedämpften Kampflärm vernimmst, der aus nicht allzu weiter Entfernung zu kommen scheint. Mit gezogener Waffe spähst du vorsichtig um die Ecke, besorgt darüber, was dich dahinter erwarten mag. Am anderen Ende des Korridors, nahe der Tür zur Rüstkammer, erblickst du einen deiner Freunde. Sein Name ist Schneefalke, und er ist wie du ein Initiand. Zwar wurden die Wandfackeln bereits alle gelöscht, so dass der Gang im Dunkeln liegt, aber dennoch erkennst du ohne jeden Zweifel deinen Freund. Sein schneeweißes Albinohaar ist im schwachen Licht der Morgendämmerung, das durch das zerstörte Fenster in den Korridors fällt, gut zu sehen. Schneefalke hat einen Giak-Krieger gepackt und ringt mit ihm. Die regungslosen Körper zweier weiterer Eindringlinge liegen in der Nähe, erschlagen von deinem tapferen Freund. Plötzlich holt der Giak zu einem Schlag aus und streift Schneefalke mit dem Schwertknauf am Kopf. Schneefalke taumelt zurück, und du siehst, wie ihm das Blut von seiner Stirn in die Augen läuft und ihm die Sicht raubt. Als er hilflos gegen die Tür der Rüstkammer prallt, stößt der Giak-Soldat ein hämisches Lachen aus und hebt sein Schwert zum tödlichen Hieb.",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION_IF_WEAPON",
+        "mandatory": false,
+        "targetSection": 166,
+        "skill": null,
+        "text": "Glücklicherweise hast du eine Axt",
+        "weapon": "AXE"
+      },
+      {
+        "type": "CHANGE_SECTION_IF_NO_OTHER_OPTION",
+        "targetSection": 477,
+        "text": "Leider hast du keine Axt"
+      }
+    ]
+  },
+  {
+    "sectionNumber": 16,
+    "text": "Der Pfad endet auf einer weiten Lichtung, in deren Mitte ein einzelner großer Baum steht, weit höher und breiter als alle anderen Bäume, die du bisher im Wald gesehen hast. Als du zu seiner mächtigen Krone hinaufblickst, entdeckst du keine zehn Meter über dir ein großes Baumhaus. Zwar entdeckst du keine Leiter, die zu dieser Holzhütte hinaufführt, aber die knorrige Borke des alten Baums bietet genügend Griffmöglichkeiten, um daran hochzuklettern.",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 470,
+        "text": "Wenn du hinaufsteigen willst, um das Baumhaus zu untersuchen"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 317,
+        "text": "Willst du stattdessen deinen Weg durch den Wald fortsetzen"
+      }
+    ]
+  },
+  {
+    "sectionNumber": 166,
+    "text": "Du ziehst deine Axt aus dem Gürtel und schleuderst sie den dunklen Korridor hinunter. Dein Wurf war gut und wohl gezielt, und mit einem dumpfen „Tock“ schlägt die wirbelnde Klinge in den Hinterkopf der Kreatur, spaltet ihren eisernen Helm und gräbt sich tief in ihr Gehirn. Der Giak ist bereits tot, als sein schlaffer Körper zwischen den Leichen seiner abscheulichen Kameraden zu Boden stürzt. So schnell du kannst, rennst du den Gang hinunter, besorgt, dein Freund könnte schwer verletzt sein. Glücklicherweise sieht die Wunde schlimmer aus, als sie tatsächlich ist, und Schneefalke ist schon bald in der Lage, die Blutung mithilfe seiner eigenen Kai Heilkunst zu stillen. „Du warst schon immer der beste Werfer beim Greel“, sagt er mit einem Grinsen, während du ihm mit dem Saum deines Kai-Umhangs vorsichtig das Blut aus den Augen wischst. Als er schließlich wieder richtig sehen kann, greifst du nach unten und ziehst deine Axt aus dem Schädel des toten Giak. Dann säuberst du die Klinge an dessen Tunika, bevor du die Waffe wieder in deinen Gürtel steckst.  „Gut für dich, dass ich jeden Tag geübt habe!“, erwiderst du. „Ich danke dir, mein Freund“, sagt Schneefalke. „Du hast mir das Leben gerettet. Ich hoffe, dass ich diesen Gefallen eines Tages erwidern kann, doch nun muss ich mich in den Kampf stürzen. Die Giak sind überall, und ich fürchte, dass die Abtei fallen wird. Komm mit mir! Wir werden Seite an Seite kämpfen, wie wahre Kai-Brüder.“ Du erklärst Schneefalke, dass du einen wichtigen Auftrag für Meister Sternenfeuer ausführen musst, dass du dich ihm jedoch anschließen wirst, sobald dieser erledigt ist. „Dann sei Kai mit dir, Lautloser Wolf“, ruft er, als er forteilt, um sich der Schlacht anzuschließen. „Möge Kai an diesem Tag mit uns allen sein“, antwortest du, dann salutierst du und blickst deinem tapferen Freund nach, bis er hinter der nächsten Ecke verschwunden ist. Mit einem wachsenden Gefühl des Grauens kehrst du zur Tür der Rüstkammer zurück, stößt sie auf und betrittst den Raum. ",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 447,
+        "text": "Weiter"
+      }
+    ]
+  },
+  {
+    "sectionNumber": 192,
+    "text": "Der Schlafsaal ist nun leer. Die Kai-Kadetten, die dir im Korridor begegnet sind, waren die letzten Initianden auf dem Weg zu ihren Gefechtsstationen. Du gehst zu deiner Pritsche und ziehst den kleinen Lederkoffer hervor, der darunter verstaut ist. Er enthält deine wenigen persönlichen Besitztümer. Von deinen Büchern beschließt du keine mitzunehmen, da sie zu schwer sind und dich vermutlich nur behindern würden. Aber du nimmst die 10 Goldkronen, die du in der Zeit gespart hast, seit du hier in der Abtei bist, und steckst sie in deine Tasche. (Notiere sie auf deinem Aktionsblatt.) Der einzige Gegenstand, den du sonst noch besitzt und der sich als nützlich erweisen könnte, ist deine Axt. Zwar hast du sie bisher stets nur für das Greel-Spiel oder zum Holzhacken benutzt, aber jetzt könntest du sie möglicherweise dazu einsetzen, wofür sie eigentlich gedacht war: für die Schlacht! (Wenn du die Axt mitnehmen willst, vergiss nicht, sie als Waffe auf deinem Aktionsblatt einzutragen. Falls du schon zwei Waffen besitzt, musst du eine davon ablegen.) Nachdem du deinen Koffer geschlossen und ihn wieder unter die Pritsche geschoben hast, blickst du dich noch einmal im Dormitorium um â€“ du hast das ungute Gefühl, dass es das allerletzte Mal sein könnte. Die Geräusche der Schlacht werden nun immer lauter und veranlassen dich, den Schlafsaal schleunigst zu verlassen und dich durch den Korridor auf den Weg zur Rüstkammer der Abtei zu machen.",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "mandatory": true,
+        "targetSection": 15,
+        "skill": null,
+        "text": "Lies Weiter",
+        "weapon": "AXE"
       }
     ]
   },
@@ -88,40 +134,38 @@
     ]
   },
   {
-    "sectionNumber": 15,
-    "text": "Du näherst dich gerade einer Gangbiegung nach rechts, als du gedämpften Kampflärm vernimmst, der aus nicht allzu weiter Entfernung zu kommen scheint. Mit gezogener Waffe spähst du vorsichtig um die Ecke, besorgt darüber, was dich dahinter erwarten mag. Am anderen Ende des Korridors, nahe der Tür zur Rüstkammer, erblickst du einen deiner Freunde. Sein Name ist Schneefalke, und er ist wie du ein Initiand. Zwar wurden die Wandfackeln bereits alle gelöscht, so dass der Gang im Dunkeln liegt, aber dennoch erkennst du ohne jeden Zweifel deinen Freund. Sein schneeweißes Albinohaar ist im schwachen Licht der Morgendämmerung, das durch das zerstörte Fenster in den Korridors fällt, gut zu sehen. Schneefalke hat einen Giak-Krieger gepackt und ringt mit ihm. Die regungslosen Körper zweier weiterer Eindringlinge liegen in der Nähe, erschlagen von deinem tapferen Freund. Plötzlich holt der Giak zu einem Schlag aus und streift Schneefalke mit dem Schwertknauf am Kopf. Schneefalke taumelt zurück, und du siehst, wie ihm das Blut von seiner Stirn in die Augen läuft und ihm die Sicht raubt. Als er hilflos gegen die Tür der Rüstkammer prallt, stößt der Giak-Soldat ein hämisches Lachen aus und hebt sein Schwert zum tödlichen Hieb.",
+    "sectionNumber": 447,
+    "text": "Die meisten der sonst hier aufbewahrten Waffen wurden bereits von deinen Kai-Brüdern mitgenommen, und so sind in den Ständern der Rüstkammer nur noch die folgenden zu finden:\n\n    DOLCH\n    KRIEGSHAMMER\n    SPEER\n    SCHWERT\n    KAMPFSTAB\n\nWenn du eine oder mehrere der aufgeführten Waffen an dich nehmen willst, vermerke sie auf deinem Aktionsblatt. Denke jedoch daran, dass du nicht mehr als zwei Waffen gleichzeitig tragen kannst.",
     "actions": [
       {
-        "type": "CHANGE_SECTION_IF_WEAPON",
-        "mandatory": false,
-        "targetSection": 166,
-        "skill": null,
-        "text": "Wenn du eine Axt hast",
-        "weapon": "AXE"
+        "type": "TAKE_WEAPON",
+        "text": "Nimm den Dolch",
+        "weapon": "DAGGER"
+      },
+      {
+        "type": "TAKE_WEAPON",
+        "text": "Nimm den Kriegshammer",
+        "weapon": "WARHAMMER"
+      },
+      {
+        "type": "TAKE_WEAPON",
+        "text": "Nimm den Speer",
+        "weapon": "SPEAR"
+      },
+      {
+        "type": "TAKE_WEAPON",
+        "text": "Nimm das Schwert",
+        "weapon": "SWORD"
+      },
+      {
+        "type": "TAKE_WEAPON",
+        "text": "Nimm den Kriegsstab",
+        "weapon": "BATTLE_STAFF"
       },
       {
         "type": "CHANGE_SECTION",
-        "mandatory": false,
-        "targetSection": 477,
-        "skill": null,
-        "text": "Wenn du keine Axt hast",
-        "weapon": null
-      }
-    ]
-  },
-  {
-    "sectionNumber": 16,
-    "text": "Der Pfad endet auf einer weiten Lichtung, in deren Mitte ein einzelner großer Baum steht, weit höher und breiter als alle anderen Bäume, die du bisher im Wald gesehen hast. Als du zu seiner mächtigen Krone hinaufblickst, entdeckst du keine zehn Meter über dir ein großes Baumhaus. Zwar entdeckst du keine Leiter, die zu dieser Holzhütte hinaufführt, aber die knorrige Borke des alten Baums bietet genügend Griffmöglichkeiten, um daran hochzuklettern.",
-    "actions": [
-      {
-        "type": "CHANGE_SECTION",
-        "targetSection": 470,
-        "text": "Wenn du hinaufsteigen willst, um das Baumhaus zu untersuchen"
-      },
-      {
-        "type": "CHANGE_SECTION",
-        "targetSection": 317,
-        "text": "Willst du stattdessen deinen Weg durch den Wald fortsetzen"
+        "targetSection": 93,
+        "text": "Weiter"
       }
     ]
   }

@@ -62,9 +62,14 @@ public class Character {
         hasBackpack = false;
     }
 
-    public void addWeapon(Weapon weapon){
-
+    public void setWeaponOne(Weapon weapon) {
+        this.weaponOne = weapon;
     }
+
+    public void setWeaponTwo(Weapon weapon) {
+        this.weaponTwo = weapon;
+    }
+
 
     /**
      * add a item to the backpack
@@ -126,8 +131,8 @@ public class Character {
      *
      * @param item
      */
-    public void hasSpecialItem(Item item) {
-
+    public boolean hasSpecialItem(SpecialItem item) {
+        return specialItemsList.contains(item);
     }
 
     public Attribute getCombatStrength() {

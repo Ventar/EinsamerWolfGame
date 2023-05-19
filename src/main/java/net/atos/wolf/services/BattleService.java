@@ -55,7 +55,7 @@ public class BattleService {
 
 
         //Zufallszähler basiert auf 0
-        int rand = 1;
+        int rand = diceService.generate();
         BattleValue bv = null;
 
         System.out.println(battleQuotient);

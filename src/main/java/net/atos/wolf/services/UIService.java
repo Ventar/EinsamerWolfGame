@@ -11,7 +11,7 @@ public class UIService {
      * @param options
      * @return
      */
-    public AnswerOption render(String text, Collection<AnswerOption> options) {
+    public AnswerOption render(String text, String headLine, Collection<AnswerOption> options) {
 
         // VALDIERUNG
         // --------------------------------------------------------------
@@ -25,26 +25,18 @@ public class UIService {
 
         // TEXT AUSGABE
         // --------------------------------------------------------------
-        System.out.println("\n--------------------------------------------------------------\n");
+        System.out.println("\n--------------------------------------------------------------");
 
-        int breakValue = 20;
+        System.out.println(headLine);
 
-        text = text.substring(0, breakValue)+ '\n'+ text.substring(breakValue);
-
-//        StringTokenizer stringTokenizer = new StringTokenizer(text,"");
-//
-//
-//        while (stringTokenizer.hasMoreTokens()) {
-//            System.out.println(stringTokenizer.nextToken());
-//        }
-        System.out.println(text);
-
+        System.out.println("--------------------------------------------------------------\n");
+        System.out.println(splitIntoLines(text, 80) + "\n");
 
 
         // Ausgabe des Textes auf der KOmmandozeile
         // Schleife und Ausgabe der Optionen, rendern von Nummern
         for (AnswerOption answerOption : options) {
-            System.out.println("(" + answerOption.getAnswer() + ") " + answerOption.getText());
+            System.out.println("(" + answerOption.answerKey() + ") " + answerOption.text());
         }
         // EINGABE
         // --------------------------------------------------------------
@@ -58,7 +50,7 @@ public class UIService {
                 String userChoice = scanner.nextLine();
                 int i = Integer.parseInt(userChoice);
                 for (AnswerOption a : options) {
-                    if (i == a.getAnswer()) {
+                    if (i == a.answerKey()) {
                         return a;
                     }
                 }
@@ -77,6 +69,43 @@ public class UIService {
 
         // Rückgabe eines integer Wertes
 
+
+    }
+
+    /**
+     * Split the passed string into multiple lines.
+     *
+     * @param text       the text to split
+     * @param lineLength the line length
+     * @return the splited string
+     */
+    public String splitIntoLines(String text, int lineLength) {
+
+        StringBuffer stringBuffer = new StringBuffer(text.length() + 20);
+        StringTokenizer stringTokenizer = new StringTokenizer(text, " \n", true);
+        int count = 0;
+
+        while (stringTokenizer.hasMoreTokens()) {
+            String token = stringTokenizer.nextToken();
+
+            if (token.equals(" ")) {
+                continue;
+            } else if (token.equals("\n")) {
+                count = 0;
+            }
+
+            if (count > lineLength) {
+                stringBuffer.append("\n");
+                count = 0;
+            } else {
+                count = count + token.length();
+            }
+
+            stringBuffer.append(token).append(" ");
+        }
+
+
+        return stringBuffer.toString();
 
     }
 
