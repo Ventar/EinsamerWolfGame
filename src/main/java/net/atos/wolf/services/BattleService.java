@@ -3,7 +3,6 @@ package net.atos.wolf.services;
 import net.atos.wolf.character.Attribute;
 import net.atos.wolf.character.Character;
 import net.atos.wolf.character.Enemy;
-import net.atos.wolf.framework.Inject;
 import net.atos.wolf.framework.Service;
 
 
@@ -34,8 +33,8 @@ public class BattleService {
         BattleService s = new BattleService();
         s.executeBattleRound(juli, enemy);
 
-//        System.out.println("END Char:"+ juli.getEndurance());
-//        System.out.println("END ENY:"+ enemy.getEndurance());
+        //        System.out.println("END Char:"+ juli.getEndurance());
+        //        System.out.println("END ENY:"+ enemy.getEndurance());
 
 
     }
@@ -89,7 +88,7 @@ public class BattleService {
             bv = BattleTable.get(12, rand);
 
         }
-//
+        //
         return bv;
     }
 
