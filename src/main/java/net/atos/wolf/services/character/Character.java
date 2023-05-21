@@ -37,6 +37,7 @@ public class Character {
      * Add a skill to the character
      *
      * @param kaiSkill
+     *
      * @return
      */
     public void addSkill(KaiSkill kaiSkill) {
@@ -100,9 +101,7 @@ public class Character {
      * @param specialItem
      */
     public void addSpecialItem(SpecialItem specialItem) {
-
         specialItemsList.add(specialItem);
-
     }
 
     /**
@@ -125,6 +124,10 @@ public class Character {
         return specialItemsList.contains(item);
     }
 
+    public boolean hasSkill(KaiSkill skill) {
+        return skills.contains(skill);
+    }
+
     public Attribute getCombatStrength() {
         return combatStrength;
     }
@@ -144,18 +147,18 @@ public class Character {
     @Override
     public String toString() {
         return "Character{" +
-                "hasBackpack=" + hasBackpack +
-                ", weaponOne=" + weaponOne +
-                ", weaponTwo=" + weaponTwo +
-                ", backpack=" + backpack +
-                ", specialItemsList=" + specialItemsList +
-                ", skills=" + skills +
-                ", gold=" + gold +
-                ", food=" + food +
-                ", combatStrength=" + combatStrength +
-                ", endurance=" + endurance +
-                ", section=" + section +
-                '}';
+                       "hasBackpack=" + hasBackpack +
+                       ", weaponOne=" + weaponOne +
+                       ", weaponTwo=" + weaponTwo +
+                       ", backpack=" + backpack +
+                       ", specialItemsList=" + specialItemsList +
+                       ", skills=" + skills +
+                       ", gold=" + gold +
+                       ", food=" + food +
+                       ", combatStrength=" + combatStrength +
+                       ", endurance=" + endurance +
+                       ", section=" + section +
+                       '}';
     }
 
 

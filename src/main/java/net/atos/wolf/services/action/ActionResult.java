@@ -6,7 +6,7 @@ import net.atos.wolf.services.character.Character;
 import java.util.List;
 
 /**
- * The result of an action execution through the  {@link ActionHandler#handleAction(Character, Action, List)} method call.
+ * The result of an action execution through the  {@link IActionHandler#handleAction(Character, Action, List)} method call.
  *
  * @author Noel Masur, Julius Reismann
  * @since 2023-05-19
@@ -18,6 +18,12 @@ public class ActionResult {
      * The result type of an action that allows the {@link net.atos.wolf.services.GameEngine} to decide who to proceed.
      */
     public enum ActionResultType {
+
+        /**
+         * Type for custom dialogs.
+         */
+        CUSTOM,
+
         /**
          * As a result of the action the character died, i.e. the game will end.
          */
@@ -29,7 +35,7 @@ public class ActionResult {
         CHANGE_SECTION,
 
         /**
-         * The {@link ActionHandler#handleAction(Character, Action, List)} requires that the current section is rendered again but with a changed set of answer options. This can
+         * The {@link IActionHandler#handleAction(Character, Action, List)} requires that the current section is rendered again but with a changed set of answer options. This can
          * happen in sections where the character can select from multiple items to select or buy before changing the section for example.
          */
         REPRESENT_ACTIONS
@@ -58,6 +64,17 @@ public class ActionResult {
     public static ActionResult characterDied() {
         ActionResult res = new ActionResult();
         res.type = ActionResultType.CHARACTER_DIED;
+        return res;
+    }
+
+    /**
+     * Creates a new action result of type CUSTOM.
+     *
+     * @return the new result
+     */
+    public static ActionResult custom() {
+        ActionResult res = new ActionResult();
+        res.type = ActionResultType.CUSTOM;
         return res;
     }
 

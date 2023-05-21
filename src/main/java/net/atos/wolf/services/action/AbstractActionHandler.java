@@ -1,18 +1,18 @@
 package net.atos.wolf.services.action;
 
 import net.atos.wolf.services.character.Character;
-import net.atos.wolf.services.ui.AnswerOption;
+import net.atos.wolf.services.ui.UIService;
 
 import java.util.List;
 
 /**
- * Abstract base implementation for all action handler. Contains common logic to check if a handler {@link #canHandle(Action)} a specific action and base implementation for the
- * default {@link #handleAction(Character, Action, List)} method which usually leads to a section change.
+ * Abstract base implementation for all action handler. Contains common logic to check if a handler {@link #isExecutable(Character, Action, boolean)} for a certain character state
+ * and provides base implementation for the default {@link #handleAction(Character, Action, List)} method which usually leads to a section change.
  *
  * @author Noel Masur, Julius Reismann
  * @since 2023-05-19
  */
-public abstract class AbstractActionHandler implements ActionHandler {
+public abstract class AbstractActionHandler implements IActionHandler {
 
     /**
      * The action type that is handled by the implementation
@@ -26,38 +26,41 @@ public abstract class AbstractActionHandler implements ActionHandler {
      */
     public AbstractActionHandler() {
 
-        String name = getClass().getSimpleName(); // get the name of the class
+        ActionHandler ahAnnotation = getClass().getAnnotation(ActionHandler.class);
 
-        if (!name.endsWith("Handler")) {
-            throw new IllegalStateException("To be used as action handler the name of class " + name + " has to end with the extension Handler");
+        if (ahAnnotation == null) {
+            throw new IllegalStateException("Cannot instantiate an action handler without proper @ActionHandler annotation");
         }
 
-        name = name.substring(0, name.length() - 7); // remove the ending Handler so that the name can be converted to an enum
+        this.type = ahAnnotation.value();
+    }
 
-        // convert the class name to an enum constant of type ActionType
-        StringBuffer enumName = new StringBuffer(64);
-
-        for (int i = 0; i < name.length(); i++) {
-            if (i != 0 && java.lang.Character.isUpperCase(name.charAt(i))) {
-                enumName.append("_");
-            }
-            enumName.append(java.lang.Character.toUpperCase(name.charAt(i)));
-        }
-
-        try {
-            this.type = ActionType.valueOf(enumName.toString());
-        } catch (IllegalArgumentException e) {
-            throw new IllegalStateException("The name of the class " + name + " cannot be resolved to an enum value of type ActionType", e);
-        }
+    /**
+     * Checks if the handler can be executed by the passed character or if it is applicable. This method is called by the {@link #isExecutable(Character, Action, boolean)} method
+     * of the interface.
+     *
+     * @param character  the character
+     * @param action     the action to check
+     * @param onlyAction if the action is the only action so far
+     *
+     * @return {@code true} if the action can be handled for the character, {@code false} otherwise
+     */
+    protected boolean checkExecutable(Character character, Action action, boolean onlyAction) {
+        return true;
     }
 
     @Override
-    public boolean canHandle(Action action) {
-        return action.getType() == type;
+    public ActionType getType() {
+        return type;
     }
 
     @Override
-    public ActionResult handleAction(Character character, Action action, List<AnswerOption> answerOptions) {
+    public boolean isExecutable(Character character, Action action, boolean onlyAction) {
+        return action.getType() == type && checkExecutable(character, action, onlyAction);
+    }
+
+    @Override
+    public ActionResult handleAction(UIService ui, Character character, Action action, List<Action> answerOptions) {
         return ActionResult.changeSection(action.getTargetSection());
     }
 

@@ -1,6 +1,8 @@
 package net.atos.wolf.services.ui;
 
-import java.util.Collection;
+import net.atos.wolf.services.action.Action;
+
+import java.util.List;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -13,35 +15,23 @@ public class UIService {
      *
      * @return
      */
-    public AnswerOption render(String text, String headLine, Collection<AnswerOption> options) {
-
-        // VALDIERUNG
-        // --------------------------------------------------------------
-        // Überprüfung der Textlänge
-        // Formatierung des Textes auf eine festgelegte Zeilenlänge
-        // Überprüfung ob ein text Übergeben wurde (oder null ist(
-        // Überprüfung ob eine Liste mit Optionen vorhanden ist)
-        // Überprüfen ob mindestens eine Option vorhanden ist
-        // Überprüfen, dass wir nicht mehr als x Optionen haben
+    public Action render(String text, String headLine, List<Action> options) {
 
 
-        // TEXT AUSGABE
-        // --------------------------------------------------------------
+        // print the text and possible actions
+
         System.out.println("\n--------------------------------------------------------------");
-
         System.out.println(headLine);
-
         System.out.println("--------------------------------------------------------------\n");
-        System.out.println(splitIntoLines(text, 80) + "\n");
 
+        System.out.println(splitIntoLines(text, 120) + "\n");
 
-        // Ausgabe des Textes auf der KOmmandozeile
-        // Schleife und Ausgabe der Optionen, rendern von Nummern
-        for (AnswerOption answerOption : options) {
-            System.out.println("(" + answerOption.answerKey() + ") " + answerOption.text());
+        for (int i = 1; i <= options.size(); i++) {
+            System.out.println("(" + i + ") " + options.get(i - 1).getText());
         }
-        // EINGABE
-        // --------------------------------------------------------------
+
+        // handle the user input
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("\nWähle einen Option");
 
@@ -50,14 +40,9 @@ public class UIService {
             try {
                 String userChoice = scanner.nextLine();
                 int i = Integer.parseInt(userChoice);
-                for (AnswerOption a : options) {
-                    if (i == a.answerKey()) {
-                        return a;
-                    }
-                }
+                return options.get(i - 1);
+            } catch (Exception e) {
                 System.out.println("Bitte wähle eine gültige Option");
-            } catch (NumberFormatException e) {
-                System.out.println("Nur Zahlenwerte sind gültig.");
             }
         }
 

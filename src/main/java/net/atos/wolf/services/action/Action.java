@@ -9,6 +9,9 @@ import net.atos.wolf.services.character.Weapon;
 
 import java.util.Objects;
 
+/**
+ * Meta information stored in the JSON representation of the book to determine which actions a player can execute in a certain section of the book.
+ */
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Getter
@@ -40,5 +43,19 @@ public class Action {
     @Override
     public int hashCode() {
         return Objects.hash(type, mandatory, targetSection, skill, text, weapon, specialItem);
+    }
+
+
+    @Override
+    public String toString() {
+        return "Action{" +
+                       "type=" + type +
+                       ", mandatory=" + mandatory +
+                       ", targetSection=" + targetSection +
+                       ", skill=" + skill +
+                       ", text='" + text + '\'' +
+                       ", weapon=" + weapon +
+                       ", specialItem=" + specialItem +
+                       '}';
     }
 }
