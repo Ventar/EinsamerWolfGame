@@ -27,7 +27,7 @@ public class UIService {
         System.out.println(splitIntoLines(text, 120) + "\n");
 
         for (int i = 1; i <= options.size(); i++) {
-            System.out.println("(" + i + ") " + options.get(i - 1).getText());
+            System.out.println("(" + i + ") " + options.get(i - 1).text());
         }
 
         // handle the user input

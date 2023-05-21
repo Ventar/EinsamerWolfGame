@@ -56,12 +56,12 @@ public abstract class AbstractActionHandler implements IActionHandler {
 
     @Override
     public boolean isExecutable(Character character, Action action, boolean onlyAction) {
-        return action.getType() == type && checkExecutable(character, action, onlyAction);
+        return action.type() == type && checkExecutable(character, action, onlyAction);
     }
 
     @Override
     public ActionResult handleAction(UIService ui, Character character, Action action, List<Action> answerOptions) {
-        return ActionResult.changeSection(action.getTargetSection());
+        return ActionResult.changeSection(action.targetSection());
     }
 
 }

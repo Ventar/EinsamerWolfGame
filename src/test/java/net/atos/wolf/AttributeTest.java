@@ -9,7 +9,7 @@ public class AttributeTest {
     @Test
     public void testConstructorName() {
         Attribute attribute = new Attribute("Gold");
-        Assertions.assertEquals("Gold", attribute.getName());
+        Assertions.assertEquals("Gold", attribute.name());
 
     }
 
@@ -30,7 +30,7 @@ public class AttributeTest {
     @Test
     public void testAddValue() {
         Attribute attribute = new Attribute("Gold", 5);
-        Assertions.assertEquals(5, attribute.getValue());
+        Assertions.assertEquals(5, attribute.get());
     }
 
     @Test
@@ -45,7 +45,7 @@ public class AttributeTest {
     public void testRemoveValue() {
         Attribute attribute = new Attribute("Gold", 5);
         attribute.remove(2);
-        Assertions.assertEquals(3, attribute.getValue());
+        Assertions.assertEquals(3, attribute.get());
     }
 
     @Test

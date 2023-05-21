@@ -17,6 +17,7 @@ import java.util.Objects;
 @Getter
 public class Action {
 
+    @Getter
     private ActionType type;
 
     private boolean mandatory;

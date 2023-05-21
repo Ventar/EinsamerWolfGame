@@ -11,7 +11,7 @@ public class ChangeSectionIfSpecialItemHandler extends AbstractActionHandler {
 
     @Override
     protected boolean checkExecutable(Character character, Action action, boolean onlyAction) {
-        return character.hasSpecialItem(action.getSpecialItem());
+        return character.hasSpecialItem(action.specialItem());
     }
 
 }

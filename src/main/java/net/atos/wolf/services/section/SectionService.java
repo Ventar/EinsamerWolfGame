@@ -32,7 +32,7 @@ public class SectionService {
             });
 
             for (Section s : sectionList) {
-                sections.put(s.getSectionNumber(), s);
+                sections.put(s.sectionNumber(), s);
             }
 
         } catch (Exception e) {
@@ -44,7 +44,7 @@ public class SectionService {
     /**
      * Get the section with the passed number
      *
-     * @param idToLoad the {@link Section#getSectionNumber()} if the section to load
+     * @param idToLoad the {@link Section#sectionNumber()}  if the section to load
      *
      * @return Section
      */

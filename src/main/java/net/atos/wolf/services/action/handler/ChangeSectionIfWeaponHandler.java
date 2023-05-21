@@ -11,7 +11,7 @@ public class ChangeSectionIfWeaponHandler extends AbstractActionHandler {
 
     @Override
     protected boolean checkExecutable(Character character, Action action, boolean onlyAction) {
-        return action.getWeapon() == character.getWeaponOne() || action.getWeapon() == character.getWeaponTwo();
+        return action.weapon() == character.weaponOne() || action.weapon() == character.weaponTwo();
     }
 
 }

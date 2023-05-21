@@ -50,7 +50,7 @@ public class GameEngine {
 
     public void start() {
 
-        log.debug("Created character ::= [{}]", character);
+        LOG.debug("Created character ::= [{}]", character);
 
         int sectionToRender = 333;
 
@@ -65,22 +65,22 @@ public class GameEngine {
             }
 
             // Generate the first set of answer options directly from the actions that are stored in the section
-            List<Action> answerOptions = filterActions(section.getActions());
+            List<Action> answerOptions = filterActions(section.actions());
 
             Action actionToExecute = null;
             ActionResult actionResult = null;
 
             do {
-                actionToExecute = ui.render(section.getText(), String.valueOf(section.getSectionNumber()), answerOptions);
-                actionResult = actionHandler.get(actionToExecute.getType()).handleAction(character, actionToExecute, answerOptions);
+                actionToExecute = ui.render(section.text(), String.valueOf(section.sectionNumber()), answerOptions);
+                actionResult = actionHandler.get(actionToExecute.type()).handleAction(character, actionToExecute, answerOptions);
 
-                switch (actionResult.getType()) {
-                    case CHANGE_SECTION -> sectionToRender = actionResult.getTargetSection();
+                switch (actionResult.type()) {
+                    case CHANGE_SECTION -> sectionToRender = actionResult.targetSection();
                     case CHARACTER_DIED -> throw new RuntimeException("Damned we died :(");
-                    case REPRESENT_ACTIONS -> answerOptions = filterActions(actionResult.getActions());
+                    case REPRESENT_ACTIONS -> answerOptions = filterActions(actionResult.actions());
                 }
 
-            } while (actionResult.getType() == ActionResult.ActionResultType.REPRESENT_ACTIONS);
+            } while (actionResult.type() == ActionResult.ActionResultType.REPRESENT_ACTIONS);
 
         }
     }
@@ -98,7 +98,7 @@ public class GameEngine {
         List<Action> answerOptions = new LinkedList<>();
 
         for (Action action : actions) {
-            if (actionHandler.get(action.getType()).isExecutable(character, action, answerOptions.isEmpty())) {
+            if (actionHandler.get(action.type()).isExecutable(character, action, answerOptions.isEmpty())) {
                 answerOptions.add(action);
             }
         }
@@ -112,10 +112,10 @@ public class GameEngine {
         character.setWeaponOne(Weapon.AXE);
         character.addSkill(KaiSkill.HEALING);
         character.addSkill(KaiSkill.ANIMAL_UNDERSTANDING);
-        character.getEndurance().add(26);
-        character.getCombatStrength().add(14);
-        character.getGold().add(20);
-        character.getFood().add(5);
+        character.endurance().add(26);
+        character.combatStrength().add(14);
+        character.gold().add(20);
+        character.food().add(5);
 
         engine.character = character;
         engine.start();

@@ -1,9 +1,8 @@
 package net.atos.wolf.services.battle;
 
-import net.atos.wolf.services.character.Attribute;
+import net.atos.wolf.framework.Service;
 import net.atos.wolf.services.character.Character;
 import net.atos.wolf.services.character.Enemy;
-import net.atos.wolf.framework.Service;
 import net.atos.wolf.services.common.DiceService;
 
 
@@ -12,6 +11,7 @@ import net.atos.wolf.services.common.DiceService;
  */
 @Service
 public class BattleService {
+
     public enum BattleStatus {
         CHARACTER_DIED,
         ENEMY_DIED,
@@ -20,23 +20,6 @@ public class BattleService {
 
 
     public BattleService() {
-
-    }
-
-
-    public static void main(String[] args) {
-        Character juli = new Character();
-        Enemy enemy = new Enemy();
-
-        juli.setEndurance(new Attribute("End", 15));
-        enemy.setEndurance(new Attribute("END", 10));
-
-        BattleService s = new BattleService();
-        s.executeBattleRound(juli, enemy);
-
-        //        System.out.println("END Char:"+ juli.getEndurance());
-        //        System.out.println("END ENY:"+ enemy.getEndurance());
-
 
     }
 
@@ -52,7 +35,7 @@ public class BattleService {
     private BattleTable.BattleValue calculateBattleQuotient(Character character, Enemy enemy) {
 
 
-        int battleQuotient = character.getEndurance().getValue() - enemy.getEndurance().getValue();
+        int battleQuotient = character.endurance().get() - enemy.endurance().get();
 
 
         //Zufallszähler basiert auf 0
@@ -101,14 +84,14 @@ public class BattleService {
      */
     private BattleStatus executeBattleRound(Character character, Enemy enemy) {
         BattleTable.BattleValue bv = calculateBattleQuotient(character, enemy);
-        if (enemy.getEndurance().canRemove(bv.enemy())) {
-            enemy.getEndurance().remove(bv.enemy() * -1);
+        if (enemy.endurance().canRemove(bv.enemy())) {
+            enemy.endurance().remove(bv.enemy() * -1);
         } else {
             return BattleStatus.ENEMY_DIED;
         }
 
-        if (character.getEndurance().canRemove(bv.character() * -1) == true) {
-            character.getEndurance().remove(bv.character() * -1);
+        if (character.endurance().canRemove(bv.character() * -1) == true) {
+            character.endurance().remove(bv.character() * -1);
         } else {
 
             //throw new CharacterDiedException("Sie sind gestorben");
@@ -116,8 +99,8 @@ public class BattleService {
         }
 
         System.out.println(bv);
-        System.out.println("After fight ENEMY:" + enemy.getEndurance());
-        System.out.println("After fight CHARACTER:" + character.getEndurance());
+        System.out.println("After fight ENEMY:" + enemy.endurance());
+        System.out.println("After fight CHARACTER:" + character.endurance());
         return BattleStatus.TIE;
     }
 

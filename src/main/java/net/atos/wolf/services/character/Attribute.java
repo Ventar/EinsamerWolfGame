@@ -10,7 +10,6 @@ import lombok.Getter;
  * @author Noel Masur, Julius Reismann
  * @since 2023-05-04
  */
-@Getter
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Attribute {
@@ -18,6 +17,7 @@ public class Attribute {
     /**
      * The name of the managed attribute. At the moment we have gold, food, combatStrength and endurance. Can be used to identify the attribute during logging.
      */
+    @Getter
     private String name = null;
 
     /**
@@ -33,6 +33,7 @@ public class Attribute {
      * Creates a new instance of this class
      *
      * @param name the name of the attibute that is managed
+     *
      * @throws IllegalArgumentException in case the passed name is {@code null} or empty / blank
      */
     public Attribute(String name) {
@@ -59,7 +60,9 @@ public class Attribute {
      * Increases the managed value of the attribute by the passed number. Only positive values are allowed.
      *
      * @param addNumber the value to add
+     *
      * @return the new value
+     *
      * @throws IllegalArgumentException in case the passed value is negative
      */
     public int add(int addNumber) {
@@ -77,6 +80,7 @@ public class Attribute {
      * Checks if action results in negative numbers, if numbers gets negative it gets removed
      *
      * @param removeNumber
+     *
      * @return
      */
     public int remove(int removeNumber) {
@@ -94,10 +98,15 @@ public class Attribute {
         return value;
     }
 
+    public int get() {
+        return value;
+    }
+
     /**
      * Checks number, if the number is smaller than zero it gets removed
      *
      * @param removeNumber
+     *
      * @return true or false
      */
     public boolean canRemove(int removeNumber) {
@@ -111,9 +120,9 @@ public class Attribute {
     @Override
     public String toString() {
         return "Attribute{" +
-                "name='" + name + '\'' +
-                ", value=" + value +
-                '}';
+                       "name='" + name + '\'' +
+                       ", value=" + value +
+                       '}';
     }
 
 }

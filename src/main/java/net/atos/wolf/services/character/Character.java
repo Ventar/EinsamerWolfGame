@@ -6,7 +6,7 @@ import lombok.Getter;
 
 import java.util.ArrayList;
 
-@Getter
+
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Character {
@@ -17,7 +17,10 @@ public class Character {
 
     private boolean hasBackpack = true;
 
+    @Getter
     private Weapon weaponOne = null;
+
+    @Getter
     private Weapon weaponTwo = null;
 
     private ArrayList backpack = new ArrayList<Item>();
@@ -26,9 +29,16 @@ public class Character {
 
     private ArrayList skills = new ArrayList<KaiSkill>();
 
+    @Getter
     private Attribute gold = new Attribute("Gold", 0);
+
+    @Getter
     private Attribute food = new Attribute("Food", 0);
+
+    @Getter
     private Attribute combatStrength = new Attribute("CombatStrength", 0);
+
+    @Getter
     private Attribute endurance = new Attribute("Endurance", 0);
 
     private int section = 0;
@@ -126,22 +136,6 @@ public class Character {
 
     public boolean hasSkill(KaiSkill skill) {
         return skills.contains(skill);
-    }
-
-    public Attribute getCombatStrength() {
-        return combatStrength;
-    }
-
-    public void setCombatStrength(Attribute combatStrength) {
-        this.combatStrength = combatStrength;
-    }
-
-    public Attribute getEndurance() {
-        return endurance;
-    }
-
-    public void setEndurance(Attribute endurance) {
-        this.endurance = endurance;
     }
 
     @Override

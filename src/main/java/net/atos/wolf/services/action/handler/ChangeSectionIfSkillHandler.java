@@ -11,7 +11,7 @@ public class ChangeSectionIfSkillHandler extends AbstractActionHandler {
 
     @Override
     protected boolean checkExecutable(Character character, Action action, boolean onlyAction) {
-        return character.hasSkill(action.getSkill());
+        return character.hasSkill(action.skill());
     }
 
 }
