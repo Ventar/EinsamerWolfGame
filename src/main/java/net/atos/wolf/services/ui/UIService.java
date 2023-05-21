@@ -65,7 +65,7 @@ public class UIService {
         while (stringTokenizer.hasMoreTokens()) {
             String token = stringTokenizer.nextToken();
 
-            // ensures that new lines in the JSON file are taken into account during the split, i.e we reset the counter if we detect a new line
+            // ensures that new lines in the JSON file are taken into account during the split, i.e. we reset the counter if we detect a new line
 
             if (count == 0 && token.equals(" ")) {
                 count++;

@@ -22,10 +22,19 @@ import java.util.Map;
 @Slf4j
 public class GameEngine {
 
+    /**
+     * Service to render the UI.
+     */
     private UIService ui = new UIService();
 
+    /**
+     * Service to manage the character
+     */
     private CharacterService characterService = new CharacterService();
 
+    /**
+     * Service to load and provide book sections.
+     */
     private SectionService sectionService = new SectionService("/ew1.json");
 
     /**
@@ -34,6 +43,9 @@ public class GameEngine {
      */
     private Map<ActionType, IActionHandler> actionHandler = ServiceUtilities.buildActionHandler();
 
+    /**
+     * The currently active character.
+     */
     private Character character;
 
     public void start() {
