@@ -9,7 +9,7 @@ import java.util.ArrayList;
 @Getter
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class cCharacter {
+public class Character {
 
     public static final int BASE_STRENGTH = 10;
 
