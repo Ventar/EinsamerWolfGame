@@ -1,6 +1,6 @@
 package net.atos.wolf;
 
-import net.atos.wolf.services.BattleService;
+import net.atos.wolf.services.battle.BattleService;
 
 public class BattleServiceTest {
 

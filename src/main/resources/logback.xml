@@ -1,0 +1,15 @@
+<configuration>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>ew.log</file>
+        <append>false</append>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%-5level] [%logger{35}] - %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+    <logger name="net.atos.wolf" level="TRACE"/>
+    
+    <root level="TRACE">
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>

@@ -1,10 +1,8 @@
 package net.atos.wolf;
 
-import net.atos.wolf.character.Character;
 import net.atos.wolf.framework.AbstractApplication;
 import net.atos.wolf.framework.Inject;
-import net.atos.wolf.framework.Service;
-import net.atos.wolf.services.DiceService;
+import net.atos.wolf.services.common.DiceService;
 
 public class Application extends AbstractApplication {
 

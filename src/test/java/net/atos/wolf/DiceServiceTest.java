@@ -1,10 +1,8 @@
 package net.atos.wolf;
 
-import net.atos.wolf.services.DiceService;
+import net.atos.wolf.services.common.DiceService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import javax.management.InvalidApplicationException;
 
 public class DiceServiceTest {
 
