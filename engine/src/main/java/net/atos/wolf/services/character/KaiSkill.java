@@ -2,10 +2,12 @@ package net.atos.wolf.services.character;
 
 public enum KaiSkill {
 
-    HUNTING(),
-    SIXT_SENSE(),
+
+    CAMOUFLAGE(),
+    HUNT(),
+    SIXTH_SENSE(),
     TRACKING(),
-    HEALING(),
+    HEAL(),
     ARMORY_DAGGER(),
     ARMORY_SPEAR(),
     ARMORY_MACE(),
@@ -16,8 +18,10 @@ public enum KaiSkill {
     ARMORY_BATTLE_STAFF(),
     ARMORY_BROAD_SWORD(),
     MENTAL_DEFENCE(),
-    METAL_ATTACK(),
+    THOUGHT_RAY(),
     ANIMAL_UNDERSTANDING(),
-    TELEKINESIS(),
+    MIND_OVER_MATTER(),
+
+
 
 }
