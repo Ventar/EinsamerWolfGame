@@ -45,9 +45,9 @@ public abstract class AbstractApplication implements Runnable {
             try {
                 Object service = clazz.getConstructor().newInstance();
                 serviceRegistry.put(clazz, service);
-                log.debug("Created service instance of type ::= [{}]", clazz);
+                LOG.debug("Created service instance of type ::= [{}]", clazz);
             } catch (Exception e) {
-                log.warn("Cannot instantiate service:", e);
+                LOG.warn("Cannot instantiate service:", e);
                 state = ApplicationState.INITIALIZATION_ERROR;
             }
         });
@@ -61,26 +61,26 @@ public abstract class AbstractApplication implements Runnable {
             Object serviceToInjectTo = entry.getValue();
             Class<?> clazz = entry.getKey();
 
-            log.debug("Perform dependency injection for class ::= [{}].", clazz.getName());
+            LOG.debug("Perform dependency injection for class ::= [{}].", clazz.getName());
 
             Arrays.stream(clazz.getDeclaredFields()).filter(f -> f.isAnnotationPresent(Inject.class)).forEach(f ->
             {
-                log.debug("Try to inject dependency of type ::= [{}] into field ::= [{}]", f.getType(), f.getName());
+                LOG.debug("Try to inject dependency of type ::= [{}] into field ::= [{}]", f.getType(), f.getName());
 
                 Class<?> fieldType = f.getType();
                 Object fieldServiceInstance = serviceRegistry.get(fieldType);
 
                 if (fieldServiceInstance == null) {
-                    log.warn("Cannot find service of type ::= [{}]", fieldType);
+                    LOG.warn("Cannot find service of type ::= [{}]", fieldType);
                     state = ApplicationState.INITIALIZATION_ERROR;
                 }
 
                 try {
                     f.setAccessible(true);
                     f.set(serviceToInjectTo, fieldServiceInstance);
-                    log.debug("Injected service instance to field ::= [{}] for service of type ::= [{}]", f.getName(), clazz.getName());
+                    LOG.debug("Injected service instance to field ::= [{}] for service of type ::= [{}]", f.getName(), clazz.getName());
                 } catch (Exception e) {
-                    log.warn("Cannot inject service:", e);
+                    LOG.warn("Cannot inject service:", e);
                     state = ApplicationState.INITIALIZATION_ERROR;
                 }
 
@@ -120,7 +120,7 @@ public abstract class AbstractApplication implements Runnable {
      */
     public void run() {
         performInjection();
-        log.debug("Finished dependency injection...");
+        LOG.debug("Finished dependency injection...");
         afterStartup();
     }
 
