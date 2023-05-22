@@ -30,16 +30,16 @@ public class Character {
     private ArrayList skills = new ArrayList<KaiSkill>();
 
     @Getter
-    private Attribute gold = new Attribute("Gold", 0);
+    private Attribute gold = new Attribute("GOLD", 50, 0);
 
     @Getter
-    private Attribute food = new Attribute("Food", 0);
+    private Attribute food = new Attribute("FOOD", 5, 0);
 
     @Getter
-    private Attribute combatStrength = new Attribute("CombatStrength", 0);
+    private Attribute battleStrength = new Attribute("BATTLE_STRENGTH", 19, 10);
 
     @Getter
-    private Attribute endurance = new Attribute("Endurance", 0);
+    private Attribute endurance = new Attribute("ENDURANCE", 29, 20);
 
     private int section = 0;
 
@@ -138,6 +138,30 @@ public class Character {
         return skills.contains(skill);
     }
 
+    public Attribute getAttributeByName(String name) {
+
+        if (name.equals("GOLD")) {
+            return gold;
+        } else if (name.equals("FOOD")) {
+            return food;
+        } else if (name.equals("BATTLE_STRENGTH")) {
+            return battleStrength;
+        } else if (name.equals("ENDURANCE")) {
+            return endurance;
+        }
+
+        throw new IllegalStateException("There is no attribute with name ::= [" + name + "]");
+    }
+
+    public String replaceVariablesInText(String text) {
+        String result = text.replaceAll("\\$\\{ENDURANCE\\}", String.valueOf(endurance().get()));
+        result = result.replaceAll("\\$\\{GOLD\\}", String.valueOf(endurance().get()));
+        result = result.replaceAll("\\$\\{FOOD\\}", String.valueOf(endurance().get()));
+        result = result.replaceAll("\\$\\{BATTLE_STRENGTH\\}", String.valueOf(endurance().get()));
+        return result;
+    }
+
+
     @Override
     public String toString() {
         return "Character{" +
@@ -149,7 +173,7 @@ public class Character {
                        ", skills=" + skills +
                        ", gold=" + gold +
                        ", food=" + food +
-                       ", combatStrength=" + combatStrength +
+                       ", combatStrength=" + battleStrength +
                        ", endurance=" + endurance +
                        ", section=" + section +
                        '}';

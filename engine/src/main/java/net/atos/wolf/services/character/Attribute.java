@@ -3,6 +3,7 @@ package net.atos.wolf.services.character;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Container class to manage the value of an attribute that is part of the {@link Character}.
@@ -25,24 +26,16 @@ public class Attribute {
      */
     private int value = 0;
 
+    @Getter
+    @Setter
+    private int maxValue = 0;
+
+    @Getter
+    @Setter
+    private int baseValue = 0;
+
     private Attribute() {
 
-    }
-
-    /**
-     * Creates a new instance of this class
-     *
-     * @param name the name of the attibute that is managed
-     *
-     * @throws IllegalArgumentException in case the passed name is {@code null} or empty / blank
-     */
-    public Attribute(String name) {
-
-        if (name == null || name.isEmpty() || name.isBlank()) {
-            throw new IllegalArgumentException("Name of an attribute cannot be null or empty");
-        }
-
-        this.name = name;
     }
 
     /**
@@ -51,9 +44,10 @@ public class Attribute {
      * @param name
      * @param value
      */
-    public Attribute(String name, int value) {
-        this(name);
-        add(value);
+    public Attribute(String name, int maxValue, int baseValue) {
+        this.name = name;
+        this.maxValue = maxValue;
+        this.baseValue = baseValue;
     }
 
     /**
@@ -71,7 +65,11 @@ public class Attribute {
             throw new IllegalArgumentException("The added value has to be positive for attribute ::= [" + name + "]");
         }
 
-        value = value + addNumber;
+        if (value + addNumber > maxValue) {
+            value = maxValue;
+        } else {
+            value = value + addNumber;
+        }
 
         return value;
     }
@@ -122,7 +120,8 @@ public class Attribute {
         return "Attribute{" +
                        "name='" + name + '\'' +
                        ", value=" + value +
+                       ", maxValue=" + maxValue +
+                       ", baseValue=" + baseValue +
                        '}';
     }
-
 }

@@ -8,8 +8,6 @@ import net.atos.wolf.services.action.ActionType;
 import net.atos.wolf.services.action.IActionHandler;
 import net.atos.wolf.services.character.Character;
 import net.atos.wolf.services.character.CharacterService;
-import net.atos.wolf.services.character.KaiSkill;
-import net.atos.wolf.services.character.Weapon;
 import net.atos.wolf.services.common.ServiceUtilities;
 import net.atos.wolf.services.section.Section;
 import net.atos.wolf.services.section.SectionService;
@@ -52,7 +50,7 @@ public class GameEngine {
 
         LOG.debug("Created character ::= [{}]", character);
 
-        int sectionToRender = 333;
+        int sectionToRender = 1000;
 
         while (true) {
 
@@ -71,7 +69,7 @@ public class GameEngine {
             ActionResult actionResult = null;
 
             do {
-                actionToExecute = ui.render(section.text(), String.valueOf(section.sectionNumber()), answerOptions);
+                actionToExecute = ui.render(character.replaceVariablesInText(section.text()), String.valueOf(section.sectionNumber()), answerOptions);
                 actionResult = actionHandler.get(actionToExecute.type()).handleAction(character, actionToExecute, answerOptions);
 
                 switch (actionResult.type()) {
@@ -81,6 +79,8 @@ public class GameEngine {
                 }
 
             } while (actionResult.type() == ActionResult.ActionResultType.REPRESENT_ACTIONS);
+
+            System.out.println(character);
 
         }
     }
@@ -109,13 +109,13 @@ public class GameEngine {
     public static void main(String[] args) {
         GameEngine engine = new GameEngine();
         Character character = new Character();
-        character.setWeaponOne(Weapon.AXE);
-        character.addSkill(KaiSkill.HEALING);
-        character.addSkill(KaiSkill.ANIMAL_UNDERSTANDING);
-        character.endurance().add(26);
-        character.combatStrength().add(14);
-        character.gold().add(20);
-        character.food().add(5);
+        // character.setWeaponOne(Weapon.AXE);
+        // character.addSkill(KaiSkill.HEAL);
+        // character.addSkill(KaiSkill.ANIMAL_UNDERSTANDING);
+        // character.endurance().add(26);
+        // character.combatStrength().add(14);
+        // character.gold().add(20);
+        // character.food().add(5);
 
         engine.character = character;
         engine.start();

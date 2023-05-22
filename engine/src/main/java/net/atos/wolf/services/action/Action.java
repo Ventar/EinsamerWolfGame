@@ -32,6 +32,9 @@ public class Action {
 
     private SpecialItem specialItem;
 
+    private String value;
+
+    private String attribute;
 
     @Override
     public boolean equals(Object o) {

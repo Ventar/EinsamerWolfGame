@@ -168,5 +168,41 @@
         "text": "Weiter"
       }
     ]
+  },
+  {
+    "sectionNumber": 1000,
+    "text": "Willkommen zur Charaktererstellung deines Einsamer Wolfs Charakters. In den folgenden Schritten werden wir einen Helden erstellen mit dem du dein Abenteuer bestreiten kannst.",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "mandatory": false,
+        "targetSection": 1001,
+        "text": "Starte die Erstellung deines Charakters"
+      }
+    ]
+  },
+  {
+    "sectionNumber": 1001,
+    "text": "Zunächst ermitteln wir deinen Ausdauerwert. Hierzu bestimmen wir eine Zufallszahl von 0 - 9 und addieren diese zu deinem Basiswert von 20.",
+    "actions": [
+      {
+        "type": "INITIALIZE_ATTRIBUTE",
+        "attribute": "ENDURANCE",
+        "targetSection": 1002,
+        "text": "Weiter"
+      }
+    ]
+  },
+  {
+    "sectionNumber": 1002,
+    "text": "Großartig, deine Ausdauer beträgt ${ENDURANCE} Punkte. Im nächsten Schritt, ermittelst du deinen Kampfstärkewert. Hierzu bestimmen wir eine Zufallszahl 0 - 9 und addieren diese zu deinem Basiswert von 10.",
+    "actions":[
+      {
+        "type":"INITIALIZE_ATTRIBUTE",
+        "attribute": "BATTLE_STRENGTH",
+        "targetSection": 1003,
+        "text": "Weiter"
+      }
+    ]
   }
 ]

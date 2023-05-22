@@ -171,7 +171,7 @@
   },
   {
     "sectionNumber": 1000,
-    "text": "Willkommen zur Charactererstellung deines Einsamer Wolfs Charakters. In den folgenden Schritten werden wir einen Helden erstellen mit dem du dein Abenteuer bestreiten kannst.",
+    "text": "Willkommen zur Charaktererstellung deines Einsamer Wolfs Charakters. In den folgenden Schritten werden wir einen Helden erstellen mit dem du dein Abenteuer bestreiten kannst.",
     "actions":[
       {
         "type": "CHANGE_SECTION",
@@ -183,14 +183,14 @@
   },
   {
     "sectionNumber": 1001,
-    "text": "Zunächst ermitteln wir deinen Ausdauerwert. Hierzu bestimmen wir eine Zufallszahl von 0 - 9 und addieren diese zu deinem Basiswert von 20",
+    "text": "Zunächst ermitteln wir deinen Ausdauerwert. Hierzu bestimmen wir eine Zufallszahl von 0 - 9 und addieren diese zu deinem Basiswert von 20.",
     "actions":[
       {
         "type": "CHANGE_ATTRIBUTE_ADD_VALUE",
         "attribute": "ENDURANCE",
         "targetSection": 1002,
         "text": "Weiter",
-        "value": "D10"
+        "value": "0,9"
       }
     ]
   },
@@ -271,7 +271,7 @@
   },
   {
     "sectionNumber": 1004,
-    "text": "Hole dir nun deine Basisausrüstung ab, um dein Abendteuer zu beginnen ",
+    "text": "Hole dir nun deine Basisausrüstung ab, um dein Abenteuer zu beginnen ",
     "actions":[
       {
         "type": "GET_ITEM",
@@ -309,7 +309,6 @@
         "item": "MAP"
       }
     ]
-
   }
   
 ]
