@@ -196,7 +196,7 @@
   },
   {
      "sectionNumber": 1002,
-     "text": "Als nächsten schritt, ermittelst du deinen Kampfstärkewert. Hierzu bestimmen wir eine Zufallszahl 0 - 9 und addieren diese zu deinem Basiswert von 10",
+     "text": "Als nächsten schritt, ermittelst du deinen Kampfstärkewert. Hierzu bestimmen wir eine Zufallszahl 0 - 9 und addieren diese zu deinem Basiswert von 10.",
      "actions":[
       {
         "type":"CHANGE_ATTRIBUTE_ADD_VALUE",
@@ -209,11 +209,10 @@
   },
   {
     "sectionNumber": 1003,
-    "text": "Als anhänger der Kai, wurdest du in in den Kai_Disziplinen unterwiesen. Wähle hier fünf der Kai_Disziplinen aus die dich auf deinem Abendteuer unterstützen. Wähle weise, die Disziplinen sind wichtig um gewissen Herrausforderungen zu bewältigen",
+    "text": "Damit stehen deine Basiswerte fest:\n\n    Ausdauer: ${ENDURANCE}\n    Kampfstärke: ${BATTLE_STRENGTH}\n\nAls anhänger der Kai, wurdest du in in den Kai Disziplinen unterwiesen. Wähle hier fünf der Kai Disziplinen aus die dich auf deinem Abenteuer unterstützen. Wähle weise, die Disziplinen sind wichtig um gewissen Herausforderungen zu bewältigen.",
     "actions":[
       {
-        "type":"GET_KAI_SKILL",
-        "attribute": "KAI_SKILL",
+        "type":"CHANGE_SECTION_IF_NUMBER_OF_SKILLS",
         "targetSection": 1004,
         "text": "Weiter"
       },
