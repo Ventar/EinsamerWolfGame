@@ -1,26 +1,58 @@
 @startuml
 
-[*] --> Start
-Start: start a new game
-
-state setup {
-
-Start --> NewCharacter
-NewCharacter: Creates a new character
 
 
-Start --> LoadCharacter
-LoadCharacter: Loads an existing character\nfrom an JSON file
+state GameEngine {
+
+    [*] --> LoadCharacter: set start section
+    LoadCharacter: uses the game engine to load a section\nthat allows to create or load a character
+    LoadCharacter --> ModifyCharacter
+    ModifyCharacter: Sets a character in the game engine to play
+    ModifyCharacter --> LoadSection: set start section of the book\nor the section that was\nstored in the character
+    LoadSection --> HandleSection
+    LoadSection: Load the section to handle
+    HandleSection: handle the currently active section
+    HandleSection --> FilterActions
+
+    state FilterActions {
+        FilterActions: filter all actions of the loaded section\nand check if they are applicable for the\ncurrent state of the player character
+        CheckActionHandler: Iterates over all action handlers\nin the game engine and check if\nthe handler is executable
+    }
+
+    state ExecuteActions {
+        ExecuteActions: execute the action with the\nresponsible action handler
+
+        FindActionHandler: resolve the action handler that is\nresponsible for a selected action
+
+        FindActionHandler --> ChangeSectionX
+        ChangeSectionX: action handler that will change the section\nof the game engine if the precondition is\nfulfilled(e.g. skill is present,no other action\nis available)
+        ChangeSectionX --> LoadSection: [CHANGE_SECTION]
+
+        FindActionHandler --> InitializeAttribute
+        InitializeAttribute: set an attribute like food, gold\nendurance of the character
+        InitializeAttribute --> LoadSection: [CHANGE_SECTION]
+
+        FindActionHandler --> TakeWeapon
+        TakeWeapon: Allows the user to take a weapon, afterwards\nthe possible actions are modified and\nrepresented to the user
+        TakeWeapon --> HandleSection: [REPRESENT_ACTIONS]
+
+        FindActionHandler --> GetKaiSkill
+        GetKaiSkill: if the user does not have more than X skills\nadd a new skill to the character skills
+        GetKaiSkill --> HandleSection: [REPRESENT_ACTIONS]
+    }
 
 }
 
-state Play {
-NewCharacter --> InitializeGame : set the current\nsection to 1000
-LoadCharacter --> InitializeGame : set the current\nsection to the\nsection value stored\nin the character
-InitializeGame --> LoadSection
-InitializeGame: Load the section based\non the previous state
+state UIService {
+    FilterActions --> RenderUI
+    RenderUI -->  WaitForInput
+    RenderUI: Present the text information of the\nloaded section to the player and offer\nthe actions to executed based on the\noutcome of the filtering process
+    WaitForInput: User has to select a number from 1..actions
 
+    WaitForInput --> RenderUI: invalid\ninput
+    WaitForInput --> ExecuteActions: valid option\nselected
 }
+
 
 
 
