@@ -1,0 +1,28 @@
+@startuml
+
+[*] --> Start
+Start: start a new game
+
+state setup {
+
+Start --> NewCharacter
+NewCharacter: Creates a new character
+
+
+Start --> LoadCharacter
+LoadCharacter: Loads an existing character\nfrom an JSON file
+
+}
+
+state Play {
+NewCharacter --> InitializeGame : set the current\nsection to 1000
+LoadCharacter --> InitializeGame : set the current\nsection to the\nsection value stored\nin the character
+InitializeGame --> LoadSection
+InitializeGame: Load the section based\non the previous state
+
+}
+
+
+
+
+@enduml
