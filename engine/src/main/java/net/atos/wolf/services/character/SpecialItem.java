@@ -7,4 +7,7 @@ public enum SpecialItem {
     TOMBGUARDIANSTONES(),
     CRYSTALSTARPENDANT(),
     MAP(),
+    KAI_ROBE,
+    BELT,
+
 }

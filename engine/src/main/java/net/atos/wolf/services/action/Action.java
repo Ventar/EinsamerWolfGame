@@ -3,6 +3,7 @@ package net.atos.wolf.services.action;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
+import net.atos.wolf.services.character.Item;
 import net.atos.wolf.services.character.KaiSkill;
 import net.atos.wolf.services.character.SpecialItem;
 import net.atos.wolf.services.character.Weapon;
@@ -35,6 +36,8 @@ public class Action {
     private String value;
 
     private String attribute;
+
+    private Item item;
 
     @Override
     public boolean equals(Object o) {

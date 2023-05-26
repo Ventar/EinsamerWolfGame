@@ -42,7 +42,6 @@ public abstract class AbstractActionHandler implements IActionHandler {
      * @param character  the character
      * @param action     the action to check
      * @param onlyAction if the action is the only action so far
-     *
      * @return {@code true} if the action can be handled for the character, {@code false} otherwise
      */
     protected boolean checkExecutable(Character character, Action action, boolean onlyAction) {
@@ -57,6 +56,10 @@ public abstract class AbstractActionHandler implements IActionHandler {
     @Override
     public boolean isExecutable(Character character, Action action, boolean onlyAction) {
         return action.type() == type && checkExecutable(character, action, onlyAction);
+    }
+
+    public ActionResult handleAction(Character character, Action action, List<Action> answerOptions) {
+        return handleAction(null, character, action, answerOptions);
     }
 
     @Override

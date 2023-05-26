@@ -3,7 +3,6 @@ package net.atos.wolf.services.character;
 public enum Item {
 
     VORDKA_JUWEL(),
-    BACKPACK(),
     GOLDENKEY(),
     FEARWHEEL(),
     FIRESTONE(),

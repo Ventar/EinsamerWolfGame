@@ -3,8 +3,10 @@ package net.atos.wolf.services.character;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
+import net.atos.wolf.services.TranslationService;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
@@ -47,7 +49,6 @@ public class Character {
      * Add a skill to the character
      *
      * @param kaiSkill
-     *
      * @return
      */
     public void addSkill(KaiSkill kaiSkill) {
@@ -114,6 +115,7 @@ public class Character {
         specialItemsList.add(specialItem);
     }
 
+
     /**
      * remove a special / rare item from the list
      *
@@ -153,30 +155,86 @@ public class Character {
         throw new IllegalStateException("There is no attribute with name ::= [" + name + "]");
     }
 
+    /**
+     * Return the number of skills of the current character
+     *
+     * @return the number of skills
+     */
+    public int getNumberOfSkills() {
+        return skills.size();
+    }
+
     public String replaceVariablesInText(String text) {
         String result = text.replaceAll("\\$\\{ENDURANCE\\}", String.valueOf(endurance().get()));
-        result = result.replaceAll("\\$\\{GOLD\\}", String.valueOf(endurance().get()));
-        result = result.replaceAll("\\$\\{FOOD\\}", String.valueOf(endurance().get()));
-        result = result.replaceAll("\\$\\{BATTLE_STRENGTH\\}", String.valueOf(endurance().get()));
+        result = result.replaceAll("\\$\\{GOLD\\}", String.valueOf(gold().get()));
+        result = result.replaceAll("\\$\\{FOOD\\}", String.valueOf(food().get()));
+        result = result.replaceAll("\\$\\{BATTLE_STRENGTH\\}", String.valueOf(battleStrength().get()));
         return result;
     }
 
+    /**
+     * Returns skill from character skill list, if there is no skill return minus
+     *
+     * @param pos
+     * @return
+     */
+    private String getEntryAtPosition(TranslationService translationService, List list, int pos) {
+        if (pos < list.size()) {
+            return translationService.translate(list.get(pos).toString());
+        } else {
+            return "-";
+        }
+    }
+
+    public String createCharacterString(TranslationService translationService) {
+
+
+        StringBuffer buf = new StringBuffer();
+
+        buf.append(String.format("Kampfstärke : %10s    Kai Skill: %-20s    Gegenstände: %s \n", battleStrength.get(), getEntryAtPosition(translationService, skills, 0), getEntryAtPosition(translationService, backpack, 0)));
+        buf.append(String.format("Ausdauer    : %10s               %-20s                 %s \n", endurance.get(), getEntryAtPosition(translationService, skills, 1), getEntryAtPosition(translationService, backpack, 1)));
+        buf.append(String.format("%51s\n", getEntryAtPosition(translationService, skills, 2), getEntryAtPosition(translationService, backpack, 2)));
+        buf.append(String.format("Waffe 1     : %-10s               %-20s\n", weaponOne, getEntryAtPosition(translationService, skills, 3), getEntryAtPosition(translationService, backpack, 3)));
+        buf.append(String.format("Waffe 2     : %-10s               %-20s\n", weaponTwo, getEntryAtPosition(translationService, skills, 4)));
+        buf.append(String.format("Nahrung     : %10s                   ", food.get()));
+        buf.append(String.format("\n"));
+        buf.append(String.format("Gold        : %10s                   ", gold.get()));
+        buf.append(String.format("\n"));
+        //buf.append(String.format("Gegenstände : %10s                   ",backpack.get(0)));
+
+
+        return buf.toString();
+                /*
+                "Kampfstärke: " + battleStrength.get() + "\n" +
+                "Ausdauer: " + endurance.get() + "\n" +
+                "Fertigkeiten: " + skills +"\n" +
+                "\n"+
+                "Waffe1: " + weaponOne + "\n" +
+                "Waffe2: " + weaponTwo + "\n" +
+                "\n"+
+                "Nahrung: " + food.get() +"\n"+
+                "Gold: " + gold.get() +"\n"+
+                "\n"+
+                "Gegenstände im Rucksack: " + backpack +"\n"+
+                "Spezielle Gegenstände: " + specialItemsList;
+*/
+    }
 
     @Override
     public String toString() {
         return "Character{" +
-                       "hasBackpack=" + hasBackpack +
-                       ", weaponOne=" + weaponOne +
-                       ", weaponTwo=" + weaponTwo +
-                       ", backpack=" + backpack +
-                       ", specialItemsList=" + specialItemsList +
-                       ", skills=" + skills +
-                       ", gold=" + gold +
-                       ", food=" + food +
-                       ", combatStrength=" + battleStrength +
-                       ", endurance=" + endurance +
-                       ", section=" + section +
-                       '}';
+                "hasBackpack=" + hasBackpack +
+                ", weaponOne=" + weaponOne +
+                ", weaponTwo=" + weaponTwo +
+                ", backpack=" + backpack +
+                ", specialItemsList=" + specialItemsList +
+                ", skills=" + skills +
+                ", gold=" + gold +
+                ", food=" + food +
+                ", combatStrength=" + battleStrength +
+                ", endurance=" + endurance +
+                ", section=" + section +
+                '}';
     }
 
 

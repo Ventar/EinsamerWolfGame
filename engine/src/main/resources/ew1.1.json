@@ -218,52 +218,51 @@
       },
       {
         "type": "GET_KAI_SKILL",
-        "text": "Erlerne diesen Skill",
+        "text": "Erlerne den Skill, Tarnung",
         "skill": "CAMOUFLAGE"
       },
       {
         "type":"GET_KAI_SKILL",
-        "text": "Erlerne diesen Skill",
+        "text": "Erlerne den Skill, Jagd",
         "skill": "HUNT"
       },
       {
         "type": "GET_KAI_SKILL",
-        "text": "Erlerne diesen Skill",
+        "text": "Erlerne den Skill, Sechster Sinn ",
         "skill": "SIXTH_SENSE"
       },
       {
         "type": "GET_KAI_SKILL",
-        "text": "Erlerne diesen Skill",
+        "text": "Erlerne den Skill, Spurensuche",
         "skill": "TRACKING"
       },
       {
         "type":"GET_KAI_SKILL",
-        "text": "Erlerne diesen Skill",
+        "text": "Erlerne den Skill, Heilung",
         "skill": "HEAL"
       },
       {
         "type":"GET_KAI_SKILL_AND_PICK_WEAPON",
-        "text": "Erlerne diesen Skill und Wähle eine Waffe",
-        "skill": "ARMORY"
+        "text": "Erlerne den Skill, Waffenkunde und erhalte einen Zufälligen Waffen boost"
       },
       {
         "type": "GET_KAI_SKILL",
-        "text": "Erlerne diesen Skill",
+        "text": "Erlerne den Skill, Gedankensperre",
         "skill": "MENTAL_DEFENCE"
       },
       {
         "type": "GET_KAI_SKILL",
-        "text": "Erlerne diesen Skill",
+        "text": "Erlerne den Skill Gedankenstrahl",
         "skill": "THOUGHT_RAY"
       },
       {
         "type":"GET_KAI_SKILL",
-        "text": "Erlerne diesen Skill",
+        "text": "Erlerne den Skill, Tierverständnis",
         "skill": "ANIMAL_UNDERSTANDING"
       },
       {
         "type": "GET_KAI_SKILL",
-        "text": "Erlerne diesen Skill",
+        "text": "Erlerne den Skill, Geist über Materie ",
         "skill": "MIND_OVER_MATTER"
       }
     ]

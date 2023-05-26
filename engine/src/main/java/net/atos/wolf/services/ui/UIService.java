@@ -72,7 +72,7 @@ public class UIService {
                 continue; // do not start a new line with a white space
             } else if (!token.equals(" ") && token.equals("\n") || count > lineLength) {
                 stringBuffer.append("\n");
-                stringBuffer.append(token);
+//                stringBuffer.append(token);
                 count = token.length(); // reset the counter, we start a new line
             } else {
                 stringBuffer.append(token);

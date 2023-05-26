@@ -196,13 +196,84 @@
   {
     "sectionNumber": 1002,
     "text": "Großartig, deine Ausdauer beträgt ${ENDURANCE} Punkte. Im nächsten Schritt, ermittelst du deinen Kampfstärkewert. Hierzu bestimmen wir eine Zufallszahl 0 - 9 und addieren diese zu deinem Basiswert von 10.",
-    "actions":[
+    "actions": [
       {
-        "type":"INITIALIZE_ATTRIBUTE",
+        "type": "INITIALIZE_ATTRIBUTE",
         "attribute": "BATTLE_STRENGTH",
         "targetSection": 1003,
         "text": "Weiter"
       }
     ]
+  },
+  {
+    "sectionNumber": 1003,
+    "text": "Damit stehen deine Basiswerte fest:\n\n    Ausdauer: ${ENDURANCE}\n    Kampfstärke: ${BATTLE_STRENGTH}\n\nAls anhänger der Kai, wurdest du in in den Kai Disziplinen unterwiesen. Wähle hier fünf der Kai Disziplinen aus die dich auf deinem Abenteuer unterstützen. Wähle weise, die Disziplinen sind wichtig um gewissen Herausforderungen zu bewältigen.",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION_IF_NUMBER_OF_SKILLS",
+        "targetSection": 1004,
+        "text": "Weiter"
+      },
+      {
+        "type": "GET_KAI_SKILL",
+        "text": "Erlerne den Skill, Tarnung",
+        "skill": "CAMOUFLAGE"
+      },
+      {
+        "type": "GET_KAI_SKILL",
+        "text": "Erlerne den Skill, Jagd",
+        "skill": "HUNT"
+      },
+      {
+        "type": "GET_KAI_SKILL",
+        "text": "Erlerne den Skill, Sechster Sinn",
+        "skill": "SIXTH_SENSE"
+      },
+      {
+        "type": "GET_KAI_SKILL",
+        "text": "Erlerne den Skill, Spurensuche ",
+        "skill": "TRACKING"
+      },
+      {
+        "type": "GET_KAI_SKILL",
+        "text": "Erlerne den Skill, Heilung",
+        "skill": "HEAL"
+      },
+      {
+        "type": "GET_KAI_SKILL_AND_PICK_WEAPON",
+        "text": "Erlerne den Skill, Waffenkunde und erhalte +2 Kampfstärke für eine Zufallswaffe"
+      },
+      {
+        "type": "GET_KAI_SKILL",
+        "text": "Erlerne den Skill, Gedankensperre",
+        "skill": "MENTAL_DEFENCE"
+      },
+      {
+        "type": "GET_KAI_SKILL",
+        "text": "Erlerne den Skill Gedankenstrahl",
+        "skill": "THOUGHT_RAY"
+      },
+      {
+        "type": "GET_KAI_SKILL",
+        "text": "Erlerne den Kill, Tierverständnis",
+        "skill": "ANIMAL_UNDERSTANDING"
+      },
+      {
+        "type": "GET_KAI_SKILL",
+        "text": "Erlerne den Skill, Geist über Materie",
+        "skill": "MIND_OVER_MATTER"
+      }
+    ]
+  },
+  {
+    "sectionNumber": 1004,
+    "text": "Hole dir nun deine Basisausrüstung ab, um dein Abenteuer zu beginnen...",
+    "actions": [
+      {
+        "type": "GET_INITIAL_ITEMS",
+        "text": "Nimm deine Austrüstung und etwas Gold",
+        "targetSection": 333
+      }
+     ]
   }
 ]

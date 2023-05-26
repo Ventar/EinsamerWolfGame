@@ -2,27 +2,27 @@
 autonumber
 GameEngine --> GameEngine: start a new game - <b>GameEngine.java (L121)</b>
 GameEngine --> Character: load / create / save character (with the character service or manually) <b>GameEngine.java (L111-120)</b>
-GameEngine --> SectionService: load section
-GameEngine --> ActionHandler: check if the actions of the\nloaded section can be executed by the player
-GameEngine --> UIService: send the text to render and the possible actions
-UIService --> GameEngine: return the action choosen by the player
-GameEngine --> ActionHandler: execute the action
+GameEngine --> SectionService: load section    <b>SectionService.java (L51)
+GameEngine --> ActionHandler: check if the actions of the\nloaded section can be executed by the player <b>|ActionHandler.java (L31)
+GameEngine --> UIService: send the text to render and the possible actions <b>Section.java (L30-35)
+UIService --> GameEngine: return the action choosen by the player  <b>GameEngine.java (L106)
+GameEngine --> ActionHandler: execute the action <b>|ActionHandler.java (32-62)
 alt change section (after the execution of the action the section is changed)
-ActionHandler --> Character: modify the character based on the choosen action
+ActionHandler --> Character: modify the character based on the choosen action <b>|ActionHandler.java (L35-47)
 ActionHandler --> UIService: (optional) execute additional communication to finalize the action
-ActionHandler --> GameEngine: return the result of the action
+ActionHandler --> GameEngine: return the result of the action <b>ActionResult.java (L106)
 GameEngine --> GameEngine: continue at (3)
 end
-alt character died
-ActionHandler --> Character: modify the character based on the choosen action
+alt character died <b> BattleService.java (L98)
+ActionHandler --> Character: modify the character based on the choosen action  <b>|ActionHandler.java (L35-47)
 ActionHandler --> UIService: (optional) execute additional communication to finalize the action
-ActionHandler --> GameEngine: return the result of the action
+ActionHandler --> GameEngine: return the result of the action <b>ActionResult.java (L106)
 GameEngine --> GameEngine: end game
 end
-alt represent actions (after the execution of the action we stay at the current section\nand offer additional options)
-ActionHandler --> Character: modify the character based on the choosen action
+alt represent actions (after the execution of the action we stay at the current section\nand offer additional options) <b> UIService(l43)
+ActionHandler --> Character: modify the character based on the choosen action <b>|ActionHandler.java (L35-47)
 ActionHandler --> UIService: (optional) execute additional communication to finalize the action
-ActionHandler --> GameEngine: return the result of the action with additional answer options
+ActionHandler --> GameEngine: return the result of the action with additional answer options  <b>|ActionHandler.java (L47)
 GameEngine --> GameEngine: continue at (4)
 GameEngine --> GameEngine: end game
 end

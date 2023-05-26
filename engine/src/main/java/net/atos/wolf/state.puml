@@ -4,14 +4,14 @@
 
 state GameEngine {
 
-    [*] --> LoadCharacter: set start section
+    [*] --> LoadCharacter: set start section <b>GameEngine.java (L53)
     LoadCharacter: uses the game engine to load a section\nthat allows to create or load a character
     LoadCharacter --> ModifyCharacter
-    ModifyCharacter: Sets a character in the game engine to play
+    ModifyCharacter: Sets a character in the game engine to play <b> GameEngine.java(L49-83)
     ModifyCharacter --> LoadSection: set start section of the book\nor the section that was\nstored in the character
     LoadSection --> HandleSection
-    LoadSection: Load the section to handle
-    HandleSection: handle the currently active section
+    LoadSection: Load the section to handle |ActtionHandler.java (L46-47)
+    HandleSection: handle the currently active section <b> AbstractActionHandler.java (L64)
     HandleSection --> FilterActions
 
     state FilterActions {
@@ -20,20 +20,20 @@ state GameEngine {
     }
 
     state ExecuteActions {
-        ExecuteActions: execute the action with the\nresponsible action handler
+        ExecuteActions: execute the action with the\nresponsible action handler <b> ActionHandler.java (L21)
 
-        FindActionHandler: resolve the action handler that is\nresponsible for a selected action
+        FindActionHandler: resolve the action handler that is\nresponsible for a selected action <b> AbstractActionHandler.java (L27-35)
 
         FindActionHandler --> ChangeSectionX
         ChangeSectionX: action handler that will change the section\nof the game engine if the precondition is\nfulfilled(e.g. skill is present,no other action\nis available)
         ChangeSectionX --> LoadSection: [CHANGE_SECTION]
 
         FindActionHandler --> InitializeAttribute
-        InitializeAttribute: set an attribute like food, gold\nendurance of the character
+        InitializeAttribute: set an attribute like food, gold\nendurance of the character <b> Character.java (L41-54)
         InitializeAttribute --> LoadSection: [CHANGE_SECTION]
 
         FindActionHandler --> TakeWeapon
-        TakeWeapon: Allows the user to take a weapon, afterwards\nthe possible actions are modified and\nrepresented to the user
+        TakeWeapon: Allows the user to take a weapon, afterwards\nthe possible actions are modified and\nrepresented to the user <b> TakeWeaponHandler.java (L14-21)
         TakeWeapon --> HandleSection: [REPRESENT_ACTIONS]
 
         FindActionHandler --> GetKaiSkill

@@ -43,9 +43,7 @@ public interface IActionHandler {
      * @throws IllegalStateException in case a {@link UIService} is used in the implementation of the {@link #handleAction(UIService, Character, Action, List)} method and this
      *                               method is not overwritten
      */
-    default ActionResult handleAction(Character character, Action action, List<Action> answerOptions) {
-        return handleAction(null, character, action, answerOptions);
-    }
+    ActionResult handleAction(Character character, Action action, List<Action> answerOptions);
 
     /**
      * Handles the passed action. Handling an action means that the character of the player is modified based on the information that is available in the handled action. If
