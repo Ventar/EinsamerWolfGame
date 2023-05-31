@@ -191,33 +191,39 @@ public class Character {
 
         StringBuffer buf = new StringBuffer();
 
-        buf.append(String.format("Kampfstärke : %10s    Kai Skill: %-20s    Gegenstände: %s \n", battleStrength.get(), getEntryAtPosition(translationService, skills, 0), getEntryAtPosition(translationService, backpack, 0)));
-        buf.append(String.format("Ausdauer    : %10s               %-20s                 %s \n", endurance.get(), getEntryAtPosition(translationService, skills, 1), getEntryAtPosition(translationService, backpack, 1)));
-        buf.append(String.format("%51s\n", getEntryAtPosition(translationService, skills, 2), getEntryAtPosition(translationService, backpack, 2)));
-        buf.append(String.format("Waffe 1     : %-10s               %-20s\n", weaponOne, getEntryAtPosition(translationService, skills, 3), getEntryAtPosition(translationService, backpack, 3)));
-        buf.append(String.format("Waffe 2     : %-10s               %-20s\n", weaponTwo, getEntryAtPosition(translationService, skills, 4)));
-        buf.append(String.format("Nahrung     : %10s                   ", food.get()));
-        buf.append(String.format("\n"));
-        buf.append(String.format("Gold        : %10s                   ", gold.get()));
-        buf.append(String.format("\n"));
+        buf.append(String.format("Kampfstärke               : %10s    Kai Skill: %-30s    Gegenstände:    %s\n", battleStrength.get(), getEntryAtPosition(translationService, skills, 0), getEntryAtPosition(translationService, backpack, 0)));
+        buf.append(String.format("Ausdauer                  : %10s               %-30s                    %s\n", endurance.get(), getEntryAtPosition(translationService, skills, 1), getEntryAtPosition(translationService, backpack, 1)));
+        buf.append(String.format("%10s                                           %-30s                    %s\n","", getEntryAtPosition(translationService, skills, 2), getEntryAtPosition(translationService, backpack, 2)));
+        if (weaponOne == null){
+            buf.append(String.format("Waffe 1                   :     %6s               %-30s                    %s\n", "-", getEntryAtPosition(translationService, skills, 3), getEntryAtPosition(translationService, backpack, 3)));
+        }else {
+            buf.append(String.format("Waffe 1                   :     %6s               %-30s                    %s\n", translationService.translate(weaponOne.toString()), getEntryAtPosition(translationService, skills, 3), getEntryAtPosition(translationService, backpack, 3)));
+
+        }
+        if (weaponTwo == null){
+            buf.append(String.format("Waffe 2                   :     %6s               %-30s                    %s\n", "-", getEntryAtPosition(translationService, skills, 4), getEntryAtPosition(translationService, backpack, 4)));
+        }else {
+            buf.append(String.format("Waffe 2                   :     %6s               %-30s                    %s\n", translationService.translate(weaponTwo.toString()), getEntryAtPosition(translationService, skills, 4), getEntryAtPosition(translationService, backpack, 4)));
+
+        }
+        buf.append(String.format("Nahrung                   : %10s               %-30s                    %s\n", food.get(),"", getEntryAtPosition(translationService, backpack, 5 )));
+//        buf.append(String.format("\n"));
+        buf.append(String.format("Gold                      : %10s               %-30s                    %s\n", gold.get(),"", getEntryAtPosition(translationService, backpack, 6)));
+        //buf.append(String.format("\n"));
+        buf.append(String.format("%10s                                           %-30s                    %s\n","", "", getEntryAtPosition(translationService, backpack, 7)));
         //buf.append(String.format("Gegenstände : %10s                   ",backpack.get(0)));
+        buf.append(String.format("Spezialgegenstände    : "         ));
+        for (int i = 0;i < specialItemsList.size(); i++){
+            buf.append(translationService.translate(specialItemsList.get(i).toString()) );
+            if (i < specialItemsList.size() - 1){
+                buf.append(", ");
+            }
+        }
+
 
 
         return buf.toString();
-                /*
-                "Kampfstärke: " + battleStrength.get() + "\n" +
-                "Ausdauer: " + endurance.get() + "\n" +
-                "Fertigkeiten: " + skills +"\n" +
-                "\n"+
-                "Waffe1: " + weaponOne + "\n" +
-                "Waffe2: " + weaponTwo + "\n" +
-                "\n"+
-                "Nahrung: " + food.get() +"\n"+
-                "Gold: " + gold.get() +"\n"+
-                "\n"+
-                "Gegenstände im Rucksack: " + backpack +"\n"+
-                "Spezielle Gegenstände: " + specialItemsList;
-*/
+
     }
 
     @Override

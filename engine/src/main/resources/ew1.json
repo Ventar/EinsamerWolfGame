@@ -1,5 +1,21 @@
 [
   {
+    "sectionNumber": 1,
+    "text": "Du wirst vom Läuten deines mechanischen Weckers aus dem Schlaf gerissen, den du am Vorabend dicht neben deinem Kissen platziert hast. Im dämmrigen Kerzenlicht des Dormitoriums – dem Schlafsaal der Initianden – erhebst du dich von deiner Schlafstätte und ziehst dir schnell deine grüne Kai-Tunika und den Umhang an. Kurz hältst du inne, um deinen Gürtel und den Rucksack zu richten, bevor du deine schlafenden Kameraden verlässt. Du hast dir fest vorgenommen, nicht zu spät zur Trainingsstunde von Kai-Meister Sternenfeuer zu kommen, denn du weißt, welche Strafe dir droht, wenn du dein Versprechen brichst und unpünktlich bist. Schnell und leise verlässt du das Dormitorium durch die Nordtür, die direkt auf das Übungsgelände im Zentrum der Kai-Abtei führt. Sternenfeuer erwartet dich bereits. Er trägt jetzt schon die feierliche zeremonielle Robe für das abendliche Fest. Im düsteren Licht, das jetzt kurz vor Sonnenaufgang herrscht, kannst du nur dank deiner scharfen Augen deinen Meister – diesen hervorragenden Krieger – neben einem Waffengestell erkennen. Er begrüßt dich mit einem kurzen Nicken und befiehlt dir, eine der hölzernen Übungswaffen aus dem Gestell zu nehmen. Du wählst ein Schwert aus guter\nsommerlendischer Eiche und nimmst deine Position ihm gegenüber ein – bereit, das Training zu beginnen. „Kämpfe werden nicht immer im hellen Tageslicht geführt, Lautloser Wolf“, sagt er und nimmt eine hölzerne Axt aus der Waffenhalterung. „Die Dunkelheit an diesem Morgen wird dazu dienen, deine Sinne zu schärfen. Gleiches lässt sich leider nicht von deiner Aufmerksamkeit in der Klasse sagen.“ Geduldig führt dich dein Kai-Meister durch die Übungen, zeigt dir die korrekten Paraden und wie du auf bestmögliche Weise angreifst.Nach einer halben Stunde intensiven Trainings bist du schweißüberströmt und völlig außer Atem, trotz der frostigen Kühle der Morgenluft. Meister Sternenfeuer dagegen zeigt nicht die geringsten Anzeichen von Müdigkeit nach diesem anstrengenden Training.„Gut gemacht, Lautloser Wolf! Du kannst dein Schwert jetzt ablegen und dich eine Weile ausruhen. Deine Unzulänglichkeiten im Klassenzimmer scheinst du durch deine angeborenen Fähigkeiten im Umgang mit der Waffe gut ausgleichen zu können. Du hast viel Talent. Würdest du nur die gleiche Hingabe bei deinen Studien zeigen, könntest du eines Tages bestimmt den Rang eines Kai Meisters erlangen.“Du dankst Sternenfeuer für dieses Kompliment und seine Ratschläge. Er lobt nie ohne Grund, und so erfüllen dich seine Worte\nmit der festen Absicht, in Zukunft nicht mehr deinen Tagträumen nachzuhängen.Als du dein Schwert in das Waffengestell zurückgestellt hast und gerade den ersten kühlen Schluck aus deiner Wasserflasche nimmst, wird die morgendliche Stille jäh durch das stürmische Läuten der Turmglocke des Torhauses zerrissen. Es ist die Alarmglocke der Abtei.„Bei der Liebe Ishirs …!“, stößt Sternenfeuer hervor. Er blickt angestrengt nach Westen, wo der Himmel auf seltsame und unheimliche Art mit jedem Moment dunkler wird. Zunächst kannst du in der Düsternis nichts erkennen, doch dann siehst du Bewegung in der Finsternis. Hunderte von großen geflügelten Kreaturen nähern sich der Abtei! „Kraan!“, keucht Sternenfeuer. „Kai behüte uns!“ Der unheilvolle Klang der Alarmglocke hat inzwischen jeden in der Abtei geweckt.Einige Kai-Meister und viele unerfahrene Kai-Krieger stürmen aus dem Dormitorium. Die meisten von ihnen tragen keine Rüstung,aber jeder ist bewaffnet und bereit, die Festung gegen den überraschenden Angriff zu verteidigen.Die erste Angriffswelle der geflügelten Kraan schießt vom düsteren Himmel herab. Als sie sich kreischend dem mächtigen Torhaus der Abtei nähern, siehst du, dass sie auf ihren ledernen Rücken Dutzende von Giak transportieren, grausame Kreaturen, die das Rückgrat der dunklen Armee der Schwarzen Lords bilden. Was Giak an körperlicher Größe und Intelligenz entbehren, gleichen sie durch schiere Masse wieder aus.Die Tore des Torhauses stehen noch halb offen, als die ersten Kraan ihre Reiter abspringen lassen und kehrtmachen. Diese ersten wenigen Giak rappeln sich auf und hasten auf den Eingang zu, um sich Zugang zum Torhaus zu verschaffen, bevor dies vollständig verschlossen wird.„Lautloser Wolf, folge mir!“, befiehlt Sternenfeuer, wendet sich zum Torhaus und läuft auf den Eingang zu..",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 392,
+        "text": "Folge den Anweisungen von Meister Sternenfeuers"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 497,
+        "text": "Hol dir eine echte Waffe vom Ständer"
+      }
+    ]
+  },
+  {
     "sectionNumber": 4,
     "text": "Du folgst dem Oberst, während er  sein  Pferd durch die Menschenmenge treibt und sich dabei wenig darum schert, ob ihm die Leute noch rechtzeitig ausweichen können. Dir ist es unmöglich,deinen sommerlendischen Landsleuten gegenüber ein  derartgewissenloses Verhalten an den Tag zu legen, und so hast du den rücksichtslosen Offizier schon bald aus den Augen verloren.Die  breite Prachtstraße, die  sich  am  anderen Ende  des  Platzesanschließt, ist ebenso bevölkert wie der Platz selbst, und dein Pferdist dir auch hier nicht von Vorteil, so dass du widerwillig beschließtabzusteigen und deinen Weg zu Fuß fortzusetzen.Nach etwa fünfzig Metern siehst du eine weitere Straße, die nachlinks  führt.  Auf  einem Schild, das  an  der  Ecke  einer  Taverneangebracht ist, steht \"Farisallee\".",
     "actions": [
@@ -170,6 +186,21 @@
     ]
   },
   {
+    "sectionNumber": 497,
+    "text": "Dein Blick streift über die Reihe echter Waffen in dem Regal vor dir.\nEs sind die folgenden:\nDOLCH (0), STREITKOLBEN (1), KURZSCHWERT (2),\nKRIEGSHAMMER (3), KURZSCHWERT (4), SCHWERT (5),\nSTREITAXT (6), SCHWERT (7), BREITSCHWERT (8), STREITAXT (9).\nDu überlegst dir gerade, welche Waffe du am besten nehmen solltest,\nals du Meister Sternenfeuers zornige Stimme hörst:\n„Lautloser Wolf – zu mir, SOFORT!“\nErmittle eine Zufallszahl und vergleiche sie mit den Zahlen, die bei\nden oben aufgeführten Waffen in Klammern stehen.\nDas Ergebnis zeigt dir die Waffe an, die du dir nun in aller Eile\ngreifst, um dem drängenden Befehl deines Meisters Folge zu leisten.\n",
+    "actions": [
+      {
+        "type": "TAKE_RANDOM_WEAPON",
+        "text": "Greife eine Waffe"
+      },
+      {
+        "type": "CHANGE_SECTION_IF_NO_OTHER_OPTION",
+        "targetSection": 58,
+        "text": "Weiter"
+      }
+    ]
+  },
+  {
     "sectionNumber": 1000,
     "text": "Willkommen zur Charaktererstellung deines Einsamer Wolfs Charakters. In den folgenden Schritten werden wir einen Helden erstellen mit dem du dein Abenteuer bestreiten kannst.",
     "actions": [
@@ -272,8 +303,8 @@
       {
         "type": "GET_INITIAL_ITEMS",
         "text": "Nimm deine Austrüstung und etwas Gold",
-        "targetSection": 333
+        "targetSection": 1
       }
-     ]
+    ]
   }
 ]

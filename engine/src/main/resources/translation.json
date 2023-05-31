@@ -6,6 +6,257 @@
   {
     "key": "ANIMAL_UNDERSTANDING",
     "de": "Tierverständnis"
+  },
+  {
+    "key": "CAMOUFLAGE",
+    "de": "Tarnung"
+  },
+  {
+    "key": "HUNT",
+    "de": "Jagd"
+  },
+  {
+    "key": "SIXTH_SENSE",
+    "de": "Sechster-Sinn"
+  },
+  {
+    "key": "TRACKING",
+    "de": "Verfolgung"
+  },
+  {
+    "key": "THOUGHT_RAY",
+    "de": "Gedankenstrahl"
+  },
+  {
+    "key": "MIND_OVER_MATTER",
+    "de": "Willenssache"
+  },
+
+
+
+  {
+    "key": "ARMORY_DAGGER",
+    "de": "Waffenkammer-Dolch"
+  },
+  {
+    "key": "ARMORY_SPEAR",
+    "de": "Waffenkammer-Speer"
+  },
+  {
+    "key": "ARMORY_MACE",
+    "de": "Waffenkammer-Streitkolben"
+  },
+  {
+    "key": "ARMORY_SHORT_SWORD",
+    "de": "Waffenkammer-Kurzschwert"
+  },
+  {
+    "key": "ARMORY_WARHAMMER",
+    "de": "Waffenkammer-Kriegshammer"
+  },
+  {
+    "key": "ARMORY_SWORD",
+    "de": "Waffenkammer-Schwert"
+  },
+  {
+    "key": "ARMORY_AXE",
+    "de": "Waffenkammer-Axt"
+  },
+  {
+    "key": "ARMORY_BATTLE_STAFF",
+    "de": "Waffenkammer-Kampfstab"
+  },
+  {
+    "key": "ARMORY_BROAD_SWORD",
+    "de": "Waffenkammer-Breitschwert"
+  },
+  {
+    "key": "MENTAL_DEFENSE",
+    "de": "Mentaleverteidigung"
+  },
+
+
+
+
+
+  {
+    "key": "VORDAK_JEWEL",
+    "de": "Vordak-Juwel"
+  },
+  {
+    "key": "GOLDENKEY",
+    "de": "Goldenerschlüssel"
+  },
+  {
+    "key": "FEARWHEEL",
+    "de": "Angstrad"
+  },
+  {
+    "key": "FIRESTONE",
+    "de": "Feuerstein"
+  },
+  {
+    "key": "IRON_PICKAXE",
+    "de": "Einsenspitzhacke"
+  },
+  {
+    "key": "KAI_BATTLE_CRYSTAL",
+    "de": "Kaikampfkristall"
+  },
+  {
+    "key": "KAI_SLEEP_CRYSTAL",
+    "de": "Kaischlafkristall"
+  },
+  {
+    "key": "KAI_KEY",
+    "de": "Kaischlüssel"
+  },
+  {
+    "key": "FIREBOTTLE",
+    "de": "Feuerflasche"
+  },
+  {
+    "key": "FOOD",
+    "de": "Essen"
+  },
+  {
+    "key": "STONE",
+    "de": "Stein"
+  },
+  {
+    "key": "SALMON",
+    "de": "Lachs"
+  },
+  {
+    "key": "KAI_CAPE",
+    "de": "Kaiumhang"
+  },
+  {
+    "key": "GUILDPASS",
+    "de": "Gildenpass"
+  },
+  {
+    "key": "MAGNIFYING_GLASS",
+    "de": "Lupe"
+  },
+  {
+    "key": "MESSING_SCISSOR",
+    "de": "Messing-Schere"
+  },
+  {
+    "key": "IRON_KEY",
+    "de": "Eisenschlüssel"
+  },
+  {
+    "key": "SILVER_KEY",
+    "de": "Silberschlüssel"
+  },
+  {
+    "key": "ROPE",
+    "de": "Seil"
+  },
+  {
+    "key": "GREEN_EMERALD",
+    "de": "Grüner-Smaragd"
+  },
+  {
+    "key": "TORCH",
+    "de": "Fackel"
+  },
+  {
+    "key": "REB_ROBE",
+    "de": "Rote-Robe"
+  },
+  {
+    "key": "SOUP",
+    "de": "Suppe"
+  },
+  {
+    "key": "MUSHROOMS",
+    "de": "Pilze"
+  },
+  {
+    "key": "LAMBSHANK",
+    "de": "Lammschenkel"
+  },
+  {
+    "key": "SILVERBRUSH",
+    "de": "Silber-Bürste"
+  },
+  {
+    "key": "CINDER",
+    "de": "Asche"
+  },
+  {
+    "key": "DAGGER",
+    "de": "Dolch"
+  },
+  {
+    "key": "SPEAR",
+    "de": "Speer"
+  },
+  {
+    "key": "MACE",
+    "de": "Keule"
+  },
+  {
+    "key": "SHORT_SWORD",
+    "de": "Kurzschwert"
+  },
+  {
+    "key": "WARHAMMER",
+    "de": "Kriegshammer"
+  },
+  {
+    "key": "SWORD",
+    "de": "Schwert"
+  },
+  {
+    "key": "AXE",
+    "de": "Axt"
+  },
+  {
+    "key": "BATTLE_STAFF",
+    "de": "Kampfstab"
+  },
+  {
+    "key": "BROAD_SWORD",
+    "de": "Breitschwert"
+  },
+  {
+    "key": "BELT",
+    "de": "Gürtel"
+  },
+  {
+    "key": "CHAIN_MAIL",
+    "de": "Kettenhemd"
+  },
+  {
+    "key": "TOMBGUARDIANSTONES",
+    "de": "Grabwächtersteine"
+  },
+  {
+    "key": "CRYSTALSTARTPENDANT",
+    "de": "Kristallstern-Anhänger"
+  },
+  {
+    "key": "MAP",
+    "de": "Karte"
+  },
+  {
+    "key": "HELMET",
+    "de": "Helm"
+  },
+  {
+    "key": "KAI_ROBE",
+    "de": "Kai-Robe"
   }
+
+
+
+
+
+
+
 
 ]

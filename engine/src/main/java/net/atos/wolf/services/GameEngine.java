@@ -40,6 +40,10 @@ public class GameEngine {
      * usually happens automatically during construction;
      */
     private Map<ActionType, IActionHandler> actionHandler = ServiceUtilities.buildActionHandler();
+    /**
+     * a translater that filters with keywords words and translate them into german etc.
+     */
+    private TranslationService translationService= new TranslationService("/translation.json");
 
     /**
      * The currently active character.
@@ -50,7 +54,7 @@ public class GameEngine {
 
         LOG.debug("Created character ::= [{}]", character);
 
-        int sectionToRender = 1000;
+        int sectionToRender = 1;
 
         while (true) {
 
@@ -82,7 +86,7 @@ public class GameEngine {
                     }
                 }
 
-                System.out.println(character);
+                System.out.println(character.createCharacterString(translationService));
 
             } while (actionResult.type() == ActionResult.ActionResultType.REPRESENT_ACTIONS);
 
@@ -112,12 +116,12 @@ public class GameEngine {
 
     public static void main(String[] args) {
         GameEngine engine = new GameEngine();
-        Character character = new Character();
-        TranslationService translationService= new TranslationService("/translation.json");
+       Character character = new Character();
+//        TranslationService translationService= new TranslationService("/translation.json");
          character.setWeaponOne(Weapon.AXE);
          character.addSkill(KaiSkill.HEAL);
          character.addSkill(KaiSkill.ANIMAL_UNDERSTANDING);
-        character.addSkill(KaiSkill.ARMORY_SPEAR);
+//        character.addSkill(KaiSkill.ARMORY_SPEAR);
         character.addSkill(KaiSkill.ARMORY_SHORT_SWORD);
         character.addSkill(KaiSkill.ARMORY_MACE);
         character.addItemToBackpack(Item.CINDER);
@@ -125,14 +129,20 @@ public class GameEngine {
         character.addItemToBackpack(Item.GOLDENKEY);
         character.addItemToBackpack(Item.FEARWHEEL);
         character.addItemToBackpack(Item.GREEN_EMERALD);
+
+        character.addSpecialItem(SpecialItem.CHAIN_MAIL);
+        character.addSpecialItem(SpecialItem.BELT);
+        character.addSpecialItem(SpecialItem.MAP);
+        character.addSpecialItem(SpecialItem.HELMET);
+
          character.endurance().add(26);
          character.battleStrength().add(14);
          character.gold().add(20);
          character.food().add(5);
-
-      //  engine.character = character;
-        //engine.start();
-        System.out.println(character.createCharacterString(translationService));
+//
+        engine.character = character;
+        engine.start();
+        //System.out.println(character.createCharacterString(translationService));
     }
 
 }

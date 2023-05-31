@@ -2,7 +2,7 @@ package net.atos.wolf.services.character;
 
 public enum Item {
 
-    VORDKA_JUWEL(),
+    VORDKA_JEWEL(),
     GOLDENKEY(),
     FEARWHEEL(),
     FIRESTONE(),
@@ -16,7 +16,7 @@ public enum Item {
     SALMON(),
     KAI_CAPE(),
     GUILDPASS(),
-    MAGNIFIF_GLASS(),
+    MAGNIFYING_GLASS(),
     MESSING_SCISSOR(),
     IRON_KEY(),
     SILVER_KEY(),
