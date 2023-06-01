@@ -46,6 +46,8 @@ public class GameEngine {
      */
     private TranslationService translationService = new TranslationService("/translation.json");
 
+    private int sectionToRender = -1;
+
     /**
      * The currently active character.
      */
@@ -55,7 +57,9 @@ public class GameEngine {
 
         LOG.debug("Created character ::= [{}]", character);
 
-        int sectionToRender = 58;
+        if (sectionToRender == -1){
+           sectionToRender =  character.section();
+        }
 
         while (true) {
 
@@ -110,7 +114,7 @@ public class GameEngine {
     }
 
     /**
-     * Calls the {@link IActionHandler#isExecutable(Character, Action, boolean)} method for every action in the passed list to check if the action can be
+     * Calls the {@link IActionHandler#isExecutable(Character, Action, List)} method for every action in the passed list to check if the action can be
      * executed by the character of the engine in the current state
      *
      * @param actions the actions to filter
@@ -121,7 +125,7 @@ public class GameEngine {
         List<Action> answerOptions = new LinkedList<>();
 
         for (Action action : actions) {
-            if (actionHandler.get(action.type()).isExecutable(character, action, answerOptions.isEmpty())) {
+            if (actionHandler.get(action.type()).isExecutable(character, action, answerOptions)) {
                 answerOptions.add(action);
             }
         }
@@ -133,7 +137,7 @@ public class GameEngine {
         GameEngine engine = new GameEngine();
         Character character = new Character();
 //        TranslationService translationService= new TranslationService("/translation.json");
-        character.setWeaponOne(Weapon.AXE);
+        character.setWeaponOne(Weapon.SWORD);
         character.addSkill(KaiSkill.HEAL);
         character.addSkill(KaiSkill.ANIMAL_UNDERSTANDING);
 //        character.addSkill(KaiSkill.ARMORY_SPEAR);
@@ -155,6 +159,9 @@ public class GameEngine {
         character.battleStrength().add(14);
         character.gold().add(20);
         character.food().add(5);
+
+
+        character.section(1);
 //
         engine.character = character;
         engine.start();

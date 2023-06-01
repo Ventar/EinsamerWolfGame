@@ -3,6 +3,7 @@ package net.atos.wolf.services.character;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
+import lombok.Setter;
 import net.atos.wolf.services.TranslationService;
 
 import java.util.ArrayList;
@@ -42,7 +43,8 @@ public class Character {
 
     @Getter
     private Attribute endurance = new Attribute("ENDURANCE", 29, 20);
-
+@Getter
+@Setter
     private int section = 0;
 
     /**

@@ -32,7 +32,7 @@ public class BattleService {
      * @param character
      * @param enemy
      */
-    private BattleTable.BattleValue calculateBattleQuotient(Character character, Enemy enemy) {
+    public BattleTable.BattleValue calculateBattleQuotient(Character character, Enemy enemy) {
 
 
         int battleQuotient = character.endurance().get() - enemy.endurance().get();

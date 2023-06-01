@@ -31,6 +31,8 @@ public class Action {
     private String attribute;
     private Item item;
     private List<Integer> randomSection;
+    private int numberOfSkills;
+    private boolean noOtherOption;
 
     @Override
     public boolean equals(Object o) {

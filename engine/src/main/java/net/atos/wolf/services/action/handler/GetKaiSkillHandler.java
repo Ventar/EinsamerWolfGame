@@ -9,7 +9,7 @@ import java.util.List;
 @ActionHandler(ActionType.GET_KAI_SKILL)
 public class GetKaiSkillHandler extends AbstractActionHandler {
     @Override
-    protected boolean checkExecutable(Character character, Action action, boolean onlyAction) {
+    protected boolean checkExecutable(Character character, Action action, List<Action> answerOptions) {
         return character.getNumberOfSkills() < 5 && !character.hasSkill(action.skill());
     }
 
