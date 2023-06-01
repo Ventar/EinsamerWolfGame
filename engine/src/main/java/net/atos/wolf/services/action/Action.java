@@ -8,6 +8,7 @@ import net.atos.wolf.services.character.KaiSkill;
 import net.atos.wolf.services.character.SpecialItem;
 import net.atos.wolf.services.character.Weapon;
 
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -20,24 +21,16 @@ public class Action {
 
     @Getter
     private ActionType type;
-
     private boolean mandatory;
-
     private int targetSection;
-
     private KaiSkill skill;
-
     private String text;
-
     private Weapon weapon;
-
     private SpecialItem specialItem;
-
     private String value;
-
     private String attribute;
-
     private Item item;
+    private List<Integer> randomSection;
 
     @Override
     public boolean equals(Object o) {

@@ -73,6 +73,36 @@
     ]
   },
   {
+    "sectionNumber": 58,
+    "text": "Du rennst, so schnell du kannst, um Sternenfeuer einzuholen,\nwährend dieser auf das Haupttor der Abtei zuläuft. Gleichzeitig, und\nohne dabei seinen Schritt zu verlangsamen, zieht er mit der Linken\nsein Schwert und löst mit der Rechten eine zweiblättrige Streitaxt\nvon seinem Gürtel. Dann wirft er sich todesmutig den kreischenden\nGiak entgegen, die durch den Spalt zwischen den Toren eindringen.\nMit tödlicher Schnelligkeit versetzt er dem ersten seiner Gegner\neinen Aufwärtshieb mit der Axt, der das hässliche graue Gesicht vom\nKinn bis zum Scheitel spaltet. Als der tote Giak in einer Fontäne\nschwarzen Blutes zurücktaumelt, lässt Sternenfeuer laut und\nkraftvoll seinen Schlachtruf „Für Sommerlund und die Kai!“\nerschallen. Dann setzt er seinen Angriff fort. Mit einer Reihe\ntödlicher Schwerthiebe enthauptet er die drei nachfolgenden Giak,\ndoch Zeit zum Verschnaufen bleibt ihm kaum: Nur wenige\nAugenblicke später drängt ein Dutzend weiterer Giak vorwärts,\nbegierig, deinen Kai-Meister durch ihre schiere Übermacht in die\nKnie zu zwingen. Einer dieser Giak, bewaffnet mit einem Speer, löst sich von der\nGruppe und stürzt auf dich zu, um dich von deinem umzingelten\nMeister fernzuhalten. Du schlägst nach seinem Kopf, doch dein Hieb\nwar nicht schnell genug, um die Kreatur zu treffen. Der Giak duckt\nsich, holt mit seinem Speerschaft in einem weiten Bogen aus und\ntrifft dich am Knie, so dass du zu Boden stürzt. Es gelingt dir zwar, deine Waffe festzuhalten, doch bevor du wieder\nauf den Beinen bist, ist der Giak heran und hebt seinen Speer, um dir\nden Todesstoß zu versetzen.",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION_IF_RANDOM",
+        "randomSection": [
+          279,
+          279,
+          279,
+          279,
+          279,
+          117,
+          117,
+          117,
+          117,
+          117
+        ],
+        "text": "Weiter"
+      },
+      {
+        "type": "MODIFY_ATTRIBUTE",
+        "mandatory": true,
+        "value": 1,
+        "attribute": "ENDURANCE",
+        "text": "TAKE_DAMAGE"
+
+      }
+    ]
+  },
+  {
     "sectionNumber": 166,
     "text": "Du ziehst deine Axt aus dem Gürtel und schleuderst sie den dunklen Korridor hinunter. Dein Wurf war gut und wohl gezielt, und mit einem dumpfen „Tock“ schlägt die wirbelnde Klinge in den Hinterkopf der Kreatur, spaltet ihren eisernen Helm und gräbt sich tief in ihr Gehirn. Der Giak ist bereits tot, als sein schlaffer Körper zwischen den Leichen seiner abscheulichen Kameraden zu Boden stürzt. So schnell du kannst, rennst du den Gang hinunter, besorgt, dein Freund könnte schwer verletzt sein. Glücklicherweise sieht die Wunde schlimmer aus, als sie tatsächlich ist, und Schneefalke ist schon bald in der Lage, die Blutung mithilfe seiner eigenen Kai Heilkunst zu stillen. „Du warst schon immer der beste Werfer beim Greel“, sagt er mit einem Grinsen, während du ihm mit dem Saum deines Kai-Umhangs vorsichtig das Blut aus den Augen wischst. Als er schließlich wieder richtig sehen kann, greifst du nach unten und ziehst deine Axt aus dem Schädel des toten Giak. Dann säuberst du die Klinge an dessen Tunika, bevor du die Waffe wieder in deinen Gürtel steckst.  „Gut für dich, dass ich jeden Tag geübt habe!“, erwiderst du. „Ich danke dir, mein Freund“, sagt Schneefalke. „Du hast mir das Leben gerettet. Ich hoffe, dass ich diesen Gefallen eines Tages erwidern kann, doch nun muss ich mich in den Kampf stürzen. Die Giak sind überall, und ich fürchte, dass die Abtei fallen wird. Komm mit mir! Wir werden Seite an Seite kämpfen, wie wahre Kai-Brüder.“ Du erklärst Schneefalke, dass du einen wichtigen Auftrag für Meister Sternenfeuer ausführen musst, dass du dich ihm jedoch anschließen wirst, sobald dieser erledigt ist. „Dann sei Kai mit dir, Lautloser Wolf“, ruft er, als er forteilt, um sich der Schlacht anzuschließen. „Möge Kai an diesem Tag mit uns allen sein“, antwortest du, dann salutierst du und blickst deinem tapferen Freund nach, bis er hinter der nächsten Ecke verschwunden ist. Mit einem wachsenden Gefühl des Grauens kehrst du zur Tür der Rüstkammer zurück, stößt sie auf und betrittst den Raum. ",
     "actions": [

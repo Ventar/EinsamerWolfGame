@@ -192,7 +192,7 @@ public class Character {
         StringBuffer buf = new StringBuffer();
 
         buf.append(String.format("Kampfstärke               : %10s    Kai Skill: %-30s    Gegenstände:    %s\n", battleStrength.get(), getEntryAtPosition(translationService, skills, 0), getEntryAtPosition(translationService, backpack, 0)));
-        buf.append(String.format("Ausdauer                  : %10s               %-30s                    %s\n", endurance.get(), getEntryAtPosition(translationService, skills, 1), getEntryAtPosition(translationService, backpack, 1)));
+        buf.append(String.format("Ausdauer                  : %10s               %-30s                    %s\n", endurance.get() + "/" + endurance().maxValue(), getEntryAtPosition(translationService, skills, 1), getEntryAtPosition(translationService, backpack, 1)));
         buf.append(String.format("%10s                                           %-30s                    %s\n","", getEntryAtPosition(translationService, skills, 2), getEntryAtPosition(translationService, backpack, 2)));
         if (weaponOne == null){
             buf.append(String.format("Waffe 1                   :     %6s               %-30s                    %s\n", "-", getEntryAtPosition(translationService, skills, 3), getEntryAtPosition(translationService, backpack, 3)));

@@ -13,6 +13,7 @@ import net.atos.wolf.services.section.Section;
 import net.atos.wolf.services.section.SectionService;
 import net.atos.wolf.services.ui.UIService;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -36,14 +37,14 @@ public class GameEngine {
     private SectionService sectionService = new SectionService("/ew1.json");
 
     /**
-     * A map with all available action handlers that can be used by the engine. Has to be initialized by calling the {@link ServiceUtilities#buildActionHandler()} method which
-     * usually happens automatically during construction;
+     * A map with all available action handlers that can be used by the engine. Has to be initialized by calling the
+     * {@link ServiceUtilities#buildActionHandler()} method which usually happens automatically during construction;
      */
     private Map<ActionType, IActionHandler> actionHandler = ServiceUtilities.buildActionHandler();
     /**
      * a translater that filters with keywords words and translate them into german etc.
      */
-    private TranslationService translationService= new TranslationService("/translation.json");
+    private TranslationService translationService = new TranslationService("/translation.json");
 
     /**
      * The currently active character.
@@ -54,7 +55,7 @@ public class GameEngine {
 
         LOG.debug("Created character ::= [{}]", character);
 
-        int sectionToRender = 1;
+        int sectionToRender = 58;
 
         while (true) {
 
@@ -69,6 +70,8 @@ public class GameEngine {
             // Generate the first set of answer options directly from the actions that are stored in the section
             List<Action> answerOptions = section.actions();
             List<Action> filteredAnswerOptions = filterActions(section.actions());
+
+            filteredAnswerOptions = executeMandatoryActions(filteredAnswerOptions);
 
             Action actionToExecute = null;
             ActionResult actionResult = null;
@@ -94,9 +97,21 @@ public class GameEngine {
         }
     }
 
+    private List<Action> executeMandatoryActions(List<Action> filteredAnswerOptions) {
+        List<Action> resultList = new ArrayList<>();
+        for (Action action : filteredAnswerOptions) {
+            if (action.mandatory()) {
+                actionHandler.get(action.type()).handleAction(character, action, null);
+            } else {
+                resultList.add(action);
+            }
+        }
+        return resultList;
+    }
+
     /**
-     * Calls the {@link IActionHandler#isExecutable(Character, Action, boolean)} method for every action in the passed list to check if the action can be executed by the character
-     * of the engine in the current state
+     * Calls the {@link IActionHandler#isExecutable(Character, Action, boolean)} method for every action in the passed list to check if the action can be
+     * executed by the character of the engine in the current state
      *
      * @param actions the actions to filter
      * @return the filtered actions
@@ -116,11 +131,11 @@ public class GameEngine {
 
     public static void main(String[] args) {
         GameEngine engine = new GameEngine();
-       Character character = new Character();
+        Character character = new Character();
 //        TranslationService translationService= new TranslationService("/translation.json");
-         character.setWeaponOne(Weapon.AXE);
-         character.addSkill(KaiSkill.HEAL);
-         character.addSkill(KaiSkill.ANIMAL_UNDERSTANDING);
+        character.setWeaponOne(Weapon.AXE);
+        character.addSkill(KaiSkill.HEAL);
+        character.addSkill(KaiSkill.ANIMAL_UNDERSTANDING);
 //        character.addSkill(KaiSkill.ARMORY_SPEAR);
         character.addSkill(KaiSkill.ARMORY_SHORT_SWORD);
         character.addSkill(KaiSkill.ARMORY_MACE);
@@ -135,10 +150,11 @@ public class GameEngine {
         character.addSpecialItem(SpecialItem.MAP);
         character.addSpecialItem(SpecialItem.HELMET);
 
-         character.endurance().add(26);
-         character.battleStrength().add(14);
-         character.gold().add(20);
-         character.food().add(5);
+        character.endurance().add(26);
+        character.endurance().maxValue(26);
+        character.battleStrength().add(14);
+        character.gold().add(20);
+        character.food().add(5);
 //
         engine.character = character;
         engine.start();
