@@ -2,10 +2,7 @@ package net.atos.wolf.services;
 
 
 import lombok.extern.slf4j.Slf4j;
-import net.atos.wolf.services.action.Action;
-import net.atos.wolf.services.action.ActionResult;
-import net.atos.wolf.services.action.ActionType;
-import net.atos.wolf.services.action.IActionHandler;
+import net.atos.wolf.services.action.*;
 import net.atos.wolf.services.character.*;
 import net.atos.wolf.services.character.Character;
 import net.atos.wolf.services.common.ServiceUtilities;
@@ -53,6 +50,8 @@ public class GameEngine {
      */
     private Character character;
 
+
+
     public void start() {
 
         LOG.debug("Created character ::= [{}]", character);
@@ -81,7 +80,24 @@ public class GameEngine {
             ActionResult actionResult = null;
 
             do {
-                actionToExecute = ui.render(character.replaceVariablesInText(section.text()), String.valueOf(section.sectionNumber()), filteredAnswerOptions);
+                String text = character.replaceVariablesInText(section.text());
+
+                 // Wenn eine Action vom Typ Battle dabei ist
+                for (Action action:filteredAnswerOptions){
+                    if (action.type().equals(ActionType.BATTLE)){
+                        ;
+                        for ( Enemy enemy :action.battle().enemy()) {
+                            text += enemy.name() + "\n";
+                            text += "Gegner Ausdauer   : " + enemy.endurance() + "\n";
+                            text += "Gegner Kampfstärke: " + enemy.battleStrength() + "\n";
+                            text += "Kampfrunde        : " + action.battleRounds() + "\n";
+                        }
+                    }
+                }
+                // lass dir alle enemies dieser action geben
+                // fünge die werte zur Variable text hinzu
+
+                actionToExecute = ui.render(text, String.valueOf(section.sectionNumber()), filteredAnswerOptions);
                 actionResult = actionHandler.get(actionToExecute.type()).handleAction(character, actionToExecute, answerOptions);
 
                 switch (actionResult.type()) {
@@ -140,8 +156,8 @@ public class GameEngine {
         character.setWeaponOne(Weapon.SWORD);
         character.addSkill(KaiSkill.HEAL);
         character.addSkill(KaiSkill.ANIMAL_UNDERSTANDING);
-//        character.addSkill(KaiSkill.ARMORY_SPEAR);
-        character.addSkill(KaiSkill.ARMORY_SHORT_SWORD);
+        character.addSkill(KaiSkill.ARMORY_SWORD);
+        character.addSkill(KaiSkill.THOUGHT_RAY);
         character.addSkill(KaiSkill.ARMORY_MACE);
         character.addItemToBackpack(Item.CINDER);
         character.addItemToBackpack(Item.FIREBOTTLE);
@@ -161,7 +177,7 @@ public class GameEngine {
         character.food().add(5);
 
 
-        character.section(1);
+        character.section(279);
 //
         engine.character = character;
         engine.start();

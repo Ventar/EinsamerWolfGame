@@ -2,7 +2,9 @@ package net.atos.wolf.services.battle;
 
 import net.atos.wolf.framework.Service;
 import net.atos.wolf.services.character.Character;
-import net.atos.wolf.services.character.Enemy;
+import net.atos.wolf.services.action.Enemy;
+import net.atos.wolf.services.character.KaiSkill;
+import net.atos.wolf.services.character.Weapon;
 import net.atos.wolf.services.common.DiceService;
 
 
@@ -25,6 +27,39 @@ public class BattleService {
 
     private DiceService diceService = new DiceService();
 
+    private boolean checkApplyWeaponSkill(Character character, KaiSkill skill, Weapon weapon) {
+        return character.hasSkill(skill) && (character.weaponOne() == weapon || character.weaponTwo() == weapon);
+    }
+
+    private int calculateBattleStrength(Character character, Enemy enemy) {
+        int battleStrength = character.battleStrength().get();
+        boolean applyWeaponSkill = false;
+
+        if (character.hasSkill(KaiSkill.THOUGHT_RAY) && !enemy.thoughRayResistance()) {
+            battleStrength = battleStrength + 2;
+            System.out.println("Charakter verwendet Gedankenstrahl...");
+        }
+
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_AXE, Weapon.AXE);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_SHORT_SWORD, Weapon.SHORT_SWORD);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_MACE, Weapon.MACE);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_BATTLE_STAFF, Weapon.BATTLE_STAFF);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_DAGGER, Weapon.DAGGER);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_BROAD_SWORD, Weapon.BROAD_SWORD);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_SPEAR, Weapon.SPEAR);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_WARHAMMER, Weapon.WARHAMMER);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_SWORD, Weapon.SWORD);
+
+        if (applyWeaponSkill) {
+            battleStrength = battleStrength + 2;
+            System.out.println("Charakter setzt eine Waffenkunde Fähigkeit ein...");
+        }
+
+
+        System.out.println("\nMod. Battle Strength  : " + battleStrength);
+
+        return battleStrength;
+    }
 
     /**
      * calculates the battle quotient by comparing your endurance against the enemies
@@ -35,14 +70,16 @@ public class BattleService {
     public BattleTable.BattleValue calculateBattleQuotient(Character character, Enemy enemy) {
 
 
-        int battleQuotient = character.endurance().get() - enemy.endurance().get();
+        int battleQuotient = calculateBattleStrength(character,enemy) - enemy.battleStrength();
 
+        System.out.println("BATTLE QUOTIENT       : " + battleQuotient);
 
         //Zufallszähler basiert auf 0
         int rand = diceService.generate();
         BattleTable.BattleValue bv = null;
+        System.out.println("DICE ROLL             : " + rand);
 
-        System.out.println(battleQuotient);
+
         if (battleQuotient <= -11) {
             bv = BattleTable.get(0, rand);
         } else if (battleQuotient == -10 || battleQuotient == -9) {
@@ -82,26 +119,25 @@ public class BattleService {
      * @param character
      * @param enemy
      */
-    private BattleStatus executeBattleRound(Character character, Enemy enemy) {
+    public BattleStatus executeBattleRound(Character character, Enemy enemy) {
         BattleTable.BattleValue bv = calculateBattleQuotient(character, enemy);
-        if (enemy.endurance().canRemove(bv.enemy())) {
-            enemy.endurance().remove(bv.enemy() * -1);
-        } else {
-            return BattleStatus.ENEMY_DIED;
+
+        enemy.endurance(enemy.endurance() - bv.enemy() * -1);
+        character.endurance().remove(bv.character() * -1);
+
+        BattleStatus status = BattleStatus.TIE;
+
+        if (character.endurance().get() <= 0) {
+            status = BattleStatus.CHARACTER_DIED;
+        } else if (enemy.endurance() <= 0) {
+            status = BattleStatus.ENEMY_DIED;
         }
 
-        if (character.endurance().canRemove(bv.character() * -1) == true) {
-            character.endurance().remove(bv.character() * -1);
-        } else {
+        System.out.println("Battle Value          : " + bv);
+        System.out.println("After fight ENEMY     : " + enemy.endurance());
+        System.out.println("Result                : " + status + "\n");
 
-            //throw new CharacterDiedException("Sie sind gestorben");
-            return BattleStatus.CHARACTER_DIED;
-        }
-
-        System.out.println(bv);
-        System.out.println("After fight ENEMY:" + enemy.endurance());
-        System.out.println("After fight CHARACTER:" + character.endurance());
-        return BattleStatus.TIE;
+        return status;
     }
 
     private BattleStatus executeBattle(Character character, Enemy enemy) {

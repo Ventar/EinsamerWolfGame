@@ -3,6 +3,7 @@ package net.atos.wolf.services.action;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
+import lombok.Setter;
 import net.atos.wolf.services.character.Item;
 import net.atos.wolf.services.character.KaiSkill;
 import net.atos.wolf.services.character.SpecialItem;
@@ -24,6 +25,7 @@ public class Action {
     private boolean mandatory;
     private int targetSection;
     private KaiSkill skill;
+    @Setter
     private String text;
     private Weapon weapon;
     private SpecialItem specialItem;
@@ -33,6 +35,10 @@ public class Action {
     private List<Integer> randomSection;
     private int numberOfSkills;
     private boolean noOtherOption;
+    private Battle battle;
+    @Getter
+    @Setter
+    private int battleRounds;
 
     @Override
     public boolean equals(Object o) {

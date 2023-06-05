@@ -10,7 +10,9 @@ public enum ActionType {
     GET_INITIAL_ITEMS,
     TAKE_RANDOM_WEAPON,
     MODIFY_ATTRIBUTE,
-    CHANGE_SECTION_IF_BATTLE_GOES
+
+
+    BATTLE
 
 
 }
