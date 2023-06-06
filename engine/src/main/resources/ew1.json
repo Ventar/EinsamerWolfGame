@@ -138,14 +138,152 @@
   },
   {
     "sectionNumber": 117,
-    "text": "Der Giak stößt zu, und rasch springst du zur Seite, um nicht von\nseinem Speer aufgespießt zu werden. Dabei verlierst du deine Waffe,\nund obwohl dich deine schnelle Reaktion vor dem Tod bewahrt hat,\nentgehst du nicht ganz einer Verletzung, als die Speerspitze deine\nSchulter streift. (Du verlierst 1 AUSDAUERPUNKT.)\nMeister Sternenfeuer spürt, dass du in Schwierigkeiten bist.\nWährend du dich aufrappelst, zieht er mit der Linken sein Schwert\nund wirft es dir mit dem Heft voran zu. Du fängst die Waffe am Griff\nund hältst sie vor dich, gerade noch rechtzeitig, um einen zweiten\nSpeerstoß des Giak abzuwehren. Voller Wut und Enttäuschung\nkreischt die Kreatur auf und stürzt sich nun in einer wilden Attacke\nauf dich.\n",
+    "text": "Der Giak stößt zu, und rasch springst du zur Seite, um nicht von seinem Speer aufgespießt zu werden. Dabei verlierst du deine Waffe, und obwohl dich deine schnelle Reaktion vor dem Tod bewahrt hat, entgehst du nicht ganz einer Verletzung, als die Speerspitze deine Schulter streift. (Du verlierst 1 AUSDAUERPUNKT.) Meister Sternenfeuer spürt, dass du in Schwierigkeiten bist. Während du dich aufrappelst, zieht er mit der Linken sein Schwert und wirft es dir mit dem Heft voran zu. Du fängst die Waffe am Griff und hältst sie vor dich, gerade noch rechtzeitig, um einen zweiten Speerstoß des Giak abzuwehren. Voller Wut und Enttäuschung kreischt die Kreatur auf und stürzt sich nun in einer wilden Attacke auf dich.",
     "actions": [
       {
         "type": "CHANGE_SECTION",
-        "mandatory": true,
         "targetSection": 535,
-        "skill": null,
-        "text": "Lies Weiter (535)"
+        "text": "Weiter"
+      },
+      {
+        "type": "MODIFY_ATTRIBUTE",
+        "mandatory": true,
+        "value": 1,
+        "attribute": "ENDURANCE",
+        "text": "TAKE_DAMAGE"
+      }
+    ]
+  },
+  {
+    "sectionNumber": 118,
+    "text": "Nach einer weiteren Meile erreichst du eine kleine Brücke, die über einen breiten Bewässerungskanal führt. Vor der Brücke steht eine Gruppe von drei Soldaten. Du winkst ihnen, während du auf sie zuläufst, und sie erwidern deinen Gruß auf scheinbar freundliche Weise. Als du jedoch näher kommst, ziehen sie ihre Schwerter und fordern dich barsch auf, Waffen und Ausrüstung fallen zu lassen. Die derb wirkenden Soldaten sind blutbefleckt und unrasiert. Ihr Anführer, der Größte der Dreiergruppe, trägt einen Waffenrock der Stadtgarnison von Toran.",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 63,
+        "text": "Weiter",
+        "skill": "SIXTH_SENSE"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 303,
+        "text": "Willst du der Aufforderung der Soldaten nachkommen"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 263,
+        "text": "Beschließt du deine Waffe zu ziehen, für den Fall, dass sie dich angreifen"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 348,
+        "text": "Wenn du verlangst zu erfahren, was sie von dir wollen"
+      }
+    ]
+  },
+  {
+    "sectionNumber": 119,
+    "text": "Du steigst die Eisenleiter hinauf und reißt die hölzerne Luke auf. Durch die Öffnung gelangst du in eine kahle Steinkammer, die sich unterhalb der Brückenebene des Turms befindet. Eine schmale Treppe führt zu einer geschlossenen Tür hinauf, und am Fuß der Treppe siehst du die regungslosen Körper von drei sommerlendischen Brückenwachen. Du untersuchst ihre Leichen und stellst fest, dass sie schon seit einigen Stunden tot sind. Wahrscheinlich wurden sie bei dem ersten Kampf um den Brückenturm erschlagen und zusammen mit ihren Waffen und ihrer Ausrüstung hier in diese Lagerkammer geworfen. Du findest einen Streitkolben, eine Axt, einen Dolch und zwei Speere. Weiterhin entdeckst du hier einen Rucksack, der genug Proviant für 1 Mahlzeit sowie 2 Flaschen Laumspur enthält. (Diese Heiltränke geben dir nach einem Kampf jeweils 4 AUSDAUERPUNKTE zurück. Sie reichen für je eine Anwendung.) Du richtest ein kurzes Gebet an die Göttin Ishir und bittest darum, dass sie die Seelen der Gefallenen aufnehmen und behüten möge. Dann steigst du vorsichtig und mit gezogener Waffe die Stufen zur Tür des Lagerraums hinauf. Behutsam drehst du den eisernen Türgriff und öffnest das schwere Portal ein kleines Stück weit. Durch den Spalt kannst du einen stetigen Strom feindlicher Truppen sehen, die nahe am Brückenturm vorbeimarschieren. Sie dienen als Verstärkung für den Kampf am Durnenstein. Direkt gegenüber der Tür siehst du eine weitere schmale Steintreppe, die zur oberen Turmebene führt. Als der Strom der Verstärkungstruppen für einen Moment abreißt, schlüpfst du rasch zur Tür hinaus und eilst die Stufen hinauf.",
+    "actions": [
+      {
+        "type": "TAKE_WEAPON",
+        "text": "Nimm den Streitkolben",
+        "weapon": "MACE"
+      },
+      {
+        "type": "TAKE_WEAPON",
+        "text": "Nimm den Speer",
+        "weapon": "SPEAR"
+      },
+      {
+        "type": "TAKE_WEAPON",
+        "text": "Nimm die Axt",
+        "weapon": "AXE"
+      },
+      {
+        "type": "TAKE_WEAPON",
+        "text": "Nimm den Dolch",
+        "weapon": "DAGGER"
+      },
+      {
+        "type": "GET_ITEM",
+        "text": "Nimm den Rucksack",
+        "item": "FOOD",
+        "item": "LAUMSPUR",
+        "item": "LAUMSPUR"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 242,
+        "text": "Weiter"
+      }
+    ]
+  },
+  {
+    "sectionNumber": 120,
+    "text": "In dem Augenblick, als dich die vom Flügelschlag der Kreatur gepeitschte Luft im Rücken trifft, lässt du dich vom Pferd gleiten und bringst dich mit einem Sprung an den Straßenrand in Sicherheit. Dulandest unverletzt auf einem weichen Stück Boden und rappelst dich unverzüglich wieder auf. Der Kraan ist unterdessen über das Pferd hinweggezogen und steigt nun fast senkrecht in den Himmel hinauf. Sofort drehst du dich um und stürmst los, um zwischen den Bäumen Schutz zu suchen. Als du noch etwa dreißig Meter entfernt bist, blickst du nach oben und siehst, dass der Kraan mittlerweile gewendet hat. Er führt nun einen erneuten Sturzangriff durch, und sein Ziel bist du!",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 275,
+        "text": "Weiter",
+        "noOtherOption": true
+      }
+    ]
+  },
+  {
+    "sectionNumber": 121,
+    "text": "Der Pfad führt dich durch dichtes Unterholz und wird erst breiter, als die Büsche zunehmend großen Bäumen weichen. Nach und nach verklingen die grauenhaften Geräusche des Feuers und der Zerstörung der Abtei hinter dir, bis dich schließlich die unnatürliche Stille des Waldes verschluckt hat. Du folgst dem Pfad eine gute Meile weit, bevor du ein weiteres Geräusch hörst, das deinen Puls erneut rasen lässt: Das unverkennbare Schlagen großer Flügel nähert sich rasch von Westen her! Als du durch das lichte Blätterdach nach oben blickst, siehst du voller Entsetzen den unheilvollen schwarzen Umriss eines Kraan. Er hat dich ebenfalls entdeckt und stürzt nun herab, um dich anzugreifen.",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "text": "Wenn du deine Waffe ziehen willst, um gegen die Kreatur zu kämpfen",
+        "targetSection": 343
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "text": "Willst du Angriff ausweichen, indem du auf die dichter stehenden Bäumen im Süden zuläufst, um dort Schutz zu suchen",
+        "targetSection": 174
+      }
+    ]
+  },
+  {
+    "sectionNumber": 122,
+    "text": "Du marschierst weiter durch den Wald, bis du erneut an eine Kreuzung gelangst.",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "text": "Gehe nach Osten",
+        "targetSection": 8
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "text": "Gehe nach Norden",
+        "targetSection": 49
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "text": "Gehe nach Süden",
+        "targetSection": 241
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "text": "Gehe nach Westen",
+        "targetSection": 59
+      }
+    ]
+  },
+  {
+    "sectionNumber": 123,
+    "text": "Du richtest deine mentalen Kräfte auf das Schloss, um den Mechanismus in seinem Innern zu visualisieren, und allmählich entsteht das Abbild vor deinem geistigen Auge. Das Schloss ist sehr alt, aber du spürst, dass es noch immer funktionstüchtig ist. Nach der großen geistigen Anstrengung (du verlierst 1 AUSDAUERPUNKT) läufst du beinahe Gefahr, die Konzentration zu verlieren, doch dann bestätigt dir ein leises Klicken, dass deine Mühen nicht umsonst waren. Der Stift ist eine weitaus leichtere Aufgabe. Auf deinen stummen Befehl hin hebt er sich langsam aus seiner Halterung und fällt zu Boden. Eine kurze Zeitlang hörst du das leise Rattern kleiner Steinzahnräder, und dann schwingt die große Granittür an ihren verborgenen Angeln langsam auf. Das graue Zwielicht des Friedhofs flutet nun in die Gruft, und du erkennst hinter der Tür eine schmale Treppe, die an die Oberfläche führt. Sie ist von Grabkraut und schwarzem Gras überwuchert, also ziehst du deine Waffe, um dir einen Weg durch das tückische Gestrüpp zu bahnen. Während du dir einen Fluchtweg schlägst, ziehst du dir eine Vielzahl von Kratzern an den Beinen und an deinem Handrücken zu. (Du verlierst 1 weiteren AUSDAUERPUNKT.) Schließlich gelangst du an die Oberfläche der Totenstadt, in der Nähe eines schmalen Pfades, der zwischen zwei steinernen Mausoleen hindurchführt. Als du in das Loch hinunterblickst, aus dem du gerade entkommen bist, siehst du, wie sich die Grufttür langsam schließt. Ein grausames, unmenschliches Gelächter scheint direkt aus dem Boden zu deinen Füßen zu kommen. Während es durch den nebelverhangenen Friedhof hallt, spürst du eine Woge der Panik in dir aufsteigen. Zitternd und von plötzlicher Furcht gepackt, wendest du dich von dem Loch ab und läufst, so schnell du kannst, auf das Südtor dieses unheimlichen Ortes zu.",
+    "actions": [
+      {
+        "type": "MODIFY_ATTRIBUTE",
+        "text": "Du verlierst einen Ausdauerpunkt",
+        "mandatory": true,
+        "value": 1
+      },
+      {
       }
     ]
   },
