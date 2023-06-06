@@ -51,13 +51,12 @@ public class GameEngine {
     private Character character;
 
 
-
     public void start() {
 
         LOG.debug("Created character ::= [{}]", character);
 
-        if (sectionToRender == -1){
-           sectionToRender =  character.section();
+        if (sectionToRender == -1) {
+            sectionToRender = character.section();
         }
 
         while (true) {
@@ -82,20 +81,8 @@ public class GameEngine {
             do {
                 String text = character.replaceVariablesInText(section.text());
 
-                 // Wenn eine Action vom Typ Battle dabei ist
-                for (Action action:filteredAnswerOptions){
-                    if (action.type().equals(ActionType.BATTLE)){
-                        ;
-                        for ( Enemy enemy :action.battle().enemy()) {
-                            text += enemy.name() + "\n";
-                            text += "Gegner Ausdauer   : " + enemy.endurance() + "\n";
-                            text += "Gegner Kampfstärke: " + enemy.battleStrength() + "\n";
-                            text += "Kampfrunde        : " + action.battleRounds() + "\n";
-                        }
-                    }
-                }
-                // lass dir alle enemies dieser action geben
-                // fünge die werte zur Variable text hinzu
+                battleInfo(text, filteredAnswerOptions);
+
 
                 actionToExecute = ui.render(text, String.valueOf(section.sectionNumber()), filteredAnswerOptions);
                 actionResult = actionHandler.get(actionToExecute.type()).handleAction(character, actionToExecute, answerOptions);
@@ -122,11 +109,28 @@ public class GameEngine {
         for (Action action : filteredAnswerOptions) {
             if (action.mandatory()) {
                 actionHandler.get(action.type()).handleAction(character, action, null);
+                System.out.println("Execute MANDATORY Action: " + action);
             } else {
                 resultList.add(action);
             }
         }
         return resultList;
+    }
+
+    private String battleInfo(String text, List<Action> filteredAnswerOptions) {
+        for (Action action : filteredAnswerOptions) {
+            if (action.type().equals(ActionType.BATTLE)) {
+                ;
+                for (Enemy enemy : action.battle().enemy()) {
+                    text += enemy.name() + "\n";
+                    text += "Gegner Ausdauer   : " + enemy.endurance() + "\n";
+                    text += "Gegner Kampfstärke: " + enemy.battleStrength() + "\n";
+                    text += "Kampfrunde        : " + action.battleRounds() + "\n";
+                }
+            }
+        }
+        return text;
+
     }
 
     /**
@@ -152,8 +156,7 @@ public class GameEngine {
     public static void main(String[] args) {
         GameEngine engine = new GameEngine();
         Character character = new Character();
-//        TranslationService translationService= new TranslationService("/translation.json");
-        character.setWeaponOne(Weapon.SWORD);
+        character.setWeaponOne(Weapon.AXE);
         character.addSkill(KaiSkill.HEAL);
         character.addSkill(KaiSkill.ANIMAL_UNDERSTANDING);
         character.addSkill(KaiSkill.ARMORY_SWORD);
@@ -174,10 +177,10 @@ public class GameEngine {
         character.endurance().maxValue(26);
         character.battleStrength().add(14);
         character.gold().add(20);
-        character.food().add(5);
+        character.food().add(1);
 
 
-        character.section(279);
+        character.section(119);
 //
         engine.character = character;
         engine.start();

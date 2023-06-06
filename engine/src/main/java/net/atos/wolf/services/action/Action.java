@@ -57,13 +57,21 @@ public class Action {
     @Override
     public String toString() {
         return "Action{" +
-                       "type=" + type +
-                       ", mandatory=" + mandatory +
-                       ", targetSection=" + targetSection +
-                       ", skill=" + skill +
-                       ", text='" + text + '\'' +
-                       ", weapon=" + weapon +
-                       ", specialItem=" + specialItem +
-                       '}';
+                "type=" + type +
+                ", mandatory=" + mandatory +
+                ", targetSection=" + targetSection +
+                ", skill=" + skill +
+                ", text='" + text + '\'' +
+                ", weapon=" + weapon +
+                ", specialItem=" + specialItem +
+                ", value='" + value + '\'' +
+                ", attribute='" + attribute + '\'' +
+                ", item=" + item +
+                ", randomSection=" + randomSection +
+                ", numberOfSkills=" + numberOfSkills +
+                ", noOtherOption=" + noOtherOption +
+                ", battle=" + battle +
+                ", battleRounds=" + battleRounds +
+                '}';
     }
 }

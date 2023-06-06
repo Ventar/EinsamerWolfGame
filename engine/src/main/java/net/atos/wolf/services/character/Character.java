@@ -43,8 +43,8 @@ public class Character {
 
     @Getter
     private Attribute endurance = new Attribute("ENDURANCE", 29, 20);
-@Getter
-@Setter
+    @Getter
+    @Setter
     private int section = 0;
 
     /**
@@ -64,6 +64,10 @@ public class Character {
     public void removeBackpack() {
         backpack.clear();
         hasBackpack = false;
+    }
+
+    public void addBackpack() {
+        hasBackpack = true;
     }
 
     public void setWeaponOne(Weapon weapon) {
@@ -103,8 +107,8 @@ public class Character {
      *
      * @param item
      */
-    public void hasItem(Item item) {
-
+    public boolean hasItem(Item item) {
+      return  backpack.contains(item);
 
     }
 
@@ -195,33 +199,32 @@ public class Character {
 
         buf.append(String.format("Kampfstärke               : %10s    Kai Skill: %-30s    Gegenstände:    %s\n", battleStrength.get(), getEntryAtPosition(translationService, skills, 0), getEntryAtPosition(translationService, backpack, 0)));
         buf.append(String.format("Ausdauer                  : %10s               %-30s                    %s\n", endurance.get() + "/" + endurance().maxValue(), getEntryAtPosition(translationService, skills, 1), getEntryAtPosition(translationService, backpack, 1)));
-        buf.append(String.format("%10s                                           %-30s                    %s\n","", getEntryAtPosition(translationService, skills, 2), getEntryAtPosition(translationService, backpack, 2)));
-        if (weaponOne == null){
+        buf.append(String.format("%10s                                           %-30s                    %s\n", "", getEntryAtPosition(translationService, skills, 2), getEntryAtPosition(translationService, backpack, 2)));
+        if (weaponOne == null) {
             buf.append(String.format("Waffe 1                   :     %6s               %-30s                    %s\n", "-", getEntryAtPosition(translationService, skills, 3), getEntryAtPosition(translationService, backpack, 3)));
-        }else {
+        } else {
             buf.append(String.format("Waffe 1                   :     %6s               %-30s                    %s\n", translationService.translate(weaponOne.toString()), getEntryAtPosition(translationService, skills, 3), getEntryAtPosition(translationService, backpack, 3)));
 
         }
-        if (weaponTwo == null){
+        if (weaponTwo == null) {
             buf.append(String.format("Waffe 2                   :     %6s               %-30s                    %s\n", "-", getEntryAtPosition(translationService, skills, 4), getEntryAtPosition(translationService, backpack, 4)));
-        }else {
+        } else {
             buf.append(String.format("Waffe 2                   :     %6s               %-30s                    %s\n", translationService.translate(weaponTwo.toString()), getEntryAtPosition(translationService, skills, 4), getEntryAtPosition(translationService, backpack, 4)));
 
         }
-        buf.append(String.format("Nahrung                   : %10s               %-30s                    %s\n", food.get(),"", getEntryAtPosition(translationService, backpack, 5 )));
+        buf.append(String.format("Nahrung                   : %10s               %-30s                    %s\n", food.get(), "", getEntryAtPosition(translationService, backpack, 5)));
 //        buf.append(String.format("\n"));
-        buf.append(String.format("Gold                      : %10s               %-30s                    %s\n", gold.get(),"", getEntryAtPosition(translationService, backpack, 6)));
+        buf.append(String.format("Gold                      : %10s               %-30s                    %s\n", gold.get(), "", getEntryAtPosition(translationService, backpack, 6)));
         //buf.append(String.format("\n"));
-        buf.append(String.format("%10s                                           %-30s                    %s\n","", "", getEntryAtPosition(translationService, backpack, 7)));
+        buf.append(String.format("%10s                                           %-30s                    %s\n", "", "", getEntryAtPosition(translationService, backpack, 7)));
         //buf.append(String.format("Gegenstände : %10s                   ",backpack.get(0)));
-        buf.append(String.format("Spezialgegenstände    : "         ));
-        for (int i = 0;i < specialItemsList.size(); i++){
-            buf.append(translationService.translate(specialItemsList.get(i).toString()) );
-            if (i < specialItemsList.size() - 1){
+        buf.append(String.format("Spezialgegenstände    : "));
+        for (int i = 0; i < specialItemsList.size(); i++) {
+            buf.append(translationService.translate(specialItemsList.get(i).toString()));
+            if (i < specialItemsList.size() - 1) {
                 buf.append(", ");
             }
         }
-
 
 
         return buf.toString();

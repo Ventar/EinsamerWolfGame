@@ -2,7 +2,6 @@ package net.atos.wolf.services.action;
 
 public enum ActionType {
     CHANGE_SECTION,
-
     TAKE_WEAPON,
     INITIALIZE_ATTRIBUTE,
     GET_KAI_SKILL,
@@ -10,8 +9,7 @@ public enum ActionType {
     GET_INITIAL_ITEMS,
     TAKE_RANDOM_WEAPON,
     MODIFY_ATTRIBUTE,
-
-
+    TAKE_BACKPACK,
     BATTLE
 
 

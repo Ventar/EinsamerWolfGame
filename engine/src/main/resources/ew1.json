@@ -73,7 +73,7 @@
   },
   {
     "sectionNumber": 35,
-    "text": "Ein weiterer Trupp Giak bestürmt nun den Spalt zwischen den Toren\nder Abtei. Meister Sternenfeuer streckt die beiden ersten mit einem\nmächtigen Hieb seiner Axt nieder, doch einem anderen Paar gelingt\nes, an ihm vorbeizuschlüpfen, bevor er erneut zum Schlag ausholen\nkann.\nEiner dieser Giak ist mit einem Kettenflegel bewaffnet. Er läuft auf\ndich zu und wirbelt die Waffe über seinem Kopf, bevor er sie voller\nBosheit und Hass auf dein Gesicht niederfahren lässt. Du wehrst den\nSchlag ab, aber die Kette des Flegels wickelt sich um deine Waffe und\nreißt sie dir aus der Hand. In einer geschmeidigen, eleganten\nBewegung zieht Sternenfeuer daraufhin mit der Linken sein Schwert\nund wirft es dir zu.\nDu fängst die Waffe am Griff und hältst sie vor dich, gerade noch\nrechtzeitig, um den Axthieb des zweiten Giak zu parieren. Die beiden\nUnholde kreischen vor Wut und Enttäuschung und stürzen sich nun\nmit wilden Hieben auf dich.",
+    "text": "Ein weiterer Trupp Giak bestürmt nun den Spalt zwischen den Toren der Abtei. Meister Sternenfeuer streckt die beiden ersten mit einem mächtigen Hieb seiner Axt nieder, doch einem anderen Paar gelingt es, an ihm vorbeizuschlüpfen, bevor er erneut zum Schlag ausholen kann. Einer dieser Giak ist mit einem Kettenflegel bewaffnet. Er läuft auf dich zu und wirbelt die Waffe über seinem Kopf, bevor er sie voller Bosheit und Hass auf dein Gesicht niederfahren lässt. Du wehrst den Schlag ab, aber die Kette des Flegels wickelt sich um deine Waffe und reißt sie dir aus der Hand. In einer geschmeidigen, eleganten Bewegung zieht Sternenfeuer daraufhin mit der Linken sein Schwert und wirft es dir zu. Du fängst die Waffe am Griff und hältst sie vor dich, gerade noch rechtzeitig, um den Axthieb des zweiten Giak zu parieren. Die beiden Unholde kreischen vor Wut und Enttäuschung und stürzen sich nun mit wilden Hieben auf dich.",
     "actions": [
       {
         "type": "CHANGE_SECTION",
@@ -114,7 +114,7 @@
   },
   {
     "sectionNumber": 74,
-    "text": "Am Ende des Korridors durchquerst du eine Reihe von Vorzimmern,\nbevor du schließlich den Eingang zur Küche der Kai-Meister\nerreichst.\nDie Köche haben hier bereits das Festmahl für Fehmarn vorbereitet,\nund auf den Tischen und Arbeitsflächen türmen sich Platten und\nSchüsseln mit Speisen und Karaffen gefüllt mit Wein.\nDie lodernden Herdfeuer der Küche verbreiten eine drückende\nHitze, und nach der bitteren Kälte auf dem Trainingsgelände\nkommst du dir vor, als stündest du in einem Hochofen. Kaum hast\ndu einige Schritte in die Küche hinein gemacht, als der Raum\nplötzlich von einer Explosion erschüttert wird und ein Regen aus\nGlassplittern von der Decke prasselt. Die Köche werfen sich unter\nden Tischen in Deckung, als die tödliche Flut aus Buntglassplittern\nauf ihre Köpfe herabregnet.\nDer Feind ist auf dem Dach gelandet, und die Giak zerschmettern\nnun die Oberlichter, um sich Zugang zu den Kammern der Kai\u0002Meister zu verschaffen.\nDu greifst dir ein Silbertablett und schützt damit deinen Kopf,\nwährend du durch den Glasschauer auf die schwere Eichentür am\nanderen Ende der Küche zuläufst.\nZwar schützt dich das Tablett vor schweren Verletzungen, aber eine\nherabfallende Scherbe bohrt sich in die Knöchel deiner linken Hand,\nso dass du vor jähem Schmerz laut aufschreist. (Du verlierst 1\nAUSDAUERPUNKT.)\nFluchtartig erreichst du die Tür, reißt sie auf und hastest in den\nKorridor dahinter. Dort hältst du einen kurzen Augenblick inne, um\ndir die Scherbe aus der schmerzenden Hand zu ziehen. Mit einem\nschmalen Streifen Stoff vom Saum deines Kai-Umhangs verbindest\ndu deine blutende Wunde, bevor du eilig weitergehst. Du kennst\ndiesen Gang gut – er führt zu deinem Dormitorium.\nAm Ende des Korridors sind zwei Türen. Die eine führt in einen\nGang zum Dormitorium, während die andere hinaus auf das\nTrainingsgelände führt.",
+    "text": "Am Ende des Korridors durchquerst du eine Reihe von Vorzimmern, bevor du schließlich den Eingang zur Küche der Kai-Meister erreichst. Die Köche haben hier bereits das Festmahl für Fehmarn vorbereitet, und auf den Tischen und Arbeitsflächen türmen sich Platten und Schüsseln mit Speisen und Karaffen gefüllt mit Wein. Die lodernden Herdfeuer der Küche verbreiten eine drückende Hitze, und nach der bitteren Kälte auf dem Trainingsgelände kommst du dir vor, als stündest du in einem Hochofen. Kaum hast du einige Schritte in die Küche hinein gemacht, als der Raum plötzlich von einer Explosion erschüttert wird und ein Regen aus Glassplittern von der Decke prasselt. Die Köche werfen sich unter den Tischen in Deckung, als die tödliche Flut aus Buntglassplittern auf ihre Köpfe herabregnet. Der Feind ist auf dem Dach gelandet, und die Giak zerschmettern nun die Oberlichter, um sich Zugang zu den Kammern der Kai\u0002Meister zu verschaffen. Du greifst dir ein Silbertablett und schützt damit deinen Kopf, während du durch den Glasschauer auf die schwere Eichentür am anderen Ende der Küche zuläufst. Zwar schützt dich das Tablett vor schweren Verletzungen, aber eine herabfallende Scherbe bohrt sich in die Knöchel deiner linken Hand, so dass du vor jähem Schmerz laut aufschreist. (Du verlierst 1 AUSDAUERPUNKT.) Fluchtartig erreichst du die Tür, reißt sie auf und hastest in den Korridor dahinter. Dort hältst du einen kurzen Augenblick inne, um dir die Scherbe aus der schmerzenden Hand zu ziehen. Mit einem schmalen Streifen Stoff vom Saum deines Kai-Umhangs verbindest du deine blutende Wunde, bevor du eilig weitergehst. Du kennst diesen Gang gut – er führt zu deinem Dormitorium. Am Ende des Korridors sind zwei Türen. Die eine führt in einen Gang zum Dormitorium, während die andere hinaus auf das Trainingsgelände führt.",
     "actions": [
       {
         "type": "MODIFY_ATTRIBUTE",
@@ -206,11 +206,15 @@
         "weapon": "DAGGER"
       },
       {
-        "type": "GET_ITEM",
-        "text": "Nimm den Rucksack",
-        "item": "FOOD",
-        "item": "LAUMSPUR",
-        "item": "LAUMSPUR"
+        "type": "TAKE_BACKPACK",
+        "text": "Nimm den Rucksack"
+      },
+      {
+        "type": "MODIFY_ATTRIBUTE",
+        "mandatory": true,
+        "value": 2,
+        "attribute": "FOOD",
+        "text": "MANDATORY TAKE FOOD"
       },
       {
         "type": "CHANGE_SECTION",
@@ -313,8 +317,26 @@
     ]
   },
   {
+    "sectionNumber": 242,
+    "text": "Als du das obere Ende der Treppe erreicht hast, läufst du geduckt an der zinnenbewehrten Brustwehr entlang, um die Vorgänge auf der Brücke unter dir zu beobachten. Der Zugang zu den Brückentürmen und der Weg zum Durnenstein sind übersät mit den Überresten einer Schlacht, die hier kurz nach Sonnenaufgang stattgefunden hat, nachdem der Feind seinen Überraschungsangriff auf die Alemabrücke gestartet hatte. Zwar wurden die Brückenwächter überrumpelt, doch kämpften sie dennoch heldenhaft und konnten mehrere Stunden lang standhalten, bevor sie schließlich vom Feind überrannt wurden. Die Brückenstraße ist übersät von zerstörten Wagen und zerstreuten Frachtgütern und getränkt vom dem Blut derer, die in den frühen Morgenstunden hier erschlagen wurden. Ein nicht enden wollender Strom feindlicher Nachschubtruppen bahnt sich in diesem Augenblick einen Weg durch die Trümmer zur Brückenmitte, wo auf dem Durnenstein ein erbitterter Kampf tobt. Du siehst dich um und bemerkst zwei höher liegende Laufgänge, die parallel zu beiden Seiten der Brücke verlaufen. Zwar beherrschen die feindlichen Truppen die Brücke, aber nur wenige von ihnen benutzen diese erhöhten Überwege. Das ist deine Chance! Schnell und lautlos überquerst du den Bogen des Torhauses und schlägst den Weg über einen der Laufgänge ein. Ohne größere Schwierigkeiten lässt du den ersten Brückenabschnitt hinter dir und erreichst ein Tor am nächsten Brückenturm. Leider ist das Tor verriegelt, und dir bleibt keine andere Wahl, als dich auf die Straße hinunter zu begeben, um von dort aus zu versuchen, den zweiten Brückenabschnitt durch den Torbogen zu erreichen. Indem du die umgestürzten Wagen und ihre verstreute Ladung als Deckung benutzt, gelangst du schließlich ungesehen zu den Bogentürmen am anderen Ende dieses Abschnitts. Gerade hast du angehalten, um dich hinter einem umgestürzten Handkarren und seiner verstreuten Fracht aus Fässern zu verstecken, als du zwei Giak bemerkst, die aus dem Schatten des zweiten Torbogens treten. Sie sind gerade dabei, ein Fass zu einem großen Loch in der steinernen Brückenbrüstung zu rollen. Nachdem sie es in den Fluss geworfen haben, kehren sie um, um ein weiteres Fass zu holen. Diese Fässer gleichen denen, hinter denen du dich gerade versteckt hältst. Als du eines davon näher in Augenschein nimmst, entdeckst du an seiner Seite ein gelbes Hinweisschild aus Pergament, auf dem in leuchtendroten Buchstaben steht: Sofort wird dir die Bedeutung dieser Fässer klar: Sie enthalten Sprengpulver. Dies ist keine gewöhnliche Fracht und war sicherlich auch nicht für den Markt bestimmt. Die Fässer wurden von Prinz Pelethars Männern einzig und allein zu dem Zweck hergeschafft, einen Teil der Brücke zu sprengen und so den Feind am Vorrücken zu hindern. Doch bevor sie die Fässer platzieren und zünden konnten, müssen die Pioniertruppen des Prinzen vom Feind überrannt und zum Durnenstein zurückgedrängt worden sein. Aus einem zugestopften Loch in der Seitenwand eines der Pulverfässer hängt ein Stück graue Kordel. Es handelt sich um eine Lunte, abgemessen, zurechtgeschnitten und bereit zur Zündung. .",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 544,
+        "text": "Lege Feuer",
+        "item": "CINDER"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 359,
+        "text": "Geh Weiter",
+        "noOtherOption": true
+      }
+    ]
+  },
+  {
     "sectionNumber": 246,
-    "text": "Du springst über den toten Giak hinweg und rennst die Rampe\nhinauf. Einige deiner Mitinitianden errichten gerade eine Barrikade\nam Eingang zu den Kammern der Kai-Meister, und du hörst ihre\nJubelrufe, als du auf sie zuläufst. Viele von ihnen waren Zeugen\ndeines verzweifelten Kampfes und beglückwünschen dich nun eifrig\nzu deinem Sieg über die Brut der Finsternis. Eingedenk deiner\nMission drängst du sie dazu, ihre Arbeit zu vollenden, und eilst dann\nweiter in die einladende Zuflucht der Eingangshalle der Kai-Meister\u0002Kammern.\nIn diesem großzügigen Bereich der Abtei befinden sich die\nWohnräume und privaten Bibliotheken der Lehrmeister des Kai\u0002Ordens. Die Eingangshalle ist gewöhnlich nicht übermäßig\ngeschmückt, doch heute, an Fehmarn, finden sich dort all die\nprächtigen Schlachtenbanner und Insignien des Ordens.\nVoller Bewunderung blickst du hoch zu den vielen Flaggen, die vom\nDeckengebälk der großen Halle hängen, und stößt dabei\nversehentlich mit einem Kai-Meister zusammen, der dir auf seinem\nWeg zur Barrikade entgegeneilt. Es handelt sich um Flinke Eule,\neinen Kai-Meister, der vor allem in den mentalen Disziplinen begabt\nist.\n„Habe Mut, Lautloser Wolf“, sagt er. „Deine Pflicht erwartet dich\ndort draußen. Besiege deine Furcht und sei stolz auf das, was du\nbist.“\nEr scheint die Situation zu missverstehen, denn augenscheinlich\nglaubt er, du würdest vor der Schlacht fliehen, die gerade auf dem\nKlostergelände tobt.\n„Vergebt mir, Meister Flinke Eule“, erwiderst du, „aber ich habe\nkeine Angst vor meiner Pflicht. Ich befolge den Befehl Meister\nSternenfeuers und bin auf dem Weg zum Turm der Sonne, um das\nkristallene Leuchtfeuer zu entzünden.“\nFlinke Eule blickt dich ernst an, und plötzlich spürst du, wie eine\nHitzewelle durch deinen Kopf läuft. Du weißt, dass er seine\npsychischen Fähigkeiten benutzt, um herauszufinden, ob du die\nWahrheit sprichst. Dann huscht plötzlich ein Lächeln über sein\ngebräuntes, zerfurchtes Gesicht.\n„Diesen Weg, mein Junge“, sagt er und deutet auf eine Tür auf der\nanderen Seite der Halle.\n„Beeil dich und entzünde das Signal. Du darfst nicht versagen!“\nDu eilst durch die gewölbte Tür und betrittst einen breiten Gang, der\nvon Eichenschränken gesäumt ist, die vom Fußboden bis zur Decke\nreichen. Du kennst diesen Ort: Hier werden Ersatzmöbel und\nAusstattungsgegenstände für die Eingangshalle aufbewahrt.",
+    "text": "Du springst über den toten Giak hinweg und rennst die Rampe hinauf. Einige deiner Mitinitianden errichten gerade eine Barrikade am Eingang zu den Kammern der Kai-Meister, und du hörst ihre Jubelrufe, als du auf sie zuläufst. Viele von ihnen waren Zeugen deines verzweifelten Kampfes und beglückwünschen dich nun eifrig zu deinem Sieg über die Brut der Finsternis. Eingedenk deiner Mission drängst du sie dazu, ihre Arbeit zu vollenden, und eilst dann weiter in die einladende Zuflucht der Eingangshalle der Kai-Meister\u0002Kammern. In diesem großzügigen Bereich der Abtei befinden sich die Wohnräume und privaten Bibliotheken der Lehrmeister des Kai\u0002Ordens. Die Eingangshalle ist gewöhnlich nicht übermäßig geschmückt, doch heute, an Fehmarn, finden sich dort all die prächtigen Schlachtenbanner und Insignien des Ordens. Voller Bewunderung blickst du hoch zu den vielen Flaggen, die vom Deckengebälk der großen Halle hängen, und stößt dabei versehentlich mit einem Kai-Meister zusammen, der dir auf seinem Weg zur Barrikade entgegeneilt. Es handelt sich um Flinke Eule, einen Kai-Meister, der vor allem in den mentalen Disziplinen begabt ist. „Habe Mut, Lautloser Wolf“, sagt er. „Deine Pflicht erwartet dich dort draußen. Besiege deine Furcht und sei stolz auf das, was du bist.“ Er scheint die Situation zu missverstehen, denn augenscheinlich glaubt er, du würdest vor der Schlacht fliehen, die gerade auf dem Klostergelände tobt. „Vergebt mir, Meister Flinke Eule“, erwiderst du, „aber ich habe keine Angst vor meiner Pflicht. Ich befolge den Befehl Meister Sternenfeuers und bin auf dem Weg zum Turm der Sonne, um das kristallene Leuchtfeuer zu entzünden.“ Flinke Eule blickt dich ernst an, und plötzlich spürst du, wie eine Hitzewelle durch deinen Kopf läuft. Du weißt, dass er seine psychischen Fähigkeiten benutzt, um herauszufinden, ob du die Wahrheit sprichst. Dann huscht plötzlich ein Lächeln über sein gebräuntes, zerfurchtes Gesicht. „Diesen Weg, mein Junge“, sagt er und deutet auf eine Tür auf der anderen Seite der Halle. „Beeil dich und entzünde das Signal. Du darfst nicht versagen!“ Du eilst durch die gewölbte Tür und betrittst einen breiten Gang, der von Eichenschränken gesäumt ist, die vom Fußboden bis zur Decke reichen. Du kennst diesen Ort: Hier werden Ersatzmöbel und Ausstattungsgegenstände für die Eingangshalle aufbewahrt.",
     "actions": [
       {
         "type": "CHANGE_SECTION",
@@ -330,7 +352,7 @@
   },
   {
     "sectionNumber": 279,
-    "text": "Sternenfeuer spürt, dass du in Gefahr bist. Während er kämpft,  wendet er deinem Gegner kurz den Kopf zu und brüllt: „Gloar!“  Der Ruf trifft den Giak wie ein Hammerschlag. Die Kreatur taumelt  zurück, betäubt von der Kraft, die sie getroffen hat. Rasch ergreifst  du die Gelegenheit, um wieder auf die Beine zu kommen und den  Giak anzugreifen, bevor er seine Benommenheit abschütteln kann. \n\n",
+    "text": "Sternenfeuer spürt, dass du in Gefahr bist. Während er kämpft,  wendet er deinem Gegner kurz den Kopf zu und brüllt: „Gloar!“  Der Ruf trifft den Giak wie ein Hammerschlag. Die Kreatur taumelt  zurück, betäubt von der Kraft, die sie getroffen hat. Rasch ergreifst  du die Gelegenheit, um wieder auf die Beine zu kommen und den  Giak anzugreifen, bevor er seine Benommenheit abschütteln kann.   ",
     "actions": [
       {
         "type": "BATTLE",
@@ -360,6 +382,39 @@
       }
     ]
   },
+  {
+    "sectionNumber": 314,
+    "text": "Während du auf den Drakkar zuläufst, ziehst du deine Waffe und schwingst sie in einem weiten Bogen in Richtung seines schwarzen Stahlhelms. Unglücklicherweise ist dieser Krieger sehr schnell und schafft es, deinen ersten Hieb mit der flachen Seite seiner Klinge zu parieren.  Du musst dir in der ersten Kampfrunde keine AUSDAUERPUNKTE abziehen, da der Drakkar noch immer am Boden kniet. Zu Beginn der zweiten Kampfrunde kommt er dann allerdings auf die Beine und bekämpft dich ohne Einschränkungen. ",
+    "actions": [
+      {
+        "type": "BATTLE",
+        "text": "Starte den Kampf",
+        "battle": {
+          "enemy": [
+            {
+              "name": "Drakkar Truppenführer",
+              "battleStrength": 15,
+              "endurance": 18,
+              "thoughRayResistance": false
+            }
+          ],
+          "targetSectionBattleRound": [
+            {
+              "min": 0,
+              "max": 3,
+              "targetSection": 22
+            },
+            {
+              "min": 4,
+              "max": 99,
+              "targetSection": 128
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
   {
     "sectionNumber": 332,
     "text": "Du durchquerst den Wald, bis du an eine Stelle kommst, an der sich der Pfad in zwei Richtungen teilt.",
@@ -414,7 +469,7 @@
   },
   {
     "sectionNumber": 430,
-    "text": "Du erschlägst den Giak, doch deine Waffe bleibt in seinem\nKettenhemd hängen und lässt sich nicht mehr herausziehen. Du\nversuchst immer noch verzweifelt, sie zu befreien, als ein weiterer\nTrupp Giak den Spalt zwischen den Toren der Abtei bestürmt.\nMeister Sternenfeuer streckt die beiden ersten mit einem mächtigen\nHieb seiner Axt nieder, doch einem anderen Paar gelingt es, an ihm\nvorbeizuschlüpfen, bevor er erneut zum Schlag ausholen kann. Einer\ndieser Giak ist mit einem Kettenflegel bewaffnet. Er läuft auf dich zu\nund wirbelt die Waffe über seinem Kopf, bevor er sie voller Bosheit\nund Hass auf dein Gesicht niederfahren lässt. Du wehrst den Schlag\nab, aber die Kette des Flegels wickelt sich um deine Waffe und reißt\nsie dir aus der Hand.\nAls Sternenfeuer spürt, in welcher Gefahr du dich befindest, zieht er\nmit der Linken sein Schwert und wirft es dir mit dem Heft voran zu.\nDu fängst die Waffe am Griff und hältst sie vor dich, gerade noch\nrechtzeitig, um den Axthieb des zweiten Giak zu parieren. (Vermerke\ndas Schwert auf deinem Aktionsblatt.) Die beiden Unholde\nkreischen vor Wut und Enttäuschung und stürzen sich nun mit\nwilden Hieben auf dich.",
+    "text": "Du erschlägst den Giak, doch deine Waffe bleibt in seinem Kettenhemd hängen und lässt sich nicht mehr herausziehen. Du versuchst immer noch verzweifelt, sie zu befreien, als ein weiterer Trupp Giak den Spalt zwischen den Toren der Abtei bestürmt. Meister Sternenfeuer streckt die beiden ersten mit einem mächtigen Hieb seiner Axt nieder, doch einem anderen Paar gelingt es, an ihm vorbeizuschlüpfen, bevor er erneut zum Schlag ausholen kann. Einer dieser Giak ist mit einem Kettenflegel bewaffnet. Er läuft auf dich zu und wirbelt die Waffe über seinem Kopf, bevor er sie voller Bosheit und Hass auf dein Gesicht niederfahren lässt. Du wehrst den Schlag ab, aber die Kette des Flegels wickelt sich um deine Waffe und reißt sie dir aus der Hand. Als Sternenfeuer spürt, in welcher Gefahr du dich befindest, zieht er mit der Linken sein Schwert und wirft es dir mit dem Heft voran zu. Du fängst die Waffe am Griff und hältst sie vor dich, gerade noch rechtzeitig, um den Axthieb des zweiten Giak zu parieren. (Vermerke das Schwert auf deinem Aktionsblatt.) Die beiden Unholde kreischen vor Wut und Enttäuschung und stürzen sich nun mit wilden Hieben auf dich.",
     "actions": [
       {
         "type": "BATTLE",
@@ -493,6 +548,22 @@
     ]
   },
   {
+    "sectionNumber": 544,
+    "text": "Du greifst nach der Lunte und drückst sie auf den gepflasterten Boden. Mit deinem Feuerstein schlägst du Funken über das spröde Ende der Schnur, so dass sie sich zischend wie eine wütende Schlange entzündet. So schnell, wie die Lunte abbrennt, schätzt du, dass dir eine Minute Zeit bleibt, bevor die Flamme den Weg zu den Fässern zurückgelegt hat und sich der Sprengstoff entzündet. Wenn du es schaffst, in dieser Zeit durch den Torbogen auf den dritten Brückenabschnitt zu gelangen, bist du vor der Explosion sicher. Sofort springst hinter dem umgestürzten Karren hervor und rennst auf den Torbogen zu. Du bist kaum ein Dutzend Schritte weit gekommen, als dich ein Drakkar-Feldwebel entdeckt, der sich auf dem Wehrgang über dir befindet. Fluchend zieht er sein Schwert und springt über die Brüstung auf die Straße zu dir herunter. Durch seine schwere Rüstung behindert, kommt er hart auf dem Boden auf und geht ächzend in die Knie. ",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "text": "Greife den Truppführer an",
+        "targetSection": 314
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 173,
+        "text": "Versuche zu entkommen"
+      }
+    ]
+  },
+  {
     "sectionNumber": 1000,
     "text": "Willkommen zur Charaktererstellung deines Einsamer Wolfs Charakters. In den folgenden Schritten werden wir einen Helden erstellen mit dem du dein Abenteuer bestreiten kannst.",
     "actions": [
@@ -506,7 +577,7 @@
   },
   {
     "sectionNumber": 535,
-    "text": "Du schiebst das Schwert in deinen Gürtel (vermerke die Waffe auf\ndeinem Aktionsblatt) und läufst weiter, um den Hebel zu erreichen,\nder das Tor verschließt. Du bist etwas wackelig auf den Beinen und\ndas Blut pocht dir laut in den Ohren. Du hast zum ersten im Kampf\ngetötet, und obwohl du deine Pflicht mit großem Geschick erfüllt\nhast, bist du nun hin- und hergerissen zwischen deinem Hochgefühl\nund dem Abscheu, den du empfindest.\nDu stolperst auf die Wehrmauer des Torhauses zu und legst den\neisernen Hebel um, und sofort beginnt sich das mächtige Tor unter\nlautem Quietschen zu schließen.\nDie Leichen zahlreicher Giak werden zerquetscht und verstümmelt,\nals die beiden schweren Torflügel schließlich mit einem dröhnenden\nKrachen einrasten.\n„Gut gemacht, Lautloser Wolf!“, sagt Sternenfeuer, als er auf dich\nzukommt, aber du kannst seine Worte über dem Pochen in deinem\nKopf kaum hören. Als das Gefühl des Entsetzens, das dein erster\nKampf in dir hinterlassen hat, schließlich nachlässt, lenkt der Kai\u0002Meister deine Aufmerksamkeit auf die Spitze des höchsten Turmes\nder Abtei.\nDieses prächtige Bauwerk trägt den Namen Turm der Sonne, und an\ndiesem Ort befinden sich die persönlichen Studierzimmer der Kai\u0002Meister. Die höchste Kammer gehört dem Führer der Kai –\nGroßmeister Tapfere Klinge.\n„Lautloser Wolf, ich habe eine wichtige Aufgabe für dich. Sieh nach\noben, zur Spitze des Turms, und sag mir, was du dort siehst.“\nDu kommst Sternenfeuers Aufforderung nach. Trotz der\nunnatürlichen Dunkelheit und der unzähligen Kraan, die nun am\nHimmel kreisen, kannst du einen großen, juwelenartigen Kristall\nerkennen, der oben auf der kunstvollen, runenverzierten Stahlspitze\ndes Turms angebracht ist.\n„Ich sehe das kristallene Leuchtfeuer, Meister“, antwortest du.\n„Genau. Ich will, dass du jetzt dort hinaufgehst und das Leuchtfeuer\nentzündest. Es wird den König in Holmgard warnen, dass die\nSchwarzen Lords angreifen. Hast du verstanden?“\n„Ja, Meister.“\nPlötzlich stößt eine zweite Welle fliegender Kreaturen auf das Kloster\nherab. Diese sind viel größer als die Kraan der ersten Angriffswelle,\nund unter ihren schwarzen Bäuchen tragen sie gewaltige Netze, in\ndenen unzählige Giak stecken, schwer gerüstet und bewaffnet mit\nSchwertern und Schilden.\n„Zlaanbestien!“, ruft Sternenfeuer. „Dieser verfluchte Zagarna. So\nalso hat er vor, uns zu besiegen!“\nEine der großen, schwarzen Zlaanbestien stößt herab und schwebt\ndirekt über dem Übungsgelände. Ein mit einer Robe bekleideter\nReiter löst das riesige Netz und eine Stiege gerüsteter Giak stürzt auf\nden Platz. Mehrere von ihnen werden beim Aufprall zu Tode\ngequetscht, doch der Großteil überlebt und hat sich schnell aus dem\nNetz befreit. Sofort stürmen sie in alle Richtungen davon, um jeden\nKai zu töten, dessen sie habhaft werden können.\n„Geh, Lautloser Wolf!“, drängt dich Sternenfeuer, während er sich\nbereitmacht, sich dem Überraschungsangriff aus der Luft zu stellen.\n„Geh und entzünde das Leuchtfeuer!“\nWährend Sternenfeuer über das Übungsgelände eilt, um sich dem\nFeind entgegenzuwerfen, spähst du durch das unheimliche\nDämmerlicht. Deine scharfen Augen suchen nach dem kürzesten\nWeg, um das Signalfeuer zu erreichen. Das große Tor am Turm der\nSonne wurde mittlerweile von innen verriegelt, um dem Gegner den\nZugang zu verwehren, und so musst du einen anderen Weg finden.\nEs gibt mehrere Türen, die ebenerdig in die vielen Hallen der Abtei\nführen, doch nur eine davon ist im Augenblick noch geöffnet. Sie\nliegt unter einem großen Balkon am oberen Ende einer breiten\nSteinrampe und führt zu den Kammern der Kai-Meister.\nDu beschließt das Kloster über diesen Weg zu betreten und rennst\nüber das Übungsgelände auf die Rampe zu. Inzwischen werden\nimmer mehr Transportnetze abgeworfen, und zweimal wirst du auf\ndem Weg zur Rampe fast erschlagen. Eines der Netze wurde zu früh\nausgeklinkt und schlägt in der Mitte der Steinrampe auf, gerade als\ndu diese erreichst.\nBis auf einen wurden sämtliche Giak, die in diesem Netz saßen,\ndurch den gewaltigen Aufprall getötet. Dieser eine Überlebende ist\njedoch bei Bewusstsein geblieben und hat sich seinen Weg nach oben\nfrei gehackt. Als du die Rampe hinauf auf das offene Portal zueilst,\nspringt er zwischen dem Haufen aus Maschenwerk und\nzerschmetterten Leibern hervor und greift dich mit seinem\nschwarzen Krummschwert an.\n",
+    "text": "Du schiebst das Schwert in deinen Gürtel (vermerke die Waffe auf deinem Aktionsblatt) und läufst weiter, um den Hebel zu erreichen, der das Tor verschließt. Du bist etwas wackelig auf den Beinen und das Blut pocht dir laut in den Ohren. Du hast zum ersten im Kampf getötet, und obwohl du deine Pflicht mit großem Geschick erfüllt hast, bist du nun hin- und hergerissen zwischen deinem Hochgefühl und dem Abscheu, den du empfindest. Du stolperst auf die Wehrmauer des Torhauses zu und legst den eisernen Hebel um, und sofort beginnt sich das mächtige Tor unter lautem Quietschen zu schließen. Die Leichen zahlreicher Giak werden zerquetscht und verstümmelt, als die beiden schweren Torflügel schließlich mit einem dröhnenden Krachen einrasten. „Gut gemacht, Lautloser Wolf!“, sagt Sternenfeuer, als er auf dich zukommt, aber du kannst seine Worte über dem Pochen in deinem Kopf kaum hören. Als das Gefühl des Entsetzens, das dein erster Kampf in dir hinterlassen hat, schließlich nachlässt, lenkt der Kai\u0002Meister deine Aufmerksamkeit auf die Spitze des höchsten Turmes der Abtei. Dieses prächtige Bauwerk trägt den Namen Turm der Sonne, und an diesem Ort befinden sich die persönlichen Studierzimmer der Kai\u0002Meister. Die höchste Kammer gehört dem Führer der Kai – Großmeister Tapfere Klinge. „Lautloser Wolf, ich habe eine wichtige Aufgabe für dich. Sieh nach oben, zur Spitze des Turms, und sag mir, was du dort siehst.“ Du kommst Sternenfeuers Aufforderung nach. Trotz der unnatürlichen Dunkelheit und der unzähligen Kraan, die nun am Himmel kreisen, kannst du einen großen, juwelenartigen Kristall erkennen, der oben auf der kunstvollen, runenverzierten Stahlspitze des Turms angebracht ist. „Ich sehe das kristallene Leuchtfeuer, Meister“, antwortest du. „Genau. Ich will, dass du jetzt dort hinaufgehst und das Leuchtfeuer entzündest. Es wird den König in Holmgard warnen, dass die Schwarzen Lords angreifen. Hast du verstanden?“ „Ja, Meister.“ Plötzlich stößt eine zweite Welle fliegender Kreaturen auf das Kloster herab. Diese sind viel größer als die Kraan der ersten Angriffswelle, und unter ihren schwarzen Bäuchen tragen sie gewaltige Netze, in denen unzählige Giak stecken, schwer gerüstet und bewaffnet mit Schwertern und Schilden. „Zlaanbestien!“, ruft Sternenfeuer. „Dieser verfluchte Zagarna. So also hat er vor, uns zu besiegen!“ Eine der großen, schwarzen Zlaanbestien stößt herab und schwebt direkt über dem Übungsgelände. Ein mit einer Robe bekleideter Reiter löst das riesige Netz und eine Stiege gerüsteter Giak stürzt auf den Platz. Mehrere von ihnen werden beim Aufprall zu Tode gequetscht, doch der Großteil überlebt und hat sich schnell aus dem Netz befreit. Sofort stürmen sie in alle Richtungen davon, um jeden Kai zu töten, dessen sie habhaft werden können. „Geh, Lautloser Wolf!“, drängt dich Sternenfeuer, während er sich bereitmacht, sich dem Überraschungsangriff aus der Luft zu stellen. „Geh und entzünde das Leuchtfeuer!“ Während Sternenfeuer über das Übungsgelände eilt, um sich dem Feind entgegenzuwerfen, spähst du durch das unheimliche Dämmerlicht. Deine scharfen Augen suchen nach dem kürzesten Weg, um das Signalfeuer zu erreichen. Das große Tor am Turm der Sonne wurde mittlerweile von innen verriegelt, um dem Gegner den Zugang zu verwehren, und so musst du einen anderen Weg finden. Es gibt mehrere Türen, die ebenerdig in die vielen Hallen der Abtei führen, doch nur eine davon ist im Augenblick noch geöffnet. Sie liegt unter einem großen Balkon am oberen Ende einer breiten Steinrampe und führt zu den Kammern der Kai-Meister. Du beschließt das Kloster über diesen Weg zu betreten und rennst über das Übungsgelände auf die Rampe zu. Inzwischen werden immer mehr Transportnetze abgeworfen, und zweimal wirst du auf dem Weg zur Rampe fast erschlagen. Eines der Netze wurde zu früh ausgeklinkt und schlägt in der Mitte der Steinrampe auf, gerade als du diese erreichst. Bis auf einen wurden sämtliche Giak, die in diesem Netz saßen, durch den gewaltigen Aufprall getötet. Dieser eine Überlebende ist jedoch bei Bewusstsein geblieben und hat sich seinen Weg nach oben frei gehackt. Als du die Rampe hinauf auf das offene Portal zueilst, springt er zwischen dem Haufen aus Maschenwerk und zerschmetterten Leibern hervor und greift dich mit seinem schwarzen Krummschwert an. ",
     "actions": [
       {
         "type": "CHANGE_SECTION",

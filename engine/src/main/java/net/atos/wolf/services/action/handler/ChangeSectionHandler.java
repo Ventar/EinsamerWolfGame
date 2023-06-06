@@ -30,6 +30,10 @@ public class ChangeSectionHandler extends AbstractActionHandler {
             return answerOptions.size() == 0;
         }
 
+        if (action.item() != null){
+            return character.hasItem(action.item());
+        }
+
         return true;
     }
 

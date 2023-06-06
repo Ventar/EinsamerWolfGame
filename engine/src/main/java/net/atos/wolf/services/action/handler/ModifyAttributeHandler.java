@@ -10,7 +10,21 @@ import java.util.List;
 public class ModifyAttributeHandler extends AbstractActionHandler {
 
     public ActionResult handleAction(UIService ui, Character character, Action action, List<Action> answerOptions) {
-        character.endurance().remove(Integer.valueOf(action.value()));
+
+        if (action.attribute().equals("ENDURANCE")) {
+            character.endurance().remove(Integer.valueOf(action.value()));
+        }
+
+        if (action.attribute().equals("FOOD")) {
+            character.food().add(Integer.valueOf(action.value()));
+        }
+        if (action.attribute().equals("GOLD")){
+            character.gold().add(Integer.valueOf(action.value()));
+        }
+        if (action.attribute().equals("BATTLE_STRENGTH")){
+            character.battleStrength().add(Integer.valueOf(action.value()));
+        }
+
         return ActionResult.representActions(answerOptions);
     }
 
