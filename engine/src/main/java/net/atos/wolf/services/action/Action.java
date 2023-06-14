@@ -17,15 +17,15 @@ import java.util.Objects;
  */
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Setter
 @Getter
 public class Action {
 
-    @Getter
+
     private ActionType type;
     private boolean mandatory;
     private int targetSection;
     private KaiSkill skill;
-    @Setter
     private String text;
     private Weapon weapon;
     private SpecialItem specialItem;
@@ -36,8 +36,6 @@ public class Action {
     private int numberOfSkills;
     private boolean noOtherOption;
     private Battle battle;
-    @Getter
-    @Setter
     private int battleRounds;
 
     @Override

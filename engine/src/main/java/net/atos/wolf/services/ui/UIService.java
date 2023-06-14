@@ -12,17 +12,17 @@ public class UIService {
      *
      * @param text
      * @param options
-     *
      * @return
      */
     public Action render(String text, String headLine, List<Action> options) {
 
 
         // print the text and possible actions
-
-        System.out.println("\n--------------------------------------------------------------");
-        System.out.println(headLine);
-        System.out.println("--------------------------------------------------------------\n");
+        if (headLine != null) {
+            System.out.println("\n--------------------------------------------------------------");
+            System.out.println(headLine);
+            System.out.println("--------------------------------------------------------------\n");
+        }
 
         System.out.println(splitIntoLines(text, 120) + "\n");
 
@@ -53,10 +53,9 @@ public class UIService {
      *
      * @param text       the text to split
      * @param lineLength the line length
-     *
      * @return the splited string
      */
-    public String splitIntoLines(String text, int lineLength) {
+    private String splitIntoLines(String text, int lineLength) {
 
         StringBuffer stringBuffer = new StringBuffer(text.length() + 20);
         StringTokenizer stringTokenizer = new StringTokenizer(text, " \n", true);

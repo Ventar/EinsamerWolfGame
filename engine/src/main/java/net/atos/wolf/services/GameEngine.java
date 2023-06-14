@@ -81,11 +81,11 @@ public class GameEngine {
             do {
                 String text = character.replaceVariablesInText(section.text());
 
-                battleInfo(text, filteredAnswerOptions);
+                text = battleInfo(text, filteredAnswerOptions);
 
 
                 actionToExecute = ui.render(text, String.valueOf(section.sectionNumber()), filteredAnswerOptions);
-                actionResult = actionHandler.get(actionToExecute.type()).handleAction(character, actionToExecute, answerOptions);
+                actionResult = actionHandler.get(actionToExecute.type()).handleAction(ui, character, actionToExecute, filteredAnswerOptions);
 
                 switch (actionResult.type()) {
                     case CHANGE_SECTION -> sectionToRender = actionResult.targetSection();
@@ -122,7 +122,7 @@ public class GameEngine {
             if (action.type().equals(ActionType.BATTLE)) {
                 ;
                 for (Enemy enemy : action.battle().enemy()) {
-                    text += enemy.name() + "\n";
+                    text += "\n" + enemy.name() + "\n";
                     text += "Gegner Ausdauer   : " + enemy.endurance() + "\n";
                     text += "Gegner Kampfstärke: " + enemy.battleStrength() + "\n";
                     text += "Kampfrunde        : " + action.battleRounds() + "\n";

@@ -30,7 +30,7 @@ public class BattleHandler extends AbstractActionHandler {
             }
         }
 
-        System.out.println("\n\n YOU DIED \n\n");
+        System.out.println("\n\n YOU'RE DEATH WAS IMMINENT \n\n");
         System.exit(0);
         return null;
 
