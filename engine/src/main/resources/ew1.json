@@ -73,26 +73,57 @@
   },
   {
     "sectionNumber": 22,
-    "text": "Von deinem tödlichen Hieb getroffen, wirbelt der Drakkar-Feldwebel\nherum und fällt, während das Blut aus seinem Mund spritzt. Besorgt\nüber die brennende Lunte blickst du zurück zu dem Pulverfass, das\nim nächsten Moment auch schon in einem grell-gelben Feuerball\nexplodiert. Durch die Druckwelle zu Boden geschleudert, schlitterst\ndu auf der Seite quer über die Straße. Kurz darauf folgen zwei\nweitere Explosionen, als die Flammen auf die anderen Fässer\nübergreifen. Instinktiv schützt du deinen Kopf mit deinen Armen,\nwährend überall um dich herum Steinbrocken und brennende\nHolzstücke herunterregnen. Die Explosionen haben ein riesiges Loch\nin die Brückenstraße und die angrenzende Brüstung gerissen und die\nFeinde in diesem Abschnitt der Brücke in nackte Panik versetzt.\nDu kommst stolpernd auf die Beine und läufst eilig auf den Torbogen\nzu, in der Hoffnung, in dem Chaos, das die explodierenden\nPulverfässer angerichtet haben, zu entkommen. Der\nohrenbetäubende Lärm hat jedoch die Feinde auf dem dritten\nBrückensegment alarmiert, und mehrere von ihnen laufen nun von\nder anderen Seite auf den Torbogen zu. Ein weiterer Drakkar\u0002Feldwebel, mit zweien seiner Krieger im Schlepptau, sieht dich durch\nden beißenden, grauen Rauch eilen. Rasch befiehlt er seinen\nMännern, dir den Weg abzuschneiden, und sie kommen mit\ngezückten Schwertern durch den Torbogen auf dich zu gerannt.\nAls du siehst, wie sich die Krieger nähern, wird dir klar, dass du dir\neinen anderen Weg suchen musst, um den dritten Brückenabschnitt\nzu erreichen. Du wendest dich vom Torbogen ab und erkennst durch\nden Rauch einen Haufen Baumwollballen und Holzkisten, die an der\nBrüstung aufgestapelt sind. Diesen wackeligen Warenstapel nutzt du\nals behelfsmäßige Treppe, um auf den Wehrgang darüber zu klettern.\nFast bist du oben angelangt, als dich deine Kai-Sinne vor einer\ndrohenden Gefahr warnen: Der zweite Drakkar-Feldwebel hat im\nSchatten des Torbogens angehalten, um eine geladene Armbrust von\nseinem Rucksack loszuschnallen. Jetzt zielt er auf dich, während du\ngerade von der obersten Kiste auf den Wehrgang springen willst. Ermittle Zufallszahl. Wenn du die Kai-Disziplin Jagd beherrschst,\ndarfst du 1 zu dieser Zahl addieren. Verfügst du über die Kai Disziplin Tarnung, kannst du ebenfalls 1 zu deinem Ergebnis\ndazuzählen.\n",
+    "text": "Von deinem tödlichen Hieb getroffen, wirbelt der Drakkar-Feldwebel herum und fällt, während das Blut aus seinem Mund spritzt. Besorgt über die brennende Lunte blickst du zurück zu dem Pulverfass, das im nächsten Moment auch schon in einem grell-gelben Feuerball explodiert. Durch die Druckwelle zu Boden geschleudert, schlitterst du auf der Seite quer über die Straße. Kurz darauf folgen zwei weitere Explosionen, als die Flammen auf die anderen Fässer übergreifen. Instinktiv schützt du deinen Kopf mit deinen Armen, während überall um dich herum Steinbrocken und brennende Holzstücke herunterregnen. Die Explosionen haben ein riesiges Loch in die Brückenstraße und die angrenzende Brüstung gerissen und die Feinde in diesem Abschnitt der Brücke in nackte Panik versetzt. Du kommst stolpernd auf die Beine und läufst eilig auf den Torbogen zu, in der Hoffnung, in dem Chaos, das die explodierenden Pulverfässer angerichtet haben, zu entkommen. Der ohrenbetäubende Lärm hat jedoch die Feinde auf dem dritten Brückensegment alarmiert, und mehrere von ihnen laufen nun von der anderen Seite auf den Torbogen zu. Ein weiterer Drakkar\u0002Feldwebel, mit zweien seiner Krieger im Schlepptau, sieht dich durch den beißenden, grauen Rauch eilen. Rasch befiehlt er seinen Männern, dir den Weg abzuschneiden, und sie kommen mit gezückten Schwertern durch den Torbogen auf dich zu gerannt. Als du siehst, wie sich die Krieger nähern, wird dir klar, dass du dir einen anderen Weg suchen musst, um den dritten Brückenabschnitt zu erreichen. Du wendest dich vom Torbogen ab und erkennst durch den Rauch einen Haufen Baumwollballen und Holzkisten, die an der Brüstung aufgestapelt sind. Diesen wackeligen Warenstapel nutzt du als behelfsmäßige Treppe, um auf den Wehrgang darüber zu klettern. Fast bist du oben angelangt, als dich deine Kai-Sinne vor einer drohenden Gefahr warnen: Der zweite Drakkar-Feldwebel hat im Schatten des Torbogens angehalten, um eine geladene Armbrust von seinem Rucksack loszuschnallen. Jetzt zielt er auf dich, während du gerade von der obersten Kiste auf den Wehrgang springen willst. Ermittle Zufallszahl. Wenn du die Kai-Disziplin Jagd beherrschst, darfst du 1 zu dieser Zahl addieren. Verfügst du über die Kai Disziplin Tarnung, kannst du ebenfalls 1 zu deinem Ergebnis dazuzählen. ",
     "actions": [
       {
         "type": "CHANGE_SECTION",
-        "text": "Ermittle eine Zufallszahl",
-        "battle": {
-
-          "targetSectionBattleRound": [
-            {
-              "min": 0,
-              "max": 1,
-              "targetSection": 479
-            },
-            {
-              "min": 2,
-              "max": 99,
-              "targetSection": 311
-            }
-          ]
-        }
+        "text": "Du verlässt dich auf deine Tarnung",
+        "randomSection": [
+          479,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311
+        ],
+        "skill": "CAMOUFLAGE"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "text": "Du verlässt dich auf deine Jagd Fähigkeiten",
+        "randomSection": [
+          479,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311
+        ],
+        "skill": "HUNT"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "text": "Weiter",
+        "randomSection": [
+          479,
+          479,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311
+        ]
       }
     ]
   },
@@ -161,7 +192,6 @@
       }
     ]
   },
-
   {
     "sectionNumber": 117,
     "text": "Der Giak stößt zu, und rasch springst du zur Seite, um nicht von seinem Speer aufgespießt zu werden. Dabei verlierst du deine Waffe, und obwohl dich deine schnelle Reaktion vor dem Tod bewahrt hat, entgehst du nicht ganz einer Verletzung, als die Speerspitze deine Schulter streift. (Du verlierst 1 AUSDAUERPUNKT.) Meister Sternenfeuer spürt, dass du in Schwierigkeiten bist. Während du dich aufrappelst, zieht er mit der Linken sein Schwert und wirft es dir mit dem Heft voran zu. Du fängst die Waffe am Griff und hältst sie vor dich, gerade noch rechtzeitig, um einen zweiten Speerstoß des Giak abzuwehren. Voller Wut und Enttäuschung kreischt die Kreatur auf und stürzt sich nun in einer wilden Attacke auf dich.",
@@ -378,7 +408,7 @@
   },
   {
     "sectionNumber": 256,
-    "text": "Der Großteil der feindlichen Kämpfer sammelt sich in der Mitte von\nPelethars Schlachtreihe, also versuchst du sie an der äußeren linken\nFlanke zu erreichen, wo sie bis an die Brustwehr des Durnensteins\nheranreicht. Dort befinden sich nur wenige Feinde und auch der\nKampf tobt dort nicht so wild.\nDu ziehst deine Kapuze über den Kopf und greifst deine Waffe, dann\nläufst du eilig die Marmorstufen hinab und hoffst, dass dir deine\nGeschwindigkeit und Geschicklichkeit helfen werden, die\nNachschublinien des Feindes zu durchbrechen, noch bevor er merkt,\nwer du wirklich bist.\nBedauerlicherweise wird deine Hoffnung nur allzu bald zunichte\ngemacht.\nZwei scharfäugige Drakkarim entdecken dich, als du dich dem Ende\nder breiten Treppe näherst, und merken sofort, dass du keiner von\nihnen bist. Sie stürmen aus den hinteren Reihen auf dich zu, um dich\nabzufangen, und versperren dir nun den Weg zur Schlachtreihe des\nPrinzen. Mit wilden Hieben ihrer blutverschmierten Schwerter\ngreifen sie dich an, und du musst beide wie einen einzelnen Gegner\nbekämpfen.\n",
+    "text": "Der Großteil der feindlichen Kämpfer sammelt sich in der Mitte von Pelethars Schlachtreihe, also versuchst du sie an der äußeren linken Flanke zu erreichen, wo sie bis an die Brustwehr des Durnensteins heranreicht. Dort befinden sich nur wenige Feinde und auch der Kampf tobt dort nicht so wild. Du ziehst deine Kapuze über den Kopf und greifst deine Waffe, dann läufst du eilig die Marmorstufen hinab und hoffst, dass dir deine Geschwindigkeit und Geschicklichkeit helfen werden, die Nachschublinien des Feindes zu durchbrechen, noch bevor er merkt, wer du wirklich bist. Bedauerlicherweise wird deine Hoffnung nur allzu bald zunichte gemacht. Zwei scharfäugige Drakkarim entdecken dich, als du dich dem Ende der breiten Treppe näherst, und merken sofort, dass du keiner von ihnen bist. Sie stürmen aus den hinteren Reihen auf dich zu, um dich abzufangen, und versperren dir nun den Weg zur Schlachtreihe des Prinzen. Mit wilden Hieben ihrer blutverschmierten Schwerter greifen sie dich an, und du musst beide wie einen einzelnen Gegner bekämpfen. ",
     "actions": [
       {
         "type": "BATTLE",
@@ -434,7 +464,7 @@
   },
   {
     "sectionNumber": 311,
-    "text": "Du springst von der Kiste, als der Drakkar-Feldwebel seine Armbrust\nabfeuert. Das Geschoss streift deine rechte Wade mitten im Sprung\nund prallt dann klirrend von der Brückenbrüstung ab. Durch den\nStreifschuss aus dem Gleichgewicht gebracht, verlierst du den Halt\nund stürzt auf den Laufgang. (Du verlierst 2 AUSDAUERPUNKTE.)\n",
+    "text": "Du springst von der Kiste, als der Drakkar-Feldwebel seine Armbrust abfeuert. Das Geschoss streift deine rechte Wade mitten im Sprung und prallt dann klirrend von der Brückenbrüstung ab. Durch den Streifschuss aus dem Gleichgewicht gebracht, verlierst du den Halt und stürzt auf den Laufgang. (Du verlierst 2 AUSDAUERPUNKTE.) ",
     "actions": [
       {
         "type": "CHANGE_SECTION",
@@ -482,7 +512,6 @@
       }
     ]
   },
-
   {
     "sectionNumber": 332,
     "text": "Du durchquerst den Wald, bis du an eine Stelle kommst, an der sich der Pfad in zwei Richtungen teilt.",
@@ -537,7 +566,7 @@
   },
   {
     "sectionNumber": 352,
-    "text": "Mit zusammengebissenen Zähnen rappelst du dich auf und stolperst\nauf den Turm am Ende des Wehrgangs zu. Das Tor ist\nunverschlossen und es gelingt dir, den Turm ungesehen zu betreten.\nRasch durchquerst du das Gebäude und eilst, so schnell es dir\nmöglich ist, über den Laufgang des dritten Brückenabschnitts bis zu\nden nächsten beiden Türmen und den Torbögen, die den Zugang\nzum Durnenstein sichern. In einem engen Tunnel, der durch den\nnächstgelegenen Turm führt, hältst du kurz an, um dein verwundetes\nBein zu verbinden.\nAuf dem gepflasterten Platz unterhalb des Turms tobt die Schlacht.\nIm Zentrum dieser prächtigen Piazza liefern sich die Soldaten Prinz\nPelethars ein tödliches Gefecht mit den Sturmtruppen des\nSchwarzen Lords Zagarna. Der Feind ist in der Überzahl und\nversucht durch die Reihen der Männer des Prinzen zu brechen, doch\nPelethars Soldaten kämpfen wie die Löwen und halten ihre Gegner in\nSchach. Inmitten von Rauch und Schlachtgetümmel siehst du den\nPrinzen im Kampf mit einer riesigen, reptilienhaften Kreatur. Es\nhandelt sich um einen Gourgaz, einen furchterregenden Bewohner\nder Maakensümpfe. Zagarna hat diese mörderische Bestie damit\nbetraut, den Angriff auf die Alemabrücke anzuführen, und zwar aus\nzwei Gründen: Nicht nur ist der Gourgaz ein furchtloser und\ngnadenloser Gegner im Nahkampf, er verströmt auch einen\nDuftstoff, der die Giak in einen wilden Kampfrausch fallen lässt.\nUnter dem Einfluss dieses geruchslosen Stoffes kämpfen sie, ohne zu\nermüden oder auf ihre eigene Sicherheit zu achten.\nAufrecht auf seinen kräftigen Hinterbeinen stehend, überragt der\nGourgaz die anderen Kämpfer der Schlacht und führt seine gewaltige\nschwarze Streitaxt mit schrecklicher Wirkung. Prinz Pelethars\nSilberrüstung glänzt wie ein Spiegel in der Morgensonne. Sein\nweißer Waffenrock ist mit einem geflügelten Pferd, seinem\npersönlichen Wappen, bestickt, und sein messerscharfes\nBreitschwert zieren die stolzen Symbole Sommerlunds und des\nHauses Ulnar. Pelethar scheint den mörderischen Zweikampf gegen\nden grausamen Gourgaz zu gewinnen, bis ihn plötzlich ein Pfeil trifft.\nDas Giak-Geschoss hat die Kettenpanzerung unter seiner rechten\nAchsel durchschlagen, und dein Herz setzt für einen Augenblick aus,\nals du siehst, wie er aufschreit und ins Straucheln gerät. Als der\nGourgaz spürt, wie nahe nun der Sieg ist, holt er zu einem mächtigen\nHieb aus, um seine gewaltige Axt auf den Helm des Prinzen\nherabsausen zu lassen, doch einer von Pelethars Männern stößt ihn\nzur Seite, als die schwarze Klinge niederfährt. Sein rasches\nEingreifen rettet seinem verwundeten Herrn das Leben, er selbst\njedoch büßt seinen rechten Unterarm ein, als die Axt mit brutaler\nWucht aufschlägt.\nDurch Pelethars Verwundung wendet sich das Blatt nun zugunsten\ndes Feindes. Wenn du dich den Männern des Prinzen anschließen\nwillst, bevor diese gezwungen sind, sich vom Durnenstein\nzurückzuziehen, musst du dich beeilen. Von deiner Position im\nTurmgang aus siehst du zwei Möglichkeiten, auf den Platz hinunter\nzu gelangen: Der erste Weg führt über eine breite Marmortreppe; die\nzweite Gelegenheit bietet ein Frachtseil, das an einem Seilzug an der\nTurmwand herunterhängt.",
+    "text": "Mit zusammengebissenen Zähnen rappelst du dich auf und stolperst auf den Turm am Ende des Wehrgangs zu. Das Tor ist unverschlossen und es gelingt dir, den Turm ungesehen zu betreten. Rasch durchquerst du das Gebäude und eilst, so schnell es dir möglich ist, über den Laufgang des dritten Brückenabschnitts bis zu den nächsten beiden Türmen und den Torbögen, die den Zugang zum Durnenstein sichern. In einem engen Tunnel, der durch den nächstgelegenen Turm führt, hältst du kurz an, um dein verwundetes Bein zu verbinden. Auf dem gepflasterten Platz unterhalb des Turms tobt die Schlacht. Im Zentrum dieser prächtigen Piazza liefern sich die Soldaten Prinz Pelethars ein tödliches Gefecht mit den Sturmtruppen des Schwarzen Lords Zagarna. Der Feind ist in der Überzahl und versucht durch die Reihen der Männer des Prinzen zu brechen, doch Pelethars Soldaten kämpfen wie die Löwen und halten ihre Gegner in Schach. Inmitten von Rauch und Schlachtgetümmel siehst du den Prinzen im Kampf mit einer riesigen, reptilienhaften Kreatur. Es handelt sich um einen Gourgaz, einen furchterregenden Bewohner der Maakensümpfe. Zagarna hat diese mörderische Bestie damit betraut, den Angriff auf die Alemabrücke anzuführen, und zwar aus zwei Gründen: Nicht nur ist der Gourgaz ein furchtloser und gnadenloser Gegner im Nahkampf, er verströmt auch einen Duftstoff, der die Giak in einen wilden Kampfrausch fallen lässt. Unter dem Einfluss dieses geruchslosen Stoffes kämpfen sie, ohne zu ermüden oder auf ihre eigene Sicherheit zu achten. Aufrecht auf seinen kräftigen Hinterbeinen stehend, überragt der Gourgaz die anderen Kämpfer der Schlacht und führt seine gewaltige schwarze Streitaxt mit schrecklicher Wirkung. Prinz Pelethars Silberrüstung glänzt wie ein Spiegel in der Morgensonne. Sein weißer Waffenrock ist mit einem geflügelten Pferd, seinem persönlichen Wappen, bestickt, und sein messerscharfes Breitschwert zieren die stolzen Symbole Sommerlunds und des Hauses Ulnar. Pelethar scheint den mörderischen Zweikampf gegen den grausamen Gourgaz zu gewinnen, bis ihn plötzlich ein Pfeil trifft. Das Giak-Geschoss hat die Kettenpanzerung unter seiner rechten Achsel durchschlagen, und dein Herz setzt für einen Augenblick aus, als du siehst, wie er aufschreit und ins Straucheln gerät. Als der Gourgaz spürt, wie nahe nun der Sieg ist, holt er zu einem mächtigen Hieb aus, um seine gewaltige Axt auf den Helm des Prinzen herabsausen zu lassen, doch einer von Pelethars Männern stößt ihn zur Seite, als die schwarze Klinge niederfährt. Sein rasches Eingreifen rettet seinem verwundeten Herrn das Leben, er selbst jedoch büßt seinen rechten Unterarm ein, als die Axt mit brutaler Wucht aufschlägt. Durch Pelethars Verwundung wendet sich das Blatt nun zugunsten des Feindes. Wenn du dich den Männern des Prinzen anschließen willst, bevor diese gezwungen sind, sich vom Durnenstein zurückzuziehen, musst du dich beeilen. Von deiner Position im Turmgang aus siehst du zwei Möglichkeiten, auf den Platz hinunter zu gelangen: Der erste Weg führt über eine breite Marmortreppe; die zweite Gelegenheit bietet ein Frachtseil, das an einem Seilzug an der Turmwand herunterhängt.",
     "actions": [
       {
         "type": "CHANGE_SECTION",
@@ -612,6 +641,32 @@
         "type": "CHANGE_SECTION",
         "targetSection": 93,
         "text": "Weiter"
+      }
+    ]
+  },
+  {
+    "sectionNumber": 479,
+    "text": "Du bist gerade mitten im Sprung, als der Armbrustbolzen des Drakkar-Feldwebels in deinen Hinterkopf einschlägt. Doch du spürst keinen Schmerz, nur ein seltsames Gefühl der Schwerelosigkeit, und bevor dich eine ewige Dunkelheit umfängt, erblickst du noch kurz das strahlende Lächeln der Göttin Ishir. ",
+    "actions": [
+
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 4004,
+        "text": "Weiter",
+        "noOtherOption": true
+      }
+    ]
+  },
+  {
+    "sectionNumber": 480,
+    "text": "Du verfluchst dein Pech. Es scheint, als hätte sich die Natur mit den Schwarzen Lords verbündet, um dein Vorankommen zu vereiteln. Dieser Rückschlag ist bedauerlich, doch er ändert nichts an deinem Entschluss, Holmgard so schnell wie möglich zu erreichen. Nachdem du den klebrigen, schwarzen Schlamm von deinen Kleidern und Stiefeln entfernt hast, überprüfst du deine Ausrüstung und setzt dann eilig deinen Weg durch den Wald fort.  ",
+    "actions": [
+
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 457,
+        "text": "Weiter",
+        "noOtherOption": true
       }
     ]
   },
@@ -758,6 +813,17 @@
   {
     "sectionNumber": 1004,
     "text": "Hole dir nun deine Basisausrüstung ab, um dein Abenteuer zu beginnen...",
+    "actions": [
+      {
+        "type": "GET_INITIAL_ITEMS",
+        "text": "Nimm deine Austrüstung und etwas Gold",
+        "targetSection": 1
+      }
+    ]
+  },
+  {
+    "sectionNumber": 4004,
+    "text": "Du bist gestorben...Fang ein neues Spiel an",
     "actions": [
       {
         "type": "GET_INITIAL_ITEMS",
