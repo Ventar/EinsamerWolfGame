@@ -77,22 +77,53 @@
     "actions": [
       {
         "type": "CHANGE_SECTION",
-        "text": "Ermittle eine Zufallszahl",
-        "battle": {
-
-          "targetSectionBattleRound": [
-            {
-              "min": 0,
-              "max": 1,
-              "targetSection": 479
-            },
-            {
-              "min": 2,
-              "max": 99,
-              "targetSection": 311
-            }
-          ]
-        }
+        "text": "Du verlässt dich auf deine Tarnung",
+        "randomSection": [
+          479,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311
+        ],
+        "skill": "CAMOUFLAGE"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "text": "Du verlässt dich auf deine Jagd Fähigkeiten",
+        "randomSection": [
+          479,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311
+        ],
+        "skill": "HUNT"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "text": "Weiter",
+        "randomSection": [
+          479,
+          479,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311,
+          311
+        ]
       }
     ]
   },
@@ -161,7 +192,6 @@
       }
     ]
   },
-
   {
     "sectionNumber": 117,
     "text": "Der Giak stößt zu, und rasch springst du zur Seite, um nicht von seinem Speer aufgespießt zu werden. Dabei verlierst du deine Waffe, und obwohl dich deine schnelle Reaktion vor dem Tod bewahrt hat, entgehst du nicht ganz einer Verletzung, als die Speerspitze deine Schulter streift. (Du verlierst 1 AUSDAUERPUNKT.) Meister Sternenfeuer spürt, dass du in Schwierigkeiten bist. Während du dich aufrappelst, zieht er mit der Linken sein Schwert und wirft es dir mit dem Heft voran zu. Du fängst die Waffe am Griff und hältst sie vor dich, gerade noch rechtzeitig, um einen zweiten Speerstoß des Giak abzuwehren. Voller Wut und Enttäuschung kreischt die Kreatur auf und stürzt sich nun in einer wilden Attacke auf dich.",
@@ -482,7 +512,6 @@
       }
     ]
   },
-
   {
     "sectionNumber": 332,
     "text": "Du durchquerst den Wald, bis du an eine Stelle kommst, an der sich der Pfad in zwei Richtungen teilt.",
@@ -692,6 +721,32 @@
     ]
   },
   {
+    "sectionNumber": 479,
+    "text": "Du bist gerade mitten im Sprung, als der Armbrustbolzen des Drakkar-Feldwebels in deinen Hinterkopf einschlägt. Doch du spürst keinen Schmerz, nur ein seltsames Gefühl der Schwerelosigkeit, und bevor dich eine ewige Dunkelheit umfängt, erblickst du noch kurz das strahlende Lächeln der Göttin Ishir. ",
+    "actions": [
+
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 4004,
+        "text": "Weiter",
+        "noOtherOption": true
+      }
+    ]
+  },
+  {
+    "sectionNumber": 480,
+    "text": "Du verfluchst dein Pech. Es scheint, als hätte sich die Natur mit den Schwarzen Lords verbündet, um dein Vorankommen zu vereiteln. Dieser Rückschlag ist bedauerlich, doch er ändert nichts an deinem Entschluss, Holmgard so schnell wie möglich zu erreichen. Nachdem du den klebrigen, schwarzen Schlamm von deinen Kleidern und Stiefeln entfernt hast, überprüfst du deine Ausrüstung und setzt dann eilig deinen Weg durch den Wald fort.  ",
+    "actions": [
+
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 457,
+        "text": "Weiter",
+        "noOtherOption": true
+      }
+    ]
+  },
+  {
     "sectionNumber": 497,
     "text": "Dein Blick streift über die Reihe echter Waffen in dem Regal vor dir. Du siehst Dolche, Streitkolben, Schwerter und viele andere Waffen. Du überlegst dir gerade, welche Waffe du am besten nehmen solltest, als du Meister Sternenfeuers zornige Stimme hörst: „Lautloser Wolf – zu mir, SOFORT!“. Greife zufällig eine Waffe, um dem drängenden Befehl deines Meisters Folge zu leisten.",
     "actions": [
@@ -851,6 +906,17 @@
   {
     "sectionNumber": 1004,
     "text": "Hole dir nun deine Basisausrüstung ab, um dein Abenteuer zu beginnen...",
+    "actions": [
+      {
+        "type": "GET_INITIAL_ITEMS",
+        "text": "Nimm deine Austrüstung und etwas Gold",
+        "targetSection": 1
+      }
+    ]
+  },
+  {
+    "sectionNumber": 4004,
+    "text": "Du bist gestorben...Fang ein neues Spiel an",
     "actions": [
       {
         "type": "GET_INITIAL_ITEMS",
