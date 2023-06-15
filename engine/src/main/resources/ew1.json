@@ -747,6 +747,70 @@
     ]
   },
   {
+    "sectionNumber": 481,
+    "text": "Während du das ekelhafte Giak-Blut von deiner Waffe wischst, steigst du eilig den Hang hinab, bevor der Kraan merkt, dass du seine Reiter erschlagen hast. Bei deinem hastigen Abstieg rutschst du mehrfach auf dem lockeren Untergrund aus und stürzt schwer. Aufgrund der zahlreichen Prellungen und Abschürfungen, die du dir an Beinen und Ellenbogen zuziehst, verlierst du 1 AUSDAUERPUNKT.",
+    "actions": [
+
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 373,
+        "text": "Weiter",
+        "noOtherOption": true
+      },
+
+      {
+        "type": "MODIFY_ATTRIBUTE",
+        "mandatory": true,
+        "value": 1,
+        "attribute": "ENDURANCE",
+        "text": "TAKE_DAMAGE"
+      }
+    ]
+  },
+
+  {
+    "sectionNumber": 482,
+    "text": "Du ziehst dir die Kapuze der purpurnen Robe über und holst noch einmal tief Luft, bevor du mit einem flauen Gefühl in der Magengegend aus den Schatten trittst und selbstsicher auf den Ausgang zugehst. Die Wachposten beobachten dich, während du an ihnen vorbeiläufst, aber sie kommen nicht auf den Gedanken, dass du nicht sein könntest, was du zu sein scheinst: ein cenerischer Hohepriester. Ohne von den wachsamen Giak aufgehalten zu werden, erreichst du schließlich die andere Seite der Kammer und betrittst den gewölbten Tunnel, der hinter dem Ausgang liegt.",
+    "actions": [
+
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 150,
+        "text": "Weiter",
+        "noOtherOption": true
+      }
+
+    ]
+  },
+  {
+    "sectionNumber": 483,
+    "text": "Du legst die Leiche des alten Mannes auf einen Arbeitstisch und bedeckst sie mit einer Schürze, die du an einem Haken hinter der Eingangstür findest. Dann siehst du dich im Laden um. In dieser Metzgerei gibt es nicht ein Stück Fleisch mehr. Entweder wurde seit Beginn der Invasion alles verkauft, oder das Fleisch wurde gestohlen. Hinter dem Verkaufstresen findest du schließlich einen Lederbeutel mit 65 Goldkronen. Trotz dieser großen Summe rührst du die Münzen nicht an. Stattdessen versteckst du sie unter einem losen Dielenbrett im Boden, in der Hoffnung, dass die Familie des alten Mannes dieses Geld eines Tages finden wird. Du richtest noch ein kurzes Gebet an die Göttin Ishir, auf dass sie diese arme Seele behüten möge, und verlässt dann das Geschäft, um deinen Weg zum Königspalast fortzusetzen.",
+    "actions": [
+
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 324,
+        "text": "Weiter",
+        "noOtherOption": true
+      }
+
+    ]
+  },
+  {
+    "sectionNumber": 484,
+    "text": "Die gewaltige Druckwelle der Explosion reißt dich aprupt von den Füßen und schleudert dich durch die Luft. Mit voller Wucht prallst du gegen die Brüstung auf der anderen Seite der Brücke und landest schließlich benommen auf dem Pflaster am Straßenrand. Aufgrund der Verletzungen, die du durch die Explosion erlitten hast, verlierst du die Hälfte deiner gegenwärtigen AUSDAUERPUNKTE. Ein ungerades Ergebnis wird abgerundet. Wenn du also z. B. 13 AUSDAUERPUNKTE besessen hast, so ist die Hälfte 6,5. Abgerundet beträgt das Ergebnis 6.",
+    "actions": [
+
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 394,
+        "text": "Weiter",
+        "noOtherOption": true
+      }
+
+    ]
+  },
+  {
     "sectionNumber": 497,
     "text": "Dein Blick streift über die Reihe echter Waffen in dem Regal vor dir. Du siehst Dolche, Streitkolben, Schwerter und viele andere Waffen. Du überlegst dir gerade, welche Waffe du am besten nehmen solltest, als du Meister Sternenfeuers zornige Stimme hörst: „Lautloser Wolf – zu mir, SOFORT!“. Greife zufällig eine Waffe, um dem drängenden Befehl deines Meisters Folge zu leisten.",
     "actions": [
