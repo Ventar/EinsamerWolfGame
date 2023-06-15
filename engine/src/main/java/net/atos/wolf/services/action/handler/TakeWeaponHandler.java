@@ -1,5 +1,6 @@
 package net.atos.wolf.services.action.handler;
 
+import net.atos.wolf.services.ActionSelector;
 import net.atos.wolf.services.action.*;
 import net.atos.wolf.services.character.Character;
 import net.atos.wolf.services.ui.UIService;
@@ -12,7 +13,7 @@ import java.util.List;
 public class TakeWeaponHandler extends AbstractActionHandler {
 
     @Override
-    public ActionResult handleAction(UIService ui, Character character, Action action, List<Action> answerOptions) {
+    public ActionResult handleAction(ActionSelector selector, Character character, Action action, List<Action> answerOptions) {
 
         Action a1 = new Action();
         a1.weapon(action.weapon());
@@ -24,7 +25,7 @@ public class TakeWeaponHandler extends AbstractActionHandler {
         a2.type(ActionType.TAKE_WEAPON);
         a2.text("Waffe 2");
 
-        Action selectedAction = ui.render("Welche Waffe möchtest du ersetzen ?", null, Arrays.asList(a1, a2));
+        Action selectedAction = selector.selectAction("Welche Waffe möchtest du ersetzen ?", null, Arrays.asList(a1, a2));
 
         if (selectedAction.equals(a1)) {
             character.setWeaponOne(action.weapon());

@@ -17,13 +17,14 @@ public class ChangeSectionIfRandomAndSkillHandler extends AbstractActionHandler 
 
         int rdm = diceService.generate();
 
-         if (character.hasSkill(action.skill())){
+        if (character.hasSkill(action.skill())) {
 
-            rdm =  rdm + 1;
-         }
+            rdm = rdm + 1;
+        }
 
+        character.section(action.targetSection());
 
-        return ActionResult.changeSection(action.targetSection());
+        return ActionResult.sectionFinished();
     }
 
 

@@ -1,5 +1,6 @@
 package net.atos.wolf.services.action.handler;
 
+import net.atos.wolf.services.ActionSelector;
 import net.atos.wolf.services.action.*;
 import net.atos.wolf.services.character.Attribute;
 import net.atos.wolf.services.character.Character;
@@ -14,7 +15,7 @@ public class InitializeAttributeHandler extends AbstractActionHandler {
     private DiceService dice = new DiceService();
 
     @Override
-    public ActionResult handleAction(UIService ui, Character character, Action action, List<Action> answerOptions) {
+    public ActionResult handleAction(ActionSelector selector, Character character, Action action, List<Action> answerOptions) {
 
         String attributeName = action.attribute();
 
@@ -24,7 +25,9 @@ public class InitializeAttributeHandler extends AbstractActionHandler {
         att.maxValue(att.baseValue() + rand);
         att.add(att.baseValue() + rand);
 
-        return ActionResult.changeSection(action.targetSection());
+        character.section(action.targetSection());
+
+        return ActionResult.sectionFinished();
 
     }
 }

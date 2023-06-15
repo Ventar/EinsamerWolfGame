@@ -22,17 +22,12 @@ public class ActionResult {
         /**
          * Type for custom dialogs.
          */
-        CUSTOM,
+        SECTION_FINISHED,
 
         /**
          * As a result of the action the character died, i.e. the game will end.
          */
         CHARACTER_DIED,
-
-        /**
-         * All effects of the current action have been handled and the section can be changed to the next one.
-         */
-        CHANGE_SECTION,
 
         /**
          * The {@link IActionHandler#handleAction(Character, Action, List)} requires that the current section is rendered again but with a changed set of answer options. This can
@@ -46,10 +41,6 @@ public class ActionResult {
      */
     private ActionResultType type;
 
-    /**
-     * The section to which the character is redirected if the type of the result is CHANGE_SECTION.
-     */
-    private int targetSection;
 
     /**
      * The list of actions which are represented if the type of the result is REPRESENT_ACTIONS.
@@ -72,23 +63,9 @@ public class ActionResult {
      *
      * @return the new result
      */
-    public static ActionResult custom() {
+    public static ActionResult sectionFinished() {
         ActionResult res = new ActionResult();
-        res.type = ActionResultType.CUSTOM;
-        return res;
-    }
-
-    /**
-     * Creates a new action result of type CHANGE_SECTION.
-     *
-     * @param targetSection the section to which the character is redirected
-     *
-     * @return the new result
-     */
-    public static ActionResult changeSection(int targetSection) {
-        ActionResult res = new ActionResult();
-        res.type = ActionResultType.CHANGE_SECTION;
-        res.targetSection = targetSection;
+        res.type = ActionResultType.SECTION_FINISHED;
         return res;
     }
 
@@ -96,7 +73,6 @@ public class ActionResult {
      * Creates a new action result of type REPRESENT_ACTIONS.
      *
      * @param actions the actions to represent
-     *
      * @return the new result
      */
     public static ActionResult representActions(List<Action> actions) {
@@ -106,4 +82,11 @@ public class ActionResult {
         return res;
     }
 
+    @Override
+    public String toString() {
+        return "ActionResult{" +
+                "type=" + type +
+                ", actions=" + actions +
+                '}';
+    }
 }

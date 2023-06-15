@@ -1,20 +1,16 @@
 package net.atos.wolf.services.ui;
 
+import net.atos.wolf.services.ActionSelector;
 import net.atos.wolf.services.action.Action;
 
 import java.util.List;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class UIService {
-    /**
-     * Renders things
-     *
-     * @param text
-     * @param options
-     * @return
-     */
-    public Action render(String text, String headLine, List<Action> options) {
+public class UIService implements ActionSelector {
+
+    @Override
+    public Action selectAction(String text, String headLine, List<Action> options) {
 
 
         // print the text and possible actions

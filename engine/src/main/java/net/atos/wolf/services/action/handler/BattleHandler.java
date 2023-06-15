@@ -25,14 +25,13 @@ public class BattleHandler extends AbstractActionHandler {
         } else if (battleStatus.equals(BattleService.BattleStatus.ENEMY_DIED)) {
             for (BattleRoundTarget brt : action.battle().targetSectionBattleRound()) {
                 if (action.battleRounds() >= brt.min() && action.battleRounds() <= brt.max()) {
-                    return ActionResult.changeSection(brt.targetSection());
+                    character.section(brt.targetSection());
+                    return ActionResult.sectionFinished();
                 }
             }
         }
 
-        System.out.println("\n\n YOU'RE DEATH WAS IMMINENT \n\n");
-        System.exit(0);
-        return null;
+        return ActionResult.characterDied();
 
     }
 

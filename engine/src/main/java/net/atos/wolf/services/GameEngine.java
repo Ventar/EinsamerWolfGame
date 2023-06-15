@@ -18,10 +18,6 @@ import java.util.Map;
 @Slf4j
 public class GameEngine {
 
-    /**
-     * Service to render the UI.
-     */
-    private UIService ui = new UIService();
 
     /**
      * Service to manage the character
@@ -43,68 +39,59 @@ public class GameEngine {
      */
     private TranslationService translationService = new TranslationService("/translation.json");
 
-    private int sectionToRender = -1;
-
-    /**
-     * The currently active character.
-     */
-    private Character character;
+    public List<Action> getPossibleActions(Character character) {
 
 
-    public void start() {
+        // load the section which is the current active one to calculate the possible actions based on the current character state
+        Section section = sectionService.getSection(character.section());
 
-        LOG.debug("Created character ::= [{}]", character);
-
-        if (sectionToRender == -1) {
-            sectionToRender = character.section();
+        // this may happen if the section was not available in the JSON file that represents the book
+        if (section == null) {
+            throw new IllegalStateException("Section ::= [" + character.section() + "] is not available in the SectionService");
         }
 
-        while (true) {
+        // filter these options based on the character, e.g. if a character does not have the skill HUNT and a CHANGE_SECTION action depends on that, the action is removed here.
+        List<Action> filteredAnswerOptions = filterActions(character, section.actions());
 
-            // load the section which is the current active one to offer the possible actions to the character with the UI service
-            Section section = sectionService.getSection(sectionToRender);
+        return filteredAnswerOptions;
 
-            // this may happen if the section was not available in the JSON file that represents the book
-            if (section == null) {
-                throw new IllegalStateException("Section ::= [" + sectionToRender + "] is not available in the SectionService");
-            }
-
-            // Generate the first set of answer options directly from the actions that are stored in the section
-            List<Action> answerOptions = section.actions();
-            List<Action> filteredAnswerOptions = filterActions(section.actions());
-
-            filteredAnswerOptions = executeMandatoryActions(filteredAnswerOptions);
-
-            Action actionToExecute = null;
-            ActionResult actionResult = null;
-
-            do {
-                String text = character.replaceVariablesInText(section.text());
-
-                text = battleInfo(text, filteredAnswerOptions);
-
-
-                actionToExecute = ui.render(text, String.valueOf(section.sectionNumber()), filteredAnswerOptions);
-                actionResult = actionHandler.get(actionToExecute.type()).handleAction(ui, character, actionToExecute, filteredAnswerOptions);
-
-                switch (actionResult.type()) {
-                    case CHANGE_SECTION -> sectionToRender = actionResult.targetSection();
-                    case CHARACTER_DIED -> throw new RuntimeException("Damned we died :(");
-                    case REPRESENT_ACTIONS -> {
-                        answerOptions = actionResult.actions();
-                        filteredAnswerOptions = filterActions(actionResult.actions());
-                    }
-                }
-
-                System.out.println(character.createCharacterString(translationService));
-
-            } while (actionResult.type() == ActionResult.ActionResultType.REPRESENT_ACTIONS);
-
-
-        }
     }
 
-    private List<Action> executeMandatoryActions(List<Action> filteredAnswerOptions) {
+    public ActionResult executeAction(Character character, ActionSelector selector, Action actionToExecute, List<Action> answerOptions) {
+        return actionHandler.get(actionToExecute.type()).handleAction(selector, character, actionToExecute, answerOptions);
+    }
+
+
+    public void handleSection(Character character, ActionSelector selector) {
+
+        Section section = sectionService.getSection(character.section());
+        List<Action> filteredAnswerOptions = getPossibleActions(character);
+
+        filteredAnswerOptions = executeMandatoryActions(character, filteredAnswerOptions);
+
+
+        ActionResult actionResult = null;
+
+        do {
+            String text = character.replaceVariablesInText(section.text());
+            text = battleInfo(text, filteredAnswerOptions);
+
+
+            Action actionToExecute = selector.selectAction(text, String.valueOf(section.sectionNumber()), filteredAnswerOptions);
+            actionResult = executeAction(character, selector, actionToExecute, filteredAnswerOptions);
+
+            switch (actionResult.type()) {
+                case CHARACTER_DIED -> throw new RuntimeException("Damned we died :(");
+                case REPRESENT_ACTIONS -> filteredAnswerOptions = filterActions(character, actionResult.actions());
+            }
+
+            System.out.println(character.createCharacterString(translationService));
+
+        } while (actionResult.type() == ActionResult.ActionResultType.REPRESENT_ACTIONS);
+
+    }
+
+    private List<Action> executeMandatoryActions(Character character, List<Action> filteredAnswerOptions) {
         List<Action> resultList = new ArrayList<>();
         for (Action action : filteredAnswerOptions) {
             if (action.mandatory()) {
@@ -140,7 +127,7 @@ public class GameEngine {
      * @param actions the actions to filter
      * @return the filtered actions
      */
-    private List<Action> filterActions(List<Action> actions) {
+    private List<Action> filterActions(Character character, List<Action> actions) {
 
         List<Action> answerOptions = new LinkedList<>();
 
@@ -155,6 +142,7 @@ public class GameEngine {
 
     public static void main(String[] args) {
         GameEngine engine = new GameEngine();
+        ActionSelector actionSelector = new UIService();
         Character character = new Character();
         character.setWeaponOne(Weapon.AXE);
         character.addSkill(KaiSkill.HEAL);
@@ -181,9 +169,14 @@ public class GameEngine {
 
 
         character.section(119);
-//
-        engine.character = character;
-        engine.start();
+
+
+        LOG.debug("Created character ::= [{}]", character);
+
+        while (true) {
+            engine.handleSection(character, actionSelector);
+        }
+
         //System.out.println(character.createCharacterString(translationService));
     }
 

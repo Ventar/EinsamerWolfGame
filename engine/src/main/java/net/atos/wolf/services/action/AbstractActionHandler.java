@@ -1,5 +1,6 @@
 package net.atos.wolf.services.action;
 
+import net.atos.wolf.services.ActionSelector;
 import net.atos.wolf.services.character.Character;
 import net.atos.wolf.services.common.DiceService;
 import net.atos.wolf.services.ui.UIService;
@@ -44,15 +45,7 @@ public abstract class AbstractActionHandler implements IActionHandler {
         this.type = ahAnnotation.value();
     }
 
-    /**
-     * Checks if the handler can be executed by the passed character or if it is applicable. This method is called by the
-     * {@link #isExecutable(Character, Action, boolean)} method of the interface.
-     *
-     * @param character  the character
-     * @param action     the action to check
-     * @param onlyAction if the action is the only action so far
-     * @return {@code true} if the action can be handled for the character, {@code false} otherwise
-     */
+
     protected boolean checkExecutable(Character character, Action action, List<Action> answerOptions) {
         return true;
     }
@@ -72,8 +65,9 @@ public abstract class AbstractActionHandler implements IActionHandler {
     }
 
     @Override
-    public ActionResult handleAction(UIService ui, Character character, Action action, List<Action> answerOptions) {
-        return ActionResult.changeSection(action.targetSection());
+    public ActionResult handleAction(ActionSelector selector, Character character, Action action, List<Action> answerOptions) {
+        character.section(action.targetSection());
+        return ActionResult.sectionFinished();
     }
 
 }

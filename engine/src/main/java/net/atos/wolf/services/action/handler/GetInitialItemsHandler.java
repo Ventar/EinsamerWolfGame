@@ -19,7 +19,10 @@ public class GetInitialItemsHandler extends AbstractActionHandler {
         character.addSpecialItem(SpecialItem.BELT);
         character.addSpecialItem(SpecialItem.MAP);
         character.gold().add(i);
-        return ActionResult.changeSection(action.targetSection());
+
+        character.section(action.targetSection());
+
+        return ActionResult.sectionFinished();
     }
 
 }

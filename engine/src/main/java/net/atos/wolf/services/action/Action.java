@@ -43,14 +43,13 @@ public class Action {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Action action = (Action) o;
-        return mandatory == action.mandatory && targetSection == action.targetSection && type == action.type && skill == action.skill && Objects.equals(text, action.text) && weapon == action.weapon && specialItem == action.specialItem;
+        return mandatory == action.mandatory && targetSection == action.targetSection && numberOfSkills == action.numberOfSkills && noOtherOption == action.noOtherOption && battleRounds == action.battleRounds && type == action.type && skill == action.skill && Objects.equals(text, action.text) && weapon == action.weapon && specialItem == action.specialItem && Objects.equals(value, action.value) && Objects.equals(attribute, action.attribute) && item == action.item && Objects.equals(randomSection, action.randomSection) && Objects.equals(battle, action.battle);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(type, mandatory, targetSection, skill, text, weapon, specialItem);
+        return Objects.hash(type, mandatory, targetSection, skill, text, weapon, specialItem, value, attribute, item, randomSection, numberOfSkills, noOtherOption, battle, battleRounds);
     }
-
 
     @Override
     public String toString() {

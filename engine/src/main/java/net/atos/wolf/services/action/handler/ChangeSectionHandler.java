@@ -1,5 +1,6 @@
 package net.atos.wolf.services.action.handler;
 
+import net.atos.wolf.services.ActionSelector;
 import net.atos.wolf.services.action.*;
 import net.atos.wolf.services.character.Character;
 import net.atos.wolf.services.ui.UIService;
@@ -30,7 +31,7 @@ public class ChangeSectionHandler extends AbstractActionHandler {
             return answerOptions.size() == 0;
         }
 
-        if (action.item() != null){
+        if (action.item() != null) {
             return character.hasItem(action.item());
         }
 
@@ -38,13 +39,16 @@ public class ChangeSectionHandler extends AbstractActionHandler {
     }
 
     @Override
-    public ActionResult handleAction(UIService ui, Character character, Action action, List<Action> answerOptions) {
+    public ActionResult handleAction(ActionSelector selector, Character character, Action action, List<Action> answerOptions) {
 
         if (action.randomSection() != null) {
-            return ActionResult.changeSection(action.randomSection().get(diceService.generate()));
+            character.section(action.randomSection().get(diceService.generate()));
+            return ActionResult.sectionFinished();
         }
 
-        return ActionResult.changeSection(action.targetSection());
+        character.section(action.targetSection());
+
+        return ActionResult.sectionFinished();
     }
 
 }
