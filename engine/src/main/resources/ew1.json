@@ -140,6 +140,22 @@
     ]
   },
   {
+    "sectionNumber": 44,
+    "text":"Du bist dem Waldpfad etwa drei Meilen weit gefolgt, als du in der\nFerne die unverkennbaren Umrisse von Giak ausmachst. Sie stehen\nin einer Gruppe mitten auf dem Weg und scheinen dich noch nicht\nbemerkt zu haben. Hoch über den Bäumen hörst du die Schreie von\nKraan, die westwärts ziehen. Sie haben diese Giak gerade auf dem\nWaldweg abgesetzt und kehren nun zu den Bergen zurück, um einen\nweiteren Trupp feindlicher Späher abzuholen.",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 530,
+        "text": "Reite auf die Gruppe zu, um sie zu Vertreiben"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection":255,
+        "text": "Willst du lieber um sie herrum Reiten lies weiter bei (255)"
+      }
+    ]
+  },
+  {
     "sectionNumber": 58,
     "text": "Du rennst, so schnell du kannst, um Sternenfeuer einzuholen, während dieser auf das Haupttor der Abtei zuläuft. Gleichzeitig, und ohne dabei seinen Schritt zu verlangsamen, zieht er mit der Linken sein Schwert und löst mit der Rechten eine zweiblättrige Streitaxt von seinem Gürtel. Dann wirft er sich todesmutig den kreischenden Giak entgegen, die durch den Spalt zwischen den Toren eindringen. Mit tödlicher Schnelligkeit versetzt er dem ersten seiner Gegner einen Aufwärtshieb mit der Axt, der das hässliche graue Gesicht vom Kinn bis zum Scheitel spaltet. Als der tote Giak in einer Fontäne schwarzen Blutes zurücktaumelt, lässt Sternenfeuer laut und kraftvoll seinen Schlachtruf „Für Sommerlund und die Kai!“ erschallen. Dann setzt er seinen Angriff fort. Mit einer Reihe tödlicher Schwerthiebe enthauptet er die drei nachfolgenden Giak, doch Zeit zum Verschnaufen bleibt ihm kaum: Nur wenige Augenblicke später drängt ein Dutzend weiterer Giak vorwärts, begierig, deinen Kai-Meister durch ihre schiere Übermacht in die Knie zu zwingen. Einer dieser Giak, bewaffnet mit einem Speer, löst sich von der Gruppe und stürzt auf dich zu, um dich von deinem umzingelten Meister fernzuhalten. Du schlägst nach seinem Kopf, doch dein Hieb war nicht schnell genug, um die Kreatur zu treffen. Der Giak duckt sich, holt mit seinem Speerschaft in einem weiten Bogen aus und trifft dich am Knie, so dass du zu Boden stürzt. Es gelingt dir zwar, deine Waffe festzuhalten, doch bevor du wieder auf den Beinen bist, ist der Giak heran und hebt seinen Speer, um dir den Todesstoß zu versetzen.",
     "actions": [
