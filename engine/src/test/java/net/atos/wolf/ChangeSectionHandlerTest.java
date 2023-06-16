@@ -25,7 +25,7 @@ public class ChangeSectionHandlerTest {
         character.addSkill(KaiSkill.ARMORY_SWORD);
         character.addSkill(KaiSkill.THOUGHT_RAY);
         character.addSkill(KaiSkill.ARMORY_MACE);
-        character.addItemToBackpack(Item.CINDER);
+        //character.addItemToBackpack(Item.CINDER);
         character.addItemToBackpack(Item.FIREBOTTLE);
         character.addItemToBackpack(Item.GOLDENKEY);
         character.addItemToBackpack(Item.FEARWHEEL);
@@ -169,6 +169,40 @@ public class ChangeSectionHandlerTest {
         Assertions.assertTrue(actions.contains(a4));
 
         Assertions.assertEquals(4, actions.size());
+
+
+    }
+    @Test
+    @Order(4)
+    public void changeSectionWithItem() {
+
+        character.section(242);
+        Action a1 = new Action();
+        a1.type(ActionType.CHANGE_SECTION);
+        a1.text("Lege Feuer");
+        a1.targetSection(544);
+        a1.item(Item.CINDER);
+
+        Action a2 = new Action();
+        a2.type(ActionType.CHANGE_SECTION);
+        a2.text("Geh Weiter");
+        a2.targetSection(359);
+        a2.noOtherOption(true);
+
+        List<Action> actions = engine.getPossibleActions(character);
+
+        Assertions.assertFalse(actions.contains(a1));
+        Assertions.assertTrue(actions.contains(a2));
+        Assertions.assertEquals(1, actions.size());
+
+        character.addItemToBackpack(Item.CINDER);
+
+        actions = engine.getPossibleActions(character);
+
+        Assertions.assertTrue(actions.contains(a1));
+        Assertions.assertFalse(actions.contains(a2));
+        Assertions.assertEquals(1, actions.size());
+
 
 
     }
