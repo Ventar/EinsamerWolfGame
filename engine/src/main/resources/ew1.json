@@ -613,7 +613,8 @@
       {
         "type": "CHANGE_SECTION",
         "targetSection": 115,
-        "text": "Benutze das Seil"
+        "text": "Benutze das Seil",
+        "item": "ROPE"
       }
     ]
   },
