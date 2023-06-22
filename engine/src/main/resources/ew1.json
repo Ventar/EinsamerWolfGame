@@ -842,6 +842,29 @@
     ]
   },
   {
+    "sectionNumber": 530,
+    "text": "Du gibst deinem Pferd die Sporen und donnerst im Galopp den Weg\nentlang auf die ahnungslosen Giak zu. Du bist keine dreißig Meter\nmehr von dem kleinen Trupp entfernt, als sie dich hören und sich\nlangsam zu dir umdrehen.\nDie Augen vor Schreck und Überraschung weit aufgerissen, verfällt\ndie Hälfte von ihnen in Panik und wirft sich im Unterholz in\nDeckung. Die restlichen Giak versuchen verzweifelt ihre Waffen zu\nziehen, während dein Pferd mit erschreckender Geschwindigkeit auf\nsie zuprescht.\nErmittle eine Zufallszahl. Wenn du die Kai-Disziplin Waffenkunde\nbeherrschst und eine passende Waffe trägst, darfst du 2 Punkte zur\nermittelten Zahl addieren.\nWenn dein Gesamtergebnis 4 oder weniger beträgt, ziehst du dir eine\nschmerzhafte Wunde am linken Bein zu, als dein Pferd durch den\nSpähertrupp bricht. (Du verlierst 2 AUSDAUERPUNKTE.)\nBeträgt es 5 oder mehr, schlägst du dem Anführer der Giak mit\neinem einzigen wuchtigen Hieb den Kopf ab und brichst unverletzt\ndurch die Gruppe deiner Feinde. ",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "text": " ",
+        "randomSection": [
+         283,
+          283,
+          283,
+          283,
+          283,
+          283,
+          283,
+          283,
+          283
+        ],
+        "skill": "ARMOURY"
+      }
+    ]
+  },
+
+  {
     "sectionNumber": 540,
     "text": "Der gigantische Gourgaz bricht zu deinen Füßen zusammen, und grünes Blut strömt aus der tödlichen Brustwunde, die du ihm beigebracht hast. Seine bösartigen Gefolgsleute zischen dich voller Wut und Trotz an, doch ihre gespielte Tapferkeit schwindet schnell. Sie weichen zurück und fliehen schließlich vom Durnenstein. Mit jedem Moment verwandelt sich ihr Rückzug mehr und mehr in eine panische Flucht hin zur vermeintlichen Sicherheit der Alema Mitra. Sofort bilden die Leibwächter des Prinzen einen Schutzwall um dich und ihren verwundeten Herrn. Schwarze Pfeile zischen an deinem Kopf vorbei – ein Abschiedsgeschenk deiner hasserfüllten Feinde. Der sterbende Prinz blickt dir in die Augen und sagt: „Tapferer junger Kai … wir kamen auf den Ruf des Leuchtfeuers hin. Der Feind flieht … aber sie werden zurückkehren, stärker als zuvor. Obwohl wir ihnen den Übergang hier verwehrt haben, werden sie doch gen Holmgard marschieren … auf dem längeren Weg. Ihr müsst meinem Vater eine Nachricht überbringen. Der König muss zurückholen, was in Durenor verwahrt wird, sonst ist alles verloren. Nehmt mein Pferd und reitet zum Palast meines Vaters. Schnell, tapferer Kai … reitet wie der Wind, und möge das Glück der Götter mit Euch sein",
     "actions": [
