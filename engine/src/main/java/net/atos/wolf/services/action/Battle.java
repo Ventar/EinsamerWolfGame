@@ -6,13 +6,20 @@ import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Getter
-
 public class Battle {
-
 
     private List<Enemy> enemy;
     private List<BattleRoundTarget> targetSectionBattleRound;
+
+    @Override
+    public String toString() {
+        return "Battle{" +
+                "enemy=" + enemy +
+                ", targetSectionBattleRound=" + targetSectionBattleRound +
+                '}';
+    }
 }

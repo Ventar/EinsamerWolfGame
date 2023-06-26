@@ -17,4 +17,13 @@ public class Enemy {
     private int endurance;
     private boolean thoughRayResistance;
 
+    @Override
+    public String toString() {
+        return "Enemy{" +
+                "name='" + name + '\'' +
+                ", battleStrength=" + battleStrength +
+                ", endurance=" + endurance +
+                ", thoughRayResistance=" + thoughRayResistance +
+                '}';
+    }
 }

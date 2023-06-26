@@ -8,6 +8,7 @@ public enum KaiSkill {
     SIXTH_SENSE(),
     TRACKING(),
     HEAL(),
+    ARMORY(),
 
     ARMORY_DAGGER(),
     ARMORY_SPEAR(),

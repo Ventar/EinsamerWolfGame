@@ -41,6 +41,7 @@ public class GameEngine {
 
     public List<Action> getPossibleActions(Character character) {
 
+        //System.out.println(character);
 
         // load the section which is the current active one to calculate the possible actions based on the current character state
         Section section = sectionService.getSection(character.section());
@@ -64,10 +65,18 @@ public class GameEngine {
 
     public void handleSection(Character character, ActionSelector selector) {
 
-        Section section = sectionService.getSection(character.section());
+        int currentSection = character.section();
+
+        LOG.debug("------------------------------------------------------------------------------");
+        LOG.debug("[{}] handle section for character ::= [{}]", currentSection, character);
+
+        Section section = sectionService.getSection(currentSection);
         List<Action> filteredAnswerOptions = getPossibleActions(character);
+        LOG.trace("[{}] Possible (unmodified) actions for character ::= [{}]", currentSection, filteredAnswerOptions);
+
 
         filteredAnswerOptions = executeMandatoryActions(character, filteredAnswerOptions);
+        LOG.trace("[{}] Filtered actions for character ::= [{}]", currentSection, filteredAnswerOptions);
 
 
         ActionResult actionResult = null;
@@ -75,19 +84,27 @@ public class GameEngine {
         do {
             String text = character.replaceVariablesInText(section.text());
             text = battleInfo(text, filteredAnswerOptions);
+            //LOG.trace("[{}] Modified text ::= [{}]", currentSection, text);
 
 
             Action actionToExecute = selector.selectAction(text, String.valueOf(section.sectionNumber()), filteredAnswerOptions);
+            LOG.trace("[{}] Selected action by player ::= [{}]", currentSection, actionToExecute);
             actionResult = executeAction(character, selector, actionToExecute, filteredAnswerOptions);
+            LOG.trace("[{}] Result of the action ::= [{}]", currentSection, actionResult);
+            LOG.trace("[{}] Modified character ::= [{}]", currentSection, character);
 
             switch (actionResult.type()) {
                 case CHARACTER_DIED -> throw new RuntimeException("Damned we died :(");
-                case REPRESENT_ACTIONS -> filteredAnswerOptions = filterActions(character, actionResult.actions());
+                case REPRESENT_ACTIONS -> {
+                    LOG.debug("[{}] Represent actions...", currentSection);
+                    filteredAnswerOptions = filterActions(character, actionResult.actions());
+                }
             }
 
             System.out.println(character.createCharacterString(translationService));
 
         } while (actionResult.type() == ActionResult.ActionResultType.REPRESENT_ACTIONS);
+
 
     }
 
@@ -96,7 +113,7 @@ public class GameEngine {
         for (Action action : filteredAnswerOptions) {
             if (action.mandatory()) {
                 actionHandler.get(action.type()).handleAction(character, action, null);
-                System.out.println("Execute MANDATORY Action: " + action);
+                //System.out.println("Execute MANDATORY Action: " + action);
             } else {
                 resultList.add(action);
             }
@@ -141,6 +158,7 @@ public class GameEngine {
     }
 
     public static void main(String[] args) {
+        LOG.trace("Start new instance of the game engine...");
         GameEngine engine = new GameEngine();
         ActionSelector actionSelector = new UIService();
         Character character = new Character();
@@ -172,6 +190,8 @@ public class GameEngine {
 
 
         LOG.debug("Created character ::= [{}]", character);
+
+        LOG.trace("Start to handle sections...");
 
         while (true) {
             engine.handleSection(character, actionSelector);

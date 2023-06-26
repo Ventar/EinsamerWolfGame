@@ -1,5 +1,7 @@
 package net.atos.wolf.services.battle;
 
+import ch.qos.logback.classic.Logger;
+import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.framework.Service;
 import net.atos.wolf.services.character.Character;
 import net.atos.wolf.services.action.Enemy;
@@ -12,6 +14,7 @@ import net.atos.wolf.services.common.DiceService;
  * class dictates the battle section
  */
 @Service
+@Slf4j
 public class BattleService {
 
     public enum BattleStatus {
@@ -37,7 +40,8 @@ public class BattleService {
 
         if (character.hasSkill(KaiSkill.THOUGHT_RAY) && !enemy.thoughRayResistance()) {
             battleStrength = battleStrength + 2;
-            System.out.println("Charakter verwendet Gedankenstrahl...");
+           // System.out.println("Charakter verwendet Gedankenstrahl...");
+            LOG.trace("Charakter verwendet Gedankenstrahl...::= [{}]");
         }
 
         applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_AXE, Weapon.AXE);
@@ -52,11 +56,13 @@ public class BattleService {
 
         if (applyWeaponSkill) {
             battleStrength = battleStrength + 2;
-            System.out.println("Charakter setzt eine Waffenkunde Fähigkeit ein...");
+            //System.out.println("Charakter setzt eine Waffenkunde Fähigkeit ein...");
+            LOG.trace("Charakter setzt eine Waffenkunde Fähigkeit ein...::= [{}]");
         }
 
 
-        System.out.println("\nMod. Battle Strength  : " + battleStrength);
+       // System.out.println("\nMod. Battle Strength  : " + battleStrength);
+        LOG.trace("Mod.Battlestrength::= [{}]",battleStrength);
 
         return battleStrength;
     }
@@ -72,12 +78,15 @@ public class BattleService {
 
         int battleQuotient = calculateBattleStrength(character,enemy) - enemy.battleStrength();
 
-        System.out.println("BATTLE QUOTIENT       : " + battleQuotient);
+       // System.out.println("BATTLE QUOTIENT       : " + battleQuotient);
+        LOG.trace("Battlequotient ::= [{}]",battleQuotient);
+
 
         //Zufallszähler basiert auf 0
         int rand = diceService.generate();
         BattleTable.BattleValue bv = null;
-        System.out.println("DICE ROLL             : " + rand);
+       // System.out.println("DICE ROLL             : " + rand);
+        LOG.trace("Rolled Number ::= [{}]",rand);
 
 
         if (battleQuotient <= -11) {
@@ -133,12 +142,15 @@ public class BattleService {
             status = BattleStatus.ENEMY_DIED;
         }
 
-        System.out.println("Battle Value          : " + bv);
-        System.out.println("After fight ENEMY     : " + enemy.endurance());
-        System.out.println("Result                : " + status + "\n");
+        //System.out.println("Battle Value          : " + bv);
+        //System.out.println("After fight ENEMY     : " + enemy.endurance());
+        //System.out.println("Result                : " + status + "\n");
+        LOG.debug("Results::= [{}]", bv,enemy.endurance(),status);
 
         return status;
+
     }
+
 
     private BattleStatus executeBattle(Character character, Enemy enemy) {
 

@@ -140,7 +140,7 @@
   },
   {
     "sectionNumber": 44,
-    "text":"Du bist dem Waldpfad etwa drei Meilen weit gefolgt, als du in der\nFerne die unverkennbaren Umrisse von Giak ausmachst. Sie stehen\nin einer Gruppe mitten auf dem Weg und scheinen dich noch nicht\nbemerkt zu haben. Hoch über den Bäumen hörst du die Schreie von\nKraan, die westwärts ziehen. Sie haben diese Giak gerade auf dem\nWaldweg abgesetzt und kehren nun zu den Bergen zurück, um einen\nweiteren Trupp feindlicher Späher abzuholen.",
+    "text":"Du bist dem Waldpfad etwa drei Meilen weit gefolgt, als du in der Ferne die unverkennbaren Umrisse von Giak ausmachst. Sie stehen in einer Gruppe mitten auf dem Weg und scheinen dich noch nicht bemerkt zu haben. Hoch über den Bäumen hörst du die Schreie von Kraan, die westwärts ziehen. Sie haben diese Giak gerade auf dem Waldweg abgesetzt und kehren nun zu den Bergen zurück, um einen weiteren Trupp feindlicher Späher abzuholen.",
     "actions": [
       {
         "type": "CHANGE_SECTION",
@@ -363,6 +363,22 @@
     ]
   },
   {
+    "sectionNumber": 150,
+    "text": "Auf der anderen Seite des Durchgangs entdeckst du eine kurze, grob gehauene Steintreppe. Schnell eilst du die Stufen hinauf und gelangst in einen kleinen, spärlich beleuchteten Raum. Drei Ausgänge führen aus dieser höhlenartigen Kammer: Der Ausgang direkt vor dir ist durch eine stabile schwarze Eisenplatte versperrt, aber die zu deiner Linken und Rechten sind offen und unbewacht.",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "text": "Willst du nach links gehen?",
+        "targetSection": 422
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "text": "willst du rechts gehen?",
+        "targetSection": 330
+      }
+    ]
+  },
+  {
     "sectionNumber": 166,
     "text": "Du ziehst deine Axt aus dem Gürtel und schleuderst sie den dunklen Korridor hinunter. Dein Wurf war gut und wohl gezielt, und mit einem dumpfen „Tock“ schlägt die wirbelnde Klinge in den Hinterkopf der Kreatur, spaltet ihren eisernen Helm und gräbt sich tief in ihr Gehirn. Der Giak ist bereits tot, als sein schlaffer Körper zwischen den Leichen seiner abscheulichen Kameraden zu Boden stürzt. So schnell du kannst, rennst du den Gang hinunter, besorgt, dein Freund könnte schwer verletzt sein. Glücklicherweise sieht die Wunde schlimmer aus, als sie tatsächlich ist, und Schneefalke ist schon bald in der Lage, die Blutung mithilfe seiner eigenen Kai Heilkunst zu stillen. „Du warst schon immer der beste Werfer beim Greel“, sagt er mit einem Grinsen, während du ihm mit dem Saum deines Kai-Umhangs vorsichtig das Blut aus den Augen wischst. Als er schließlich wieder richtig sehen kann, greifst du nach unten und ziehst deine Axt aus dem Schädel des toten Giak. Dann säuberst du die Klinge an dessen Tunika, bevor du die Waffe wieder in deinen Gürtel steckst.  „Gut für dich, dass ich jeden Tag geübt habe!“, erwiderst du. „Ich danke dir, mein Freund“, sagt Schneefalke. „Du hast mir das Leben gerettet. Ich hoffe, dass ich diesen Gefallen eines Tages erwidern kann, doch nun muss ich mich in den Kampf stürzen. Die Giak sind überall, und ich fürchte, dass die Abtei fallen wird. Komm mit mir! Wir werden Seite an Seite kämpfen, wie wahre Kai-Brüder.“ Du erklärst Schneefalke, dass du einen wichtigen Auftrag für Meister Sternenfeuer ausführen musst, dass du dich ihm jedoch anschließen wirst, sobald dieser erledigt ist. „Dann sei Kai mit dir, Lautloser Wolf“, ruft er, als er forteilt, um sich der Schlacht anzuschließen. „Möge Kai an diesem Tag mit uns allen sein“, antwortest du, dann salutierst du und blickst deinem tapferen Freund nach, bis er hinter der nächsten Ecke verschwunden ist. Mit einem wachsenden Gefühl des Grauens kehrst du zur Tür der Rüstkammer zurück, stößt sie auf und betrittst den Raum. ",
     "actions": [
@@ -524,6 +540,28 @@
             }
           ]
         }
+      }
+    ]
+  },
+  {
+    "sectionNumber": 330,
+    "text": "Du folgst einem schmalen Korridor, der dich schon bald in einen schwarz gefliesten Raum führt. Seit seiner Erbauung vor vielen Jahrhunderten sind große Teile der Decke und der gegenüberliegenden Wand eingestürzt. Der Schuttberg aus Erde und Stein ist feucht und mit Flechten überwuchert, die die kleine Halle in ein unheimliches phosphoreszierendes Licht tauchen. Durch ein gezacktes Loch in der Decke siehst du ein paar Meter über dir eine kleine Höhle. Indem du auf den Schutthügel steigst, gelingt es dir, durch das Loch in die Höhle zu klettern. Ihre Wände haben sich durch die stetig einsickernde Feuchtigkeit aus den kupferhaltigen Böden der umliegenden Hügel rot verfärbt, und aus einem Riss in der Felswand dringt blaugrünes Licht. Vorsichtig erforschst du diesen schmalen Spalt, und nachdem du dich mühsam hindurchgezwängt hast, gelangst du schließlich in den Raum dahinter. Diese gewaltige Kammer ist fast so groß wie die kathedralenähnliche Halle, die du durchqueren musstest, um in diese düstere unterirdische Welt vorzudringen. Es ist jedoch nicht die unermessliche Größe dieser Halle, die dich vor Schrecken den Atem anhalten lässt, sondern das bizarre Wesen, das hier gefangen gehalten wird. Du stehst auf einer schmalen Galerie, einer von dreien, die diesen kolossalen Raum umgeben. In der Mitte der Halle befindet sich eine riesige, kreisrunde Grube, die mit Obsidianplatten verkleidet ist, welche mit schwarzmagischen Runen bedeckt sind – den Symbolen für Tod und Verderben. Inmitten dieser tiefen Grube erblickst du ein gigantisches Wesen in Gestalt eines monströsen Kriegers. Nur die obere Hälfte seiner skelettartigen Erscheinung ist sichtbar, während sich der Rest in den unergründlichen schwarzen Tiefen der Grube verliert. Hunderte von wurzelartigen Ranken wachsen aus seinem knöchernen Oberkörper Wie Schlingpflanzen überziehen sie den Fußboden und die unteren Wände der gewaltigen Halle, so als suchten sie Nahrung zwischen den rissigen Steinplatten. Die mächtigen Knochenarme der gefangenen Kreatur werden an den Handgelenken von titanischen Ketten auseinander gehalten, die weit oben im Deckengewölbe verankert sind. Auf den Schultern trägt das Wesen schwere Rüstungsplatten und auf dem schädelartigen Kopf einen großen Bronzehelm, der mit vier langen Klingen aus angelaufenem Stahl verziert ist. Gerade hast du den ersten Schrecken angesichts dieser monströsen Kreatur überwunden, da geschieht etwas, das deinen Puls erneut rasen lässt: Das Wesen öffnet langsam seine Augen! Deine Sinne schwinden fast, als plötzlich eine unsichtbare Welle des Bösen deinen bebenden Körper erfasst. Ihre heimtückische Wirkung schnürt dir den Magen zu und jagt dir Schauer des Entsetzens über den Rücken. Dann plötzlich erhellt ein unheilvolles rotes Leuchten den Helm der Kreatur. Pulsierend dringt es aus ihren Augenhöhlen und wird zunehmend stärker. Das furchtbare Licht lässt dich erstarren, so als hätte man deine Füße auf den Boden genagelt. Ein krachendes Geräusch ertönt, als sich der Unterkiefer des Wesens zu bewegen beginnt, und kurz darauf dringt eine tiefe, unheimliche Stimme aus seinem grässlichen, grauen Schlund: „Ich weiß, was du bist. Ein kleiner Grünschnabel aus dem Gezücht der Kai. Bist hier, um dich am Unglück Vurnos’ zu weiden. Dein törichter Hochmut wird nicht ungestraft bleiben. Dieses Schattentor hält meinen Körper gefangen, doch keine Kette von Menschenhand wird jemals meinem Zorn Einhalt gebieten. Jämmerlicher Kai! Bete zu deinem Gott … und dann mach dich bereit zu sterben!“ Mit einem wütenden Brüllen zerrt die furchterregende Kreatur an den schweren Ketten, die ihre Arme gefesselt halten. Eine kurze Zeitlang halten die Fesseln, doch plötzlich hörst du das laute Bersten von Stein von der Gewölbedecke hoch über dir. Das hohe Alter und einsickernde Wasser aus den umliegenden Hügeln haben das Mauerwerk geschwächt, und nun bricht der Eisenhaken, mit dem die Kette am rechten Handgelenk der Kreatur in der Wand befestigt war, aus der Decke. Als er herabstürzt, ergreift das Wesen mit der freien Hand die fallende Kette und wirbelt sie wie eine Peitsche herum, direkt auf die Galerie zu, auf der du stehst. Als die Kette mit dem mächtigen, speerartigen Eisenhaken durch die Kammer saust, wirfst du dich instinktiv rasch hinter einer der Steinsäulen in Deckung. Mit dem ohrenbetäubenden Lärm klirrenden Eisens und berstenden Steins donnert die Kette gegen den oberen Teil der Säule, kurz unterhalb der Stelle, wo diese den Boden der darüberliegenden Galerie stützt. Ein plötzlicher Schwall aus Staub und Steinsplittern ergießt sich über dich, als die Säule von dem mächtigen Hieb in zwei Teile gerissen wird. Wie durch ein Wunder bleibst du jedoch von ernsthaften Verletzungen verschont. (Du verlierst 1 AUSDAUERPUNKT.) Die Kreatur brüllt voller Enttäuschung und reißt die gewaltige Kette zurück. Nun hebt sie ihren Knochenarm erneut, um die Kette ein weiteres Mal in deine Richtung schnellen zu lassen. Wenn du diesen zweiten Angriff irgendwie überleben willst, musst du schleunigst hinter einer der noch intakten Säulen Deckung suchen. Ermittle eine Zufallszahl. Wenn du die Kai-Disziplin Tarnung beherrschst, darfst du 2 Punkte zu deinem Ergebnis addieren. Beherrschst du die Kai-Disziplin Jagd, addiere 1 weiteren Punkt zur ermittelten Zahl.",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "text": " ",
+        "randomSection": [
+          462,
+          462,
+          548,
+          548,
+          548,
+          240,
+          240,
+          240,
+          240
+        ],
+        "skill": "HUNT"
       }
     ]
   },
@@ -795,7 +833,6 @@
         "text": "Weiter",
         "noOtherOption": true
       }
-
     ]
   },
   {
@@ -844,7 +881,7 @@
   },
   {
     "sectionNumber": 530,
-    "text": "Du gibst deinem Pferd die Sporen und donnerst im Galopp den Weg\nentlang auf die ahnungslosen Giak zu. Du bist keine dreißig Meter\nmehr von dem kleinen Trupp entfernt, als sie dich hören und sich\nlangsam zu dir umdrehen.\nDie Augen vor Schreck und Überraschung weit aufgerissen, verfällt\ndie Hälfte von ihnen in Panik und wirft sich im Unterholz in\nDeckung. Die restlichen Giak versuchen verzweifelt ihre Waffen zu\nziehen, während dein Pferd mit erschreckender Geschwindigkeit auf\nsie zuprescht.\nErmittle eine Zufallszahl. Wenn du die Kai-Disziplin Waffenkunde\nbeherrschst und eine passende Waffe trägst, darfst du 2 Punkte zur\nermittelten Zahl addieren.\nWenn dein Gesamtergebnis 4 oder weniger beträgt, ziehst du dir eine\nschmerzhafte Wunde am linken Bein zu, als dein Pferd durch den\nSpähertrupp bricht. (Du verlierst 2 AUSDAUERPUNKTE.)\nBeträgt es 5 oder mehr, schlägst du dem Anführer der Giak mit\neinem einzigen wuchtigen Hieb den Kopf ab und brichst unverletzt\ndurch die Gruppe deiner Feinde. ",
+    "text": "Du gibst deinem Pferd die Sporen und donnerst im Galopp den Weg entlang auf die ahnungslosen Giak zu. Du bist keine dreißig Meter mehr von dem kleinen Trupp entfernt, als sie dich hören und sich langsam zu dir umdrehen. Die Augen vor Schreck und Überraschung weit aufgerissen, verfällt die Hälfte von ihnen in Panik und wirft sich im Unterholz in Deckung. Die restlichen Giak versuchen verzweifelt ihre Waffen zu ziehen, während dein Pferd mit erschreckender Geschwindigkeit auf sie zuprescht. Ermittle eine Zufallszahl. Wenn du die Kai-Disziplin Waffenkunde beherrschst und eine passende Waffe trägst, darfst du 2 Punkte zur ermittelten Zahl addieren. Wenn dein Gesamtergebnis 4 oder weniger beträgt, ziehst du dir eine schmerzhafte Wunde am linken Bein zu, als dein Pferd durch den Spähertrupp bricht. (Du verlierst 2 AUSDAUERPUNKTE.) Beträgt es 5 oder mehr, schlägst du dem Anführer der Giak mit einem einzigen wuchtigen Hieb den Kopf ab und brichst unverletzt durch die Gruppe deiner Feinde. ",
     "actions": [
       {
         "type": "CHANGE_SECTION",
@@ -860,7 +897,7 @@
           283,
           283
         ],
-        "skill": "ARMOURY"
+        "skill": "ARMORY_MACE"
       }
     ]
   },
