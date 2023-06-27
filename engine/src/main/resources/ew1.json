@@ -140,7 +140,7 @@
   },
   {
     "sectionNumber": 44,
-    "text":"Du bist dem Waldpfad etwa drei Meilen weit gefolgt, als du in der Ferne die unverkennbaren Umrisse von Giak ausmachst. Sie stehen in einer Gruppe mitten auf dem Weg und scheinen dich noch nicht bemerkt zu haben. Hoch über den Bäumen hörst du die Schreie von Kraan, die westwärts ziehen. Sie haben diese Giak gerade auf dem Waldweg abgesetzt und kehren nun zu den Bergen zurück, um einen weiteren Trupp feindlicher Späher abzuholen.",
+    "text": "Du bist dem Waldpfad etwa drei Meilen weit gefolgt, als du in der Ferne die unverkennbaren Umrisse von Giak ausmachst. Sie stehen in einer Gruppe mitten auf dem Weg und scheinen dich noch nicht bemerkt zu haben. Hoch über den Bäumen hörst du die Schreie von Kraan, die westwärts ziehen. Sie haben diese Giak gerade auf dem Waldweg abgesetzt und kehren nun zu den Bergen zurück, um einen weiteren Trupp feindlicher Späher abzuholen.",
     "actions": [
       {
         "type": "CHANGE_SECTION",
@@ -149,7 +149,7 @@
       },
       {
         "type": "CHANGE_SECTION",
-        "targetSection":255,
+        "targetSection": 255,
         "text": "Willst du lieber um sie herrum Reiten lies weiter bei (255)"
       }
     ]
@@ -656,7 +656,6 @@
       }
     ]
   },
-
   {
     "sectionNumber": 385,
     "text": "Mit zusammengebissenen Zähnen rappelst du dich auf und stolperst auf den Turm am Ende des Wehrgangs zu. Das Tor ist unverschlossen und es gelingt dir, den Turm ungesehen zu betreten. Rasch durchquerst du das Gebäude und eilst, so schnell es dir möglich ist, über den Laufgang des dritten Brückenabschnitts bis zu den nächsten beiden Türmen und den Torbögen, die den Zugang zum Durnenstein sichern. In einem engen Tunnel, der durch den nächstgelegenen Turm führt, hältst du kurz an, um dein verwundetes Bein zu verbinden. Auf dem gepflasterten Platz unterhalb des Turms tobt die Schlacht. Im Zentrum dieser prächtigen Piazza liefern sich die Soldaten Prinz Pelethars ein tödliches Gefecht mit den Sturmtruppen des Schwarzen Lords Zagarna. Der Feind ist in der Überzahl und versucht durch die Reihen der Männer des Prinzen zu brechen, doch Pelethars Soldaten kämpfen wie die Löwen und halten ihre Gegner in Schach. Inmitten von Rauch und Schlachtgetümmel siehst du den Prinzen im Kampf mit einer riesigen, reptilienhaften Kreatur. Es handelt sich um einen Gourgaz, einen furchterregenden Bewohner der Maakensümpfe. Zagarna hat diese mörderische Bestie damit betraut, den Angriff auf die Alemabrücke anzuführen, und zwar aus zwei Gründen: Nicht nur ist der Gourgaz ein furchtloser und gnadenloser Gegner im Nahkampf, er verströmt auch einen Duftstoff, der die Giak in einen wilden Kampfrausch fallen lässt. Unter dem Einfluss dieses geruchslosen Stoffes kämpfen sie, ohne zu ermüden oder auf ihre eigene Sicherheit zu achten. Aufrecht auf seinen kräftigen Hinterbeinen stehend, überragt der Gourgaz die anderen Kämpfer der Schlacht und führt seine gewaltige schwarze Streitaxt mit schrecklicher Wirkung. Prinz Pelethars Silberrüstung glänzt wie ein Spiegel in der Morgensonne. Sein weißer Waffenrock ist mit einem geflügelten Pferd, seinem persönlichen Wappen, bestickt, und sein messerscharfes Breitschwert zieren die stolzen Symbole Sommerlunds und des Hauses Ulnar. Pelethar scheint den mörderischen Zweikampf gegen den grausamen Gourgaz zu gewinnen, bis ihn plötzlich ein Pfeil trifft. Das Giak-Geschoss hat die Kettenpanzerung unter seiner rechten Achsel durchschlagen, und dein Herz setzt für einen Augenblick aus, als du siehst, wie er aufschreit und ins Straucheln gerät. Als der Gourgaz spürt, wie nahe nun der Sieg ist, holt er zu einem mächtigen Hieb aus, um seine gewaltige Axt auf den Helm des Prinzen herabsausen zu lassen, doch einer von Pelethars Männern stößt ihn zur Seite, als die schwarze Klinge niederfährt. Sein rasches Eingreifen rettet seinem verwundeten Herrn das Leben, er selbst jedoch büßt seinen rechten Unterarm ein, als die Axt mit brutaler Wucht aufschlägt. Durch Pelethars Verwundung wendet sich das Blatt nun zugunsten des Feindes. Wenn du dich den Männern des Prinzen anschließen willst, bevor diese gezwungen sind, sich vom Durnenstein zurückzuziehen, musst du dich beeilen. Von deiner Position im Turmgang aus siehst du zwei Möglichkeiten, auf den Platz hinunter zu gelangen: Der erste Weg führt über eine breite Marmortreppe; die zweite Gelegenheit bietet ein Frachtseil, das an einem Seilzug an der Turmwand herunterhängt.",
@@ -673,7 +672,6 @@
       }
     ]
   },
-
   {
     "sectionNumber": 387,
     "text": "Du eilst auf die Brüstungsmauer am Ende von Pelethars Gefechtslinie zu, wo der Feind nur drei Reihen tief steht. Die hier kämpfenden Giak ahnen nichts von deinem Überraschungsangriff, und so gelingt es dir, ihre hintere Reihe niederzustrecken, noch bevor sie reagieren können. Laut brüllst du deinen Schlachtruf: „Für Sommerlund und die Kai!“ und benutzt einen erschlagenen Giak, um in die Luft zu springen und einen weiten Satz über die Kampflinie zu machen. Die angeschlagenen Männer des Prinzen hören deinen Kampfschrei durch den Schlachtenlärm, und Jubel durch ihre Reihen, als sie sehen, wie du über die Köpfe deiner Feinde hinweg springst. Knapp hinter der Reihe der Ritter landest du auf den Pflastersteinen und rollst dich ab, um den Aufprall abzumildern. Einen Moment später hilft dir ein stämmiger Wachoffizier auf die Beine und zieht dir die Kapuze vom Kopf. Als er deine sommerlendischen Züge erblickt, erscheint ein Lächeln auf seinem rußigen und blutverschmierten Gesicht „Gut gekämpft, junger Mann!“, ruft er, „aber wo sind die anderen Kai? Haben sie die Alema Mitra bereits zurückerobert? Greifen sie den feindlichen Nachschub an?“ „Nein, Sergeant“, antwortest du und schüttelst den Kopf. „Ich … ich bin der einzige Kai.“ Deine Antwort erschüttert den zähen Krieger sichtlich. „Zum Torbogen!“, brüllt er dann und befiehlt seinen Männern den Rückzug. „Dort formieren wir uns neu und bilden eine neue Verteidigungslinie.“ Durch die Rauchschwaden siehst du, wie zwei Soldaten den verwundeten Prinzen vom Schlachtfeld tragen. Einige Ritter haben sich in einem Halbkreis um sie formiert und kämpfen nun Schulter an Schulter, um einen Schutzwall gegen den vordringenden Feind zu bilden. Plötzlich tritt der Gourgaz aus dem Schlachtenrauch. Bedrohlich ragt er über den Rittern auf, die gewaltige Axt zum Schlag erhoben. Mit einem schrecklichen Brüllen zerschmettert er den Schutzwall um den Prinzen und fegt die Ritter beiseite wie loses Laub im Sturm. Die Soldaten, die den Prinzen tragen, werden beide niedergeworfen, und auch der Prinz stürzt zu Boden. Der Gourgaz macht einen Schritt nach vorne und hebt abermals seine Axt. Von der Pfeilwunde geschwächt und zu kraftlos, um sich zu wehren, greift Pelethar nach einem fallen gelassenen Schild und hält ihn schützend über sich. Der Gourgaz stößt ein verächtliches Lachen aus, als er sieht, wie sich Pelethar hinter den Schild kauert. Er weiß nur zu gut, dass es den Prinzen nicht vor dem tödlichen Hieb seiner messerscharfen Axt bewahren wird. Da die Leibwächter des Prinzen bereits von der Bestie zerschmettert wurden, bist jetzt nur noch du allein in der Lage, Pelethars Leben zu retten. Ohne einen Augenblick zu zögern, ziehst du deine Waffe und greifst den mächtigen Gourgaz an",
@@ -744,28 +742,63 @@
     "actions": [
       {
         "type": "TAKE_WEAPON",
-        "text": "Nimm den Dolch",
-        "weapon": "DAGGER"
+        "text": "Nimm den Dolch in Hand 1",
+        "weapon": "DAGGER",
+        "hand": 1
       },
       {
         "type": "TAKE_WEAPON",
-        "text": "Nimm den Kriegshammer",
-        "weapon": "WARHAMMER"
+        "text": "Nimm den Dolch in Hand 2",
+        "weapon": "DAGGER",
+        "hand": 2
       },
       {
         "type": "TAKE_WEAPON",
-        "text": "Nimm den Speer",
-        "weapon": "SPEAR"
+        "text": "Nimm den Kriegshammer in Hand 1",
+        "weapon": "WARHAMMER",
+        "hand": 1
       },
       {
         "type": "TAKE_WEAPON",
-        "text": "Nimm das Schwert",
-        "weapon": "SWORD"
+        "text": "Nimm den Kriegshammer in Hand 2",
+        "weapon": "WARHAMMER",
+        "hand": 2
       },
       {
         "type": "TAKE_WEAPON",
-        "text": "Nimm den Kriegsstab",
-        "weapon": "BATTLE_STAFF"
+        "text": "Nimm den Speer in Hand 1",
+        "weapon": "SPEAR",
+        "hand": 1
+      },
+      {
+        "type": "TAKE_WEAPON",
+        "text": "Nimm den Speer in Hand 2",
+        "weapon": "SPEAR",
+        "hand": 2
+      },
+      {
+        "type": "TAKE_WEAPON",
+        "text": "Nimm das Schwert in Hand 1",
+        "weapon": "SWORD",
+        "hand": 1
+      },
+      {
+        "type": "TAKE_WEAPON",
+        "text": "Nimm das Schwert in Hand 2",
+        "weapon": "SWORD",
+        "hand": 2
+      },
+      {
+        "type": "TAKE_WEAPON",
+        "text": "Nimm den Kriegsstab in Hand 1",
+        "weapon": "BATTLE_STAFF",
+        "hand": 1
+      },
+      {
+        "type": "TAKE_WEAPON",
+        "text": "Nimm den Kriegsstab in Hand 2",
+        "weapon": "BATTLE_STAFF",
+        "hand": 2
       },
       {
         "type": "CHANGE_SECTION",
@@ -778,7 +811,6 @@
     "sectionNumber": 479,
     "text": "Du bist gerade mitten im Sprung, als der Armbrustbolzen des Drakkar-Feldwebels in deinen Hinterkopf einschlägt. Doch du spürst keinen Schmerz, nur ein seltsames Gefühl der Schwerelosigkeit, und bevor dich eine ewige Dunkelheit umfängt, erblickst du noch kurz das strahlende Lächeln der Göttin Ishir. ",
     "actions": [
-
       {
         "type": "CHANGE_SECTION",
         "targetSection": 4004,
@@ -791,7 +823,6 @@
     "sectionNumber": 480,
     "text": "Du verfluchst dein Pech. Es scheint, als hätte sich die Natur mit den Schwarzen Lords verbündet, um dein Vorankommen zu vereiteln. Dieser Rückschlag ist bedauerlich, doch er ändert nichts an deinem Entschluss, Holmgard so schnell wie möglich zu erreichen. Nachdem du den klebrigen, schwarzen Schlamm von deinen Kleidern und Stiefeln entfernt hast, überprüfst du deine Ausrüstung und setzt dann eilig deinen Weg durch den Wald fort.  ",
     "actions": [
-
       {
         "type": "CHANGE_SECTION",
         "targetSection": 457,
@@ -804,14 +835,12 @@
     "sectionNumber": 481,
     "text": "Während du das ekelhafte Giak-Blut von deiner Waffe wischst, steigst du eilig den Hang hinab, bevor der Kraan merkt, dass du seine Reiter erschlagen hast. Bei deinem hastigen Abstieg rutschst du mehrfach auf dem lockeren Untergrund aus und stürzt schwer. Aufgrund der zahlreichen Prellungen und Abschürfungen, die du dir an Beinen und Ellenbogen zuziehst, verlierst du 1 AUSDAUERPUNKT.",
     "actions": [
-
       {
         "type": "CHANGE_SECTION",
         "targetSection": 373,
         "text": "Weiter",
         "noOtherOption": true
       },
-
       {
         "type": "MODIFY_ATTRIBUTE",
         "mandatory": true,
@@ -821,12 +850,10 @@
       }
     ]
   },
-
   {
     "sectionNumber": 482,
     "text": "Du ziehst dir die Kapuze der purpurnen Robe über und holst noch einmal tief Luft, bevor du mit einem flauen Gefühl in der Magengegend aus den Schatten trittst und selbstsicher auf den Ausgang zugehst. Die Wachposten beobachten dich, während du an ihnen vorbeiläufst, aber sie kommen nicht auf den Gedanken, dass du nicht sein könntest, was du zu sein scheinst: ein cenerischer Hohepriester. Ohne von den wachsamen Giak aufgehalten zu werden, erreichst du schließlich die andere Seite der Kammer und betrittst den gewölbten Tunnel, der hinter dem Ausgang liegt.",
     "actions": [
-
       {
         "type": "CHANGE_SECTION",
         "targetSection": 150,
@@ -839,28 +866,24 @@
     "sectionNumber": 483,
     "text": "Du legst die Leiche des alten Mannes auf einen Arbeitstisch und bedeckst sie mit einer Schürze, die du an einem Haken hinter der Eingangstür findest. Dann siehst du dich im Laden um. In dieser Metzgerei gibt es nicht ein Stück Fleisch mehr. Entweder wurde seit Beginn der Invasion alles verkauft, oder das Fleisch wurde gestohlen. Hinter dem Verkaufstresen findest du schließlich einen Lederbeutel mit 65 Goldkronen. Trotz dieser großen Summe rührst du die Münzen nicht an. Stattdessen versteckst du sie unter einem losen Dielenbrett im Boden, in der Hoffnung, dass die Familie des alten Mannes dieses Geld eines Tages finden wird. Du richtest noch ein kurzes Gebet an die Göttin Ishir, auf dass sie diese arme Seele behüten möge, und verlässt dann das Geschäft, um deinen Weg zum Königspalast fortzusetzen.",
     "actions": [
-
       {
         "type": "CHANGE_SECTION",
         "targetSection": 324,
         "text": "Weiter",
         "noOtherOption": true
       }
-
     ]
   },
   {
     "sectionNumber": 484,
     "text": "Die gewaltige Druckwelle der Explosion reißt dich aprupt von den Füßen und schleudert dich durch die Luft. Mit voller Wucht prallst du gegen die Brüstung auf der anderen Seite der Brücke und landest schließlich benommen auf dem Pflaster am Straßenrand. Aufgrund der Verletzungen, die du durch die Explosion erlitten hast, verlierst du die Hälfte deiner gegenwärtigen AUSDAUERPUNKTE. Ein ungerades Ergebnis wird abgerundet. Wenn du also z. B. 13 AUSDAUERPUNKTE besessen hast, so ist die Hälfte 6,5. Abgerundet beträgt das Ergebnis 6.",
     "actions": [
-
       {
         "type": "CHANGE_SECTION",
         "targetSection": 394,
         "text": "Weiter",
         "noOtherOption": true
       }
-
     ]
   },
   {
@@ -887,7 +910,7 @@
         "type": "CHANGE_SECTION",
         "text": " ",
         "randomSection": [
-         283,
+          283,
           283,
           283,
           283,
@@ -901,7 +924,6 @@
       }
     ]
   },
-
   {
     "sectionNumber": 540,
     "text": "Der gigantische Gourgaz bricht zu deinen Füßen zusammen, und grünes Blut strömt aus der tödlichen Brustwunde, die du ihm beigebracht hast. Seine bösartigen Gefolgsleute zischen dich voller Wut und Trotz an, doch ihre gespielte Tapferkeit schwindet schnell. Sie weichen zurück und fliehen schließlich vom Durnenstein. Mit jedem Moment verwandelt sich ihr Rückzug mehr und mehr in eine panische Flucht hin zur vermeintlichen Sicherheit der Alema Mitra. Sofort bilden die Leibwächter des Prinzen einen Schutzwall um dich und ihren verwundeten Herrn. Schwarze Pfeile zischen an deinem Kopf vorbei – ein Abschiedsgeschenk deiner hasserfüllten Feinde. Der sterbende Prinz blickt dir in die Augen und sagt: „Tapferer junger Kai … wir kamen auf den Ruf des Leuchtfeuers hin. Der Feind flieht … aber sie werden zurückkehren, stärker als zuvor. Obwohl wir ihnen den Übergang hier verwehrt haben, werden sie doch gen Holmgard marschieren … auf dem längeren Weg. Ihr müsst meinem Vater eine Nachricht überbringen. Der König muss zurückholen, was in Durenor verwahrt wird, sonst ist alles verloren. Nehmt mein Pferd und reitet zum Palast meines Vaters. Schnell, tapferer Kai … reitet wie der Wind, und möge das Glück der Götter mit Euch sein",

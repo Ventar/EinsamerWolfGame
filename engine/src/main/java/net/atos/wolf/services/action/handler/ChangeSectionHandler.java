@@ -1,9 +1,7 @@
 package net.atos.wolf.services.action.handler;
 
-import net.atos.wolf.services.ActionSelector;
 import net.atos.wolf.services.action.*;
-import net.atos.wolf.services.character.Character;
-import net.atos.wolf.services.ui.UIService;
+import net.atos.wolf.services.GameSession;
 
 import java.util.List;
 
@@ -11,20 +9,20 @@ import java.util.List;
 public class ChangeSectionHandler extends AbstractActionHandler {
 
     @Override
-    protected boolean checkExecutable(Character character, Action action, List<Action> answerOptions) {
+    protected boolean checkExecutable(GameSession session, Action action, List<Action> answerOptions) {
 
         if (action.weapon() != null) {
-            return action.weapon() == character.weaponOne() || action.weapon() == character.weaponTwo();
+            return action.weapon() == session.character().weaponOne() || action.weapon() == session.character().weaponTwo();
         }
         if (action.skill() != null) {
-            return character.hasSkill(action.skill());
+            return session.character().hasSkill(action.skill());
         }
         if (action.specialItem() != null) {
-            return character.hasSpecialItem(action.specialItem());
+            return session.character().hasSpecialItem(action.specialItem());
         }
 
         if (action.numberOfSkills() != 0) {
-            return character.getNumberOfSkills() >= action.numberOfSkills();
+            return session.character().getNumberOfSkills() >= action.numberOfSkills();
         }
 
         if (action.noOtherOption()) {
@@ -32,21 +30,21 @@ public class ChangeSectionHandler extends AbstractActionHandler {
         }
 
         if (action.item() != null) {
-            return character.hasItem(action.item());
+            return session.character().hasItem(action.item());
         }
 
         return true;
     }
 
     @Override
-    public ActionResult handleAction(ActionSelector selector, Character character, Action action, List<Action> answerOptions) {
+    public ActionResult handleAction(GameSession session, Action action, List<Action> answerOptions) {
 
         if (action.randomSection() != null) {
-            character.section(action.randomSection().get(diceService.generate()));
+            session.section(action.randomSection().get(diceService.generate()));
             return ActionResult.sectionFinished();
         }
 
-        character.section(action.targetSection());
+        session.section(action.targetSection());
 
         return ActionResult.sectionFinished();
     }

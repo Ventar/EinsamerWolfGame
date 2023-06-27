@@ -13,7 +13,8 @@ public class GetInitialItemsHandler extends AbstractActionHandler {
 
     DiceService diceService = new DiceService();
 
-    public ActionResult handleAction(UIService ui, Character character, Action action, List<Action> answerOptions) {
+
+    public ActionResult handleAction(Character character, Action action, List<Action> answerOptions) {
         int i = diceService.generate();
         character.addSpecialItem(SpecialItem.KAI_ROBE);
         character.addSpecialItem(SpecialItem.BELT);

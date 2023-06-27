@@ -4,8 +4,8 @@ import net.atos.wolf.services.GameEngine;
 import net.atos.wolf.services.action.Action;
 import net.atos.wolf.services.action.ActionType;
 import net.atos.wolf.services.character.Character;
-import net.atos.wolf.services.character.Item;
 import net.atos.wolf.services.character.Weapon;
+import net.atos.wolf.services.GameSession;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
@@ -31,7 +31,7 @@ public class ModifyAttributeTest {
 
     @Test
     @Order(1)
-    public void modifyAttributeEndurance() {
+    public void modifyAttributeEndurance(GameSession session) {
         character.section(74);
         Action a1 = new Action();
         a1.type(ActionType.MODIFY_ATTRIBUTE);
@@ -51,7 +51,7 @@ public class ModifyAttributeTest {
         a3.text("Geh durch die Tür zum Trainingsgelände");
         a3.targetSection(374);
 
-        List<Action> actions = engine.getPossibleActions(character);
+        List<Action> actions = engine.getPossibleActions(session);
 
         Assertions.assertTrue(actions.contains(a1));
         Assertions.assertTrue(actions.contains(a2));
@@ -63,7 +63,7 @@ public class ModifyAttributeTest {
 
     @Test
     @Order(2)
-    public void modifyAttributeFood() {
+    public void modifyAttributeFood(GameSession session) {
         character.section(119);
         Action a1 = new Action();
         a1.type(ActionType.MODIFY_ATTRIBUTE);
@@ -101,7 +101,7 @@ public class ModifyAttributeTest {
         a7.type(ActionType.TAKE_BACKPACK);
         a7.text("Nimm den Rucksack");
 
-        List<Action> actions = engine.getPossibleActions(character);
+        List<Action> actions = engine.getPossibleActions(session);
 
         Assertions.assertTrue(actions.contains(a1));
         Assertions.assertFalse(actions.contains(a2));

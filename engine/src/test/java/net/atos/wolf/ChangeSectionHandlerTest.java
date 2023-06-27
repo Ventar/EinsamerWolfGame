@@ -6,6 +6,7 @@ import net.atos.wolf.services.action.ActionResult;
 import net.atos.wolf.services.action.ActionType;
 import net.atos.wolf.services.character.*;
 import net.atos.wolf.services.character.Character;
+import net.atos.wolf.services.GameSession;
 import org.junit.jupiter.api.*;
 
 import java.util.List;
@@ -45,10 +46,10 @@ public class ChangeSectionHandlerTest {
 
     @Test
     @Order(0)
-    public void changeSectionWithoutPrerequisites() {
+    public void changeSectionWithoutPrerequisites(GameSession session) {
         character.section(16);
 
-        List<Action> actions = engine.getPossibleActions(character);
+        List<Action> actions = engine.getPossibleActions(session);
 
         Action a1 = new Action();
         a1.type(ActionType.CHANGE_SECTION);
@@ -66,7 +67,7 @@ public class ChangeSectionHandlerTest {
         Assertions.assertEquals(2, actions.size());
 
 
-        ActionResult result = engine.executeAction(character, null, a1, actions);
+        ActionResult result = engine.executeAction(session, null, actions);
 
         Assertions.assertEquals(ActionResult.ActionResultType.SECTION_FINISHED, result.type());
         Assertions.assertEquals(470, character.section());
@@ -75,14 +76,14 @@ public class ChangeSectionHandlerTest {
 
     @Test
     @Order(1)
-    public void changeSectionWithRandomSection() {
+    public void changeSectionWithRandomSection(GameSession session) {
         character.section(22);
 
-        List<Action> actions = engine.getPossibleActions(character);
+        List<Action> actions = engine.getPossibleActions(session);
         Assertions.assertEquals(1, actions.size());
 
 
-        ActionResult result = engine.executeAction(character, null, actions.get(0), actions);
+        ActionResult result = engine.executeAction(session, null, actions);
 
         Assertions.assertEquals(ActionResult.ActionResultType.SECTION_FINISHED, result.type());
         Assertions.assertTrue(character.section() == 479 || character.section() == 311);
@@ -90,7 +91,7 @@ public class ChangeSectionHandlerTest {
     }
     @Test
     @Order(2)
-    public void changeSectionWithWeapon() {
+    public void changeSectionWithWeapon(GameSession session) {
 
         character.section(15);
         Action a1 = new Action();
@@ -105,7 +106,7 @@ public class ChangeSectionHandlerTest {
         a2.targetSection(477);
         a2.noOtherOption(true);
 
-        List<Action> actions = engine.getPossibleActions(character);
+        List<Action> actions = engine.getPossibleActions(session);
 
         Assertions.assertTrue(actions.contains(a1));
         Assertions.assertFalse(actions.contains(a2));
@@ -113,7 +114,7 @@ public class ChangeSectionHandlerTest {
 
         character.setWeaponOne(null);
 
-         actions = engine.getPossibleActions(character);
+         actions = engine.getPossibleActions(session);
 
         Assertions.assertFalse(actions.contains(a1));
         Assertions.assertTrue(actions.contains(a2));
@@ -124,10 +125,10 @@ public class ChangeSectionHandlerTest {
     }
     @Test
     @Order(3)
-    public void changeSectionWithSkill() {
+    public void changeSectionWithSkill(GameSession session) {
         character.section(118);
 
-        List<Action> actions = engine.getPossibleActions(character);
+        List<Action> actions = engine.getPossibleActions(session);
 
         Action a1 = new Action();
         a1.type(ActionType.CHANGE_SECTION);
@@ -161,7 +162,7 @@ public class ChangeSectionHandlerTest {
 
         character.addSkill(KaiSkill.SIXTH_SENSE);
 
-        actions = engine.getPossibleActions(character);
+        actions = engine.getPossibleActions(session);
 
         Assertions.assertTrue(actions.contains(a1));
         Assertions.assertTrue(actions.contains(a2));
@@ -174,7 +175,7 @@ public class ChangeSectionHandlerTest {
     }
     @Test
     @Order(4)
-    public void changeSectionWithItem() {
+    public void changeSectionWithItem(GameSession session) {
 
         character.section(242);
         Action a1 = new Action();
@@ -189,7 +190,7 @@ public class ChangeSectionHandlerTest {
         a2.targetSection(359);
         a2.noOtherOption(true);
 
-        List<Action> actions = engine.getPossibleActions(character);
+        List<Action> actions = engine.getPossibleActions(session);
 
         Assertions.assertFalse(actions.contains(a1));
         Assertions.assertTrue(actions.contains(a2));
@@ -197,7 +198,7 @@ public class ChangeSectionHandlerTest {
 
         character.addItemToBackpack(Item.CINDER);
 
-        actions = engine.getPossibleActions(character);
+        actions = engine.getPossibleActions(session);
 
         Assertions.assertTrue(actions.contains(a1));
         Assertions.assertFalse(actions.contains(a2));

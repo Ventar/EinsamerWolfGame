@@ -1,7 +1,7 @@
 package net.atos.wolf.services.action;
 
-import net.atos.wolf.services.ActionSelector;
 import net.atos.wolf.services.character.Character;
+import net.atos.wolf.services.GameSession;
 import net.atos.wolf.services.ui.UIService;
 
 import java.util.List;
@@ -29,7 +29,7 @@ public interface IActionHandler {
      * @param onlyAction if the action is the only action so far
      * @return @{@code true} if the action can be handlerd, {@code false} otherwise
      */
-    boolean isExecutable(Character character, Action action, List<Action> answerOptions);
+    boolean isExecutable(GameSession session, Action action, List<Action> answerOptions);
 
     /**
      * Handles the passed action. Handling an action means that the character of the player is modified based on the information that is available in the handled action.
@@ -41,19 +41,6 @@ public interface IActionHandler {
      * @throws IllegalStateException in case a {@link UIService} is used in the implementation of the {@link #handleAction(UIService, Character, Action, List)} method and this
      *                               method is not overwritten
      */
-    ActionResult handleAction(Character character, Action action, List<Action> answerOptions);
-
-    /**
-     * Handles the passed action. Handling an action means that the character of the player is modified based on the information that is available in the handled action. If
-     * additional interactions with the player are necessary the passed {@link UIService} can be used to perform these. The service MAYBE {@code null}, i.e. the implementing method
-     * has to check and handle this edge case.
-     *
-     * @param selector      the selector that can be used for further interaction
-     * @param character     the character that maybe modified based on the action
-     * @param action        the action with additional information to modify the character
-     * @param answerOptions a set of next step actions that could be modified by the action handler
-     * @return the result of the action execution
-     */
-    ActionResult handleAction(ActionSelector selector, Character character, Action action, List<Action> answerOptions);
+    ActionResult handleAction(GameSession session, Action action, List<Action> answerOptions);
 
 }

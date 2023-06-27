@@ -36,19 +36,19 @@ public class Action {
     private int numberOfSkills;
     private boolean noOtherOption;
     private Battle battle;
-    private int battleRounds;
+    private int hand;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Action action = (Action) o;
-        return mandatory == action.mandatory && targetSection == action.targetSection && numberOfSkills == action.numberOfSkills && noOtherOption == action.noOtherOption && battleRounds == action.battleRounds && type == action.type && skill == action.skill && Objects.equals(text, action.text) && weapon == action.weapon && specialItem == action.specialItem && Objects.equals(value, action.value) && Objects.equals(attribute, action.attribute) && item == action.item && Objects.equals(randomSection, action.randomSection) && Objects.equals(battle, action.battle);
+        return mandatory == action.mandatory && targetSection == action.targetSection && numberOfSkills == action.numberOfSkills && noOtherOption == action.noOtherOption && hand == action.hand && type == action.type && skill == action.skill && Objects.equals(text, action.text) && weapon == action.weapon && specialItem == action.specialItem && Objects.equals(value, action.value) && Objects.equals(attribute, action.attribute) && item == action.item && Objects.equals(randomSection, action.randomSection) && Objects.equals(battle, action.battle);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(type, mandatory, targetSection, skill, text, weapon, specialItem, value, attribute, item, randomSection, numberOfSkills, noOtherOption, battle, battleRounds);
+        return Objects.hash(type, mandatory, targetSection, skill, text, weapon, specialItem, value, attribute, item, randomSection, numberOfSkills, noOtherOption, battle, hand);
     }
 
     @Override
@@ -68,7 +68,7 @@ public class Action {
                 ", numberOfSkills=" + numberOfSkills +
                 ", noOtherOption=" + noOtherOption +
                 ", battle=" + battle +
-                ", battleRounds=" + battleRounds +
+                ", hand=" + hand +
                 '}';
     }
 }

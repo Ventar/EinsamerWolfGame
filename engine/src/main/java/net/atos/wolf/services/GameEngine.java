@@ -39,80 +39,80 @@ public class GameEngine {
      */
     private TranslationService translationService = new TranslationService("/translation.json");
 
-    public List<Action> getPossibleActions(Character character) {
+    public List<Action> getPossibleActions(GameSession session) {
 
         //System.out.println(character);
 
         // load the section which is the current active one to calculate the possible actions based on the current character state
-        Section section = sectionService.getSection(character.section());
+        Section section = sectionService.getSection(session.character().section());
 
         // this may happen if the section was not available in the JSON file that represents the book
         if (section == null) {
-            throw new IllegalStateException("Section ::= [" + character.section() + "] is not available in the SectionService");
+            throw new IllegalStateException("Section ::= [" + session.character().section() + "] is not available in the SectionService");
         }
 
         // filter these options based on the character, e.g. if a character does not have the skill HUNT and a CHANGE_SECTION action depends on that, the action is removed here.
-        List<Action> filteredAnswerOptions = filterActions(character, section.actions());
+        List<Action> filteredAnswerOptions = filterActions(session, section.actions());
 
         return filteredAnswerOptions;
 
     }
 
-    public ActionResult executeAction(Character character, ActionSelector selector, Action actionToExecute, List<Action> answerOptions) {
-        return actionHandler.get(actionToExecute.type()).handleAction(selector, character, actionToExecute, answerOptions);
+    public ActionResult executeAction(GameSession session, Action actionToExecute, List<Action> answerOptions) {
+        return actionHandler.get(actionToExecute.type()).handleAction(session, actionToExecute, answerOptions);
     }
 
 
-    public void handleSection(Character character, ActionSelector selector) {
+    public void handleSection(GameSession session, ActionSelector selector) {
 
-        int currentSection = character.section();
+        int currentSection = session.character().section();
 
         LOG.debug("------------------------------------------------------------------------------");
-        LOG.debug("[{}] handle section for character ::= [{}]", currentSection, character);
+        LOG.debug("[{}] handle section for character ::= [{}]", currentSection, session);
 
         Section section = sectionService.getSection(currentSection);
-        List<Action> filteredAnswerOptions = getPossibleActions(character);
+        List<Action> filteredAnswerOptions = getPossibleActions(session);
         LOG.trace("[{}] Possible (unmodified) actions for character ::= [{}]", currentSection, filteredAnswerOptions);
 
 
-        filteredAnswerOptions = executeMandatoryActions(character, filteredAnswerOptions);
+        filteredAnswerOptions = executeMandatoryActions(session, filteredAnswerOptions);
         LOG.trace("[{}] Filtered actions for character ::= [{}]", currentSection, filteredAnswerOptions);
 
 
         ActionResult actionResult = null;
 
         do {
-            String text = character.replaceVariablesInText(section.text());
-            text = battleInfo(text, filteredAnswerOptions);
+            String text = session.character().replaceVariablesInText(section.text());
+            text = battleInfo(text, filteredAnswerOptions, session);
             //LOG.trace("[{}] Modified text ::= [{}]", currentSection, text);
 
 
             Action actionToExecute = selector.selectAction(text, String.valueOf(section.sectionNumber()), filteredAnswerOptions);
             LOG.trace("[{}] Selected action by player ::= [{}]", currentSection, actionToExecute);
-            actionResult = executeAction(character, selector, actionToExecute, filteredAnswerOptions);
+            actionResult = executeAction(session, actionToExecute, filteredAnswerOptions);
             LOG.trace("[{}] Result of the action ::= [{}]", currentSection, actionResult);
-            LOG.trace("[{}] Modified character ::= [{}]", currentSection, character);
+            LOG.trace("[{}] Modified character ::= [{}]", currentSection, session.character());
 
             switch (actionResult.type()) {
                 case CHARACTER_DIED -> throw new RuntimeException("Damned we died :(");
                 case REPRESENT_ACTIONS -> {
                     LOG.debug("[{}] Represent actions...", currentSection);
-                    filteredAnswerOptions = filterActions(character, actionResult.actions());
+                    filteredAnswerOptions = filterActions(session, actionResult.actions());
                 }
             }
 
-            System.out.println(character.createCharacterString(translationService));
+            System.out.println(session.character().createCharacterString(translationService));
 
         } while (actionResult.type() == ActionResult.ActionResultType.REPRESENT_ACTIONS);
 
 
     }
 
-    private List<Action> executeMandatoryActions(Character character, List<Action> filteredAnswerOptions) {
+    private List<Action> executeMandatoryActions(GameSession session, List<Action> filteredAnswerOptions) {
         List<Action> resultList = new ArrayList<>();
         for (Action action : filteredAnswerOptions) {
             if (action.mandatory()) {
-                actionHandler.get(action.type()).handleAction(character, action, null);
+                actionHandler.get(action.type()).handleAction(session, action, null);
                 //System.out.println("Execute MANDATORY Action: " + action);
             } else {
                 resultList.add(action);
@@ -121,7 +121,7 @@ public class GameEngine {
         return resultList;
     }
 
-    private String battleInfo(String text, List<Action> filteredAnswerOptions) {
+    private String battleInfo(String text, List<Action> filteredAnswerOptions, GameSession session) {
         for (Action action : filteredAnswerOptions) {
             if (action.type().equals(ActionType.BATTLE)) {
                 ;
@@ -129,7 +129,7 @@ public class GameEngine {
                     text += "\n" + enemy.name() + "\n";
                     text += "Gegner Ausdauer   : " + enemy.endurance() + "\n";
                     text += "Gegner Kampfstärke: " + enemy.battleStrength() + "\n";
-                    text += "Kampfrunde        : " + action.battleRounds() + "\n";
+                    text += "Kampfrunde        : " + session.battleRounds() + "\n";
                 }
             }
         }
@@ -138,18 +138,18 @@ public class GameEngine {
     }
 
     /**
-     * Calls the {@link IActionHandler#isExecutable(Character, Action, List)} method for every action in the passed list to check if the action can be
+     * Calls the {@link IActionHandler#(Character, Action, List)} method for every action in the passed list to check if the action can be
      * executed by the character of the engine in the current state
      *
      * @param actions the actions to filter
      * @return the filtered actions
      */
-    private List<Action> filterActions(Character character, List<Action> actions) {
+    private List<Action> filterActions(GameSession session, List<Action> actions) {
 
         List<Action> answerOptions = new LinkedList<>();
 
         for (Action action : actions) {
-            if (actionHandler.get(action.type()).isExecutable(character, action, answerOptions)) {
+            if (actionHandler.get(action.type()).isExecutable(session, action, answerOptions)) {
                 answerOptions.add(action);
             }
         }
@@ -161,6 +161,9 @@ public class GameEngine {
         LOG.trace("Start new instance of the game engine...");
         GameEngine engine = new GameEngine();
         ActionSelector actionSelector = new UIService();
+
+        GameSession session = new GameSession();
+
         Character character = new Character();
         character.setWeaponOne(Weapon.AXE);
         character.addSkill(KaiSkill.HEAL);
@@ -173,20 +176,18 @@ public class GameEngine {
         character.addItemToBackpack(Item.GOLDENKEY);
         character.addItemToBackpack(Item.FEARWHEEL);
         character.addItemToBackpack(Item.GREEN_EMERALD);
-
         character.addSpecialItem(SpecialItem.CHAIN_MAIL);
         character.addSpecialItem(SpecialItem.BELT);
         character.addSpecialItem(SpecialItem.MAP);
         character.addSpecialItem(SpecialItem.HELMET);
-
         character.endurance().add(26);
         character.endurance().maxValue(26);
         character.battleStrength().add(14);
         character.gold().add(20);
         character.food().add(1);
-
-
         character.section(119);
+
+        session.character(character);
 
 
         LOG.debug("Created character ::= [{}]", character);
@@ -194,7 +195,7 @@ public class GameEngine {
         LOG.trace("Start to handle sections...");
 
         while (true) {
-            engine.handleSection(character, actionSelector);
+            engine.handleSection(session, actionSelector);
         }
 
         //System.out.println(character.createCharacterString(translationService));

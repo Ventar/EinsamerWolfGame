@@ -201,15 +201,15 @@ public class Character {
         buf.append(String.format("Ausdauer                  : %10s               %-30s                    %s\n", endurance.get() + "/" + endurance().maxValue(), getEntryAtPosition(translationService, skills, 1), getEntryAtPosition(translationService, backpack, 1)));
         buf.append(String.format("%10s                                           %-30s                    %s\n", "", getEntryAtPosition(translationService, skills, 2), getEntryAtPosition(translationService, backpack, 2)));
         if (weaponOne == null) {
-            buf.append(String.format("Waffe 1                   :     %6s               %-30s                    %s\n", "-", getEntryAtPosition(translationService, skills, 3), getEntryAtPosition(translationService, backpack, 3)));
+            buf.append(String.format("Waffe 1                   : %10s               %-30s                    %s\n", "-", getEntryAtPosition(translationService, skills, 3), getEntryAtPosition(translationService, backpack, 3)));
         } else {
-            buf.append(String.format("Waffe 1                   :     %6s               %-30s                    %s\n", translationService.translate(weaponOne.toString()), getEntryAtPosition(translationService, skills, 3), getEntryAtPosition(translationService, backpack, 3)));
+            buf.append(String.format("Waffe 1                   : %10s               %-30s                    %s\n", translationService.translate(weaponOne.toString()), getEntryAtPosition(translationService, skills, 3), getEntryAtPosition(translationService, backpack, 3)));
 
         }
         if (weaponTwo == null) {
-            buf.append(String.format("Waffe 2                   :     %6s               %-30s                    %s\n", "-", getEntryAtPosition(translationService, skills, 4), getEntryAtPosition(translationService, backpack, 4)));
+            buf.append(String.format("Waffe 2                   : %10s               %-30s                    %s\n", "-", getEntryAtPosition(translationService, skills, 4), getEntryAtPosition(translationService, backpack, 4)));
         } else {
-            buf.append(String.format("Waffe 2                   :     %6s               %-30s                    %s\n", translationService.translate(weaponTwo.toString()), getEntryAtPosition(translationService, skills, 4), getEntryAtPosition(translationService, backpack, 4)));
+            buf.append(String.format("Waffe 2                   : %10s               %-30s                    %s\n", translationService.translate(weaponTwo.toString()), getEntryAtPosition(translationService, skills, 4), getEntryAtPosition(translationService, backpack, 4)));
 
         }
         buf.append(String.format("Nahrung                   : %10s               %-30s                    %s\n", food.get(), "", getEntryAtPosition(translationService, backpack, 5)));

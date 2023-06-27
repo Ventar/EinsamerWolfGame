@@ -1,9 +1,8 @@
 package net.atos.wolf.services.action;
 
-import net.atos.wolf.services.ActionSelector;
 import net.atos.wolf.services.character.Character;
 import net.atos.wolf.services.common.DiceService;
-import net.atos.wolf.services.ui.UIService;
+import net.atos.wolf.services.GameSession;
 
 import java.util.List;
 
@@ -46,7 +45,7 @@ public abstract class AbstractActionHandler implements IActionHandler {
     }
 
 
-    protected boolean checkExecutable(Character character, Action action, List<Action> answerOptions) {
+    protected boolean checkExecutable(GameSession session, Action action, List<Action> answerOptions) {
         return true;
     }
 
@@ -56,18 +55,14 @@ public abstract class AbstractActionHandler implements IActionHandler {
     }
 
     @Override
-    public boolean isExecutable(Character character, Action action, List<Action> answerOptions) {
-        return action.type() == type && checkExecutable(character, action, answerOptions);
+    public boolean isExecutable(GameSession session, Action action, List<Action> answerOptions) {
+        return action.type() == type && checkExecutable(session, action, answerOptions);
     }
 
-    public ActionResult handleAction(Character character, Action action, List<Action> answerOptions) {
-        return handleAction(null, character, action, answerOptions);
-    }
-
-    @Override
-    public ActionResult handleAction(ActionSelector selector, Character character, Action action, List<Action> answerOptions) {
-        character.section(action.targetSection());
+    public ActionResult handleAction(GameSession session, Action action, List<Action> answerOptions) {
+        session.character().section(action.targetSection());
         return ActionResult.sectionFinished();
     }
+
 
 }
