@@ -1,6 +1,7 @@
 package net.atos.wolf.services.action;
 
 import lombok.Getter;
+import lombok.ToString;
 import net.atos.wolf.services.character.Character;
 
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.List;
  * @since 2023-05-19
  */
 @Getter
+@ToString
 public class ActionResult {
 
     /**
@@ -82,11 +84,11 @@ public class ActionResult {
         return res;
     }
 
-    @Override
-    public String toString() {
-        return "ActionResult{" +
-                "type=" + type +
-                ", actions=" + actions +
-                '}';
+  //  @Override
+   // public String toString() {
+     //   return "ActionResult{" +
+       //         "type=" + type +
+         //       ", actions=" + actions +
+           //     '}';
     }
-}
+

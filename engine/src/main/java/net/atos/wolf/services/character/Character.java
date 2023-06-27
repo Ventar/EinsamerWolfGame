@@ -4,12 +4,13 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import net.atos.wolf.services.TranslationService;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
+@ToString
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Character {
@@ -231,22 +232,22 @@ public class Character {
 
     }
 
-    @Override
-    public String toString() {
-        return "Character{" +
-                "hasBackpack=" + hasBackpack +
-                ", weaponOne=" + weaponOne +
-                ", weaponTwo=" + weaponTwo +
-                ", backpack=" + backpack +
-                ", specialItemsList=" + specialItemsList +
-                ", skills=" + skills +
-                ", gold=" + gold +
-                ", food=" + food +
-                ", combatStrength=" + battleStrength +
-                ", endurance=" + endurance +
-                ", section=" + section +
-                '}';
+   // @Override
+   // public String toString() {
+   //     return "Character{" +
+   //             "hasBackpack=" + hasBackpack +
+   //             ", weaponOne=" + weaponOne +
+   //             ", weaponTwo=" + weaponTwo +
+   //             ", backpack=" + backpack +
+   //             ", specialItemsList=" + specialItemsList +
+   //             ", skills=" + skills +
+   //             ", gold=" + gold +
+   //             ", food=" + food +
+   //             ", combatStrength=" + battleStrength +
+   //             ", endurance=" + endurance +
+   //             ", section=" + section +
+   //             '}';
     }
 
 
-}
+

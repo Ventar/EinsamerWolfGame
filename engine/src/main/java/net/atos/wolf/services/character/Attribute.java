@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * Container class to manage the value of an attribute that is part of the {@link Character}.
@@ -11,6 +12,7 @@ import lombok.Setter;
  * @author Noel Masur, Julius Reismann
  * @since 2023-05-04
  */
+@ToString
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Attribute {
@@ -115,13 +117,13 @@ public class Attribute {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Attribute{" +
-                       "name='" + name + '\'' +
-                       ", value=" + value +
-                       ", maxValue=" + maxValue +
-                       ", baseValue=" + baseValue +
-                       '}';
+  //  @Override
+  //  public String toString() {
+  //      return "Attribute{" +
+  //                     "name='" + name + '\'' +
+  //                     ", value=" + value +
+  //                     ", maxValue=" + maxValue +
+  //                     ", baseValue=" + baseValue +
+  //                     '}';
     }
-}
+

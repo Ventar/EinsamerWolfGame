@@ -38,6 +38,12 @@ public class Action {
     private Battle battle;
     private int hand;
 
+
+    public Action() {}
+
+    public Action(Action action) {
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -50,6 +56,8 @@ public class Action {
     public int hashCode() {
         return Objects.hash(type, mandatory, targetSection, skill, text, weapon, specialItem, value, attribute, item, randomSection, numberOfSkills, noOtherOption, battle, hand);
     }
+
+
 
     @Override
     public String toString() {

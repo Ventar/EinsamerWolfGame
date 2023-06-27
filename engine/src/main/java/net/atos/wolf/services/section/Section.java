@@ -3,6 +3,7 @@ package net.atos.wolf.services.section;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
+import lombok.ToString;
 import net.atos.wolf.services.action.Action;
 
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Getter
+@ToString
 public class Section {
 
     /**
@@ -34,10 +36,23 @@ public class Section {
      */
     private ArrayList<Action> actions;
 
-    @Override
-    public String toString() {
-        return "Section{" +
-                       "sectionNumber=" + sectionNumber +
-                       '}';
+    public Section() {}
+
+    public Section(Section section){
+
+        this.sectionNumber = section.sectionNumber;
+        this.text = section.text;
+        this.actions = new ArrayList<>() ;
+        for (Action action : actions){
+            this.actions.add(new Action(action));
+        }
+
     }
-}
+
+    //@Override
+    //public String toString() {
+        //return "Section{" +
+          //             "sectionNumber=" + sectionNumber +
+            //           '}';
+    }
+
