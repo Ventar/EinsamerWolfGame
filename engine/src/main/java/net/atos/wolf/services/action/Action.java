@@ -9,6 +9,7 @@ import net.atos.wolf.services.character.KaiSkill;
 import net.atos.wolf.services.character.SpecialItem;
 import net.atos.wolf.services.character.Weapon;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -39,9 +40,33 @@ public class Action {
     private int hand;
 
 
-    public Action() {}
+    public Action() {
+    }
 
     public Action(Action action) {
+        this.type = action.type;
+        this.mandatory = action.mandatory;
+        this.targetSection = action.targetSection;
+        this.skill = action.skill;
+        this.text = action.text;
+        this.weapon = action.weapon;
+        this.specialItem = action.specialItem;
+        this.value = action.value;
+        this.attribute = action.attribute;
+        this.item = action.item;
+        if (action.randomSection != null) {
+            this.randomSection = new ArrayList<>();
+            for (Integer integer : action.randomSection) {
+                this.randomSection.add(integer);
+            }
+        }
+        this.numberOfSkills = action.numberOfSkills;
+        this.noOtherOption = action.noOtherOption;
+        if (action.battle != null) {
+            this.battle = new Battle(action.battle);
+        }
+
+        this.hand = hand;
     }
 
     @Override
@@ -56,7 +81,6 @@ public class Action {
     public int hashCode() {
         return Objects.hash(type, mandatory, targetSection, skill, text, weapon, specialItem, value, attribute, item, randomSection, numberOfSkills, noOtherOption, battle, hand);
     }
-
 
 
     @Override

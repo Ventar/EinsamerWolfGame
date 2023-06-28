@@ -13,4 +13,13 @@ public class BattleRoundTarget {
     private int min;
     private int targetSection;
 
+    public BattleRoundTarget(){};
+
+    public BattleRoundTarget(BattleRoundTarget battleRoundTarget){
+        this.max = battleRoundTarget.max;
+        this.min = battleRoundTarget.min;
+        this.targetSection = battleRoundTarget.targetSection;
+    }
+
+
 }

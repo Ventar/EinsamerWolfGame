@@ -45,11 +45,10 @@ public class SectionService {
      * Get the section with the passed number
      *
      * @param idToLoad the {@link Section#sectionNumber()}  if the section to load
-     *
      * @return Section
      */
     public Section getSection(int idToLoad) {
-        return sections.get(idToLoad);
+        return new Section(sections.get(idToLoad));
     }
 
 

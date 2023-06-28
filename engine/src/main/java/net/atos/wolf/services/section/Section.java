@@ -39,14 +39,14 @@ public class Section {
     public Section() {}
 
     public Section(Section section){
-
         this.sectionNumber = section.sectionNumber;
         this.text = section.text;
-        this.actions = new ArrayList<>() ;
-        for (Action action : actions){
-            this.actions.add(new Action(action));
+        if (section.actions != null) {
+            this.actions = new ArrayList<>();
+            for (Action action : section.actions) {
+                this.actions.add(new Action(action));
+            }
         }
-
     }
 
     //@Override

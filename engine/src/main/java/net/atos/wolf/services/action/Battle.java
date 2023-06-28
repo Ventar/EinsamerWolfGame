@@ -17,11 +17,23 @@ public class Battle {
     private List<Enemy> enemy;
     private List<BattleRoundTarget> targetSectionBattleRound;
 
-   // @Override
-   // public String toString() {
-   //     return "Battle{" +
-   //             "enemy=" + enemy +
-   //             ", targetSectionBattleRound=" + targetSectionBattleRound +
-   //             '}';
+    public Battle() {
     }
+
+
+    public Battle(Battle battle) {
+        if (battle.enemy != null) {
+            this.enemy = new ArrayList<>();
+            for (Enemy e : battle.enemy) {
+                this.enemy.add(new Enemy(e));
+            }
+        }
+        if (battle.targetSectionBattleRound != null) {
+            this.targetSectionBattleRound = new ArrayList<>();
+            for (BattleRoundTarget battleRoundTarget : battle.targetSectionBattleRound) {
+                this.targetSectionBattleRound.add(new BattleRoundTarget(battleRoundTarget));
+            }
+        }
+    }
+}
 
