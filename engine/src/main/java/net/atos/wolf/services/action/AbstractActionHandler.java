@@ -1,20 +1,28 @@
 package net.atos.wolf.services.action;
 
+import net.atos.wolf.services.GameSession;
 import net.atos.wolf.services.character.Character;
 import net.atos.wolf.services.common.DiceService;
-import net.atos.wolf.services.GameSession;
+import net.atos.wolf.services.section.Section;
+import net.atos.wolf.services.section.SectionService;
 
 import java.util.List;
 
 /**
- * Abstract base implementation for all action handler. Contains common logic to check if a handler {@link #isExecutable(Character, Action, boolean)} for a
- * certain character state and provides base implementation for the default {@link #handleAction(Character, Action, List)} method which usually leads to a
- * section change.
+ * Abstract base implementation for all action handler. Contains common logic to check if a handler {@link #isExecutable(Character, Action, boolean)} for a certain character state
+ * and provides base implementation for the default {@link #handleAction(Character, Action, List)} method which usually leads to a section change.
  *
  * @author Noel Masur, Julius Reismann
  * @since 2023-05-19
  */
 public abstract class AbstractActionHandler implements IActionHandler {
+
+    /**
+     * A service too generate a random number between 0 and 9
+     */
+    private static DiceService DICE_SERVICE = new DiceService();
+
+    private static SectionService SECTION_SERVICE = new SectionService("/ew1.json");
 
     /**
      * The action type that is handled by the implementation
@@ -23,13 +31,7 @@ public abstract class AbstractActionHandler implements IActionHandler {
 
 
     /**
-     * A service too generate a random number between 0 and 9
-     */
-    protected DiceService diceService = new DiceService();
-
-    /**
-     * Creates a new instance of the action handler and resolves the {@link ActionType} for which the handler is responsible from the name of the extending
-     * class.
+     * Creates a new instance of the action handler and resolves the {@link ActionType} for which the handler is responsible from the name of the extending class.
      *
      * @throws IllegalStateException if the class name cannot be resolved to an action type
      */
@@ -44,8 +46,7 @@ public abstract class AbstractActionHandler implements IActionHandler {
         this.type = ahAnnotation.value();
     }
 
-
-    protected boolean checkExecutable(GameSession session, Action action, List<Action> answerOptions) {
+    protected boolean checkExecutable(GameSession session, Action action) {
         return true;
     }
 
@@ -55,13 +56,20 @@ public abstract class AbstractActionHandler implements IActionHandler {
     }
 
     @Override
-    public boolean isExecutable(GameSession session, Action action, List<Action> answerOptions) {
-        return action.type() == type && checkExecutable(session, action, answerOptions);
+    public boolean isExecutable(GameSession session, Action action) {
+        return action.type() == type && checkExecutable(session, action);
     }
 
-    public ActionResult handleAction(GameSession session, Action action, List<Action> answerOptions) {
-        session.character().section(action.targetSection());
-        return ActionResult.sectionFinished();
+    public void handleAction(GameSession session, Action action) {
+        session.section(getSection(action.targetSection()));
+    }
+
+    protected Section getSection(int sectionID) {
+        return SECTION_SERVICE.getSection(sectionID);
+    }
+
+    protected int generate() {
+        return DICE_SERVICE.generate();
     }
 
 

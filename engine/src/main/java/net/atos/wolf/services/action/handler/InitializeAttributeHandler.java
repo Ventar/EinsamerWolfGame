@@ -1,11 +1,12 @@
 package net.atos.wolf.services.action.handler;
 
-import net.atos.wolf.services.action.*;
+import net.atos.wolf.services.GameSession;
+import net.atos.wolf.services.action.AbstractActionHandler;
+import net.atos.wolf.services.action.Action;
+import net.atos.wolf.services.action.ActionHandler;
+import net.atos.wolf.services.action.ActionType;
 import net.atos.wolf.services.character.Attribute;
 import net.atos.wolf.services.common.DiceService;
-import net.atos.wolf.services.GameSession;
-
-import java.util.List;
 
 @ActionHandler(ActionType.INITIALIZE_ATTRIBUTE)
 public class InitializeAttributeHandler extends AbstractActionHandler {
@@ -13,7 +14,7 @@ public class InitializeAttributeHandler extends AbstractActionHandler {
     private DiceService dice = new DiceService();
 
     @Override
-    public ActionResult handleAction(GameSession session, Action action, List<Action> answerOptions) {
+    public void handleAction(GameSession session, Action action) {
 
         String attributeName = action.attribute();
 
@@ -23,9 +24,7 @@ public class InitializeAttributeHandler extends AbstractActionHandler {
         att.maxValue(att.baseValue() + rand);
         att.add(att.baseValue() + rand);
 
-        session.character().section(action.targetSection());
-
-        return ActionResult.sectionFinished();
+        session.section(getSection(action.targetSection()));
 
     }
 }

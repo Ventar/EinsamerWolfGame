@@ -1,30 +1,32 @@
 package net.atos.wolf.services.action.handler;
 
-import net.atos.wolf.services.action.*;
 import net.atos.wolf.services.GameSession;
-
-import java.util.List;
+import net.atos.wolf.services.action.AbstractActionHandler;
+import net.atos.wolf.services.action.Action;
+import net.atos.wolf.services.action.ActionHandler;
+import net.atos.wolf.services.action.ActionType;
 
 @ActionHandler(ActionType.MODIFY_ATTRIBUTE)
 public class ModifyAttributeHandler extends AbstractActionHandler {
+
     @Override
-    public ActionResult handleAction(GameSession session, Action action, List<Action> answerOptions) {
+    public void handleAction(GameSession session, Action action) {
 
         if (action.attribute().equals("ENDURANCE")) {
-            session.character().endurance().remove(Integer.valueOf(action.value()));
+            session.character().endurance().remove(Integer.parseInt(action.value()));
         }
 
         if (action.attribute().equals("FOOD")) {
-            session.character().food().add(Integer.valueOf(action.value()));
+            session.character().food().add(Integer.parseInt(action.value()));
         }
         if (action.attribute().equals("GOLD")) {
-            session.character().gold().add(Integer.valueOf(action.value()));
+            session.character().gold().add(Integer.parseInt(action.value()));
         }
         if (action.attribute().equals("BATTLE_STRENGTH")) {
-            session.character().battleStrength().add(Integer.valueOf(action.value()));
+            session.character().battleStrength().add(Integer.parseInt(action.value()));
         }
 
-        return ActionResult.representActions(answerOptions);
+        session.modifiedAnswerOptions(session.section().actions());
     }
 
 }

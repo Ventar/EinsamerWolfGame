@@ -3,10 +3,12 @@ package net.atos.wolf.services.section;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 import net.atos.wolf.services.action.Action;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Represents a section of the book. The player moves from section to section and takes decisions based on the offered actions for every individual section. These sections are
@@ -17,6 +19,7 @@ import java.util.ArrayList;
  */
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Setter
 @Getter
 @ToString
 public class Section {
@@ -34,11 +37,11 @@ public class Section {
     /**
      * A list of actions that can be executed by the player.
      */
-    private ArrayList<Action> actions;
+    private List<Action> actions;
 
     public Section() {}
 
-    public Section(Section section){
+    public Section(Section section) {
         this.sectionNumber = section.sectionNumber;
         this.text = section.text;
         if (section.actions != null) {
@@ -49,10 +52,4 @@ public class Section {
         }
     }
 
-    //@Override
-    //public String toString() {
-        //return "Section{" +
-          //             "sectionNumber=" + sectionNumber +
-            //           '}';
-    }
-
+}

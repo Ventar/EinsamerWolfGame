@@ -42,14 +42,21 @@ public class SectionService {
     }
 
     /**
-     * Get the section with the passed number
+     * Get the section with the passed section number.
      *
      * @param idToLoad the {@link Section#sectionNumber()}  if the section to load
+     *
      * @return Section
      */
     public Section getSection(int idToLoad) {
-        return new Section(sections.get(idToLoad));
-    }
+        Section s = sections.get(idToLoad);
 
+        if (s == null) {
+            throw new IllegalStateException("Section ::= [" + idToLoad + "] is not available in the SectionService");
+        }
+
+
+        return new Section(s);
+    }
 
 }

@@ -1,15 +1,16 @@
 package net.atos.wolf.services.action.handler;
 
-import net.atos.wolf.services.action.*;
 import net.atos.wolf.services.GameSession;
-
-import java.util.List;
+import net.atos.wolf.services.action.AbstractActionHandler;
+import net.atos.wolf.services.action.Action;
+import net.atos.wolf.services.action.ActionHandler;
+import net.atos.wolf.services.action.ActionType;
 
 @ActionHandler(ActionType.CHANGE_SECTION)
 public class ChangeSectionHandler extends AbstractActionHandler {
 
     @Override
-    protected boolean checkExecutable(GameSession session, Action action, List<Action> answerOptions) {
+    protected boolean checkExecutable(GameSession session, Action action) {
 
         if (action.weapon() != null) {
             return action.weapon() == session.character().weaponOne() || action.weapon() == session.character().weaponTwo();
@@ -26,7 +27,7 @@ public class ChangeSectionHandler extends AbstractActionHandler {
         }
 
         if (action.noOtherOption()) {
-            return answerOptions.size() == 0;
+            return session.modifiedAnswerOptions() != null && session.modifiedAnswerOptions().size() == 0;
         }
 
         if (action.item() != null) {
@@ -37,16 +38,14 @@ public class ChangeSectionHandler extends AbstractActionHandler {
     }
 
     @Override
-    public ActionResult handleAction(GameSession session, Action action, List<Action> answerOptions) {
+    public void handleAction(GameSession session, Action action) {
 
         if (action.randomSection() != null) {
-            session.section(action.randomSection().get(diceService.generate()));
-            return ActionResult.sectionFinished();
+            session.section(getSection(action.randomSection().get(generate())));
+        } else {
+            session.section(getSection(action.targetSection()));
         }
 
-        session.section(action.targetSection());
-
-        return ActionResult.sectionFinished();
     }
 
 }

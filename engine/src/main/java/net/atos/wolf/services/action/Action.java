@@ -22,7 +22,6 @@ import java.util.Objects;
 @Getter
 public class Action {
 
-
     private ActionType type;
     private boolean mandatory;
     private int targetSection;
@@ -39,8 +38,12 @@ public class Action {
     private Battle battle;
     private int hand;
 
-
     public Action() {
+    }
+
+    public Action(ActionType type, String text) {
+        this.type = type;
+        this.text = text;
     }
 
     public Action(Action action) {
@@ -86,21 +89,21 @@ public class Action {
     @Override
     public String toString() {
         return "Action{" +
-                "type=" + type +
-                ", mandatory=" + mandatory +
-                ", targetSection=" + targetSection +
-                ", skill=" + skill +
-                ", text='" + text + '\'' +
-                ", weapon=" + weapon +
-                ", specialItem=" + specialItem +
-                ", value='" + value + '\'' +
-                ", attribute='" + attribute + '\'' +
-                ", item=" + item +
-                ", randomSection=" + randomSection +
-                ", numberOfSkills=" + numberOfSkills +
-                ", noOtherOption=" + noOtherOption +
-                ", battle=" + battle +
-                ", hand=" + hand +
-                '}';
+                       "type=" + type +
+                       ", mandatory=" + mandatory +
+                       ", targetSection=" + targetSection +
+                       ", skill=" + skill +
+                       ", text='" + text + '\'' +
+                       ", weapon=" + weapon +
+                       ", specialItem=" + specialItem +
+                       ", value='" + value + '\'' +
+                       ", attribute='" + attribute + '\'' +
+                       ", item=" + item +
+                       ", randomSection=" + randomSection +
+                       ", numberOfSkills=" + numberOfSkills +
+                       ", noOtherOption=" + noOtherOption +
+                       ", battle=" + battle +
+                       ", hand=" + hand +
+                       '}';
     }
 }

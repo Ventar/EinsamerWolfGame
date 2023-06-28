@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import net.atos.wolf.services.character.Attribute;
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -19,21 +18,24 @@ public class Enemy {
     private int endurance;
     private boolean thoughRayResistance;
 
-    public Enemy(){};
+    public Enemy() {}
 
-    public Enemy(Enemy enemy){
+    ;
+
+    public Enemy(Enemy enemy) {
         this.name = enemy.name;
         this.battleStrength = enemy.battleStrength;
+        this.endurance = enemy.endurance;
         this.thoughRayResistance = enemy.thoughRayResistance;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Enemy{" +
-//                "name='" + name + '\'' +
-//                ", battleStrength=" + battleStrength +
-//                ", endurance=" + endurance +
-//                ", thoughRayResistance=" + thoughRayResistance +
-//                '}';
-//    }
+    //    @Override
+    //    public String toString() {
+    //        return "Enemy{" +
+    //                "name='" + name + '\'' +
+    //                ", battleStrength=" + battleStrength +
+    //                ", endurance=" + endurance +
+    //                ", thoughRayResistance=" + thoughRayResistance +
+    //                '}';
+    //    }
 }
