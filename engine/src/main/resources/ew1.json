@@ -396,11 +396,20 @@
     "actions": [
       {
         "type": "CHANGE_SECTION",
-        "mandatory": true,
         "targetSection": 15,
-        "skill": null,
-        "text": "Lies Weiter",
-        "weapon": "AXE"
+        "text": "Lies Weiter"
+      },
+      {
+        "type": "TAKE_WEAPON",
+        "text": "Nimm die Axt in Hand 1",
+        "weapon": "AXE",
+        "hand": 1
+      },
+      {
+        "type": "TAKE_WEAPON",
+        "text": "Nimm die Axt in Hand 2",
+        "weapon": "AXE",
+        "hand": 2
       }
     ]
   },
@@ -898,8 +907,7 @@
       {
         "type": "CHANGE_SECTION",
         "targetSection": 58,
-        "text": "Weiter",
-        "noOtherOption": true
+        "text": "Weiter"
       }
     ]
   },
@@ -922,6 +930,17 @@
           283
         ],
         "skill": "ARMORY_MACE"
+      }
+    ]
+  },
+  {
+    "sectionNumber": 535,
+    "text": "Du schiebst das Schwert in deinen Gürtel (vermerke die Waffe auf deinem Aktionsblatt) und läufst weiter, um den Hebel zu erreichen, der das Tor verschließt. Du bist etwas wackelig auf den Beinen und das Blut pocht dir laut in den Ohren. Du hast zum ersten im Kampf getötet, und obwohl du deine Pflicht mit großem Geschick erfüllt hast, bist du nun hin- und hergerissen zwischen deinem Hochgefühl und dem Abscheu, den du empfindest. Du stolperst auf die Wehrmauer des Torhauses zu und legst den eisernen Hebel um, und sofort beginnt sich das mächtige Tor unter lautem Quietschen zu schließen. Die Leichen zahlreicher Giak werden zerquetscht und verstümmelt, als die beiden schweren Torflügel schließlich mit einem dröhnenden Krachen einrasten. „Gut gemacht, Lautloser Wolf!“, sagt Sternenfeuer, als er auf dich zukommt, aber du kannst seine Worte über dem Pochen in deinem Kopf kaum hören. Als das Gefühl des Entsetzens, das dein erster Kampf in dir hinterlassen hat, schließlich nachlässt, lenkt der Kai\u0002Meister deine Aufmerksamkeit auf die Spitze des höchsten Turmes der Abtei. Dieses prächtige Bauwerk trägt den Namen Turm der Sonne, und an diesem Ort befinden sich die persönlichen Studierzimmer der Kai\u0002Meister. Die höchste Kammer gehört dem Führer der Kai – Großmeister Tapfere Klinge. „Lautloser Wolf, ich habe eine wichtige Aufgabe für dich. Sieh nach oben, zur Spitze des Turms, und sag mir, was du dort siehst.“ Du kommst Sternenfeuers Aufforderung nach. Trotz der unnatürlichen Dunkelheit und der unzähligen Kraan, die nun am Himmel kreisen, kannst du einen großen, juwelenartigen Kristall erkennen, der oben auf der kunstvollen, runenverzierten Stahlspitze des Turms angebracht ist. „Ich sehe das kristallene Leuchtfeuer, Meister“, antwortest du. „Genau. Ich will, dass du jetzt dort hinaufgehst und das Leuchtfeuer entzündest. Es wird den König in Holmgard warnen, dass die Schwarzen Lords angreifen. Hast du verstanden?“ „Ja, Meister.“ Plötzlich stößt eine zweite Welle fliegender Kreaturen auf das Kloster herab. Diese sind viel größer als die Kraan der ersten Angriffswelle, und unter ihren schwarzen Bäuchen tragen sie gewaltige Netze, in denen unzählige Giak stecken, schwer gerüstet und bewaffnet mit Schwertern und Schilden. „Zlaanbestien!“, ruft Sternenfeuer. „Dieser verfluchte Zagarna. So also hat er vor, uns zu besiegen!“ Eine der großen, schwarzen Zlaanbestien stößt herab und schwebt direkt über dem Übungsgelände. Ein mit einer Robe bekleideter Reiter löst das riesige Netz und eine Stiege gerüsteter Giak stürzt auf den Platz. Mehrere von ihnen werden beim Aufprall zu Tode gequetscht, doch der Großteil überlebt und hat sich schnell aus dem Netz befreit. Sofort stürmen sie in alle Richtungen davon, um jeden Kai zu töten, dessen sie habhaft werden können. „Geh, Lautloser Wolf!“, drängt dich Sternenfeuer, während er sich bereitmacht, sich dem Überraschungsangriff aus der Luft zu stellen. „Geh und entzünde das Leuchtfeuer!“ Während Sternenfeuer über das Übungsgelände eilt, um sich dem Feind entgegenzuwerfen, spähst du durch das unheimliche Dämmerlicht. Deine scharfen Augen suchen nach dem kürzesten Weg, um das Signalfeuer zu erreichen. Das große Tor am Turm der Sonne wurde mittlerweile von innen verriegelt, um dem Gegner den Zugang zu verwehren, und so musst du einen anderen Weg finden. Es gibt mehrere Türen, die ebenerdig in die vielen Hallen der Abtei führen, doch nur eine davon ist im Augenblick noch geöffnet. Sie liegt unter einem großen Balkon am oberen Ende einer breiten Steinrampe und führt zu den Kammern der Kai-Meister. Du beschließt das Kloster über diesen Weg zu betreten und rennst über das Übungsgelände auf die Rampe zu. Inzwischen werden immer mehr Transportnetze abgeworfen, und zweimal wirst du auf dem Weg zur Rampe fast erschlagen. Eines der Netze wurde zu früh ausgeklinkt und schlägt in der Mitte der Steinrampe auf, gerade als du diese erreichst. Bis auf einen wurden sämtliche Giak, die in diesem Netz saßen, durch den gewaltigen Aufprall getötet. Dieser eine Überlebende ist jedoch bei Bewusstsein geblieben und hat sich seinen Weg nach oben frei gehackt. Als du die Rampe hinauf auf das offene Portal zueilst, springt er zwischen dem Haufen aus Maschenwerk und zerschmetterten Leibern hervor und greift dich mit seinem schwarzen Krummschwert an. ",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 246,
+        "text": "Wenn Kampf gewonnen, geh weiter"
       }
     ]
   },
@@ -971,19 +990,8 @@
     ]
   },
   {
-    "sectionNumber": 535,
-    "text": "Du schiebst das Schwert in deinen Gürtel (vermerke die Waffe auf deinem Aktionsblatt) und läufst weiter, um den Hebel zu erreichen, der das Tor verschließt. Du bist etwas wackelig auf den Beinen und das Blut pocht dir laut in den Ohren. Du hast zum ersten im Kampf getötet, und obwohl du deine Pflicht mit großem Geschick erfüllt hast, bist du nun hin- und hergerissen zwischen deinem Hochgefühl und dem Abscheu, den du empfindest. Du stolperst auf die Wehrmauer des Torhauses zu und legst den eisernen Hebel um, und sofort beginnt sich das mächtige Tor unter lautem Quietschen zu schließen. Die Leichen zahlreicher Giak werden zerquetscht und verstümmelt, als die beiden schweren Torflügel schließlich mit einem dröhnenden Krachen einrasten. „Gut gemacht, Lautloser Wolf!“, sagt Sternenfeuer, als er auf dich zukommt, aber du kannst seine Worte über dem Pochen in deinem Kopf kaum hören. Als das Gefühl des Entsetzens, das dein erster Kampf in dir hinterlassen hat, schließlich nachlässt, lenkt der Kai\u0002Meister deine Aufmerksamkeit auf die Spitze des höchsten Turmes der Abtei. Dieses prächtige Bauwerk trägt den Namen Turm der Sonne, und an diesem Ort befinden sich die persönlichen Studierzimmer der Kai\u0002Meister. Die höchste Kammer gehört dem Führer der Kai – Großmeister Tapfere Klinge. „Lautloser Wolf, ich habe eine wichtige Aufgabe für dich. Sieh nach oben, zur Spitze des Turms, und sag mir, was du dort siehst.“ Du kommst Sternenfeuers Aufforderung nach. Trotz der unnatürlichen Dunkelheit und der unzähligen Kraan, die nun am Himmel kreisen, kannst du einen großen, juwelenartigen Kristall erkennen, der oben auf der kunstvollen, runenverzierten Stahlspitze des Turms angebracht ist. „Ich sehe das kristallene Leuchtfeuer, Meister“, antwortest du. „Genau. Ich will, dass du jetzt dort hinaufgehst und das Leuchtfeuer entzündest. Es wird den König in Holmgard warnen, dass die Schwarzen Lords angreifen. Hast du verstanden?“ „Ja, Meister.“ Plötzlich stößt eine zweite Welle fliegender Kreaturen auf das Kloster herab. Diese sind viel größer als die Kraan der ersten Angriffswelle, und unter ihren schwarzen Bäuchen tragen sie gewaltige Netze, in denen unzählige Giak stecken, schwer gerüstet und bewaffnet mit Schwertern und Schilden. „Zlaanbestien!“, ruft Sternenfeuer. „Dieser verfluchte Zagarna. So also hat er vor, uns zu besiegen!“ Eine der großen, schwarzen Zlaanbestien stößt herab und schwebt direkt über dem Übungsgelände. Ein mit einer Robe bekleideter Reiter löst das riesige Netz und eine Stiege gerüsteter Giak stürzt auf den Platz. Mehrere von ihnen werden beim Aufprall zu Tode gequetscht, doch der Großteil überlebt und hat sich schnell aus dem Netz befreit. Sofort stürmen sie in alle Richtungen davon, um jeden Kai zu töten, dessen sie habhaft werden können. „Geh, Lautloser Wolf!“, drängt dich Sternenfeuer, während er sich bereitmacht, sich dem Überraschungsangriff aus der Luft zu stellen. „Geh und entzünde das Leuchtfeuer!“ Während Sternenfeuer über das Übungsgelände eilt, um sich dem Feind entgegenzuwerfen, spähst du durch das unheimliche Dämmerlicht. Deine scharfen Augen suchen nach dem kürzesten Weg, um das Signalfeuer zu erreichen. Das große Tor am Turm der Sonne wurde mittlerweile von innen verriegelt, um dem Gegner den Zugang zu verwehren, und so musst du einen anderen Weg finden. Es gibt mehrere Türen, die ebenerdig in die vielen Hallen der Abtei führen, doch nur eine davon ist im Augenblick noch geöffnet. Sie liegt unter einem großen Balkon am oberen Ende einer breiten Steinrampe und führt zu den Kammern der Kai-Meister. Du beschließt das Kloster über diesen Weg zu betreten und rennst über das Übungsgelände auf die Rampe zu. Inzwischen werden immer mehr Transportnetze abgeworfen, und zweimal wirst du auf dem Weg zur Rampe fast erschlagen. Eines der Netze wurde zu früh ausgeklinkt und schlägt in der Mitte der Steinrampe auf, gerade als du diese erreichst. Bis auf einen wurden sämtliche Giak, die in diesem Netz saßen, durch den gewaltigen Aufprall getötet. Dieser eine Überlebende ist jedoch bei Bewusstsein geblieben und hat sich seinen Weg nach oben frei gehackt. Als du die Rampe hinauf auf das offene Portal zueilst, springt er zwischen dem Haufen aus Maschenwerk und zerschmetterten Leibern hervor und greift dich mit seinem schwarzen Krummschwert an. ",
-    "actions": [
-      {
-        "type": "CHANGE_SECTION",
-        "targetSection": 246,
-        "text": "Wenn Kampf gewonnen, geh weiter"
-      }
-    ]
-  },
-  {
     "sectionNumber": 1001,
-    "text": "Zunächst ermitteln wir deinen Ausdauerwert. Hierzu bestimmen wir eine Zufallszahl von 0 - 9 und addieren diese zu deinem Basiswert von 20.",
+    "text": "Zunächst ermitteln wir deinen Ausdauerwert. Hierzu bestimmen wir eine Zufallszahl von 0 - 9, welche dann mit 20 addiert wird",
     "actions": [
       {
         "type": "INITIALIZE_ATTRIBUTE",
@@ -1007,7 +1015,7 @@
   },
   {
     "sectionNumber": 1003,
-    "text": "Damit stehen deine Basiswerte fest:        Ausdauer: ${ENDURANCE}      Kampfstärke: ${BATTLE_STRENGTH}    Als anhänger der Kai, wurdest du in in den Kai Disziplinen unterwiesen. Wähle hier fünf der Kai Disziplinen aus die dich auf deinem Abenteuer unterstützen. Wähle weise, die Disziplinen sind wichtig um gewissen Herausforderungen zu bewältigen.",
+    "text": "Damit stehen deine Basiswerte fest:        \nAusdauer: ${ENDURANCE}      \nKampfstärke: ${BATTLE_STRENGTH}    \nAls anhänger der Kai, wurdest du in in den Kai Disziplinen unterwiesen. Wähle hier fünf der Kai Disziplinen aus die dich auf deinem Abenteuer unterstützen. Wähle weise, die Disziplinen sind wichtig um gewissen Herausforderungen zu bewältigen.",
     "actions": [
       {
         "type": "CHANGE_SECTION",
@@ -1056,7 +1064,7 @@
       },
       {
         "type": "GET_KAI_SKILL",
-        "text": "Erlerne den Kill, Tierverständnis",
+        "text": "Erlerne den Skill, Tierverständnis",
         "skill": "ANIMAL_UNDERSTANDING"
       },
       {
@@ -1071,8 +1079,34 @@
     "text": "Hole dir nun deine Basisausrüstung ab, um dein Abenteuer zu beginnen...",
     "actions": [
       {
-        "type": "GET_INITIAL_ITEMS",
-        "text": "Nimm deine Austrüstung und etwas Gold",
+        "type": "TAKE_BASE_ITEM",
+        "text": "Nimm deien Tunika",
+        "baseItems":"GREEN_TUNIC"
+      },
+      {
+        "type": "TAKE_BASE_ITEM",
+        "text": "Nimm den Ledertasche",
+        "baseItems": "LEATHER_BAG"
+      },
+      {
+        "type": "TAKE_BASE_ITEM",
+        "text": "Nimm die Karte",
+        "baseItems": "MAP"
+      },
+      {
+        "type": "TAKE_BASE_ITEM",
+        "text": "Nimm die Kai Robe",
+        "baseItems": "KAI_ROBE"
+      },
+      {
+        "type": "TAKE_BASE_ITEM",
+        "text": "Nimm einen Ruckaack",
+        "baseItems": "BACKPACK"
+      },
+      {
+        "type": "INITIALIZE_ATTRIBUTE",
+        "attribute": "GOLD",
+        "text": "Du hast Gold erhalten",
         "targetSection": 1
       }
     ]

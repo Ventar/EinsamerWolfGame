@@ -89,7 +89,6 @@ public class GameEngine {
         List<Action> answerOptions = new LinkedList<>();
 
         for (Action action : actions) {
-            System.out.println(action);
             if (actionHandler.get(action.type()).isExecutable(session, action)) {
                 answerOptions.add(action);
             }
@@ -142,30 +141,31 @@ public class GameEngine {
         SectionService sectionService = new SectionService("/ew1.json");
 
         Character character = new Character();
-        character.setWeaponOne(Weapon.AXE);
-        character.addSkill(KaiSkill.HEAL);
-        character.addSkill(KaiSkill.ANIMAL_UNDERSTANDING);
-        character.addSkill(KaiSkill.ARMORY_SWORD);
-        character.addSkill(KaiSkill.THOUGHT_RAY);
-        character.addSkill(KaiSkill.ARMORY_MACE);
-        character.addItemToBackpack(Item.CINDER);
-        character.addItemToBackpack(Item.FIREBOTTLE);
-        character.addItemToBackpack(Item.GOLDENKEY);
-        character.addItemToBackpack(Item.FEARWHEEL);
-        character.addItemToBackpack(Item.GREEN_EMERALD);
-        character.addSpecialItem(SpecialItem.CHAIN_MAIL);
-        character.addSpecialItem(SpecialItem.BELT);
-        character.addSpecialItem(SpecialItem.MAP);
-        character.addSpecialItem(SpecialItem.HELMET);
-        character.endurance().add(26);
+    //    character.setWeaponOne(Weapon.AXE);
+        // character.addSkill(KaiSkill.HEAL);
+        //character.addSkill(KaiSkill.ANIMAL_UNDERSTANDING);
+        //character.addSkill(KaiSkill.ARMORY_SWORD);
+        //character.addSkill(KaiSkill.THOUGHT_RAY);
+        //character.addSkill(KaiSkill.ARMORY_MACE);
+        //character.addBaseItemToBackpack(BaseItems.MAP);
+   //     character.addItemToBackpack(Item.CINDER);
+     //   character.addItemToBackpack(Item.FIREBOTTLE);
+     //   character.addItemToBackpack(Item.GOLDENKEY);
+     //   character.addItemToBackpack(Item.FEARWHEEL);
+     //   character.addItemToBackpack(Item.GREEN_EMERALD);
+     //   character.addSpecialItem(SpecialItem.CHAIN_MAIL);
+     //   character.addSpecialItem(SpecialItem.BELT);
+     //   character.addSpecialItem(SpecialItem.MAP);
+     //   character.addSpecialItem(SpecialItem.HELMET);
+     //   character.endurance().add(26);
         character.endurance().maxValue(26);
-        character.battleStrength().add(14);
-        character.gold().add(20);
-        character.food().add(1);
+     //   character.battleStrength().add(14);
+      //  character.gold().add(20);
+      //  character.food().add(1);
 
         GameSession session = new GameSession();
         session.character(character);
-        session.section(sectionService.getSection(119));
+        session.section(sectionService.getSection(1000));
 
 
         LOG.debug("Created character ::= [{}]", character);

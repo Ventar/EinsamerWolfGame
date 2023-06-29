@@ -4,10 +4,7 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
-import net.atos.wolf.services.character.Item;
-import net.atos.wolf.services.character.KaiSkill;
-import net.atos.wolf.services.character.SpecialItem;
-import net.atos.wolf.services.character.Weapon;
+import net.atos.wolf.services.character.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +34,7 @@ public class Action {
     private boolean noOtherOption;
     private Battle battle;
     private int hand;
+    private BaseItems baseItems;
 
     public Action() {
     }
@@ -57,6 +55,7 @@ public class Action {
         this.value = action.value;
         this.attribute = action.attribute;
         this.item = action.item;
+        this.baseItems = action.baseItems;
         if (action.randomSection != null) {
             this.randomSection = new ArrayList<>();
             for (Integer integer : action.randomSection) {
@@ -82,7 +81,7 @@ public class Action {
 
     @Override
     public int hashCode() {
-        return Objects.hash(type, mandatory, targetSection, skill, text, weapon, specialItem, value, attribute, item, randomSection, numberOfSkills, noOtherOption, battle, hand);
+        return Objects.hash(type, mandatory, targetSection, skill, text, weapon, specialItem, value, attribute, item, randomSection, numberOfSkills, noOtherOption, battle, hand,baseItems);
     }
 
 
@@ -104,6 +103,7 @@ public class Action {
                        ", noOtherOption=" + noOtherOption +
                        ", battle=" + battle +
                        ", hand=" + hand +
+                       ", baseItems=" + baseItems+
                        '}';
     }
 }

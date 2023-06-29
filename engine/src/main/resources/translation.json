@@ -250,9 +250,19 @@
   {
     "key": "KAI_ROBE",
     "de": "Kai-Robe"
+  },
+  {
+    "key": "GREEN_TUNIC",
+    "de": "Güne Tunika"
+  },
+  {
+    "key": "BELT",
+    "de": "Gürtel"
+  },
+  {
+    "key": "LEATHER_BAG",
+    "de": "Ledertasche"
   }
-
-
 
 
 

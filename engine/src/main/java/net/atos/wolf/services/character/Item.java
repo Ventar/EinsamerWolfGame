@@ -14,7 +14,6 @@ public enum Item {
     FOOD(),
     STONE(),
     SALMON(),
-    KAI_CAPE(),
     GUILDPASS(),
     MAGNIFYING_GLASS(),
     MESSING_SCISSOR(),
@@ -30,4 +29,8 @@ public enum Item {
     PROVISCONS(),
     LAMBSHANK(),
     SILVERBRUSH(),
+
+
+
+
 }

@@ -11,7 +11,11 @@ public enum ActionType {
     MODIFY_ATTRIBUTE,
     TAKE_BACKPACK,
     BATTLE,
-    IF_RANDOM_AND_SKILL
+    IF_RANDOM_AND_SKILL,
+
+    TAKE_ITEM,
+    TAKE_BASE_ITEM
+
 
 
 
