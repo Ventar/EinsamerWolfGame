@@ -54,7 +54,7 @@ public class UIService implements ActionSelector {
     private String splitIntoLines(String text, int lineLength) {
 
         StringBuffer stringBuffer = new StringBuffer(text.length() + 20);
-        StringTokenizer stringTokenizer = new StringTokenizer(text, " \n", true);
+        StringTokenizer stringTokenizer = new StringTokenizer(text, "\n", true);
         int count = 0;
 
         while (stringTokenizer.hasMoreTokens()) {
@@ -62,10 +62,10 @@ public class UIService implements ActionSelector {
 
             // ensures that new lines in the JSON file are taken into account during the split, i.e. we reset the counter if we detect a new line
 
-            if (count == 0 && token.equals(" ")) {
+            if (count == 0 && token.equals("")) {
                 count++;
                 continue; // do not start a new line with a white space
-            } else if (!token.equals(" ") && token.equals("\n") || count > lineLength) {
+            } else if (!token.equals("\n") && token.equals("") || count > lineLength) {
                 stringBuffer.append("\n");
 //                stringBuffer.append(token);
                 count = token.length(); // reset the counter, we start a new line
