@@ -51,7 +51,6 @@ public class Character {
      * Add a skill to the character
      *
      * @param kaiSkill
-     *
      * @return
      */
     public void addSkill(KaiSkill kaiSkill) {
@@ -59,11 +58,9 @@ public class Character {
     }
 
 
-
-
-        /**
-         * remove the item from the backpack
-         */
+    /**
+     * remove the item from the backpack
+     */
     public void removeBackpack() {
         backpack.clear();
         hasBackpack = false;
@@ -72,6 +69,7 @@ public class Character {
     public void addBackpack() {
         hasBackpack = true;
     }
+
     public void addBaseBackpack() {
         hasBaseBackpack = true;
     }
@@ -85,10 +83,8 @@ public class Character {
     }
 
 
-
-
     /**
-     * add a item to the backpack
+     * add an item to the backpack
      *
      * @param item
      */
@@ -97,6 +93,7 @@ public class Character {
             backpack.add(item);
         }
     }
+
     public void addBaseItemToBackpack(BaseItems baseItems) {
         if (hasBaseBackpack == true) {
             baseBackpack.add(baseItems);
@@ -188,7 +185,6 @@ public class Character {
      * Returns skill from character skill list, if there is no skill return minus
      *
      * @param pos
-     *
      * @return
      */
     private String getEntryAtPosition(TranslationService translationService, List list, int pos) {
@@ -205,15 +201,15 @@ public class Character {
         StringBuilder buf = new StringBuilder();
 
         buf.append(String.format("Kampfstärke               : %15s    Kai Skill: %-30s    Gegenstände:    %s            Basisausrüstung:      %-30s\n", battleStrength.get(), getEntryAtPosition(translationService,
-                skills, 0), getEntryAtPosition(translationService, backpack, 0),getEntryAtPosition(translationService,baseBackpack,0)));
+                skills, 0), getEntryAtPosition(translationService, backpack, 0), getEntryAtPosition(translationService, baseBackpack, 0)));
         buf.append(String.format("Ausdauer                  : %15s               %-30s                    %-30s     %s\n", endurance.get() + "/" + endurance().maxValue(),
-                getEntryAtPosition(translationService, skills, 1), getEntryAtPosition(translationService, backpack, 1),getEntryAtPosition(translationService,baseBackpack,1)));
+                getEntryAtPosition(translationService, skills, 1), getEntryAtPosition(translationService, backpack, 1), getEntryAtPosition(translationService, baseBackpack, 1)));
         buf.append(String.format("%10s                                                %-30s                    %s\n", "", getEntryAtPosition(translationService, skills, 2), getEntryAtPosition(translationService, backpack, 2)));
         if (weaponOne == null) {
             buf.append(String.format("Waffe 1                   : %15s               %-30s                    %s\n", "-", getEntryAtPosition(translationService, skills, 3),
                     getEntryAtPosition(translationService, backpack, 3)));
         } else {
-            buf.append(String.format("Waffe 1               : %15s               %-30s                    %s\n", translationService.translate(weaponOne.toString()),
+            buf.append(String.format("Waffe 1                   : %15s               %-30s                    %s\n", translationService.translate(weaponOne.toString()),
                     getEntryAtPosition(translationService, skills, 3), getEntryAtPosition(translationService, backpack, 3)));
 
         }
@@ -247,17 +243,18 @@ public class Character {
     @Override
     public String toString() {
         return "Character{" +
-                       "hasBackpack=" + hasBackpack +
-                       ", weaponOne=" + weaponOne +
-                       ", weaponTwo=" + weaponTwo +
-                       ", backpack=" + backpack +
-                       ", specialItemsList=" + specialItemsList +
-                       ", skills=" + skills +
-                       ", gold=" + gold +
-                       ", food=" + food +
-                       ", combatStrength=" + battleStrength +
-                       ", endurance=" + endurance +
-                       '}';
+                "hasBackpack=" + hasBackpack +
+                ", weaponOne=" + weaponOne +
+                ", weaponTwo=" + weaponTwo +
+                ", backpack=" + backpack +
+                ", specialItemsList=" + specialItemsList +
+                ", skills=" + skills +
+                ", gold=" + gold +
+                ", food=" + food +
+                ", combatStrength=" + battleStrength +
+                ", endurance=" + endurance +
+                '}';
+
 
     }
 }

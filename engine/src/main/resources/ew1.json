@@ -209,6 +209,22 @@
     ]
   },
   {
+    "sectionNumber": 93,
+    "text": "Du verlässt die Rüstkammer durch eine Tür, die zum Erdgeschoss\neines der Wehrtürme der Abtei führt. Du hoffst inständig, dass die\nBarbakane und ihr befestigter Wehrgang, der das Haupttor schützt,\nnoch nicht gefallen sind, denn dann könntest du über den Wehrgang\nden zweiten Torturm erreichen. Von dort aus wäre es dir möglich, in\ndie angrenzenden Ställe zu gelangen, um dir auf diesem Weg Zutritt\nzum Turm der Sonne zu verschaffen.\nDu weißt, dass es in der Nordwand der Ställe ein Steintor gibt, das\nvon den Kai-Meistern und Großmeister Tapfere Klinge genutzt wird,\nwenn sie Pferde für ihre weiten Reisen benötigen.\nEine breite steinerne Wendeltreppe führt hinauf auf den ersten\nTurm. Als du sie emporsteigst, erschüttert das Donnern einer\nschweren Explosion den Boden unter deinen Füßen. Schließlich\nerreichst du das obere Ende der Wendeltreppe und entdeckst, dass\ndie Kammer des Turmausgucks mit Rauch gefüllt ist. Auf dem\nSteinboden zusammengekrümmt liegt der leblose Körper eines\nTurmwächters; aus seiner Schädeldecke ragt ein schwarz gefiederter\nPfeil. Der Gefallene liegt neben einer Leiter, die unter einer auf das\nTurmdach führenden Falltür steht.\nDurch den beißenden Qualm siehst du einen dunklen Umriss, der\nsich am oberen Ende der Leiter bewegt. Zwar brennt dir der Rauch\nin den Augen und erschwert dir die Sicht, doch deine Sinne sagen dir\nsofort, dass es sich um einen Krieger der Giak-Sturmtruppen\nhandelt. Dieser todbringende Feind wurde auf dem Dach abgesetzt\nund hat es geschafft, sich durch die schmale Falltür einen Weg ins\nInnere des Turms zu erkämpfen. Als der Giak heruntersteigt, spürst\ndu, dass er nicht alleine ist – hinter ihm drängen noch weitere die\nLeiter herab.\nZu deiner Rechten liegt ein Bogengang, der auf den befestigten\nWehrgang über dem Haupttor führt. Am anderen Ende des\nÜbergangs befindet sich die Tür zum zweiten Wachturm",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 409,
+        "text": "Tritt die Leiter um"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 45,
+        "text": "Betrete den Wehrgang "
+      }
+    ]
+  },
+  {
     "sectionNumber": 117,
     "text": "Der Giak stößt zu, und rasch springst du zur Seite, um nicht von seinem Speer aufgespießt zu werden. Dabei verlierst du deine Waffe, und obwohl dich deine schnelle Reaktion vor dem Tod bewahrt hat, entgehst du nicht ganz einer Verletzung, als die Speerspitze deine Schulter streift. (Du verlierst 1 AUSDAUERPUNKT.) Meister Sternenfeuer spürt, dass du in Schwierigkeiten bist. Während du dich aufrappelst, zieht er mit der Linken sein Schwert und wirft es dir mit dem Heft voran zu. Du fängst die Waffe am Griff und hältst sie vor dich, gerade noch rechtzeitig, um einen zweiten Speerstoß des Giak abzuwehren. Voller Wut und Enttäuschung kreischt die Kreatur auf und stürzt sich nun in einer wilden Attacke auf dich.",
     "actions": [
@@ -667,6 +683,30 @@
     ]
   },
   {
+    "sectionNumber": 358,
+    "text": "Du eilst auf die Brüstungsmauer am Ende von Pelethars Gefechtslinie zu, wo der Feind nur drei Reihen tief steht. Die hier kämpfenden Giak ahnen nichts von deinem Überraschungsangriff, und so gelingt es dir, ihre hintere Reihe niederzustrecken, noch bevor sie reagieren können. Laut brüllst du deinen Schlachtruf: „Für Sommerlund und die Kai!“ und benutzt einen erschlagenen Giak, um in die Luft zu springen und einen weiten Satz über die Kampflinie zu machen. Die angeschlagenen Männer des Prinzen hören deinen Kampfschrei durch den Schlachtenlärm, und Jubel durch ihre Reihen, als sie sehen, wie du über die Köpfe deiner Feinde hinweg springst. Knapp hinter der Reihe der Ritter landest du auf den Pflastersteinen und rollst dich ab, um den Aufprall abzumildern. Einen Moment später hilft dir ein stämmiger Wachoffizier auf die Beine und zieht dir die Kapuze vom Kopf. Als er deine sommerlendischen Züge erblickt, erscheint ein Lächeln auf seinem rußigen und blutverschmierten Gesicht „Gut gekämpft, junger Mann!“, ruft er, „aber wo sind die anderen Kai? Haben sie die Alema Mitra bereits zurückerobert? Greifen sie den feindlichen Nachschub an?“ „Nein, Sergeant“, antwortest du und schüttelst den Kopf. „Ich … ich bin der einzige Kai.“ Deine Antwort erschüttert den zähen Krieger sichtlich. „Zum Torbogen!“, brüllt er dann und befiehlt seinen Männern den Rückzug. „Dort formieren wir uns neu und bilden eine neue Verteidigungslinie.“ Durch die Rauchschwaden siehst du, wie zwei Soldaten den verwundeten Prinzen vom Schlachtfeld tragen. Einige Ritter haben sich in einem Halbkreis um sie formiert und kämpfen nun Schulter an Schulter, um einen Schutzwall gegen den vordringenden Feind zu bilden. Plötzlich tritt der Gourgaz aus dem Schlachtenrauch. Bedrohlich ragt er über den Rittern auf, die gewaltige Axt zum Schlag erhoben. Mit einem schrecklichen Brüllen zerschmettert er den Schutzwall um den Prinzen und fegt die Ritter beiseite wie loses Laub im Sturm. Die Soldaten, die den Prinzen tragen, werden beide niedergeworfen, und auch der Prinz stürzt zu Boden. Der Gourgaz macht einen Schritt nach vorne und hebt abermals seine Axt. Von der Pfeilwunde geschwächt und zu kraftlos, um sich zu wehren, greift Pelethar nach einem fallen gelassenen Schild und hält ihn schützend über sich. Der Gourgaz stößt ein verächtliches Lachen aus, als er sieht, wie sich Pelethar hinter den Schild kauert. Er weiß nur zu gut, dass es den Prinzen nicht vor dem tödlichen Hieb seiner messerscharfen Axt bewahren wird. Da die Leibwächter des Prinzen bereits von der Bestie zerschmettert wurden, bist jetzt nur noch du allein in der Lage, Pelethars Leben zu retten. Ohne einen Augenblick zu zögern, ziehst du deine Waffe und greifst den mächtigen Gourgaz an",
+    "actions": [
+      {
+        "type": "BATTLE",
+        "text": "Starte den Kampf",
+        "battle": {
+          "enemy": [
+            {
+              "name": "Giak_Sturmtruppen",
+              "battleStrength": 14,
+              "endurance": 15
+            },
+            {
+              "type": "CHANGE_SECTION",
+              "text": "Du hat den Kampf Gewonnen",
+              "targetSection": 258
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
     "sectionNumber": 385,
     "text": "Mit zusammengebissenen Zähnen rappelst du dich auf und stolperst auf den Turm am Ende des Wehrgangs zu. Das Tor ist unverschlossen und es gelingt dir, den Turm ungesehen zu betreten. Rasch durchquerst du das Gebäude und eilst, so schnell es dir möglich ist, über den Laufgang des dritten Brückenabschnitts bis zu den nächsten beiden Türmen und den Torbögen, die den Zugang zum Durnenstein sichern. In einem engen Tunnel, der durch den nächstgelegenen Turm führt, hältst du kurz an, um dein verwundetes Bein zu verbinden. Auf dem gepflasterten Platz unterhalb des Turms tobt die Schlacht. Im Zentrum dieser prächtigen Piazza liefern sich die Soldaten Prinz Pelethars ein tödliches Gefecht mit den Sturmtruppen des Schwarzen Lords Zagarna. Der Feind ist in der Überzahl und versucht durch die Reihen der Männer des Prinzen zu brechen, doch Pelethars Soldaten kämpfen wie die Löwen und halten ihre Gegner in Schach. Inmitten von Rauch und Schlachtgetümmel siehst du den Prinzen im Kampf mit einer riesigen, reptilienhaften Kreatur. Es handelt sich um einen Gourgaz, einen furchterregenden Bewohner der Maakensümpfe. Zagarna hat diese mörderische Bestie damit betraut, den Angriff auf die Alemabrücke anzuführen, und zwar aus zwei Gründen: Nicht nur ist der Gourgaz ein furchtloser und gnadenloser Gegner im Nahkampf, er verströmt auch einen Duftstoff, der die Giak in einen wilden Kampfrausch fallen lässt. Unter dem Einfluss dieses geruchslosen Stoffes kämpfen sie, ohne zu ermüden oder auf ihre eigene Sicherheit zu achten. Aufrecht auf seinen kräftigen Hinterbeinen stehend, überragt der Gourgaz die anderen Kämpfer der Schlacht und führt seine gewaltige schwarze Streitaxt mit schrecklicher Wirkung. Prinz Pelethars Silberrüstung glänzt wie ein Spiegel in der Morgensonne. Sein weißer Waffenrock ist mit einem geflügelten Pferd, seinem persönlichen Wappen, bestickt, und sein messerscharfes Breitschwert zieren die stolzen Symbole Sommerlunds und des Hauses Ulnar. Pelethar scheint den mörderischen Zweikampf gegen den grausamen Gourgaz zu gewinnen, bis ihn plötzlich ein Pfeil trifft. Das Giak-Geschoss hat die Kettenpanzerung unter seiner rechten Achsel durchschlagen, und dein Herz setzt für einen Augenblick aus, als du siehst, wie er aufschreit und ins Straucheln gerät. Als der Gourgaz spürt, wie nahe nun der Sieg ist, holt er zu einem mächtigen Hieb aus, um seine gewaltige Axt auf den Helm des Prinzen herabsausen zu lassen, doch einer von Pelethars Männern stößt ihn zur Seite, als die schwarze Klinge niederfährt. Sein rasches Eingreifen rettet seinem verwundeten Herrn das Leben, er selbst jedoch büßt seinen rechten Unterarm ein, als die Axt mit brutaler Wucht aufschlägt. Durch Pelethars Verwundung wendet sich das Blatt nun zugunsten des Feindes. Wenn du dich den Männern des Prinzen anschließen willst, bevor diese gezwungen sind, sich vom Durnenstein zurückzuziehen, musst du dich beeilen. Von deiner Position im Turmgang aus siehst du zwei Möglichkeiten, auf den Platz hinunter zu gelangen: Der erste Weg führt über eine breite Marmortreppe; die zweite Gelegenheit bietet ein Frachtseil, das an einem Seilzug an der Turmwand herunterhängt.",
     "actions": [
@@ -704,6 +744,17 @@
             }
           ]
         }
+      }
+    ]
+  },
+  {
+    "sectionNumber": 409,
+    "text": "Du holst mit deinem Bein aus und trittst, so hart du nur kannst,\ngegen das untere Ende der Leiter. Das alte graue Holz splittert, und\ndie Leiter dreht sich heftig zur Seite. Von oben schreien die Giak\nerschrocken auf, als sie plötzlich den Halt verlieren. Wild mit den\nArmen rudernd stürzen sie durch die rauchgeschwängerte Luft und\nschlagen mit einem dumpfen Krachen auf dem Steinboden auf.\nZwei von ihnen hat der Sturz sofort getötet, und der Dritte liegt halb\nbewusstlos und stark blutend am Boden. Bevor er wieder zu sich\nkommt, hast du ihn mit einem schnellen Schlag auf den grauen,\nlederartigen Hals getötet.\nPlötzlich schlägt knapp neben dir ein Pfeil auf dem Boden auf und\nzersplittert zu Kleinholz. Als du durch die Rauschwaden nach oben\nblickst, entdeckst du durch die offene Falltür einen Giak Bogenschützen.\nEr stößt einen wilden Fluch aus und greift in seinen Köcher, um\neinen zweiten Pfeil zu ziehen, doch bevor er erneut zielen kann, bist\ndu bereits auf die Galerie der Barbakane geflohen.",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 358,
+        "text": "Weiter"
       }
     ]
   },

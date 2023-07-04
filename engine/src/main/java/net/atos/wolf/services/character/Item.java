@@ -29,6 +29,7 @@ public enum Item {
     PROVISCONS(),
     LAMBSHANK(),
     SILVERBRUSH(),
+    LAUMSPUR_POTION(),
 
 
 

@@ -165,7 +165,7 @@ public class GameEngine {
 
         GameSession session = new GameSession();
         session.character(character);
-        session.section(sectionService.getSection(1000));
+        session.section(sectionService.getSection(358));
 
 
         LOG.debug("Created character ::= [{}]", character);
