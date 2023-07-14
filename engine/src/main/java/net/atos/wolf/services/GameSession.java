@@ -1,5 +1,7 @@
 package net.atos.wolf.services;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import net.atos.wolf.services.action.Action;
@@ -8,11 +10,16 @@ import net.atos.wolf.services.action.Enemy;
 import net.atos.wolf.services.character.Character;
 import net.atos.wolf.services.section.Section;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 @Getter
 @Setter
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class GameSession {
 
     /**
@@ -39,6 +46,11 @@ public class GameSession {
      * Battle round counter.
      */
     private int battleRounds;
+
+    /**
+     * update time to see how long a sessions exists
+     */
+    private long lastUsed;
 
     /**
      * Sets a new section to the session, possible modified answer options were cleared.
