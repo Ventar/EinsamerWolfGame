@@ -210,7 +210,7 @@
   },
   {
     "sectionNumber": 93,
-    "text": "Du verlässt die Rüstkammer durch eine Tür, die zum Erdgeschoss\neines der Wehrtürme der Abtei führt. Du hoffst inständig, dass die\nBarbakane und ihr befestigter Wehrgang, der das Haupttor schützt,\nnoch nicht gefallen sind, denn dann könntest du über den Wehrgang\nden zweiten Torturm erreichen. Von dort aus wäre es dir möglich, in\ndie angrenzenden Ställe zu gelangen, um dir auf diesem Weg Zutritt\nzum Turm der Sonne zu verschaffen.\nDu weißt, dass es in der Nordwand der Ställe ein Steintor gibt, das\nvon den Kai-Meistern und Großmeister Tapfere Klinge genutzt wird,\nwenn sie Pferde für ihre weiten Reisen benötigen.\nEine breite steinerne Wendeltreppe führt hinauf auf den ersten\nTurm. Als du sie emporsteigst, erschüttert das Donnern einer\nschweren Explosion den Boden unter deinen Füßen. Schließlich\nerreichst du das obere Ende der Wendeltreppe und entdeckst, dass\ndie Kammer des Turmausgucks mit Rauch gefüllt ist. Auf dem\nSteinboden zusammengekrümmt liegt der leblose Körper eines\nTurmwächters; aus seiner Schädeldecke ragt ein schwarz gefiederter\nPfeil. Der Gefallene liegt neben einer Leiter, die unter einer auf das\nTurmdach führenden Falltür steht.\nDurch den beißenden Qualm siehst du einen dunklen Umriss, der\nsich am oberen Ende der Leiter bewegt. Zwar brennt dir der Rauch\nin den Augen und erschwert dir die Sicht, doch deine Sinne sagen dir\nsofort, dass es sich um einen Krieger der Giak-Sturmtruppen\nhandelt. Dieser todbringende Feind wurde auf dem Dach abgesetzt\nund hat es geschafft, sich durch die schmale Falltür einen Weg ins\nInnere des Turms zu erkämpfen. Als der Giak heruntersteigt, spürst\ndu, dass er nicht alleine ist – hinter ihm drängen noch weitere die\nLeiter herab.\nZu deiner Rechten liegt ein Bogengang, der auf den befestigten\nWehrgang über dem Haupttor führt. Am anderen Ende des\nÜbergangs befindet sich die Tür zum zweiten Wachturm",
+    "text": "Du verlässt die Rüstkammer durch eine Tür, die zum Erdgeschoss eines der Wehrtürme der Abtei führt. Du hoffst inständig, dass die Barbakane und ihr befestigter Wehrgang, der das Haupttor schützt, noch nicht gefallen sind, denn dann könntest du über den Wehrgang den zweiten Torturm erreichen. Von dort aus wäre es dir möglich, in die angrenzenden Ställe zu gelangen, um dir auf diesem Weg Zutritt zum Turm der Sonne zu verschaffen. Du weißt, dass es in der Nordwand der Ställe ein Steintor gibt, das von den Kai-Meistern und Großmeister Tapfere Klinge genutzt wird, wenn sie Pferde für ihre weiten Reisen benötigen. Eine breite steinerne Wendeltreppe führt hinauf auf den ersten Turm. Als du sie emporsteigst, erschüttert das Donnern einer schweren Explosion den Boden unter deinen Füßen. Schließlich erreichst du das obere Ende der Wendeltreppe und entdeckst, dass die Kammer des Turmausgucks mit Rauch gefüllt ist. Auf dem Steinboden zusammengekrümmt liegt der leblose Körper eines Turmwächters; aus seiner Schädeldecke ragt ein schwarz gefiederter Pfeil. Der Gefallene liegt neben einer Leiter, die unter einer auf das Turmdach führenden Falltür steht. Durch den beißenden Qualm siehst du einen dunklen Umriss, der sich am oberen Ende der Leiter bewegt. Zwar brennt dir der Rauch in den Augen und erschwert dir die Sicht, doch deine Sinne sagen dir sofort, dass es sich um einen Krieger der Giak-Sturmtruppen handelt. Dieser todbringende Feind wurde auf dem Dach abgesetzt und hat es geschafft, sich durch die schmale Falltür einen Weg ins Innere des Turms zu erkämpfen. Als der Giak heruntersteigt, spürst du, dass er nicht alleine ist – hinter ihm drängen noch weitere die Leiter herab. Zu deiner Rechten liegt ein Bogengang, der auf den befestigten Wehrgang über dem Haupttor führt. Am anderen Ende des Übergangs befindet sich die Tür zum zweiten Wachturm",
     "actions": [
       {
         "type": "CHANGE_SECTION",
@@ -396,6 +396,17 @@
     ]
   },
   {
+    "sectionNumber": 156,
+    "text": "Deine übernatürlichen Sinne sind durch die vielfachen Gefahren um dich herum geschärft worden. Instinktiv wird dein Blick von dem Drakkar angezogen, der sich gerade anschickt, seine Armbrust abzufeuern. Du spürst, dass er für dich in diesem Augenblick die größte Gefahr darstellt. Rasch konzentrierst du dich auf seinen schwarzen Helm und richtest eine Welle reiner mentaler Energie auf ihn. Der Impuls, den du freisetzt, ist schwach und unbeständig, aber er reicht aus, um den Feind beim Zielen zu stören und so dein Leben zu retten. Als der Drakkar seinen stählernen Bolzen abfeuert, fliegt dieser geradewegs auf dich zu … und verfehlt dich um Haaresbreite.",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 291,
+        "text": "Weiter"
+      }
+    ]
+  },
+  {
     "sectionNumber": 166,
     "text": "Du ziehst deine Axt aus dem Gürtel und schleuderst sie den dunklen Korridor hinunter. Dein Wurf war gut und wohl gezielt, und mit einem dumpfen „Tock“ schlägt die wirbelnde Klinge in den Hinterkopf der Kreatur, spaltet ihren eisernen Helm und gräbt sich tief in ihr Gehirn. Der Giak ist bereits tot, als sein schlaffer Körper zwischen den Leichen seiner abscheulichen Kameraden zu Boden stürzt. So schnell du kannst, rennst du den Gang hinunter, besorgt, dein Freund könnte schwer verletzt sein. Glücklicherweise sieht die Wunde schlimmer aus, als sie tatsächlich ist, und Schneefalke ist schon bald in der Lage, die Blutung mithilfe seiner eigenen Kai Heilkunst zu stillen. „Du warst schon immer der beste Werfer beim Greel“, sagt er mit einem Grinsen, während du ihm mit dem Saum deines Kai-Umhangs vorsichtig das Blut aus den Augen wischst. Als er schließlich wieder richtig sehen kann, greifst du nach unten und ziehst deine Axt aus dem Schädel des toten Giak. Dann säuberst du die Klinge an dessen Tunika, bevor du die Waffe wieder in deinen Gürtel steckst.  „Gut für dich, dass ich jeden Tag geübt habe!“, erwiderst du. „Ich danke dir, mein Freund“, sagt Schneefalke. „Du hast mir das Leben gerettet. Ich hoffe, dass ich diesen Gefallen eines Tages erwidern kann, doch nun muss ich mich in den Kampf stürzen. Die Giak sind überall, und ich fürchte, dass die Abtei fallen wird. Komm mit mir! Wir werden Seite an Seite kämpfen, wie wahre Kai-Brüder.“ Du erklärst Schneefalke, dass du einen wichtigen Auftrag für Meister Sternenfeuer ausführen musst, dass du dich ihm jedoch anschließen wirst, sobald dieser erledigt ist. „Dann sei Kai mit dir, Lautloser Wolf“, ruft er, als er forteilt, um sich der Schlacht anzuschließen. „Möge Kai an diesem Tag mit uns allen sein“, antwortest du, dann salutierst du und blickst deinem tapferen Freund nach, bis er hinter der nächsten Ecke verschwunden ist. Mit einem wachsenden Gefühl des Grauens kehrst du zur Tür der Rüstkammer zurück, stößt sie auf und betrittst den Raum. ",
     "actions": [
@@ -484,6 +495,29 @@
             }
           ]
         }
+      }
+    ]
+  },
+  {
+    "sectionNumber": 258,
+    "text": "Durch das Loch in der Turmmauer kannst du weitere Kraan und Zlaanbestien erkennen, die sich aus westlicher Richtung nähern. Da deine Sicht durch die wogenden Rauchwolken getrübt ist, die nun viel dichter sind als zuvor, erhaschst du jedoch nur einen flüchtigen Blick auf diese dritte Angriffswelle. Die einzelnen Brandherde auf den Mauern haben sich nun zu einem gewaltigen Feuer vereint, und der gesamte Nordwestflügel der Abtei brennt lichterloh. Dein Magen verkrampft sich, als du die furchtbare Zerstörung siehst, aber du weißt, dass die Erfüllung von Meister Sternenfeuers Aufgabe keinen Aufschub zulässt. Mit wachsender Furcht steigst du die Treppe hinunter und läufst den Gang entlang, der vom Turm zu den Ställen führt. Die verstärkte Eichentür des Stalls ist verschlossen. Aus den Türritzen steigen Rauchfahnen auf, und der Eisenriegel fühlt sich heiß an, als zu ihn zurückschiebst. Rasch ziehst du deine Kapuze über und hüllst dich eng in deinen Umhang. Dann holst du tief Luft und reißt die Tür auf. Das Feuer hat sich durch die Mitte des Stalldachs gefressen, und nun stürzen Ziegel und brennende Balken von oben herab. Der Stall ist in mehrere Pferdeboxen unterteilt, aber glücklicherweise scheinen die Tiere der Feuersbrunst entkommen zu sein, denn das Haupttor, das auf das Trainingsgelände führt, steht weit offen. Plötzlich hörst du das Wiehern zweier verängstigter Pferde, die noch immer in ihren Boxen am anderen Ende des Stalls gefangen sind. Tapfer bahnst du dir einen Weg durch die brennenden Trümmer und befreist das erste Pferd aus seinem Stall. Als du die Box des zweiten Pferdes erreichst, rutscht dir das Herz in die Hose. Das Portal zum Turm der Sonne ist von einem Gewirr aus lodernden Balken und zerschmetterten Dachziegeln blockiert, und der Zugang über diesen Weg ist nun unmöglich. Durch das klaffende Loch in der Decke kannst du die Turmspitze sehen, die aus dem Rauch und den Flammen emporragt. Dort oben tobt ein erbitterter Kampf rund um die Kristallspitze. Ein letzter verbliebener Kai-Wächter verteidigt tapfer das Signalfeuer gegen die Angriffe eines Giak-Stoßtrupps, der von einem Kraan auf dem Turmdach abgesetzt wurde. Du befürchtest, dass dieser einzelne tapfere Kai die Stellung nicht mehr lange halten können wird, und beschließt daher, schnellstmöglich einen anderen Weg in den Turm zu finden. Da das Haupttor blockiert ist, gibt es nun nur noch einen einzigen Weg, um vom Klostergelände in den Turm zu gelangen: durch die Kai-Kapelle im nordöstlichen Teil der Abtei. Um die Kapelle zu erreichen, musst du jedoch das Übungsgelände durchqueren, das sich inzwischen in ein brennendes Schlachtfeld verwandelt hat. Du öffnest die Box und schwingst dich auf den Rücken des verängstigten Pferdes, sobald es durch das geöffnete Gatter prescht. Wild entschlossen klammerst du dich an der Mähne des Tieres fest und versuchst es sicher durch das Schlachtgetümmel zu lenken, das dich draußen erwartet. Der Feind ist nun noch zahlreicher als zuvor, und nur eine Handvoll Kai bekämpft ihn noch unter freiem Himmel. Das unerwartete Erscheinen eines einzelnen Reiters verwirrt die Giak so sehr, dass sie auf deinem Ritt zur Kapelle kaum Gegenwehr leisten. Jene, die versuchen dich aufzuhalten, werden von den Hufen deines Pferdes niedergetrampelt, bevor sie in der Lage sind, einen Schlag zu führen. Die Geschwindigkeit und Verwegenheit deines Unternehmens bringen dich sicher über das Übungsgelände, und bald schon bist du nur noch wenige Meter von der Tür der Kapelle entfernt, wo eine kleine Gruppe von Kai entschlossen den Eingang verteidigt. Gerade willst du absteigen und die letzten Meter zur Tür laufen, als ein feindlicher Soldat in einer schwarzen Vollrüstung auf dich aufmerksam wird und seine Armbrust anlegt. Es ist ein Drakkar, ein Angehöriger eines brutalen Volkes menschlicher Krieger, die in den Diensten des Schwarzen Lords Zagarna stehen und mit der dritten Angriffswelle im Kloster angekommen sind. Kalt und erbarmungslos verfolgt der kampferfahrene Soldat deine Bewegungen, dann zielt er in aller Ruhe und drückt langsam den Abzug seiner schweren Armbrust.",
+    "actions": [
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 156,
+        "text": "Du setzt Gedankenstrahl ein",
+        "skill": "THOUGHT_RAY"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 344,
+        "text": "Du setzt Geist über Materie ein",
+        "skill": "MIND_OVER_MATTER"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 464,
+        "text": "Weiter"
       }
     ]
   },
@@ -684,8 +718,15 @@
   },
   {
     "sectionNumber": 358,
-    "text": "Du eilst auf die Brüstungsmauer am Ende von Pelethars Gefechtslinie zu, wo der Feind nur drei Reihen tief steht. Die hier kämpfenden Giak ahnen nichts von deinem Überraschungsangriff, und so gelingt es dir, ihre hintere Reihe niederzustrecken, noch bevor sie reagieren können. Laut brüllst du deinen Schlachtruf: „Für Sommerlund und die Kai!“ und benutzt einen erschlagenen Giak, um in die Luft zu springen und einen weiten Satz über die Kampflinie zu machen. Die angeschlagenen Männer des Prinzen hören deinen Kampfschrei durch den Schlachtenlärm, und Jubel durch ihre Reihen, als sie sehen, wie du über die Köpfe deiner Feinde hinweg springst. Knapp hinter der Reihe der Ritter landest du auf den Pflastersteinen und rollst dich ab, um den Aufprall abzumildern. Einen Moment später hilft dir ein stämmiger Wachoffizier auf die Beine und zieht dir die Kapuze vom Kopf. Als er deine sommerlendischen Züge erblickt, erscheint ein Lächeln auf seinem rußigen und blutverschmierten Gesicht „Gut gekämpft, junger Mann!“, ruft er, „aber wo sind die anderen Kai? Haben sie die Alema Mitra bereits zurückerobert? Greifen sie den feindlichen Nachschub an?“ „Nein, Sergeant“, antwortest du und schüttelst den Kopf. „Ich … ich bin der einzige Kai.“ Deine Antwort erschüttert den zähen Krieger sichtlich. „Zum Torbogen!“, brüllt er dann und befiehlt seinen Männern den Rückzug. „Dort formieren wir uns neu und bilden eine neue Verteidigungslinie.“ Durch die Rauchschwaden siehst du, wie zwei Soldaten den verwundeten Prinzen vom Schlachtfeld tragen. Einige Ritter haben sich in einem Halbkreis um sie formiert und kämpfen nun Schulter an Schulter, um einen Schutzwall gegen den vordringenden Feind zu bilden. Plötzlich tritt der Gourgaz aus dem Schlachtenrauch. Bedrohlich ragt er über den Rittern auf, die gewaltige Axt zum Schlag erhoben. Mit einem schrecklichen Brüllen zerschmettert er den Schutzwall um den Prinzen und fegt die Ritter beiseite wie loses Laub im Sturm. Die Soldaten, die den Prinzen tragen, werden beide niedergeworfen, und auch der Prinz stürzt zu Boden. Der Gourgaz macht einen Schritt nach vorne und hebt abermals seine Axt. Von der Pfeilwunde geschwächt und zu kraftlos, um sich zu wehren, greift Pelethar nach einem fallen gelassenen Schild und hält ihn schützend über sich. Der Gourgaz stößt ein verächtliches Lachen aus, als er sieht, wie sich Pelethar hinter den Schild kauert. Er weiß nur zu gut, dass es den Prinzen nicht vor dem tödlichen Hieb seiner messerscharfen Axt bewahren wird. Da die Leibwächter des Prinzen bereits von der Bestie zerschmettert wurden, bist jetzt nur noch du allein in der Lage, Pelethars Leben zu retten. Ohne einen Augenblick zu zögern, ziehst du deine Waffe und greifst den mächtigen Gourgaz an",
+    "text": "Als du durch den beschädigten, staubverhangenen Gang auf den zweiten Torturm zuläufst, erbebt der Boden und eine Ladung Putz regnet von der Decke auf dich herab. Rasch stößt du die Turmtür auf und wirst Zeuge einer Szene, die dich vor Wut und Empörung aufschreien lässt: Eine Explosion hat ein großes Loch in die äußere Turmwand gerissen, die drei Kai-Schildwachen getötet, die hier postiert waren, und es dem Feind erlaubt, ohne Gegenwehr einzudringen. Zwei Giak kauern gerade über den Leichen deiner toten Kameraden und verstümmeln sie voller Häme mit ihren langen, gezackten Messern. Rasend vor Wut und Abscheu, ziehst du deine Waffe und stürzt dich auf die Unholde, bevor sie sich mit ihren grausamen Klingen zur Wehr setzen können.",
     "actions": [
+      {
+        "type": "MODIFY_ATTRIBUTE",
+        "mandatory": true,
+        "value": 2,
+        "attribute": "BATTLE_STRENGTH",
+        "text": "Durch deinen Hass bist du Stärker"
+      },
       {
         "type": "BATTLE",
         "text": "Starte den Kampf",
@@ -695,10 +736,12 @@
               "name": "Giak_Sturmtruppen",
               "battleStrength": 14,
               "endurance": 15
-            },
+            }
+          ],
+          "targetSectionBattleRound": [
             {
-              "type": "CHANGE_SECTION",
-              "text": "Du hat den Kampf Gewonnen",
+              "min": 0,
+              "max": 99,
               "targetSection": 258
             }
           ]
@@ -749,7 +792,7 @@
   },
   {
     "sectionNumber": 409,
-    "text": "Du holst mit deinem Bein aus und trittst, so hart du nur kannst,\ngegen das untere Ende der Leiter. Das alte graue Holz splittert, und\ndie Leiter dreht sich heftig zur Seite. Von oben schreien die Giak\nerschrocken auf, als sie plötzlich den Halt verlieren. Wild mit den\nArmen rudernd stürzen sie durch die rauchgeschwängerte Luft und\nschlagen mit einem dumpfen Krachen auf dem Steinboden auf.\nZwei von ihnen hat der Sturz sofort getötet, und der Dritte liegt halb\nbewusstlos und stark blutend am Boden. Bevor er wieder zu sich\nkommt, hast du ihn mit einem schnellen Schlag auf den grauen,\nlederartigen Hals getötet.\nPlötzlich schlägt knapp neben dir ein Pfeil auf dem Boden auf und\nzersplittert zu Kleinholz. Als du durch die Rauschwaden nach oben\nblickst, entdeckst du durch die offene Falltür einen Giak Bogenschützen.\nEr stößt einen wilden Fluch aus und greift in seinen Köcher, um\neinen zweiten Pfeil zu ziehen, doch bevor er erneut zielen kann, bist\ndu bereits auf die Galerie der Barbakane geflohen.",
+    "text": "Du holst mit deinem Bein aus und trittst, so hart du nur kannst, gegen das untere Ende der Leiter. Das alte graue Holz splittert, und die Leiter dreht sich heftig zur Seite. Von oben schreien die Giak erschrocken auf, als sie plötzlich den Halt verlieren. Wild mit den Armen rudernd stürzen sie durch die rauchgeschwängerte Luft und schlagen mit einem dumpfen Krachen auf dem Steinboden auf. Zwei von ihnen hat der Sturz sofort getötet, und der Dritte liegt halb bewusstlos und stark blutend am Boden. Bevor er wieder zu sich kommt, hast du ihn mit einem schnellen Schlag auf den grauen, lederartigen Hals getötet. Plötzlich schlägt knapp neben dir ein Pfeil auf dem Boden auf und zersplittert zu Kleinholz. Als du durch die Rauschwaden nach oben blickst, entdeckst du durch die offene Falltür einen Giak Bogenschützen. Er stößt einen wilden Fluch aus und greift in seinen Köcher, um einen zweiten Pfeil zu ziehen, doch bevor er erneut zielen kann, bist du bereits auf die Galerie der Barbakane geflohen.",
     "actions": [
       {
         "type": "CHANGE_SECTION",
@@ -1066,7 +1109,7 @@
   },
   {
     "sectionNumber": 1003,
-    "text": "Damit stehen deine Basiswerte fest:        \nAusdauer: ${ENDURANCE}      \nKampfstärke: ${BATTLE_STRENGTH}    \nAls anhänger der Kai, wurdest du in in den Kai Disziplinen unterwiesen. Wähle hier fünf der Kai Disziplinen aus die dich auf deinem Abenteuer unterstützen. Wähle weise, die Disziplinen sind wichtig um gewissen Herausforderungen zu bewältigen.",
+    "text": "Damit stehen deine Basiswerte fest:         Ausdauer: ${ENDURANCE}       Kampfstärke: ${BATTLE_STRENGTH}     Als anhänger der Kai, wurdest du in in den Kai Disziplinen unterwiesen. Wähle hier fünf der Kai Disziplinen aus die dich auf deinem Abenteuer unterstützen. Wähle weise, die Disziplinen sind wichtig um gewissen Herausforderungen zu bewältigen.",
     "actions": [
       {
         "type": "CHANGE_SECTION",

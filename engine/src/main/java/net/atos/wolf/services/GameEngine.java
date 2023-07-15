@@ -142,7 +142,7 @@ public class GameEngine {
 
         Character character = new Character();
     //    character.setWeaponOne(Weapon.AXE);
-        // character.addSkill(KaiSkill.HEAL);
+       //  character.addSkill(KaiSkill.RAGE);
         //character.addSkill(KaiSkill.ANIMAL_UNDERSTANDING);
         //character.addSkill(KaiSkill.ARMORY_SWORD);
         //character.addSkill(KaiSkill.THOUGHT_RAY);
@@ -157,9 +157,9 @@ public class GameEngine {
      //   character.addSpecialItem(SpecialItem.BELT);
      //   character.addSpecialItem(SpecialItem.MAP);
      //   character.addSpecialItem(SpecialItem.HELMET);
-     //   character.endurance().add(26);
+        character.endurance().add(26);
         character.endurance().maxValue(26);
-     //   character.battleStrength().add(14);
+        character.battleStrength().add(14);
       //  character.gold().add(20);
       //  character.food().add(1);
 

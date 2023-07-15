@@ -35,6 +35,7 @@ public class Action {
     private Battle battle;
     private int hand;
     private BaseItems baseItems;
+    private int battleStrengthModifier;
 
     public Action() {
     }
@@ -56,6 +57,7 @@ public class Action {
         this.attribute = action.attribute;
         this.item = action.item;
         this.baseItems = action.baseItems;
+        this.battleStrengthModifier =action.battleStrengthModifier;
         if (action.randomSection != null) {
             this.randomSection = new ArrayList<>();
             for (Integer integer : action.randomSection) {

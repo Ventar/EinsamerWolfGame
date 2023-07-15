@@ -18,6 +18,7 @@ public class Enemy {
     private int endurance;
     private boolean thoughRayResistance;
 
+
     public Enemy() {}
 
     ;

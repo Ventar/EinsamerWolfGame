@@ -23,6 +23,7 @@ public enum KaiSkill {
     THOUGHT_RAY(),
     ANIMAL_UNDERSTANDING(),
     MIND_OVER_MATTER(),
+    RAGE(),
 
 
 

@@ -47,6 +47,7 @@ public class Character {
     private Attribute endurance = new Attribute("ENDURANCE", 29, 20);
 
 
+
     /**
      * Add a skill to the character
      *
@@ -155,6 +156,8 @@ public class Character {
     public boolean hasSkill(KaiSkill skill) {
         return skills.contains(skill);
     }
+
+
 
     public Attribute getAttributeByName(String name) {
 

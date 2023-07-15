@@ -3,6 +3,7 @@ package net.atos.wolf.services.battle;
 import ch.qos.logback.classic.Logger;
 import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.framework.Service;
+import net.atos.wolf.services.character.Attribute;
 import net.atos.wolf.services.character.Character;
 import net.atos.wolf.services.action.Enemy;
 import net.atos.wolf.services.character.KaiSkill;
@@ -16,6 +17,7 @@ import net.atos.wolf.services.common.DiceService;
 @Service
 @Slf4j
 public class BattleService {
+
 
     public enum BattleStatus {
         CHARACTER_DIED,
@@ -37,12 +39,14 @@ public class BattleService {
     private int calculateBattleStrength(Character character, Enemy enemy) {
         int battleStrength = character.battleStrength().get();
         boolean applyWeaponSkill = false;
+        boolean rage = false;
 
         if (character.hasSkill(KaiSkill.THOUGHT_RAY) && !enemy.thoughRayResistance()) {
             battleStrength = battleStrength + 2;
            // System.out.println("Charakter verwendet Gedankenstrahl...");
             LOG.trace("Charakter verwendet Gedankenstrahl...::= [{}]");
         }
+
 
         applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_AXE, Weapon.AXE);
         applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_SHORT_SWORD, Weapon.SHORT_SWORD);
@@ -53,6 +57,7 @@ public class BattleService {
         applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_SPEAR, Weapon.SPEAR);
         applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_WARHAMMER, Weapon.WARHAMMER);
         applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_SWORD, Weapon.SWORD);
+
 
         if (applyWeaponSkill) {
             battleStrength = battleStrength + 2;
@@ -151,12 +156,4 @@ public class BattleService {
 
     }
 
-
-    private BattleStatus executeBattle(Character character, Enemy enemy) {
-
-        while (true) {
-            executeBattleRound(character, enemy);
-        }
-
-    }
 }
