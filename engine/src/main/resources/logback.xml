@@ -9,6 +9,9 @@
     </appender>
     
     <logger name="net.atos.wolf" level="TRACE"/>
+    <logger name="org.eclipse.jetty" level="INFO"/>
+
+
     
     <root level="TRACE">
         <appender-ref ref="FILE"/>
