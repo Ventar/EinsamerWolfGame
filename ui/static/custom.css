@@ -1,0 +1,17 @@
+.accordion {
+  --bs-accordion-bg: var(--bs-gray-dark);
+  --bs-accordion-border-color: var(--bs-gray-700);
+}
+
+.accordion-button {
+  padding: 10px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--bs-gray-700);
+  color: var(--bs-accordion-btn-color);
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: var(--bs-accordion-btn-icon);
+}
