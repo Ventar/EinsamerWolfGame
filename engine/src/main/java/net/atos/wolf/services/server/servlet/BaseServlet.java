@@ -1,4 +1,4 @@
-package net.atos.wolf.services.server;
+package net.atos.wolf.services.server.servlet;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -64,7 +64,7 @@
             <artifactId>lombok</artifactId>
             <version>1.18.26</version>
         </dependency>
-
+        
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
@@ -75,7 +75,12 @@
             <artifactId>jetty-servlet</artifactId>
             <version>11.0.3</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlets</artifactId>
+            <version>11.0.3</version>
+        </dependency>
+    
     </dependencies>
 
 </project>

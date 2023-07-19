@@ -1,4 +1,4 @@
-package net.atos.wolf.services.server;
+package net.atos.wolf.services.server.servlet;
 
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;

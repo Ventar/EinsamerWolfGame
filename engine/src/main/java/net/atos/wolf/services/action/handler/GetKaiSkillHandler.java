@@ -1,11 +1,13 @@
 package net.atos.wolf.services.action.handler;
 
+import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.services.GameSession;
 import net.atos.wolf.services.action.AbstractActionHandler;
 import net.atos.wolf.services.action.Action;
 import net.atos.wolf.services.action.ActionHandler;
 import net.atos.wolf.services.action.ActionType;
 
+@Slf4j
 @ActionHandler(ActionType.GET_KAI_SKILL)
 public class GetKaiSkillHandler extends AbstractActionHandler {
 
@@ -16,8 +18,8 @@ public class GetKaiSkillHandler extends AbstractActionHandler {
 
     @Override
     public void handleAction(GameSession session, Action action) {
+        LOG.debug("Add Kai skill ::= [{}] to character", action.skill());
         session.character().addSkill(action.skill());
-
         session.modifiedAnswerOptions(session.section().actions());
     }
 
