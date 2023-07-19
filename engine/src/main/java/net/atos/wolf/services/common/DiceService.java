@@ -1,10 +1,8 @@
 package net.atos.wolf.services.common;
 
-import net.atos.wolf.framework.Service;
-
 import java.util.Random;
 
-@Service
+
 public class DiceService {
 
     private static final Random RANDOM = new Random();
@@ -25,7 +23,9 @@ public class DiceService {
      *
      * @param min the minimum value
      * @param max the maximum value
+     *
      * @return the random number
+     *
      * @throws IllegalArgumentException if min < 0 or min > max  or max > 100
      */
     public int generate(int min, int max) {

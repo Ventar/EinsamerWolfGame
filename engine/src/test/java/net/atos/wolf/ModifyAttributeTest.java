@@ -1,18 +1,5 @@
 package net.atos.wolf;
 
-import net.atos.wolf.services.GameEngine;
-import net.atos.wolf.services.action.Action;
-import net.atos.wolf.services.action.ActionType;
-import net.atos.wolf.services.character.Character;
-import net.atos.wolf.services.character.Weapon;
-import net.atos.wolf.services.GameSession;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-
-import java.util.List;
-
 public class ModifyAttributeTest {
 
     // private Character character;

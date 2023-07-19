@@ -1,7 +1,7 @@
 package net.atos.wolf.services.server;
 
 import lombok.extern.slf4j.Slf4j;
-import net.atos.wolf.services.SessionService;
+import net.atos.wolf.services.session.SessionService;
 
 @Slf4j
 public class GameSessionObserver extends Thread {

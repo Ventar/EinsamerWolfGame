@@ -5,8 +5,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.services.GameEngine;
-import net.atos.wolf.services.GameSession;
-import net.atos.wolf.services.SessionService;
+import net.atos.wolf.services.session.GameSession;
+import net.atos.wolf.services.session.SessionService;
 import net.atos.wolf.services.action.Action;
 import net.atos.wolf.services.section.SectionService;
 

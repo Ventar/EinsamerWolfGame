@@ -6,9 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import lombok.Getter;
 import lombok.Setter;
 import net.atos.wolf.services.GameEngine;
-import net.atos.wolf.services.GameSession;
-import net.atos.wolf.services.SessionService;
-import net.atos.wolf.services.character.Character;
+import net.atos.wolf.services.session.SessionService;
 import net.atos.wolf.services.section.SectionService;
 
 @Getter

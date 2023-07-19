@@ -52,4 +52,7 @@ public class Section {
         }
     }
 
+    public int getSectionNumber() {
+        return sectionNumber;
+    }
 }

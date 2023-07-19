@@ -1,9 +1,11 @@
 package net.atos.wolf.services.common;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import net.atos.wolf.services.action.AbstractActionHandler;
 import net.atos.wolf.services.action.ActionHandler;
 import net.atos.wolf.services.action.ActionType;
 import net.atos.wolf.services.action.IActionHandler;
+import net.atos.wolf.services.section.SectionService;
 import org.reflections.Reflections;
 
 import java.util.HashMap;
@@ -24,7 +26,7 @@ public final class ServiceUtilities {
     /**
      * Uses the {@link Reflections} utilities to build a list of action handlers.
      */
-    public static Map<ActionType, IActionHandler> buildActionHandler() {
+    public static Map<ActionType, IActionHandler> buildActionHandler(SectionService sectionService) {
 
         Reflections reflections = new Reflections("net.atos.wolf");
         Map<ActionType, IActionHandler> handlerMap = new HashMap<>();
@@ -36,6 +38,7 @@ public final class ServiceUtilities {
 
             try {
                 handler = (IActionHandler) aClass.getConstructor().newInstance();
+                ((AbstractActionHandler) handler).setSectionService(sectionService);
             } catch (Exception e) {
                 throw new IllegalStateException("Cannot create action handler for game engine: ", e);
             }

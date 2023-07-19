@@ -2,11 +2,11 @@ package net.atos.wolf.services.server;
 
 import jakarta.servlet.DispatcherType;
 import net.atos.wolf.services.GameEngine;
-import net.atos.wolf.services.SessionService;
 import net.atos.wolf.services.section.SectionService;
 import net.atos.wolf.services.server.servlet.GameServlet;
 import net.atos.wolf.services.server.servlet.InfoServlet;
 import net.atos.wolf.services.server.servlet.SessionServlet;
+import net.atos.wolf.services.session.SessionService;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.FilterHolder;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -22,16 +22,16 @@ public class HTTPGameServer {
 
     private Server server;
 
-    private SectionService sectionService = new SectionService("/ew1.json");
+    private SectionService sectionService = new SectionService();
 
     private SessionService sessionService = new SessionService(sectionService);
 
-    private GameEngine engine = new GameEngine();
+    private GameEngine engine = new GameEngine(sectionService);
 
 
     public HTTPGameServer() {
         SessionServlet sessionServlet = new SessionServlet(sessionService, engine, sectionService);
-        GameServlet gameServlet = new GameServlet(sessionService, engine, new SectionService("/ew1.json"));
+        GameServlet gameServlet = new GameServlet(sessionService, engine, sectionService);
 
         ServletContextHandler context = new ServletContextHandler();
         context.setContextPath("/");
@@ -57,8 +57,5 @@ public class HTTPGameServer {
         server.join();
     }
 
-    public static void main(String[] args) throws Exception {
-        HTTPGameServer jettyServer = new HTTPGameServer();
-        jettyServer.start();
-    }
+
 }

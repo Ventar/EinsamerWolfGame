@@ -1,30 +1,13 @@
 package net.atos.wolf;
 
-import net.atos.wolf.framework.AbstractApplication;
-import net.atos.wolf.framework.Inject;
-import net.atos.wolf.services.common.DiceService;
 
-public class Application extends AbstractApplication {
+import net.atos.wolf.services.server.HTTPGameServer;
 
-    @Inject
-    private DiceService diceService;
+public class Application {
 
-    @Override
-    public String getPackageToScan() {
-        return "net.atos.wolf";
+
+    public static void main(String[] args) throws Exception {
+        HTTPGameServer jettyServer = new HTTPGameServer();
+        jettyServer.start();
     }
-
-    @Override
-    public void afterStartup() {
-        System.out.println("Application was started...");
-        System.out.println(diceService.generate());
-    }
-
-
-    public static void main(String[] args) {
-        Application app = new Application();
-        app.run();
-
-    }
-
 }

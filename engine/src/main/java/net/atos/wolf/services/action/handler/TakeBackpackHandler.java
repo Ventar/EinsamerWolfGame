@@ -1,6 +1,6 @@
 package net.atos.wolf.services.action.handler;
 
-import net.atos.wolf.services.GameSession;
+import net.atos.wolf.services.session.GameSession;
 import net.atos.wolf.services.action.AbstractActionHandler;
 import net.atos.wolf.services.action.Action;
 import net.atos.wolf.services.action.ActionHandler;

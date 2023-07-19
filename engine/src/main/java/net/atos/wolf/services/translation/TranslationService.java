@@ -1,8 +1,7 @@
-package net.atos.wolf.services;
+package net.atos.wolf.services.translation;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import net.atos.wolf.services.common.ServiceUtilities;
-import net.atos.wolf.services.section.Section;
 import net.atos.wolf.services.section.SectionService;
 
 import java.util.HashMap;

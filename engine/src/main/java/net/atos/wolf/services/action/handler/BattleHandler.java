@@ -1,7 +1,7 @@
 package net.atos.wolf.services.action.handler;
 
 import lombok.extern.slf4j.Slf4j;
-import net.atos.wolf.services.GameSession;
+import net.atos.wolf.services.session.GameSession;
 import net.atos.wolf.services.action.*;
 import net.atos.wolf.services.battle.BattleService;
 

@@ -1,4 +1,4 @@
-package net.atos.wolf.services;
+package net.atos.wolf.services.session;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

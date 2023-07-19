@@ -1,10 +1,10 @@
 package net.atos.wolf.services.action;
 
-import net.atos.wolf.services.GameSession;
 import net.atos.wolf.services.character.Character;
 import net.atos.wolf.services.common.DiceService;
 import net.atos.wolf.services.section.Section;
 import net.atos.wolf.services.section.SectionService;
+import net.atos.wolf.services.session.GameSession;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ public abstract class AbstractActionHandler implements IActionHandler {
      */
     private static DiceService DICE_SERVICE = new DiceService();
 
-    private static SectionService SECTION_SERVICE = new SectionService("/ew1.json");
+    private SectionService sectionService;
 
     /**
      * The action type that is handled by the implementation
@@ -50,6 +50,10 @@ public abstract class AbstractActionHandler implements IActionHandler {
         return true;
     }
 
+    public void setSectionService(SectionService sectionService) {
+        this.sectionService = sectionService;
+    }
+
     @Override
     public ActionType getType() {
         return type;
@@ -65,7 +69,7 @@ public abstract class AbstractActionHandler implements IActionHandler {
     }
 
     protected Section getSection(int sectionID) {
-        return SECTION_SERVICE.getSection(sectionID);
+        return sectionService.getSection(sectionID);
     }
 
     protected int generate() {

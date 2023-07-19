@@ -1,6 +1,6 @@
 package net.atos.wolf.services.action;
 
-import net.atos.wolf.services.GameSession;
+import net.atos.wolf.services.session.GameSession;
 import net.atos.wolf.services.character.Character;
 import net.atos.wolf.services.ui.UIService;
 

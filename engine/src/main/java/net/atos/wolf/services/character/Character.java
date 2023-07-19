@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.ToString;
-import net.atos.wolf.services.TranslationService;
+import net.atos.wolf.services.translation.TranslationService;
 
 import java.util.ArrayList;
 import java.util.List;

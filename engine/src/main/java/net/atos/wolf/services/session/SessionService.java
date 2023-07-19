@@ -1,4 +1,4 @@
-package net.atos.wolf.services;
+package net.atos.wolf.services.session;
 
 import lombok.Getter;
 import lombok.Setter;
