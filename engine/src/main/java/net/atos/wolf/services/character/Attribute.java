@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.junit.jupiter.api.Assertions;
 
 /**
  * Container class to manage the value of an attribute that is part of the {@link Character}.
@@ -27,38 +28,52 @@ public class Attribute {
      * The current value of the attribute.
      */
     private int value = 0;
-
+    /**
+     * The maximum value, it cannot be higher
+     */
     @Getter
     @Setter
     private int maxValue = 0;
-
+    /**
+     * The value where we start with
+     */
     @Getter
     @Setter
     private int baseValue = 0;
 
     private Attribute() {
-
     }
+
 
     /**
      * Creates new instance for value and name
      *
-     * @param name
-     * @param value
+     * @param name      the name of the attribute
+     * @param maxValue  the maximum value a attribute can have
+     * @param baseValue the start value of the attribute during character creation
      */
     public Attribute(String name, int maxValue, int baseValue) {
+
+        if (name == null || name.isBlank() || name.isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be null, blank or empty");
+        }
+
+        if (maxValue == 0 || maxValue < baseValue) {
+            throw new IllegalArgumentException("Max value cannot be zero or lower than the base value.");
+        }
+
         this.name = name;
         this.maxValue = maxValue;
         this.baseValue = baseValue;
+
     }
+
 
     /**
      * Increases the managed value of the attribute by the passed number. Only positive values are allowed.
      *
      * @param addNumber the value to add
-     *
      * @return the new value
-     *
      * @throws IllegalArgumentException in case the passed value is negative
      */
     public int add(int addNumber) {
@@ -80,7 +95,6 @@ public class Attribute {
      * Checks if action results in negative numbers, if numbers gets negative it gets removed
      *
      * @param removeNumber
-     *
      * @return
      */
     public int remove(int removeNumber) {
@@ -106,7 +120,6 @@ public class Attribute {
      * Checks number, if the number is smaller than zero it gets removed
      *
      * @param removeNumber
-     *
      * @return true or false
      */
     public boolean canRemove(int removeNumber) {
@@ -117,13 +130,5 @@ public class Attribute {
         }
     }
 
-  //  @Override
-  //  public String toString() {
-  //      return "Attribute{" +
-  //                     "name='" + name + '\'' +
-  //                     ", value=" + value +
-  //                     ", maxValue=" + maxValue +
-  //                     ", baseValue=" + baseValue +
-  //                     '}';
-    }
+}
 

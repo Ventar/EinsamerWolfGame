@@ -8,6 +8,9 @@ public class BattleTable {
 
     private static final int T = Integer.MIN_VALUE;
 
+    /**
+     * The table where the damage get calculate for the enemy and the character
+     */
     private static BattleValue[][] TABLE_MATRIX = new BattleValue[][]{
             // @formatter:off
             {V(0, T), V(0, T), V(0, -8), V(0, -6), V(-1, -6), V(-2, -5), V(-3, -5), V(-4, -5), V(-5, -4), V(-6, -4), V(-7, -4), V(-8, -3), V(-9, -3)},

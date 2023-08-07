@@ -19,10 +19,12 @@ public class Enemy {
     private boolean thoughRayResistance;
 
 
-    public Enemy() {}
 
-    ;
 
+    /**
+     * Gives the Enemy attributes
+     * @param enemy
+     */
     public Enemy(Enemy enemy) {
         this.name = enemy.name;
         this.battleStrength = enemy.battleStrength;

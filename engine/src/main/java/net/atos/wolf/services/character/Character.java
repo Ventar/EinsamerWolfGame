@@ -4,7 +4,10 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.ToString;
+
+import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.services.translation.TranslationService;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,31 +15,52 @@ import java.util.List;
 @ToString
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Slf4j
 public class Character {
+
+    /**
+     * The values which the character starts with
+     */
 
     public static final int BASE_STRENGTH = 10;
 
     public static final int BASE_ENDURANCE = 20;
 
+    /**
+     * Checks if the character has a backpack or not
+     */
     private boolean hasBackpack = true;
     private boolean hasBaseBackpack = true;
 
+    /**
+     * Checks which weapons have the character
+     */
     @Getter
     private Weapon weaponOne = null;
 
     @Getter
     private Weapon weaponTwo = null;
-
+    /**
+     * Creates a new list for the backpack
+     */
     private ArrayList backpack = new ArrayList<Item>();
     private ArrayList baseBackpack = new ArrayList<BaseItems>();
-
+    /**
+     * Creates a new list for the SpecialItems
+     */
     private ArrayList specialItemsList = new ArrayList<SpecialItem>();
-
+    /**
+     * Creates a new list for the skills
+     */
     private ArrayList skills = new ArrayList<KaiSkill>();
-
+    /**
+     * Gives the character the attribute gold with a value where we start with and and the maximum of gold we can have
+     */
     @Getter
     private Attribute gold = new Attribute("GOLD", 50, 0);
-
+    /**
+     * Gives the character the attribute food with a value where we start with and and the maximum of food we can have
+     */
     @Getter
     private Attribute food = new Attribute("FOOD", 5, 0);
 
@@ -67,6 +91,9 @@ public class Character {
         hasBackpack = false;
     }
 
+    /**
+     * Add a backpack for the character
+     */
     public void addBackpack() {
         hasBackpack = true;
     }
@@ -75,10 +102,18 @@ public class Character {
         hasBaseBackpack = true;
     }
 
+    /**
+     * Set the Weapon for hand one
+     * @param weapon
+     */
     public void setWeaponOne(Weapon weapon) {
         this.weaponOne = weapon;
     }
 
+    /**
+     * Set the weapon for the hand two
+     * @param weapon
+     */
     public void setWeaponTwo(Weapon weapon) {
         this.weaponTwo = weapon;
     }
@@ -92,6 +127,8 @@ public class Character {
     public void addItemToBackpack(Item item) {
         if (hasBackpack == true) {
             backpack.add(item);
+        } else {
+            LOG.debug("Character has no backpack, cannot add item.");
         }
     }
 
@@ -158,7 +195,11 @@ public class Character {
     }
 
 
-
+    /**
+     * Get an attribute by his name
+     * @param name
+     * @return
+     */
     public Attribute getAttributeByName(String name) {
 
         if (name.equals("GOLD")) {
@@ -198,6 +239,11 @@ public class Character {
         }
     }
 
+    /**
+     * Creates an a String the shows the current values of the character
+     * @param translationService
+     * @return
+     */
     public String createCharacterString(TranslationService translationService) {
 
 

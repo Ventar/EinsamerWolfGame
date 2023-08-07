@@ -10,6 +10,7 @@ import net.atos.wolf.services.common.ServiceUtilities;
 import net.atos.wolf.services.section.SectionService;
 import net.atos.wolf.services.session.GameSession;
 import net.atos.wolf.services.translation.TranslationService;
+import net.atos.wolf.services.ui.UIService;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -132,53 +133,58 @@ public class GameEngine {
         return answerOptions;
 
     }
-    //
-    //
-    //  public static void main(String[] args) {
-    //      LOG.trace("Start new instance of the game engine...");
-    //      GameEngine engine = new GameEngine();
-    //      ActionSelector actionSelector = new UIService();
-    //      SectionService sectionService = new SectionService("/ew1.json");
-    //
-    //      Character character = new Character();
-    //  //    character.setWeaponOne(Weapon.AXE);
-    //     //  character.addSkill(KaiSkill.RAGE);
-    //      //character.addSkill(KaiSkill.ANIMAL_UNDERSTANDING);
-    //      //character.addSkill(KaiSkill.ARMORY_SWORD);
-    //      //character.addSkill(KaiSkill.THOUGHT_RAY);
-    //      //character.addSkill(KaiSkill.ARMORY_MACE);
-    //      //character.addBaseItemToBackpack(BaseItems.MAP);
-    // //     character.addItemToBackpack(Item.CINDER);
-    //   //   character.addItemToBackpack(Item.FIREBOTTLE);
-    //   //   character.addItemToBackpack(Item.GOLDENKEY);
-    //   //   character.addItemToBackpack(Item.FEARWHEEL);
-    //   //   character.addItemToBackpack(Item.GREEN_EMERALD);
-    //   //   character.addSpecialItem(SpecialItem.CHAIN_MAIL);
-    //   //   character.addSpecialItem(SpecialItem.BELT);
-    //   //   character.addSpecialItem(SpecialItem.MAP);
-    //   //   character.addSpecialItem(SpecialItem.HELMET);
-    //      character.endurance().add(26);
-    //      character.endurance().maxValue(26);
-    //      character.battleStrength().add(14);
-    //    //  character.gold().add(20);
-    //    //  character.food().add(1);
-    //
-    //      GameSession session = new GameSession();
-    //      session.character(character);
-    //      session.section(sectionService.getSection(1000));
-    //
-    //
-    //      LOG.debug("Created character ::= [{}]", character);
-    //      LOG.trace("Start to handle sections...");
-    //
-    //
-    //      while (true) {
-    //
-    //          Action actionToExecute = actionSelector.selectAction(session.getModifiedSectionText(), String.valueOf(session.section().sectionNumber()), engine.resolveActions(session));
-    //          engine.executeAction(session, actionToExecute);
-    //
-    //      }
-    //
-    //  }
+
+
+    public static void main(String[] args) {
+        LOG.trace("Start new instance of the game engine...");
+        GameEngine engine = new GameEngine();
+        ActionSelector actionSelector = new UIService();
+        SectionService sectionService = new SectionService("/ew1.json");
+
+        Character character = new Character();
+    //    character.setWeaponOne(Weapon.AXE);
+        // character.addSkill(KaiSkill.HEAL);
+        //character.addSkill(KaiSkill.ANIMAL_UNDERSTANDING);
+        //character.addSkill(KaiSkill.ARMORY_SWORD);
+        //character.addSkill(KaiSkill.THOUGHT_RAY);
+        //character.addSkill(KaiSkill.ARMORY_MACE);
+        //character.addBaseItemToBackpack(BaseItems.MAP);
+   //     character.addItemToBackpack(Item.CINDER);
+     //   character.addItemToBackpack(Item.FIREBOTTLE);
+     //   character.addItemToBackpack(Item.GOLDENKEY);
+     //   character.addItemToBackpack(Item.FEARWHEEL);
+     //   character.addItemToBackpack(Item.GREEN_EMERALD);
+     //   character.addSpecialItem(SpecialItem.CHAIN_MAIL);
+     //   character.addSpecialItem(SpecialItem.BELT);
+     //   character.addSpecialItem(SpecialItem.MAP);
+     //   character.addSpecialItem(SpecialItem.HELMET);
+     //   character.endurance().add(26);
+        character.endurance().maxValue(26);
+     //   character.battleStrength().add(14);
+      //  character.gold().add(20);
+      //  character.food().add(1);
+
+        GameSession session = new GameSession();
+        session.character(character);
+
+        session.section(sectionService.getSection(358));
+
+        session.section(sectionService.getSection(15));
+
+
+
+        LOG.debug("Created character ::= [{}]", character);
+        LOG.trace("Start to handle sections...");
+
+
+        while (true) {
+
+            Action actionToExecute = actionSelector.selectAction(session.getModifiedSectionText(), String.valueOf(session.section().sectionNumber()), engine.resolveActions(session));
+            engine.executeAction(session, actionToExecute);
+
+        }
+
+    }
+
 
 }

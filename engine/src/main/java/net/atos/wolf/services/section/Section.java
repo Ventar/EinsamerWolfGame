@@ -52,6 +52,10 @@ public class Section {
         }
     }
 
+    /**
+     * Gives the current section number
+     * @return
+     */
     public int getSectionNumber() {
         return sectionNumber;
     }

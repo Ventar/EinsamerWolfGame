@@ -14,10 +14,21 @@ import net.atos.wolf.services.common.DiceService;
 @Slf4j
 public class BattleService {
 
-
+    /**
+     * The final result/status after a battle
+     */
     public enum BattleStatus {
+        /**
+         * Character died the adventure ends at this point
+         */
         CHARACTER_DIED,
+        /**
+         * The enemy died the adventure goes forward
+         */
         ENEMY_DIED,
+        /**
+         * Nobody dies, the battle continues
+         */
         TIE
     }
 
@@ -26,12 +37,28 @@ public class BattleService {
 
     }
 
+    /**
+     * Make a new instance of the DiceService
+     */
     private DiceService diceService = new DiceService();
 
+    /**
+     * Checks if the Character has the right WeaponSkill for the current weapon
+     * @param character
+     * @param skill
+     * @param weapon
+     * @return
+     */
     private boolean checkApplyWeaponSkill(Character character, KaiSkill skill, Weapon weapon) {
         return character.hasSkill(skill) && (character.weaponOne() == weapon || character.weaponTwo() == weapon);
     }
 
+    /**
+     * Calculates the final BattleStrength for the character
+     * @param character
+     * @param enemy
+     * @return
+     */
     private int calculateBattleStrength(Character character, Enemy enemy) {
         int battleStrength = character.battleStrength().get();
         boolean applyWeaponSkill = false;
