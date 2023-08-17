@@ -20,6 +20,7 @@ public class ChangeSectionHandler extends AbstractActionHandler {
         }
         if (action.specialItem() != null) {
             return session.character().hasSpecialItem(action.specialItem());
+
         }
 
         if (action.numberOfSkills() != 0) {
