@@ -3,6 +3,7 @@ package net.atos.wolf.services.server.servlet;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.services.GameEngine;
 import net.atos.wolf.services.session.GameSession;
@@ -24,6 +25,7 @@ public class GameServlet extends BaseServlet {
     /**
      * Object representing the JSON data send by the client
      */
+    @ToString
     public static class RequestData {
         /**
          * The action to execute on the {@link GameSession} which is attached to the id attribute of the request.
@@ -45,9 +47,12 @@ public class GameServlet extends BaseServlet {
 
         try {
             RequestData data = MAPPER.readValue(request.getReader(), RequestData.class);
+            LOG.debug("Received game servlet request with data: {}", data );
             GameSession session = sessionService.getSessionById(data.id);
 
             if (session != null) {
+
+
                 Action actionToExecute = session.modifiedAnswerOptions().get(data.action);
                 engine.executeAction(session, actionToExecute);
 

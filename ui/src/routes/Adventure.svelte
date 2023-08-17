@@ -1,16 +1,21 @@
 <script>
   import { onMount } from "svelte";
-
+  import { page } from '$app/stores';
+  
   /**
    * @type {any}
    */
   export let gameSession;
   
+  let host = "";
+  $: host,  host = $page.url.hostname;
+
   /**
    * @param {number} i
    */
   async function doPost(i) {
-    const res = await fetch("http://localhost:8080/section/", {
+   
+    const res = await fetch("http://" + host + ":8080/section/", {
       method: "POST",
       body: JSON.stringify({
         id: gameSession.id,
