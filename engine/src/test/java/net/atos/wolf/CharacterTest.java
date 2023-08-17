@@ -53,11 +53,11 @@ public class CharacterTest {
     public void testAddAndRemoveItemToBackpack() {
         Character character = new Character();
         character.addItemToBackpack(Item.CINDER);
-        character.removeBackpack();
         character.addItemToBackpack(Item.GOLDENKEY);
         character.removeItemFromBackpack(Item.GOLDENKEY);
-        character.removeBackpack();
         character.removeItemFromBackpack(Item.CINDER);
+        character.removeBackpack();
+
 
     }
 
@@ -86,6 +86,7 @@ public class CharacterTest {
 
     }
 
+
     @Test
     @Order(8)
     public void testHasSkill() {
@@ -113,7 +114,7 @@ public class CharacterTest {
         Character character = new Character();
 
         character.addSkill(KaiSkill.ANIMAL_UNDERSTANDING);
-        Assertions.assertEquals(1,character.getNumberOfSkills());
+        Assertions.assertEquals(1, character.getNumberOfSkills());
 
     }
 
@@ -122,6 +123,15 @@ public class CharacterTest {
     public void testGetEntyAtPosition() {
         Character character = new Character();
 
+
+    }
+
+    @Test
+    @Order(12)
+    public void testAddAndRemoveBaseBackpack() {
+        Character character = new Character();
+        character.addBaseBackpack();
+        character.addBaseItemToBackpack(BaseItems.MAP);
 
     }
 

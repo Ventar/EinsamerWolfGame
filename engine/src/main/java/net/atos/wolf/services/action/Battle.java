@@ -22,7 +22,7 @@ public class Battle {
     /**
      * List of Enemies
      */
-    private List<Enemy> enemy;
+    public List<Enemy> enemy;
     /**
      * List of BattleRounds
      */
@@ -45,7 +45,7 @@ public class Battle {
         if (battle.targetSectionBattleRound != null) {
             this.targetSectionBattleRound = new ArrayList<>();
             for (BattleRoundTarget battleRoundTarget : battle.targetSectionBattleRound) {
-                this.targetSectionBattleRound.add(new BattleRoundTarget(battleRoundTarget));
+                this.   targetSectionBattleRound.add(new BattleRoundTarget(battleRoundTarget));
             }
         }
     }
