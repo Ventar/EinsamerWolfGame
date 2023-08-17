@@ -27,7 +27,11 @@ DiceService: Int
 SectionService: Int/String
 AbstractActionHandler()
 checkExecutable(GameSession, Action)
-
+setSectionService(sectionService)
+getType()type
+isExecutable(GameSession, Action)
+handleAction(GameSession, Action)
+getSection(sectionID)
 
 }
 enum ActionType {

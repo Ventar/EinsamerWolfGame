@@ -1085,7 +1085,7 @@
   },
   {
     "sectionNumber": 1001,
-    "text": "Zunächst ermitteln wir deinen Ausdauerwert. <br/><br/>Hierzu bestimmen wir eine Zufallszahl von 0 - 9, welche dann mit 20 addiert wird",
+    "text": "Zunächst ermitteln wir deinen <b>Ausdauerwert</b>. <br/><br/>Hierzu bestimmen wir eine Zufallszahl von 0 - 9, welche dann mit 20 addiert wird",
     "actions": [
       {
         "type": "INITIALIZE_ATTRIBUTE",

@@ -7,14 +7,19 @@
             <pattern>%d{HH:mm:ss.SSS} [%-5level] [%35.35logger] - %msg%n</pattern>
         </encoder>
     </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
     
     <logger name="net.atos.wolf" level="TRACE"/>
     <logger name="org.eclipse.jetty" level="INFO"/>
 
-
-    
     <root level="TRACE">
         <appender-ref ref="FILE"/>
+        <appender-ref ref="STDOUT"/>
     </root>
 
 </configuration>

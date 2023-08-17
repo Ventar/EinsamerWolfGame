@@ -18,11 +18,13 @@ public class Enemy {
     private int endurance;
     private boolean thoughRayResistance;
 
+    public Enemy() {
 
-
+    }
 
     /**
      * Gives the Enemy attributes
+     *
      * @param enemy
      */
     public Enemy(Enemy enemy) {
@@ -32,13 +34,4 @@ public class Enemy {
         this.thoughRayResistance = enemy.thoughRayResistance;
     }
 
-    //    @Override
-    //    public String toString() {
-    //        return "Enemy{" +
-    //                "name='" + name + '\'' +
-    //                ", battleStrength=" + battleStrength +
-    //                ", endurance=" + endurance +
-    //                ", thoughRayResistance=" + thoughRayResistance +
-    //                '}';
-    //    }
 }

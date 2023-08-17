@@ -20,6 +20,6 @@ public class InfoServlet extends HttpServlet {
 
         response.setContentType("application/json");
         response.setStatus(HttpServletResponse.SC_OK);
-        response.getWriter().println("{ \"status\": \"ok\"}");
+        response.getWriter().println("{ \"status\": \"ok...I am running\"}");
     }
 }
