@@ -10,11 +10,8 @@ import net.atos.wolf.services.action.Enemy;
 import net.atos.wolf.services.character.Character;
 import net.atos.wolf.services.section.Section;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 @Getter
 @Setter
@@ -83,15 +80,25 @@ public class GameSession {
         for (Action action : section.actions()) {
             if (action.type().equals(ActionType.BATTLE)) {
                 for (Enemy enemy : action.battle().enemy()) {
-                    result += "\n" + enemy.name() + "\n";
-                    result += "Gegner Ausdauer   : " + enemy.endurance() + "\n";
-                    result += "Gegner Kampfstärke: " + enemy.battleStrength() + "\n";
-                    result += "Kampfrunde        : " + battleRounds + "\n";
+                    result += "<br/><br/><div class='card border-danger mb-3' style='max-width: 20rem;'>";
+                    result += "<div class='card-header'>Gegner</div>";
+                    result += "<div class='card-body'>";
+                    result += "<h4 class='card-title'>" + enemy.name() + "</h4>";
+                    result += "<br/>";
+                    result += "<p class='card-text'>";
+                    result += "Ausdauer: <strong><span class='text-success'>" + enemy.endurance() + "</strong><br/>";
+                    result += "Kampfstärke: <strong><span class='text-success'>" + enemy.battleStrength() + "</strong>";
+                    result += "</p>";
+
+                    result += "<p class='card-text'>Kampfrunde: <strong><span class='text-success'>" + battleRounds + "</strong></p>";
+                    result += "<div>";
+                    result += "<div>";
                 }
             }
         }
         return result;
     }
+
 
     /**
      * Replaces variables in the text with the values from the character in the session

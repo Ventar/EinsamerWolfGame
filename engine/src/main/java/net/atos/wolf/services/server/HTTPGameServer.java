@@ -1,6 +1,7 @@
 package net.atos.wolf.services.server;
 
 import jakarta.servlet.DispatcherType;
+import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.services.GameEngine;
 import net.atos.wolf.services.section.SectionService;
 import net.atos.wolf.services.server.servlet.GameServlet;
@@ -18,18 +19,26 @@ import java.util.EnumSet;
 /**
  * HTTP server to be used by the client.
  */
+@Slf4j
 public class HTTPGameServer {
 
     private Server server;
 
-    private SectionService sectionService = new SectionService();
+    private SectionService sectionService;
 
-    private SessionService sessionService = new SessionService(sectionService);
+    private SessionService sessionService;
 
     private GameEngine engine = new GameEngine(sectionService);
 
-
     public HTTPGameServer() {
+        LOG.debug("Create new HTTPGameServer with default session service...");
+        this.sectionService = new SectionService();
+        this.sessionService = new SessionService(sectionService);
+        this.engine = new GameEngine(sectionService);
+        init();
+    }
+
+    private void init() {
         SessionServlet sessionServlet = new SessionServlet(sessionService, engine, sectionService);
         GameServlet gameServlet = new GameServlet(sessionService, engine, sectionService);
 

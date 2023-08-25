@@ -29,6 +29,7 @@ public class BattleHandler extends AbstractActionHandler {
         if (battleStatus.equals(BattleService.BattleStatus.ENEMY_DIED)) {
             for (BattleRoundTarget brt : action.battle().targetSectionBattleRound()) {
                 if (session.battleRounds() >= brt.min() && session.battleRounds() <= brt.max()) {
+                    session.battleRounds();
                     session.section(getSection(brt.targetSection()));
                     return;
                 }
