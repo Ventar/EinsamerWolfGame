@@ -16,9 +16,7 @@ public class ListGameSessionsServlet extends BaseServlet {
 
     @ToString
     public static class ResponseData {
-
         public List<String> names;
-
     }
 
     public ListGameSessionsServlet(SessionService sessionService, GameEngine engine, SectionService sectionService) {

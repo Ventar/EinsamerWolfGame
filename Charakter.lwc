@@ -1,0 +1,35 @@
+{
+  "name" : "Charakter",
+  "character" : {
+    "hasBackpack" : true,
+    "hasBaseBackpack" : true,
+    "baseBackpack" : [ "KAI_ROBE", "MAP", "LEATHER_BAG", "GREEN_TUNIC", "BACKPACK" ],
+    "skills" : [ "HUNT", "MENTAL_DEFENCE", "ANIMAL_UNDERSTANDING", "TRACKING", "SIXTH_SENSE" ],
+    "gold" : {
+      "name" : "GOLD",
+      "value" : 0,
+      "maxValue" : 0,
+      "baseValue" : 0
+    },
+    "food" : {
+      "name" : "FOOD",
+      "value" : 0,
+      "maxValue" : 5,
+      "baseValue" : 0
+    },
+    "battleStrength" : {
+      "name" : "BATTLE_STRENGTH",
+      "value" : 18,
+      "maxValue" : 18,
+      "baseValue" : 10
+    },
+    "endurance" : {
+      "name" : "ENDURANCE",
+      "value" : 20,
+      "maxValue" : 20,
+      "baseValue" : 20
+    },
+    "numberOfSkills" : 5
+  },
+  "sectionID" : 497
+}

@@ -21,7 +21,7 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Setter
 @Getter
-@ToString
+@ToString(exclude={"text"})
 public class Section {
 
     /**

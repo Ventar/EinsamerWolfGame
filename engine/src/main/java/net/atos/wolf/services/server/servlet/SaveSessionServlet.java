@@ -40,8 +40,8 @@ public class SaveSessionServlet extends BaseServlet {
             SaveSessionServlet.RequestData data = JsonUtils.MAPPER.readValue(request.getReader(), SaveSessionServlet.RequestData.class);
             LOG.debug("Received save session servlet request with data: {}", data);
 
-
-           GameSession saved =  sessionService.savedGameSession(data.id,data.name);
+            GameSession saved = sessionService.savedGameSession(data.id, data.name);
+            LOG.debug("Saved game session ::= [{}]", saved);
 
 
             response.setContentType("application/json");

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import net.atos.wolf.services.action.Action;
 import net.atos.wolf.services.action.ActionType;
 import net.atos.wolf.services.action.Enemy;
@@ -17,6 +18,7 @@ import java.util.List;
 @Setter
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
+@ToString
 public class  GameSession {
 
     /**

@@ -26,10 +26,9 @@ public class HTTPGameServer {
 
     private SessionService sessionService;
 
-    private GameEngine engine = new GameEngine(sectionService);
+    private GameEngine engine;
 
     public HTTPGameServer() {
-<<<<<<< HEAD
         LOG.debug("Create new HTTPGameServer with default session service...");
         this.sectionService = new SectionService();
         this.sessionService = new SessionService(sectionService);
@@ -38,11 +37,8 @@ public class HTTPGameServer {
     }
 
     private void init() {
-        SessionServlet sessionServlet = new SessionServlet(sessionService, engine, sectionService);
-=======
         CreateSessionServlet sessionServlet = new CreateSessionServlet(sessionService, engine, sectionService);
         SaveSessionServlet saveSessionServlet = new SaveSessionServlet(sessionService,engine,sectionService);
->>>>>>> a949a96 (making UI page)
         GameServlet gameServlet = new GameServlet(sessionService, engine, sectionService);
         LoadSessionServlet loadSessionServlet = new LoadSessionServlet(sessionService,engine,sectionService);
         ListGameSessionsServlet listGameSessionsServlet = new ListGameSessionsServlet(sessionService,engine,sectionService);
@@ -55,6 +51,7 @@ public class HTTPGameServer {
         context.addServlet(new ServletHolder(saveSessionServlet), "/session/save/");
         context.addServlet(new ServletHolder(loadSessionServlet), "/session/load/");
         context.addServlet(new ServletHolder(listGameSessionsServlet), "/session/list/");
+
         // allow usage with the svelte app from a different process
         FilterHolder cors = context.addFilter(CrossOriginFilter.class, "/*", EnumSet.of(DispatcherType.REQUEST));
         cors.setInitParameter(CrossOriginFilter.ALLOWED_ORIGINS_PARAM, "*");
@@ -68,7 +65,7 @@ public class HTTPGameServer {
 
     public void start() throws Exception {
         GameSessionObserver gameSessionObserver = new GameSessionObserver(sessionService);
-        gameSessionObserver.start();
+        //gameSessionObserver.start();
         server.start();
         server.join();
     }
