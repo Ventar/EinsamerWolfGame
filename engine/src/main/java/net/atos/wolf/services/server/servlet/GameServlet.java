@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.services.GameEngine;
+import net.atos.wolf.services.JsonUtils;
 import net.atos.wolf.services.session.GameSession;
 import net.atos.wolf.services.session.SessionService;
 import net.atos.wolf.services.action.Action;
@@ -46,7 +47,7 @@ public class GameServlet extends BaseServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         try {
-            RequestData data = MAPPER.readValue(request.getReader(), RequestData.class);
+            RequestData data = JsonUtils.MAPPER.readValue(request.getReader(), RequestData.class);
             LOG.debug("Received game servlet request with data: {}", data );
             GameSession session = sessionService.getSessionById(data.id);
 
@@ -62,7 +63,7 @@ public class GameServlet extends BaseServlet {
                 response.setContentType("application/json");
                 response.setCharacterEncoding("UTF-8");
                 response.setStatus(HttpServletResponse.SC_OK);
-                response.getWriter().println(MAPPER.writeValueAsString(session));
+                response.getWriter().println(JsonUtils.MAPPER.writeValueAsString(session));
             } else {
                 response.setContentType("text/plain");
                 response.setStatus(HttpServletResponse.SC_BAD_REQUEST);

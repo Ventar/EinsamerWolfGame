@@ -3,15 +3,16 @@ package net.atos.wolf.services.server.servlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import net.atos.wolf.services.GameEngine;
+import net.atos.wolf.services.JsonUtils;
 import net.atos.wolf.services.session.GameSession;
 import net.atos.wolf.services.session.SessionService;
 import net.atos.wolf.services.section.SectionService;
 
 import java.io.IOException;
 
-public class SessionServlet extends BaseServlet {
+public class CreateSessionServlet extends BaseServlet {
 
-    public SessionServlet(SessionService sessionService, GameEngine engine, SectionService sectionService) {
+    public CreateSessionServlet(SessionService sessionService, GameEngine engine, SectionService sectionService) {
         super(sessionService, engine, sectionService);
     }
 
@@ -25,7 +26,7 @@ public class SessionServlet extends BaseServlet {
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         response.setStatus(HttpServletResponse.SC_OK);
-        response.getWriter().println(MAPPER.writeValueAsString(session));
+        response.getWriter().println(JsonUtils.MAPPER.writeValueAsString(session));
     }
 
 }

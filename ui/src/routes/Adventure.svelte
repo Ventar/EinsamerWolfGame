@@ -15,6 +15,7 @@
    */
   async function doPost(i) {
    
+
     const res = await fetch("http://" + host + ":8080/section/", {
       method: "POST",
       body: JSON.stringify({

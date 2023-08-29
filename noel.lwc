@@ -1,0 +1,33 @@
+{
+  "name" : "noel",
+  "character" : {
+    "hasBackpack" : true,
+    "hasBaseBackpack" : true,
+    "gold" : {
+      "name" : "GOLD",
+      "value" : 0,
+      "maxValue" : 50,
+      "baseValue" : 0
+    },
+    "food" : {
+      "name" : "FOOD",
+      "value" : 0,
+      "maxValue" : 5,
+      "baseValue" : 0
+    },
+    "battleStrength" : {
+      "name" : "BATTLE_STRENGTH",
+      "value" : 0,
+      "maxValue" : 19,
+      "baseValue" : 10
+    },
+    "endurance" : {
+      "name" : "ENDURANCE",
+      "value" : 26,
+      "maxValue" : 26,
+      "baseValue" : 20
+    },
+    "numberOfSkills" : 0
+  },
+  "sectionID" : 1002
+}

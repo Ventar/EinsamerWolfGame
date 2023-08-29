@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class UIService implements ActionSelector {
+public class    UIService implements ActionSelector {
 
     @Override
     public Action selectAction(String text, String headLine, List<Action> options) {

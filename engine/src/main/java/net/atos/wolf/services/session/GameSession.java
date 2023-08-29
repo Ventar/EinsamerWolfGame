@@ -17,7 +17,7 @@ import java.util.List;
 @Setter
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class GameSession {
+public class  GameSession {
 
     /**
      * The unique ID of the session to differentiate between multiple players

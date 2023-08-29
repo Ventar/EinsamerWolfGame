@@ -13,12 +13,7 @@ import net.atos.wolf.services.section.SectionService;
 @Setter
 public class BaseServlet extends HttpServlet {
 
-    protected static ObjectMapper MAPPER = new ObjectMapper();
 
-    static {
-        MAPPER.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-        MAPPER.setSerializationInclusion(JsonInclude.Include.NON_EMPTY);
-    }
 
     protected SessionService sessionService;
 
