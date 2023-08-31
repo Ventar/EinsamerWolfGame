@@ -108,7 +108,6 @@ public class GameEngine {
      */
     public List<Action> resolveActions(GameSession session) {
 
-        System.out.println(session.character().createCharacterString(translationService));
 
         int currentSection = session.section().sectionNumber();
 

@@ -484,13 +484,15 @@
         "battle": {
           "enemy": [
             {
-              "name": "Drakkarim Sturmstruppen",
-              "battleStrength": 15,
-              "endurance": 19
-            },
+              "name": "Drakkarim Sturmtruppen",
+              "battleStrength": 10,
+              "endurance": 39
+            }
+          ],
+          "targetSectionBattleRound": [
             {
-              "type": "CHANGE_SECTION",
-              "text": "Du hat den Kampf Gewonnen",
+              "min": 0,
+              "max": 99,
               "targetSection": 387
             }
           ]
@@ -1174,33 +1176,17 @@
     "actions": [
       {
         "type": "TAKE_BASE_ITEM",
-        "text": "Nimm deine Tunika",
-        "baseItems":"GREEN_TUNIC"
-      },
-      {
-        "type": "TAKE_BASE_ITEM",
-        "text": "Nimm die Ledertasche",
-        "baseItems": "LEATHER_BAG"
-      },
-      {
-        "type": "TAKE_BASE_ITEM",
-        "text": "Nimm die Karte",
-        "baseItems": "MAP"
-      },
-      {
-        "type": "TAKE_BASE_ITEM",
-        "text": "Nimm die Kai Robe",
-        "baseItems": "KAI_ROBE"
-      },
-      {
-        "type": "TAKE_BASE_ITEM",
-        "text": "Nimm einen Rucksack",
+        "text": "Nimm deine Basisausrüstung",
+        "baseItems": "GREEN_TUNIC",
+        "baseItems": "LEATHER_BAG",
+        "baseItems": "MAP",
+        "baseItems": "KAI_ROBE",
         "baseItems": "BACKPACK"
       },
       {
         "type": "INITIALIZE_ATTRIBUTE",
         "attribute": "GOLD",
-        "text": "Du hast Gold erhalten",
+        "text": "Erhalte dein Gold",
         "targetSection": 1
       }
     ]

@@ -1,19 +1,11 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- BattleHandler
-ActionType <|-- AbstractActionHandler
-
+AbstractActionHandler <|-- ActionType
+AbstractActionHandler <|-- KaiSkill
+AbstractActionHandler <|-- SectionService
 class BattleHandler {
 BattleService
 handleAction(Action,GameSession)
@@ -21,6 +13,11 @@ handleAction(Action,GameSession)
 class ChangeSectionHandler {
 checkExecutable(GameSession, Action)
 handleAction(GameSession, Action)
+}
+class SectionService{
+sectionService()string
+replaceImageVariable(section) : section
+getSection(idToLoad) Int: replaceImageVariable
 }
 class AbstractActionHandler{
 DiceService: Int
@@ -31,7 +28,44 @@ setSectionService(sectionService)
 getType()type
 isExecutable(GameSession, Action)
 handleAction(GameSession, Action)
-getSection(sectionID)
+getSection(sectionID) Int : (sectionService)
+generate()Int : DiceService
+}
+
+class GameSession{
+id
+character
+section
+modifiedAnswerOptions
+battleRounds
+lastUsed
+section(section)
+addBattleInfo(String text) : String
+replacePlayerVariablesInText(String text)
+   
+}
+class DiceService{
+Random
+generate()int
+generate(int min, int max): rdm
+}
+class sessionService{
+sectionService
+startSection
+sessionMap
+createNewSession(): gameSession
+savedGameSession(string Id,string Name): currentGameSession
+loadGameSession(string Name): Null
+listGameSession(): listGameSession
+getSessionById(string Id): sessionMap
+cleanupStaleSession(long ttl)
+}
+class translationService{
+translations
+translationService(string jsonFile)
+translate(string key): key
+}
+class characterService{
 
 }
 enum ActionType {
@@ -111,16 +145,7 @@ enum KaiSkill {
     RAGE(),
 
 }
-enum SpecialItem {
-HELMET(),
-CHAIN_MAIL(),
-    TOMBGUARDIANSTONES(),
-    CRYSTALSTARPENDANT(),
-    MAP(),
-    KAI_ROBE,
-    BELT,
 
-}
 enum Weapon {
 DAGGER(),
     SPEAR(),

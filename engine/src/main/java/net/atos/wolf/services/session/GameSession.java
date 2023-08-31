@@ -10,8 +10,10 @@ import net.atos.wolf.services.action.ActionType;
 import net.atos.wolf.services.action.Enemy;
 import net.atos.wolf.services.character.Character;
 import net.atos.wolf.services.section.Section;
+import org.eclipse.jetty.server.session.Session;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Getter
@@ -36,6 +38,8 @@ public class  GameSession {
      */
     private Section section;
 
+    public Session session;
+
     /**
      * List of answer options which are currently available to the character for the given session ID.
      */
@@ -44,7 +48,12 @@ public class  GameSession {
     /**
      * Battle round counter.
      */
-    private int battleRounds;
+    private int battleRounds = 1;
+
+    /**
+     * Information about the battle rounds.
+     */
+    private List<String> battleLog = new ArrayList<>(Arrays.asList("Ein neuer Kampf startet..."));
 
     /**
      * update time to see how long a sessions exists
@@ -95,6 +104,12 @@ public class  GameSession {
                     result += "<p class='card-text'>Kampfrunde: <strong><span class='text-success'>" + battleRounds + "</strong></p>";
                     result += "<div>";
                     result += "<div>";
+
+                    for(String log : battleLog) {
+                        result += "<p>";
+                        result += log;
+                        result += "</p>";
+                    }
                 }
             }
         }

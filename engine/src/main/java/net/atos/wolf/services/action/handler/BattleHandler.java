@@ -5,6 +5,8 @@ import net.atos.wolf.services.session.GameSession;
 import net.atos.wolf.services.action.*;
 import net.atos.wolf.services.battle.BattleService;
 
+import java.util.ArrayList;
+
 @Slf4j
 @ActionHandler(ActionType.BATTLE)
 public class BattleHandler extends AbstractActionHandler {
@@ -15,8 +17,10 @@ public class BattleHandler extends AbstractActionHandler {
     public void handleAction(GameSession session, Action action) {
 
         LOG.debug("Started battle with enemy ::= [{}]", action.battle().enemy());
+        session.battleLog().add("Kampfrunde " + session.battleRounds());
+        session.battleLog().add("------");
 
-        BattleService.BattleStatus battleStatus = battleService.executeBattleRound(session.character(), action.battle().enemy().get(0));
+        BattleService.BattleStatus battleStatus = battleService.executeBattleRound(session, action.battle().enemy().get(0));
         session.battleRounds(session.battleRounds() + 1);
 
         if (battleStatus.equals(BattleService.BattleStatus.TIE)) {
@@ -29,7 +33,9 @@ public class BattleHandler extends AbstractActionHandler {
         if (battleStatus.equals(BattleService.BattleStatus.ENEMY_DIED)) {
             for (BattleRoundTarget brt : action.battle().targetSectionBattleRound()) {
                 if (session.battleRounds() >= brt.min() && session.battleRounds() <= brt.max()) {
-                    session.battleRounds();
+                    session.battleRounds(1);
+                    session.battleLog().clear();
+                    session.battleLog().add("Ein neuer Kampf startet...");
                     session.section(getSection(brt.targetSection()));
                     return;
                 }

@@ -6,6 +6,8 @@ import net.atos.wolf.services.character.Character;
 import net.atos.wolf.services.character.KaiSkill;
 import net.atos.wolf.services.character.Weapon;
 import net.atos.wolf.services.common.DiceService;
+import net.atos.wolf.services.session.GameSession;
+import org.eclipse.jetty.server.session.Session;
 
 
 /**
@@ -98,8 +100,8 @@ public class BattleService {
     /**
      * calculates the battle quotient by comparing your endurance against the enemies
      *
-     * @param character
-     * @param enemy
+     * @param
+     * @param
      */
     public BattleTable.BattleValue calculateBattleQuotient(Character character, Enemy enemy) {
 
@@ -156,15 +158,15 @@ public class BattleService {
      * @param character
      * @param enemy
      */
-    public BattleStatus executeBattleRound(Character character, Enemy enemy) {
-        BattleTable.BattleValue bv = calculateBattleQuotient(character, enemy);
+    public BattleStatus executeBattleRound(GameSession gameSession, Enemy enemy) {
+        BattleTable.BattleValue bv = calculateBattleQuotient(gameSession.character(), enemy);
 
         enemy.endurance(enemy.endurance() - bv.enemy() * -1);
-        character.endurance().remove(bv.character() * -1);
+        gameSession.character().endurance().remove(bv.character() * -1);
 
         BattleStatus status = BattleStatus.TIE;
 
-        if (character.endurance().get() <= 0) {
+        if (gameSession.character().endurance().get() <= 0) {
             status = BattleStatus.CHARACTER_DIED;
         } else if (enemy.endurance() <= 0) {
             status = BattleStatus.ENEMY_DIED;

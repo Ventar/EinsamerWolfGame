@@ -38,10 +38,10 @@ public class HTTPGameServer {
 
     private void init() {
         CreateSessionServlet sessionServlet = new CreateSessionServlet(sessionService, engine, sectionService);
-        SaveSessionServlet saveSessionServlet = new SaveSessionServlet(sessionService,engine,sectionService);
+        SaveSessionServlet saveSessionServlet = new SaveSessionServlet(sessionService, engine, sectionService);
         GameServlet gameServlet = new GameServlet(sessionService, engine, sectionService);
-        LoadSessionServlet loadSessionServlet = new LoadSessionServlet(sessionService,engine,sectionService);
-        ListGameSessionsServlet listGameSessionsServlet = new ListGameSessionsServlet(sessionService,engine,sectionService);
+        LoadSessionServlet loadSessionServlet = new LoadSessionServlet(sessionService, engine, sectionService);
+        ListGameSessionsServlet listGameSessionsServlet = new ListGameSessionsServlet(sessionService, engine, sectionService);
 
         ServletContextHandler context = new ServletContextHandler();
         context.setContextPath("/");
