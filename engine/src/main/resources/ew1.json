@@ -1186,8 +1186,12 @@
       {
         "type": "INITIALIZE_ATTRIBUTE",
         "attribute": "GOLD",
-        "text": "Erhalte dein Gold",
-        "targetSection": 1
+        "text": "Erhalte dein Gold"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 1,
+        "text": "Weiter"
       }
     ]
   },

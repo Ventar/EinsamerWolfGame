@@ -46,6 +46,7 @@ public class BattleService {
 
     /**
      * Checks if the Character has the right WeaponSkill for the current weapon
+     *
      * @param character
      * @param skill
      * @param weapon
@@ -57,34 +58,44 @@ public class BattleService {
 
     /**
      * Calculates the final BattleStrength for the character
+     *
      * @param character
      * @param enemy
      * @return
      */
-    private int calculateBattleStrength(Character character, Enemy enemy) {
-        int battleStrength = character.battleStrength().get();
+    private int calculateBattleStrength(GameSession gameSession, Enemy enemy) {
+        LOG.trace("Calculate the battle strength character ::= [{}], enemy ::= [{}]...", gameSession.character(), enemy);
+        int battleStrength = gameSession.character().battleStrength().get();
         boolean applyWeaponSkill = false;
         boolean rage = false;
 
-        if (character.hasSkill(KaiSkill.THOUGHT_RAY) && !enemy.thoughRayResistance()) {
-            battleStrength = battleStrength + 2;
-            // System.out.println("Charakter verwendet Gedankenstrahl...");
-            LOG.trace("Charakter verwendet Gedankenstrahl...::= [{}]");
+        if (gameSession.character().hasSkill(KaiSkill.THOUGHT_RAY)) {
+            if (!enemy.thoughRayResistance()) {
+                gameSession.battleLog().add("Du setzt die Fähigkeit Gedankenstrahl ein (Kampfstärke + 2)");
+                battleStrength = battleStrength + 2;
+                LOG.trace("Character uses kai skill  thought ray");
+            } else {
+                gameSession.battleLog().add("Dein Gegner ist gegen deinen Gedankenstrahl immun...");
+                LOG.trace("Character uses kai skill  thought ray but enemy has thought resistance...");
+            }
+        } else {
+            LOG.trace("Character does not have the kai skill thought ray");
         }
 
 
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_AXE, Weapon.AXE);
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_SHORT_SWORD, Weapon.SHORT_SWORD);
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_MACE, Weapon.MACE);
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_BATTLE_STAFF, Weapon.BATTLE_STAFF);
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_DAGGER, Weapon.DAGGER);
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_BROAD_SWORD, Weapon.BROAD_SWORD);
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_SPEAR, Weapon.SPEAR);
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_WARHAMMER, Weapon.WARHAMMER);
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(character, KaiSkill.ARMORY_SWORD, Weapon.SWORD);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_AXE, Weapon.AXE);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_SHORT_SWORD, Weapon.SHORT_SWORD);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_MACE, Weapon.MACE);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_BATTLE_STAFF, Weapon.BATTLE_STAFF);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_DAGGER, Weapon.DAGGER);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_BROAD_SWORD, Weapon.BROAD_SWORD);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_SPEAR, Weapon.SPEAR);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_WARHAMMER, Weapon.WARHAMMER);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_SWORD, Weapon.SWORD);
 
 
         if (applyWeaponSkill) {
+            gameSession.battleLog().add("Du wendest den Skill Armory ein(Kampfstärke +2");
             battleStrength = battleStrength + 2;
             //System.out.println("Charakter setzt eine Waffenkunde Fähigkeit ein...");
             LOG.trace("Charakter setzt eine Waffenkunde Fähigkeit ein...::= [{}]");
@@ -103,12 +114,14 @@ public class BattleService {
      * @param
      * @param
      */
-    public BattleTable.BattleValue calculateBattleQuotient(Character character, Enemy enemy) {
+    public BattleTable.BattleValue calculateBattleQuotient(GameSession gameSession, Enemy enemy) {
 
 
-        int battleQuotient = calculateBattleStrength(character, enemy) - enemy.battleStrength();
+        int battleQuotient = calculateBattleStrength(gameSession, enemy) - enemy.battleStrength();
+
 
         // System.out.println("BATTLE QUOTIENT       : " + battleQuotient);
+        gameSession.battleLog().add("Der Kampfquotient beträgt");
         LOG.trace("Battlequotient ::= [{}]", battleQuotient);
 
 
@@ -116,6 +129,7 @@ public class BattleService {
         int rand = diceService.generate();
         BattleTable.BattleValue bv = null;
         // System.out.println("DICE ROLL             : " + rand);
+        gameSession.battleLog().add("Die gewürfelte Nummer ist");
         LOG.trace("Rolled Number ::= [{}]", rand);
 
 
@@ -159,7 +173,7 @@ public class BattleService {
      * @param enemy
      */
     public BattleStatus executeBattleRound(GameSession gameSession, Enemy enemy) {
-        BattleTable.BattleValue bv = calculateBattleQuotient(gameSession.character(), enemy);
+        BattleTable.BattleValue bv = calculateBattleQuotient(gameSession, enemy);
 
         enemy.endurance(enemy.endurance() - bv.enemy() * -1);
         gameSession.character().endurance().remove(bv.character() * -1);
@@ -168,13 +182,16 @@ public class BattleService {
 
         if (gameSession.character().endurance().get() <= 0) {
             status = BattleStatus.CHARACTER_DIED;
+            gameSession.battleLog().add("Du bist Tot");
         } else if (enemy.endurance() <= 0) {
             status = BattleStatus.ENEMY_DIED;
+            gameSession.battleLog().add("Der Gegner ist Tot");
         }
 
         //System.out.println("Battle Value          : " + bv);
         //System.out.println("After fight ENEMY     : " + enemy.endurance());
         //System.out.println("Result                : " + status + "\n");
+        gameSession.battleLog().add("Kampf Ergebnis");
         LOG.debug("Results::= [{}]", bv, enemy.endurance(), status);
 
         return status;

@@ -50,6 +50,7 @@ public class GameServlet extends BaseServlet {
             RequestData data = JsonUtils.MAPPER.readValue(request.getReader(), RequestData.class);
             LOG.debug("Received game servlet request with data: {}", data );
             GameSession session = sessionService.getSessionById(data.id);
+            LOG.debug("Current game session: {}", session);
 
             if (session != null) {
 

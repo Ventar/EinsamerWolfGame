@@ -52,7 +52,8 @@ public class Character {
     /**
      * Creates a new list for the skills
      */
-    private ArrayList skills = new ArrayList<KaiSkill>();
+    @Getter
+    private List<KaiSkill> skills = new ArrayList<>();
     /**
      * Gives the character the attribute gold with a value where we start with and and the maximum of gold we can have
      */
