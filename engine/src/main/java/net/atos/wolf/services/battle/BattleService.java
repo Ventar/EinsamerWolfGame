@@ -121,7 +121,7 @@ public class BattleService {
 
 
         // System.out.println("BATTLE QUOTIENT       : " + battleQuotient);
-        gameSession.battleLog().add("Der Kampfquotient beträgt");
+        gameSession.battleLog().add("Der Kampfquotient beträgt " +);
         LOG.trace("Battlequotient ::= [{}]", battleQuotient);
 
 
