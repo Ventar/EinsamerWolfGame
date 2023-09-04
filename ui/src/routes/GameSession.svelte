@@ -7,7 +7,8 @@
   $: info = JSON.stringify(gameSession, null, 2);
 </script>
 
-
-<pre>
+<div class="overflow-y-auto" style="max-height: 150px;">
+  <pre>
     {info}
-</pre>
+  </pre>
+</div>

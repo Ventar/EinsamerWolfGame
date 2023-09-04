@@ -9,7 +9,12 @@
    */
   export let gameSession;
 
-  let host = "";
+  /**
+   * @type {any}
+   */
+  export let host;
+    
+  
   let character = "Charakter";
  
 
@@ -17,8 +22,7 @@
    * @type {any}
    */
   let nameList;
-  $: host, (host = $page.url.hostname);
-
+  
   onMount(async () => {
     const res = await fetch("http://" + host + ":8080/session/list/", {
       method: "GET",

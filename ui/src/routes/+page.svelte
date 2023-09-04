@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { page } from '$app/stores';
+  import { page } from "$app/stores";
 
   import Introduction from "./Introduction.svelte";
   import Welcome from "./Welcome.svelte";
@@ -14,16 +14,32 @@
    */
   let gameSession;
   let host = "";
-  $: host,  host = $page.url.hostname;
-   
+  $: host, (host = $page.url.hostname);
+
+  const characterName = $page.url.searchParams.get("character");
+  const adventureActive = $page.url.searchParams.get("showAdventure");
+
   onMount(async () => {
-       const res = await fetch("http://" + host + ":8080/session/", {
-      method: "GET",
-    });
+    console.log("1 - " + characterName);
+
+    let res;
+
+    if (characterName) {
+      res = await fetch("http://" + host + ":8080/session/load/", {
+        method: "POST",
+        body: JSON.stringify({
+          name: characterName,
+        }),
+      });
+    } else {
+      res = await fetch("http://" + host + ":8080/session/", {
+        method: "GET",
+      });
+    }
 
     gameSession = await res.json();
-    
   });
+
 </script>
 
 <div class="container">
@@ -35,79 +51,29 @@
         <div class="bs-component" style="padding-top: 15px;">
           <ul class="nav nav-pills" role="tablist">
             <li class="nav-item" role="presentation">
-              <a
-                class="nav-link active"
-                data-bs-toggle="tab"
-                href="#cover"
-                aria-selected="true"
-                role="tab">Willkommen</a
-              >
+              <a class:active={!adventureActive} class="nav-link" data-bs-toggle="tab" href="#cover" aria-selected="true" role="tab">Willkommen</a>
             </li>
             <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="#cover"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false">Einleitung</a
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#cover" role="button" aria-haspopup="true" aria-expanded="false">Einleitung</a
               >
               <div class="dropdown-menu" style="">
-                <a
-                  class="dropdown-item"
-                  data-bs-toggle="tab"
-                  href="#introduction">Was bisher geschah...</a
-                >
-                <a class="dropdown-item" data-bs-toggle="tab" href="#rules"
-                  >Spielregeln</a
-                >
-                <!--div class="dropdown-divider" / -->
-                <!--a class="dropdown-item" href="#">Separated link</a-->
+                <a class="dropdown-item" data-bs-toggle="tab" href="#introduction">Was bisher geschah...</a>
+                <a class="dropdown-item" data-bs-toggle="tab" href="#rules">Spielregeln</a>
               </div>
             </li>
-            <!--li class="nav-item" role="presentation">
-              <a class="nav-link" data-bs-toggle="tab" href="#intro" aria-selected="true" role="tab">Einleitung</a>
-            </li -->
             <li class="nav-item" role="presentation">
-              <a
-                class="nav-link"
-                data-bs-toggle="tab"
-                href="#adventure"
-                aria-selected="false"
-                role="tab">Abenteuer</a
-              >
+              <a class:active={adventureActive} class="nav-link" data-bs-toggle="tab" href="#adventure" aria-selected="false" role="tab">Abenteuer</a>
             </li>
             <li class="nav-item" role="presentation">
-              <a
-                class="nav-link"
-                data-bs-toggle="tab"
-                href="#character"
-                aria-selected="false"
-                role="tab">Charakter</a
-              >
+              <a class="nav-link" data-bs-toggle="tab" href="#character" aria-selected="false" role="tab">Charakter</a>
             </li>
-            {#if gameSession && gameSession.character && gameSession.character.baseBackpack && gameSession.character.baseBackpack.includes('MAP')}
-            <li class="nav-item" role="presentation">
-              <a
-                class="nav-link"
-                data-bs-toggle="tab"
-                href="#map"
-                aria-selected="false"
-                tabindex="-1"
-                role="tab">Karte</a
-              >
-            </li>
+            {#if gameSession && gameSession.character && gameSession.character.baseBackpack && gameSession.character.baseBackpack.includes("MAP")}
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#map" aria-selected="false" tabindex="-1" role="tab">Karte</a>
+              </li>
             {/if}
-
             <li class="nav-item" role="presentation">
-              <a
-                class="nav-link"
-                data-bs-toggle="tab"
-                href="#gamesession"
-                aria-selected="false"
-                tabindex="-1"
-                role="tab">Game Session</a
-              >
+              <a class="nav-link" data-bs-toggle="tab" href="#gamesession" aria-selected="false" tabindex="-1" role="tab">Game Session</a>
             </li>
           </ul>
           <hr />
@@ -116,7 +82,7 @@
     </div>
 
     <div id="myTabContent" class="tab-content">
-      <div class="tab-pane fade show active" id="cover" role="tabpanel">
+      <div class:active={!adventureActive} class:show={!adventureActive} class="tab-pane fade" id="cover" role="tabpanel">
         <Welcome />
       </div>
       <div class="tab-pane fade" id="introduction" role="tabpanel">
@@ -125,11 +91,11 @@
       <div class="tab-pane fade" id="rules" role="tabpanel">
         <Rules />
       </div>
-      <div class="tab-pane fade" id="adventure" role="tabpanel">
-        <Adventure bind:gameSession />
+      <div class:active={adventureActive} class:show={adventureActive} class="tab-pane fade" id="adventure" role="tabpanel">
+        <Adventure bind:gameSession bind:host />
       </div>
       <div class="tab-pane fade" id="character" role="tabpanel">
-        <Character bind:gameSession />
+        <Character bind:gameSession bind:host />
       </div>
       <div class="tab-pane fade" id="gamesession" role="tabpanel">
         <GameSession bind:gameSession />

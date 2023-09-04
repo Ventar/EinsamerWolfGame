@@ -7,8 +7,10 @@
    */
   export let gameSession;
   
-  let host = "";
-  $: host,  host = $page.url.hostname;
+  /**
+   * @type {any}
+   */
+  export let host;
 
   /**
    * @param {number} i
