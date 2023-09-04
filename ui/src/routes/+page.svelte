@@ -7,6 +7,7 @@
   import Rules from "./Rules.svelte";
   import Adventure from "./Adventure.svelte";
   import Character from "./Character.svelte";
+  import GameSession from "./GameSession.svelte";
 
   /**
    * @type {any}
@@ -85,6 +86,7 @@
                 role="tab">Charakter</a
               >
             </li>
+            {#if gameSession && gameSession.character && gameSession.character.baseBackpack && gameSession.character.baseBackpack.includes('MAP')}
             <li class="nav-item" role="presentation">
               <a
                 class="nav-link"
@@ -93,6 +95,18 @@
                 aria-selected="false"
                 tabindex="-1"
                 role="tab">Karte</a
+              >
+            </li>
+            {/if}
+
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                data-bs-toggle="tab"
+                href="#gamesession"
+                aria-selected="false"
+                tabindex="-1"
+                role="tab">Game Session</a
               >
             </li>
           </ul>
@@ -116,6 +130,9 @@
       </div>
       <div class="tab-pane fade" id="character" role="tabpanel">
         <Character bind:gameSession />
+      </div>
+      <div class="tab-pane fade" id="gamesession" role="tabpanel">
+        <GameSession bind:gameSession />
       </div>
       <div class="tab-pane fade" id="map" role="tabpanel">
         <p>

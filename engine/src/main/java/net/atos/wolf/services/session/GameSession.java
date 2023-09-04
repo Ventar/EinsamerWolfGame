@@ -38,8 +38,6 @@ public class  GameSession {
      */
     private Section section;
 
-    public Session session;
-
     /**
      * List of answer options which are currently available to the character for the given session ID.
      */
@@ -115,7 +113,6 @@ public class  GameSession {
         }
         return result;
     }
-
 
     /**
      * Replaces variables in the text with the values from the character in the session

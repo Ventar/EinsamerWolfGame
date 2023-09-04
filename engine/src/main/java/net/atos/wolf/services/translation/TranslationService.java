@@ -1,6 +1,8 @@
 package net.atos.wolf.services.translation;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import net.atos.wolf.services.character.Character;
+import net.atos.wolf.services.character.KaiSkill;
 import net.atos.wolf.services.common.ServiceUtilities;
 import net.atos.wolf.services.section.SectionService;
 
@@ -33,5 +35,6 @@ public class TranslationService {
             return key;
         }
     }
+
 
 }
