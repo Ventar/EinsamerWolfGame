@@ -101,7 +101,7 @@ public class SectionService {
                 try {
                     int imageId = Integer.valueOf(g.substring(g.indexOf(":") + 1, g.indexOf("}")));
                     InputStream imageStream = SectionService.class.getResourceAsStream("/img/" + imageId + ".png");
-                    String base64Image = "'data:image/png;base64," + Base64.getEncoder().encodeToString(imageStream.readAllBytes()) + "'";
+                    String base64Image = "<img width='100%' src='data:image/png;base64," + Base64.getEncoder().encodeToString(imageStream.readAllBytes()) + "'/>";;
                     section.text(section.text().replace(g, base64Image));
                 } catch (Exception e) {
                     LOG.debug("Could not resolve image ::= [{}]", g);

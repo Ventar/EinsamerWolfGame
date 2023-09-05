@@ -120,43 +120,43 @@
           <p />
           <div class="text-center">
             <p>
-              <img src="dagger.png" alt="Dolch" />
+              <img width="100%" src="dagger.png" alt="Dolch" />
             </p>
             <p>0 = Dolch</p>
             <p>
-              <img src="spear.png" alt="Spear" />
+              <img width="100%" src="spear.png" alt="Spear" />
             </p>
             <p>1 = Speer</p>
             <p>
-              <img src="mace.png" alt="Streitkolben" />
+              <img width="100%" src="mace.png" alt="Streitkolben" />
             </p>
             <p>2 = Streitkolben</p>
             <p>
-              <img src="shortsword.png" alt="Kurzschwert" />
+              <img width="100%" src="shortsword.png" alt="Kurzschwert" />
             </p>
             <p>3 = Kurzschwert</p>
             <p>
-              <img src="warhammer.png" alt="Kriegshammer" />
+              <img width="100%" src="warhammer.png" alt="Kriegshammer" />
             </p>
             <p>4 = Kriegshammer</p>
             <p>
-              <img src="sword.png" alt="Schwert" />
+              <img width="100%" src="sword.png" alt="Schwert" />
             </p>
             <p>5 = Schwert</p>
             <p>
-              <img src="axe.png" alt="Axt" />
+              <img width="100%" src="axe.png" alt="Axt" />
             </p>
             <p>6 = Axt</p>
             <p>
-              <img src="sword2.png" alt="Schwert" />
+              <img width="100%" src="sword2.png" alt="Schwert" />
             </p>
             <p>7 = Schwert</p>
             <p>
-              <img src="battlestaff.png" alt="Kampfstab" />
+              <img width="100%" src="battlestaff.png" alt="Kampfstab" />
             </p>
             <p>8 = Kampfstab</p>
             <p>
-              <img src="broadsword.png" alt="Breitschwert" />
+              <img width="100%" src="broadsword.png" alt="Breitschwert" />
             </p>
             <p>9 = Breitschwert</p>
           </div>
@@ -349,7 +349,7 @@
           </p>
           <p>Bedenke, dass eine Flucht nur möglich ist, wenn der Text dies vorsieht.</p>
           <p class="text-center">
-            <img src="img1.png" alt="Deko 1" />
+            <img width="100%" src="img1.png" alt="Deko 1" />
           </p>
         </div>
       </div>
