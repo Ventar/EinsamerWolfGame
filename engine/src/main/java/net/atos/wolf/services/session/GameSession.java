@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import net.atos.wolf.services.BattleLogEntry;
 import net.atos.wolf.services.action.Action;
 import net.atos.wolf.services.action.ActionType;
 import net.atos.wolf.services.action.Enemy;
@@ -51,7 +52,9 @@ public class  GameSession {
     /**
      * Information about the battle rounds.
      */
-    private List<String> battleLog = new ArrayList<>(Arrays.asList("Ein neuer Kampf startet..."));
+    private List<BattleLogEntry> battleLog = new ArrayList<>(Arrays.asList(new BattleLogEntry("Ein neuer Kampf startet...")));
+
+
 
     /**
      * update time to see how long a sessions exists

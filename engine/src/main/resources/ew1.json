@@ -539,6 +539,9 @@
               "thoughRayResistance": false
             }
           ],
+          "battleModifier": {
+            "rage": 1
+          },
           "targetSectionBattleRound": [
             {
               "min": 0,

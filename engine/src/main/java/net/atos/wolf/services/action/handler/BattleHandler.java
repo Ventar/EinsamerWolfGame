@@ -1,6 +1,7 @@
 package net.atos.wolf.services.action.handler;
 
 import lombok.extern.slf4j.Slf4j;
+import net.atos.wolf.services.BattleLogEntry;
 import net.atos.wolf.services.session.GameSession;
 import net.atos.wolf.services.action.*;
 import net.atos.wolf.services.battle.BattleService;
@@ -17,8 +18,8 @@ public class BattleHandler extends AbstractActionHandler {
     public void handleAction(GameSession session, Action action) {
 
         LOG.debug("Started battle with enemy ::= [{}]", action.battle().enemy());
-        session.battleLog().add("Kampfrunde " + session.battleRounds());
-        session.battleLog().add("------");
+        session.battleLog().add(new BattleLogEntry("Kampfrunde " + session.battleRounds()));
+
 
         BattleService.BattleStatus battleStatus = battleService.executeBattleRound(session, action.battle().enemy().get(0));
         session.battleRounds(session.battleRounds() + 1);
@@ -37,7 +38,7 @@ public class BattleHandler extends AbstractActionHandler {
                     // reset session for next battle
                     session.battleRounds(1);
                     session.battleLog().clear();
-                    session.battleLog().add("Ein neuer Kampf startet...");
+                    session.battleLog().add(new BattleLogEntry("Ein neuer Kampf startet..."));
 
                     // add new action to continue the battle
                     Action changeSection = new Action(ActionType.CHANGE_SECTION, "Du hast den Kampf Gewonnen, gehe weiter...");
