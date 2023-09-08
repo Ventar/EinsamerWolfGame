@@ -13,7 +13,7 @@
     },
     "food" : {
       "name" : "FOOD",
-      "value" : 0,
+      "value" : 3,
       "maxValue" : 5,
       "baseValue" : 0
     },

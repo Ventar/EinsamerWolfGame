@@ -1,5 +1,5 @@
 <script>
-// @ts-nocheck
+  // @ts-nocheck
 
   import { onMount } from "svelte";
   import { page } from "$app/stores";
@@ -16,7 +16,6 @@
     
   
   let character = "Charakter";
- 
 
   /**
    * @type {any}
@@ -58,6 +57,26 @@
    gameSession = await req.json();
    */
   }
+
+  async function translate(key) {
+   
+    const res = await fetch("http://" + host + ":8080/translate/", {
+      method: "POST",
+      body: JSON.stringify({
+        key: key
+      }),
+    });
+
+    return await res.json();
+   
+   
+
+  }
+
+function percent(min, max, current) {
+  return current * (100 / max);
+}
+
 </script>
 
 {#if nameList}
@@ -99,8 +118,87 @@
   <hr />
 {/if}
 
+
+
 {#if gameSession && gameSession.character}
   <div class="row" style="padding-top: 50px;">
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Typ</th>
+          <th scope="col">Diagramm</th>
+          <th scope="col">Anzahl</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-active">
+          <th scope="row">Ausdauer</th>
+          <td> 
+            <div class="progress">
+            <div
+              class="progress-bar bg-success"
+              role="progressbar"
+              style="width: {percent(0,gameSession.character.endurance.maxValue,gameSession.character.endurance.value)}%;"
+              aria-valuenow={gameSession.character.food.value}
+              aria-valuemin="0"
+              aria-valuemax="5"
+            />
+          </div></td>
+          <td>{gameSession.character.endurance.value}</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Kampfstärke</th>
+          <td><div class="progress">
+            <div
+              class="progress-bar bg-success"
+              role="progressbar"
+              style="width: {percent(0,gameSession.character.battleStrength.maxValue,gameSession.character.battleStrength.value)}%;"
+              aria-valuenow={gameSession.character.food.value}
+              aria-valuemin="0"
+              aria-valuemax="5"
+            />
+          </div></td>
+          <td>{gameSession.character.battleStrength.value}</td>
+          
+        </tr>
+        <tr class="table-active">
+          <th scope="row">Gold</th>
+          <td>
+            <div class="progress">
+            <div
+              class="progress-bar bg-success"
+              role="progressbar"
+              style="width: {percent(0,gameSession.character.gold.maxValue,gameSession.character.gold.value)}%;"
+              aria-valuenow={gameSession.character.food.value}
+              aria-valuemin="0"
+              aria-valuemax="5"
+            />
+          </div>
+        </td>
+          <td>{gameSession.character.gold.value}</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Essen</th>
+          <td><div class="progress">
+            <div
+              class="progress-bar bg-success"
+              role="progressbar"
+              style="width: {percent(0,gameSession.character.food.maxValue,gameSession.character.food.value)}%;"
+              aria-valuenow={gameSession.character.food.value}
+              aria-valuemin="0"
+              aria-valuemax="5"
+            />
+          </div></td>
+          <td>{gameSession.character.food.value}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+
     <div class="col-lg-12" />
     <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
       <div class="card-header">Charakter Eigenschaften</div>
@@ -124,7 +222,13 @@
         <p class="card-text">
           {#if gameSession.character.skills}
             {#each gameSession.character.skills as skill, i}
-              {i}. {skill}<br />
+            	{#await translate(skill)}
+		            {i}. {skill}<br />
+	            {:then translation}
+		            {i}. {translation.value}<br/>
+	            {:catch someError}
+		            System error: {someError.message}.
+	            {/await}
             {/each}
           {:else}
             keine<br />
@@ -133,85 +237,24 @@
       </div>
     </div>
 
-    
 
-   {#if gameSession.character.food.value == 0}
-   <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
-    <div class="card-header">Essen</div>
-    <div class="card-body">
-      <h4 class="card-title" />
-      <p class="card-text">
-        Kein Essen vorhanden
-      </p>
+    <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+      <div class="card-header">Essen</div>
+      <div class="card-body">
+        <h4 class="card-title" />
+        <p class="card-text" />
+        <div class="progress">
+          <div
+            class="progress-bar bg-success"
+            role="progressbar"
+            style="width: {percent(0,5,gameSession.character.food.value)}%;"
+            aria-valuenow={gameSession.character.food.value}
+            aria-valuemin="0"
+            aria-valuemax="5"
+          />
+        </div>
+      </div>
     </div>
-  </div>
-    
-{/if}
-
-{#if gameSession.character.food.value == 1}
-<div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
-  <div class="card-header">Essen</div>
-  <div class="card-body">
-    <h4 class="card-title" />
-    <p class="card-text"> <div class="progress">
-      <div class="progress-bar bg-success" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-  
-  </div>
-</div>
-{/if}
-
-{#if gameSession.character.food.value == 2}
-<div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
-  <div class="card-header">Essen</div>
-  <div class="card-body">
-    <h4 class="card-title" />
-    <p class="card-text"> <div class="progress">
-      <div class="progress-bar bg-success" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-  
-  </div>
-</div>
-{/if}
-
-{#if gameSession.character.food.value == 3}
-<div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
-  <div class="card-header">Essen</div>
-  <div class="card-body">
-    <h4 class="card-title" />
-    <p class="card-text"> <div class="progress">
-      <div class="progress-bar bg-success" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-  
-  </div>
-</div>
-{/if}
-
-{#if gameSession.character.food.value == 4}
-<div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
-  <div class="card-header">Essen</div>
-  <div class="card-body">
-    <h4 class="card-title" />
-    <p class="card-text"> <div class="progress">
-      <div class="progress-bar bg-success" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-  
-  </div>
-</div>
-{/if}
-
-{#if gameSession.character.food.value == 5}
-<div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
-  <div class="card-header">Essen</div>
-  <div class="card-body">
-    <h4 class="card-title" />
-    <p class="card-text"> <div class="progress">
-      <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-  
-  </div>
-</div>
-{/if}
 
     <hr />
     <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
@@ -247,5 +290,9 @@
         </div>
       </div>
     </div>
+
+
+    
+
   </div>
 {/if}

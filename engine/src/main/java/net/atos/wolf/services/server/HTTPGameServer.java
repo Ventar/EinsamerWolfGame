@@ -42,6 +42,7 @@ public class HTTPGameServer {
         GameServlet gameServlet = new GameServlet(sessionService, engine, sectionService);
         LoadSessionServlet loadSessionServlet = new LoadSessionServlet(sessionService, engine, sectionService);
         ListGameSessionsServlet listGameSessionsServlet = new ListGameSessionsServlet(sessionService, engine, sectionService);
+        TranslationServlet translationServlet = new TranslationServlet(sessionService,engine,sectionService);
 
         ServletContextHandler context = new ServletContextHandler();
         context.setContextPath("/");
@@ -51,6 +52,8 @@ public class HTTPGameServer {
         context.addServlet(new ServletHolder(saveSessionServlet), "/session/save/");
         context.addServlet(new ServletHolder(loadSessionServlet), "/session/load/");
         context.addServlet(new ServletHolder(listGameSessionsServlet), "/session/list/");
+        context.addServlet(new ServletHolder(translationServlet), "/translate/");
+
 
         // allow usage with the svelte app from a different process
         FilterHolder cors = context.addFilter(CrossOriginFilter.class, "/*", EnumSet.of(DispatcherType.REQUEST));

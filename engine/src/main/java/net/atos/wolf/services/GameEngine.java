@@ -33,11 +33,6 @@ public class GameEngine {
      */
     private Map<ActionType, IActionHandler> actionHandler;
 
-    /**
-     * a translater that filters with keywords words and translate them into german etc.
-     */
-    private TranslationService translationService = new TranslationService("/translation.json");
-
 
     public GameEngine(SectionService sectionService) {
         actionHandler = ServiceUtilities.buildActionHandler(sectionService);
