@@ -476,7 +476,7 @@
   },
   {
     "sectionNumber": 256,
-    "text": "Der Großteil der feindlichen Kämpfer sammelt sich in der Mitte von Pelethars Schlachtreihe, also versuchst du sie an der äußeren linken Flanke zu erreichen, wo sie bis an die Brustwehr des Durnensteins heranreicht. Dort befinden sich nur wenige Feinde und auch der Kampf tobt dort nicht so wild. Du ziehst deine Kapuze über den Kopf und greifst deine Waffe, dann läufst du eilig die Marmorstufen hinab und hoffst, dass dir deine Geschwindigkeit und Geschicklichkeit helfen werden, die Nachschublinien des Feindes zu durchbrechen, noch bevor er merkt, wer du wirklich bist. Bedauerlicherweise wird deine Hoffnung nur allzu bald zunichte gemacht. Zwei scharfäugige Drakkarim entdecken dich, als du dich dem Ende der breiten Treppe näherst, und merken sofort, dass du keiner von ihnen bist. Sie stürmen aus den hinteren Reihen auf dich zu, um dich abzufangen, und versperren dir nun den Weg zur Schlachtreihe des Prinzen. Mit wilden Hieben ihrer blutverschmierten Schwerter greifen sie dich an, und du musst beide wie einen einzelnen Gegner bekämpfen. ",
+    "text": "Der Großteil der feindlichen Kämpfer sammelt sich in der Mitte von Pelethars Schlachtreihe, also versuchst du sie an der äußeren linken Flanke zu erreichen, wo sie bis an die Brustwehr des Durnensteins heranreicht. Dort befinden sich nur wenige Feinde und auch der Kampf tobt dort nicht so wild.<br /><br/> Du ziehst deine Kapuze über den Kopf und greifst deine Waffe, dann läufst du eilig die Marmorstufen hinab und hoffst, dass dir deine Geschwindigkeit und Geschicklichkeit helfen werden, die Nachschublinien des Feindes zu durchbrechen, noch bevor er merkt, wer du wirklich bist. Bedauerlicherweise wird deine Hoffnung nur allzu bald zunichte gemacht.<br /><br/> Zwei scharfäugige Drakkarim entdecken dich, als du dich dem Ende der breiten Treppe näherst, und merken sofort, dass du keiner von ihnen bist. Sie stürmen aus den hinteren Reihen auf dich zu, um dich abzufangen, und versperren dir nun den Weg zur Schlachtreihe des Prinzen. Mit wilden Hieben ihrer blutverschmierten Schwerter greifen sie dich an, und du musst beide wie einen einzelnen Gegner bekämpfen. ",
     "actions": [
       {
         "type": "BATTLE",
@@ -781,10 +781,12 @@
               "battleStrength": 20,
               "endurance": 30,
               "thoughtRayResistance": true
-            },
+            }
+          ],
+          "targetSectionBattleRound": [
             {
-              "type": "CHANGE_SECTION",
-              "text": "Du hat den Kampf Gewonnen",
+              "min": 0,
+              "max": 99,
               "targetSection": 540
             }
           ]

@@ -74,44 +74,7 @@ public class  GameSession {
      * @return the modified text
      */
     public String getModifiedSectionText() {
-        return addBattleInfo(replaceCharacterVariablesInText(section.text()));
-    }
-
-    /**
-     * Enhances the text with data from the battle info.
-     *
-     * @param text the text to modify
-     *
-     * @return the modified text
-     */
-    private String addBattleInfo(String text) {
-        String result = text;
-        for (Action action : section.actions()) {
-            if (action.type().equals(ActionType.BATTLE)) {
-                for (Enemy enemy : action.battle().enemy()) {
-                    result += "<br/><br/><div class='card border-danger mb-3' style='max-width: 20rem;'>";
-                    result += "<div class='card-header'>Gegner</div>";
-                    result += "<div class='card-body'>";
-                    result += "<h4 class='card-title'>" + enemy.name() + "</h4>";
-                    result += "<br/>";
-                    result += "<p class='card-text'>";
-                    result += "Ausdauer: <strong><span class='text-success'>" + enemy.endurance() + "</strong><br/>";
-                    result += "Kampfstärke: <strong><span class='text-success'>" + enemy.battleStrength() + "</strong>";
-                    result += "</p>";
-
-                    result += "<p class='card-text'>Kampfrunde: <strong><span class='text-success'>" + battleRounds + "</strong></p>";
-                    result += "<div>";
-                    result += "<div>";
-
-                    for(String log : battleLog) {
-                        result += "<p>";
-                        result += log;
-                        result += "</p>";
-                    }
-                }
-            }
-        }
-        return result;
+        return replaceCharacterVariablesInText(section.text());
     }
 
     /**

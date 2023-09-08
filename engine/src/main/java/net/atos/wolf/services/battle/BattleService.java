@@ -121,7 +121,11 @@ public class BattleService {
 
 
         // System.out.println("BATTLE QUOTIENT       : " + battleQuotient);
+
         gameSession.battleLog().add("Der Kampfquotient beträgt " + battleQuotient);
+
+        gameSession.battleLog().add("Der Kampfquotient beträgt  " + battleQuotient);
+
         LOG.trace("Battlequotient ::= [{}]", battleQuotient);
 
 
@@ -129,7 +133,7 @@ public class BattleService {
         int rand = diceService.generate();
         BattleTable.BattleValue bv = null;
         // System.out.println("DICE ROLL             : " + rand);
-        gameSession.battleLog().add("Die gewürfelte Nummer ist");
+        gameSession.battleLog().add("Die gewürfelte Nummer ist  " + rand);
         LOG.trace("Rolled Number ::= [{}]", rand);
 
 
@@ -169,7 +173,7 @@ public class BattleService {
     /**
      * executes battle segment
      *
-     * @param character
+     * @param gameSession
      * @param enemy
      */
     public BattleStatus executeBattleRound(GameSession gameSession, Enemy enemy) {
@@ -191,7 +195,7 @@ public class BattleService {
         //System.out.println("Battle Value          : " + bv);
         //System.out.println("After fight ENEMY     : " + enemy.endurance());
         //System.out.println("Result                : " + status + "\n");
-        gameSession.battleLog().add("Kampf Ergebnis");
+        gameSession.battleLog().add("Kampf Ergebnis  " + status);
         LOG.debug("Results::= [{}]", bv, enemy.endurance(), status);
 
         return status;

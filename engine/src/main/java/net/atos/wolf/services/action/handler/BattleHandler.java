@@ -33,10 +33,21 @@ public class BattleHandler extends AbstractActionHandler {
         if (battleStatus.equals(BattleService.BattleStatus.ENEMY_DIED)) {
             for (BattleRoundTarget brt : action.battle().targetSectionBattleRound()) {
                 if (session.battleRounds() >= brt.min() && session.battleRounds() <= brt.max()) {
+
+                    // reset session for next battle
                     session.battleRounds(1);
                     session.battleLog().clear();
                     session.battleLog().add("Ein neuer Kampf startet...");
-                    session.section(getSection(brt.targetSection()));
+
+                    // add new action to continue the battle
+                    Action changeSection = new Action(ActionType.CHANGE_SECTION, "Du hast den Kampf Gewonnen, gehe weiter...");
+                    changeSection.targetSection(brt.targetSection());
+                    session.modifiedAnswerOptions().clear();
+                    session.modifiedAnswerOptions().add(changeSection);
+
+                    //session.section(getSection(brt.targetSection()));
+
+
                     return;
                 }
             }
