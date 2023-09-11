@@ -1,5 +1,6 @@
 package net.atos.wolf.services.server.servlet;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.ToString;
@@ -8,20 +9,25 @@ import net.atos.wolf.services.GameEngine;
 import net.atos.wolf.services.JsonUtils;
 import net.atos.wolf.services.section.SectionService;
 import net.atos.wolf.services.session.SessionService;
+import net.atos.wolf.services.translation.Translation;
 import net.atos.wolf.services.translation.TranslationService;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 public class TranslationServlet extends BaseServlet {
 
     @ToString
+    @JsonIgnoreProperties(ignoreUnknown = true)
     public static class RequestData {
-        public String key;
+        public List<String> keys;
     }
 
     @ToString
     public static class ResponseData {
-        public String key;
-        public String value;
+        public List<Translation> translations;
+
     }
 
     /**
@@ -39,12 +45,23 @@ public class TranslationServlet extends BaseServlet {
         try {
             TranslationServlet.RequestData data = JsonUtils.MAPPER.readValue(request.getReader(), TranslationServlet.RequestData.class);
             LOG.debug("Received translation servlet request with data: {}", data);
-
-            String translated = translationService.translate(data.key);
-
             TranslationServlet.ResponseData responseData = new TranslationServlet.ResponseData();
-            responseData.key = data.key;
-            responseData.value = translated;
+
+
+            List<Translation> translations = new ArrayList<>();
+
+            for (String key : data.keys) {
+
+                String translated = translationService.translate(key);
+
+                Translation translation = new Translation();
+                translation.key(key);
+                translation.de(translated);
+
+                translations.add(translation);
+
+            }
+            responseData.translations = translations;
 
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
