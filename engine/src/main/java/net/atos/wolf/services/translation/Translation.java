@@ -13,4 +13,5 @@ import lombok.Setter;
 public class Translation {
     private String key;
     private String de;
+    private String tooltip;
 }

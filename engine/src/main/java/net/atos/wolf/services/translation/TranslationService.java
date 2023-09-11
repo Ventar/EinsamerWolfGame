@@ -36,5 +36,13 @@ public class TranslationService {
         }
     }
 
+    public String translateTip(String key) {
+        if (translations.containsKey(key)) {
+            return translations.get(key).tooltip();
+        } else {
+            return key;
+        }
+    }
+
 
 }

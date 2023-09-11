@@ -53,10 +53,12 @@ public class TranslationServlet extends BaseServlet {
             for (String key : data.keys) {
 
                 String translated = translationService.translate(key);
+                String tip = translationService.translateTip(key);
 
                 Translation translation = new Translation();
                 translation.key(key);
                 translation.de(translated);
+                translation.tooltip(tip);
 
                 translations.add(translation);
 
