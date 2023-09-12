@@ -63,25 +63,23 @@ public class BattleService {
      * @param enemy
      * @return
      */
-    private int calculateBattleStrength(GameSession gameSession, Enemy enemy ) {
+    private int calculateBattleStrength(GameSession gameSession, Enemy enemy, BattleLogEntry entry) {
         LOG.trace("Calculate the battle strength character ::= [{}], enemy ::= [{}]...", gameSession.character(), enemy);
+
         int battleStrength = gameSession.character().battleStrength().get();
         boolean applyWeaponSkill = false;
-        BattleLogEntry entry = new BattleLogEntry();
-        entry.battleStrength(battleStrength);
-        entry.hasSkill();
-        gameSession.battleLog().add(entry);
-        entry.applyWeaponSkill(applyWeaponSkill);
+
+
+
 
         if (gameSession.character().hasSkill(KaiSkill.THOUGHT_RAY)) {
             if (!enemy.thoughRayResistance()) {
-
-              //  gameSession.battleLog().add(entry.text("Du setzt die Fähigkeit Gedankenstrahl ein (Kampfstärke + 2)"));
-                battleStrength = battleStrength + 2;
                 LOG.trace("Character uses kai skill  thought ray");
+                battleStrength = battleStrength + 2;
+                entry.characterUsesThoughtRay(true);
             } else {
-              //  gameSession.battleLog().add(entry.text("Dein Gegner ist gegen deinen Gedankenstrahl immun..."));
                 LOG.trace("Character uses kai skill  thought ray but enemy has thought resistance...");
+                entry.enemyHasThoughRayResistance(true);
             }
         } else {
             LOG.trace("Character does not have the kai skill thought ray");
@@ -100,16 +98,15 @@ public class BattleService {
 
 
         if (applyWeaponSkill) {
-           // gameSession.battleLog().add(entry.text("Du wendest den Skill Armory ein(Kampfstärke +2"));
             battleStrength = battleStrength + 2;
-            //System.out.println("Charakter setzt eine Waffenkunde Fähigkeit ein...");
+            entry.characterApplyWeaponSkill(applyWeaponSkill);
             LOG.trace("Charakter setzt eine Waffenkunde Fähigkeit ein...::= [{}]");
         }
 
 
         // System.out.println("\nMod. Battle Strength  : " + battleStrength);
         LOG.trace("Mod.Battlestrength::= [{}]", battleStrength);
-
+        entry.battleStrength(battleStrength);
         return battleStrength;
     }
 
@@ -119,26 +116,21 @@ public class BattleService {
      * @param
      * @param
      */
-    public BattleTable.BattleValue calculateBattleQuotient(GameSession gameSession, Enemy enemy , BattleLogEntry entry) {
+    private BattleTable.BattleValue calculateBattleQuotient(GameSession gameSession, Enemy enemy, BattleLogEntry entry) {
 
-
-        int battleQuotient = calculateBattleStrength(gameSession, enemy) - enemy.battleStrength();
-        gameSession.battleLog().add(entry);
-
-        // System.out.println("BATTLE QUOTIENT       : " + battleQuotient);
-
+        int battleQuotient = calculateBattleStrength(gameSession, enemy, entry) - enemy.battleStrength();
         entry.battleQuotient(battleQuotient);
 
-       // gameSession.battleLog().add(entry.text("Der Battlequotient beträgt" + battleQuotient));
 
         LOG.trace("Battlequotient ::= [{}]", battleQuotient);
 
-
         //Zufallszähler basiert auf 0
         int rand = diceService.generate();
+        entry.dice(rand);
+
         BattleTable.BattleValue bv = null;
         // System.out.println("DICE ROLL             : " + rand);
-       // gameSession.battleLog().add(entry.text("Die gewürfelte Nummer ist" + rand));
+        // gameSession.battleLog().add(entry.text("Die gewürfelte Nummer ist" + rand));
         LOG.trace("Rolled Number ::= [{}]", rand);
 
 
@@ -171,7 +163,8 @@ public class BattleService {
             bv = BattleTable.get(12, rand);
 
         }
-        //
+        entry.battleValue(bv);
+
         return bv;
     }
 
@@ -183,31 +176,27 @@ public class BattleService {
      * @param gameSession
      * @param enemy
      */
-    public BattleStatus executeBattleRound(GameSession gameSession, Enemy enemy, BattleLogEntry e) {
+    public BattleStatus executeBattleRound(GameSession gameSession, Enemy enemy, BattleLogEntry entry) {
 
-        BattleLogEntry entry = new BattleLogEntry();
-        gameSession.battleLog().add(entry);
-        entry.endurance(entry.endurance());
 
         BattleTable.BattleValue bv = calculateBattleQuotient(gameSession, enemy, entry);
 
         enemy.endurance(enemy.endurance() - bv.enemy() * -1);
         gameSession.character().endurance().remove(bv.character() * -1);
+        entry.characterEndurance(gameSession.character().endurance().get());
 
         BattleStatus status = BattleStatus.TIE;
 
         if (gameSession.character().endurance().get() <= 0) {
             status = BattleStatus.CHARACTER_DIED;
-            //gameSession.battleLog().add(entry.text("Du bist tot"));
         } else if (enemy.endurance() <= 0) {
             status = BattleStatus.ENEMY_DIED;
-           // gameSession.battleLog().add(entry.text("Der Gegner ist Tot"));
         }
 
         //System.out.println("Battle Value          : " + bv);
         //System.out.println("After fight ENEMY     : " + enemy.endurance());
         //System.out.println("Result                : " + status + "\n");
-       // gameSession.battleLog().add(entry.text("Kampf Ergebnis" + status));
+        // gameSession.battleLog().add(entry.text("Kampf Ergebnis" + status));
         LOG.debug("Results::= [{}]", bv, enemy.endurance(), status);
 
         return status;

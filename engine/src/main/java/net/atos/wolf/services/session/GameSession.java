@@ -22,7 +22,7 @@ import java.util.List;
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @ToString
-public class  GameSession {
+public class GameSession {
 
     /**
      * The unique ID of the session to differentiate between multiple players
@@ -52,9 +52,7 @@ public class  GameSession {
     /**
      * Information about the battle rounds.
      */
-    private List<BattleLogEntry> battleLog = new ArrayList<>(Arrays.asList(new BattleLogEntry("Ein neuer Kampf startet...")));
-
-
+    private List<BattleLogEntry> battleLog = new ArrayList<>();
 
     /**
      * update time to see how long a sessions exists

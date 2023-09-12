@@ -18,10 +18,12 @@ public class BattleHandler extends AbstractActionHandler {
     public void handleAction(GameSession session, Action action) {
 
         LOG.debug("Started battle with enemy ::= [{}]", action.battle().enemy());
-        session.battleLog().add(new BattleLogEntry("Kampfrunde " + session.battleRounds()));
 
+        BattleLogEntry entry = new BattleLogEntry();
+        entry.battleRound(session.battleRounds());
+        session.battleLog().add(entry);
 
-        BattleService.BattleStatus battleStatus = battleService.executeBattleRound(session, action.battle().enemy().get(0));
+        BattleService.BattleStatus battleStatus = battleService.executeBattleRound(session, action.battle().enemy().get(0), entry);
         session.battleRounds(session.battleRounds() + 1);
 
         if (battleStatus.equals(BattleService.BattleStatus.TIE)) {
@@ -38,13 +40,14 @@ public class BattleHandler extends AbstractActionHandler {
                     // reset session for next battle
                     session.battleRounds(1);
                     session.battleLog().clear();
-                    session.battleLog().add(new BattleLogEntry("Ein neuer Kampf startet..."));
+                   // session.battleLog().add(new BattleLogEntry("Ein neuer Kampf startet..."));
 
                     // add new action to continue the battle
                     Action changeSection = new Action(ActionType.CHANGE_SECTION, "Du hast den Kampf Gewonnen, gehe weiter...");
                     changeSection.targetSection(brt.targetSection());
                     session.modifiedAnswerOptions().clear();
                     session.modifiedAnswerOptions().add(changeSection);
+                    entry.battleRound(session.battleRounds());
 
                     //session.section(getSection(brt.targetSection()));
 

@@ -13,9 +13,19 @@
    */
   export let host;
 
+   /**
+   * @type {any}
+   */
+   export let BattleService;
+
+  
+
+
   $: info = JSON.stringify(gameSession, null, 2);
 
   $: host, (host = $page.url.hostname);
+
+
 
   /**
    * @param {number} i
@@ -55,6 +65,7 @@
         </div>
       </div>
 
+
       {#each gameSession.modifiedAnswerOptions as mao}
         {#if mao.type == "BATTLE"}
           {#each mao.battle.enemy as enemy}
@@ -86,7 +97,7 @@
                       <strong>Pass auf!</strong> <a href="#" class="alert-link">deine Lebenspunkte sind Gefährlich niedrig</a>
                     </div>
                   {/if}
-                  <p>Kampflog</p>
+                  <p></p>
                 </div>
               </div>
             </div>
