@@ -7,26 +7,31 @@
   $: info = JSON.stringify(gameSession, null, 2);
 </script>
 
-<!--div class="overflow-y-auto" style="max-height: 600px;"-->
-<button type="submit" class="btn btn-primary" >
-  <i class="bi bi-cloud-arrow-up-fill"></i>  Speichern 
-</button>
+<div class="row" style="margin-top: 70px;">
+  <div class="col-lg-12">
+    <span data-toggle="tooltip" title="Some tooltip text!">Hover over me</span>
 
-<button type="submit" class="btn btn-primary">
-  <i class="bi bi-cloud-arrow-down-fill"></i>  Laden
-</button>
+    <!--div class="overflow-y-auto" style="max-height: 600px;"-->
+    <button type="submit" class="btn btn-primary">
+      <i class="bi bi-cloud-arrow-up-fill" /> Speichern
+    </button>
 
-<button type="submit" class="btn btn-primary">
-  <i class="bi bi-cloud-check-fill"></i>  Neues Abenteuer
-</button>
+    <button type="submit" class="btn btn-primary">
+      <i class="bi bi-cloud-arrow-down-fill" /> Laden
+    </button>
 
-<div class="btn-group  mr-2" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary">Left</button>
-  <button type="button" class="btn btn-secondary">Middle</button>
-  <button type="button" class="btn btn-secondary">Right</button>
-</div>
+    <button type="submit" class="btn btn-primary">
+      <i class="bi bi-cloud-check-fill" /> Neues Abenteuer
+    </button>
 
-  <pre>
+    <div class="btn-group mr-2" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-secondary">Left</button>
+      <button type="button" class="btn btn-secondary">Middle</button>
+      <button type="button" class="btn btn-secondary">Right</button>
+    </div>
+
+    <pre>
     {info}
   </pre>
-
+  </div>
+</div>
