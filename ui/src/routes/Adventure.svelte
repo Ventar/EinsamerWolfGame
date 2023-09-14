@@ -13,13 +13,6 @@
    */
   export let host;
 
-   /**
-   * @type {any}
-   */
-   export let BattleService;
-
-  
-
 
   $: info = JSON.stringify(gameSession, null, 2);
 
@@ -72,34 +65,6 @@
             </div>
           </div>
 
-<<<<<<< HEAD
-      <div class="row">
-        <div class="col-lg-12">
-          <p>{@html gameSession.modifiedSectionText}</p>
-        </div>
-      </div>
-
-
-      {#each gameSession.modifiedAnswerOptions as mao}
-        {#if mao.type == "BATTLE"}
-          {#each mao.battle.enemy as enemy}
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="card border-danger mb-4">
-                  <div class="card-header">Gegner</div>
-                  <div class="card-body">
-                    <h4 class="card-title">{enemy.name}</h4>
-                    <br />
-                    <p class="card-text">
-                      Ausdauer: <strong
-                        ><span class="text-success">
-                          {enemy.endurance}
-                        </span></strong
-                      ><br />
-                      Kampfstärke:
-                      <strong><span class="text-success"> {enemy.battleStrength}</span></strong>
-                    </p>
-=======
           {#each gameSession.modifiedAnswerOptions as mao}
             {#if mao.type == "BATTLE"}
               {#each mao.battle.enemy as enemy}
@@ -147,7 +112,6 @@
                       {/if}
                       <p>Kampflog</p>
                     </div>
->>>>>>> 3ee2cab (added tooltips)
                   </div>
                 </div>
               {/each}
@@ -173,14 +137,9 @@
                       <button
                         type="button"
                         class="btn btn-primary"
-                        on:click={() => doPost(i)}>{action.text}</button
-                      >
+                        on:click={() => doPost(i)}>{action.text}</button>
                     {/each}
                   {/if}
-<<<<<<< HEAD
-                  <p></p>
-=======
->>>>>>> 3ee2cab (added tooltips)
                 </div>
               </div>
             </div>

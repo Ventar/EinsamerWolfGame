@@ -1,7 +1,7 @@
 <script>
   // @ts-nocheck
 
-  import { onMount } from "svelte";
+  import { onMount, afterUpdate, tick } from "svelte";
   import { page } from "$app/stores";
 
   /**
@@ -24,15 +24,12 @@
     });
 
     nameList = await res.json();
-
-    const popoverElements = document.querySelectorAll(
-      '[data-bs-toggle="popover"]'
-    );
-
-    for (const popover of popoverElements) {
-      new bootstrap.Popover(popover); // eslint-disable-line no-new
-    }
   });
+
+  const initpopup = (c) => {
+    //console.log(c);
+    new bootstrap.Popover(c,{html: true});
+  };
 
   /**
    * @param {string} characterName
@@ -222,29 +219,24 @@
                   {skill}<br />
                 {/each}
               {:then translation}
-                {#each translation.translations as t}
+                {#each translation.translations as t,i}
                   <li
                     class="list-group-item d-flex justify-content-between align-items-center"
                   >
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-container="body"
-                      data-bs-toggle="popover"
-                      data-bs-placement="right"
-                      data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-                      data-bs-original-title="Popover Title">Right</button
-                    >
+                  
 
                     {t.de}
-                    <span
-                      class="badge"
-                      data-bs-toggle="popover"
-                      data-bs-placement="right"
-                      title={t.tooltip}
-                    >
-                      <img width="16px" src="info-16.png" alt="Deko 1" /></span
-                    >
+                    <button 
+                    use:initpopup={this}
+                    type="button"
+                    class="btn btn-dark btn-sm"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-trigger="focus"
+                    data-bs-placement="right"
+                    data-bs-content="{t.tooltip}"
+                    data-bs-original-title="{t.de}"><img width="16px" src="info-16.png" alt="Deko 1" /></button
+                  >
                   </li>
 
                   <!--button

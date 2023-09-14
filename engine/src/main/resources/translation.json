@@ -32,7 +32,7 @@
   {
     "key": "THOUGHT_RAY",
     "de": "Gedankenstrahl",
-    "tooltip": "Der Gedankenstrahl ermöglicht es einem Kai-Lord, seinen Gegner mit der Kraft seines Geistes anzugreifen. Dies kann er während eines normalen, mit Waffen geführten Kampfes tun und so seine KAMPFSTÄRKE für die Dauer des Kampfes um 2 Punkte erhöhen. Nicht alle Kreaturen, denen man in diesem Abenteuer begegnet, können durch den Gedankenstrahl verletzt werden. Du wirst erfahren, falls eine Kreatur immun dagegen ist. Wenn du diese Fertigkeit wählst, schreibe „Gedankenstrahl: +2 KAMPFSTÄRKEPUNKTE“ auf dein Aktionsblatt."
+    "tooltip": "<p>Der Gedankenstrahl ermöglicht es einem Kai-Lord, seinen Gegner mit der Kraft seines Geistes anzugreifen.</p> <p>Dies kann er während eines normalen, mit Waffen geführten Kampfes tun und so seine KAMPFSTÄRKE für die Dauer des Kampfes um 2 Punkte erhöhen. Nicht alle Kreaturen, denen man in diesem Abenteuer begegnet, können durch den Gedankenstrahl verletzt werden.</p> <p>Du wirst erfahren, falls eine Kreatur immun dagegen ist.</p><p> Wenn du diese Fertigkeit wählst, erhälst du im Kampf <span class='text-success'><b>+2 Kampfstärke</b></span></p> "
   },
   {
     "key": "MIND_OVER_MATTER",
@@ -90,11 +90,6 @@
     "key": "MENTAL_DEFENSE",
     "de": "Mentaleverteidigung"
   },
-
-
-
-
-
   {
     "key": "VORDAK_JEWEL",
     "de": "Vordak-Juwel"

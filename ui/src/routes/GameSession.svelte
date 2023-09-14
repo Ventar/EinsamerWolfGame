@@ -1,14 +1,41 @@
 <script>
+import { onMount } from "svelte";
+
   /**
+   * 
    * @type {any}
    */
   export let gameSession;
 
   $: info = JSON.stringify(gameSession, null, 2);
+
+
+  onMount(() => {
+    
+
+
+    
+  });
+
 </script>
+
+
+
 
 <div class="row" style="margin-top: 70px;">
   <div class="col-lg-12">
+
+
+    <button
+    type="button"
+    class="btn btn-secondary"
+    data-bs-container="body"
+    data-bs-toggle="popover"
+    data-bs-placement="right"
+    data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+    data-bs-original-title="Popover Title">Right</button
+  >
+
     <span data-toggle="tooltip" title="Some tooltip text!">Hover over me</span>
 
     <!--div class="overflow-y-auto" style="max-height: 600px;"-->
