@@ -70,8 +70,6 @@ public class BattleService {
         boolean applyWeaponSkill = false;
 
 
-
-
         if (gameSession.character().hasSkill(KaiSkill.THOUGHT_RAY)) {
             if (!enemy.thoughRayResistance()) {
                 LOG.trace("Character uses kai skill  thought ray");
@@ -129,8 +127,6 @@ public class BattleService {
         entry.dice(rand);
 
         BattleTable.BattleValue bv = null;
-        // System.out.println("DICE ROLL             : " + rand);
-        // gameSession.battleLog().add(entry.text("Die gewürfelte Nummer ist" + rand));
         LOG.trace("Rolled Number ::= [{}]", rand);
 
 
@@ -193,10 +189,6 @@ public class BattleService {
             status = BattleStatus.ENEMY_DIED;
         }
 
-        //System.out.println("Battle Value          : " + bv);
-        //System.out.println("After fight ENEMY     : " + enemy.endurance());
-        //System.out.println("Result                : " + status + "\n");
-        // gameSession.battleLog().add(entry.text("Kampf Ergebnis" + status));
         LOG.debug("Results::= [{}]", bv, enemy.endurance(), status);
 
         return status;
