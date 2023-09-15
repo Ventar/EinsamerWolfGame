@@ -207,14 +207,70 @@
                 {/each}
               {/await}
             {:else}
-              keine<br />
+              Keine<br />
             {/if}
           </div>
         </div>
       </div>
 
-      <div class="col-4">col-sm-4</div>
-      <div class="col-4">col-sm-4</div>
+      <div class="col-4">
+        Waffen
+
+        {#if gameSession.character.weaponOne}
+          <p />
+          1.{translate(gameSession.character.weaponOne)}<br />
+        {:else}
+          <p />
+          1. Keine Waffe vorhanden<br />
+        {/if}
+        {#if gameSession.character.weaponTwo}
+          <p />
+          2.{gameSession.character.weaponTwo} <br />
+        {:else}
+          <p />
+          2. Keine Waffe vorhanden<br />
+        {/if}
+      </div>
+
+      <div class="col-4">
+        Gegenstände
+        <hr />
+        <div class="bs-component">
+          <div class="list-group">
+            {#if gameSession.character.baseBackpack}
+              {#await translate(gameSession.character.baseBackpack)}
+                {#each gameSession.character.baseBackpack as item}
+                  {item}<br />
+                {/each}
+              {:then translation}
+                {#each translation.translations as t, i}
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    {t.de}
+       
+                  </li>
+
+                  <!--button
+                  type="button"
+                  class="btn btn-secondary btn-sm btn-block"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  title={t.tooltip}>{t.de}</button
+            -->
+                {/each}
+              {:catch someError}
+                {#each gameSession.character.baseBackpack as item, i}
+                  {i}. {item}<br />
+                {/each}
+              {/await}
+            {:else}
+              Keine<br />
+            {/if}
+          </div>
+        </div>
+      </div>
+
     </div>
   {/if}
 </div>

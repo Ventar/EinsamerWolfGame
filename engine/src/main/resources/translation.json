@@ -2,32 +2,32 @@
   {
     "key": "HEAL",
     "de": "Heilung",
-    "tooltip": "Diese Fertigkeit kann eingesetzt werden, um verlorene AUSDAUERPUNKTE zurückzugewinnen. Wenn du diese Fertigkeit besitzt, kannst du dir für jeden nummerierten Textabschnitt, den du im Spiel passierst und in dem du dich nicht in einem Kampf befindest, 1 AUSDAUERPUNKT gutschreiben. Denke immer daran, dass du nur AUSDAUERPUNKTE zurückgewinnen kannst, die du verloren hast, du deinen Anfangswert also niemals übersteigen darfst. Wenn du diese Fertigkeit wählst, schreibe „Heilung: + 1 AUSDAUERPUNKT für jeden Abschnitt ohne Kampf“ auf dein Aktionsblatt."
+    "tooltip": "<p>Diese Fertigkeit kann eingesetzt werden, um verlorene AUSDAUERPUNKTE zurückzugewinnen.</p><p> Wenn du diese Fertigkeit besitzt, kannst du dir für jeden nummerierten Textabschnitt, den du im Spiel passierst und in dem du dich nicht in einem Kampf befindest, 1 AUSDAUERPUNKT gutschreiben.</p><p> Denke immer daran, dass du nur AUSDAUERPUNKTE zurückgewinnen kannst, die du verloren hast, du deinen Anfangswert also niemals übersteigen darfst.</p><p> Wenn du diese Fertigkeit wählst, erhälst du durch Heilung: <span class='text-success'><b>+ 1 AUSDAUERPUNKT</b></span> für jeden Abschnitt ohne Kampf.</p>"
   },
   {
     "key": "ANIMAL_UNDERSTANDING",
     "de": "Tierverständnis",
-    "tooltip": "Diese Fertigkeit ermöglicht es einem Kai-Lord, mit einigen Tieren zu sprechen und ihr Verhalten zu verstehen. In einigen Fällen gibt sie einem Kai-Lord sogar die Kontrolle über die Wahrnehmung und das Handeln eines Tieres. Wenn du diese Fertigkeit wählst, so schreibe „Tierverständnis“ auf dein Aktionsblatt."
+    "tooltip": "<p>Diese Fertigkeit ermöglicht es einem Kai-Lord, mit einigen Tieren zu sprechen und ihr Verhalten zu verstehen.</p><p> In einigen Fällen gibt sie einem Kai-Lord sogar die Kontrolle über die Wahrnehmung und das Handeln eines Tieres.</p>"
   },
   {
     "key": "CAMOUFLAGE",
     "de": "Tarnung",
-    "tooltip": "Diese Disziplin ermöglicht es einem Kai-Lord, mit seiner Umgebung zu verschmelzen. In der Natur kann er sich unentdeckt zwischen Bäumen und Felsen bewegen und sich einem Gegner nähern, ohne von diesem bemerkt zu werden. In einem Dorf oder einer Stadt hat er die Möglichkeit, das Aussehen und die Sprache eines Einheimischen anzunehmen, unterzutauchen oder einen sicheren Ort ausfindig zu machen. Wenn du diese Fertigkeit wählst, schreibe „Tarnung“ auf dein Aktionsblatt."
+    "tooltip": "<p>Diese Disziplin ermöglicht es einem Kai-Lord, mit seiner Umgebung zu verschmelzen.</p><p> In der Natur kann er sich unentdeckt zwischen Bäumen und Felsen bewegen und sich einem Gegner nähern, ohne von diesem bemerkt zu werden.</p><p> In einem Dorf oder einer Stadt hat er die Möglichkeit, das Aussehen und die Sprache eines Einheimischen anzunehmen, unterzutauchen oder einen sicheren Ort ausfindig zu machen.</p>"
   },
   {
     "key": "HUNT",
     "de": "Jagd",
-    "tooltip": "Diese Fertigkeit sorgt dafür, dass ein Kai-Lord in der Wildnis niemals Hunger leiden muss. Er wird immer in der Lage sein, Nahrung für sich zu jagen, außer im Ödland oder in der Wüste. Diese Fertigkeit ermöglicht es einem Kai-Lord außerdem, sich möglichst schnell und leise zu bewegen. Wenn du diese Fertigkeit wählst, schreibe „Jagd: Keine Mahlzeit erforderlich, wenn gegessen werden muss“ auf dein Aktionsblatt."
+    "tooltip": "<p>Diese Fertigkeit sorgt dafür, dass ein Kai-Lord in der Wildnis niemals Hunger leiden muss.</p><p> Er wird immer in der Lage sein, Nahrung für sich zu jagen, außer im Ödland oder in der Wüste.<p> Diese Fertigkeit ermöglicht es einem Kai-Lord außerdem, sich möglichst schnell und leise zu bewegen.</p><p> Wenn du diese Fertigkeit besitzt, benötigst du keine Mahlzeit, wenn gegessen werden muss.</p>"
   },
   {
     "key": "SIXTH_SENSE",
     "de": "Sechster-Sinn",
-    "tooltip": "Diese Fertigkeit kann einen Kai-Lord vor drohender Gefahr warnen. Sie kann auch Aufschluss über die wahren Absichten eines Fremden oder den Nutzen eines unbekannten Objekts geben. Wenn du diese Fertigkeit wählst, schreibe „Sechster Sinn“ auf dein Aktionsblatt."
+    "tooltip": "<p>Diese Fertigkeit kann einen Kai-Lord vor drohender Gefahr warnen.</p><p> Sie kann auch Aufschluss über die wahren Absichten eines Fremden oder den Nutzen eines unbekannten Objekts geben.</p>"
   },
   {
     "key": "TRACKING",
     "de": "Spurensuche",
-    "tooltip": "Diese Disziplin ermöglicht es einem Kai-Lord, sich in der Wildnis für den richtigen Weg zu entscheiden, den Aufenthaltsort einer Person oder eines Objekts in einer Stadt zu bestimmen und die Geheimnisse von Fußspuren und Fährten zu entschlüsseln. Wenn du diese Fertigkeit wählst, schreibe „Spurensuche“ auf dein Aktionsblatt."
+    "tooltip": "<p>Diese Disziplin ermöglicht es einem Kai-Lord, sich in der Wildnis für den richtigen Weg zu entscheiden, den Aufenthaltsort einer Person oder eines Objekts in einer Stadt zu bestimmen.</p><p>Und die Geheimnisse von Fußspuren und Fährten zu entschlüsseln.</p>"
   },
   {
     "key": "THOUGHT_RAY",
@@ -37,57 +37,57 @@
   {
     "key": "MIND_OVER_MATTER",
     "de": "Geist über Materie",
-    "tooltip": "Die Beherrschung dieser Disziplin ermöglicht es einem Kai-Lord, kleine Objekte durch pure Konzentration zu bewegen. Wenn du diese Fertigkeit wählst, schreibe „Geist über Materie“ auf dein Aktionsblatt."
+    "tooltip": "Die Beherrschung dieser Disziplin ermöglicht es einem Kai-Lord, kleine Objekte durch pure Konzentration zu bewegen. "
   },
 
 
 
   {
     "key": "ARMORY_DAGGER",
-    "de": "Waffenkammer-Dolch",
-    "tooltip": "Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen. Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht. Das ist die Waffe, mit der du ausgebildet worden bist. Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich deine KAMPFSTÄRKE für die Dauer des Kampfes um 2 Punkte. Die Ausbildung an einer Waffe bedeutet jedoch nicht, dass du das Abenteuer auch mit dieser Waffe beginnst. Allerdings wirst du im Lauf deines Abenteuers immer wieder die Möglichkeit haben, Waffen zu finden. Du darfst jedoch nie mehr als 2 Waffen mit dir führen und du kannst immer nur eine Waffe auf einmal benutzen. Wenn du diese Fertigkeit wählst, schreibe „Waffenkunde mit (Waffe): +2 KAMPFSTÄRKEPUNKTE“ auf dein Aktionsblatt."
+    "de": "Waffenkunde-Dolch",
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> "
   },
   {
     "key": "ARMORY_SPEAR",
-    "de": "Waffenkammer-Speer",
-    "tooltip": "Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen. Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht. Das ist die Waffe, mit der du ausgebildet worden bist. Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich deine KAMPFSTÄRKE für die Dauer des Kampfes um 2 Punkte. Die Ausbildung an einer Waffe bedeutet jedoch nicht, dass du das Abenteuer auch mit dieser Waffe beginnst. Allerdings wirst du im Lauf deines Abenteuers immer wieder die Möglichkeit haben, Waffen zu finden. Du darfst jedoch nie mehr als 2 Waffen mit dir führen und du kannst immer nur eine Waffe auf einmal benutzen. Wenn du diese Fertigkeit wählst, schreibe „Waffenkunde mit (Waffe): +2 KAMPFSTÄRKEPUNKTE“ auf dein Aktionsblatt."  },
+    "de": "Waffenkunde-Speer",
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> "  },
   {
     "key": "ARMORY_MACE",
-    "de": "Waffenkammer-Streitkolben",
-    "tooltip": "Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen. Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht. Das ist die Waffe, mit der du ausgebildet worden bist. Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich deine KAMPFSTÄRKE für die Dauer des Kampfes um 2 Punkte. Die Ausbildung an einer Waffe bedeutet jedoch nicht, dass du das Abenteuer auch mit dieser Waffe beginnst. Allerdings wirst du im Lauf deines Abenteuers immer wieder die Möglichkeit haben, Waffen zu finden. Du darfst jedoch nie mehr als 2 Waffen mit dir führen und du kannst immer nur eine Waffe auf einmal benutzen. Wenn du diese Fertigkeit wählst, schreibe „Waffenkunde mit (Waffe): +2 KAMPFSTÄRKEPUNKTE“ auf dein Aktionsblatt."
+    "de": "Waffenkunde-Streitkolben",
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p>"
   },
   {
     "key": "ARMORY_SHORT_SWORD",
-    "de": "Waffenkammer-Kurzschwert",
-    "tooltip": "Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen. Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht. Das ist die Waffe, mit der du ausgebildet worden bist. Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich deine KAMPFSTÄRKE für die Dauer des Kampfes um 2 Punkte. Die Ausbildung an einer Waffe bedeutet jedoch nicht, dass du das Abenteuer auch mit dieser Waffe beginnst. Allerdings wirst du im Lauf deines Abenteuers immer wieder die Möglichkeit haben, Waffen zu finden. Du darfst jedoch nie mehr als 2 Waffen mit dir führen und du kannst immer nur eine Waffe auf einmal benutzen. Wenn du diese Fertigkeit wählst, schreibe „Waffenkunde mit (Waffe): +2 KAMPFSTÄRKEPUNKTE“ auf dein Aktionsblatt."
+    "de": "Waffenkunde-Kurzschwert",
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> "
   },
   {
     "key": "ARMORY_WARHAMMER",
-    "de": "Waffenkammer-Kriegshammer",
-    "tooltip": "Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen. Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht. Das ist die Waffe, mit der du ausgebildet worden bist. Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich deine KAMPFSTÄRKE für die Dauer des Kampfes um 2 Punkte. Die Ausbildung an einer Waffe bedeutet jedoch nicht, dass du das Abenteuer auch mit dieser Waffe beginnst. Allerdings wirst du im Lauf deines Abenteuers immer wieder die Möglichkeit haben, Waffen zu finden. Du darfst jedoch nie mehr als 2 Waffen mit dir führen und du kannst immer nur eine Waffe auf einmal benutzen. Wenn du diese Fertigkeit wählst, schreibe „Waffenkunde mit (Waffe): +2 KAMPFSTÄRKEPUNKTE“ auf dein Aktionsblatt."
+    "de": "Waffenkunden-Kriegshammer",
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> "
   },
   {
     "key": "ARMORY_SWORD",
-    "de": "Waffenkammer-Schwert",
-    "tooltip": "Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen. Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht. Das ist die Waffe, mit der du ausgebildet worden bist. Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich deine KAMPFSTÄRKE für die Dauer des Kampfes um 2 Punkte. Die Ausbildung an einer Waffe bedeutet jedoch nicht, dass du das Abenteuer auch mit dieser Waffe beginnst. Allerdings wirst du im Lauf deines Abenteuers immer wieder die Möglichkeit haben, Waffen zu finden. Du darfst jedoch nie mehr als 2 Waffen mit dir führen und du kannst immer nur eine Waffe auf einmal benutzen. Wenn du diese Fertigkeit wählst, schreibe „Waffenkunde mit (Waffe): +2 KAMPFSTÄRKEPUNKTE“ auf dein Aktionsblatt."
+    "de": "Waffenkunden-Schwert",
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> "
   },
   {
     "key": "ARMORY_AXE",
-    "de": "Waffenkammer-Axt",
-    "tooltip": "Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen. Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht. Das ist die Waffe, mit der du ausgebildet worden bist. Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich deine KAMPFSTÄRKE für die Dauer des Kampfes um 2 Punkte. Die Ausbildung an einer Waffe bedeutet jedoch nicht, dass du das Abenteuer auch mit dieser Waffe beginnst. Allerdings wirst du im Lauf deines Abenteuers immer wieder die Möglichkeit haben, Waffen zu finden. Du darfst jedoch nie mehr als 2 Waffen mit dir führen und du kannst immer nur eine Waffe auf einmal benutzen. Wenn du diese Fertigkeit wählst, schreibe „Waffenkunde mit (Waffe): +2 KAMPFSTÄRKEPUNKTE“ auf dein Aktionsblatt."
+    "de": "Waffenkunden-Axt",
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> "
   },
   {
     "key": "ARMORY_BATTLE_STAFF",
-    "de": "Waffenkammer-Kampfstab",
-    "tooltip": "Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen. Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht. Das ist die Waffe, mit der du ausgebildet worden bist. Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich deine KAMPFSTÄRKE für die Dauer des Kampfes um 2 Punkte. Die Ausbildung an einer Waffe bedeutet jedoch nicht, dass du das Abenteuer auch mit dieser Waffe beginnst. Allerdings wirst du im Lauf deines Abenteuers immer wieder die Möglichkeit haben, Waffen zu finden. Du darfst jedoch nie mehr als 2 Waffen mit dir führen und du kannst immer nur eine Waffe auf einmal benutzen. Wenn du diese Fertigkeit wählst, schreibe „Waffenkunde mit (Waffe): +2 KAMPFSTÄRKEPUNKTE“ auf dein Aktionsblatt."
+    "de": "Waffenkunden-Kampfstab",
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> "
   },
   {
     "key": "ARMORY_BROAD_SWORD",
-    "de": "Waffenkammer-Breitschwert",
-    "tooltip": "Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen. Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht. Das ist die Waffe, mit der du ausgebildet worden bist. Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich deine KAMPFSTÄRKE für die Dauer des Kampfes um 2 Punkte. Die Ausbildung an einer Waffe bedeutet jedoch nicht, dass du das Abenteuer auch mit dieser Waffe beginnst. Allerdings wirst du im Lauf deines Abenteuers immer wieder die Möglichkeit haben, Waffen zu finden. Du darfst jedoch nie mehr als 2 Waffen mit dir führen und du kannst immer nur eine Waffe auf einmal benutzen. Wenn du diese Fertigkeit wählst, schreibe „Waffenkunde mit (Waffe): +2 KAMPFSTÄRKEPUNKTE“ auf dein Aktionsblatt."
+    "de": "Waffenkunden-Breitschwert",
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> "
   },
   {
-    "key": "MENTAL_DEFENSE",
+    "key": "MENTAL_DEFENCE",
     "de": "Mentaleverteidigung"
   },
   {
