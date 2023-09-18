@@ -1,6 +1,6 @@
 <script>
     import Icon from "./Icon.svelte";
-    
+
     /**
      * @type {any}
      */
@@ -21,14 +21,14 @@
     <div class="toast-body">
         <div class="row">
             <div class="col-4">
-                <Icon value={entry.characterEndurance} img="health_24x24.png" text="Ausdauer" />
+                <Icon value={entry.characterEndurance} img="health 24x24.png" text="Ausdauer" />
             </div>
             <div class="col-8">
                 <Icon value={entry.battleStrength} img="biceps_24x24.png" text="Basiskampfstärke" />
                 <Icon visible={entry.characterApplyWeaponSkill} img="weapon_skill_24x24.png" text="Waffenskill (+2)" />
-                <Icon visible={entry.characterUsesThoughtRay} img="brain_24x24.png" text="Gedankenstrahl (+2)" />
+                <Icon visible={entry.characterUsesThoughtRay} img="thoughtRay.png" text="Gedankenstrahl (+2)" />
                 <hr />
-                <Icon visible={entry.characterUsesThoughtRay} img="brain_24x24.png" text="Gesamtkampfstärke" />
+                <Icon visible={entry.characterUsesThoughtRay} img="thoughtRay.png" text="Gesamtkampfstärke" />
             </div>
         </div>
     </div>
