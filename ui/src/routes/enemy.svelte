@@ -5,6 +5,9 @@
      * @type {any}
      */
     export let enemy;
+    
+
+    
 </script>
 
 <div class="card border-danger mb-4">

@@ -64,7 +64,7 @@
                   <div class="col-8">
                     {#if gameSession.battleLog}
                       {#each gameSession.battleLog as be}
-                        <BattleLogEntry entry={be} />
+                        <BattleLogEntry entry={be} gameSession={gameSession} />
                       {/each}
                     {/if}
                   </div>
