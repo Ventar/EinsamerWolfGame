@@ -28,21 +28,12 @@ public class TranslationService {
 
     }
 
-    public String translate(String key) {
+    public Translation translate(String key) {
         if (translations.containsKey(key)) {
-            return translations.get(key).de();
+            return translations.get(key);
         } else {
-            return key;
+            return null;
         }
     }
-
-    public String translateTip(String key) {
-        if (translations.containsKey(key)) {
-            return translations.get(key).tooltip();
-        } else {
-            return key;
-        }
-    }
-
 
 }

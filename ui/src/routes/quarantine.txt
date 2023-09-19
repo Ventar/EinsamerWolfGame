@@ -1,8 +1,0 @@
-  onMount(async () => {
-    const res = await fetch("http://localhost:8080/session/", {
-      method: "GET",
-    });
-
-    const gameSession = await res.json();
-    console.log(gameSession);
-  });

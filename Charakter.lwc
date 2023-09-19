@@ -3,33 +3,36 @@
   "character" : {
     "hasBackpack" : true,
     "hasBaseBackpack" : true,
-    "baseBackpack" : [ "KAI_ROBE", "MAP", "LEATHER_BAG", "GREEN_TUNIC", "BACKPACK" ],
-    "skills" : [ "HUNT", "MENTAL_DEFENCE", "ANIMAL_UNDERSTANDING", "TRACKING", "SIXTH_SENSE" ],
+    "weaponOne" : "AXE",
+    "weaponTwo" : "BROAD_SWORD",
+    "backpack" : [ "LAUMSPUR_POTION", "LAUMSPUR_POTION", "ROPE", "KAI_BATTLE_CRYSTAL", "FIRESTONE" ],
+    "baseBackpack" : [ "GREEN_TUNIC", "LEATHER_BAG", "MAP", "KAI_ROBE", "BACKPACK" ],
+    "skills" : [ "THOUGHT_RAY", "SIXTH_SENSE", "ARMORY_BATTLE_STAFF", "MIND_OVER_MATTER", "HUNT" ],
     "gold" : {
       "name" : "GOLD",
-      "value" : 0,
-      "maxValue" : 0,
+      "value" : 8,
+      "maxValue" : 8,
       "baseValue" : 0
     },
     "food" : {
       "name" : "FOOD",
-      "value" : 0,
+      "value" : 3,
       "maxValue" : 5,
       "baseValue" : 0
     },
     "battleStrength" : {
       "name" : "BATTLE_STRENGTH",
-      "value" : 18,
-      "maxValue" : 18,
+      "value" : 15,
+      "maxValue" : 15,
       "baseValue" : 10
     },
     "endurance" : {
       "name" : "ENDURANCE",
-      "value" : 20,
-      "maxValue" : 20,
+      "value" : 29,
+      "maxValue" : 29,
       "baseValue" : 20
     },
     "numberOfSkills" : 5
   },
-  "sectionID" : 497
+  "sectionID" : 256
 }

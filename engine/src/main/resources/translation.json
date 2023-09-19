@@ -2,42 +2,50 @@
   {
     "key": "HEAL",
     "de": "Heilung",
-    "tooltip": "<p>Diese Fertigkeit kann eingesetzt werden, um verlorene AUSDAUERPUNKTE zurückzugewinnen.</p><p> Wenn du diese Fertigkeit besitzt, kannst du dir für jeden nummerierten Textabschnitt, den du im Spiel passierst und in dem du dich nicht in einem Kampf befindest, 1 AUSDAUERPUNKT gutschreiben.</p><p> Denke immer daran, dass du nur AUSDAUERPUNKTE zurückgewinnen kannst, die du verloren hast, du deinen Anfangswert also niemals übersteigen darfst.</p><p> Wenn du diese Fertigkeit wählst, erhälst du durch Heilung: <span class='text-success'><b>+ 1 AUSDAUERPUNKT</b></span> für jeden Abschnitt ohne Kampf.</p>"
+    "tooltip": "<p>Diese Fertigkeit kann eingesetzt werden, um verlorene AUSDAUERPUNKTE zurückzugewinnen.</p><p> Wenn du diese Fertigkeit besitzt, kannst du dir für jeden nummerierten Textabschnitt, den du im Spiel passierst und in dem du dich nicht in einem Kampf befindest, 1 AUSDAUERPUNKT gutschreiben.</p><p> Denke immer daran, dass du nur AUSDAUERPUNKTE zurückgewinnen kannst, die du verloren hast, du deinen Anfangswert also niemals übersteigen darfst.</p><p> Wenn du diese Fertigkeit wählst, erhälst du durch Heilung: <span class='text-success'><b>+ 1 AUSDAUERPUNKT</b></span> für jeden Abschnitt ohne Kampf.</p>",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAfJJREFUSEvtlU+ITmEYxX/HysZK5LOhlP8pZWFhNrMgsppSQiwQ2Sh/FmZj2FhI2bCYYUSMQtmwkWzMwkIp/0cp1KQslJTsjs7X+033uz5dm9l9b926vc/znPOe89znvWKWl2YZnz5Bo8MzFtkekTRSrbC9AJgPTEv6WYvNBTYCLyT9qMVmsLoIgDeS7ibZ9hHgUqVwWNK5EstBjgHzgCnguKSHJTYErOsctk5wGBiU9Nb2V2BRzYPbwCfgVG1/UtKA7VXAY2CsF8F+4ArwCBgGnvcw+DcQa3qtgF8EtgAHJF1NUlXB6lhUKpP8rrGD3Qlrgddla01caBPYbkmKHfH9NBB/lwNngZ3/SRLr0oObqZd0puC12gpsP4gl8c12EudI2mr7PbCigWRK0krbz4DvkrbliwQ2SNreIdgF3CpAaeIFYAA4CXxuIFgCnAeeluYvLvm7JU1Ue3Ad2FsDGwfyTP6DZBNwFNhRi9+QtK+ryZXve7CcvlMzVk74oQaSPkXhwcp+VDypDmzPy852ZB4CMhcLgXvAHuBbActelMXaTHEG8rKk6brSqkWtIjVyI72zvgAnMuG2l7VlSx9tJ+9ODfAlcA0YlfTrL4uKTSnMNZE5eAVM1O+aDqjtpcBmYD2Q9/uSRquk/f9B46D3LWq06A+F6q8vaGHWiAAAAABJRU5ErkJggg=="
   },
   {
     "key": "ANIMAL_UNDERSTANDING",
     "de": "Tierverständnis",
-    "tooltip": "<p>Diese Fertigkeit ermöglicht es einem Kai-Lord, mit einigen Tieren zu sprechen und ihr Verhalten zu verstehen.</p><p> In einigen Fällen gibt sie einem Kai-Lord sogar die Kontrolle über die Wahrnehmung und das Handeln eines Tieres.</p>"
+    "tooltip": "<p>Diese Fertigkeit ermöglicht es einem Kai-Lord, mit einigen Tieren zu sprechen und ihr Verhalten zu verstehen.</p><p> In einigen Fällen gibt sie einem Kai-Lord sogar die Kontrolle über die Wahrnehmung und das Handeln eines Tieres.</p>",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAhdJREFUSEu1lc+LT2EUxj9PsvIfWNhYKEu/oqghK6QsLFiIZKNGUWZMLGYUipopI6upmUlRFImRpFhMpjALSkmx8uMfIMtHZ3rf6c517/feufHWt7733nOezznnPed9xX9eatK3vRGI3zagL9m/BOaAeUnzvTRqAbYPAqeTcC+NWeCMpDdVRpUA23eBALRdz4CHkm6WHf4C2HZb1WR3EXgERAYzkvYV/ZcAbF8GhloC3gPnJT0O+0JgRyTdyhqLANv7I82W4veBU5K+JfHY/BcF312SFp4XALZXAe+AtQ2Ar8BtSYPZzvZ1oL/k9wnYIOlXBmwGXvcQvweMSZqz3S9pPAW2HvhQ47clOisDjgKTJcOINnr9KfAAiKgHJRXLehyYSH6fSxU4JmkqA64CZ5NhCI9KGmvajzSEb1MAl4D4n9c1SQMZMAPsAaL/hyR9aRKv+l5q8SeS9mbAdNRSUmQSm74C2ApEHdtksgaYAnYWwBOSTmTAMHAI+A6sBu5IineNy/b2JF7uwGiGGxkQm3UBmG4rnDI9nMRXVkSyQ9JsBuyW9Lwx3IKB7XPAlRqfqMQ6ST8bj+s6qO2PIVLzfVjSyOIkLyfywgTXHYoR/SZJPzoDbMfl86omsJHiPnYqke24iEZLgN/AyZje4vuugDhNDxSE4i4YkBRX6ZLVFRBTH9MfguOSAli5OgHSDPRVRfxPMlhO1/0BaAHEGRdOUogAAAAASUVORK5CYII="
   },
   {
     "key": "CAMOUFLAGE",
     "de": "Tarnung",
-    "tooltip": "<p>Diese Disziplin ermöglicht es einem Kai-Lord, mit seiner Umgebung zu verschmelzen.</p><p> In der Natur kann er sich unentdeckt zwischen Bäumen und Felsen bewegen und sich einem Gegner nähern, ohne von diesem bemerkt zu werden.</p><p> In einem Dorf oder einer Stadt hat er die Möglichkeit, das Aussehen und die Sprache eines Einheimischen anzunehmen, unterzutauchen oder einen sicheren Ort ausfindig zu machen.</p>"
+    "tooltip": "<p>Diese Disziplin ermöglicht es einem Kai-Lord, mit seiner Umgebung zu verschmelzen.</p><p> In der Natur kann er sich unentdeckt zwischen Bäumen und Felsen bewegen und sich einem Gegner nähern, ohne von diesem bemerkt zu werden.</p><p> In einem Dorf oder einer Stadt hat er die Möglichkeit, das Aussehen und die Sprache eines Einheimischen anzunehmen, unterzutauchen oder einen sicheren Ort ausfindig zu machen.</p>",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAA1JJREFUSEudlmnIlGUYha+TJe1ZhlFkWWkmZCAqRUUhZVT0I4v+SCERUqEfRhuShWJFC9GfFmijhVawJPshWKSZlZlm2GL1IUJGUVFR2qbViTPcY6/DfNNnDwzMvO/z3OdezjnPyPZBwAT+XR9K+t72aODIxvP/83WtbJ8OvFmntwK3S7rL9lRgWY+oPwMH/gfqhE6Ae4BnJa3PQdufAccPEGRxkgHuBc5o7PkOeAm4ABjfCfCupFMq+HTgmS7B/wLmAkdL6rM9Avim9v0CnAYkxnpJa9oAK4G1NYvM5ORqz55dAFZImtJ+bvtY4GngbWCRpNW2h0ranj0BGF5lXg7MAVZLeqeqWAScD+wD/ArsC9wsKa1pLdtpoSX1d2uleg3JdoIfA9wPnANcD9yS0gdLqZ4AlWH6eYWkmbZHAl9K8m4B2E6vTyra/QT0S9pWAPu3elm/Bwpse6+q9nBgB7AhZ1oV2P4A+LQ+GfJ4IIFfznwk/dEj8MXAlcB+QGi9BTgYuKxF0wIIAy6U9K3tsUCynwiMAkLXaZK+boLYHgI8WcMPGZLgKElhZJJ+D5jaBogwbi30bIxIXgRmA18AD4XfzUpsPwBsAp4HPkmCwGM5I2mp7S2SRrYB+oD0MAp+vcSSrBZLmmV7HjBE0sLK7tSylCm2k8wrwFnAo6XiVLZQ0rQ2wKFASrquKHlRRAM8ArxR88jhtOB326kuyawChgHPAedVBbcBVwPzU8lOmtoOiyKgA4BZwI3AV0B7wBFUfOf9yngd8DewR7En724ADgMelvRCi32D5XO3fU1L6Hxv+2xJr7VbNE7Sxt0Fs31fDK9hGdHTj0BsP646Ol50HPARMEJSXvRcEaWkP21fVYOOl4WWR5RuJjUC7HIfnFuOOlPSnQO0JBVfC7xae7dJOqRhfHsDTwGX1LNdABYAY0oD8ZwdxZgzgZXxH9uTiykhQkT4g6RWBR0ifAKYEftvXjgR1FG18WOgT9Jy2/H6+MrdtpPE/EawXJuPS7qmUcWlQHRzQidAZyI3SbqjfOrEuqUeBFJFc4XG8aFUNSnMqZnkru/vvDKbB2N0EdxvwFBgc/G923iWAJnh55JilDtXADr/trRfxvA2ALGFwa7M7a3m5n8APs5ncuS1/lkAAAAASUVORK5CYII="
   },
   {
     "key": "HUNT",
     "de": "Jagd",
-    "tooltip": "<p>Diese Fertigkeit sorgt dafür, dass ein Kai-Lord in der Wildnis niemals Hunger leiden muss.</p><p> Er wird immer in der Lage sein, Nahrung für sich zu jagen, außer im Ödland oder in der Wüste.<p> Diese Fertigkeit ermöglicht es einem Kai-Lord außerdem, sich möglichst schnell und leise zu bewegen.</p><p> Wenn du diese Fertigkeit besitzt, benötigst du keine Mahlzeit, wenn gegessen werden muss.</p>"
+    "tooltip": "<p>Diese Fertigkeit sorgt dafür, dass ein Kai-Lord in der Wildnis niemals Hunger leiden muss.</p><p> Er wird immer in der Lage sein, Nahrung für sich zu jagen, außer im Ödland oder in der Wüste.<p> Diese Fertigkeit ermöglicht es einem Kai-Lord außerdem, sich möglichst schnell und leise zu bewegen.</p><p> Wenn du diese Fertigkeit besitzt, benötigst du keine Mahlzeit, wenn gegessen werden muss.</p>",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAhxJREFUSEvtlU2IjmEUhq/bAlFKUX42JBtRMkkpZQqbWaD8ZpTQGGlIfoqFn1IWgyyoMRs2NmMnNhTDgoXIsLJQZCGxmKRYuXX0vOPxzvd97zs1dp7d9z3nOdc59/l5xT8+quvf9kxgqqR3dd+E3VgAt4E2SXPHHWB7OTAdmAc8lfS6LqRWBravA4clDdv+AHRKelQHUgmw3QFclrQwHNreA6yVtG28AHeB7ZK+Fg5tDwGHJA1WQX5nYLsHGJD0KX9gO6I8KGll6f/IKiRbUxdgYJ2k+yVHz4B2Sd/Kjmw/Bk5VZVFkcAd4KOliJkMX0CFpfaMobbcBvcAFYJmkc43sCkBIEIU7mwFioLok3Wsmg+3FERgwAzgmKWB/nQIwCXgLDErqtN0O7JC0t5XGts8ApzObHklX8jcjbWp7ALgFTIgCAiclPWgR/QJgFrABOJrZdUu6VvzOAZuASDki2ghMBn6krIZTt8UkrwJC0m6gT9J+21GLHLJbUgznn12UMtgM7ASmAVdbyHMDiBrNiToBs4EjJUhM+808g0XAEmA+cL6qv0v3xyX12u4D9mV3W0atigaFa8V6AfSnur0CvgAngJ/AAUnfG+6iBAnDiU28fwYupbtdwPsYVGCrpGiWkdN02dlekaIpD9oTYCkwBfiY9O+XlEtTDcgGbnWs5/jYpO9BdNZLICR5AwxJet5Mx8p1PcZijzL/D6hU8BcMZL9r6d4S/AAAAABJRU5ErkJggg=="
   },
   {
     "key": "SIXTH_SENSE",
     "de": "Sechster-Sinn",
-    "tooltip": "<p>Diese Fertigkeit kann einen Kai-Lord vor drohender Gefahr warnen.</p><p> Sie kann auch Aufschluss über die wahren Absichten eines Fremden oder den Nutzen eines unbekannten Objekts geben.</p>"
+    "tooltip": "<p>Diese Fertigkeit kann einen Kai-Lord vor drohender Gefahr warnen.</p><p> Sie kann auch Aufschluss über die wahren Absichten eines Fremden oder den Nutzen eines unbekannten Objekts geben.</p>",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAoBJREFUSEutlVuIzlEUxX/rRZInIkrC5C5hFGUeZkohQ6RGTa6jphAplAfXUAwpDCUPbhlFSkRGE1NyK48uIUlCEU8kHixtzl//Pt983zTmvHx9/3P2Wnuvvc86osiyPQH4IelJsf0OYhZLOlO4p/wH28uBRmBFZ8FtV0h6GTi298ePpI0Z7l8C2+eBMUBdgKf/LZIu2T4paZntNcBwIAA2SdqRgCO2QdIX2y3AeEnjYu83ge1VwBFgH9AE3AOWAIOAvZKGpezWp8weSJpqexswVlKd7RfAIeAtcBG4I6kqI7gMzAFqgNnAUkn9bRtYLumk7fvAlJykU4HnwGdJsh3glZKm2f4K9AIqMoJXwBBgYMpiuKSJiaBW0lXb74EBOYI1kpptZ7HRv6aU2FNgFDApI9gORLmh7WsgNB0J1AMjJNXbDvk25AiGArXA4VTB7RTbnCR+EyT5Jocc1yXNsr0IWCdpcurRWeAKcC4RtKWmBkj0cGtUL2ml7SzZGknthWN6MB2sS4HTJbXZHg3sAeYCH4GfwE5JR2wvAFrTBK0G5gNxJ0LSP1NUcBf6AfMkHU8klcBD4DRwKk1JJLAQuClpbTo3D/gg6W4e7x+CIoTH0uXLbz0GngHVkvra7h0VFLvhJQls9wC+l7GLmZJaOzpTjqAP8KkMQWMmZ1cqGJxGrxTHLklbulpBeFPoXWqdkNTQVYKwhrCIUuuGpBldIsiCbFcDtwpA2iWFd5VcZcc0zXgxqa5JCmPsFoIwwXcFSBfCpruLoCfwrQAsHqFw0P+vIMn0AQgbydZRSeE93UbwKF6vHNoBSdkL1yFJp5qcKgi/r8oh7Za0udsqKAfU0f4vw04WfECKQa4AAAAASUVORK5CYII="
   },
   {
     "key": "TRACKING",
     "de": "Spurensuche",
-    "tooltip": "<p>Diese Disziplin ermöglicht es einem Kai-Lord, sich in der Wildnis für den richtigen Weg zu entscheiden, den Aufenthaltsort einer Person oder eines Objekts in einer Stadt zu bestimmen.</p><p>Und die Geheimnisse von Fußspuren und Fährten zu entschlüsseln.</p>"
+    "tooltip": "<p>Diese Disziplin ermöglicht es einem Kai-Lord, sich in der Wildnis für den richtigen Weg zu entscheiden, den Aufenthaltsort einer Person oder eines Objekts in einer Stadt zu bestimmen.</p><p>Und die Geheimnisse von Fußspuren und Fährten zu entschlüsseln.</p>",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWJJREFUSEvFlC9IZFEUh78PrIpFEASxCet0q4IsWAyiFtMaFIPBLqhBjGKzaFoM/kFBFtlkMJoHNSxmm3bhLFeeMIy+92YeM3jSu7x7f9895/zOlS6HefoRcQIMAPvqZdV7FAFugIlMeEE9rQIpAvwAUhZjwL2a1m1HLiApRcQQsAZcA4vqcruEQsCHWET8Ao6AQfW5HUhLgHYEm/d+HyAi5oFeNZWmcrRi0wN1tZkQEevqXhm5CLAI/M4Eamq9oemjwANQV2tFkDKbfgzbhrrTKBQRT8AIcKXO5EFKmxwRu8AwcKZeNGSRepQGETVXpxSQDVwS6lFnm7JIZXzfoh5/lUVLgKIaR8Qt8KZOdgvQl15d9V9XAJVtWlKWaWAcuFP/VLZp3sGI2AI2gccEUl8r2/SrgxHxE/ib/ZtTzzsKyKx7CCwBW+p2xwEZJJWqH3hR0/en6MQcpImeUle6Aiiz6X8PgXMZOFUWXQAAAABJRU5ErkJggg=="
   },
   {
     "key": "THOUGHT_RAY",
     "de": "Gedankenstrahl",
-    "tooltip": "<p>Der Gedankenstrahl ermöglicht es einem Kai-Lord, seinen Gegner mit der Kraft seines Geistes anzugreifen.</p> <p>Dies kann er während eines normalen, mit Waffen geführten Kampfes tun und so seine KAMPFSTÄRKE für die Dauer des Kampfes um 2 Punkte erhöhen. Nicht alle Kreaturen, denen man in diesem Abenteuer begegnet, können durch den Gedankenstrahl verletzt werden.</p> <p>Du wirst erfahren, falls eine Kreatur immun dagegen ist.</p><p> Wenn du diese Fertigkeit wählst, erhälst du im Kampf <span class='text-success'><b>+2 Kampfstärke</b></span></p> "
+    "tooltip": "<p>Der Gedankenstrahl ermöglicht es einem Kai-Lord, seinen Gegner mit der Kraft seines Geistes anzugreifen.</p> <p>Dies kann er während eines normalen, mit Waffen geführten Kampfes tun und so seine KAMPFSTÄRKE für die Dauer des Kampfes um 2 Punkte erhöhen. Nicht alle Kreaturen, denen man in diesem Abenteuer begegnet, können durch den Gedankenstrahl verletzt werden.</p> <p>Du wirst erfahren, falls eine Kreatur immun dagegen ist.</p><p> Wenn du diese Fertigkeit wählst, erhälst du im Kampf <span class='text-success'><b>+2 Kampfstärke</b></span></p> ",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAArxJREFUSEu11VuoJXIUBvDfcinywiCDMC6hXOLNpJG7EgmZF8q1XOIBKUYuuWQe5FZuD3igCHmRUIykFC8YQnJ9QeMSD4zc/vq09mk7Dmefh/nXqb3Pf/3Xt9b3fWvtsolPbeL8/hdgjJH7vfA1TsZ++A1vVNXLsxS3IMAYYwdcjbORz7vjA2wzlfTRjjkdj1fVtwsB/gtgjHEW7sGf2KqTXoz3sQUuwhn4Ffvj0/58K9ZWVf4/d/4BMMY4Ec/17Wu4EKn0ULyJ33E4fsGV2BaXYjMsx4e5r6rvJwhzAGOMK7Aez+Ir7IkX8Qwe7AfrursNOBI34zycgtM6ZmXorKof8/1vgDHGdvgGD+BpHI3rcC++w/V4D+cinYW6ybkKPzdtr/b7x7CyqjZOAIL6+jyRPuqqXur2b8QKnIOP8RYi8E9Y0wUcjGs6/raqWjMBCB252Buf45X+ewgnNPAN7abz8SXuwCdN4UJuTOfLa4yxZQc+gXc62YG4bJ4to08cFk326bjErMLqFj45jsIefb8iAJtjIwK02Hm+6XgBO+F+RMxLutMIH9BdOtGyCUXh8xDk4SPYHvdF/+4qRRy0AHroC7Wx7ZN4eCpmXVUdMwFIBXd1axE7Yib5cU1fAE7qmORIwmsRt+RtbP1267Y1Yowzq2rDBCAJUsHtU276AUf0bGSqM2x3d5exarj/o6ry5j/P9KDtiuyTz7Dz1DQnUdZEutkNt+BYfIHDqiqLcCaAiBxO45a12LHpyTQnyeU9TEn2Lo5fLPncJE/gxxiZ3lN7RWRpRYtQE4Ez1QdgWaibrILFbLfQNs3ERrh0MDlZdBcgPl81vcyWDJAHY4xsx3175LOj4uubsjqqKo6Z+Sz6kznGyHxkTlZX1VMzZ+7AWQDuzM9mVWUlL/nMAhCbrp9V1PkVLAqw5JLnPfgL3FHPRE/sUu4AAAAASUVORK5CYII="
   },
   {
     "key": "MIND_OVER_MATTER",
     "de": "Geist über Materie",
-    "tooltip": "Die Beherrschung dieser Disziplin ermöglicht es einem Kai-Lord, kleine Objekte durch pure Konzentration zu bewegen. "
+    "tooltip": "Die Beherrschung dieser Disziplin ermöglicht es einem Kai-Lord, kleine Objekte durch pure Konzentration zu bewegen. ",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAmFJREFUSEudlUuITmEYx3//iRrXpCi5NXKNGLJwKcUspDQr0ZAQkglZWpFLLrFRKLcUQ2IUCxFiwYbVKIkk2ZkMci/hr0fnTGc+3+ec73t3p/M8z+99bv9XVHls1wEzgReSPuS5K8/AdthMBeYCQ4GlwCTglqSFef5FAHeApjKBdknaURPAdj2wDzgP7K8AeAlcBY4C/SQ9KQf7JwPbI4DbwFNgNfANaAHGJgHmA/Mywc4Bl4A1wCpJX7KgHgDbvYD7wE1JO8vdKLFZBowDvgKnJb23vRZYIGnF/wBRlkGSNubVtgL8ENAhqS39352B7SHAXaBR0q8aAdG7e0km3yNGFrAdeCcpmlbzsb0F+C3pSCngMTBHUtS15mN7MHBd0uxSwHNJE2qOnHG0/UzSxG6A7ZHAqSKbWeQCtqOXLZI6//bA9ijguKRFRQLk2di+AbRKepUCYv4fSZqR51zkv+2O0K7oZ3aKYtWjyZ+KBKlkY7s/8EBSY2mT9wCXJcU0VX1sjwYagADUS2ovBcSShOa0S/pclGB7HbAJCJ9Y0IHAdOCwpK3ZEo0HokzR7M1FALZnAVeAAbFcIRMhNcA1YLKkJVnAhSSDMBwj6XUexHZk3CBpbzKNIYKxSyeBNklN6RTFDT5mpGNbItkhXAEse2y3AnWpLNhenEj5GeCApObsmHYCseZx1gN9gajvCeCipK5Siu3lwHBJB5MM4nsa0Ad4K2l3tkQrgbPAw7iFpB+2pwAbgHhk4oFPVTb83sRbED0D0nIOiwlKbn+sxxQVqHfv5LEPSOjWzzyfqgBFgpWz+QP9DugZV/9NewAAAABJRU5ErkJggg=="
   },
 
 
@@ -45,46 +53,56 @@
   {
     "key": "ARMORY_DAGGER",
     "de": "Waffenkunde-Dolch",
-    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> "
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> ",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAydJREFUSEudlVuoVlUUhb9BBYERlZCSRD0EUV56KcyM6EYRllB5fVACwSARQqIXIxUSii52oYsmQvSQlUWI50FFCQ2h8qWo08Fu9FSYEUVFhDVi/Mwt6/z+v55asNlr7732HGvMOcZcohm2pwE/S/qje237bEl/5tn2uZJ+bb5NkvR7fbsA+EXS321MtQ+1cDYwH9gk6ZjttZI21reHJD1V8+2SlmQDwBpgn6QP++OdBFA/3wO8AzwNvAZskTTH9hHgMeB64Cvgrwr+hKQX+4PneSBAgawGnk/KgI+AZ4DdwJ4CfRS4HHhZ0gODgg8FsD0FuBq4BlgH3AbcD9xbgS4GxoBdwHvAx5K+HsjA9nXALOCqumd+TrP40wL4oXmXmkwCHmze/QZkba5PuvmwGnQMwuIM4J9isqHuSJLtt4FchyV9839rkKAZSdVS4I16To1eADZKeuS/1mAOcAjYARwFfiyAMDpcwZYBkfSipEpSBzwOq5ci2/Ml7az5WcBzwJOSvrX9OBCjhcHM6B24ELizhBDZPgyMSEr+e8P2PEkjHUB0HUlGgu9KiixPDNvrCyCy3AbMrRqsk9RLoe3zgHSCmDQ+WiPp4Iki294L3AocDwiwQdJo/dwBXApkfl8B3CDpgO0rawMJfCawX9It43xgewWwtdn458lvQBoGFwFrgVUBKPAEfwuY3vy7UtKr/QDR/mfAJUUxLHogdaUGkwsg9CPTNniMuBn4DpghKb4Y3ypsL6zdxJUp4hcNyBbgdiCSvDYsau00SefbdjEI63ijNwZ10w4kfSfztOeOyZcFMBeYGglLutl2+lWKPC74QIDKawfykqRVtn8CvgfuAO4GVgKjkhbZ3g/cNCj4UIA+kOR7k+30+vSfNL5nK3iKm82ctPOhKerTfwr8JrBc0uu20zkvkzTD9mmDn5JB48jFwHbgLkm7bL9SB07Ap7cFbTc3IQaNztMiAhIHHypfLOh8MijwhAAanccT8UjSdYWksYmCnOrI7Ey0Q9J629H9sWIyRdLRiYAMO3ASPB0zB8v7tmOwbuSgj6k+kHTc9o31IZ7o9a52/AvuxWExFxFG5AAAAABJRU5ErkJggg=="
   },
   {
     "key": "ARMORY_SPEAR",
     "de": "Waffenkunde-Speer",
-    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> "  },
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> ",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAydJREFUSEudlVuoVlUUhb9BBYERlZCSRD0EUV56KcyM6EYRllB5fVACwSARQqIXIxUSii52oYsmQvSQlUWI50FFCQ2h8qWo08Fu9FSYEUVFhDVi/Mwt6/z+v55asNlr7732HGvMOcZcohm2pwE/S/qje237bEl/5tn2uZJ+bb5NkvR7fbsA+EXS321MtQ+1cDYwH9gk6ZjttZI21reHJD1V8+2SlmQDwBpgn6QP++OdBFA/3wO8AzwNvAZskTTH9hHgMeB64Cvgrwr+hKQX+4PneSBAgawGnk/KgI+AZ4DdwJ4CfRS4HHhZ0gODgg8FsD0FuBq4BlgH3AbcD9xbgS4GxoBdwHvAx5K+HsjA9nXALOCqumd+TrP40wL4oXmXmkwCHmze/QZkba5PuvmwGnQMwuIM4J9isqHuSJLtt4FchyV9839rkKAZSdVS4I16To1eADZKeuS/1mAOcAjYARwFfiyAMDpcwZYBkfSipEpSBzwOq5ci2/Ml7az5WcBzwJOSvrX9OBCjhcHM6B24ELizhBDZPgyMSEr+e8P2PEkjHUB0HUlGgu9KiixPDNvrCyCy3AbMrRqsk9RLoe3zgHSCmDQ+WiPp4Iki294L3AocDwiwQdJo/dwBXApkfl8B3CDpgO0rawMJfCawX9It43xgewWwtdn458lvQBoGFwFrgVUBKPAEfwuY3vy7UtKr/QDR/mfAJUUxLHogdaUGkwsg9CPTNniMuBn4DpghKb4Y3ypsL6zdxJUp4hcNyBbgdiCSvDYsau00SefbdjEI63ijNwZ10w4kfSfztOeOyZcFMBeYGglLutl2+lWKPC74QIDKawfykqRVtn8CvgfuAO4GVgKjkhbZ3g/cNCj4UIA+kOR7k+30+vSfNL5nK3iKm82ctPOhKerTfwr8JrBc0uu20zkvkzTD9mmDn5JB48jFwHbgLkm7bL9SB07Ap7cFbTc3IQaNztMiAhIHHypfLOh8MijwhAAanccT8UjSdYWksYmCnOrI7Ey0Q9J629H9sWIyRdLRiYAMO3ASPB0zB8v7tmOwbuSgj6k+kHTc9o31IZ7o9a52/AvuxWExFxFG5AAAAABJRU5ErkJggg=="
+  },
   {
     "key": "ARMORY_MACE",
     "de": "Waffenkunde-Streitkolben",
-    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p>"
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p>",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAydJREFUSEudlVuoVlUUhb9BBYERlZCSRD0EUV56KcyM6EYRllB5fVACwSARQqIXIxUSii52oYsmQvSQlUWI50FFCQ2h8qWo08Fu9FSYEUVFhDVi/Mwt6/z+v55asNlr7732HGvMOcZcohm2pwE/S/qje237bEl/5tn2uZJ+bb5NkvR7fbsA+EXS321MtQ+1cDYwH9gk6ZjttZI21reHJD1V8+2SlmQDwBpgn6QP++OdBFA/3wO8AzwNvAZskTTH9hHgMeB64Cvgrwr+hKQX+4PneSBAgawGnk/KgI+AZ4DdwJ4CfRS4HHhZ0gODgg8FsD0FuBq4BlgH3AbcD9xbgS4GxoBdwHvAx5K+HsjA9nXALOCqumd+TrP40wL4oXmXmkwCHmze/QZkba5PuvmwGnQMwuIM4J9isqHuSJLtt4FchyV9839rkKAZSdVS4I16To1eADZKeuS/1mAOcAjYARwFfiyAMDpcwZYBkfSipEpSBzwOq5ci2/Ml7az5WcBzwJOSvrX9OBCjhcHM6B24ELizhBDZPgyMSEr+e8P2PEkjHUB0HUlGgu9KiixPDNvrCyCy3AbMrRqsk9RLoe3zgHSCmDQ+WiPp4Iki294L3AocDwiwQdJo/dwBXApkfl8B3CDpgO0rawMJfCawX9It43xgewWwtdn458lvQBoGFwFrgVUBKPAEfwuY3vy7UtKr/QDR/mfAJUUxLHogdaUGkwsg9CPTNniMuBn4DpghKb4Y3ypsL6zdxJUp4hcNyBbgdiCSvDYsau00SefbdjEI63ijNwZ10w4kfSfztOeOyZcFMBeYGglLutl2+lWKPC74QIDKawfykqRVtn8CvgfuAO4GVgKjkhbZ3g/cNCj4UIA+kOR7k+30+vSfNL5nK3iKm82ctPOhKerTfwr8JrBc0uu20zkvkzTD9mmDn5JB48jFwHbgLkm7bL9SB07Ap7cFbTc3IQaNztMiAhIHHypfLOh8MijwhAAanccT8UjSdYWksYmCnOrI7Ey0Q9J629H9sWIyRdLRiYAMO3ASPB0zB8v7tmOwbuSgj6k+kHTc9o31IZ7o9a52/AvuxWExFxFG5AAAAABJRU5ErkJggg=="
   },
   {
     "key": "ARMORY_SHORT_SWORD",
     "de": "Waffenkunde-Kurzschwert",
-    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> "
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> ",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAydJREFUSEudlVuoVlUUhb9BBYERlZCSRD0EUV56KcyM6EYRllB5fVACwSARQqIXIxUSii52oYsmQvSQlUWI50FFCQ2h8qWo08Fu9FSYEUVFhDVi/Mwt6/z+v55asNlr7732HGvMOcZcohm2pwE/S/qje237bEl/5tn2uZJ+bb5NkvR7fbsA+EXS321MtQ+1cDYwH9gk6ZjttZI21reHJD1V8+2SlmQDwBpgn6QP++OdBFA/3wO8AzwNvAZskTTH9hHgMeB64Cvgrwr+hKQX+4PneSBAgawGnk/KgI+AZ4DdwJ4CfRS4HHhZ0gODgg8FsD0FuBq4BlgH3AbcD9xbgS4GxoBdwHvAx5K+HsjA9nXALOCqumd+TrP40wL4oXmXmkwCHmze/QZkba5PuvmwGnQMwuIM4J9isqHuSJLtt4FchyV9839rkKAZSdVS4I16To1eADZKeuS/1mAOcAjYARwFfiyAMDpcwZYBkfSipEpSBzwOq5ci2/Ml7az5WcBzwJOSvrX9OBCjhcHM6B24ELizhBDZPgyMSEr+e8P2PEkjHUB0HUlGgu9KiixPDNvrCyCy3AbMrRqsk9RLoe3zgHSCmDQ+WiPp4Iki294L3AocDwiwQdJo/dwBXApkfl8B3CDpgO0rawMJfCawX9It43xgewWwtdn458lvQBoGFwFrgVUBKPAEfwuY3vy7UtKr/QDR/mfAJUUxLHogdaUGkwsg9CPTNniMuBn4DpghKb4Y3ypsL6zdxJUp4hcNyBbgdiCSvDYsau00SefbdjEI63ijNwZ10w4kfSfztOeOyZcFMBeYGglLutl2+lWKPC74QIDKawfykqRVtn8CvgfuAO4GVgKjkhbZ3g/cNCj4UIA+kOR7k+30+vSfNL5nK3iKm82ctPOhKerTfwr8JrBc0uu20zkvkzTD9mmDn5JB48jFwHbgLkm7bL9SB07Ap7cFbTc3IQaNztMiAhIHHypfLOh8MijwhAAanccT8UjSdYWksYmCnOrI7Ey0Q9J629H9sWIyRdLRiYAMO3ASPB0zB8v7tmOwbuSgj6k+kHTc9o31IZ7o9a52/AvuxWExFxFG5AAAAABJRU5ErkJggg=="
   },
   {
     "key": "ARMORY_WARHAMMER",
     "de": "Waffenkunden-Kriegshammer",
-    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> "
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> ",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAydJREFUSEudlVuoVlUUhb9BBYERlZCSRD0EUV56KcyM6EYRllB5fVACwSARQqIXIxUSii52oYsmQvSQlUWI50FFCQ2h8qWo08Fu9FSYEUVFhDVi/Mwt6/z+v55asNlr7732HGvMOcZcohm2pwE/S/qje237bEl/5tn2uZJ+bb5NkvR7fbsA+EXS321MtQ+1cDYwH9gk6ZjttZI21reHJD1V8+2SlmQDwBpgn6QP++OdBFA/3wO8AzwNvAZskTTH9hHgMeB64Cvgrwr+hKQX+4PneSBAgawGnk/KgI+AZ4DdwJ4CfRS4HHhZ0gODgg8FsD0FuBq4BlgH3AbcD9xbgS4GxoBdwHvAx5K+HsjA9nXALOCqumd+TrP40wL4oXmXmkwCHmze/QZkba5PuvmwGnQMwuIM4J9isqHuSJLtt4FchyV9839rkKAZSdVS4I16To1eADZKeuS/1mAOcAjYARwFfiyAMDpcwZYBkfSipEpSBzwOq5ci2/Ml7az5WcBzwJOSvrX9OBCjhcHM6B24ELizhBDZPgyMSEr+e8P2PEkjHUB0HUlGgu9KiixPDNvrCyCy3AbMrRqsk9RLoe3zgHSCmDQ+WiPp4Iki294L3AocDwiwQdJo/dwBXApkfl8B3CDpgO0rawMJfCawX9It43xgewWwtdn458lvQBoGFwFrgVUBKPAEfwuY3vy7UtKr/QDR/mfAJUUxLHogdaUGkwsg9CPTNniMuBn4DpghKb4Y3ypsL6zdxJUp4hcNyBbgdiCSvDYsau00SefbdjEI63ijNwZ10w4kfSfztOeOyZcFMBeYGglLutl2+lWKPC74QIDKawfykqRVtn8CvgfuAO4GVgKjkhbZ3g/cNCj4UIA+kOR7k+30+vSfNL5nK3iKm82ctPOhKerTfwr8JrBc0uu20zkvkzTD9mmDn5JB48jFwHbgLkm7bL9SB07Ap7cFbTc3IQaNztMiAhIHHypfLOh8MijwhAAanccT8UjSdYWksYmCnOrI7Ey0Q9J629H9sWIyRdLRiYAMO3ASPB0zB8v7tmOwbuSgj6k+kHTc9o31IZ7o9a52/AvuxWExFxFG5AAAAABJRU5ErkJggg=="
   },
   {
     "key": "ARMORY_SWORD",
     "de": "Waffenkunden-Schwert",
-    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> "
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> ",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAydJREFUSEudlVuoVlUUhb9BBYERlZCSRD0EUV56KcyM6EYRllB5fVACwSARQqIXIxUSii52oYsmQvSQlUWI50FFCQ2h8qWo08Fu9FSYEUVFhDVi/Mwt6/z+v55asNlr7732HGvMOcZcohm2pwE/S/qje237bEl/5tn2uZJ+bb5NkvR7fbsA+EXS321MtQ+1cDYwH9gk6ZjttZI21reHJD1V8+2SlmQDwBpgn6QP++OdBFA/3wO8AzwNvAZskTTH9hHgMeB64Cvgrwr+hKQX+4PneSBAgawGnk/KgI+AZ4DdwJ4CfRS4HHhZ0gODgg8FsD0FuBq4BlgH3AbcD9xbgS4GxoBdwHvAx5K+HsjA9nXALOCqumd+TrP40wL4oXmXmkwCHmze/QZkba5PuvmwGnQMwuIM4J9isqHuSJLtt4FchyV9839rkKAZSdVS4I16To1eADZKeuS/1mAOcAjYARwFfiyAMDpcwZYBkfSipEpSBzwOq5ci2/Ml7az5WcBzwJOSvrX9OBCjhcHM6B24ELizhBDZPgyMSEr+e8P2PEkjHUB0HUlGgu9KiixPDNvrCyCy3AbMrRqsk9RLoe3zgHSCmDQ+WiPp4Iki294L3AocDwiwQdJo/dwBXApkfl8B3CDpgO0rawMJfCawX9It43xgewWwtdn458lvQBoGFwFrgVUBKPAEfwuY3vy7UtKr/QDR/mfAJUUxLHogdaUGkwsg9CPTNniMuBn4DpghKb4Y3ypsL6zdxJUp4hcNyBbgdiCSvDYsau00SefbdjEI63ijNwZ10w4kfSfztOeOyZcFMBeYGglLutl2+lWKPC74QIDKawfykqRVtn8CvgfuAO4GVgKjkhbZ3g/cNCj4UIA+kOR7k+30+vSfNL5nK3iKm82ctPOhKerTfwr8JrBc0uu20zkvkzTD9mmDn5JB48jFwHbgLkm7bL9SB07Ap7cFbTc3IQaNztMiAhIHHypfLOh8MijwhAAanccT8UjSdYWksYmCnOrI7Ey0Q9J629H9sWIyRdLRiYAMO3ASPB0zB8v7tmOwbuSgj6k+kHTc9o31IZ7o9a52/AvuxWExFxFG5AAAAABJRU5ErkJggg=="
   },
   {
     "key": "ARMORY_AXE",
     "de": "Waffenkunden-Axt",
-    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> "
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> ",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAydJREFUSEudlVuoVlUUhb9BBYERlZCSRD0EUV56KcyM6EYRllB5fVACwSARQqIXIxUSii52oYsmQvSQlUWI50FFCQ2h8qWo08Fu9FSYEUVFhDVi/Mwt6/z+v55asNlr7732HGvMOcZcohm2pwE/S/qje237bEl/5tn2uZJ+bb5NkvR7fbsA+EXS321MtQ+1cDYwH9gk6ZjttZI21reHJD1V8+2SlmQDwBpgn6QP++OdBFA/3wO8AzwNvAZskTTH9hHgMeB64Cvgrwr+hKQX+4PneSBAgawGnk/KgI+AZ4DdwJ4CfRS4HHhZ0gODgg8FsD0FuBq4BlgH3AbcD9xbgS4GxoBdwHvAx5K+HsjA9nXALOCqumd+TrP40wL4oXmXmkwCHmze/QZkba5PuvmwGnQMwuIM4J9isqHuSJLtt4FchyV9839rkKAZSdVS4I16To1eADZKeuS/1mAOcAjYARwFfiyAMDpcwZYBkfSipEpSBzwOq5ci2/Ml7az5WcBzwJOSvrX9OBCjhcHM6B24ELizhBDZPgyMSEr+e8P2PEkjHUB0HUlGgu9KiixPDNvrCyCy3AbMrRqsk9RLoe3zgHSCmDQ+WiPp4Iki294L3AocDwiwQdJo/dwBXApkfl8B3CDpgO0rawMJfCawX9It43xgewWwtdn458lvQBoGFwFrgVUBKPAEfwuY3vy7UtKr/QDR/mfAJUUxLHogdaUGkwsg9CPTNniMuBn4DpghKb4Y3ypsL6zdxJUp4hcNyBbgdiCSvDYsau00SefbdjEI63ijNwZ10w4kfSfztOeOyZcFMBeYGglLutl2+lWKPC74QIDKawfykqRVtn8CvgfuAO4GVgKjkhbZ3g/cNCj4UIA+kOR7k+30+vSfNL5nK3iKm82ctPOhKerTfwr8JrBc0uu20zkvkzTD9mmDn5JB48jFwHbgLkm7bL9SB07Ap7cFbTc3IQaNztMiAhIHHypfLOh8MijwhAAanccT8UjSdYWksYmCnOrI7Ey0Q9J629H9sWIyRdLRiYAMO3ASPB0zB8v7tmOwbuSgj6k+kHTc9o31IZ7o9a52/AvuxWExFxFG5AAAAABJRU5ErkJggg=="
   },
   {
     "key": "ARMORY_BATTLE_STAFF",
     "de": "Waffenkunden-Kampfstab",
-    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> "
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> ",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAydJREFUSEudlVuoVlUUhb9BBYERlZCSRD0EUV56KcyM6EYRllB5fVACwSARQqIXIxUSii52oYsmQvSQlUWI50FFCQ2h8qWo08Fu9FSYEUVFhDVi/Mwt6/z+v55asNlr7732HGvMOcZcohm2pwE/S/qje237bEl/5tn2uZJ+bb5NkvR7fbsA+EXS321MtQ+1cDYwH9gk6ZjttZI21reHJD1V8+2SlmQDwBpgn6QP++OdBFA/3wO8AzwNvAZskTTH9hHgMeB64Cvgrwr+hKQX+4PneSBAgawGnk/KgI+AZ4DdwJ4CfRS4HHhZ0gODgg8FsD0FuBq4BlgH3AbcD9xbgS4GxoBdwHvAx5K+HsjA9nXALOCqumd+TrP40wL4oXmXmkwCHmze/QZkba5PuvmwGnQMwuIM4J9isqHuSJLtt4FchyV9839rkKAZSdVS4I16To1eADZKeuS/1mAOcAjYARwFfiyAMDpcwZYBkfSipEpSBzwOq5ci2/Ml7az5WcBzwJOSvrX9OBCjhcHM6B24ELizhBDZPgyMSEr+e8P2PEkjHUB0HUlGgu9KiixPDNvrCyCy3AbMrRqsk9RLoe3zgHSCmDQ+WiPp4Iki294L3AocDwiwQdJo/dwBXApkfl8B3CDpgO0rawMJfCawX9It43xgewWwtdn458lvQBoGFwFrgVUBKPAEfwuY3vy7UtKr/QDR/mfAJUUxLHogdaUGkwsg9CPTNniMuBn4DpghKb4Y3ypsL6zdxJUp4hcNyBbgdiCSvDYsau00SefbdjEI63ijNwZ10w4kfSfztOeOyZcFMBeYGglLutl2+lWKPC74QIDKawfykqRVtn8CvgfuAO4GVgKjkhbZ3g/cNCj4UIA+kOR7k+30+vSfNL5nK3iKm82ctPOhKerTfwr8JrBc0uu20zkvkzTD9mmDn5JB48jFwHbgLkm7bL9SB07Ap7cFbTc3IQaNztMiAhIHHypfLOh8MijwhAAanccT8UjSdYWksYmCnOrI7Ey0Q9J629H9sWIyRdLRiYAMO3ASPB0zB8v7tmOwbuSgj6k+kHTc9o31IZ7o9a52/AvuxWExFxFG5AAAAABJRU5ErkJggg=="
   },
   {
     "key": "ARMORY_BROAD_SWORD",
     "de": "Waffenkunden-Breitschwert",
-    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> "
+    "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> ",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAydJREFUSEudlVuoVlUUhb9BBYERlZCSRD0EUV56KcyM6EYRllB5fVACwSARQqIXIxUSii52oYsmQvSQlUWI50FFCQ2h8qWo08Fu9FSYEUVFhDVi/Mwt6/z+v55asNlr7732HGvMOcZcohm2pwE/S/qje237bEl/5tn2uZJ+bb5NkvR7fbsA+EXS321MtQ+1cDYwH9gk6ZjttZI21reHJD1V8+2SlmQDwBpgn6QP++OdBFA/3wO8AzwNvAZskTTH9hHgMeB64Cvgrwr+hKQX+4PneSBAgawGnk/KgI+AZ4DdwJ4CfRS4HHhZ0gODgg8FsD0FuBq4BlgH3AbcD9xbgS4GxoBdwHvAx5K+HsjA9nXALOCqumd+TrP40wL4oXmXmkwCHmze/QZkba5PuvmwGnQMwuIM4J9isqHuSJLtt4FchyV9839rkKAZSdVS4I16To1eADZKeuS/1mAOcAjYARwFfiyAMDpcwZYBkfSipEpSBzwOq5ci2/Ml7az5WcBzwJOSvrX9OBCjhcHM6B24ELizhBDZPgyMSEr+e8P2PEkjHUB0HUlGgu9KiixPDNvrCyCy3AbMrRqsk9RLoe3zgHSCmDQ+WiPp4Iki294L3AocDwiwQdJo/dwBXApkfl8B3CDpgO0rawMJfCawX9It43xgewWwtdn458lvQBoGFwFrgVUBKPAEfwuY3vy7UtKr/QDR/mfAJUUxLHogdaUGkwsg9CPTNniMuBn4DpghKb4Y3ypsL6zdxJUp4hcNyBbgdiCSvDYsau00SefbdjEI63ijNwZ10w4kfSfztOeOyZcFMBeYGglLutl2+lWKPC74QIDKawfykqRVtn8CvgfuAO4GVgKjkhbZ3g/cNCj4UIA+kOR7k+30+vSfNL5nK3iKm82ctPOhKerTfwr8JrBc0uu20zkvkzTD9mmDn5JB48jFwHbgLkm7bL9SB07Ap7cFbTc3IQaNztMiAhIHHypfLOh8MijwhAAanccT8UjSdYWksYmCnOrI7Ey0Q9J629H9sWIyRdLRiYAMO3ASPB0zB8v7tmOwbuSgj6k+kHTc9o31IZ7o9a52/AvuxWExFxFG5AAAAABJRU5ErkJggg=="
   },
   {
     "key": "MENTAL_DEFENCE",
@@ -92,11 +110,13 @@
   },
   {
     "key": "VORDAK_JEWEL",
-    "de": "Vordak-Juwel"
+    "de": "Vordak-Juwel",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAkJJREFUSEvdlE2Ij1EUxn9PRFIyZcFEiSILSkoSscA0aITY+FYsKCs1kjLDQlKYfEz5KDYWpDDCRkkskCmS1SgbbGx8LJQ4OtN5p/t/5/4/ZvHfOHV7u/ee93nuOec5RzTZ1GR8/jMCM5sCLAH2ZVL3FdgCrANGA3szPq+BF5JuFXcVKTKzp8AZYB7QlQDcB7YCl4FNwEZgInA18XkMbAM+A62SvvjdEIGZHQ3Qn8AsoCfAnHQzcC72BWY7MAO4EAfTgV7Azx9KWj1EYGZrgb7kNX2SOszsHbAGOA1syKRkGbAIGADmlqLuktStyHsun47nufSw3ay0/sbe0zcZWACMAsYk65ETjAeuAZNKL/wFeHr85X9iOWjZ/BErgBbgB/A7cbg5WAMzaw2SlaW/FwP3MuSFmxPPBD5miPdLupgWeU6QLEycnwETQlW5pr8dYvBIUzss6USFiiISL5ina3bi7ZJ9BYzNMGwP+a5K7k5KOlTsh40KM2sLEi+cm+vem8v7ILVvwDTge3LYK6miSbOzyMxc9x7JOOBNSPhIieAKcDeR9w1gp6S0yNWHnZntAS4FqCvtbRS04OkAdgHrgQfADkk+Tiqs5jQ1s4PAKcBz6qOhyO0nSVPNzHvjeYB/yKmg7rg2s2PA7njpywA5C/hg6wzw/hz4MBVVczIzn0s+2Py7HFgKdAPHJT2p9l/DBCHh88B74AAwH2iTdKcW+EgJvOG8F5xgQNL1euAjIogoXPctklxRDVndIjeEUsOp6QT/AIzGnrrU2iKBAAAAAElFTkSuQmCC"
   },
   {
     "key": "GOLDENKEY",
-    "de": "Goldenerschlüssel"
+    "de": "Goldenerschlüssel",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAkJJREFUSEvdlE2Ij1EUxn9PRFIyZcFEiSILSkoSscA0aITY+FYsKCs1kjLDQlKYfEz5KDYWpDDCRkkskCmS1SgbbGx8LJQ4OtN5p/t/5/4/ZvHfOHV7u/ee93nuOec5RzTZ1GR8/jMCM5sCLAH2ZVL3FdgCrANGA3szPq+BF5JuFXcVKTKzp8AZYB7QlQDcB7YCl4FNwEZgInA18XkMbAM+A62SvvjdEIGZHQ3Qn8AsoCfAnHQzcC72BWY7MAO4EAfTgV7Azx9KWj1EYGZrgb7kNX2SOszsHbAGOA1syKRkGbAIGADmlqLuktStyHsun47nufSw3ay0/sbe0zcZWACMAsYk65ETjAeuAZNKL/wFeHr85X9iOWjZ/BErgBbgB/A7cbg5WAMzaw2SlaW/FwP3MuSFmxPPBD5miPdLupgWeU6QLEycnwETQlW5pr8dYvBIUzss6USFiiISL5ina3bi7ZJ9BYzNMGwP+a5K7k5KOlTsh40KM2sLEi+cm+vem8v7ILVvwDTge3LYK6miSbOzyMxc9x7JOOBNSPhIieAKcDeR9w1gp6S0yNWHnZntAS4FqCvtbRS04OkAdgHrgQfADkk+Tiqs5jQ1s4PAKcBz6qOhyO0nSVPNzHvjeYB/yKmg7rg2s2PA7njpywA5C/hg6wzw/hz4MBVVczIzn0s+2Py7HFgKdAPHJT2p9l/DBCHh88B74AAwH2iTdKcW+EgJvOG8F5xgQNL1euAjIogoXPctklxRDVndIjeEUsOp6QT/AIzGnrrU2iKBAAAAAElFTkSuQmCC"
   },
   {
     "key": "FEARWHEEL",
@@ -104,175 +124,219 @@
   },
   {
     "key": "FIRESTONE",
-    "de": "Feuerstein"
+    "de": "Feuerstein",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAtZJREFUSEu1lUuollUUhp9nUFSDkC5Ss6KOlIOooCsUOCkzyaJwVtkkCiIyUZNuRvdBNySoQShik6ILFWrzMDWqQaFRdoGgiGpgQUQIb6zf/R22x/8/55C04eODvfda71rrfdfa8j8vx/lPcgFwSN13rPhHACQ5G7gLWNccP6ZuPBaQmQC7gcuaw9eBn4HKZvV/zWYEkGQncCLwNvAisEm9t52dDJwGnK7umZRNkvXAL+qW/s4AUGV4tB1sAsrRde07pTN4U12ZZDnwg/plC2Il8CqwoPaBKu0IaAC4FqgsqizluHfaB3RAnUryIPAEcGE73Axc1Ow3qgcGowGgynBwHmSOSpfkLeB74GFgK3ALcLf6ykwf0yQn2QVcMQfIMnVHknJ+JXAPUNnfoX4xznamilYBy4D3gZvaN22nDhk/CxwP/KMWuUesJIvUr6c5GHNhqbozSXqCG2f3Ac8UqepHvW2Sq1pWC9UlEwEGoyRVhvuBm4FSypNVa+BzYIO6tqmoOLgB+BPYW5+6f06ADmhp4+dy4BrgE/XSJFPAIuAztZryqDXUtCRXjVWXfhrz/wb4CngcWAG8o66Zh+qm++BU4Ldm8ClQiqqxsVv9rkql7kpyG3B1O7+1AyhCH1J/TXJu9UGS86tMvUxHG2MIr0i3qL8nqcZa3KRZYJNWcVdBPTd2XDfizgGeBzar73Z8nAl822bXJIAK6jz1zknvQSnlqZb2y0lOUv9qwEX0x7NEv19dnOQDdfnMRjsOeAO4sbSubmhOVw3DK8lLTRDjMEokrwEl3x9rbvUcXA9saxNxq3p7V5btanV4jfangQfGeP8bOKHbf09dMcj04hZ51f1DtXQ/WqUGYF83Js5oMh6uvAD80Y37YX+BerDPoGbPI8Al6qEOYPRk9k9nknqY6v42dSTXJAV81vCpNU4O90HnbEqtppp1tRESdTayRz4mynQukPme/wsxSScoPNZZDwAAAABJRU5ErkJggg=="
+  },
+  {
+    "key": "LAUMSPUR_POTION",
+    "de": "Laumspur-Trank",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAnFJREFUSEutlU2IzmEUxX8nhSzUlMkoH5GmsJKPBdFIzWKQbwtkWEzJQtQkJV+FMmpKyTQWvgqZYmGhjJJpLFDyURZ2oyQhZGlzdKf7Tv8ZM+/7L/Ps3t77nHPPec69f1Hi2G4aq0zS02oQKoGP7b3AtRG1A5Lm1rpfiiBARlNRq/u4V5MggU+O0WmfpFP/ZVEStEnaVQSyvR5YOl4E46vA9nZgNTAfmAy8BRolteR73APeAZV0fQJeAD2SvhaVDnsD2w3AXSCKXifwH2ABsF3Sqspl2+F9f7w/sBLYDCwGdkm6XakbIrA9A/gAdI7mq+16Sd9SwVRJv0c+ru2FwHtgp6Q7w1KUHS2RtCFBovgKMA94CCwDDkrqs/0g7XkJ1AGXJA3Oie1Qe1FS80iCkNqUAFOAZ+nrYyA8j9MLRGdrgUVpSUXIPknXkyTsPRxzUrTIkgZ/p5pG4AzwBJhesGMAOJfqii49lLQu7/cAl2sRhKIJwPFa6yD//yUp7IoGI1HtkvqLCt4AHZGAHKJt6f9QcmoQ3Ze0NQmiuQjF9yJBLLQLkuozUZ9Ldl4p2y3pVtrbLGnFP7vIdjcwKwYqhy28LHO6JB2wHcl5lCvk1T8EKS9I6iTtSJJOYGYVlpuSWm3PBj4WwUclKJA0SNpoO+agAxj0t3B+AsckddmOlH0ZCT4mQZKcB44UotsWAwVMzMFrjUe03Q4cAlokxX4adqp+D2zvAW4A+yV1254EbJIU+yriGEvwh6Q1Y1lY5oMzJ/dLr6QtCbw8p/y8pKPVUlCToHLZ9nNgGnAWuFpcaONCkJ2fBk5U3qVMfksrKAM2Ws1fv8MMKHp77osAAAAASUVORK5CYII="
   },
   {
     "key": "IRON_PICKAXE",
-    "de": "Einsenspitzhacke"
+    "de": "Einsenspitzhacke",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAe5JREFUSEu1lUuojVEYhp9naGZCMWTmEhOXU2aEoZQzcFBSlEsdJ6TcdSZy6pRLyUByG5BSKKWIyMRIMaMwYKCUJExerdPatZ3b3mfbvsm/+vv/91nf+33rW/Kfw4n0k/QDC4CnwBP1fSd7mRBQxJIsBo4B64BTwFH191RAkwIaQkkOAYPA6wJUb7cLaQtQs9kJnK/CV4B+9WsrUNuACtkIXK+im9SRdZIe9cV4sCkBqlipxQHgJbASWFQbYb76ZjSkE8C0Wo9nwGeg1OcC8EN99M+AmsU24BtwE+gt79Rb3bJoDvBWHck+yXJgDVDs+aI+bgZNyaIkq4C9QLGi1OFyFS7PEs/VFR0BkswDDgKbgRnAd/VnkrnA9gos2r3NdrWVQZINwEJgNjAd6FN/Ne80SR9wDXills4aiZaAJFuBS8B6oAf4qJ4dr6BJ9gBngAF1uCUgyS7gXJPYavXhZKc3yWFgB7BU/TTZNN0HnG4S26JebTUaameVjN+pg+MCkhwBTjaJ7VeH2hGvgFnAHXXZGECS47X9blTPh9WBdsUb3yVZqz74C5BkSe2ED0DpnIvqyEntJJLMHA0oHhf/7gP3/kV8TJtWa8qFshsYUu92suvR/zTmSfG9XI0n1LLuWjQARbzMr66Ktzxo3UjjDx3hrSxNj33JAAAAAElFTkSuQmCC"
   },
   {
     "key": "KAI_BATTLE_CRYSTAL",
-    "de": "Kaikampfkristall"
+    "de": "Kaikampfkristall",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAi5JREFUSEutlU2ITWEYx3//UmzsJAtZ+MiGhYWFBhkLH6FIs0KJmgWyYyMxskA+ykfRNGVBkomyYaTMwsxgTclXidKQSDZWfz31HB3XPXPPveOpt3tu532e3/N9RJtiu0fSrbpqqnsx7tleC9wH5kl6V0e3NsD2MuAuMAMYltT9vwEvgYUlo32SjraCVEZge2OkArgh6bNtNxjrA24CW4BRScPNYBMBrgC9qdxVAjwHFgFDQNQkpLsTwACwKw1sB67l83VgW4O3HQGimF/SUOH1N+AEcLIEGJG0vKoWE3aR7WPA4ZJy5DkA0aqFxFwMdgTI3n8PzEkD54FTwMf8H6DTwIY8X4Fz5UFsGoHtKcClLHJ4vSoN9krqt/0KWNDE6xeSogH+yERdNBM4CCwF5gL9cSR9sr0+G2ANMAY8yd8xST9aAtLAbqALmAWMA4+BAUn3bJ8ForCLgafAszjNalGVotfA/PTkFzACrAb2S7pg+00OYWOWtkq6XSeCyPmSCF3SmO0PwGzgMnAGCAcK2QN8B6ZKutpIbLnsbMe+OZKKo9k14WUxyUOS1k2mTe8Am9PAz4wggLGLCvB0SfHuH6kTwUVgb0kzgLHgyoAdkopV8hekDuA48BB4lJpvs8ABiMKvAAYl9XQUQaFUsa7jdaTpgKSY6PZTVAIcAiKakJjklZLGbe+MCCUV66O9FJVv245P5qb4Dkh6UNU5LeegStH2NGBfVTomlaI63ja78xtXo8QZXkNmSAAAAABJRU5ErkJggg=="
   },
   {
     "key": "KAI_SLEEP_CRYSTAL",
-    "de": "Kaischlafkristall"
+    "de": "Kaischlafkristall",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAedJREFUSEudlb1LV2EUxz9fNEFocInQgiJ0CTLREFqrpcBAFAeXlihcLCHUQTCXAgeJgqAoaDEIXUT/ACkQhaKhN2hR0EHMpaH5xIHnJ1d97n3u/R24XC7POedzXp57jqggZtYF7EjaL2umlKKZdQBTwDXgbND/AnySNJayLwSY2SlgBejNcfRW0t0iSC7AzBqBJeBWIspZSRN5OkWAx8B0qgThvE+SZ3pMogAzawU+A20lAcuSblcBVIm+5jeaxbEMzKwJ2KwQfQ0QzSIGOB8AJatzoPZL0sWjRjHAVWCtqnfgn6STZQADwGIdADc5LWkvaxvL4CHwCDhTB6Rb0tcUwJ03AA5/mlGeAQbDt2eY/UfeAN+BdUkbKUA/8BJ4ArwHLgE+e84BH4ETwDjwMwTxGxgCJoEuSbspgM+dbBSrgA+8oyVzR1vAZaAZ+CuppUyT3dFOHfX/JqkzCXAFM/Mx0VMR8lrS/bKAe8CrjPIfYAHwcrncAFwnK1ckea8OSdE0rWXxw5soyZt6IGZ2E3gOtAPR6F25CFDL4oWk0Vi5zGweGAai0RcCQi/mAN9YPvz8xvjbAJ9X/lwAHkh6l9evMjvZje/kOBiT9KzoMiQBIZMR4HpY/Nu+8MPS/5C6aaUAKSdF5/8BzweVGQSc3CcAAAAASUVORK5CYII="
   },
   {
     "key": "KAI_KEY",
-    "de": "Kaischlüssel"
+    "de": "Kaischlüssel",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAhJJREFUSEutlUuojVEYhp83E6WYKAkzckmJiHIJGRiYuO0Qco5Oigkzl3LpZMBcolxyG1DExMStOElCyJlITJyQUmZKXn27tfTbtr3P/++9huvyPev91vd+SzQZtscDUyU9aLZeZk55s+1RwDzgALAizX8AbkraXSZocW8dYHsj0A/8AqbEnCTZXg4sAT5LOlkFkgE7gYnASGAP8EzSXNt9wGngkaTFnQJOFAIMAMeBM8BYYEjShE4A94GlKcAt4AUwG5iTlMXSLEmvykJyigLwDjgHfATeA5OBmcBl4CkwHdgk6V4ZSAZcBUZIWmv7EHAYuAHMB34CNWArEG9Vk3RtuJAMWA8EZAdwqnD4DXAFOJrWvpUJXq/Ggg9WAb3ASuAtEI8esLj9GCDM9xgYlDRUSsH/NtuOVEXKQt024CXwBdgn6eFwIH8UtID0SIrHD0NmX3xKkPPtIG0BjQFsL0uKwh/9kg62gpQGJCWTEmRBKoJeST+agSoBCoVxEdgMPAH6JL1uhHQESGpyIXyNUpZ0/Z9u2u6hWhTAFuACEMYLL8XYK+lYPtMNBRuARcCuwkXOStr+l9GqqmhIUzFM+KTWDQWrgZz3nKojwLqOAbZnANHe7wJ3gPgBx0laE2uSBisrsB2/X7SQ2/Gd2u5J//k0SdGB66MyIOV+oaQB2+HqS8B+Sc+7VqbFQLZHS/reWCy/AWU6tFV/nir0AAAAAElFTkSuQmCC"
   },
   {
     "key": "FIREBOTTLE",
-    "de": "Feuerflasche"
+    "de": "Feuerflasche",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAApFJREFUSEutlVuITlEUx3//5PJEvCgvXogockuSNEkaZR6QIkVuJSlTREpMkkJ5IMULjcsD5cHkFrkUMm4h1Ah5wYM0zZCXoaX/tM/Xme873zeamVW7s885e6//Wuv/X3uLAbSIGCmpPe9SA+E/IvYB54H3wApJlzK//QZIzvcCL+28HGQgAHYDB1LEj4BlwLcsk6oAETENmAfMBGYBE4HnaVyWdNM1B7YAv4CjCeQ2sNQlk9RQCBAR2wBHtgGYDrgE5dYGfAJaJTVFxGbgRFp0BVguqasCICIcwRBgo6S2iJgENAMzCkCaJJngbouItcDp9NpNdg+AiDDyi/ym3OZNgEce6IikHcm5gf4AH4C/mZJKABGxElgiaVUt6UbEaMBjsCRz4shPArOBBZJ+VPRBRIwC3kgaU815WjMeaJdkvZcsIoYDHZIqSt79ISLWAXMlrS/baC6GptR/5/71qH3ycQE4JeleUQZmv1nS44iww0bgIDAW6AJ+SrIUHcwawPWuk/Q5x9EiYJekuiKAJ0ADMAgw0Zamn1+T/r8DjvptArH2rxogBeQ+sY9OScOKAML1i4hrQH1a0GLS07wJuOu5pPu5qBcCZ4A5Tg64I8k8lSzj4GFqknPpj5toQpp/lDQu5/SYpK0pkweJOwdn+Vq2hSU6DLihFheoqASQmu4WcFFSY0Q4apszNLnmpUfXZxmsBs5Wk2ja/A6YD0xO6xzp8dy7P9dLulFUIjdOa1JNDZyav764CpI6KwBSPbcDLlVfbaekQ+Wby8+iV8CUPiC8ljS1aF/RaWr9Z/L8H6wWn/vVFla7D9wL+6sc0ZkvH3R7JF2vFUWtG21EupmyG83d+jSNZ4BvtY7eUuz3ndwbwD/egQQor6JiLgAAAABJRU5ErkJggg=="
   },
   {
     "key": "FOOD",
-    "de": "Essen"
+    "de": "Essen",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAActJREFUSEvV1L+rjnEYBvDPXX6FhIFESWSxkRQbYnKIw3QMksExOGWwEAb/AMmARU5MbAeZZGAwSAYsBsmiKJRSbn3r+9YbD+/7vK8z+NZTzzM813Vf1319rzDNJ6YZ3/9DkJlzcRD7MRoRn4o7/0RBZu7FZSzBdyyKiK9DE2RmAbyIA127nIyIsc73wAoycyU+YAS76jMfGyPi6VAEmbkDczBe7MAUruN4REx0J7OVgsychxvYgye4jYcoE6/G+4j4MhBB9XttDcZ6bMFuzKqAYxEx+eu96ktBZq7DZ1zANjzHfdzBqbKLiDjWdGl7EmRmmfYBPlaCYsdMzMACrMCliPjRmiAzSyqWVVuO4CjKHjqnKNncyXwrgsxcVZNypU58FzdxHvvKQrEpIt7+rc8aLcrMxXiE5TiEIr94v7BEEfdwOCJe9CrLPxFswDlsx2y8rrF8V6bGiYh41gu8sSoycw12onTJrargbO2ZMvFIRLzpB/w3gswcxVWcxONqUUnQmfo+HhHf+gVvIii3s1hQTvG9pGQpTkfEtTbAjV2UmQW0ey9lmRMR8WoQ8CYFJedbqz1TEfFyUOCh2rQNac+qaAPW6iYPC9z5/yc9i3wZPojdUAAAAABJRU5ErkJggg=="
   },
   {
     "key": "STONE",
-    "de": "Stein"
+    "de": "Stein",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAelJREFUSEu11U2oTVEUwPHfGskAKV8pEgPJVBmJFzMZK0kMyACDFzNCDEw8H4WBlIE3enpShspHYaYYkYTyMaPExMDW0j5173Wve268XatzOmft9V97fe0wwytm2L6hgFLKMlzCShyIiPujOPVXQCnlBI5Xg2/xFQuwEM9xF/fwJCLy3x+rL6CUsh0TWDqCtwl7lLBOYBeglLIO6fXWEQz3U32B3Zj9G1BKmV8NH/pHwxnGI3iD6zjYANZiM47W+LbhfMHlKj+xAi9xBvuqgbEGkIn6jmv4Ub3Y2IaCh7gQEdOllNKzpwuwqf58hkncrieai5R59dm8ZzIzX+l5Pm/icBtAo/MB03iFT/jcIRmexTg/pCD6nqBNZLLZTtYeGKQ/GRE7O3PQhOh/APK0+yNiaqYAjZMzGqKEtAJkCX/Dto7YtcnBXwFpMEv1DtbgBlZhL3ahF/AaizBnWJk+xZI+Q+4jruJUBWa95yjI7s9yvtKnMrK0dzRJPovxFuWToImISP2cYRdz3vTZdzoijuX3BjALD7C+BSRV3tcGHOvRn8oxExHvmu+943o5tlS5hQ0DPOzNQQL3RETeCV2rzZWZDZiSw69pxk7AeEScG3TyoYDOjaWU1RWUsEz644jI6TtwjQRomZ8utV9QN7O4qKf6QAAAAABJRU5ErkJggg=="
   },
   {
     "key": "SALMON",
-    "de": "Lachs"
+    "de": "Lachs",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjJJREFUSEu1lk2IjXEUxn9PycZHvopZkg0LH5GNWBhFWQhRszBINCJFPmp2lKYsbIRYICnyFaVMLEjZyEhKURKpiYXyERbk6NH/nd7rvu/1vjfzr1u3mXOe53+e55zzv2KYj6rgR8QkYCtwQ9KzKjlZTEuCiJgD7AbWAccl+Xut00QQESOBtcBOYEFCuwd0SvpVCx1oIIiILcBBYMpfQB2S3tUFd/wQQUTMBi4BgwVAO+pq3+BBRIwAVgM3JX1r56ZlOX8qiIgu4LKkn/8TfEiiiLgPLJP0fbgIbgE/gPWSPkVEB9AH2Ni3wGvgazJ/b+qoj1Uuk0m0ETgDvAF6JPVHRA9wogTEph+rQzDBHgBLcknvgcklIAOS5tchcNmngZPAmiqJwHbgkaSHreIziTYBHrJVwErAhNMrEl21X5IGiuIzgnHJTLfpfuA8sBnYBsyoSHTNuZJe5uPzk3wI6E3/fAEcBc4CXngrgOXA3H+QvbLMkg43bdOIGAU8BablQNya19MK6Qc88a7IMUvTCs9zjgF8uVOSDjTsojTRM4ErLWT5nC5hKffY5JKKngNdkp6UrWv7sA8Y3UKShWlOZuViPLAXJZ1rkij7Q0RMlPQhIsYCG4BdwNQCotuAfXMX+cXzcYV3knePJQ0WVWCZrLu3qofP2luSRcBiYF4idK4JjgDdgC/0Jfcx2YPCJzMixgN3Ab8RBu+WdKFiuzaElb7J6aG3PO4I76i2TqVfFW0hp6TfB3qsJGVmZvYAAAAASUVORK5CYII="
   },
   {
     "key": "KAI_CAPE",
-    "de": "Kaiumhang"
+    "de": "Kaiumhang",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAuhJREFUSEu11WnIpmMUB/DfIZG1mJS1ZBtLlkSWrEnyBY2lLKPs+aAsX3wxQxFRlsgyXwgJzUjxSdYwWbMNIZQpZCnLkDRc+nPd0/M+ntf7vB+cunue7vu6zv+c8z//c8r/bDXqv7V2HPIchJ2wqqqO/68YWmuLcStW4108j+VV9UPu/Q3QWtsHy7rjUX9/YvOq+mU2kNbaYzhl7Pu3WFJVdw0AO2OH/uyKPXAUFiDfXsPH+H3E0fa4A0fgJDyD9/BpP7umqlbOKNFwubV2CZ7GbngZK7FwLMq1OBFf4TcksM+q6v3Rc/8CaK1tjJTkHRyDlOA27I8jsV4c9fcX4xYciutwUVXdOxfAVrgQT+IB7Nsv/Ihn8XUH3r2/TzCX4gtsUlVPzAWwEe7G2T3aaRv5bZxXVW9NA5AMlmDLkcN/9KwS6enYegz5YVxZVV/OBRCCQ1xIjiZC3ud4tZMeB792nYSXNb1036XVq2pGy04i+Qacij1xOTbrjo/Gh7gPIfKF3ggR1KM4E+dUVdp3nU0CeASn4aqIrP8OF9KyAYgoB0t2J3QVb4ANq2qdXiYBvIED8D0OxicjziYBLMV2uKCfW1hVHw13xmfR+r2m6aSfsEsX08nYFNd2NUe5h+G5roM7R8bFoqpaMRtAlDugD84yCm7H672LDkQ0sE0HD9C5GBS8tKqumQ0gtQ8HEdWxeCk17YefwmXYAvuN8XBFL2eaY0VVLZoN4Kb0ci9F+jyjYBr7BhnrEdnqqtpxNoBXcEgfbG9G+tN472cSfTLMXNq2qqKlf/ZBrLWWFstcyeI4CwGbj2W8JJOrQ3hVLR8HCFmpeWZKSHp8Pt6zxfreuDEbrqqSzYwMru+i+hmHd6D5YOR+eDu/74UsqhkAabO9+pzJjHkQaclpLIMwmrm/b7jc2buqVg0rM+vyZtyDF6tqbWstMygLPdlkheYJT4OFqw+QZnioqvI/XGbzndG7adnElTlNyNOe+QvXJucZw0pYEgAAAABJRU5ErkJggg=="
   },
   {
     "key": "GUILDPASS",
-    "de": "Gildenpass"
+    "de": "Gildenpass",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAqJJREFUSEudlVmITmEYx3//LBeWcDGJSCFDURIyWSchWabsa5aiDGpCuVGWC1uW3FAikkFESJMLy1zQiCIXLsiFYuLCNigRPXrqGZ35vnO+7/DU2+m87/O+v/c8y/+IDDOzScBr4I2kH1l+5eZVArAZWAjMlvTO/cysJ9APaJbUXO5wXy8FOAl8BN4De4Em4EKMX8AiYDDQHXjVOiTdSYJLAe7HwfuAIQW3/QyccZikJjOb6kBJqwu/qhTgJTACaJEkM5sOrAQWpITGb+3Aekn+dX8tFWBm7YFTwDXgUng/BC7H6ALMB1YBvQuADZJmtM5lAYYCYzzBwKyUG3+KC5wDPgBzY1Q5VNLpcoB5wFPgRZ5KAW4E8CAwTNK3coD1gCf5SQJQDSyNsLTLAHvP9M2TgxpgArAp4fwcOJ/IiedgMVCZ8DkkyfunbJJHxmd7Y6XZ7whJPXA34VAl6UEeQFfgSzh6qPZ798b7HGAsMLGo5qWiosmqonXAUeCYpFozO+tKAewBOgPDozx3JCC3JE3J1Whmdg/oCPht3SYDj4CLwIGQiO+x1gpZI+lEXoDf1jd6Q20BvMl2R7yXAd3i3cG349AeklxC2lhRiMxsGnATGAVcB3qFVDjUbWNISC3QH3gWcuKiV2RpAJcI15xqSY1mthN46/mI3X0Az4n/L7wYvnq+JHnv5AL8BDoAh6NyZgKePK+i5UAnYC3g4jcO8HyNl+TP0gAzGwR4Q7k1xkHHo4NdMVcAW4HHwJXIQ42HMO1wn2uzYGbb45YDYkMDsERSi5l5Z7tceGhcBD3pG7y6JI3OBUg6mZnrvleMS0EdUBHrAwHXG8+TW52kI/8MKIDtArZl/GIrJPlvNdUyY5e1wefN7Go0W2Wp+BfloNSh/7v2B2vf1BmdiDvxAAAAAElFTkSuQmCC"
   },
   {
     "key": "MAGNIFYING_GLASS",
-    "de": "Lupe"
+    "de": "Lupe",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAhtJREFUSEutlU+ITWEYxn9PNnakGFKUhVkQxp9oxpSVFUoipRDZmLIhygKzmYWsR3ZEKRODFFJIKDUK+dMsZJoFJRMRRerRO33ndp17r/muuafO5pzO8/ve933e54hJXLZXACOSxhrJqFl925uAo8Bq4AmwFPgBPJC0uazXFMD2aWAjcAS4DOwD3gAvgYPAIWCLpCsFKBtg+wxwG3gFnAXWlE4bzw4k0JCkG/E+C2B7D7Ar3e/qtHUQWAJ8B1YCvySNa08IsD0T+AisBU4CnQ3mFsKrgFnANGBBzCQHsA44BexM7Wnkix5J/bb7gPPAfUltOYD9ySnvga3AogaEcUDxzvZPIBswBYhKPgN76wC+AF2SXlcBXkTVORWE8GHgHjAb+AYcL0E6JD2rEp8BjMWgcwDFkDuAfkmdtotWjQLPJT2tBtreHZVK6p4QEB/avggMA4/DipIe/SsBbIfrdki6kwsI20WflwGLgbuSPtSD2N4OtEvqzd2DaMdX4FYSPAFckPS21JZYtB5grqQNWVFhO3LnOtANzEuQc0AIPASGgOnA8rTJvZLiAJWrYYtsrweuAVPTgm0rbGh7DhBR3Z5cFfk0LOlTVpraDmteTSsfH1fEm433mgpsd6UobiufvFnxmiHbjrAaAOa3QvwvgO34M10CFrZKvAwI3x5rpXgFkFb/ZvobDVSH1v/0vcamCTAo6fdkBbNs2krIH++WxlNTGjRJAAAAAElFTkSuQmCC"
   },
   {
     "key": "MESSING_SCISSOR",
-    "de": "Messing-Schere"
+    "de": "Messing-Schere",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAhNJREFUSEutlk2ITnEUxn/PQspHSTYaSrLzESMWNqKklFBmUBITG0YsfGQ2KMWKnVhpSha+YkNJFjbyFUk2FsiYZGFBmo16dN7OnW5vM++97+v9b2733vM/v3uec55/V1Qs2yuAn5K+VMVO9F6tNtm+BBwFfgGvJa1vF1IFMNAjadT2G+CKpKvtQCoBkhoxtjcAj4r7upDagIS424A/wD5JN/8bYHsBsAp4KelzJjwHDAAngYVAn6QldeWJuELfw8AF4AXwA+gH7gGXgW/AdmAdcEjSh04AMS29kmJSoqEr86v7MlnAbgN3JY11AvgE7JT0vNhsexHwETgLnM7nvxMUwAeS/lbBCom2AHeAi5JOZBXHAgocBKYAIeOOUsKvwP0EPZwMND6mtqcDT4DVGfwW2CxpxPZjYD+wDDgCNDs63g9Lut4MaumDklxxXMSxcUtSv+0DCVrclPAVMFiWui4gRvgdMDNkkbTV9lTgeILmlEAxhXslNWSrBcieDAN7MtFcSd/z+Xwg+jbYVM0aSc/aAWyLMc0kTyWtLSe03ZujHR6K1ZCzNiC/NnyyPBOM+6YJtDFBYcx57QKKZkfO95KWTjaetncDI+0CZgFRRTQ91qaimZU+qHJkaWTPlJw9Kqmn1d62KihBbgC78n5A0rWuVZDNng2Ee+OHYEzStK4CEjIDGAJOxVXS+YkgHUlUt18R9w8V28tu0FondgAAAABJRU5ErkJggg=="
   },
   {
     "key": "IRON_KEY",
-    "de": "Eisenschlüssel"
+    "de": "Eisenschlüssel",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAhRJREFUSEutlU2IjXEUxn8PKcoCNYkkNGwoacrHRmbjI2TjM0sLYpo0StRIU4imhnxEoSwkQ6LYSCGilI8dC7KyNBQplB6d2//VvePe6f7fO2f1vovzPOec5/mfI1oM25OB35J+1INSi/jYPgJsB/okXRmO1xKB7Y3AVeA7ME/S11EjsD0VuAMsBbZJuh7gtqcB0yW9iv/SHdg+D+wCLgP3gVPARWAxsAY4IOlEKQLbO4BLwFtgCfARaAN+AuOB0GIhsDybwPYM4CEwF1gPrAN2ptn3AQOSvtlul/ShDMEgsBk4BjwAHgFh0QvATGAc0C/pebYGtqPSAHoMrJb0y/ZeYIOkTtvRzb74LtzUdAe2ZwEvgYnASklPkmtWAPcS8TvgtqQvZQjupnnvl9RfANgOx5wG2oGjknqr30JTHdjuAs4At4Atkv5Ug9ieAxyXFNrUREMC25uACUCI9R74BGyV9CxnvYxE4AQU7T8Nh0gayAGvcZHtSUAINjtVPRY4CywC3gBdhfVySCodDBOqyI/HdChmDnRXqpGa0uw/kW1fi4XVoLKDSYMxkm7mVP9vRLaHgCkjJPdIOpkLXk1wAwjXNIrXkjpaIViWhI0dXtnndcA6JcWKyIpC5PnAoKQFtncD50abICwa5y6OxVrgcB2CNkmfs8qvvmi29wCr0vGIYxFvIiJ2UOyYF7ngNQ+tTHIzOX8B/DGxIr0OC1UAAAAASUVORK5CYII="
   },
   {
     "key": "SILVER_KEY",
-    "de": "Silberschlüssel"
+    "de": "Silberschlüssel",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAhRJREFUSEutlU2IjXEUxn8PKcoCNYkkNGwoacrHRmbjI2TjM0sLYpo0StRIU4imhnxEoSwkQ6LYSCGilI8dC7KyNBQplB6d2//VvePe6f7fO2f1vovzPOec5/mfI1oM25OB35J+1INSi/jYPgJsB/okXRmO1xKB7Y3AVeA7ME/S11EjsD0VuAMsBbZJuh7gtqcB0yW9iv/SHdg+D+wCLgP3gVPARWAxsAY4IOlEKQLbO4BLwFtgCfARaAN+AuOB0GIhsDybwPYM4CEwF1gPrAN2ptn3AQOSvtlul/ShDMEgsBk4BjwAHgFh0QvATGAc0C/pebYGtqPSAHoMrJb0y/ZeYIOkTtvRzb74LtzUdAe2ZwEvgYnASklPkmtWAPcS8TvgtqQvZQjupnnvl9RfANgOx5wG2oGjknqr30JTHdjuAs4At4Atkv5Ug9ieAxyXFNrUREMC25uACUCI9R74BGyV9CxnvYxE4AQU7T8Nh0gayAGvcZHtSUAINjtVPRY4CywC3gBdhfVySCodDBOqyI/HdChmDnRXqpGa0uw/kW1fi4XVoLKDSYMxkm7mVP9vRLaHgCkjJPdIOpkLXk1wAwjXNIrXkjpaIViWhI0dXtnndcA6JcWKyIpC5PnAoKQFtncD50abICwa5y6OxVrgcB2CNkmfs8qvvmi29wCr0vGIYxFvIiJ2UOyYF7ngNQ+tTHIzOX8B/DGxIr0OC1UAAAAASUVORK5CYII="
   },
   {
     "key": "ROPE",
-    "de": "Seil"
+    "de": "Seil",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAsdJREFUSEu11Vno5mMUB/DPd1BkiWTsZCnGVpRwIyHJNjey3SDbFReyzMyFyJIxF5aGKGRJKBQJJWWQGu4MEcY+MYhRGMtwdKYHM//FTJk59av3fXuf53vOdzm/2MiVjXy/9QKoqu2wJz7DpfgDr+A9zEjy1XSNTgtQVdvjKByN5fgEz+GIcdkPrG7wOnyPS5KsnAg0JUBVXY4jk5yxPhSOCS/Gk0k+XPPMJICq2hz952twIO7E/WOKFUmWVtUumIXdsRQvjufMJD+vC+C0cfG9uAWH4DY8hLcwZ1D1G17FeWiNmtJ5SU5YF8B+OB9343lcjY+xDVaMZ5PBe09x3ABaOISfm+Snv0GmouhzzE+ysKruwIM4FrvhMvyKA/ABVuFtnIw/B22nJ2mnra61AKrqVGyGK9sV+BLd7bdJVlVVf25d2lE7YhmaklPwHRaNM0uS/D4VQPN4Dp7F4Wg9mvf52BvvYIvR3A2D+2PwMp7CiXgAvyfpCf+doKouQDugPd8aNMi5uGjQ8mNbd3T4/pjg4AHYznsUTe/+Q/C7ksz+h6KqOgw3Y+4Yt/ntkG2K1/DuoO9TnI3XxyRP4+EBfs8I4mKsTLJsogZbDSF7/Pb/E5iJJfhmiNjADXYofhkU7oGdcNDQrH+fmeT66YJ24XBFC3Ujdhj8LsCuaBvOGxT29zc7jEkWVVVr18HbL8nyqQA6nXvhjSTdiarqS3rPdKfbDmo+TPLFxFVSVbdicZLHJoq8Dx7BvsPbVwyxr03S9PxnVVVv2/swe1LQqmrn4YoDkzRIdz1j7KReDQuStCaTamSjU/5M05nkhUmrYlh0syS9Htaqqtq6+Rx2/QjtmrZp5+GsYYqbkjw+VQOrNaiqDstJSa6ajoeqav5b2OPxEtquW+L2JF9Pd27NHHSK5yTpNbHBamIOZiVpj2+wWq938v9B2+gAfwGosfIZEagp8wAAAABJRU5ErkJggg=="
   },
   {
     "key": "GREEN_EMERALD",
-    "de": "Grüner-Smaragd"
+    "de": "Grüner-Smaragd",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAxBJREFUSEudlm3IzmcYxn+HDzbsw1qjWGGy5qUWWfKSeWt82Gp5jwnx4ZmXVnww72wTtRZLXgqFEHlLJJkPHlZIE/ZlIsuHrWRoyaymnDpu583fv/t+nidXXR+eu/91/q7zOM/zuB7xmisihgGPJV1qKoRaGj8iugMjgYnAOQcH+gA/SLpWL05dQES8DYzIoNeB/Rn8LjAVmA7cBA4AGyX9XgvyCiAi3s+Dw4FPmsjuZ2AbcBA4DPwFbJB0q3ymDJiZHzwFdtQAXAF+SYlmAJ/nN/OBzsA6SX8Wz5UBe4APgd2AdZ2dwRy0KzA09xNgLzAH6AX8AzjrKcCPkixjZZUBTvUbYD3wGdAjpRoC3AHOAIeAQQm3THMTsl7Sgoj4CVglydCXgIgYCJwHvgXGAIOBfYCzupA39Jmzkm5HxCxgQe51hkiqXDgidvoCkv57kUFELALWmp7bcnwMtAFWl+oxR9KWiPgaaAAmZDc5Q0v8IAu/sAg4nkX7FXDL3Qa+BLrV6abTkkZFxJLUfgXQGngTeCP3rWpK/vEe0A54mDdaA/RrZhDdRZb1CLAJWJxF3hcR/wLvVQFfAEeBrZIaIuId4H4Lpnwe8DfwLvBRynUMsNzLJU2pAkyfnBk4TU+qi9vcsoT2pGXZCFU5xwEdJW2qAk4BrQDXwSnbZ2wBvZsh9AR8tm8pYwNPSLqqiPAE/g+4TT0o44GLgNuwKcjmDL7UNlHKeK8kq/B8DiLCrbmycNu2wOWE1YJYvt9yNmzXdlrLVV2VWpYHrQjxFHoOTgKfljK5CjQWtmUywPZSXdMkVf4uW0UR4q7yTXcB/YEPspAuqveA1N5xJmUnuVm82kty278KSLmWA9/lh2PTZzpknfwGtK9ReNu2PaqLh1WSs6+smg9OwTa2p8m5Hl8Bo2sFlzQxIm6494GekqxEfUBm4qn8Ptt2YT4snQoAQ7cCfwB2WzvsiWxPv3RNAxJin7Fj+mZuy+ryu+zHyS/bGfd7jcyaBxQg1tbbtt0o6Wy9gOXfW/RfRUS8JelRS4MWv3sGcpoAfS4H+kwAAAAASUVORK5CYII="
   },
   {
     "key": "TORCH",
-    "de": "Fackel"
+    "de": "Fackel",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAgVJREFUSEu1lE+IjlEUxn9PYiOSlLJhKGIrlBQLNpMUSTEKCSVEkvyZZmwkLJRsqEFkwcJiRJGQDZEslBr5V0pKLFhJPTo63/TNO99837zvzNy6i/u+9z6/c55z7hVjPDRW+rZnSvpcGWB7MjBV0qdakLYnSPoTa9tdkk5UAtjuBiLCbSm2FZgr6WiuNwNzKgFsLwOeZtSPgVk5NwGRzW4gAN1VAeeBPXW1+wZMb1DLyoB7wAfgFrAa+A10JeAt8ADYB6yR1Fu6BrYvAdclPUm/V6R42LMIuAn0SZoX30sBbIffM4DxNUC9NbZfAguBDcBE4PWwAbbjwKOM8MUQgOfA4oQekHSuDOAyEO0YY5eki4XoO/L/yqiPpMhieBbZPg0cKnRKh6QbWYflQA/wJqakY7W9LTOwPRvYCRwuAH6m13uB79E1wDTggqT+Nm4KsD0OeAZE58wH9hcg74D1wCpgCdAr6Vr9nlaAsGBjHlgLtAM7cv0++l3S3WYP5pCAfG9qFyg04sauy0v0NWoi6W+r17ghwPYW4EqDw/9br5VoU4tsh5/3CyJ9YZWkV2XEB7Wp7QXAHaCtTqhH0vaywoPa1PaUvKWRQYwvwHFJV6uKD8jAdnge3se4DRyU9HEk4v0A2yeBI8AP4IykUyMVHmCR7aVAJ3BW0sPREi9aNEnSr9EUD61/uRWyRvnYJuAAAAAASUVORK5CYII="
   },
   {
     "key": "REB_ROBE",
-    "de": "Rote-Robe"
+    "de": "Rote-Robe",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAApZJREFUSEullVuITXEUxn+fIim5PlFMXtyF4YGS24tLLg9MaETk7kmIJDNRJg+jyL1cQgYPFMN4QDFKopRreJCSvAgpMuXTmv5Hezhn5pyxarc7Z//X+u31rcsWJZrtMklvi3VTsQdtzwBqgYFAlaTqYnyLAtjuCLwEBgA/gU7ANEk32oIUCzgKrACOANeBfUAHYKikr61B2gTYng9cAM5IWhzBbE8BbgIXJVW0G2C7G/AG+AXMlPQwF8z2HmATsEHS3kKQVjOwvRTYAdRJ2poNYnsUcA84D1QX6qxiJOoSbw+US9qSJJoFDAP2S/r2PxKtAQ4Ct4DNQF+gD3AOCIlWAsclLS9ZotT39cB94AcwEnic2nV1qk10U1w1f0uYA+aVyHakH8H7AdtT8Gvp97x07wwMAV6nYHmL/Q/AdlfgCjAxOU5Ivb8LaJJUa/t9kioAzzPyVEo6m5UrH+AksCRzqDuwFugJvJJ0zPYLYFCqy2Rgejr/CaiQFDPSbC0AtqtSW+ae3waix2M9LAQaJNXZfgCMTZleikJnXuhZgjRnli+DCBSTOhUI3cOi0AuAQ5LqbccbxpmPQP90vwPcjdpJ+iNboSLHBMcVS64BOJAAGyU12r4MzEnw8piRNHDfJTW1WoM0SDGh49Mw7QRC88hgrqQntk8DlSnQOmAwsB7oIelzm4AEmQSUAeOSQwCGS3pnOzKKwoedkhQrJa+1tYu2AaOT52ygt6QvtncDzWsjspMU7douQGPapOEcu79Xyi6CByRnkdnTfISCGdgekboo90HpIikki+9BbkflYi6TdKJUQCywmozTB0kBDcAiIDux0b65mrTgtJbBYWBV5nSjpFgbAYj1fTXz7JGkMSVlUKhopf7/G5Wn6hlnNFzSAAAAAElFTkSuQmCC"
   },
   {
     "key": "SOUP",
-    "de": "Suppe"
+    "de": "Suppe",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAApxJREFUSEu11VnI7lMYBfDfIpK5c2QoUzLVORSZ5yFTpHQQIi7cChcUIeJCopByQeogjrhwheKQC7kgocgFOaYcQ5kiMjx6TvvVi+97vzcnu/bFv//ez9rPWmuvHf/zyKz6VXUwjsYzST6oqhPxGN5Octo8Z1sUoKrOwN3YF79jf1yKA3Fqfyf5aCmQWQC3jM034Q9chTdxCJYluXGp4v1/FsDpOAK7Y7/RySVJnquqY9AAR2Etrlysm3k0OBM74fLWApfhEWyP40YXLyQ5ZaGOZgJMNlTVRfgGv2ETLMfN2Geq6HZJvv8nyLwAve4AvDvoarFfHSZ4B3tiZZLW6m9jSYCq2gFP4CR8hWNxK77Fk2i7fpzk3v9EUVU158tw1yjQ7urZhVfi+SRvLeaoeTo4dwjaYm+FF5PcPo9FZ9p0SuDNcM9w0mfoe3EYDsf9Sb6eBTZPB+2YPbDtKNSAd44bvWbosS7JT0tqUFVtwRbzbBw0LNnCrhuiTrpu0BWjqwbctfMJD2JNkh8mYBs6qKotcA0ubI57EV5JUgudqqoORc/VSX6sqq7TwdgZdT5a9NuSvD8BeHRY8IaxYUesGgG3C/p753HiLfHlmF9gPT7Fw11wHPg83Ne5lUFL09CZszUewFmzcmoRUbvbp3FtA1XV4xvoGogvo2naC32xNmb8jGdxTnc+AWjeVuNXbLMx1VtSNHVrk1z8l02rqoX9DtcPJx2JvUfOTNt0gv8LPsGHw2WdSU+hX73rcHKS9dMAm46M7+TsWHgoSXc01xhvRCdsZ9QVST5f8CZXVbvl6mG31zpr8NLEIVM3vPPpeJyAjpE3cEeS16dPNOtF2xwXjFhoinYbs83Qtuz3uCl6b9yHtu6/xpJRMRc/Mxb9CbR51ZGPiHbQAAAAAElFTkSuQmCC"
   },
   {
     "key": "MUSHROOMS",
-    "de": "Pilze"
+    "de": "Pilze",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAfBJREFUSEu1lk+ITlEYxn/PQtnYsKJZyBJZTCFlMd+C1WA2pGaslGIWSilLVkq2vlKSiYU/O1ZERk2yMBvEAhsSNVgpsnl0vs79OnPn3Pudq+as7r3nPc/vPe97ztMVqzzUpm/7KrAOuC/p9v/k0giw7ZrgHUlHu0KyANsXgXMZsceS9nWBNAE+A2MNQtclHS+FrADYHgcWRwhckHS+BJIDnAKuFCwu2kkOcBOYKQCEkJfAQUlfm+JzgNfA9kJACGstVw7wF1izKgDbW4CPHcQfAlOS/hSVyPZu4EUhIJy0SUnf2uKXlcj2euDHCMAv4AbQl/RuVDK5HhwGjgEHaotfBU8C5iR9qAvb3gzsBzald6TNizYCh4DvwAKwFtgJTEiarQC2twKngRMpVNJAu9VNE5HU+JaAbZKWovjd8J4p1T1JR4YA2yEwZPNI0plEPHhS8KZ0zErq254Anrb0YWwAsH0WuJQEDuhxbg/wvCYyL6kX5/vAyQZIrwKELEI21XgQ7FrS2yjyJTQvmR8C4vxk7EF6MH4CKwBzwDVJoanDYXsHMA3sAp7VnTTen1DK98Be4DfwSdKTageXgTfABiA89yTNjzrjSZ9uxQTCp2W7q1+0qlRdAakDtwIGfeiSfbKLqfiDsFj1rvgelJYqF/cPFem9mRZaqhwAAAAASUVORK5CYII="
   },
   {
     "key": "LAMBSHANK",
-    "de": "Lammschenkel"
+    "de": "Lammschenkel",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAbRJREFUSEvtlL9LHVEQhb9TiYEgQv6DGIJYRElhFdBGCFYpIohdMBYpAtoEQVCLNClSSFKoSJqooIU2qV5AUwh2koCd2lkFEvwLjszjrqzr8t76s3Jg2WV37nfunJm74pZDt8znXuCCw7ZfxUtJG/X7TfbAdjewl5j9krZvVCDAtp0EZiXNnBOw/QwYBQ6AEWA/Pf8HsusB0AE8Sffg/QLWUn7elP4zAduvgXcJuAO0Ah+B9oo29gFPJS3Y3gL+ShqqC9juBXYLoHVgDlgAOiuI1D0v5mUC35Mlxe8BXwViR42iJmmgLCETCECUWBbPgSmgPn4lsQy8l/SvqkAX0ANEVRFfgN/AYglgVNJSo9KyClaA4ZTYIenQdkxFNP4YeAn8KYDeSPrWrDeZwDjwOSV/kPTJ9gwwnd6FffkGLkoaawaP75lAzP9P4FFaFLB8T/IC6zF+VeBnAvFg+20aybK1mcCBpDhglaN4kvO2ZJAa8BXYlHTpX8uFBcn7CeBhOvphx7ykF5W3nUss3ZHtFuAxcBSNljR5Ffi5HpQBbA9K+nFVeEMB222STq4Db1rBdeF3InAK/e6AVpVULrkAAAAASUVORK5CYII="
   },
   {
     "key": "SILVERBRUSH",
-    "de": "Silber-Bürste"
+    "de": "Silber-Bürste",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAfhJREFUSEvt1EuIz1EcBfDPtyblsWCK8VrIiMKCDbHxLLFRFMojbGy8mlhIYZSNaJQkC+WZpJANWSBbCxbyWlkNQqGQ1dVX96/xGINpdvOt2+13+91z7j3fc27o44o+xtdP0KPCvZKolDIOUzG6jlHI8RbtEfH8nwgq4FzMQc5J0F11RETbHwlKKWMxq4ItQms3aK9wFgNxB5fwKiJG/kJQSsmfNmBNBe/uhAm4NiKilFLq/CIiRuV33dT8naCUMrwCb8Skn1CfI8cAHMA67McZ7KzzEpzEfDyrvZj8jaCUsgCnMaYL8Eucw1LsydPiLsbjRm3uJ0xAzu/wBW8wA5swr0HwFBNxs7phCy5GREu97mB8xGTcTm1LKQ+wGA+xDIexHCdwBNcxpUFwH9OwGcOqFGm9Y3W0143Z6CdoxuNKlHoPzRv81I9cH9Eg6MB2XMMOnK9az0Qnpterv0euXakyXMZWXK29yJtvQxtWR8S+BkF6+jY+R8SgKksTHmF2bfBCHMchrMBRrKz70nH3kIQfMmCNXnZ1URI0QrQLu9PPEdFaCTOhL6rX8yBpz/URcepP70VXglW4gL14jSFowS2kdfMAmZGzEZHB+qv6IWillGxyOmJ1bepBNEVEpvO/6ndJTpk6IyLD0uv6p8fuf9j6CXpUrc8l+grj7qzDkaMdfAAAAABJRU5ErkJggg=="
   },
   {
     "key": "CINDER",
-    "de": "Zunder"
+    "de": "Zunder",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAA1VJREFUSEu1lVnIV1UUxX8rg8JmMguhASqMSg2NTIMcyLKgiLKCSg0fFKKJREUE0xeVimakILLJAo0esoHKKCrKHtJCzLQ0JBstDewhyFix/uwbt8+bfBTdt3vOPXvts9ba64qOx/Z4Se/03bI9QNIfXWf+aU0dRd4GxgOrJV3b7NseJmmj7Rskrcy67bskLT4Q4N8AbJ8DbAA2STq7ihwjaY/tiySttf2mpEm1txRYL2l1v25g+wxgM7BY0qIqcg1wOPB1Abwr6cLaW1U37TfAocA2YJmkh6vIY0DWtwDPAjuAMyVttv0yMEvSNx1UrwrFXRpMBE6Q9JztMcAHVXwocAfwAHCupI9tvybp0o7iy8KEpKf2A6iue0LaHg58CswHRgPnBxwYAgws6o6X9EbjPNtHAb8AkyW93lfkkZLW274tdEjabXsjEDedCFwGTJQ03PYlKWD7aUnTbN8HRPQpwPKcifh/Adg+rxyxz3Y+ulLSjban56p1s7hsNxDqPolTi75NwFnABGAGMLUxShvgS0mnVaHJwEpJx9oeFx0k/V57g4EPU1DSb7Zj6wDnCcCtwFXNHPUAbF9XiLFp3m8B4qIcSJc/SPq89iL0/aXHccCalsi5RZhYAWyXdGoDMAe4G8gwvWV7XYmaG4X7nzPFBfA+cEGGsWj5tcTO9mBJu2z/CAR8SAPwaPwMPFP8pnA+Ogl4EkgG9WLD9i5gUKvr74BvgVGSmnpN3Ezpu/Bi2XAs8FAJmonu5ZLto4E9Vfwl4ArgC+BmIBGisvZ7wJHAvAYgIz8AOAx4FXgQeBxI5pwM3CNpbiurGkHTabJolO2dwCvAKcDF1cTVDUC6zdUzWE8AEX160XMTcL2k522HskRFCt0LBCDZNM52Q0tEv7wARjQAdwLfAwcBHxUNC2qK44ihkraWBvF/vpkNrAUW1iR/Vd2fDsQQya+BDcAhwMzYS1JcETHDd1JzkqR4u/fYTud72/8B2yNq8GZIWpFIBw6WNKE9aIuaiG4Vux14pP0Xs50hXCJpZOu7xMQLkhKMvR9RKJe0vA0wSNJP7WS0nVj+rCMto8HsZvg69mPtOZmJzjTte6Dr3XaclQHd72k39q8BioojJO09UEP/CaA/N/3fAf4EDFGdgQCT924AAAAASUVORK5CYII="
   },
   {
     "key": "DAGGER",
-    "de": "Dolch"
+    "de": "Dolch",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAfhJREFUSEu1lU2IjlEUx3+/jVigkIVma8FCkZV8zFigbKxYWYikZOMrJoWkyYayQJEsRmTje/FmQaEoVuMrK2VnQxZW6uhM96nX433m/ZhxNrd77n3O755z/vc+UiwihtVn1bx9jIhl6sdOa9185oaIOA+sBIbUpfWPIiJ9i9WX3QLW1ytAqEbE5NiQxRHgk/qwH0gFOAWcBN4Db4Cj6rcOmbwArqk3eoX8ddqIWA68Br4Do+p4rRcrgLvAdvVtL5B/ylEgmUnaMfVc6dMS4B1wQL3ZS/Dc01TvNUDV0L1AluQVMK5e6DV4I6CceDbwHFgN3AM+Az/Usb4AETFP/dn0UURcBuYAj4E7wGk1RdGTVSrK5v1WP9SaehxYD2QfWsAs4JK6v6fo7T2IiIUpQeCK2oqIXcAhYEc5eSos7QswoubY1Tqp6BawFpgLrFMnImJRgYy0RUzAAnX+VJQmFR0GJjKTWslul4za3S11SxOkI2CqE0XExbwLtT2Nje8bUCR8AjhTgxzsdEcGAhTIHuBqDbJbvd7uGxhQIJuBB0W+Vdxt6v1qMi1AgaR8UwxDJWi+xhvUXzmfNqBAUtL5N1xVIGPq6IwBqnJExCNga5lvVJ/OSAa1u5Jv1z7gibppxgGlZFmes5NPStfHZMANEbET+PrfACWT4T8TZLXQA5gylwAAAABJRU5ErkJggg=="
   },
   {
     "key": "SPEAR",
-    "de": "Speer"
+    "de": "Speer",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAmFJREFUSEu1lU2IjWEYhq9biQXyM02xMWgiIrPQsFAmKyLyH1M0wpDfEBbyT7EgNWGjqFn4iSSxUGxYKEzIwsKOUkyhFMmjR8+n1/F9Z84xx7f5Tuf9ud7nvu/n/QRgZjP8Lem+v2v5KAAG/AAWSLrxPwAvgAnAF2ChpDu1gmQVjAcuB6QbWCTpXi0gvwAhUwp5CyyW9LC3kN+AHMhrYImkx3kQM1sP9Jd0stwh/gDkQF46JCQ7kG5kZp+Ab8A4Se+LIH8BEsgVYCmwEtgR5l+L8aHAI2AMcErStqoAsclEYAuwOhZ/BKYAY4GtwF7APfoONEt6kgfJrSAAs4FLwIBkoTfiCuANsApoAPYDHZI2VgUIiG9wEZieLHZTPwN7gEHAbWAaMEnSq1JIYQUlhp4GNiX/uUzPgFvAQaALOC5pl5m1STqfze0RYGZucj/gHXACaAxZmoB5QBswMvzyXrouaWpFADPztHiHzwSOARc8+8AoYLk3I3AXcP39ujkC7EsTVxRTj90hwJOzNow+CowG3OjBwOREMk+XJ6sFGAF0Smr18SKAJ8RP4ib74012GNgev12y9OkAbgLZJen3WaOk7nIx7QNsDm0d9DyS4xFdE/2RggaGXM1BbpXUWYnJ9cCG2NTL9+RcBbzTd8YhhsRBvgJnA3BOUnuPgEwHMxsOrEtAXtHTCMEwj6ukBjP7AHg4uiQ1VQwoA/KhM+GBaz8f2B3z66sCmNmcSNXcgsvNq3oAtMd4S1WApAoHLQNmhRwFPP4NUHKNOMTz79907+Qs2j6t94DSo5tZX6AOcOPrfgJeN78fKKSewgAAAABJRU5ErkJggg=="
   },
   {
     "key": "MACE",
-    "de": "Keule"
+    "de": "Keule",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAeRJREFUSEu11U2Ij1EUx/HPQVGyIBo7GyVvKxZWIuQt5LVQE2Frg1lYkCSiLKQkLwtKobzOAlOSUIMNwoJkxc6OJHV0p0vN0Mx//v9x69k897m/7zm/c55zw39cmTkthlo/M+dgZXkiYkbTgMzcj3L+I0ZgASbgJxbiaETsbQXwDvtwCXtwrLrxFKOxLSK6WwEkxuAhfuAttlRIR0T0AJsCZOZSnKjRP4qIrswswOU4jraIGNsK4CaeYRXa8QabsQRHcDgiyl7TGZRoi/evcahaU2w6GBGTM7MUuKMpQGbOx328wkzsxlrcLZ1Tu2lrRJR3g8sgM09XW0oGE9GNA7U9d2IWPuFxRGxoBjClWtITHa5iPW7hVETc6fvjNtxFmdmGe5iKYRiONRFxvb9pMCCgzBN8wA0sxvsa9dmImD3QqOkXUMWvYDt2YQWWRUQpckNrIMCoWrhrKEUbN5AlDdegen4GX3EOXQUSEaWwDa+/Mqi2FIFizXR8w0aMHKz4P9s0M0vUX3ARl7EjIp40HHKfD3tlkJnF83lYXVvxZES8aFa8VwaZOR7na6eswyJ0RkRny4DMnIQLmIvvtZi3WxH+fbbHosx8WQfXZ2yKiAdDIf7HonpZlBupPSKeD5X4oIddM+Bfn6qdQA6OgWcAAAAASUVORK5CYII="
   },
   {
     "key": "SHORT_SWORD",
-    "de": "Kurzschwert"
+    "de": "Kurzschwert",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAYJJREFUSEu1lL8rRWEYxz/fshj8AyazJBIzg/JjUEJZiERXNtkUUiarElnugumWQbLYLDIYMDIbWW99dfTeOo5zb+eeezzT6e3t8znP933fR/xj2e7Sf/BtTwCzkpYKFdheADaAQWBS0nUhAtv9wAEwFhJ5kDQUfbcssD0K3CaiXpRUbllgexM4TMBvJI3X1nJ3YHsYuEu5JOOSbloS2O4A7oGehOBYUim+lqsD22fAcgJelrSY7Khpge1dYCcBKkk6TntTTQlS4J/AmqSLeg82s8D2EbAeA70CK5Kis6hbmQS2L4G5GKUiaTrLmGkosN0NRJnPxmB7kqK1TFVXEPKeCX9ekxxK2spEDpsaCd6ALuC5JpEUjymTJ1UQzXGgAvQFyo9E0ksmamzTH4HtNuAUeAdWgc5aF0UJ9oHt6H4D58AA8Cjpq9m//zVNw42pAvPh1uSKJHVUhMyjQ41qBPjIE0fdUWG7F3gKG6YkXeWJo5GgHVgCqpJOioL/OoMioXHWNxVtezbD6fTuAAAAAElFTkSuQmCC"
   },
   {
     "key": "WARHAMMER",
-    "de": "Kriegshammer"
+    "de": "Kriegshammer",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAgpJREFUSEu1lDloVWEQhb9jI2liKssspFDSqBBFgpDCoIVFLARFwSIKKoIogsFCUQIuRE1MEQOiuFUKikLAaKGIG6QzgrFTQSsXsAoiHBn4A8/k5f6+xYFb3fvO92bmnBH/uVSrvu0+SVcX0qkaYPsQcBx4KWlTVQDbb4H3wBtJJ2dFbLcDS4EjwHdJu6oFbAeeA2NAA3BO0rjtS8BeIKAPJb2uCGD7KPAFGAduAc3APWA18A44D5wAnki6WbTHsjuwvRaItp8Co0BjEhkAfgIx82uSrudMsuCSbS8D9gMvgD5gQxKbAkaAy2l0I5Kiq7JV6CLbXcAF4DSwInUV4yqtT8CwpKFyhBxgCdAC7AAWxUKB2M/6OWLR3TagX9LX0nc5wGJgBjgGTAA3gOVzxAeBD8AvYFWYQtKr2W+yQSuxZFgxnBOjOpsEJoHNwCngPnAXmAbWSfoW3/wLYDfwAwg7RhYupp00AR+BHiD2cBjoTiMdk7QvC7B9IAk+SnvolXSlyJq2w97xxI2aLrLpytRyW/yg6KCVA9reKGmiCBAh2gk8kNSbC1RFObAdc48gRXUUBSkHnteB7dZ0gzrC85LO5EQqukW243LuASYlralFfJ6LbG8B7iTRbknP6gawHb5+DHSGNSUdrFX8rw5sx6z7gc9Aq6TfdQPYjjTGv4/aKul2PcSzSa4H5A8BPKUZAew9mgAAAABJRU5ErkJggg=="
   },
   {
     "key": "SWORD",
-    "de": "Schwert"
+    "de": "Schwert",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZBJREFUSEu1lb9LVmEYhq+rySWa2pyEhqKhIQIFIRAanISoLWiKoBrCiKJBCxFtKOjX0FhLJegQFP0wa3DzD5CgpX/D4ZY3jh9pfef7vuPxgXd7ua/33M/9PEcOsJIc86D0k1xSX7cOSHIIeAY8UTdbBSQZAtaB9+pscac1QJIjwHfgg3pvx/pWAEmOAl+BT+rtv/u6b0CSYeBjAag394ZmX4AkI8Vv4Jt643+JbAxIchxYBn6oV7vFvREgySngLfC528sbNznJGeANsKJO9xrUrl+Q5KxaYtepJOOV+Cv1bi/x2jlIsqGe3hFJMlHZ8lyd6Ue8KyDJAvBbfVEuJZmsxBfVuX7F6wBF8KF6MskU8A6YVecHEe9l0RZQsj0K/FIfDCreC3ACWAMW1MdNxOssugzcAi5Ww/QTeARcAV7uTVcd/J+YJhmrVu79snKrRXYBKOepWqa379oFqBq6AnxRz/WtUnPxDyDJYeA8sApcU++0Id7pQZnaqqFLavG9tepYlOS6Wv6lrVajbTrIC7YB49qJO0q+H8UAAAAASUVORK5CYII="
   },
   {
     "key": "AXE",
-    "de": "Axt"
+    "de": "Axt",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAlxJREFUSEuNlU2ITmEUx3//ElnIzmKSlWQawmIahkRNQyFSSiElQj5DE6N8xfgaJgsh2UyD0ohZSGjyVShCiT1qikSsiDo6b899u65773PP5t73Of9zfs95zrnPK0rMzEZL+l6miflUJDCz5cBx4Jikc2bWIGkoljDrLwPcBuaHgA3AWGA4sE/Sr6qgXICZjQB+hiTPAa/mKTAGeAt0SbpSBVIE2A0cDQnWAuMBX0vbJeC0pHdloCJARzh/3/1K4AUwKidRqySvrNDKejARmA5MAbbnZOgEPgGLgB5Jj/IohQAXm9lk4CUwLBN8F9gC9AOucbsInJHkPapbDHAeWJ9J/huYBmwCNmZ8X4Czkg4k6zFAK9AI7AxPj9sMfAMu5xzJK2ABMAAckTQQA3jZE4DDQDMwFdgFvC/oqn83M4D9wd9S1uRZwONUIm/6D6AJuJcD6PHjAbzZDUCvpNVlgD5gRUjUIelkktTMHgKzU5DX4fdgqNRdbZIGi76DttQuH0iam96xmfnY+o7dfKLWAdeAlrB2Q9JSfy8CXAdqAj9TSc8ygEnAG+ACsC00dV7QfPApk/Q1F2Bmi4GbQXwwPXIZSBdwFTgELEn5mtLXxz8VmNlIwM/XJ+a/o8kAtgInAL8YE2uW5NdK3bIAH8e9wbtQ0q2caaktmVkvsCr4XbdG0uesvg4wM58K371bv6RlRckDoBtoB/za7pb0J0+fBtwJAa6bKelJBNAuySeo1GoAM9sBnArKPklJ6bH4qD8B3AfmBPU4SR+jkRUFWYD/we+pGFtJVnrZVcoQEf0FkujBTHZ3e/MAAAAASUVORK5CYII="
   },
   {
     "key": "BATTLE_STAFF",
-    "de": "Kampfstab"
+    "de": "Kampfstab",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAkhJREFUSEu1lE2ITnEUxn/PkihKxMpCKcJCUlYUqUFqypSlMIqFYiSRz9LUxEZKvvJVypQFRSGxGF/ZCTWS2IgsWGDn8Ez/d/q/d+773jszOXV7b+8953nOec6H+M+mKvyIuC5pY5Vfq+91CG4APyVtGgtJHYLDwEWgB1gNTAeeALf8SPrcjniYICIM9NiPpD+NoIiYB7xuAfIjke+X9LvMp6mCiFgLnAJ+AU+Bg8A9YH4W/Ch7X57e7XtA0sMiyQiJImIycBkYBL4AJ1PQN2CbpJtZdQuBTmArMAvoktSfk7TsQUQsAI4B61NAt6RzZTJExEyTA4eKJG2bHBEfgNkGlVR3IEziSs8OxbWagIiYBnwEJtYlsF9E7AR6JU0oJYiIFcB24D7QDSxOSYzQt01yHcAWSZ35mK4BVqVmOfZTAtidfvsldaUs+4CVwBTgPDAgKZ8uV7JD0umqHiwFnjUydR/SKN8uZH9CkhexySKip07jvLHrUqTl812ydLkNSppbJlkpgbdX0pskh5evkfHm1BP3KLdXkrwTI6xs0XwafOC8MO8Bg9q8tVeBC0CT3sA+Sb21CFLWxx0E+D553PZmwdZ6ANgFLAGOSLpUBu7/yip4mSR5DtwFrgBzgGUJ5IGJJZmk0orHzuBngKnA1zSyrsYbbd8OSW8rUTOHfA+s+wzAK34NeAcsStrfSVJYslHZEEFEGHxDFvndRwtw9ntMImnU4MM9iIgopOUJmgS8GCtwA69RQZHA349K8mUcl1Vu8rjQ/wX/BXbcworQo7ZrAAAAAElFTkSuQmCC"
   },
   {
     "key": "BROAD_SWORD",
-    "de": "Breitschwert"
+    "de": "Breitschwert",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAYNJREFUSEu1lCFLQ2EUhp8XRO3iH5iIoMHgH9C8ZHBgEiwGg82q5qFg0GAxCm6CyWKY0WLUbPNPCK8cuHd83m3ee7f5tbHteb7zvecc8Y/HdkPT5NveBtaBVaABHExNYPsUOEku/AmsTEVQgHeAHeBJUnNiQQHeyuAhaEs6nkjwB7wjKWSMLagCH1tgO8KMUOOkz9K/eR527QrqwEdWYHtG0ndxRurChwpsLwBdSVupYBz4gMD2EnAPvAIvkqKnqRrosK3wKwPbMeIh6GZT2QqJ7U2gVxZoqSC7bSqZB/aAN6CZAAa6ZdROG9pFSSVXwF22vB6BeLLFfIiqLMqRbWq7lwYdn4EzSS9VwKVzkHXNl6Qb2xvAuaTIotYZ9UT56n0HZoFl4Ai4zKrIp7hUNiBIWjLg0UUfSSYPwDOwK+mwlJ4vO9uLQPzB2Y7pw3NIIlkD9iXd1hFE78cOjzMAL0iaktpV4P1JLkzqddXyq0j6Gdi+AObSFVEFUPab2uu6DFj8/gfZtK9rfegjpQAAAABJRU5ErkJggg=="
   },
   {
     "key": "BELT",
-    "de": "Gürtel"
+    "de": "Gürtel",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAaFJREFUSEvtlDFIllEUhp93zgoEhYQaUnBwcBKkhAoaItDNlgp0cnNwSadsaYgaGiJoiKCtlkSiUUEqSloUhAIXB10LGoVXjtwbt+/n7/u/4R8CD9zhu5z7Pve859xPdDnUZX1OALUON7LI9hDQC3yX9KtWHdr3wPZFYAKYAkaBEC/jIEDAR+AbsCVptwptqcD2DDAHjHdyw0rOG+CxpM28/wdgexKYB64Xh14A28A+sJdWWHMhrfPAOeA2MJLOHQJPJC3G9zHA9jQQ9ByrwANJUXpt2D4DLAD3i+RHku5lQIgHJMeApPC4UdjeSH3L5/oz4D1wM+3+kDTcSDkl216uVDGSAS+B2UJ0VtKrJhDbfcA74FI691vS6Qx4CCxVBNfTd+x/bgN7C+wAV4Ax4FSR90nS5XKKqn3IuTEdzyRdKyFpMKJvASibG2k/gRuSvvz1Dmw/B+4APYVYjOLrmCpgrVJJrqAEROVPJYVdrS/Z9iBwN5V9FTgLrNRUEBZ9BT5IytYe36Wjf5Ftt+uBpFv/GoaOAE2mqZp7Aqh17/+36AiIw3dS4kUCgQAAAABJRU5ErkJggg=="
   },
   {
     "key": "CHAIN_MAIL",
-    "de": "Kettenhemd"
+    "de": "Kettenhemd",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAApJJREFUSEvV1VvIpXMUx/HPDzWYplBI0WRcTO+QG9LcCEmS0xUzSZGEIpoccqEQY+QQynBDyYWYccypQW4k5AaTIjlMKRO5cIoZzSytt2drt2e/B1Nz4X/zr2c/e33X+q3fWk/s45N9HN+CgKo6PMlP0xKpqoOxO8lfcyU6J6CqTsUjOBTnJfl8PEhVHYYnsBp34/EkNQnaA1BVR+MhHD/ct+JYPI838AtOxxU4AHcO767EuiTvj0P+BVTVgbgFl+PeIbtr8SIacjGOGP68HduwJknfquqkoeIfcNPo+Sygqs7ERjyH+5L8MTx/tmFJPpmQ57ROJsm5k5JU1Rrcjk1J7hgB3sQLSVrT2VNVB/Wd5M8pQVqaM5K8PQFegodxG77CzAhwHBoyk2RXVZ2C65NcWlXLkvw2B6QDbUiyo6rWDnK+hk+xPcmD4z14AN8m2VhVhwy6n4Cnk2waqlo+pvlR2Iwjcd0g8Sq0SV7HiUn+Hgcsw8fo7K/qRuHnAfQWdg6NnUH7vqv+Ht/hR3TfWv8NeDLJO7MST2jYDrofLw863jXYcx26oZcMWZ89uOpKfIEVuBo3Y2uSC0dxp83ByiRfDpI8M1jvHpyF/bAF5+Nk3IB2VE97VdVSLE3SFc2eeVdFVb2Cl9De3oH98RiuaaNhPY7BqiS/T1sXCwFax8/w6zxLsWVdnaSHb4+zEOBDvIep2Q3RLmv5kny9N4CtuBG9Bnbjo4kgF/XAYW2SrvQ/V7AtyfKq6h21qwdnNOU94VX11OCuC5J8sDeAb5KsGFbzzlEjq6oHqR3UVfUi3Dy5Nhbrov7QPDols5bm1WHgzhkWYs/O4iWqqjbAu/O4Z/yn9aPJnXx/wU/mIgFzvvb/B/wDtmr9LXiAYZsAAAAASUVORK5CYII="
   },
   {
     "key": "TOMBGUARDIANSTONES",
-    "de": "Grabwächtersteine"
+    "de": "Grabwächtersteine",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAw1JREFUSEuNlV+IllUQxn+PFVKUhUiWF9KFF6aLeLEWBJqlqNFmRUaopNRFUPQHUfGmcDdUUEFzBVERW1pYKUk3LURK6kbwzy6htKbQiiAEepNdrW3IyPMx7+67r9/u58C5OOfMmefMzDMzYgyJiGZJPWPpNLrTaAoRsQj4EXgI+BbolPRTI4PV+7oAEfEc8APwVB2DJ4DvE3CwEeA9ABHxNvA+sKT0uA24DNwGXgTmA7MBg3l1S7peD2wEQBp/BzgHbAX6gI8l/VZ9HBGfAO2l8xqYpN1l3SGANP4dcBNoSZCXCuMRsRp4PO//cvIj4gng1/SmsPuhpL3FpgwQJeTJwA3gPUkdEfEBsA94GXgQ2An8USQ+Iv4FJuT7fyRNrAdwEjBzLMsAx93KcyPiWeCSJEWEf+wcWJzkV4AHgE3WBxYDn0vabIWyB+uA7fnwK2Ac8ClwEPgIWA58DTgfBYDVrwFLM2fO2zbALHxE0kAZwKz4PQEuAhuBo7k/A6wFngReS5aVc3kAGA/0A48C/my7pM+qLCrnwQm8VWGPDXUCA8DruZpSZ0d682qGycdTqwCngRfywfMZjodLIPuBp/O3XcChZJyN/w38WfKuX9K0KkBrhsY21wPzMiQFRo22EVF4esUgktoiwhR3kRayUlJXFcA0PJUaP2cv2lUJUzXJvm6T1BoRprIpbcbNHMEibyLCHP+/ZNBKruayHEvWjDhMCtsDe7JCksM3TNNCOyIuALNyPyVjO2QsDX0JfFFC6JPUFBGm7x5JM4q7es3OITH/LauADUDN3ZRuVzhgtix0YiWZ+47AFqBH0pGxAFzFh1PhPDAH6ADeAh7L87PAGqBX0mBEmFn+2DOSXGTDHlfi61+4mNyHHAL3G//Og+Z4NsA3spW4DtwqXJTNaaelOpRGGzguJrcIc706dH4BzDCD/gcY0GB3JJVbSA1zNACH5RtgetXDyv4qYMDakuRmN0JGncmZNAO4NjzFXHT1Rmgv8OZ9TbQGv3V+JgELSss18q4kz4O6MqYHjQDv5/4uAmcFQlqfgJYAAAAASUVORK5CYII="
   },
   {
     "key": "CRYSTALSTARTPENDANT",
-    "de": "Kristallstern-Anhänger"
+    "de": "Kristallstern-Anhänger",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAo5JREFUSEut1V3I3nMcx/HXZ5inaawRsokDRbSiEXZgjkgtmoMZrS3yWJoaY6Q8TqQ8ptRk05Q1R+xIDrdM5oBiBzjxUIRiYk389F2/u27X7uu+rrvte3LVv//1fX8fPt/PP9BaW4BgNvYl+bGezzRaawsrHY7F70l+qqQFuBVX4FS8k2TrTJP3PPfhwp7n5SQfTACOx704GTdjFn7B5Un+nA7WWjsBOzEfB6pA1AReStIOAiZHa+1pfIuLsCPJjhGAa3EDPsY5SR6e/P5UgHPxWm9zHy7FJ7gqyT99FEfhQ1zZqz8FP+CeJN9MCxjoZjvew+1Yi/34t4uhingFNya5fliXh3QwAFiMt3EcfsbcrrY/UFX/hZuSVIdTxrSAAdibeAvH9KpvG0dpMwFsxvl9PHuSlLRHxkhAl+GGGgU+wgWog3oVz4yS8VBAawclvApPoJb9CFbiNGzB81iCkuXm0vxU7UwJaK3VDdS8/0aN4nPcgkdREt2ITXWIdVD92aoknw1ChgHW43Gswdd9HHt7F5dgGS7GnTi9F7MxSXX7vxgGeBC/YSkq4coku/uVP4RteBdPoap+v/aS5LGZAr7E6iSrW2tnoq60nLKi9vJr/z3rSADq4EpJE3FEAF9UB32Rnw60f1iAWnLt4HvUPp7DCzi7Q77DA7gLL+KkPqISxlhLLsDy7vG7cXVX1Zx+yeVL9XF5Hdd0QFn72IDrulLqgkvn53XF1Ke13PQr3N8N8A48ixVJynlHd1BvtNbOKCvAItydZFdrbR3mJdnQWluBJ1Edrk9SYzskxvGiyyYdWi29Dqx2UZ/VAhdgaIwE9G4mfKksoqyiRvfGMP+ZTBsLMPGH1tqJODpJKWys+A/aIesZ3zGkFQAAAABJRU5ErkJggg=="
   },
   {
     "key": "MAP",
-    "de": "Karte"
+    "de": "Karte",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAuVJREFUSEu1lVuoj2kUxn+P04VDzofSNpkIIYpcqHEaGqc7G3GhRG7YIYdwIUK5mITZjRHKlbDDFQlx5RhhEBpng8kuxxnHtnd6WP/dt//72/Z24a1//+/93vWuZ61nPWt94jsvFftPKfldF6CrpPM+TymNAYYW2SbgEXAHuA38LelTsb9qgJTSD8ABoC/QLAzLJZWllFYA6+pJ9iEwRdKZrN1ngJRSa2ABYJCZRY7WAA+AbZn3h4DxOYD/Ap0lvSmcZTOoBDrUEeUxYDTwHrgL9A9auuXYT5O0Ow9gLzD5KzTYsS8ejUDsfDFwAxgR954DEySdzgMwx+balIwFXgOjMoBLgd/MM/AH0DN+T4GrwMmowZNaNYg6lAGb49BcrgJ+jb05tcMZwEvgd2Aq8B/QERgEzAvbSkmd8jKYA2zNoDuq8ojWDi9HAOeANlHkPwFLcyBwCigBqiQ1yQOYD2zMADyO6JoCFUAfoF+cHwH8fmTs7XwA0CL2zSR99HNWRSuB1UWcT4/o6mmBGscbJC3Ky8A6nx0HZ6NDp32LZ+AKMFjShzwAy89a97IS3gHd6wC4Cez3OAHaARMzdpbtoEKzZSn6C+gRhreA5cF9FsM6d63Wh2PXwWIwoOVbWJ5jruGXGqSUGkXEvlBYL4BJwE7A9fEIcXSl4bxg52wd3LDM3R8luTGrAToD/9RBR1WAFxSSZ+ZJ60YrMOI6XMgC9Aauf2NBHbnvDAcaA8+Aa8BPwDhJh7MAbpxLMU0binNPUveUkuu2yVRKqkgpeVxvk7SjGiDq0CvSbN9QhLD3kLTzVymlWcB2N6ykhTUAAmQIcAJo3kAQ690zawvwC2CqvT8u6edaAAHiSXoQsLK83N1LgsKLwNx471GwK8aD+8c074l55OHXVtLbWt/kACmkamX5K+fMPOOXAWvryc7FdvOVStqXCxAgJZL8na2xUkqWa0ugVfz7uXp6ZozvuxfqBGhgDeo1+x8I3OEZYyahGQAAAABJRU5ErkJggg=="
   },
   {
     "key": "HELMET",
-    "de": "Helm"
+    "de": "Helm",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAwBJREFUSEu1lUuolnUQxn+PRmmWgZcgcREhJC1MUTkoCJp5y0LE1FooXvBK5KVIW5SLTFDD7CAikVF60AJRQRNLtOtCSzA9C5EWIi0su6gLjyTEyHOc9/D5+n5+Cjpw4Hzvf+b/zDzzzPzFfTbdzf0R8RrwMjBW0rU7iW0IEBEPAMOAv4CFwBKgD/A0cEbS+dsB1QWIiEeAN4FFwOPANuBiArwE7AP+B3YDqySdrgKqBIiInsAPwDM1QduBf0sAxfF/wCRJX5dB6gHYcWzJ+XYAdr0M9Jf0R23cLQARMQb4pqLcRgAOaZbkHnVYFcDm5L2MUdWDss9ZSU81AjgIjKtTwT/AUuBFYH8d9Tws6Wpx1lCmdoyIzsCcbLoBRlu2klobzcJNABHxATAAWAG4kq3ACWAt8AKwICt4DPgE6Aq8DxwA3gWspjWSeldWEBFWznDgJ+AsMAP4MgerO+CLlwFTE9D9clN/yxhPepukdXUpioiNzryq/Ih4DvCMfCWprUxPROwEXpfkqW+3KhV9BzwLfJqyO1c4R8QRYBTQJOnn7E+XrNTZm94nJXXElHvQC3giaZgJuLnmd6OkQxHxd1YwFzCYGz4rqTsOvAe0SjK9N1cQEUOAPcB0oC/wC/AGMA94MKs6mXEfAf2AicAxYDVgcFOzF2iRZGHcoCgimoAfgY/z4s8Aj/w7udTcyO9TWQ45nMvvd8CzYcCRwLfA28BR4ENJywuAV4D1gNeEuX00M7UErR5X0Jx0TAAWAwOB2flnKRd0+8yr3HtpfAHwaq5ir2cPke1KvgMOdi8C2GQFATuAHunnmMGA77B5Fga5j5LmFwBu7uSkqOiPs7furY7CvPNNXzu/aX/mavm15pvnaIqkCx0qioi3PIWZrbMfmlP8UAZ+AWzI3jyfMi7udBIjUiD+5rfE78Olskyt/89zkVnfVlFhUyXtSlF0SgrtY/OzOT6FshLYIsmUVg6a32A3uQXoVgMwzSUXvyPCynFChXkXnXLWNd9uBag9vBf/XwdoQfEZO8+QbwAAAABJRU5ErkJggg=="
   },
   {
     "key": "KAI_ROBE",
-    "de": "Kai-Robe"
+    "de": "Kai-Robe",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjdJREFUSEu1lU+IT1EUxz/fBUWKFGJq0ixoZDb+ZWU0I39CFlImK5E0C2GhMWqGLIaSaZIkFlhoxAoLFhMLhWwspkk2lIxQSBY05ehM90137rzfvPd75dat984953zP9/y5V/znpVr+zawdaAAWSrqQp2dmp4HPYT+X9CnVmwJgZjuAQ8DOSPkwsBiwSNYH/In+R4FrwNUYKA+gFXiaRPIWOAXcDfJeYC5wPNG7IWl/LMsDWAucBbYkxuuAW8AiTxswlpO2rcCIpA/Z2SQAMzsBOIMHwJXEwSAwDLjNUuBAcv4MuA2slnRwCoCZNQOvgZnAHI8EaEycNAHvgb850XuduoPNXkl3XGeCgZldj6LyfC8AjiaOzgArgD2J/Bfg6XEWvh4DHZK+pyly2seAecCq0H6xr/nAt5zoLwN+th3oBy5K+jmJQWZkZh5hk6SHZnYP2B3OvOdbov8YZzngLFokefQTq+aguYaZrQFeBW3/9oHzFnawbA1J2pTDalw0LUBqFNi1S7pUy2EqL2LwBFgJfAwt6LOwAdgH9ISOaZRU008RwMYQUXxF+CBmaRvPgqR08kvXwOfgZkTbmXh6zkWyF5JOVqqBmW0OPR3b+720LBIMSuqoCnAEGCgo6EtJ66sC+AB1luiYWZJ+5+kVFXkIaCsB0CzpTRUAL+qSEgDbJD2qAhC353Q4XZLO1wVgZn7nvysRvavcl7SrXoAZ4eXyazvb/pLNBr6G/SX7lvSjLoCSkReq/QPZ1qEZov5wzAAAAABJRU5ErkJggg=="
   },
   {
     "key": "GREEN_TUNIC",
-    "de": "Güne Tunika"
+    "de": "Güne Tunika",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAoRJREFUSEu1lkuIjmEUx3//hRhkIZdCIlm5lJAiZVIuxZRcGinLsbIwLEwWWCjKfcfCUmmKSJkmTZR7piiXBWalUeS6YHZH/+l5vt7v9d1m4dTT9z7nPc/5P+d/Lu8n/rOomf+I6AAuAq+Aj8APYCEwAjwC+iW9q+enJkBErAY6ge3AZS9Jn8pOImIL0AXMAK5Ism2VVAFExHzgDLCtZOfbXpB02PqI2AHsBbaW7AaBQ5LuZX0FICImAbeBdQ1o65R0LSKuArsb2C2T9MLviwCXUriN0nID6AF8eEIDQ+dpjaQ3owARsRx43izh6f0J4EgLtj2STmaAA8DZ0qFfwDngaEl/2jwXdOb7fg27PkmbM0CZ0+MJsLvGwSUp2vEJ5IGktRGxAjCFc5J+RFJbBngIuDQt7yW5zk3dsRoA/cCGQgSDkuzc9mUm2jPAS2BpOjTKXR0A98O+iHC+nDfLa0mLM2BE/ASmpH1HBhgC3AOWPZJMmW9kvg+WcnALcHdnGZK0oADgjl9U8ZUcfQamJ2V7bpSIKJfuAGAangE5B8OSZhcAngCr0r4rR/AbaKsBUKuhylX0XdLUAsBXIO+7M4CHlnn84BsWIrhZouML4D44X6Doj6SJBYBTaTbNAwYaTtOIuAusLzi7ngA8cyoiqa6fZgBOVgCeU3PTchTfAFPh33G+cXHAVYGXKqRqGxFO5krA3WrHFoc+C8iJddXsHzNAREzzwEpd62dHO9qASVwYb1Nx7JTkpvxH6lIUEZuAO4UTj9OzKZuZ1uSk65W0a6wAtcZEPUarurmlHEREH7CxUY5aqaRmVeSh5iHoCemVu9e+/Y0eBp5K6q13kab/KlqNoJ7dX88i6EG3sC4zAAAAAElFTkSuQmCC"
   },
-  {
-    "key": "BELT",
-    "de": "Gürtel"
-  },
+
   {
     "key": "LEATHER_BAG",
-    "de": "Ledertasche"
+    "de": "Ledertasche",
+    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjdJREFUSEutlk2IjlEUx3//hY+ysEDIR2zNWhobJinELCbTJIXFFEnEUBYyJAslmSQpSpREWFBEGAvF7BQZKxH5LgtSNkeHe6fr9tzb8Lp1eu773Hvu75x7Pp5X/MUws8Vxu6TB0agq3WRms4BXwPsg7+Jc0i4zs7C/A1gKTAWmhafPXdZIujJiSAZYCDxoskySMkA/MOJRorNF0vESoAe40CLgoKQ9JUAfcLhFwDlJ60qAo8C2FgEPJbWXAJeBrhYBnyVNLgE2AB68OTlklEF+AQxIGmgExJdmth3YAcxM8r6URT+AW8AZ4DrQntbIH3Xgh5nZo6BwD3gMrAJWSlqdpWkvcBe4A8wFuoOslXS76IGZfQfGhw3PAAcOSTqRAXzfcmAZsCC50hWSbtQAn4BJicJ+wEPQb2YeHx/3gUXAa+BUFq9OSddqgJfA7ETJ28JOYAwwNj1MUkfiVVzqknS1BngKzMsAbvm+zNLBLLPico+kizXAEDC/AbAReB7eTwfeFgAe5PM1gGdP2sT8ityDzpC6rnsT8IpNUzeeuV7S2X/x4GN2Rd0FQK+k0zXAE6Atu6Ip2eG/fkq61BDkTZJO1gBe7mmr8KC3BWv9+nx46saWkreVrZKO1QAfgCaLvU95oL1TLgkV3ORYn6QjNcBXYEKDplfnZuBbeOZpG1V2SzpUA8TvbpN1/u4NMKO0COyVdKAG8CLzILv43P8ITExkHPAlEb/S4SDeu4Ylebv5nQgVS/7L0k9PC/QZO9ndAAAAAABJRU5ErkJggg=="
   }
 
 

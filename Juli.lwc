@@ -1,9 +1,13 @@
 {
   "name" : "Juli",
   "character" : {
+	"weaponOne":"AXE",
+	"weaponTwo":"BROAD_SWORD",
+	"isNoelBlond":false,
     "hasBackpack" : true,
     "hasBaseBackpack" : true,
     "baseBackpack" : [ "GREEN_TUNIC", "LEATHER_BAG", "MAP", "KAI_ROBE", "BACKPACK" ],
+	"backpack" : [ "LAUMSPUR_POTION", "LAUMSPUR_POTION", "ROPE", "KAI_BATTLE_CRYSTAL", "FIRESTONE" ],
     "skills" : [ "THOUGHT_RAY", "SIXTH_SENSE", "ARMORY_BATTLE_STAFF", "MIND_OVER_MATTER", "HUNT" ],
     "gold" : {
       "name" : "GOLD",

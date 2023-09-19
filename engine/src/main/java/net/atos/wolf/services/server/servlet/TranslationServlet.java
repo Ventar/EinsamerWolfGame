@@ -52,17 +52,19 @@ public class TranslationServlet extends BaseServlet {
 
             for (String key : data.keys) {
 
-                String translated = translationService.translate(key);
-                String tip = translationService.translateTip(key);
+                Translation t = translationService.translate(key);
 
-                Translation translation = new Translation();
-                translation.key(key);
-                translation.de(translated);
-                translation.tooltip(tip);
+                if (t == null) {
+                    t = new Translation();
+                    t.de(key);
+                    t.tooltip(key);
+                    t.key(key);
+                    t.png("");
+                }
 
-                translations.add(translation);
-
+                translations.add(t);
             }
+
             responseData.translations = translations;
 
             response.setContentType("application/json");

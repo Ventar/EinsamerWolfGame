@@ -14,4 +14,5 @@ public class Translation {
     private String key;
     private String de;
     private String tooltip;
+    private String png;
 }
