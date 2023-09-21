@@ -29,11 +29,11 @@
     },
     "endurance" : {
       "name" : "ENDURANCE",
-      "value" : 29,
+      "value" : 27,
       "maxValue" : 29,
       "baseValue" : 20
     },
     "numberOfSkills" : 5
   },
-  "sectionID" : 256
+  "sectionID" : 25
 }

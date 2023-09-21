@@ -6,7 +6,7 @@ import net.atos.wolf.services.session.GameSession;
 import net.atos.wolf.services.action.*;
 import net.atos.wolf.services.battle.BattleService;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @ActionHandler(ActionType.BATTLE)
@@ -21,44 +21,95 @@ public class BattleHandler extends AbstractActionHandler {
 
         BattleLogEntry entry = new BattleLogEntry();
         entry.battleRound(session.battleRounds());
-        session.battleLog().add(entry);
+        session.battleLog().add(0, entry);
 
-        BattleService.BattleStatus battleStatus = battleService.executeBattleRound(session, action.battle().enemy().get(0), entry);
-        session.battleRounds(session.battleRounds() + 1);
+        Enemy enemy = nextEnemy(action);
 
-        if (battleStatus.equals(BattleService.BattleStatus.TIE)) {
-            action.text("Führe den Kampf fort...");
-            session.modifiedAnswerOptions().clear();
-            session.modifiedAnswerOptions().add(action);
-            return;
+        BattleService.BattleStatus battleStatus = battleService.executeBattleRound(session, enemy, entry);
+
+        if (battleStatus == BattleService.BattleStatus.TIE) {
+            battleContinue(session, action);
+        } else if (battleStatus == BattleService.BattleStatus.ENEMY_DIED) {
+            if (nextEnemy(action) != null) {
+                battleContinue(session, action);
+            } else {
+                battleWon(session, action);
+            }
+        } else {
+            battleLoose(session, action);
         }
 
-        if (battleStatus.equals(BattleService.BattleStatus.ENEMY_DIED)) {
-            for (BattleRoundTarget brt : action.battle().targetSectionBattleRound()) {
-                if (session.battleRounds() >= brt.min() && session.battleRounds() <= brt.max()) {
+    }
 
-                    // reset session for next battle
-                    session.battleRounds(1);
-                    session.battleLog().clear();
-                   // session.battleLog().add(new BattleLogEntry("Ein neuer Kampf startet..."));
-
-                    // add new action to continue the battle
-                    Action changeSection = new Action(ActionType.CHANGE_SECTION, "Du hast den Kampf Gewonnen, gehe weiter...");
-                    changeSection.targetSection(brt.targetSection());
-                    session.modifiedAnswerOptions().clear();
-                    session.modifiedAnswerOptions().add(changeSection);
-                    entry.battleRound(session.battleRounds());
-
-                    //session.section(getSection(brt.targetSection()));
-
-
-                    return;
-                }
+    /**
+     * Returns the next enemy from the passed action that has an endurance value higher than zero.
+     *
+     * @param action action with the list of enemies to filter
+     * @return the next enemy that matches the described criteria, if
+     * no enemy matches the criteria {@code  null} is returned
+     */
+    public Enemy nextEnemy(Action action) {
+        for (Enemy enemy : action.battle().enemy()) {
+            if (enemy.endurance() > 0) {
+                return enemy;
             }
         }
 
-        throw new RuntimeException("YOU DIED !!!!");
+        return null;
+    }
 
+    /**
+     * This method modifies the game session in a way, that the player sees only
+     * a single action that allows him to proceed to the next section.
+     *
+     * @param session the session
+     * @param action  the current action
+     */
+    public void battleWon(GameSession session, Action action) {
+        for (BattleRoundTarget brt : action.battle().targetSectionBattleRound()) {
+            if (session.battleRounds() >= brt.min() && session.battleRounds() <= brt.max()) {
+
+                session.battleRounds(1);
+                session.battleLog().clear();
+
+                // add new action to continue the battle
+                Action changeSection = new Action(ActionType.CHANGE_SECTION, "Du hast den Kampf gewonnen, gehe weiter...");
+                changeSection.targetSection(brt.targetSection());
+                session.modifiedAnswerOptions().clear();
+                session.modifiedAnswerOptions().add(changeSection);
+
+                return;
+            }
+        }
+    }
+
+    /**
+     * Modifies the game session so that the player stays in battle and proceeds with the next battle round
+     *
+     * @param session the session
+     * @param action  the current action
+     */
+    public void battleContinue(GameSession session, Action action) {
+        action.text("Führe den Kampf fort...");
+        session.modifiedAnswerOptions().clear();
+        session.modifiedAnswerOptions().add(action);
+    }
+
+    /**
+     * Player has lost all endurance...GAME OVER...YOU DIED...dark souls...you know...
+     *
+     * @param session the session
+     * @param action  the current action
+     */
+    public void battleLoose(GameSession session, Action action) {
+        session.battleRounds(1);
+        session.battleLog().clear();
+
+        // add new action to continue the battle
+        Action changeSection = new Action(ActionType.CHANGE_SECTION, "YOU DIED");
+        changeSection.targetSection(4004);
+        session.modifiedAnswerOptions().clear();
+        session.modifiedAnswerOptions().add(changeSection);
     }
 
 }

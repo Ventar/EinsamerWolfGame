@@ -191,6 +191,8 @@ public class BattleService {
 
         LOG.debug("Results::= [{}]", bv, enemy.endurance(), status);
 
+        gameSession.battleRounds(gameSession.battleRounds() + 1);
+
         return status;
 
     }
