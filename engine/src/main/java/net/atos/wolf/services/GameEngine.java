@@ -5,13 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.services.action.Action;
 import net.atos.wolf.services.action.ActionType;
 import net.atos.wolf.services.action.IActionHandler;
-import net.atos.wolf.services.character.Character;
-import net.atos.wolf.services.character.CharacterService;
 import net.atos.wolf.services.common.ServiceUtilities;
 import net.atos.wolf.services.section.SectionService;
 import net.atos.wolf.services.session.GameSession;
-import net.atos.wolf.services.translation.TranslationService;
-import net.atos.wolf.services.ui.UIService;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -20,12 +16,6 @@ import java.util.Map;
 
 @Slf4j
 public class GameEngine {
-
-
-    /**
-     * Service to manage the character
-     */
-    private CharacterService characterService = new CharacterService();
 
     /**
      * A map with all available action handlers that can be used by the engine. Has to be initialized by calling the {@link ServiceUtilities#buildActionHandler(SectionService)}

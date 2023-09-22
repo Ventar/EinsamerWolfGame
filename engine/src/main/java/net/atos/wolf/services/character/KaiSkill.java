@@ -1,8 +1,9 @@
 package net.atos.wolf.services.character;
 
+import lombok.Getter;
+
 public enum KaiSkill {
-
-
+    
     CAMOUFLAGE,
     HUNT,
     SIXTH_SENSE,
@@ -19,10 +20,21 @@ public enum KaiSkill {
     ARMORY_BATTLE_STAFF,
     ARMORY_BROAD_SWORD,
     MENTAL_DEFENCE,
-    THOUGHT_RAY,
+    THOUGHT_RAY(4),
     ANIMAL_UNDERSTANDING,
     MIND_OVER_MATTER,
-    RAGE,
-
-
+    RAGE;
+    
+    @Getter
+    private int addBattleStrength = 0;
+    
+    KaiSkill() {
+    
+    }
+    
+    KaiSkill(int battleStrength) {
+        this.addBattleStrength = battleStrength;
+    }
+    
+    
 }

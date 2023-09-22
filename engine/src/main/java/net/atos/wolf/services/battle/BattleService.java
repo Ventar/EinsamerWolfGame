@@ -73,7 +73,7 @@ public class BattleService {
         if (gameSession.character().hasSkill(KaiSkill.THOUGHT_RAY)) {
             if (!enemy.thoughRayResistance()) {
                 LOG.trace("Character uses kai skill  thought ray");
-                battleStrength = battleStrength + 2;
+                battleStrength = battleStrength + KaiSkill.THOUGHT_RAY.addBattleStrength();
                 entry.characterUsesThoughtRay(true);
             } else {
                 LOG.trace("Character uses kai skill  thought ray but enemy has thought resistance...");

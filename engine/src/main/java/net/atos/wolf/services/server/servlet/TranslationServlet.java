@@ -46,8 +46,7 @@ public class TranslationServlet extends BaseServlet {
             TranslationServlet.RequestData data = JsonUtils.MAPPER.readValue(request.getReader(), TranslationServlet.RequestData.class);
             LOG.debug("Received translation servlet request with data: {}", data);
             TranslationServlet.ResponseData responseData = new TranslationServlet.ResponseData();
-
-
+            
             List<Translation> translations = new ArrayList<>();
 
             for (String key : data.keys) {

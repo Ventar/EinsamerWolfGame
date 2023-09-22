@@ -176,6 +176,32 @@
     ]
   },
   {
+    "sectionNumber": 38,
+    "text": "<p>Verborgen in der Wand der Kammer findest du eine Geheimtür, die sich öffnet, als du auf eine der Wandfliesen drückst. Nach kurzem Zögern betrittst du den engen Gang dahinter. Als du im folgst, stößt du auf ein Bücherregal, das in die Wand hinein gehauen wurde und eine Reihe von Geheimdokumenten enthält. Sie scheinen dem Hohepriester zu gehören und sind allesamt in einer Geheimschrift verfasst, die du nicht lesen kannst. Als du dich daran machst, sie zu vernichten, entdeckst du eingerollt in einem der Pergamente einen Laumspur-Trank. <span class='text-success'><i>(Dieser Heiltrank gibt dir nach einem Kampf 4 AUSDAUERPUNKTE zurück. Er reicht für eine Anwendung.)</i></span></p><p>Der Geheimgang scheint an einer soliden Steinwand zu enden, aber nach einer eingehenden Untersuchung entdeckst du einen weiteren versteckten Hebel. Als du ihn benutzt, gleitet die Wand lautlos zur Seite und gibt den Weg in einen kleinen, spärlich beleuchteten Raum frei. Drei Ausgänge führen aus dieser höhlenartigen Kammer: Der Ausgang direkt vor dir ist durch eine stabile schwarze Eisenplatte versperrt, aber die zu deiner Linken und Rechten sind offen und unbewacht.</p>",
+    "actions": [
+      {
+        "type": "TAKE_ITEM",
+        "text": "Nimm den Heiltrank",
+        "item": {
+          "id": "LAUMSPUR_POTION",
+          "usable": true,
+          "modifiedAttribute": "ENDURANCE",
+          "modificationValue": 4
+        }
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 422,
+        "text": "Nimm den linken Ausgang"
+      },
+      {
+        "type": "CHANGE_SECTION",
+        "targetSection": 330,
+        "text": "Nimm den rechten Ausgang"
+      }
+    ]
+  },
+  {
     "sectionNumber": 44,
     "text": "<p>Du bist dem Waldpfad etwa drei Meilen weit gefolgt, als du in der Ferne die unverkennbaren Umrisse von Giak ausmachst.</p><p> Sie stehen in einer Gruppe mitten auf dem Weg und scheinen dich noch nicht bemerkt zu haben.</p><p> Hoch über den Bäumen hörst du die Schreie von Kraan, die westwärts ziehen.</p><p> Sie haben diese Giak gerade auf dem Waldweg abgesetzt und kehren nun zu den Bergen zurück, um einen weiteren Trupp feindlicher Späher abzuholen.</p>",
     "actions": [
@@ -484,7 +510,9 @@
         "type": "CHANGE_SECTION",
         "targetSection": 544,
         "text": "Lege Feuer",
-        "item": "CINDER"
+        "item": {
+          "id": "CINDER"
+        }
       },
       {
         "type": "CHANGE_SECTION",
@@ -753,7 +781,9 @@
         "type": "CHANGE_SECTION",
         "targetSection": 115,
         "text": "Benutze das Seil",
-        "item": "ROPE"
+        "item": {
+          "id": "ROPE"
+        }
       }
     ]
   },

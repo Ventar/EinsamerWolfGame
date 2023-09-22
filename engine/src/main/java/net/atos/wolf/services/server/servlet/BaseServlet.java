@@ -12,16 +12,14 @@ import net.atos.wolf.services.section.SectionService;
 @Getter
 @Setter
 public class BaseServlet extends HttpServlet {
-
-
-
+    
     protected SessionService sessionService;
-
+    
     protected GameEngine engine;
-
+    
     protected SectionService sectionService;
-
-    public BaseServlet(SessionService service, GameEngine engine, SectionService sectionService){
+    
+    public BaseServlet(SessionService service, GameEngine engine, SectionService sectionService) {
         this.sessionService = service;
         this.engine = engine;
         this.sectionService = sectionService;
