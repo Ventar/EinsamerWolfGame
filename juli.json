@@ -6,14 +6,8 @@
     "isNoelBlond": false,
     "hasBackpack": true,
     "hasBaseBackpack": true,
-    "baseBackpack": [
-      "GREEN_TUNIC",
-      "LEATHER_BAG",
-      "MAP",
-      "KAI_ROBE",
-      "BACKPACK"
-    ],
-    "backpack": [
+
+    "items": [
       {
         "id": "CINDER"
       },

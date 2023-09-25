@@ -13,13 +13,13 @@ public class GetKaiSkillHandler extends AbstractActionHandler {
 
     @Override
     protected boolean checkExecutable(GameSession session, Action action) {
-        return session.character().getNumberOfSkills() < 5 && !session.character().hasSkill(action.skill());
+        return session.character().skills().size() < 5 && !session.character().skills().contains(action.skill());
     }
 
     @Override
     public void handleAction(GameSession session, Action action) {
         LOG.debug("Add Kai skill ::= [{}] to character", action.skill());
-        session.character().addSkill(action.skill());
+        session.character().skills().add(action.skill());
         session.modifiedAnswerOptions(session.section().actions());
     }
 

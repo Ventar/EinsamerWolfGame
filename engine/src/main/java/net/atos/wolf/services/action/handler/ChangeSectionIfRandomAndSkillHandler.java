@@ -15,7 +15,7 @@ public class ChangeSectionIfRandomAndSkillHandler extends AbstractActionHandler 
 
         int rdm = generate();
 
-        if (session.character().hasSkill(action.skill())) {
+        if (session.character().skills().contains(action.skill())) {
             rdm = rdm + 1;
             LOG.debug("Character has skill ::= [{}], result is ::= [{}], target section is ::= [{}]", action.skill(), rdm, action.randomSection().get(rdm));
         } else {

@@ -105,6 +105,22 @@
   function currentAttribute(current) {
     return { length: current };
   }
+
+
+/**
+   * @param {int} position
+   */
+  async function dropItem(position) {
+    const res = await fetch("http://" + host + ":8080/item/drop/", {
+      method: "POST",
+      body: JSON.stringify({
+        position: position,
+        id: gameSession.id
+      }),
+    });
+
+    gameSession = await res.json();
+  }
 </script>
 
 <div class="bs-docs-section">
@@ -346,9 +362,9 @@
             </div>
 
             <ul class="list-group list-group-flush">
-              {#if gameSession.character.backpack}
-                {#await translate(gameSession.character.backpack)}
-                  {#each gameSession.character.backpack as item}
+              {#if gameSession.character.items}
+                {#await translate(gameSession.character.items)}
+                  {#each gameSession.character.items as item}
                     {item}<br />
                   {/each}
                 {:then translation}
@@ -357,7 +373,12 @@
                       <span>
                         <img style="margin-right: 10px" src={t.png} alt="icon" />
                         {t.de}
+                       
                       </span>
+                      <button type="button" class="btn btn-secondary"  on:click={dropItem()}>
+                      
+                        <img style="margin-right: 10px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPxJREFUSEvtlTFqAlEQhr+/iDewS8BCEGxzgVwhkHiVlGproVUOESRNLpAcwC4kWOUqvzx5gjxc5y1sup1u2Xn/N/O/3RnRImzfAHeS/mqPqTbR9hp4BEbAO/AmaRudrwLYvgd2hdhW0qwrwAKYl2KSwgLDhCRqewLsC8BK0ksnHWTIK/AMDIEvYCPpozNAhgyAiaTvSPj0vsqiU7LtMXCbniWlLsKoBtieAj9ZcSkpXXwYbQAPwGcPaPTUdm/R9S+utyj8I//NItsXd0GuKI2OmaTfpgqrRkUDJBQ/DsXQm5xQQKrEWwHyPkh2PUW2nBdd3cHZTphe87x05ADOzHgZjdoCRwAAAABJRU5ErkJggg==" alt="icon" />
+                      </button>
                       <InfoPopup tooltip={t.tooltip} title={t.de} />
                     </li>
 
@@ -370,7 +391,7 @@
             -->
                   {/each}
                 {:catch someError}
-                  {#each gameSession.character.baseBackpack as item, i}
+                  {#each gameSession.character.items as item, i}
                     {i}. {item}<br />
                   {/each}
                 {/await}

@@ -12,8 +12,8 @@ public enum ActionType {
     TAKE_BACKPACK,
     BATTLE,
     IF_RANDOM_AND_SKILL,
-    TAKE_ITEM,
-    TAKE_BASE_ITEM
+    TAKE_ITEM
+
 
 
 

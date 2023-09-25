@@ -16,15 +16,15 @@ public class ChangeSectionHandler extends AbstractActionHandler {
             return action.weapon() == session.character().weaponOne() || action.weapon() == session.character().weaponTwo();
         }
         if (action.skill() != null) {
-            return session.character().hasSkill(action.skill());
+            return session.character().skills().contains(action.skill());
         }
         if (action.specialItem() != null) {
-            return session.character().hasSpecialItem(action.specialItem());
+            return session.character().specialItemsList().contains(action.specialItem());
 
         }
 
         if (action.numberOfSkills() != 0) {
-            return session.character().getNumberOfSkills() >= action.numberOfSkills();
+            return session.character().skills().size() >= action.numberOfSkills();
         }
 
         if (action.noOtherOption()) {
@@ -32,7 +32,7 @@ public class ChangeSectionHandler extends AbstractActionHandler {
         }
 
         if (action.item() != null) {
-            return session.character().hasItem(action.item());
+            return session.character().items().contains(action.item());
         }
 
         return true;

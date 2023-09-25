@@ -1246,23 +1246,9 @@
     "text": "Hole dir nun deine Basisausrüstung ab, um dein Abenteuer zu beginnen...",
     "actions": [
       {
-        "type": "TAKE_BASE_ITEM",
-        "text": "Nimm deine Basisausrüstung",
-        "baseItems": "GREEN_TUNIC",
-        "baseItems": "LEATHER_BAG",
-        "baseItems": "MAP",
-        "baseItems": "KAI_ROBE",
-        "baseItems": "BACKPACK"
-      },
-      {
-        "type": "INITIALIZE_ATTRIBUTE",
-        "attribute": "GOLD",
-        "text": "Erhalte dein Gold"
-      },
-      {
-        "type": "CHANGE_SECTION",
-        "targetSection": 1,
-        "text": "Weiter"
+        "type": "GET_INITIAL_ITEMS",
+        "text": "Starte dein Abenteuer",
+        "targetSection": 1
       }
     ]
   },

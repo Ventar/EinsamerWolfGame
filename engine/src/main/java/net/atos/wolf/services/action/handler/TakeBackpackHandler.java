@@ -12,7 +12,7 @@ public class TakeBackpackHandler extends AbstractActionHandler {
     @Override
     public void handleAction(GameSession session, Action action) {
 
-        session.character().addBackpack();
+        session.character().hasBackpack(true);
 
         session.modifiedAnswerOptions(session.section().actions());
         session.modifiedAnswerOptions().remove(action);

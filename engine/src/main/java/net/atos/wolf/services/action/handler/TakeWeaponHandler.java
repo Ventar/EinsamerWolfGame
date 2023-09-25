@@ -13,9 +13,9 @@ public class TakeWeaponHandler extends AbstractActionHandler {
     public void handleAction(GameSession session, Action action) {
 
         if (action.hand() == 1) {
-            session.character().setWeaponOne(action.weapon());
+            session.character().weaponOne(action.weapon());
         } else {
-            session.character().setWeaponTwo(action.weapon());
+            session.character().weaponTwo(action.weapon());
         }
 
         session.modifiedAnswerOptions(session.section().actions());

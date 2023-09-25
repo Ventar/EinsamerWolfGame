@@ -53,7 +53,7 @@ public class BattleService {
      * @return
      */
     private boolean checkApplyWeaponSkill(Character character, KaiSkill skill, Weapon weapon) {
-        return character.hasSkill(skill) && (character.weaponOne() == weapon || character.weaponTwo() == weapon);
+        return character.skills().contains(skill) && (character.weaponOne() == weapon || character.weaponTwo() == weapon);
     }
 
     /**
@@ -70,7 +70,7 @@ public class BattleService {
         boolean applyWeaponSkill = false;
 
 
-        if (gameSession.character().hasSkill(KaiSkill.THOUGHT_RAY)) {
+        if (gameSession.character().skills().contains(KaiSkill.THOUGHT_RAY)) {
             if (!enemy.thoughRayResistance()) {
                 LOG.trace("Character uses kai skill  thought ray");
                 battleStrength = battleStrength + KaiSkill.THOUGHT_RAY.addBattleStrength();
