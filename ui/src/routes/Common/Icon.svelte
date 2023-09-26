@@ -28,5 +28,4 @@
             <img src={img} alt={img} style="margin-right: 5px;" />{text}
         {/if}
     </div>
-{/if
-}
+{/if}

@@ -6,12 +6,10 @@ import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.services.GameEngine;
 import net.atos.wolf.services.JsonUtils;
+import net.atos.wolf.services.character.Item;
 import net.atos.wolf.services.section.SectionService;
+import net.atos.wolf.services.session.GameSession;
 import net.atos.wolf.services.session.SessionService;
-import net.atos.wolf.services.translation.Translation;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Slf4j
 public class ItemUseServlet extends BaseServlet {
@@ -19,7 +17,15 @@ public class ItemUseServlet extends BaseServlet {
 
     @ToString
     public static class ResponseData {
+
         public int value;
+    }
+
+
+    @ToString
+    public static class RequestData {
+        public String id;
+        public int position;
 
     }
 
@@ -27,11 +33,36 @@ public class ItemUseServlet extends BaseServlet {
         super(sessionService, engine, sectionService);
     }
 
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
 
+        try {
+            ItemUseServlet.RequestData data = JsonUtils.MAPPER.readValue(request.getReader(), ItemUseServlet.RequestData.class);
+            LOG.debug("Received game servlet request with data: {}", data);
+            GameSession session = sessionService.getSessionById(data.id);
+            LOG.debug("Current game session: {}", session);
 
+            if (session != null) {
 
+                Item item = session.character().items().remove(data.position);
+                session.character().getAttributeByName(item.modifiedAttribute()).add(item.modificationValue());
 
+                response.setContentType("application/json");
+                response.setCharacterEncoding("UTF-8");
+                response.setStatus(HttpServletResponse.SC_OK);
+                response.getWriter().println(JsonUtils.MAPPER.writeValueAsString(session));
+            } else {
+                response.setContentType("text/plain");
+                response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            }
 
+        } catch (Exception e) {
+            LOG.debug("Exception during post to /section :", e);
+            response.setContentType("text/plain");
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        }
+
+    }
 }
 
 

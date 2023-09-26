@@ -46,6 +46,7 @@ public class HTTPGameServer {
         ItemUseServlet itemUseServlet = new ItemUseServlet(sessionService,engine,sectionService);
         ItemDropServlet itemDropServlet = new ItemDropServlet(sessionService,engine,sectionService);
 
+
         ServletContextHandler context = new ServletContextHandler();
         context.setContextPath("/");
         context.addServlet(InfoServlet.class, "/");
@@ -55,8 +56,8 @@ public class HTTPGameServer {
         context.addServlet(new ServletHolder(loadSessionServlet), "/session/load/");
         context.addServlet(new ServletHolder(listGameSessionsServlet), "/session/list/");
         context.addServlet(new ServletHolder(translationServlet), "/translate/");
-        context.addServlet(new ServletHolder(itemUseServlet), "/item/use");
-        context.addServlet(new ServletHolder(itemDropServlet), "/item/drop");
+        context.addServlet(new ServletHolder(itemUseServlet), "/item/use/");
+        context.addServlet(new ServletHolder(itemDropServlet), "/item/drop/");
 
         // allow usage with the svelte app from a different process
         FilterHolder cors = context.addFilter(CrossOriginFilter.class, "/*", EnumSet.of(DispatcherType.REQUEST));

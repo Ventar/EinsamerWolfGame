@@ -30,10 +30,7 @@ public class TranslationServlet extends BaseServlet {
 
     }
 
-    /**
-     * a translater that filters with keywords words and translate them into german etc.
-     */
-    private TranslationService translationService = new TranslationService("/translation.json");
+
 
     public TranslationServlet(SessionService sessionService, GameEngine engine, SectionService sectionService) {
         super(sessionService, engine, sectionService);
@@ -51,7 +48,7 @@ public class TranslationServlet extends BaseServlet {
 
             for (String key : data.keys) {
 
-                Translation t = translationService.translate(key);
+                Translation t = TRANSLATION_SERVICE.translate(key);
 
                 if (t == null) {
                     t = new Translation();

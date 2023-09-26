@@ -1,6 +1,6 @@
 <script>
-    import Character from "./Character.svelte";
-    import Icon from "./Icon.svelte";
+    import Character from "../Character/Character.svelte";
+    import Icon from "../Common/Icon.svelte";
 
     /**
      * @type {any}

@@ -2,7 +2,7 @@
   // @ts-nocheck
 
   import { onMount } from "svelte";
-  import InfoPopup from "./InfoPopup.svelte";
+  import InfoPopup from "./Character/InfoPopup.svelte";
   import { page } from "$app/stores";
   /**
    *

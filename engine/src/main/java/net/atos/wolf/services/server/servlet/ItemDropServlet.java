@@ -6,9 +6,13 @@ import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.services.GameEngine;
 import net.atos.wolf.services.JsonUtils;
+import net.atos.wolf.services.action.Action;
+import net.atos.wolf.services.action.ActionType;
+import net.atos.wolf.services.character.Item;
 import net.atos.wolf.services.section.SectionService;
 import net.atos.wolf.services.session.GameSession;
 import net.atos.wolf.services.session.SessionService;
+import net.atos.wolf.services.translation.TranslationService;
 
 @Slf4j
 public class ItemDropServlet extends BaseServlet {
@@ -37,7 +41,27 @@ public class ItemDropServlet extends BaseServlet {
 
             if (session != null) {
 
-                session.character().items().remove(data.position);
+                Item item = session.character().items().remove(data.position);
+
+
+//                {
+//                    "type": "TAKE_ITEM",
+//                        "text": "Nimm den Heiltrank",
+//                        "item": {
+//                    "id": "LAUMSPUR_POTION",
+//                            "usable": true,
+//                            "modifiedAttribute": "ENDURANCE",
+//                            "modificationValue": 4
+//                }
+
+
+
+                Action pickUpAction = new Action();
+                pickUpAction.type(ActionType.TAKE_ITEM);
+                pickUpAction.text("Hebe den Gegenstand wieder auf (" + TRANSLATION_SERVICE.translate(item.id()).de()  + ")");
+                pickUpAction.item(item);
+
+                session.modifiedAnswerOptions().add(0,pickUpAction);
 
                 response.setContentType("application/json");
                 response.setCharacterEncoding("UTF-8");

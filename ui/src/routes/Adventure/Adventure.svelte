@@ -8,12 +8,7 @@
    * @type {any}
    */
   export let gameSession;
-
-  /**
-   * @type {any}
-   */
-  export let enemy;
-
+  
   /**
    * @type {any}
    */

@@ -8,10 +8,13 @@ import lombok.Setter;
 import net.atos.wolf.services.GameEngine;
 import net.atos.wolf.services.session.SessionService;
 import net.atos.wolf.services.section.SectionService;
+import net.atos.wolf.services.translation.TranslationService;
 
 @Getter
 @Setter
 public class BaseServlet extends HttpServlet {
+
+    protected static TranslationService TRANSLATION_SERVICE = new TranslationService("/translation.json");
     
     protected SessionService sessionService;
     
