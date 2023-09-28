@@ -1,7 +1,6 @@
 package net.atos.wolf;
 
-import net.atos.wolf.services.action.BattleRoundTarget;
-import org.junit.jupiter.api.Assertions;
+import net.atos.wolf.data.BattleRoundTarget;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

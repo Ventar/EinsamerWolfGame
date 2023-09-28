@@ -1,6 +1,6 @@
 package net.atos.wolf;
 
-import net.atos.wolf.services.common.DiceService;
+import net.atos.wolf.service.DiceService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

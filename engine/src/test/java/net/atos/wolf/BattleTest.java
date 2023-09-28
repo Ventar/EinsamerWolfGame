@@ -1,7 +1,7 @@
 package net.atos.wolf;
 
-import net.atos.wolf.services.action.Battle;
-import net.atos.wolf.services.action.Enemy;
+import net.atos.wolf.data.Battle;
+import net.atos.wolf.data.Enemy;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

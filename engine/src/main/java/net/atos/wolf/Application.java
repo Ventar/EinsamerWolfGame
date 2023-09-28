@@ -1,14 +1,16 @@
 package net.atos.wolf;
 
 
-import net.atos.wolf.services.server.HTTPGameServer;
+import net.atos.wolf.service.ServiceRegistry;
+import net.atos.wolf.server.HTTPGameServer;
 
 public class Application {
 
-
     public static void main(String[] args) throws Exception {
-
-        HTTPGameServer jettyServer = new HTTPGameServer();
+        ServiceRegistry registry = new ServiceRegistry();
+        
+        HTTPGameServer jettyServer = new HTTPGameServer(registry);
         jettyServer.start();
     }
+    
 }

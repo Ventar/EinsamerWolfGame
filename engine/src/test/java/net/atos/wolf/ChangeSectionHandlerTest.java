@@ -1,6 +1,6 @@
 //package net.atos.wolf;
 //
-//import net.atos.wolf.services.session.GameSession;
+//import net.atos.wolf.data.GameSession;
 //import org.junit.jupiter.api.Assertions;
 //import org.junit.jupiter.api.Order;
 //import org.junit.jupiter.api.Test;

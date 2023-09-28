@@ -1,6 +1,6 @@
 package net.atos.wolf;
 
-import net.atos.wolf.services.character.Attribute;
+import net.atos.wolf.data.Attribute;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

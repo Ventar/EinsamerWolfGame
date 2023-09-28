@@ -1,11 +1,5 @@
 package net.atos.wolf;
 
-import net.atos.wolf.services.character.*;
-import net.atos.wolf.services.character.Character;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-
 public class CharacterTest {
 
     //

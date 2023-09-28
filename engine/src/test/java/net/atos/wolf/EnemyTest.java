@@ -1,6 +1,6 @@
 package net.atos.wolf;
 
-import net.atos.wolf.services.action.Enemy;
+import net.atos.wolf.data.Enemy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
