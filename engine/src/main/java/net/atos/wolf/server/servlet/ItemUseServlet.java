@@ -6,8 +6,10 @@ import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.data.GameSession;
 import net.atos.wolf.data.Item;
+import net.atos.wolf.server.GameServlet;
 import net.atos.wolf.service.ServiceRegistry;
 
+@GameServlet("/item/use/")
 @Slf4j
 public class ItemUseServlet extends BaseServlet {
 
@@ -24,10 +26,6 @@ public class ItemUseServlet extends BaseServlet {
         public String id;
         public int position;
 
-    }
-
-    public ItemUseServlet(ServiceRegistry registry) {
-        super(registry);
     }
 
     @Override

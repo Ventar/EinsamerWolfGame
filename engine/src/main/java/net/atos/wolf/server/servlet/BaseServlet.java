@@ -11,7 +11,8 @@ public class BaseServlet extends HttpServlet {
     
     protected ServiceRegistry registry;
     
-    public BaseServlet(ServiceRegistry registry) {
+    public void setRegistry(ServiceRegistry registry) {
         this.registry = registry;
     }
+    
 }

@@ -2,16 +2,14 @@ package net.atos.wolf.server.servlet;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import net.atos.wolf.server.GameServlet;
 import net.atos.wolf.service.ServiceRegistry;
 import net.atos.wolf.data.GameSession;
 
 import java.io.IOException;
 
+@GameServlet("/session/")
 public class CreateSessionServlet extends BaseServlet {
-    
-    public CreateSessionServlet(ServiceRegistry registry) {
-        super(registry);
-    }
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

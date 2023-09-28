@@ -7,6 +7,7 @@ import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.data.Action;
 import net.atos.wolf.data.GameSession;
+import net.atos.wolf.server.GameServlet;
 import net.atos.wolf.service.ServiceRegistry;
 
 import java.io.IOException;
@@ -18,7 +19,8 @@ import java.io.IOException;
  * @since 2023-07-18
  */
 @Slf4j
-public class GameServlet extends BaseServlet {
+@GameServlet("/section/")
+public class ExecuteActionServlet extends BaseServlet {
 
     /**
      * Object representing the JSON data send by the client
@@ -33,11 +35,6 @@ public class GameServlet extends BaseServlet {
          * The unique session id on the server that is handled by the client sending this request.
          */
         public String id;
-    }
-
-
-    public GameServlet(ServiceRegistry registry) {
-        super(registry);
     }
 
     @Override

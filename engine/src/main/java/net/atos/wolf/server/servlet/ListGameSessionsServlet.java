@@ -4,11 +4,13 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
+import net.atos.wolf.server.GameServlet;
 import net.atos.wolf.service.ServiceRegistry;
 
 import java.util.List;
 
 @Slf4j
+@GameServlet("/session/list/")
 public class ListGameSessionsServlet extends BaseServlet {
 
     @ToString
@@ -16,9 +18,6 @@ public class ListGameSessionsServlet extends BaseServlet {
         public List<String> names;
     }
 
-    public ListGameSessionsServlet(ServiceRegistry registry) {
-        super(registry);
-    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 

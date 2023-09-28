@@ -31,26 +31,13 @@ public class HTTPGameServer {
     }
     
     private void init() {
-        CreateSessionServlet sessionServlet = new CreateSessionServlet(registry);
-        SaveSessionServlet saveSessionServlet = new SaveSessionServlet(registry);
-        GameServlet gameServlet = new GameServlet(registry);
-        LoadSessionServlet loadSessionServlet = new LoadSessionServlet(registry);
-        ListGameSessionsServlet listGameSessionsServlet = new ListGameSessionsServlet(registry);
-        TranslationServlet translationServlet = new TranslationServlet(registry);
-        ItemUseServlet itemUseServlet = new ItemUseServlet(registry);
-        ItemDropServlet itemDropServlet = new ItemDropServlet(registry);
+        
         
         ServletContextHandler context = new ServletContextHandler();
         context.setContextPath("/");
         context.addServlet(InfoServlet.class, "/");
-        context.addServlet(new ServletHolder(gameServlet), "/section/");
-        context.addServlet(new ServletHolder(sessionServlet), "/session/");
-        context.addServlet(new ServletHolder(saveSessionServlet), "/session/save/");
-        context.addServlet(new ServletHolder(loadSessionServlet), "/session/load/");
-        context.addServlet(new ServletHolder(listGameSessionsServlet), "/session/list/");
-        context.addServlet(new ServletHolder(translationServlet), "/translate/");
-        context.addServlet(new ServletHolder(itemUseServlet), "/item/use/");
-        context.addServlet(new ServletHolder(itemDropServlet), "/item/drop/");
+        
+        ServiceRegistry.registerServlets(registry,context);
         
         // allow usage with the svelte app from a different process
         FilterHolder cors = context.addFilter(CrossOriginFilter.class, "/*", EnumSet.of(DispatcherType.REQUEST));

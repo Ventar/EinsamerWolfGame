@@ -4,12 +4,14 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
+import net.atos.wolf.server.GameServlet;
 import net.atos.wolf.service.ServiceRegistry;
 import net.atos.wolf.data.GameSession;
 
 import java.io.IOException;
 
 @Slf4j
+@GameServlet("/session/load/")
 public class LoadSessionServlet extends BaseServlet {
     
     /**
@@ -20,9 +22,6 @@ public class LoadSessionServlet extends BaseServlet {
 
         public String name;
 
-    }
-    public LoadSessionServlet(ServiceRegistry registry) {
-        super(registry);
     }
     
     @Override

@@ -1,6 +1,7 @@
 package net.atos.wolf.service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.data.Section;
 
@@ -53,20 +54,20 @@ public class SectionService {
      *
      * @param jsonFile the file that contains the sections of the book we want to manage with this service.
      */
-    public SectionService() {
+    public SectionService(ObjectMapper mapper) {
         
         String jsonFile = "/ew1.json";
         
         try {
             
-            sections = ServiceUtilities.OBJECT_MAPPER.readValue(
-                                           // read the JSON file into a list of type Section
-                                           SectionService.class.getResourceAsStream(jsonFile),
-                                           // load the file from classpath
-                                           new TypeReference<List<Section>>() {})                               // tell JACKSON that there is a list in the fiel ([]) and not a single Java  object
-                                                     .stream()
-                                                     .collect(Collectors.toMap(Section::getSectionNumber,
-                                                                               Function.identity()));  // convert the list to a map with the section number as key
+            sections = mapper.readValue(
+                                 // read the JSON file into a list of type Section
+                                 SectionService.class.getResourceAsStream(jsonFile),
+                                 // load the file from classpath
+                                 new TypeReference<List<Section>>() {})                               // tell JACKSON that there is a list in the fiel ([]) and not a single Java  object
+                             .stream()
+                             .collect(Collectors.toMap(Section::getSectionNumber,
+                                                       Function.identity()));  // convert the list to a map with the section number as key
             
         } catch (Exception e) {
             throw new RuntimeException("Could not load " + jsonFile + " file: ", e);

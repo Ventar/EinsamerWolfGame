@@ -3,9 +3,9 @@ package net.atos.wolf.service;
 
 import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.data.Action;
+import net.atos.wolf.data.GameSession;
 import net.atos.wolf.service.gameengine.ActionType;
 import net.atos.wolf.service.gameengine.IActionHandler;
-import net.atos.wolf.data.GameSession;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -17,14 +17,14 @@ public class GameService {
     
     /**
      * A map with all available action handlers that can be used by the engine. Has to be initialized by calling the
-     * {@link ServiceUtilities#buildActionHandler(SectionService)} method which usually happens automatically during
+     * {@link ServiceRegistry#buildActionHandler(ServiceRegistry)} method which usually happens automatically during
      * construction;
      */
     private Map<ActionType, IActionHandler> actionHandler;
     
     
-    public GameService(SectionService sectionService) {
-        actionHandler = ServiceUtilities.buildActionHandler(sectionService);
+    public GameService(ServiceRegistry registry) {
+        actionHandler = ServiceRegistry.buildActionHandler(registry);
     }
     
     /**
@@ -100,7 +100,7 @@ public class GameService {
         
         List<Action> answerOptions = null;
         
-                if (session.modifiedAnswerOptions() == null || session.modifiedAnswerOptions().isEmpty()) {
+        if (session.modifiedAnswerOptions() == null || session.modifiedAnswerOptions().isEmpty()) {
             // we use the actions from the section, i.e. that is the first time the section is handled and it was not modified yet
             LOG.debug("[{}] original actions ::= [{}]", currentSection, session);
             

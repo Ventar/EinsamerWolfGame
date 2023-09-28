@@ -7,10 +7,12 @@ import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.data.Action;
 import net.atos.wolf.data.GameSession;
 import net.atos.wolf.data.Item;
+import net.atos.wolf.server.GameServlet;
 import net.atos.wolf.service.ServiceRegistry;
 import net.atos.wolf.service.gameengine.ActionType;
 
 @Slf4j
+@GameServlet("/item/drop/")
 public class ItemDropServlet extends BaseServlet {
 
     @ToString
@@ -20,10 +22,6 @@ public class ItemDropServlet extends BaseServlet {
 
         public int position;
 
-    }
-
-    public ItemDropServlet(ServiceRegistry registry) {
-        super(registry);
     }
 
     @Override
@@ -38,19 +36,6 @@ public class ItemDropServlet extends BaseServlet {
             if (session != null) {
 
                 Item item = session.character().items().remove(data.position);
-
-
-//                {
-//                    "type": "TAKE_ITEM",
-//                        "text": "Nimm den Heiltrank",
-//                        "item": {
-//                    "id": "LAUMSPUR_POTION",
-//                            "usable": true,
-//                            "modifiedAttribute": "ENDURANCE",
-//                            "modificationValue": 4
-//                }
-
-
 
                 Action pickUpAction = new Action();
                 pickUpAction.type(ActionType.TAKE_ITEM);
