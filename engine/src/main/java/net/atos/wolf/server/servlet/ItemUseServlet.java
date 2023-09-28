@@ -4,12 +4,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
-import net.atos.wolf.service.GameService;
-import net.atos.wolf.services.JsonUtils;
-import net.atos.wolf.data.Item;
-import net.atos.wolf.service.SectionService;
 import net.atos.wolf.data.GameSession;
-import net.atos.wolf.service.SessionService;
+import net.atos.wolf.data.Item;
+import net.atos.wolf.service.ServiceRegistry;
 
 @Slf4j
 public class ItemUseServlet extends BaseServlet {
@@ -29,17 +26,17 @@ public class ItemUseServlet extends BaseServlet {
 
     }
 
-    public ItemUseServlet(SessionService sessionService, GameService engine, SectionService sectionService) {
-        super(sessionService, engine, sectionService);
+    public ItemUseServlet(ServiceRegistry registry) {
+        super(registry);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
 
         try {
-            ItemUseServlet.RequestData data = JsonUtils.MAPPER.readValue(request.getReader(), ItemUseServlet.RequestData.class);
+            ItemUseServlet.RequestData data = registry.jsonMapper().readValue(request.getReader(), ItemUseServlet.RequestData.class);
             LOG.debug("Received game servlet request with data: {}", data);
-            GameSession session = sessionService.getSessionById(data.id);
+            GameSession session = registry.sessionService().getSessionById(data.id);
             LOG.debug("Current game session: {}", session);
 
             if (session != null) {
@@ -50,7 +47,7 @@ public class ItemUseServlet extends BaseServlet {
                 response.setContentType("application/json");
                 response.setCharacterEncoding("UTF-8");
                 response.setStatus(HttpServletResponse.SC_OK);
-                response.getWriter().println(JsonUtils.MAPPER.writeValueAsString(session));
+                response.getWriter().println(registry.jsonMapper().writeValueAsString(session));
             } else {
                 response.setContentType("text/plain");
                 response.setStatus(HttpServletResponse.SC_BAD_REQUEST);

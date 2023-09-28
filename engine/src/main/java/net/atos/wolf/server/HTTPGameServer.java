@@ -32,15 +32,13 @@ public class HTTPGameServer {
     
     private void init() {
         CreateSessionServlet sessionServlet = new CreateSessionServlet(registry);
-        SaveSessionServlet saveSessionServlet = new SaveSessionServlet(sessionService, gameService, sectionService);
-        GameServlet gameServlet = new GameServlet(sessionService, gameService, sectionService);
-        LoadSessionServlet loadSessionServlet = new LoadSessionServlet(sessionService, gameService, sectionService);
-        ListGameSessionsServlet listGameSessionsServlet = new ListGameSessionsServlet(sessionService,
-                                                                                      gameService,
-                                                                                      sectionService);
-        TranslationServlet translationServlet = new TranslationServlet(sessionService, gameService, sectionService);
-        ItemUseServlet itemUseServlet = new ItemUseServlet(sessionService, gameService, sectionService);
-        ItemDropServlet itemDropServlet = new ItemDropServlet(sessionService, gameService, sectionService);
+        SaveSessionServlet saveSessionServlet = new SaveSessionServlet(registry);
+        GameServlet gameServlet = new GameServlet(registry);
+        LoadSessionServlet loadSessionServlet = new LoadSessionServlet(registry);
+        ListGameSessionsServlet listGameSessionsServlet = new ListGameSessionsServlet(registry);
+        TranslationServlet translationServlet = new TranslationServlet(registry);
+        ItemUseServlet itemUseServlet = new ItemUseServlet(registry);
+        ItemDropServlet itemDropServlet = new ItemDropServlet(registry);
         
         ServletContextHandler context = new ServletContextHandler();
         context.setContextPath("/");
@@ -66,7 +64,7 @@ public class HTTPGameServer {
     }
     
     public void start() throws Exception {
-        GameSessionCleanupService gameSessionObserver = new GameSessionCleanupService(sessionService);
+        GameSessionCleanupService gameSessionObserver = new GameSessionCleanupService(registry.sessionService());
         //gameSessionObserver.start();
         server.start();
         server.join();

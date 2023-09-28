@@ -3,6 +3,7 @@ package net.atos.wolf.service;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Getter;
+import net.atos.wolf.data.GameSession;
 
 /**
  * Service registry contains multiple services and allows easy access to all available services of the application.
@@ -34,5 +35,6 @@ public class ServiceRegistry {
         jsonMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
         jsonMapper.setSerializationInclusion(JsonInclude.Include.NON_EMPTY);
     }
+
     
 }

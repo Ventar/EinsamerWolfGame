@@ -4,7 +4,6 @@ import net.atos.wolf.data.Action;
 import net.atos.wolf.service.GameService;
 import net.atos.wolf.data.GameSession;
 import net.atos.wolf.data.Character;
-import net.atos.wolf.services.ui.UIService;
 
 import java.util.List;
 

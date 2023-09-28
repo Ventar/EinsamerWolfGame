@@ -4,11 +4,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
-import net.atos.wolf.service.GameService;
-import net.atos.wolf.services.JsonUtils;
-import net.atos.wolf.service.SectionService;
 import net.atos.wolf.data.GameSession;
-import net.atos.wolf.service.SessionService;
+import net.atos.wolf.service.ServiceRegistry;
 
 import java.io.IOException;
 
@@ -26,8 +23,8 @@ public class SaveSessionServlet extends BaseServlet {
         public String name;
     }
 
-    public SaveSessionServlet(SessionService sessionService, GameService engine, SectionService sectionService) {
-        super(sessionService, engine, sectionService);
+    public SaveSessionServlet(ServiceRegistry registry) {
+        super(registry);
     }
 
     @Override
@@ -36,17 +33,17 @@ public class SaveSessionServlet extends BaseServlet {
 
 
         try {
-            SaveSessionServlet.RequestData data = JsonUtils.MAPPER.readValue(request.getReader(), SaveSessionServlet.RequestData.class);
+            SaveSessionServlet.RequestData data = registry.jsonMapper().readValue(request.getReader(), SaveSessionServlet.RequestData.class);
             LOG.debug("Received save session servlet request with data: {}", data);
 
-            GameSession saved = sessionService.savedGameSession(data.id, data.name);
+            GameSession saved = registry.sessionService().savedGameSession(data.id, data.name);
             LOG.debug("Saved game session ::= [{}]", saved);
 
 
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
             response.setStatus(HttpServletResponse.SC_OK);
-            response.getWriter().println(JsonUtils.MAPPER.writeValueAsString(saved));
+            response.getWriter().println(registry.jsonMapper().writeValueAsString(saved));
 
         } catch (Exception e) {
             LOG.debug("Exception during post to /section :", e);

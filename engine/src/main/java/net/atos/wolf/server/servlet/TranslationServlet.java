@@ -5,11 +5,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
-import net.atos.wolf.service.GameService;
-import net.atos.wolf.services.JsonUtils;
-import net.atos.wolf.service.SectionService;
-import net.atos.wolf.service.SessionService;
 import net.atos.wolf.data.Translation;
+import net.atos.wolf.service.ServiceRegistry;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,20 +23,19 @@ public class TranslationServlet extends BaseServlet {
     @ToString
     public static class ResponseData {
         public List<Translation> translations;
-
     }
 
 
 
-    public TranslationServlet(SessionService sessionService, GameService engine, SectionService sectionService) {
-        super(sessionService, engine, sectionService);
+    public TranslationServlet(ServiceRegistry registry) {
+        super(registry);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
 
         try {
-            TranslationServlet.RequestData data = JsonUtils.MAPPER.readValue(request.getReader(), TranslationServlet.RequestData.class);
+            TranslationServlet.RequestData data = registry.jsonMapper().readValue(request.getReader(), TranslationServlet.RequestData.class);
             LOG.debug("Received translation servlet request with data: {}", data);
             TranslationServlet.ResponseData responseData = new TranslationServlet.ResponseData();
             
@@ -47,7 +43,7 @@ public class TranslationServlet extends BaseServlet {
 
             for (String key : data.keys) {
 
-                Translation t = TRANSLATION_SERVICE.translate(key);
+                Translation t = registry.translation().translate(key);
 
                 if (t == null) {
                     t = new Translation();
@@ -65,7 +61,7 @@ public class TranslationServlet extends BaseServlet {
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
             response.setStatus(HttpServletResponse.SC_OK);
-            response.getWriter().println(JsonUtils.MAPPER.writeValueAsString(responseData));
+            response.getWriter().println(registry.jsonMapper().writeValueAsString(responseData));
 
         } catch (Exception e) {
             LOG.debug("Exception during post to /section :", e);

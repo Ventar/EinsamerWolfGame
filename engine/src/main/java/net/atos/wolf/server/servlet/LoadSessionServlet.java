@@ -4,11 +4,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
-import net.atos.wolf.service.GameService;
-import net.atos.wolf.services.JsonUtils;
-import net.atos.wolf.service.SectionService;
+import net.atos.wolf.service.ServiceRegistry;
 import net.atos.wolf.data.GameSession;
-import net.atos.wolf.service.SessionService;
 
 import java.io.IOException;
 
@@ -20,13 +17,12 @@ public class LoadSessionServlet extends BaseServlet {
      */
     @ToString
     public static class RequestData {
-        
+
         public String name;
-        
+
     }
-    
-    public LoadSessionServlet(SessionService sessionService, GameService engine, SectionService sectionService) {
-        super(sessionService, engine, sectionService);
+    public LoadSessionServlet(ServiceRegistry registry) {
+        super(registry);
     }
     
     @Override
@@ -35,17 +31,17 @@ public class LoadSessionServlet extends BaseServlet {
         
         
         try {
-            LoadSessionServlet.RequestData data = JsonUtils.MAPPER.readValue(request.getReader(),
+            LoadSessionServlet.RequestData data = registry.jsonMapper().readValue(request.getReader(),
                                                                              LoadSessionServlet.RequestData.class);
             LOG.debug("Received load session servlet request with data: {}", data);
             
-            GameSession game = sessionService.loadGameSession(data.name);
-            game.modifiedAnswerOptions(engine.resolveActions(game));
+            GameSession game = registry().sessionService().loadGameSession(data.name);
+            game.modifiedAnswerOptions(registry.gameService().resolveActions(game));
             
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
             response.setStatus(HttpServletResponse.SC_OK);
-            response.getWriter().println(JsonUtils.MAPPER.writeValueAsString(game));
+            response.getWriter().println(registry.jsonMapper().writeValueAsString(game));
             
         } catch (Exception e) {
             LOG.debug("Exception during post to /section :", e);
