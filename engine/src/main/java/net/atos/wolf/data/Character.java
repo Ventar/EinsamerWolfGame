@@ -36,12 +36,12 @@ public class Character {
     /**
      * Checks which weapons have the character
      */
-    private Weapon weaponOne = null;
+    private Item weaponOne = null;
 
     /**
      * Checks which weapons have the character
      */
-    private Weapon weaponTwo = null;
+    private Item weaponTwo = null;
 
     /**
      * Creates a new list for the backpack

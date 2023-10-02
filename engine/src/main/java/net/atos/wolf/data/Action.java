@@ -2,6 +2,7 @@ package net.atos.wolf.data;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.Getter;
 import lombok.Setter;
 import net.atos.wolf.service.gameengine.ActionType;
@@ -21,21 +22,24 @@ public class Action {
 
     private ActionType type;
     private boolean mandatory;
-    private int targetSection;
+    private Integer targetSection;
     private KaiSkill skill;
     private String text;
-    private Weapon weapon;
+    private Item weapon;
+
+    private String weaponId;
     private SpecialItem specialItem;
     private String value;
     private String attribute;
     private Item item;
+    private String itemId;
     private List<Integer> randomSection;
-    private int numberOfSkills;
-    private boolean noOtherOption;
+    private Integer numberOfSkills;
+    private Boolean noOtherOption;
     private Battle battle;
-    private int hand;
+    private Integer hand;
     private BaseItems baseItems;
-    private int battleStrengthModifier;
+    private Integer battleStrengthModifier;
 
     public Action() {
     }
@@ -52,10 +56,12 @@ public class Action {
         this.skill = action.skill;
         this.text = action.text;
         this.weapon = action.weapon;
+        this.weaponId = action.weaponId;
         this.specialItem = action.specialItem;
         this.value = action.value;
         this.attribute = action.attribute;
         this.item = action.item;
+        this.itemId = action.itemId;
         this.baseItems = action.baseItems;
         this.battleStrengthModifier =action.battleStrengthModifier;
         if (action.randomSection != null) {

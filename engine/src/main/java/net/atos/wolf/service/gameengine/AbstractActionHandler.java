@@ -2,9 +2,7 @@ package net.atos.wolf.service.gameengine;
 
 import net.atos.wolf.data.Action;
 import net.atos.wolf.data.Character;
-import net.atos.wolf.service.DiceService;
 import net.atos.wolf.data.Section;
-import net.atos.wolf.service.SectionService;
 import net.atos.wolf.data.GameSession;
 import net.atos.wolf.service.ServiceRegistry;
 
@@ -69,7 +67,7 @@ public abstract class AbstractActionHandler implements IActionHandler {
     }
     
     protected Section getSection(int sectionID) {
-        return registry.sectionService().getSection(sectionID);
+        return registry.bookRepository().getSection(sectionID);
     }
     
     protected int generate() {

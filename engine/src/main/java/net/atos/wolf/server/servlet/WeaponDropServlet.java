@@ -5,13 +5,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
-import net.atos.wolf.data.Action;
-import net.atos.wolf.data.Character;
 import net.atos.wolf.data.GameSession;
-import net.atos.wolf.data.Item;
-import net.atos.wolf.data.Weapon;
 import net.atos.wolf.server.GameServlet;
-import net.atos.wolf.service.gameengine.ActionType;
 
 @Slf4j
 @GameServlet("/weapon/drop/")

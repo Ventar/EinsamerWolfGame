@@ -13,7 +13,8 @@ public class ChangeSectionHandler extends AbstractActionHandler {
     protected boolean checkExecutable(GameSession session, Action action) {
 
         if (action.weapon() != null) {
-            return action.weapon() == session.character().weaponOne() || action.weapon() == session.character().weaponTwo();
+            return (session.character().weaponOne() != null && action.weapon().id().equals(session.character().weaponOne().id())) ||
+                    (session.character().weaponTwo() != null && action.weapon().id().equals(session.character().weaponTwo().id()));
         }
         if (action.skill() != null) {
             return session.character().skills().contains(action.skill());
@@ -23,11 +24,11 @@ public class ChangeSectionHandler extends AbstractActionHandler {
 
         }
 
-        if (action.numberOfSkills() != 0) {
+        if (action.numberOfSkills() != null && action.numberOfSkills() != 0) {
             return session.character().skills().size() >= action.numberOfSkills();
         }
 
-        if (action.noOtherOption()) {
+        if (action.noOtherOption() != null && action.noOtherOption()) {
             return session.modifiedAnswerOptions() != null && session.modifiedAnswerOptions().size() == 0;
         }
 

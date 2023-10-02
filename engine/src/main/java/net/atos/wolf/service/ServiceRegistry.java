@@ -3,6 +3,7 @@ package net.atos.wolf.service;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Getter;
+import net.atos.wolf.repository.BookRepository;
 import net.atos.wolf.server.GameServlet;
 import net.atos.wolf.server.servlet.BaseServlet;
 import net.atos.wolf.service.gameengine.AbstractActionHandler;
@@ -39,13 +40,13 @@ public class ServiceRegistry {
     private TranslationService translation = new TranslationService(jsonMapper, "/translation.json");
     
     @Getter
-    private SectionService sectionService = new SectionService(jsonMapper);
-    
-    @Getter
     private SessionService sessionService = new SessionService(this);
     
     @Getter
     private GameService gameService = new GameService(this);
+
+    @Getter
+    private BookRepository bookRepository = new BookRepository(jsonMapper);
     
     public ServiceRegistry() {
         jsonMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);

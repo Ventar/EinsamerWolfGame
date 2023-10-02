@@ -14,7 +14,7 @@ public class TranslationService {
         
         try {
             List<Translation> translationsList =
-                mapper.readValue(SectionService.class.getResourceAsStream(jsonFile),
+                mapper.readValue(TranslationService.class.getResourceAsStream(jsonFile),
                                              new TypeReference<List<Translation>>() {
                                              });
             

@@ -1,13 +1,8 @@
 package net.atos.wolf.service;
 
 import lombok.extern.slf4j.Slf4j;
-import net.atos.wolf.data.BattleTable;
-import net.atos.wolf.data.GameSession;
-import net.atos.wolf.data.BattleLogEntry;
-import net.atos.wolf.data.Enemy;
+import net.atos.wolf.data.*;
 import net.atos.wolf.data.Character;
-import net.atos.wolf.data.KaiSkill;
-import net.atos.wolf.data.Weapon;
 
 
 /**
@@ -41,14 +36,11 @@ public class BattleService {
 
     /**
      * Checks if the Character has the right WeaponSkill for the current weapon
-     *
-     * @param character
-     * @param skill
-     * @param weapon
-     * @return
      */
-    private boolean checkApplyWeaponSkill(Character character, KaiSkill skill, Weapon weapon) {
-        return character.skills().contains(skill) && (character.weaponOne() == weapon || character.weaponTwo() == weapon);
+    private boolean checkApplyWeaponSkill(Character character, KaiSkill skill, String weaponId) {
+        return character.skills().contains(skill) && (
+                (character.weaponOne() != null && character.weaponOne().id().equals(weaponId)) ||
+                        (character.weaponTwo() != null && character.weaponTwo().id().equals(weaponId)));
     }
 
     /**
@@ -78,16 +70,15 @@ public class BattleService {
             LOG.trace("Character does not have the kai skill thought ray");
         }
 
-
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_AXE, Weapon.AXE);
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_SHORT_SWORD, Weapon.SHORT_SWORD);
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_MACE, Weapon.MACE);
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_BATTLE_STAFF, Weapon.BATTLE_STAFF);
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_DAGGER, Weapon.DAGGER);
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_BROAD_SWORD, Weapon.BROAD_SWORD);
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_SPEAR, Weapon.SPEAR);
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_WARHAMMER, Weapon.WARHAMMER);
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_SWORD, Weapon.SWORD);
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_AXE, "AXE");
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_SHORT_SWORD, "SHORT_SWORD");
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_MACE, "MACE");
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_BATTLE_STAFF, "BATTLE_STAFF");
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_DAGGER, "DAGGER");
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_BROAD_SWORD, "BROAD_SWORD");
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_SPEAR, "SPEAR");
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_WARHAMMER, "WARHAMMER");
+        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_SWORD, "SWORD");
 
 
         if (applyWeaponSkill) {
@@ -160,9 +151,8 @@ public class BattleService {
     }
 
     /**
-     * Executes a single battle round of the game. The result of the execution are recorded in a new
-     * {@link BattleLogEntry} that is added to the passed game session so that the client can display
-     * detailed information about things that happened during the battle round.
+     * Executes a single battle round of the game. The result of the execution are recorded in a new {@link BattleLogEntry} that is added to the passed game
+     * session so that the client can display detailed information about things that happened during the battle round.
      *
      * @param gameSession
      * @param enemy

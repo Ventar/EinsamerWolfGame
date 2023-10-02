@@ -30,7 +30,7 @@ public class SessionService {
         
         GameSession gameSession = new GameSession();
         gameSession.character(new Character());
-        gameSession.section(registry.sectionService().getSection(startSection));
+        gameSession.section(registry.bookRepository().getSection(startSection));
         gameSession.id(UUID.randomUUID().toString());
         gameSession.lastUsed(System.currentTimeMillis());
         
@@ -66,7 +66,7 @@ public class SessionService {
             SavedGameSession loaded = registry.jsonMapper().readValue(new File(name + ".json"), SavedGameSession.class);
             GameSession gameSession = new GameSession();
             gameSession.character(loaded.character());
-            gameSession.section(registry.sectionService().getSection(loaded.sectionID()));
+            gameSession.section(registry.bookRepository().getSection(loaded.sectionID()));
             gameSession.id(UUID.randomUUID().toString());
             gameSession.lastUsed(System.currentTimeMillis());
             
