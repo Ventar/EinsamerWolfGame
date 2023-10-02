@@ -15,3 +15,10 @@
 .accordion-button:not(.collapsed)::after {
   background-image: var(--bs-accordion-btn-icon);
 }
+
+.flexwrap {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  
+}
