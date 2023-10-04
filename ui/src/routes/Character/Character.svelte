@@ -117,22 +117,33 @@
     gameSession = await res.json();
   }
 
-  /*
-  
-   async function useItem(item) {
-    const res = await fetch("http://" + host + ":8080/item/use/", {
+  /**
+   * @param {int} position
+   */
+  async function dropWeapon(weapon) {
+    const res = await fetch("http://" + host + ":8080/weapon/drop/", {
       method: "POST",
       body: JSON.stringify({
+        Weapon: weapon,
         id: gameSession.id,
-        idItem: item,
-        modifiedAttribute: gameSession.character.currentAttribute,
-        modificationValue:  
       }),
     });
 
     gameSession = await res.json();
   }
-*/
+
+  async function useItem(item) {
+    const res = await fetch("http://" + host + ":8080/item/use/", {
+      method: "POST",
+      body: JSON.stringify({
+        id: gameSession.id,
+        position: item,
+        modifiedAttribute: gameSession.character.currentAttribute,
+      }),
+    });
+
+    gameSession = await res.json();
+  }
 </script>
 
 <div class="bs-docs-section">
@@ -306,28 +317,66 @@
         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iaGVpZ2h0OiA0OHB4OyB3aWR0aDogNDhweDsiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdy0xIiBoZWlnaHQ9IjMwMCUiIHdpZHRoPSIzMDAlIiB4PSItMTAwJSIgeT0iLTEwMCUiPjxmZUZsb29kIGZsb29kLWNvbG9yPSJyZ2JhKDE1NSwgMTU1LCAxNTUsIDEpIiByZXN1bHQ9ImZsb29kIj48L2ZlRmxvb2Q+PGZlQ29tcG9zaXRlIGluPSJmbG9vZCIgaW4yPSJTb3VyY2VHcmFwaGljIiBvcGVyYXRvcj0iYXRvcCIgcmVzdWx0PSJjb21wb3NpdGUiPjwvZmVDb21wb3NpdGU+PGZlR2F1c3NpYW5CbHVyIGluPSJjb21wb3NpdGUiIHN0ZERldmlhdGlvbj0iMTAiIHJlc3VsdD0iYmx1ciI+PC9mZUdhdXNzaWFuQmx1cj48ZmVPZmZzZXQgZHg9IjIwIiBkeT0iMjAiIHJlc3VsdD0ib2Zmc2V0Ij48L2ZlT2Zmc2V0PjxmZUNvbXBvc2l0ZSBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJvZmZzZXQiIG9wZXJhdG9yPSJvdmVyIj48L2ZlQ29tcG9zaXRlPjwvZmlsdGVyPjxyYWRpYWxHcmFkaWVudCBpZD0ibG9yYy10cmlwbGUteWluLWdyYWRpZW50LTAiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxNTZkZTIiIHN0b3Atb3BhY2l0eT0iMSI+PC9zdG9wPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzE1NmRlMiIgc3RvcC1vcGFjaXR5PSIxIj48L3N0b3A+PC9yYWRpYWxHcmFkaWVudD48bGluZWFyR3JhZGllbnQgeDE9IjAiIHgyPSIxIiB5MT0iMCIgeTI9IjEiIGlkPSJsb3JjLXRyaXBsZS15aW4tZ3JhZGllbnQtMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk1OTQ5NCIgc3RvcC1vcGFjaXR5PSIxIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiPjwvc3RvcD48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48ZyBjbGFzcz0iIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLDApIiBzdHlsZT0iIj48cGF0aCBkPSJNMjAzLjc1IDIwLjQ3Yy0xLjAxLjAxNi0yLjAyNS4wNTYtMy4wMy4wOTMtNjkuNzkgMi41MS0xMzIuNzcyIDQ5LjM2OC0xNTEuNzgyIDEyMC4zMTItMTEuMDM1IDQxLjE5NiAxMy41NTUgODMuODIgNTQuNzE4IDk0Ljg3NXYtLjAzYzQxLjE2NiAxMS4wMyA4Mi45NzItMTMuNjQ3IDkzLjk3LTU0LjY5IDcuOTIzLTI5LjU4IDIyLjg1My01MC44MzIgNDMuNjI0LTYyLjE1NSAyMC43Ny0xMS4zMjMgNDYuMzQtMTIuMzIgNzQuMTI1LTQuODc1IDEwLjQ2MyAyLjgwNyAxOS45NzcgNy4wMyAyOC41NjMgMTIuNjU2IDQuMzY4LTIuMjc2IDguOTAyLTQuMjMgMTMuNTkzLTUuODQzLTguNjI1LTIwLjg4Ni0yMS4zMTQtMzkuODU0LTM3Ljc1LTU1LjQwN2gtLjAzYy0uMDY0LS4wNi0uMTIzLS4xMjctLjE4Ny0uMTg3LTE5LjAxLTE3Ljk0LTQyLjc0Ny0zMS43NjgtNjkuOTA3LTM5LjA2NC0xNS4zNS00LjExNi0zMC43NjgtNS45NTMtNDUuOTA2LTUuNjg3em0tNzkuMDMgODIuOTY4YzE0LjU5OCAwIDI5LjIgNS41NDUgNDAuMjggMTYuNjI0IDIyLjE3NCAyMi4xNzUgMjIuMTI4IDU4LjQwMy0uMDMgODAuNTYzbC0yLjcyIDIuNzJoLS4zMTJjLTIyLjMzIDE5LjMzOC01Ni4zNDUgMTguNDY3LTc3LjUzMi0yLjcyLTIyLjE3NC0yMi4xNzQtMjIuMTYtNTguNDAzIDAtODAuNTYzIDExLjA4OC0xMS4wODcgMjUuNzEzLTE2LjYyNiA0MC4zMTMtMTYuNjI0em0wIDE4LjU2MmMtOS43OC0uMDAyLTE5LjU4IDMuNzM0LTI3LjA5NSAxMS4yNS0xNS4wMTggMTUuMDE4LTE1LjAzIDM5LjEyNiAwIDU0LjE1NiAxNS4wMTcgMTUuMDE3IDM5LjEyNSAxNS4wMzIgNTQuMTU2IDAgMTUuMDItMTUuMDE4IDE1LjAzMi0zOS4xMjYgMC01NC4xNTYtNy41MDctNy41MS0xNy4yODItMTEuMjQ4LTI3LjA2LTExLjI1em0xNDMuMzQzIDcuMDYzYy02LjUxIDEuMTg1LTEyLjQ3NiAzLjI3NS0xNy44NzUgNi4yMTgtNC40MTcgMi40MS04LjUzMyA1LjQxMy0xMi4zNDQgOS4wOTUgMjMuMDE0LjA0OCA0Ni4wMDMgNi44NzYgNjUuNzggMjAuNDM4IDMuMDEyLTUuNTAyIDYuNjMtMTAuNzU4IDEwLjg0NS0xNS42ODgtMTQuMy05Ljc0Ny0zMC4wOC0xNi40MzgtNDYuNDA4LTIwLjA2M3ptMTE5LjcxOCA1LjM0M2MtMjAuMDQ4LjAwNC00MC4wODQgNy41MjItNTUuMTI0IDIyLjU2My0zMC4wNTggMzAuMDU3LTI4Ljc5IDc4Ljg5IDEuMzEzIDEwOC45NjggMjEuNjc2IDIxLjY2IDMyLjYyNyA0NS4zMzUgMzIuMDMgNjkuMDYyLS41OTggMjMuNzI3LTEyLjU1NCA0Ni40My0zMi45MDYgNjYuNzgtOS44NyA5Ljg3Mi0yMS4yIDE2LjM2OC0zMi44NzUgMjAuODQ1LS41NCAzLjU4LTEuMzggNy4wNTMtMi4zMTQgMTAuNSA1MC40NCA5LjA1NyAxMDMuOTU3LTUuNyAxNDMuMjgtNDUgNjMuOTctNjMuOTQzIDY1LjY2LTE2Ny4yNzYgMS43NTItMjMxLjE1Ni0xNS4wNTQtMTUuMDU0LTM1LjEwOC0yMi41NjgtNTUuMTU3LTIyLjU2NHptLTEuMDYgMjEuNDA2YzE0LjU5OC4wMDIgMjkuMiA1LjU0NiA0MC4yOCAxNi42MjUgMjIuMTc0IDIyLjE3NSAyMi4xNiA1OC40MDMgMCA4MC41NjMtMjIuMTc1IDIyLjE3NS01OC40MDMgMjIuMTYtODAuNTYzIDAtMjIuMTc0LTIyLjE3NC0yMi4xNi01OC40MDMgMC04MC41NjMgMTEuMDg4LTExLjA4NyAyNS42ODItMTYuNjI3IDQwLjI4Mi0xNi42MjV6bTAgMTguNTYzYy05Ljc4LS4wMDItMTkuNTQ4IDMuNzY2LTI3LjA2NCAxMS4yOC0xNS4wMTcgMTUuMDItMTUuMDMgMzkuMDk2IDAgNTQuMTI2IDE1LjAxNyAxNS4wMTggMzkuMDk0IDE1LjAzMyA1NC4xMjUgMCAxNS4wMi0xNS4wMTcgMTUuMDMyLTM5LjA5MyAwLTU0LjEyNC03LjUwNy03LjUwOC0xNy4yODItMTEuMjgtMjcuMDYtMTEuMjh6bS0xNDcuMjUgMTUuMDNjLTkuMDIzIDAtMTguMDQ1IDEuNzE1LTI2LjU2NCA1LjA5NS04LjIxIDIyLjEyMy0yNC4wMTYgMzkuNzktNDMuNjI1IDUwLjYyNS01LjQ0IDIzLjM5OC45NjcgNDguOTY1IDE5LjI1IDY3LjI1Ljc4OC43ODYgMS41OTUgMS41NCAyLjQwNyAyLjI4IDIxLjk2LTMuNDU1IDQzLjg1Ny44MjMgNjIuMzc1IDExLjE1OGwuNzY4LjMxNiA3LjMyNiAzLjkzMmMxMC41OC0zLjM5IDIwLjU1Mi05LjI3IDI4Ljk3LTE3LjY4NyAxMi40MS0xMi40MSAxOS4zNjItMjguMTggMjAuODQzLTQ0LjM0NC0xMi4xNC0xNi40NDctMTguNTU4LTM1Ljk4LTE5LjAzMy01NS41OTItLjU5Ni0uNjQtMS4xODgtMS4yODMtMS44MTItMS45MDctMTQuMDkyLTE0LjA5LTMyLjQ5My0yMS4xMjQtNTAuOTA2LTIxLjEyNHpNNTMuNjg3IDIyNS43MkMyMy45ODggMjY0LjMzIDEyLjI3NSAzMTUuODE1IDI2IDM2Ny4wM2MyMy4zOTQgODcuMzY1IDExMi4xMDQgMTQwLjI5MiAxOTkuMzc1IDExNi45MDguMDEtLjAwMy4wMi4wMDMuMDMgMCA0MS4xMzYtMTEuMDYgNjYuMTI2LTU0LjIwNiA1NS4xMjYtOTUuMzEzLTQuMTA2LTE1LjMyNy0xMi41ODYtMjguMzAyLTIzLjcxOC0zNy44NzVsLS4yMTgtLjE4OGMtMTguNzcyLTE2LjAwOC00NS4yLTIyLjY0LTcwLjkwNy0xNS43NS0yOS41NzYgNy45MzMtNTUuNTU3IDUuNjY2LTc1Ljg0My02LjYyNS0yMC4yODctMTIuMjktMzQuMDE3LTMzLjkxMi00MS40Ny02MS43MTgtMi43MzgtMTAuMjY3LTMuMzk3LTIwLjQ1Ni0yLjg0My0zMC4xNTgtNC4yMjMtMy4yMDctOC4xNjgtNi43MjUtMTEuODQzLTEwLjU5M3ptNDguODEyIDI4Ljk2OGMtLjgzNCAxNi43MDUgMS40MDMgMzMuNTI4IDYuNzUgNDkuNTYyIDMuMTk4IDMuMDk0IDYuNjIzIDUuNzUyIDEwLjI4IDcuOTcgNC44NTUgMi45NCAxMC4xOTMgNS4xOTIgMTYuMDY0IDYuNjU1LTEwLjc5LTE5LjExLTE1Ljc3OC00MC42LTE0Ljk3LTYxLjkwNi02LjAwNC0uMTc0LTEyLjA2LS45MTItMTguMTI0LTIuMjgzem0yNDAuNzggNTcuMDkzYy01LjU4NiAxMS43MS0xMy4yMyAyMi43MDItMjIuOTM2IDMyLjQwOC04LjcxIDguNzEtMTguNDQ1IDE1Ljc2My0yOC44MTMgMjEuMTU2IDIuODM1IDUuNTkyIDUuMTU1IDExLjUzNCA2Ljg3NiAxNy43OCAxMi43OTYtNi4zMiAyNC43OS0xNC43OSAzNS40MzgtMjUuNDM3IDQuNTg1LTQuNTg1IDguNzcyLTkuNDE4IDEyLjU2Mi0xNC40NjguNTIyLTIuOTA4LjgzNC01LjgwMi45MDYtOC42OS4xOS03LjQ2NS0xLjA3Ni0xNS4wNDUtNC4wMy0yMi43NXptLTE0MCAzOS45MDhjMTQuNi4wMDIgMjkuMjAzIDUuNTQ1IDQwLjI4MiAxNi42MjUgMjIuMTc1IDIyLjE3NCAyMi4xNiA1OC40MDIgMCA4MC41NjItMjIuMTc0IDIyLjE3NS01OC40MDMgMjIuMTYtODAuNTYyIDAtMjIuMTc0LTIyLjE3NC0yMi4xNi01OC40MDMgMC04MC41NjMgMTEuMDg3LTExLjA4NyAyNS42ODItMTYuNjI3IDQwLjI4LTE2LjYyNXptMCAxOC41NjJjLTkuNzc4LS4wMDItMTkuNTQ2IDMuNzY2LTI3LjA2IDExLjI4LTE1LjAyIDE1LjAyLTE1LjAzMiAzOS4wOTYgMCA1NC4xMjYgMTUuMDE2IDE1LjAxNyAzOS4wOTIgMTUuMDMyIDU0LjEyNCAwIDE1LjAxNy0xNS4wMTggMTUuMDMtMzkuMDk0IDAtNTQuMTI1LTcuNTEtNy41MDctMTcuMjgzLTExLjI3OC0yNy4wNjMtMTEuMjh6IiBmaWxsPSJ1cmwoI2xvcmMtdHJpcGxlLXlpbi1ncmFkaWVudC0xKSIgc3Ryb2tlPSIjNGE0YTRhIiBzdHJva2Utb3BhY2l0eT0iMSIgc3Ryb2tlLXdpZHRoPSI0IiBmaWx0ZXI9InVybCgjc2hhZG93LTEpIj48L3BhdGg+PC9nPjwvc3ZnPg==">
         <ul class="list-group list-group-flush">
           {#if gameSession.character.weaponOne}
-            
-              <li class="list-group-item d-flex justify-content-between align-items-left">
-                <span>
-                  <img style="margin-right: 10px" src={gameSession.character.weaponOne.image} alt="icon" />
-                  {gameSession.character.weaponOne.text}
-                </span>
-                <InfoPopup tooltip={gameSession.character.weaponOne.tooltip} title={gameSession.character.weaponOne.text} />
-              </li>
-            
+            <li class="list-group-item d-flex justify-content-between align-items-left">
+              <span>
+                <img
+                  width="32px"
+                  height="32px"
+                  style="margin-right: 10px"
+                  src={gameSession.character.weaponOne.image}
+                  alt="icon" />
+                {gameSession.character.weaponOne.text}
+              </span>
+              <div>
+                <button
+                  on:click={() => dropWeapon(1)}
+                  type="button"
+                  class="btn btn-dark btn-sm"
+                  style="max-width: 32px;">
+                  <img
+                    width="16px"
+                    height="16px"
+                    style="margin-right: 10px"
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iaGVpZ2h0OiAxNnB4OyB3aWR0aDogMTZweDsiPjxwYXRoIGQ9Ik0wIDBoNTEydjUxMkgweiIgZmlsbD0idXJsKCNwYXR0ZXJuKSIgZmlsbC1vcGFjaXR5PSIxIj48L3BhdGg+PGcgY2xhc3M9IiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNCwtMikiIHN0eWxlPSIiPjxwYXRoIGQ9Ik0xODkuMDE2IDE3Ljc4M2wtMTUuNzQgMi43OCAxMy43ODggNzguMzggMTUuNzQtMi43NzItMTMuNzg4LTc4LjM4N3ptODkgMTcuODJjLTYuMzkgOC4xNC04LjU5MiAxNC45MS04LjI3MiAyMC44NC4zOSA3LjIxIDQuNDcgMTQuNTYgMTEuODkgMjIuMzEgMTEuMzUgMTEuODQgMjkuODYgMjMuNTQgNDguMTEgMzUuNjhsLTIgMTMuNjU4LTMuNzcuODAyLTguMjYgMS43Mi4wNTIuMDYtMTMzLjc5IDI5Yy0yLjY4IDUtNC4xNCAxMi43OC0zLjI1IDIwLjM5Ljg0IDcuMjYgMy43NCAxMy41OSA3IDE3LjEzbDExNi44MzgtMjUuMjUgNS43OSAxMy43NC0xMDMuNTggNjlhMjcuNzYgMjcuNzYgMCAwIDAgMi4zMTIgMTMuMjZjLjIuNDcuNDEuOTIuNjMgMS4zOGEzNS4zNyAzNS4zNyAwIDAgMCAyLjMgNC4wMmMzLjg0IDUuOTIgOS41NSAxMC40MyAxNC4xOSAxMi4xNWwxMDguMzU4LTczIDEwLjEzIDExLjA4LTg0LjY3OCAxMDQuMDNjMS4zNSA0LjYxIDUuMjcgMTAuMzcgMTEgMTQuNjkgNS45MiA0LjQ5IDEzIDYuOTQgMTguNjYgNi44NGw4Mi4xNy05OS4zOCAxMi44OTggNy42OS00MiAxMDMuNzJjMi44MyAzLjkgOC40NCA3Ljg2IDE1LjM4IDEwIDcuMjMgMi4yMiAxNS4xIDIuMjEgMjAuNTIuNDlsNTcuMTkyLTEzNy41OC4wNS0uMTNjNy4yNC0xOC4zIDI4LTI5Ljg2IDU2LjI2LTM5LjE5IDEuMjYtLjQxNyAyLjU1OC0uODIgMy44NTQtMS4yMjdWNTYuNTFhMzMwLjA2IDMzMC4wNiAwIDAgMS04My44MzYgNDkuNTYybC0uMDUuMDVhMTIwLjIyIDEyMC4yMiAwIDAgMSAxNS45MDIgMTUuMjFjOS44OSAxMS42NiAxNS43OSAyNS40MyAxNCA0MC43bC0xNS0xLjc1YzEuMjItMTAuNjItMi4zODItMTkuNTQtMTAuNTMyLTI5LjE1cy0yMC45Mi0xOS4yOC0zNi4yNy0yOS4yN2MtMjguOTktMTguODQtNjYuODk4LTM4LjkyLTEwMC4xOTgtNjYuMjZ6bS0yMDEuMTQgMzEuNjNsLTEwLjQ2MiAxMi4xIDYyLjA3IDUzLjY2IDEwLjQ2LTEyLjEtNjIuMDctNTMuNjZ6bS00NC4wNCAxMTAuMzFsLS4zMSAxNiA3MC4xMzggMS40LjI4LTE2LjA1LTcwLjEwOC0xLjM1em05MS45NyA1NS42MDdhMjcuNzUgMjcuNzUgMCAwIDAtMjEuNjMgNDQuODkzbC01Mi44NjIgMTYxLjMxYTI3Ljg3IDI3Ljg3IDAgMSAwIDI4LjUyMiA5LjM3bDUyLjcxLTE2MC44NmEyNy43NSAyNy43NSAwIDAgMCAxLjQ3LTUzLjUzIDI3Ljc1IDI3Ljc1IDAgMCAwLTguMjEtMS4xODN6TTE4IDI3My4wOTN2NTEuMjE3bDE0Ljc1NiA0LjgyMmE4LjUyIDguNTIgMCAxIDEtNS4zIDE2LjE5TDE4IDM0Mi4yMzJ2NTMuMjZsMjMuMDE2IDcuNTUgMzYuMjEtMTEwLjQ5TDE4IDI3My4wOTJ6bTExNS4xMTUgNjAuNzhsLTIyLjYyIDY5IDE0LjE0IDQuNjMgMjIuNjItNjktMTQuMTQtNC42M3ptMjkuMzQgOS42MmwtMjIuNjIgNjkgMTQuMTggNC42MyAyMi42Mi02OS0xNC4xOC00LjYzem0yOS4zNCA5LjYxbC0yMi42MiA2OSAxNC4xNCA0LjYzIDIyLjYyLTY5LTE0LjE0LTQuNjN6bTI5LjQzIDkuNjFsLTIyLjYyIDY5IDE0LjE0IDQuNjI4IDIyLjYyLTY5LTE0LjE0LTQuNjI4em0yOS4yNiA5LjYybC0yMi42MiA2OSAxNC4yMiA0LjYxIDIyLjYyLTY5LTE0LjIyLTQuNjF6bTI5LjQzIDkuNjFsLTIyLjYyIDY5IDE0LjE0IDQuNjMgMjIuNjItNjktMTQuMTQtNC42M3ptMjkuMzEgOS42MWwtMjIuNjIgNjkgMTQuMTQgNC42MyAyMi42Mi02OS0xNC4xNC00LjYzem0zMS44OSAxLjU3bC0yOS4yNSA4OS4yN2E0NyA0NyAwIDEgMCAyOS4yNS04OS4yN3oiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMSI+PC9wYXRoPjwvZz48L3N2Zz4="
+                    alt="icon" />
+                </button>
+                <InfoPopup
+                  tooltip={gameSession.character.weaponOne.tooltip}
+                  title={gameSession.character.weaponOne.text} />
+              </div>
+            </li>
           {/if}
           {#if gameSession.character.weaponTwo}
-            
-              <li class="list-group-item d-flex justify-content-between align-items-left">
-                <span>
-                  <img style="margin-right: 10px" src={gameSession.character.weaponTwo.image} alt="icon" />
-                  {gameSession.character.weaponTwo.text}
-                </span>
-                <InfoPopup tooltip={gameSession.character.weaponTwo.tooltip} title={gameSession.character.weaponTwo.text} />
-              </li>
-            
-            <li class="list-group-item d-flex justify-content-between align-items-left" />
+            <li class="list-group-item d-flex justify-content-between align-items-left">
+              <span>
+                <img
+                  width="32px"
+                  height="32px"
+                  style="margin-right: 10px"
+                  src={gameSession.character.weaponTwo.image}
+                  alt="icon" />
+                {gameSession.character.weaponTwo.text}
+              </span>
+              <div>
+                <button
+                  on:click={() => dropWeapon(2)}
+                  type="button"
+                  class="btn btn-dark btn-sm"
+                  style="max-width: 32px;">
+                  <img
+                    width="16px"
+                    height="16px"
+                    style="margin-right: 10px"
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iaGVpZ2h0OiAxNnB4OyB3aWR0aDogMTZweDsiPjxwYXRoIGQ9Ik0wIDBoNTEydjUxMkgweiIgZmlsbD0idXJsKCNwYXR0ZXJuKSIgZmlsbC1vcGFjaXR5PSIxIj48L3BhdGg+PGcgY2xhc3M9IiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNCwtMikiIHN0eWxlPSIiPjxwYXRoIGQ9Ik0xODkuMDE2IDE3Ljc4M2wtMTUuNzQgMi43OCAxMy43ODggNzguMzggMTUuNzQtMi43NzItMTMuNzg4LTc4LjM4N3ptODkgMTcuODJjLTYuMzkgOC4xNC04LjU5MiAxNC45MS04LjI3MiAyMC44NC4zOSA3LjIxIDQuNDcgMTQuNTYgMTEuODkgMjIuMzEgMTEuMzUgMTEuODQgMjkuODYgMjMuNTQgNDguMTEgMzUuNjhsLTIgMTMuNjU4LTMuNzcuODAyLTguMjYgMS43Mi4wNTIuMDYtMTMzLjc5IDI5Yy0yLjY4IDUtNC4xNCAxMi43OC0zLjI1IDIwLjM5Ljg0IDcuMjYgMy43NCAxMy41OSA3IDE3LjEzbDExNi44MzgtMjUuMjUgNS43OSAxMy43NC0xMDMuNTggNjlhMjcuNzYgMjcuNzYgMCAwIDAgMi4zMTIgMTMuMjZjLjIuNDcuNDEuOTIuNjMgMS4zOGEzNS4zNyAzNS4zNyAwIDAgMCAyLjMgNC4wMmMzLjg0IDUuOTIgOS41NSAxMC40MyAxNC4xOSAxMi4xNWwxMDguMzU4LTczIDEwLjEzIDExLjA4LTg0LjY3OCAxMDQuMDNjMS4zNSA0LjYxIDUuMjcgMTAuMzcgMTEgMTQuNjkgNS45MiA0LjQ5IDEzIDYuOTQgMTguNjYgNi44NGw4Mi4xNy05OS4zOCAxMi44OTggNy42OS00MiAxMDMuNzJjMi44MyAzLjkgOC40NCA3Ljg2IDE1LjM4IDEwIDcuMjMgMi4yMiAxNS4xIDIuMjEgMjAuNTIuNDlsNTcuMTkyLTEzNy41OC4wNS0uMTNjNy4yNC0xOC4zIDI4LTI5Ljg2IDU2LjI2LTM5LjE5IDEuMjYtLjQxNyAyLjU1OC0uODIgMy44NTQtMS4yMjdWNTYuNTFhMzMwLjA2IDMzMC4wNiAwIDAgMS04My44MzYgNDkuNTYybC0uMDUuMDVhMTIwLjIyIDEyMC4yMiAwIDAgMSAxNS45MDIgMTUuMjFjOS44OSAxMS42NiAxNS43OSAyNS40MyAxNCA0MC43bC0xNS0xLjc1YzEuMjItMTAuNjItMi4zODItMTkuNTQtMTAuNTMyLTI5LjE1cy0yMC45Mi0xOS4yOC0zNi4yNy0yOS4yN2MtMjguOTktMTguODQtNjYuODk4LTM4LjkyLTEwMC4xOTgtNjYuMjZ6bS0yMDEuMTQgMzEuNjNsLTEwLjQ2MiAxMi4xIDYyLjA3IDUzLjY2IDEwLjQ2LTEyLjEtNjIuMDctNTMuNjZ6bS00NC4wNCAxMTAuMzFsLS4zMSAxNiA3MC4xMzggMS40LjI4LTE2LjA1LTcwLjEwOC0xLjM1em05MS45NyA1NS42MDdhMjcuNzUgMjcuNzUgMCAwIDAtMjEuNjMgNDQuODkzbC01Mi44NjIgMTYxLjMxYTI3Ljg3IDI3Ljg3IDAgMSAwIDI4LjUyMiA5LjM3bDUyLjcxLTE2MC44NmEyNy43NSAyNy43NSAwIDAgMCAxLjQ3LTUzLjUzIDI3Ljc1IDI3Ljc1IDAgMCAwLTguMjEtMS4xODN6TTE4IDI3My4wOTN2NTEuMjE3bDE0Ljc1NiA0LjgyMmE4LjUyIDguNTIgMCAxIDEtNS4zIDE2LjE5TDE4IDM0Mi4yMzJ2NTMuMjZsMjMuMDE2IDcuNTUgMzYuMjEtMTEwLjQ5TDE4IDI3My4wOTJ6bTExNS4xMTUgNjAuNzhsLTIyLjYyIDY5IDE0LjE0IDQuNjMgMjIuNjItNjktMTQuMTQtNC42M3ptMjkuMzQgOS42MmwtMjIuNjIgNjkgMTQuMTggNC42MyAyMi42Mi02OS0xNC4xOC00LjYzem0yOS4zNCA5LjYxbC0yMi42MiA2OSAxNC4xNCA0LjYzIDIyLjYyLTY5LTE0LjE0LTQuNjN6bTI5LjQzIDkuNjFsLTIyLjYyIDY5IDE0LjE0IDQuNjI4IDIyLjYyLTY5LTE0LjE0LTQuNjI4em0yOS4yNiA5LjYybC0yMi42MiA2OSAxNC4yMiA0LjYxIDIyLjYyLTY5LTE0LjIyLTQuNjF6bTI5LjQzIDkuNjFsLTIyLjYyIDY5IDE0LjE0IDQuNjMgMjIuNjItNjktMTQuMTQtNC42M3ptMjkuMzEgOS42MWwtMjIuNjIgNjkgMTQuMTQgNC42MyAyMi42Mi02OS0xNC4xNC00LjYzem0zMS44OSAxLjU3bC0yOS4yNSA4OS4yN2E0NyA0NyAwIDEgMCAyOS4yNS04OS4yN3oiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMSI+PC9wYXRoPjwvZz48L3N2Zz4="
+                    alt="icon" />
+                </button>
+                <InfoPopup
+                  tooltip={gameSession.character.weaponTwo.tooltip}
+                  title={gameSession.character.weaponTwo.text} />
+              </div>
+            </li>
           {/if}
+          <li class="list-group-item d-flex justify-content-between align-items-left" />
         </ul>
       </IconCard>
 
@@ -344,14 +393,28 @@
                   {item.text}
                 </span>
                 <div>
-                  <button on:click={() => dropItem(i)} type="button" class="btn btn-dark btn-sm">
+                  <button
+                    on:click={() => useItem(i)}
+                    type="button"
+                    class="btn btn-dark btn-sm"
+                    style="max-width: 32px;">
                     <img
                       width="16px"
                       height="16px"
-                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPxJREFUSEvtlTFqAlEQhr+/iDewS8BCEGxzgVwhkHiVlGproVUOESRNLpAcwC4kWOUqvzx5gjxc5y1sup1u2Xn/N/O/3RnRImzfAHeS/mqPqTbR9hp4BEbAO/AmaRudrwLYvgd2hdhW0qwrwAKYl2KSwgLDhCRqewLsC8BK0ksnHWTIK/AMDIEvYCPpozNAhgyAiaTvSPj0vsqiU7LtMXCbniWlLsKoBtieAj9ZcSkpXXwYbQAPwGcPaPTUdm/R9S+utyj8I//NItsXd0GuKI2OmaTfpgqrRkUDJBQ/DsXQm5xQQKrEWwHyPkh2PUW2nBdd3cHZTphe87x05ADOzHgZjdoCRwAAAABJRU5ErkJggg=="
+                      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iaGVpZ2h0OiAxNnB4OyB3aWR0aDogMTZweDsiPjxwYXRoIGQ9Ik0wIDBoNTEydjUxMkgweiIgZmlsbD0idXJsKCNwYXR0ZXJuKSIgZmlsbC1vcGFjaXR5PSIxIj48L3BhdGg+PGcgY2xhc3M9IiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNCwtMikiIHN0eWxlPSIiPjxwYXRoIGQ9Ik0zMDkuNzUyIDM1LjUxNGMtMy43ODQuMDQ2LTcuODA3LjQ1NC0xMi4wMDQgMS4wODItMjcuMTk4IDYxLjA2Ny00OS44NSAxMjIuMDA3LTY1LjQ1IDE4Mi43NzUtOS4yOTMtNC4zMTMtMTguNjM0LTguNTctMjcuOTYyLTEyLjg0NS0zLjk1LTUzLjEzNyAxLjg3Ni0xMDMuMTMgNS4zMy0xNTMuNzU3LTYuNjk2LTUuMDYtMTcuNTQtOC44Mi0yOC41OTYtOC45OC0xMS41NzMtLjE2Ni0yMi4zMDQgMy4zMy0yOC41MzcgOS41MTMtNS40NCA3MC4yMi01LjI1OCAxNDcuMzU0IDEuMTMzIDIxNy40NzUgMjEuOTI2IDI5LjczMyA0NS44NzcgNTkuOTAzIDUyLjMwNSAxMDMuNjRsLTE4LjQ5IDIuNzE2Yy00LjI0LTI4LjgzNy0xNy41ODMtNTEuMzQtMzMuMjM4LTczLjUxbC03LjU4Mi0xMC41NWMtNS4wMS02Ljg2Mi0xMC4xMzQtMTMuNzktMTUuMTg1LTIwLjk0NS0yMS4zOTctMjguNTEtNDQuMDk0LTUxLjQ5LTYyLjE1NS01OS4yMi05LjgxLTQuMTk2LTE3LjI3My00LjM4NS0yNC42MzItLjQ0Mi02LjQ4NiAzLjQ3NC0xMy41MiAxMS40OS0yMC4wNDMgMjUuMzg3IDUzLjQxIDUxLjY3NCA3MC41NzYgMTA0LjA0NCA4Mi43MTggMTM4LjY2NCA1Ljc5IDE2LjUwNyAxMS4wOCAzMS41MjMgMjEuMjc0IDQ3LjAyNSAxNS42MTQgMjMuNzQ2IDQ5LjQ0NiA0Mi45MSA4NC4wNjYgNDkuNTEgMzQuNjIgNi41OTggNjguNjkuNzEyIDg2Ljg3LTE5LjgzMyAxNC4zNi0xNi4yMjcgNDEuMjMyLTQxLjg3IDU2LjE5NS01Ny43ODcgMjQuNTI0LTI2LjA4NSA1OS40ODUtNTQuOTY0IDg4LjU5Ny03Ny4yNDggMTQuNTU2LTExLjE0MiAyNy42Mi0yMC41OTggMzcuMTk3LTI3LjE3OCA0Ljc5LTMuMjkgOC42OC01Ljg0OCAxMS42MTItNy42MjUuMTk3LS4xMi4zNC0uMTgyLjUyNy0uMjk0IDEuMzEtOS44NzMtLjQ0OC0yMC42NjMtNC44MDQtMjkuMzc1LTQuMzU4LTguNzE4LTEwLjc4Ny0xNC42NTgtMTcuNzYzLTE3LjAxNS0zNS43MDcgMjEuMjgzLTcwLjYyIDQ0LjQzOC0xMDMuODc3IDc1LjQzOC01Ljc0NS03LjI3NC0xMS45MzMtMTQuMDYtMTguNS0yMC40MjQgMzAuNzQ3LTU4LjgxNSA2OS45OTItMTA3Ljc1IDExNC4yOC0xNTAuNDEtMS41Ni05LjU1LTcuNzYtMTkuODE0LTE2LjExNC0yNy4zMi04LjQtNy41NS0xOC41MjYtMTEuNy0yNS44NTItMTEuNjIzLTQ1LjYxNSA0Ni4zODItODUuODY0IDk2LjkwNy0xMTcuNSAxNTQuNDYzLTYuOTE4LTQuMzYtMTQuMDIzLTguNTEzLTIxLjI3LTEyLjUxIDE4Ljg5My02NC43MTUgNDIuOTktMTI2LjQyNiA3My41LTE4NC4zOTItMTIuNzU3LTE1LjI0NS0yNS40NzctMjMuMzM1LTQyLjM0Ny0yNC4zMjQtMS4yMDUtLjA3LTIuNDQtLjA5Ni0zLjctLjA4eiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIxIj48L3BhdGg+PC9nPjwvc3ZnPg=="
                       alt="icon" />
                   </button>
-
+                  <button
+                    on:click={() => dropItem(i)}
+                    type="button"
+                    class="btn btn-dark btn-sm"
+                    style="max-width: 32px;">
+                    <img
+                      width="16px"
+                      height="16px"
+                      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iaGVpZ2h0OiAxNnB4OyB3aWR0aDogMTZweDsiPjxwYXRoIGQ9Ik0wIDBoNTEydjUxMkgweiIgZmlsbD0idXJsKCNwYXR0ZXJuKSIgZmlsbC1vcGFjaXR5PSIxIj48L3BhdGg+PGcgY2xhc3M9IiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNCwtMikiIHN0eWxlPSIiPjxwYXRoIGQ9Ik0xODkuMDE2IDE3Ljc4M2wtMTUuNzQgMi43OCAxMy43ODggNzguMzggMTUuNzQtMi43NzItMTMuNzg4LTc4LjM4N3ptODkgMTcuODJjLTYuMzkgOC4xNC04LjU5MiAxNC45MS04LjI3MiAyMC44NC4zOSA3LjIxIDQuNDcgMTQuNTYgMTEuODkgMjIuMzEgMTEuMzUgMTEuODQgMjkuODYgMjMuNTQgNDguMTEgMzUuNjhsLTIgMTMuNjU4LTMuNzcuODAyLTguMjYgMS43Mi4wNTIuMDYtMTMzLjc5IDI5Yy0yLjY4IDUtNC4xNCAxMi43OC0zLjI1IDIwLjM5Ljg0IDcuMjYgMy43NCAxMy41OSA3IDE3LjEzbDExNi44MzgtMjUuMjUgNS43OSAxMy43NC0xMDMuNTggNjlhMjcuNzYgMjcuNzYgMCAwIDAgMi4zMTIgMTMuMjZjLjIuNDcuNDEuOTIuNjMgMS4zOGEzNS4zNyAzNS4zNyAwIDAgMCAyLjMgNC4wMmMzLjg0IDUuOTIgOS41NSAxMC40MyAxNC4xOSAxMi4xNWwxMDguMzU4LTczIDEwLjEzIDExLjA4LTg0LjY3OCAxMDQuMDNjMS4zNSA0LjYxIDUuMjcgMTAuMzcgMTEgMTQuNjkgNS45MiA0LjQ5IDEzIDYuOTQgMTguNjYgNi44NGw4Mi4xNy05OS4zOCAxMi44OTggNy42OS00MiAxMDMuNzJjMi44MyAzLjkgOC40NCA3Ljg2IDE1LjM4IDEwIDcuMjMgMi4yMiAxNS4xIDIuMjEgMjAuNTIuNDlsNTcuMTkyLTEzNy41OC4wNS0uMTNjNy4yNC0xOC4zIDI4LTI5Ljg2IDU2LjI2LTM5LjE5IDEuMjYtLjQxNyAyLjU1OC0uODIgMy44NTQtMS4yMjdWNTYuNTFhMzMwLjA2IDMzMC4wNiAwIDAgMS04My44MzYgNDkuNTYybC0uMDUuMDVhMTIwLjIyIDEyMC4yMiAwIDAgMSAxNS45MDIgMTUuMjFjOS44OSAxMS42NiAxNS43OSAyNS40MyAxNCA0MC43bC0xNS0xLjc1YzEuMjItMTAuNjItMi4zODItMTkuNTQtMTAuNTMyLTI5LjE1cy0yMC45Mi0xOS4yOC0zNi4yNy0yOS4yN2MtMjguOTktMTguODQtNjYuODk4LTM4LjkyLTEwMC4xOTgtNjYuMjZ6bS0yMDEuMTQgMzEuNjNsLTEwLjQ2MiAxMi4xIDYyLjA3IDUzLjY2IDEwLjQ2LTEyLjEtNjIuMDctNTMuNjZ6bS00NC4wNCAxMTAuMzFsLS4zMSAxNiA3MC4xMzggMS40LjI4LTE2LjA1LTcwLjEwOC0xLjM1em05MS45NyA1NS42MDdhMjcuNzUgMjcuNzUgMCAwIDAtMjEuNjMgNDQuODkzbC01Mi44NjIgMTYxLjMxYTI3Ljg3IDI3Ljg3IDAgMSAwIDI4LjUyMiA5LjM3bDUyLjcxLTE2MC44NmEyNy43NSAyNy43NSAwIDAgMCAxLjQ3LTUzLjUzIDI3Ljc1IDI3Ljc1IDAgMCAwLTguMjEtMS4xODN6TTE4IDI3My4wOTN2NTEuMjE3bDE0Ljc1NiA0LjgyMmE4LjUyIDguNTIgMCAxIDEtNS4zIDE2LjE5TDE4IDM0Mi4yMzJ2NTMuMjZsMjMuMDE2IDcuNTUgMzYuMjEtMTEwLjQ5TDE4IDI3My4wOTJ6bTExNS4xMTUgNjAuNzhsLTIyLjYyIDY5IDE0LjE0IDQuNjMgMjIuNjItNjktMTQuMTQtNC42M3ptMjkuMzQgOS42MmwtMjIuNjIgNjkgMTQuMTggNC42MyAyMi42Mi02OS0xNC4xOC00LjYzem0yOS4zNCA5LjYxbC0yMi42MiA2OSAxNC4xNCA0LjYzIDIyLjYyLTY5LTE0LjE0LTQuNjN6bTI5LjQzIDkuNjFsLTIyLjYyIDY5IDE0LjE0IDQuNjI4IDIyLjYyLTY5LTE0LjE0LTQuNjI4em0yOS4yNiA5LjYybC0yMi42MiA2OSAxNC4yMiA0LjYxIDIyLjYyLTY5LTE0LjIyLTQuNjF6bTI5LjQzIDkuNjFsLTIyLjYyIDY5IDE0LjE0IDQuNjMgMjIuNjItNjktMTQuMTQtNC42M3ptMjkuMzEgOS42MWwtMjIuNjIgNjkgMTQuMTQgNC42MyAyMi42Mi02OS0xNC4xNC00LjYzem0zMS44OSAxLjU3bC0yOS4yNSA4OS4yN2E0NyA0NyAwIDEgMCAyOS4yNS04OS4yN3oiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMSI+PC9wYXRoPjwvZz48L3N2Zz4="
+                      alt="icon" />
+                  </button>
                   <InfoPopup tooltip={item.tooltip} title={item.text} />
                 </div>
               </li>
@@ -368,5 +431,14 @@
     display: flex;
     flex-grow: 1;
     flex-wrap: wrap;
+  }
+
+  .menu {
+    visibility: hidden;
+  }
+
+  .menu:hover,
+  .menu:focus {
+    visibility: visible;
   }
 </style>
