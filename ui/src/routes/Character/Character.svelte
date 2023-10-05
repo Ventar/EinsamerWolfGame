@@ -144,6 +144,22 @@
 
     gameSession = await res.json();
   }
+
+  /**
+   * @param {int} position
+   */
+   async function dropSkill(position) {
+    const res = await fetch("http://" + host + ":8080/kaiskill/drop/", {
+      method: "POST",
+      body: JSON.stringify({
+        position: position,
+        id: gameSession.id,
+      }),
+    });
+
+    gameSession = await res.json();
+  }
+
 </script>
 
 <div class="bs-docs-section">
@@ -297,6 +313,18 @@
               {#each translation.translations as t, i}
                 <li class="list-group-item d-flex justify-content-between align-items-left">
                   <span>
+                    <button
+                  on:click={() => dropSkill(i)}
+                  type="button"
+                  class="btn btn-dark btn-sm"
+                  style="max-width: 32px;">
+                  <img
+                    width="16px"
+                    height="16px"
+                    style="margin-right: 10px"
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iaGVpZ2h0OiAxNnB4OyB3aWR0aDogMTZweDsiPjxwYXRoIGQ9Ik0wIDBoNTEydjUxMkgweiIgZmlsbD0idXJsKCNwYXR0ZXJuKSIgZmlsbC1vcGFjaXR5PSIxIj48L3BhdGg+PGcgY2xhc3M9IiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNCwtMikiIHN0eWxlPSIiPjxwYXRoIGQ9Ik0yMC42MjUgMTZjLTEuNzQuMDUyLTIuOTU2LjM5NC0zLjU5NCAxLjAzLTEwLjIgMTAuMjAzIDU4LjY1IDE3MC44NSA3Ni41IDE3OC41IDUuMDIgMi4xNTIgMTUuODY1LTMuNTYzIDI4LjcyLTEzLjI4aC4wM0wxOTYgMjU2bC03My43MiA3My43NWMtMTIuODYzLTkuNzI2LTIzLjcyOC0xNS40MzMtMjguNzUtMTMuMjgtMTcuODUgNy42NS04Ni43IDE2OC4yOTctNzYuNSAxNzguNSAxMC4yMDMgMTAuMiAxNzAuODUtNTguNjUgMTc4LjUtNzYuNSAyLjE1My01LjAyMi0zLjU1NC0xNS44ODctMTMuMjgtMjguNzVMMjU2IDMxNmw3My43NSA3My43NWMtOS43MTcgMTIuODU1LTE1LjQzMiAyMy43LTEzLjI4IDI4LjcyIDcuNjUgMTcuODUgMTY4LjI5NyA4Ni43IDE3OC41IDc2LjUgMTAuMi0xMC4yMDMtNTguNjUtMTcwLjg1LTc2LjUtMTc4LjUtNS4wMi0yLjE1Mi0xNS44NjUgMy41NjMtMjguNzIgMTMuMjhMMzE2IDI1Nmw3My43NS03My43NWMxMi44NTUgOS43MTcgMjMuNyAxNS40MzIgMjguNzIgMTMuMjggMTcuODUtNy42NSA4Ni43LTE2OC4yOTcgNzYuNS0xNzguNS0xMC4yMDMtMTAuMi0xNzAuODUgNTguNjUtMTc4LjUgNzYuNS0yLjE1MyA1LjAyMiAzLjU1NCAxNS44ODcgMTMuMjggMjguNzVMMjU2IDE5NmwtNzMuNzUtNzMuNzJjLjAwNS0uMDA2LS4wMDUtLjAyMyAwLS4wMyA5LjcxNy0xMi44NTUgMTUuNDMyLTIzLjcgMTMuMjgtMjguNzJDMTg4LjM2IDc2Ljc5NiA0Ni43MSAxNS4yMjUgMjAuNjI2IDE2eiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIxIj48L3BhdGg+PC9nPjwvc3ZnPg=="
+                    alt="icon" />
+                </button>
                     <img style="margin-right: 10px" src={t.png} alt="icon" />
                     {t.de}
                   </span>

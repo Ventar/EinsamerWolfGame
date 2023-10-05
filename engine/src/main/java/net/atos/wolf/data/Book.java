@@ -15,6 +15,8 @@ public class Book {
 
     private List<Item> items;
 
+    private List<KaiSkill> skills;
+
     private List<Section> sections;
 
 }

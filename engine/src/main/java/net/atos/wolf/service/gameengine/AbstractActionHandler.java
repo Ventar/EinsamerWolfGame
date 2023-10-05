@@ -1,5 +1,6 @@
 package net.atos.wolf.service.gameengine;
 
+import lombok.Getter;
 import net.atos.wolf.data.Action;
 import net.atos.wolf.data.Character;
 import net.atos.wolf.data.Section;
@@ -17,7 +18,8 @@ import java.util.List;
  * @since 2023-05-19
  */
 public abstract class AbstractActionHandler implements IActionHandler {
-    
+
+    @Getter
     private ServiceRegistry registry;
     
     /**

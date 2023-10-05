@@ -1,10 +1,5 @@
 [
-  {
-    "key": "HEAL",
-    "de": "Heilung",
-    "tooltip": "<p>Diese Fertigkeit kann eingesetzt werden, um verlorene AUSDAUERPUNKTE zurückzugewinnen.</p><p> Wenn du diese Fertigkeit besitzt, kannst du dir für jeden nummerierten Textabschnitt, den du im Spiel passierst und in dem du dich nicht in einem Kampf befindest, 1 AUSDAUERPUNKT gutschreiben.</p><p> Denke immer daran, dass du nur AUSDAUERPUNKTE zurückgewinnen kannst, die du verloren hast, du deinen Anfangswert also niemals übersteigen darfst.</p><p> Wenn du diese Fertigkeit wählst, erhälst du durch Heilung: <span class='text-success'><b>+ 1 AUSDAUERPUNKT</b></span> für jeden Abschnitt ohne Kampf.</p>",
-    "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAfJJREFUSEvtlU+ITmEYxX/HysZK5LOhlP8pZWFhNrMgsppSQiwQ2Sh/FmZj2FhI2bCYYUSMQtmwkWzMwkIp/0cp1KQslJTsjs7X+033uz5dm9l9b926vc/znPOe89znvWKWl2YZnz5Bo8MzFtkekTRSrbC9AJgPTEv6WYvNBTYCLyT9qMVmsLoIgDeS7ibZ9hHgUqVwWNK5EstBjgHzgCnguKSHJTYErOsctk5wGBiU9Nb2V2BRzYPbwCfgVG1/UtKA7VXAY2CsF8F+4ArwCBgGnvcw+DcQa3qtgF8EtgAHJF1NUlXB6lhUKpP8rrGD3Qlrgddla01caBPYbkmKHfH9NBB/lwNngZ3/SRLr0oObqZd0puC12gpsP4gl8c12EudI2mr7PbCigWRK0krbz4DvkrbliwQ2SNreIdgF3CpAaeIFYAA4CXxuIFgCnAeeluYvLvm7JU1Ue3Ad2FsDGwfyTP6DZBNwFNhRi9+QtK+ryZXve7CcvlMzVk74oQaSPkXhwcp+VDypDmzPy852ZB4CMhcLgXvAHuBbActelMXaTHEG8rKk6brSqkWtIjVyI72zvgAnMuG2l7VlSx9tJ+9ODfAlcA0YlfTrL4uKTSnMNZE5eAVM1O+aDqjtpcBmYD2Q9/uSRquk/f9B46D3LWq06A+F6q8vaGHWiAAAAABJRU5ErkJggg=="
-  },
+
   {
     "key": "ANIMAL_UNDERSTANDING",
     "de": "Tierverständnis",

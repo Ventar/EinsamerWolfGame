@@ -9,14 +9,8 @@ import lombok.ToString;
 @ToString
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Item {
+public class Item extends GameObject {
 
-    /**
-     * Unique ID of the item.
-     */
-    @Setter
-    @Getter
-    private String id;
 
     /**
      * If an item can be activated in the UI or not
@@ -40,12 +34,10 @@ public class Item {
     @Getter
     private Integer modificationValue;
 
-    @Setter
-    @Getter
-    private String image;
 
     @Setter
     @Getter
-    private String text;
+    private Boolean isWeapon;
+
 
 }

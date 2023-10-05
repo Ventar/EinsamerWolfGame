@@ -55,42 +55,42 @@ public class BattleService {
 
         int battleStrength = gameSession.character().battleStrength().get();
         boolean applyWeaponSkill = false;
-
-
-        if (gameSession.character().skills().contains(KaiSkill.THOUGHT_RAY)) {
-            if (!enemy.thoughRayResistance()) {
-                LOG.trace("Character uses kai skill  thought ray");
-                battleStrength = battleStrength + KaiSkill.THOUGHT_RAY.addBattleStrength();
-                entry.characterUsesThoughtRay(true);
-            } else {
-                LOG.trace("Character uses kai skill  thought ray but enemy has thought resistance...");
-                entry.enemyHasThoughRayResistance(true);
-            }
-        } else {
-            LOG.trace("Character does not have the kai skill thought ray");
-        }
-
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_AXE, "AXE");
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_SHORT_SWORD, "SHORT_SWORD");
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_MACE, "MACE");
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_BATTLE_STAFF, "BATTLE_STAFF");
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_DAGGER, "DAGGER");
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_BROAD_SWORD, "BROAD_SWORD");
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_SPEAR, "SPEAR");
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_WARHAMMER, "WARHAMMER");
-        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_SWORD, "SWORD");
-
-
-        if (applyWeaponSkill) {
-            battleStrength = battleStrength + 2;
-            entry.characterApplyWeaponSkill(applyWeaponSkill);
-            LOG.trace("Charakter setzt eine Waffenkunde Fähigkeit ein...::= [{}]");
-        }
-
-
-        // System.out.println("\nMod. Battle Strength  : " + battleStrength);
-        LOG.trace("Mod.Battlestrength::= [{}]", battleStrength);
-        entry.battleStrength(battleStrength);
+//
+//
+//        if (gameSession.character().skills().contains(KaiSkill.THOUGHT_RAY)) {
+//            if (!enemy.thoughRayResistance()) {
+//                LOG.trace("Character uses kai skill  thought ray");
+//                battleStrength = battleStrength + KaiSkill.THOUGHT_RAY.addBattleStrength();
+//                entry.characterUsesThoughtRay(true);
+//            } else {
+//                LOG.trace("Character uses kai skill  thought ray but enemy has thought resistance...");
+//                entry.enemyHasThoughRayResistance(true);
+//            }
+//        } else {
+//            LOG.trace("Character does not have the kai skill thought ray");
+//        }
+//
+//        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_AXE, "AXE");
+//        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_SHORT_SWORD, "SHORT_SWORD");
+//        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_MACE, "MACE");
+//        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_BATTLE_STAFF, "BATTLE_STAFF");
+//        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_DAGGER, "DAGGER");
+//        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_BROAD_SWORD, "BROAD_SWORD");
+//        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_SPEAR, "SPEAR");
+//        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_WARHAMMER, "WARHAMMER");
+//        applyWeaponSkill = applyWeaponSkill || checkApplyWeaponSkill(gameSession.character(), KaiSkill.ARMORY_SWORD, "SWORD");
+//
+//
+//        if (applyWeaponSkill) {
+//            battleStrength = battleStrength + 2;
+//            entry.characterApplyWeaponSkill(applyWeaponSkill);
+//            LOG.trace("Charakter setzt eine Waffenkunde Fähigkeit ein...::= [{}]");
+//        }
+//
+//
+//        // System.out.println("\nMod. Battle Strength  : " + battleStrength);
+//        LOG.trace("Mod.Battlestrength::= [{}]", battleStrength);
+//        entry.battleStrength(battleStrength);
         return battleStrength;
     }
 

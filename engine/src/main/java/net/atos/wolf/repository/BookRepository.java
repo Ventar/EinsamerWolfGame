@@ -2,10 +2,7 @@ package net.atos.wolf.repository;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import net.atos.wolf.data.Action;
-import net.atos.wolf.data.Book;
-import net.atos.wolf.data.Item;
-import net.atos.wolf.data.Section;
+import net.atos.wolf.data.*;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -34,6 +31,10 @@ public class BookRepository {
                 item.image(getItemImage(item.image()));
             }
 
+            for (KaiSkill skill : book.skills()) {
+                skill.image(getItemImage(skill.image()));
+            }
+
         } catch (Exception e) {
             throw new RuntimeException("Could not load " + jsonFile + " file: ", e);
         }
@@ -42,7 +43,7 @@ public class BookRepository {
 
     private String getItemImage(String fileName) {
         try {
-            InputStream imageStream = BookRepository.class.getResourceAsStream("/img/items/" + fileName);
+            InputStream imageStream = BookRepository.class.getResourceAsStream("/img/" + fileName);
             return "data:image/svg+xml;base64," + Base64.getEncoder().encodeToString(imageStream.readAllBytes());
         } catch (Exception e) {
             LOG.debug("Could not resolve image ::= [{}]", fileName);
@@ -120,6 +121,19 @@ public class BookRepository {
         }
     }
 
+
+    private void addSkillToAction(Section section) {
+        for (Action action : section.actions()) {
+            if (action.skillId() != null) {
+                for (KaiSkill skill : book.skills()) {
+                    if (skill.id().equals(action.skillId())) {
+                        action.skill(skill);
+                    }
+                }
+            }
+        }
+    }
+
     /**
      * Loads an unmodified section from the book.
      *
@@ -147,8 +161,42 @@ public class BookRepository {
         replaceImageVariable(s);
         addItemToAction(s);
         addWeaponToAction(s);
+        addSkillToAction(s);
         return s;
     }
 
+    public List<KaiSkill> getKaiSkills() {
+        return new ArrayList<>(book.skills());
+    }
 
+    public List<KaiSkill> getWeaponKaiSkills() {
+
+        List<KaiSkill> weaponSkills = new ArrayList<>();
+
+        for (KaiSkill skill : book.skills()) {
+            if (skill.weaponSkill()) {
+                weaponSkills.add(skill);
+            }
+        }
+
+        return weaponSkills;
+    }
+
+    public List<Item> getWeapons() {
+
+        List<Item> itemList = new ArrayList<>();
+
+        for (Item items : book.items()) {
+            if (items.isWeapon()) {
+                itemList.add(items);
+            }
+        }
+        return itemList;
+    }
+
+    public List<Item> getItems() {
+
+
+        return new ArrayList<>(book.items());
+    }
 }

@@ -23,10 +23,12 @@ public class Action {
     private ActionType type;
     private boolean mandatory;
     private Integer targetSection;
+
     private KaiSkill skill;
+
+    private String skillId;
     private String text;
     private Item weapon;
-
     private String weaponId;
     private SpecialItem specialItem;
     private String value;
@@ -54,6 +56,7 @@ public class Action {
         this.mandatory = action.mandatory;
         this.targetSection = action.targetSection;
         this.skill = action.skill;
+        this.skillId = action.skillId;
         this.text = action.text;
         this.weapon = action.weapon;
         this.weaponId = action.weaponId;
