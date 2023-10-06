@@ -5,9 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-
 import lombok.extern.slf4j.Slf4j;
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,10 +46,6 @@ public class Character {
      */
     private List<Item> items = new ArrayList<>();
 
-    /**
-     * Creates a new list for the SpecialItems
-     */
-    private List<SpecialItem> specialItemsList = new ArrayList<>();
     /**
      * Creates a new list for the skills
      */

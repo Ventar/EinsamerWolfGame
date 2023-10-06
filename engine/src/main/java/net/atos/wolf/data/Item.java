@@ -34,10 +34,11 @@ public class Item extends GameObject {
     @Getter
     private Integer modificationValue;
 
-
     @Setter
     @Getter
-    private Boolean isWeapon;
+    private boolean isWeapon;
 
-
+    @Getter
+    @Setter
+    private boolean takeSpaceInBackpack;
 }

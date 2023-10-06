@@ -10,13 +10,17 @@ import net.atos.wolf.service.gameengine.ActionType;
 public class TakeWeaponHandler extends AbstractActionHandler {
 
     @Override
+    protected boolean checkExecutable(GameSession session, Action action) {
+        return session.character().weaponOne() == null || session.character().weaponTwo() == null;
+    }
+
+    @Override
     public void handleAction(GameSession session, Action action) {
 
-        if (action.hand() == 1) {
+        if (session.character().weaponOne() == null) {
             session.character().weaponOne(action.weapon());
-        } else {
+        } else
             session.character().weaponTwo(action.weapon());
-        }
 
         session.modifiedAnswerOptions(session.section().actions());
         session.modifiedAnswerOptions().remove(action);

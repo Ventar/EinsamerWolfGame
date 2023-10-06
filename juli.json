@@ -6,14 +6,14 @@
       "usable": false,
       "text": "Axt",
       "tooltip": "Axt",
-      "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iaGVpZ2h0OiAyNHB4OyB3aWR0aDogMjRweDsiPjxwYXRoIGQ9Ik0wIDBoNTEydjUxMkgweiIgZmlsbD0idXJsKCNwYXR0ZXJuKSIgZmlsbC1vcGFjaXR5PSIxIj48L3BhdGg+PGcgY2xhc3M9IiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNCwtMikiIHN0eWxlPSIiPjxwYXRoIGQ9Ik00OTEuODQ0IDIyLjUzM2wtODMuNDIgMTQuODY1TDE5Ni41NzIgMjQ5LjI1YzMuMjYyIDQuODE1IDUuMzcgMTAuNzIgNS4zNyAxNi45MzIgMCA1Ljg2My0xLjcxIDExLjM1LTQuNjQzIDE1Ljk5Ni01LjA2NS0xLjYwNi0xMC40NDgtMi40NzctMTYuMDI3LTIuNDc3LTE1LjcyNCAwLTI5LjkwNCA2Ljg5LTM5LjY5IDE3Ljc5NmwtOS4xMTItOS4xMTMgMTcuMjM3LTE3LjIzN2MtNC41MTUtNS43NzItOC45MDctMTEuNjQ1LTEzLjE5LTE3LjZsLTE5LjQ0MyAxOS40NC0xMy4yMTUtMTMuMjE1IDIxLjgyOC0yMS44MjdjLTQuNDAzLTYuNTktOC42Ny0xMy4yNzgtMTIuNzkyLTIwLjA2OGwtNDAuODAyIDQwLjgwMyA1OC4zMTQgNTguMzE0Yy0xLjYxMyA1LjA3NS0yLjQ5IDEwLjQ3LTIuNDkgMTYuMDYzIDAgNy42NjYgMS42NSAxNC45NiA0LjU5MiAyMS41NjRsLTcyLjE0IDcyLjE0LTE0LjU2LTE0LjU2TDIxLjAxMyA0MzdsMTQuNTU4IDE0LjU2LTguNjA3IDguNjA4IDI3LjI0NiAyNy4yNDYgOC42MDYtOC42MSAxNC41NiAxNC41NiAyNC43OTgtMjQuOC0xNC41NTctMTQuNTU2IDcyLjE1OC03Mi4xNmM2LjU4NiAyLjkyMiAxMy44NTggNC41NjIgMjEuNDk4IDQuNTYyIDUuNTkzIDAgMTAuOTg4LS44NzcgMTYuMDYzLTIuNDlsNTguMzYzIDU4LjM2M0wyOTYuNSA0MDEuNDhjLTYuNzk3LTQuMTI3LTEzLjQ4Ni04LjM5NS0yMC4wNjgtMTIuNzkzbC0yMS44MyAyMS44M0wyNDEuMzkgMzk3LjNsMTkuNDQyLTE5LjQ0Yy01Ljk2Mi00LjI5LTExLjgzNS04LjY4My0xNy42MDMtMTMuMTk0bC0xNy4yMzggMTcuMjM4LTkuMTYtOS4xNmMxMC45MDUtOS43ODUgMTcuNzk1LTIzLjk2NSAxNy43OTUtMzkuNjkgMC01LjM0Ni0uODA2LTEwLjUxLTIuMjg1LTE1LjM5IDQuNzAzLTMuMDQgMTAuMjg4LTQuODE3IDE2LjI2NS00LjgxNiA2LjIxIDAgMTEuNzc2IDEuNzcgMTYuNTIgNC45NTVMNDc2Ljk4IDEwNS45NWwxNC44NjQtODMuNDE3em0tNjYuMjI3IDUzLjAxMmwxMy4yMTUgMTMuMjE1LTE5MS42ODQgMTkxLjY4LTEzLjIxNC0xMy4yMTNMNDI1LjYxNyA3NS41NDV6TTE4MS4yNzMgMjk4LjM5YzE5LjI1NyAwIDM0LjY2NSAxNS40MSAzNC42NjUgMzQuNjY1IDAgMTkuMjU2LTE1LjQwOCAzNC42NjYtMzQuNjY1IDM0LjY2Ni0xOS4yNTYgMC0zNC42NjYtMTUuNDEtMzQuNjY2LTM0LjY2NXMxNS40MS0zNC42NjYgMzQuNjY2LTM0LjY2NnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMSI+PC9wYXRoPjwvZz48L3N2Zz4="
+      "image": "axe.svg"
     },
     "weaponTwo": {
       "id": "BROAD_SWORD",
       "usable": false,
       "text": "Breitschwert",
       "tooltip": "Breitschwert",
-      "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iaGVpZ2h0OiAyNHB4OyB3aWR0aDogMjRweDsiPjxwYXRoIGQ9Ik0wIDBoNTEydjUxMkgweiIgZmlsbD0idXJsKCNwYXR0ZXJuKSIgZmlsbC1vcGFjaXR5PSIxIj48L3BhdGg+PGcgY2xhc3M9IiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNCwtMikiIHN0eWxlPSIiPjxwYXRoIGQ9Ik00OTEuODQ0IDIyLjUzM2wtODMuNDIgMTQuODY1TDE5Ni41NzIgMjQ5LjI1YzMuMjYyIDQuODE1IDUuMzcgMTAuNzIgNS4zNyAxNi45MzIgMCA1Ljg2My0xLjcxIDExLjM1LTQuNjQzIDE1Ljk5Ni01LjA2NS0xLjYwNi0xMC40NDgtMi40NzctMTYuMDI3LTIuNDc3LTE1LjcyNCAwLTI5LjkwNCA2Ljg5LTM5LjY5IDE3Ljc5NmwtOS4xMTItOS4xMTMgMTcuMjM3LTE3LjIzN2MtNC41MTUtNS43NzItOC45MDctMTEuNjQ1LTEzLjE5LTE3LjZsLTE5LjQ0MyAxOS40NC0xMy4yMTUtMTMuMjE1IDIxLjgyOC0yMS44MjdjLTQuNDAzLTYuNTktOC42Ny0xMy4yNzgtMTIuNzkyLTIwLjA2OGwtNDAuODAyIDQwLjgwMyA1OC4zMTQgNTguMzE0Yy0xLjYxMyA1LjA3NS0yLjQ5IDEwLjQ3LTIuNDkgMTYuMDYzIDAgNy42NjYgMS42NSAxNC45NiA0LjU5MiAyMS41NjRsLTcyLjE0IDcyLjE0LTE0LjU2LTE0LjU2TDIxLjAxMyA0MzdsMTQuNTU4IDE0LjU2LTguNjA3IDguNjA4IDI3LjI0NiAyNy4yNDYgOC42MDYtOC42MSAxNC41NiAxNC41NiAyNC43OTgtMjQuOC0xNC41NTctMTQuNTU2IDcyLjE1OC03Mi4xNmM2LjU4NiAyLjkyMiAxMy44NTggNC41NjIgMjEuNDk4IDQuNTYyIDUuNTkzIDAgMTAuOTg4LS44NzcgMTYuMDYzLTIuNDlsNTguMzYzIDU4LjM2M0wyOTYuNSA0MDEuNDhjLTYuNzk3LTQuMTI3LTEzLjQ4Ni04LjM5NS0yMC4wNjgtMTIuNzkzbC0yMS44MyAyMS44M0wyNDEuMzkgMzk3LjNsMTkuNDQyLTE5LjQ0Yy01Ljk2Mi00LjI5LTExLjgzNS04LjY4My0xNy42MDMtMTMuMTk0bC0xNy4yMzggMTcuMjM4LTkuMTYtOS4xNmMxMC45MDUtOS43ODUgMTcuNzk1LTIzLjk2NSAxNy43OTUtMzkuNjkgMC01LjM0Ni0uODA2LTEwLjUxLTIuMjg1LTE1LjM5IDQuNzAzLTMuMDQgMTAuMjg4LTQuODE3IDE2LjI2NS00LjgxNiA2LjIxIDAgMTEuNzc2IDEuNzcgMTYuNTIgNC45NTVMNDc2Ljk4IDEwNS45NWwxNC44NjQtODMuNDE3em0tNjYuMjI3IDUzLjAxMmwxMy4yMTUgMTMuMjE1LTE5MS42ODQgMTkxLjY4LTEzLjIxNC0xMy4yMTNMNDI1LjYxNyA3NS41NDV6TTE4MS4yNzMgMjk4LjM5YzE5LjI1NyAwIDM0LjY2NSAxNS40MSAzNC42NjUgMzQuNjY1IDAgMTkuMjU2LTE1LjQwOCAzNC42NjYtMzQuNjY1IDM0LjY2Ni0xOS4yNTYgMC0zNC42NjYtMTUuNDEtMzQuNjY2LTM0LjY2NXMxNS40MS0zNC42NjYgMzQuNjY2LTM0LjY2NnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMSI+PC9wYXRoPjwvZz48L3N2Zz4="
+      "image": "hazard-sign.svg"
     },
     "hasBackpack": true,
     "hasBaseBackpack": true,
@@ -23,16 +23,42 @@
         "usable": true,
         "modifiedAttribute": "ENDURANCE",
         "modificationValue": 4,
-        "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iaGVpZ2h0OiAyNHB4OyB3aWR0aDogMjRweDsiPjxwYXRoIGQ9Ik0wIDBoNTEydjUxMkgweiIgZmlsbD0idXJsKCNwYXR0ZXJuKSIgZmlsbC1vcGFjaXR5PSIxIj48L3BhdGg+PGcgY2xhc3M9IiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNCwtMikiIHN0eWxlPSIiPjxwYXRoIGQ9Ik0xOTIgMTcuNjVsMTYgMzRoOTZsMTYtMzR6bS05IDUzdjUxLjk1aDMydjIyLjJjLTE5LjMtOS00Mi42LTguMi01NS04LjItNTAuNSAwLTgyLjEgMjEuOS05OS41IDQ4LTE3LjQgMjYuMS0yMS41IDU1LjUtMjEuNSA3MyAwIDUyLjUgMzguNiA5NC40IDgzLjMgMTMxQzE2NyA0MjUuMSAyMTkgNDU3LjMgMjQ5LjYgNDg4bDYuNCA2LjMgNi40LTYuM2MzMC42LTMwLjcgODIuNi02Mi45IDEyNy4zLTk5LjQgNDQuNy0zNi42IDgzLjMtNzguNSA4My4zLTEzMSAwLTE3LjUtNC4xLTQ2LjktMjEuNS03M3MtNDktNDgtOTkuNS00OGMtMTIuNCAwLTM1LjctLjgtNTUgOC4ydi0yMi4yaDMyVjcwLjY1em0xOCAxOGgxMTB2MTUuOTVIMjAxem0zMiAzMy45NWg0NnY2MC43bDE1LjQtMTUuM2MxMS43LTExLjggNDEuNi0xMy40IDU3LjYtMTMuNCA0NS41IDAgNjkuOSAxOC4xIDg0LjUgNDAgMTQuNiAyMS45IDE4LjUgNDguNSAxOC41IDYzIDAgNDMuNS0zMy40IDgxLjctNzYuNyAxMTctNDAuNyAzMy40LTg5IDYzLjUtMTIyLjMgOTQuNy0zMy4zLTMxLjItODEuNi02MS4zLTEyMi4zLTk0LjctNDMuMy0zNS4zLTc2LjctNzMuNS03Ni43LTExNyAwLTE0LjUgMy45LTQxLjEgMTguNS02M3MzOS00MCA4NC41LTQwYzE2IDAgNDUuOSAxLjYgNTcuNiAxMy40bDE1LjQgMTUuM3ptLTQxIDcxYy02NCAwLTgwIDQ4LTgwIDgwIDAgNjQgODAgOTYgMTQ0IDE0NCA2NC00OCAxNDQtODAgMTQ0LTE0NCAwLTMyLTE2LTgwLTgwLTgwLTMyIDAtNDggMC02NCA0OC0xNi00OC0zMi00OC02NC00OHptMTI1LjcgMTQuNmMzLjYtLjEgNS45LjMgNS44LjYtMTYuNSA3LjMtMzMuOSAyNC40LTQ0LjYgNDEuNyAwIDAtMy4yLTE3LjcgOS45LTMxLjkgNy40LTguMSAyMS4xLTEwLjMgMjguOS0xMC40ek0xOTIgMjA5LjZjLTI0IDIxLjUtNDEuMyA1OC4yLTQ3LjIgOTAuNCAwIDAtMTkuNS0yMy43LTcuNy01My40IDkuOC0yNC41IDUwLjEtMzYuNSA1NC45LTM3eiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIxIj48L3BhdGg+PC9nPjwvc3ZnPg==",
+        "image": "hazard-sign.svg",
         "text": "Laumspur-Trank"
       }
     ],
     "skills": [
-      "THOUGHT_RAY",
-      "SIXTH_SENSE",
-      "ARMORY_BATTLE_STAFF",
-      "MIND_OVER_MATTER",
-      "HUNT"
+      {
+        "id": "SIXTH_SENSE",
+        "text": "Sechster-Sinn",
+        "tooltip": "<p>Diese Fertigkeit kann einen Kai-Lord vor drohender Gefahr warnen.</p><p> Sie kann auch Aufschluss über die wahren Absichten eines Fremden oder den Nutzen eines unbekannten Objekts geben.</p>",
+        "image": "hazard-sign.svg"
+      },
+      {
+        "id": "TRACKING",
+        "text": "Spurensuche",
+        "tooltip": "<p>Diese Disziplin ermöglicht es einem Kai-Lord, sich in der Wildnis für den richtigen Weg zu entscheiden, den Aufenthaltsort einer Person oder eines Objekts in einer Stadt zu bestimmen.</p><p>Und die Geheimnisse von Fußspuren und Fährten zu entschlüsseln.</p>",
+        "image": "hazard-sign.svg"
+      },
+      {
+        "id": "THOUGHT_RAY",
+        "text": "Gedankenstrahl",
+        "tooltip": "<p>Der Gedankenstrahl ermöglicht es einem Kai-Lord, seinen Gegner mit der Kraft seines Geistes anzugreifen.</p> <p>Dies kann er während eines normalen, mit Waffen geführten Kampfes tun und so seine KAMPFSTÄRKE für die Dauer des Kampfes um 2 Punkte erhöhen. Nicht alle Kreaturen, denen man in diesem Abenteuer begegnet, können durch den Gedankenstrahl verletzt werden.</p> <p>Du wirst erfahren, falls eine Kreatur immun dagegen ist.</p><p> Wenn du diese Fertigkeit wählst, erhälst du im Kampf <span class='text-success'><b>+2 Kampfstärke</b></span></p> ",
+        "image": "hazard-sign.svg"
+      },
+      {
+        "id": "MIND_OVER_MATTER",
+        "text": "Geist über Materie",
+        "tooltip": "Die Beherrschung dieser Disziplin ermöglicht es einem Kai-Lord, kleine Objekte durch pure Konzentration zu bewegen. ",
+        "image": "hazard-sign.svg"
+      },
+      {
+        "id": "ARMORY_DAGGER",
+        "weaponSkill": true,
+        "text": "Waffenkunde-Dolch",
+        "tooltip": "<p>Ab dem Eintritt in die Kai-Abtei wird jeder Initiand darin geschult, einen Waffentyp meisterlich zu beherrschen.</p><p> Wenn die Waffenkunde zu deinen Kai-Disziplinen gehört, dann ermittle eine Zufallszahl und suche anschließend aus der Liste weiter unten die Waffe heraus, die der ermittelten Zahl entspricht.</p><p> Das ist die Waffe, mit der du ausgebildet worden bist.</p><p> Wenn du mit dieser Waffe in der Hand in einen Kampf ziehst, erhöht sich für die Dauer des Kampfes deine <span class='text-success'><b>+2 KAMPFSTÄRKE 2 Punkte.</b></span></p> ",
+        "image": "health-potion.svg"
+      }
     ],
     "gold": {
       "name": "GOLD",

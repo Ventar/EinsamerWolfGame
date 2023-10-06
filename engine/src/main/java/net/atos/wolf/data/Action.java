@@ -2,7 +2,6 @@ package net.atos.wolf.data;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.Getter;
 import lombok.Setter;
 import net.atos.wolf.service.gameengine.ActionType;
@@ -30,7 +29,6 @@ public class Action {
     private String text;
     private Item weapon;
     private String weaponId;
-    private SpecialItem specialItem;
     private String value;
     private String attribute;
     private Item item;
@@ -40,7 +38,6 @@ public class Action {
     private Boolean noOtherOption;
     private Battle battle;
     private Integer hand;
-    private BaseItems baseItems;
     private Integer battleStrengthModifier;
 
     public Action() {
@@ -60,13 +57,13 @@ public class Action {
         this.text = action.text;
         this.weapon = action.weapon;
         this.weaponId = action.weaponId;
-        this.specialItem = action.specialItem;
+
         this.value = action.value;
         this.attribute = action.attribute;
         this.item = action.item;
         this.itemId = action.itemId;
-        this.baseItems = action.baseItems;
-        this.battleStrengthModifier =action.battleStrengthModifier;
+
+        this.battleStrengthModifier = action.battleStrengthModifier;
         if (action.randomSection != null) {
             this.randomSection = new ArrayList<>();
             for (Integer integer : action.randomSection) {
@@ -87,34 +84,32 @@ public class Action {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Action action = (Action) o;
-        return mandatory == action.mandatory && targetSection == action.targetSection && numberOfSkills == action.numberOfSkills && noOtherOption == action.noOtherOption && hand == action.hand && type == action.type && skill == action.skill && Objects.equals(text, action.text) && weapon == action.weapon && specialItem == action.specialItem && Objects.equals(value, action.value) && Objects.equals(attribute, action.attribute) && item == action.item && Objects.equals(randomSection, action.randomSection) && Objects.equals(battle, action.battle);
+        return mandatory == action.mandatory && targetSection == action.targetSection && numberOfSkills == action.numberOfSkills && noOtherOption == action.noOtherOption && hand == action.hand && type == action.type && skill == action.skill && Objects.equals(text, action.text) && weapon == action.weapon && Objects.equals(value, action.value) && Objects.equals(attribute, action.attribute) && item == action.item && Objects.equals(randomSection, action.randomSection) && Objects.equals(battle, action.battle);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(type, mandatory, targetSection, skill, text, weapon, specialItem, value, attribute, item, randomSection, numberOfSkills, noOtherOption, battle, hand,baseItems);
+        return Objects.hash(type, mandatory, targetSection, skill, text, weapon, value, attribute, item, randomSection, numberOfSkills, noOtherOption, battle, hand);
     }
 
 
     @Override
     public String toString() {
         return "Action{" +
-                       "type=" + type +
-                       ", mandatory=" + mandatory +
-                       ", targetSection=" + targetSection +
-                       ", skill=" + skill +
-                       ", text='" + text + '\'' +
-                       ", weapon=" + weapon +
-                       ", specialItem=" + specialItem +
-                       ", value='" + value + '\'' +
-                       ", attribute='" + attribute + '\'' +
-                       ", item=" + item +
-                       ", randomSection=" + randomSection +
-                       ", numberOfSkills=" + numberOfSkills +
-                       ", noOtherOption=" + noOtherOption +
-                       ", battle=" + battle +
-                       ", hand=" + hand +
-                       ", baseItems=" + baseItems+
-                       '}';
+                "type=" + type +
+                ", mandatory=" + mandatory +
+                ", targetSection=" + targetSection +
+                ", skill=" + skill +
+                ", text='" + text + '\'' +
+
+                ", value='" + value + '\'' +
+                ", attribute='" + attribute + '\'' +
+                ", item=" + item +
+                ", randomSection=" + randomSection +
+                ", numberOfSkills=" + numberOfSkills +
+                ", noOtherOption=" + noOtherOption +
+                ", battle=" + battle +
+                ", hand=" + hand +
+                '}';
     }
 }

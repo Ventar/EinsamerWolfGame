@@ -7,14 +7,17 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@ToString
+@ToString(callSuper = true)
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = true)
 public class KaiSkill extends GameObject {
 
     @Getter
     @Setter
     private boolean weaponSkill;
+
+
+
 
 }

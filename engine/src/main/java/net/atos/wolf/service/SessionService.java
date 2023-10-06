@@ -50,7 +50,7 @@ public class SessionService {
         savedGameSession.character(currentGameSession.character());
         
         try {
-            registry.jsonMapper().writerWithDefaultPrettyPrinter().writeValue(new File(name + ".lwc"),
+            registry.jsonMapper().writerWithDefaultPrettyPrinter().writeValue(new File(name + ".json"),
                                                                               savedGameSession);
         } catch (Exception e) {
             LOG.debug("Could not save GameSession with ID ::=[{}]: ", id, e);

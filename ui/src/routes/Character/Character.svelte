@@ -59,47 +59,10 @@
     const res = await fetch("http://" + host + ":8080/session/save/", {
       method: "POST",
       body: JSON.stringify({
-        name: character,
+        name: "juli",
         id: gameSession.id,
       }),
     });
-  }
-
-  async function translate(keyList) {
-    if (Array.isArray(keyList)) {
-      if (keyList[0].id) {
-        var keys = keyList.map(function (item) {
-          return item["id"];
-        });
-
-        console.log(keys);
-
-        const res = await fetch("http://" + host + ":8080/translate/", {
-          method: "POST",
-          body: JSON.stringify({
-            keys: keys,
-          }),
-        });
-
-        return await res.json();
-      } else {
-        const res = await fetch("http://" + host + ":8080/translate/", {
-          method: "POST",
-          body: JSON.stringify({
-            keys: keyList,
-          }),
-        });
-        return await res.json();
-      }
-    } else {
-      const res = await fetch("http://" + host + ":8080/translate/", {
-        method: "POST",
-        body: JSON.stringify({
-          keys: [keyList],
-        }),
-      });
-      return await res.json();
-    }
   }
 
   /**
@@ -124,7 +87,7 @@
     const res = await fetch("http://" + host + ":8080/weapon/drop/", {
       method: "POST",
       body: JSON.stringify({
-        Weapon: weapon,
+        weapon: weapon,
         id: gameSession.id,
       }),
     });
@@ -144,22 +107,7 @@
 
     gameSession = await res.json();
   }
-
-  /**
-   * @param {int} position
-   */
-   async function dropSkill(position) {
-    const res = await fetch("http://" + host + ":8080/kaiskill/drop/", {
-      method: "POST",
-      body: JSON.stringify({
-        position: position,
-        id: gameSession.id,
-      }),
-    });
-
-    gameSession = await res.json();
-  }
-
+  
 </script>
 
 <div class="bs-docs-section">
@@ -256,6 +204,18 @@
                 alt="icon" />
               <span style="margin-left: 15px; font-weight: bold;">Speichern</span>
             </div>
+            <button
+            on:click={() => saveGameSession() }
+            type="button"
+            class="btn btn-dark btn-sm"
+            style="max-width: 32px;">
+            <img
+              width="16px"
+              height="16px"
+              style="margin-right: 10px"
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iaGVpZ2h0OiAxNnB4OyB3aWR0aDogMTZweDsiPjxwYXRoIGQ9Ik0wIDBoNTEydjUxMkgweiIgZmlsbD0idXJsKCNwYXR0ZXJuKSIgZmlsbC1vcGFjaXR5PSIxIj48L3BhdGg+PGcgY2xhc3M9IiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNCwtMikiIHN0eWxlPSIiPjxwYXRoIGQ9Ik0xODkuMDE2IDE3Ljc4M2wtMTUuNzQgMi43OCAxMy43ODggNzguMzggMTUuNzQtMi43NzItMTMuNzg4LTc4LjM4N3ptODkgMTcuODJjLTYuMzkgOC4xNC04LjU5MiAxNC45MS04LjI3MiAyMC44NC4zOSA3LjIxIDQuNDcgMTQuNTYgMTEuODkgMjIuMzEgMTEuMzUgMTEuODQgMjkuODYgMjMuNTQgNDguMTEgMzUuNjhsLTIgMTMuNjU4LTMuNzcuODAyLTguMjYgMS43Mi4wNTIuMDYtMTMzLjc5IDI5Yy0yLjY4IDUtNC4xNCAxMi43OC0zLjI1IDIwLjM5Ljg0IDcuMjYgMy43NCAxMy41OSA3IDE3LjEzbDExNi44MzgtMjUuMjUgNS43OSAxMy43NC0xMDMuNTggNjlhMjcuNzYgMjcuNzYgMCAwIDAgMi4zMTIgMTMuMjZjLjIuNDcuNDEuOTIuNjMgMS4zOGEzNS4zNyAzNS4zNyAwIDAgMCAyLjMgNC4wMmMzLjg0IDUuOTIgOS41NSAxMC40MyAxNC4xOSAxMi4xNWwxMDguMzU4LTczIDEwLjEzIDExLjA4LTg0LjY3OCAxMDQuMDNjMS4zNSA0LjYxIDUuMjcgMTAuMzcgMTEgMTQuNjkgNS45MiA0LjQ5IDEzIDYuOTQgMTguNjYgNi44NGw4Mi4xNy05OS4zOCAxMi44OTggNy42OS00MiAxMDMuNzJjMi44MyAzLjkgOC40NCA3Ljg2IDE1LjM4IDEwIDcuMjMgMi4yMiAxNS4xIDIuMjEgMjAuNTIuNDlsNTcuMTkyLTEzNy41OC4wNS0uMTNjNy4yNC0xOC4zIDI4LTI5Ljg2IDU2LjI2LTM5LjE5IDEuMjYtLjQxNyAyLjU1OC0uODIgMy44NTQtMS4yMjdWNTYuNTFhMzMwLjA2IDMzMC4wNiAwIDAgMS04My44MzYgNDkuNTYybC0uMDUuMDVhMTIwLjIyIDEyMC4yMiAwIDAgMSAxNS45MDIgMTUuMjFjOS44OSAxMS42NiAxNS43OSAyNS40MyAxNCA0MC43bC0xNS0xLjc1YzEuMjItMTAuNjItMi4zODItMTkuNTQtMTAuNTMyLTI5LjE1cy0yMC45Mi0xOS4yOC0zNi4yNy0yOS4yN2MtMjguOTktMTguODQtNjYuODk4LTM4LjkyLTEwMC4xOTgtNjYuMjZ6bS0yMDEuMTQgMzEuNjNsLTEwLjQ2MiAxMi4xIDYyLjA3IDUzLjY2IDEwLjQ2LTEyLjEtNjIuMDctNTMuNjZ6bS00NC4wNCAxMTAuMzFsLS4zMSAxNiA3MC4xMzggMS40LjI4LTE2LjA1LTcwLjEwOC0xLjM1em05MS45NyA1NS42MDdhMjcuNzUgMjcuNzUgMCAwIDAtMjEuNjMgNDQuODkzbC01Mi44NjIgMTYxLjMxYTI3Ljg3IDI3Ljg3IDAgMSAwIDI4LjUyMiA5LjM3bDUyLjcxLTE2MC44NmEyNy43NSAyNy43NSAwIDAgMCAxLjQ3LTUzLjUzIDI3Ljc1IDI3Ljc1IDAgMCAwLTguMjEtMS4xODN6TTE4IDI3My4wOTN2NTEuMjE3bDE0Ljc1NiA0LjgyMmE4LjUyIDguNTIgMCAxIDEtNS4zIDE2LjE5TDE4IDM0Mi4yMzJ2NTMuMjZsMjMuMDE2IDcuNTUgMzYuMjEtMTEwLjQ5TDE4IDI3My4wOTJ6bTExNS4xMTUgNjAuNzhsLTIyLjYyIDY5IDE0LjE0IDQuNjMgMjIuNjItNjktMTQuMTQtNC42M3ptMjkuMzQgOS42MmwtMjIuNjIgNjkgMTQuMTggNC42MyAyMi42Mi02OS0xNC4xOC00LjYzem0yOS4zNCA5LjYxbC0yMi42MiA2OSAxNC4xNCA0LjYzIDIyLjYyLTY5LTE0LjE0LTQuNjN6bTI5LjQzIDkuNjFsLTIyLjYyIDY5IDE0LjE0IDQuNjI4IDIyLjYyLTY5LTE0LjE0LTQuNjI4em0yOS4yNiA5LjYybC0yMi42MiA2OSAxNC4yMiA0LjYxIDIyLjYyLTY5LTE0LjIyLTQuNjF6bTI5LjQzIDkuNjFsLTIyLjYyIDY5IDE0LjE0IDQuNjMgMjIuNjItNjktMTQuMTQtNC42M3ptMjkuMzEgOS42MWwtMjIuNjIgNjkgMTQuMTQgNC42MyAyMi42Mi02OS0xNC4xNC00LjYzem0zMS44OSAxLjU3bC0yOS4yNSA4OS4yN2E0NyA0NyAwIDEgMCAyOS4yNS04OS4yN3oiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMSI+PC9wYXRoPjwvZz48L3N2Zz4="
+              alt="icon" />
+          </button>
           </div>
         </div>
       </div>
@@ -305,36 +265,18 @@
         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iaGVpZ2h0OiA0OHB4OyB3aWR0aDogNDhweDsiPjxkZWZzPjxmaWx0ZXIgaWQ9InNoYWRvdy0xIiBoZWlnaHQ9IjMwMCUiIHdpZHRoPSIzMDAlIiB4PSItMTAwJSIgeT0iLTEwMCUiPjxmZUZsb29kIGZsb29kLWNvbG9yPSJyZ2JhKDE1NSwgMTU1LCAxNTUsIDEpIiByZXN1bHQ9ImZsb29kIj48L2ZlRmxvb2Q+PGZlQ29tcG9zaXRlIGluPSJmbG9vZCIgaW4yPSJTb3VyY2VHcmFwaGljIiBvcGVyYXRvcj0iYXRvcCIgcmVzdWx0PSJjb21wb3NpdGUiPjwvZmVDb21wb3NpdGU+PGZlR2F1c3NpYW5CbHVyIGluPSJjb21wb3NpdGUiIHN0ZERldmlhdGlvbj0iMTAiIHJlc3VsdD0iYmx1ciI+PC9mZUdhdXNzaWFuQmx1cj48ZmVPZmZzZXQgZHg9IjIwIiBkeT0iMjAiIHJlc3VsdD0ib2Zmc2V0Ij48L2ZlT2Zmc2V0PjxmZUNvbXBvc2l0ZSBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJvZmZzZXQiIG9wZXJhdG9yPSJvdmVyIj48L2ZlQ29tcG9zaXRlPjwvZmlsdGVyPjxyYWRpYWxHcmFkaWVudCBpZD0iZGVsYXBvdWl0ZS1iYWNrcGFjay1ncmFkaWVudC0wIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTU2ZGUyIiBzdG9wLW9wYWNpdHk9IjEiPjwvc3RvcD48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxNTZkZTIiIHN0b3Atb3BhY2l0eT0iMSI+PC9zdG9wPjwvcmFkaWFsR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IHgxPSIwIiB4Mj0iMSIgeTE9IjAiIHkyPSIxIiBpZD0iZGVsYXBvdWl0ZS1iYWNrcGFjay1ncmFkaWVudC0xIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjOTU5NDk0IiBzdG9wLW9wYWNpdHk9IjEiPjwvc3RvcD48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxnIGNsYXNzPSIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsMCkiIHN0eWxlPSIiPjxwYXRoIGQ9Ik0xODYuNDM4IDIwLjU2bC0xMy4xODQgMjYuMzY1YzYuOC0uMjYgMTMuNjI2LS40ODggMjAuNDctLjY4NmwzLjg0LTcuNjhoMTE2Ljg3NGwzLjc3IDcuNTRjNi44MzguMTg3IDEzLjY1OC40MDggMjAuNDU2LjY2bC0xMy4xMDItMjYuMkgxODYuNDM3em02OS41NiA0Mi43NDJjLTQ1Ljc1Ny4wNTYtOTEuNDUyIDEuNTY2LTEzNS4zOCA0LjM2My0zLjI0IDUwLjU4LTguNCAxMDAuOTg3LS43ODYgMTQ1LjgyNCA4OS4yOTcgMTIuMzk1IDE4MC4xMDIgMTIuOTg1IDI3Mi43NjQtLjA1NCA3LjA1NS0zMC45ODggNS4xMTctODQuNjgtMS4wNC0xNDUuODktNDMuOTc0LTIuODkzLTg5LjczLTQuMy0xMzUuNTU4LTQuMjQ0em0xNTMuNzgzIDUuNTRjNi40MiA2NC4xMiA5LjExMyAxMTkuODI1LTEuMTM1IDE1NS4yMmwtMS42MSA1LjU2LTUuNzI2Ljg0MmMtOTguOCAxNC41MjgtMTk1LjYxMyAxMy44MS0yOTAuNjA1LjAwMmwtNi4yODUtLjkxNC0xLjI0Ni02LjIzYy05Ljg5LTQ5LjQ5LTQuMDg1LTEwMi43ODUtLjY2NC0xNTQuNDItNC44OS4zNTQtOS43NjUuNzItMTQuNjAyIDEuMTA3LTguNTk2IDU4LjU2OC05LjM5IDExNi45NTctLjA1IDE3NS4yOTIgMTEwLjI0IDEyLjA4OCAyMjIuMjc1IDEyLjIwNSAzMzYuMjAzLS4wMSA4LjUwMi01Ny44MyA4LjI5LTExNi4yNS0uMDE3LTE3NS4zMTMtNC43MjUtLjQtOS40ODUtLjc3Ni0xNC4yNjItMS4xNHpNMjU1Ljk2NiA5Mi4zYzMyLjUyNi0uMDI1IDY1LjA2NyAyLjc0NiA5Ny41NzQgOC4zOWw3LjQ2IDEuMjk1djcuNTcyYzAgMTUuNTU0IDEuNjgzIDM1LjEwNS0xMi42OSA1MC4yNS05LjkxMiAxMC40NDQtMjUuNjU1IDE3LjMzNy01MS4zMSAyMC41ODV2MTguMTY0aC04MnYtMTguNDUyYy0yMy45OTItMy4zNy0zOS4zNTItMTAuMTc1LTQ5LjM2My0yMC4xODVDMTUwLjgwNyAxNDUuMDkzIDE1MSAxMjUuNTYgMTUxIDEwOS41NnYtNy41OTRsNy40ODQtMS4yNzhjMzIuNDQ0LTUuNTQgNjQuOTU1LTguMzYyIDk3LjQ4LTguMzg2em0uMDEyIDE3Ljk5NGMtMjguOTYuMDIyLTU3LjkxMyAyLjQ0NC04Ni44NTggNi45OTYuMjY1IDEyLjI4IDEuNjM1IDIyLjI5NiA5LjI0MyAyOS45MDQgNS45MTQgNS45MTQgMTYuOTUyIDExLjQxNiAzNi42MzcgMTQuNTgydi0yOS4yMmg4MnYyOS41MWMyMS4zNjctMy4xMTUgMzIuNjYtOC43NTUgMzguMjU0LTE0LjY1IDcuMDMzLTcuNDEgNy42OTYtMTcuNTAyIDcuNzMtMzAuMTI0LTI5LTQuNjMtNTguMDA2LTcuMDItODcuMDA3LTYuOTk4ek0yMzMgMTUwLjU2djMwaDQ2di0zMGgtNDZ6bTIwOS42NzQgOTIuNDJjLS41MDMgMy42MjUtMS4wNDIgNy4yNS0xLjYxIDEwLjg3LjIxNCAyLjM1Mi40MiA0LjcwNi42MyA3LjA2TDQ3MSAyOTAuMjEzdi0yMi4yNGwtMjguMzI2LTI0Ljk5NXptLTM3My40ODUuMTJMNDEgMjY3Ljk3M3YyMi4yNGwyOS4zMTgtMjkuMzE4Yy4yMDUtMi4zMjcuNDA2LTQuNjU1LjYxNi02Ljk4Mi0uNjE4LTMuNjA1LTEuMjAyLTcuMjEtMS43NDUtMTAuODEzem0zNTQuNjM0IDIwLjM5N2MtMTAuMjkgMS4wOS0yMC41NjQgMi4wNzYtMzAuODI0IDIuOTY3djc0LjA5NWgxNnY2NmgtMTZ2ODAuNjE1YzEwLjMxOC0uNjMzIDIwLjYzLTEuMzEzIDMwLjkyOC0yLjA4MiA5LjQ0NS03NC4wMSA2LjQ3OC0xNDcuNjk4LS4xMDQtMjIxLjU5NnptLTMzNS41NzYuMDNDODEuNzI1IDMzOC4wOSA3OC41OCA0MTIuMSA4OC4wNiA0ODUuMWMxMC4zMjQuNzkgMjAuNjM4IDEuNTA0IDMwLjk0IDIuMTQ1VjQwNi41NmgtMTZ2LTY2aDE2di03NC4wMjRjLTEwLjI2Ni0uOTAyLTIwLjUxNy0xLjkwMy0zMC43NTItMy4wMXptMjg2Ljc1MiA0LjRjLTEwLjAxNC43Ni0yMC4wMTQgMS40MjQtMzAgMS45OTJ2NzAuNjRoMzB2LTcyLjYzMnptLTIzOCAuMDg1djcyLjU0N2gzMHYtNzAuNTVjLTEwLjAxNS0uNTY4LTIwLjAxNC0xLjIzNy0zMC0xLjk5N3ptMTkwIDIuODI1Yy00Ny42NSAyLjE3My05NC45ODQgMi4xOS0xNDIgLjA3OHYxOS4zMTRjMjMuOTUtNS4xNjUgNDcuOC03LjY1MiA3MS41MTYtNy41OSAyMy42MzguMDYgNDcuMTQ1IDIuNjU0IDcwLjQ4NCA3LjYyNnYtMTkuNDN6TTY4LjA1IDI4OC42Mkw0MSAzMTUuNjd2NTYuODloMjMuMDZjLjM3Ni0yNy45ODcgMS44OC01NS45NzUgMy45OS04My45NHptMzc1Ljk0OC4wNDdjMi4xMiAyNy44NzIgMy42MSA1NS44MyAzLjk1NyA4My44OTJINDcxdi01Ni44OWwtMjcuMDAyLTI3LjAwM3ptLTE4Ny41MiAxMS45NWMtMjMuNjgtLjA2My00Ny40ODcgMi41NzctNzEuNDc4IDguMDUydjMxLjg5aDE2djE4LjQ0M2MxNy4wMzMgNS4zNDYgMzEuNzMgOC40OTMgNDYgOS40MjZ2LTIuODdoMTh2Mi44NjhjMTQuMjctLjkzMiAyOC45NjctNC4wOCA0Ni05LjQyNVYzNDAuNTZoMTZ2LTMxLjg2NmMtMjMuNDItNS4yNjctNDYuOTA3LTguMDE2LTcwLjUyMy04LjA3OHpNMTIxIDM1OC41NTh2MzBoMjJ2LTIzaDE4djIzaDIydi0zMGgtNjJ6bTIwOCAwdjMwaDIydi0yM2gxOHYyM2gyMnYtMzBoLTYyek0yMDEgMzc3Ljh2MjguNzZoLTE2djE1Ljg1N2M0OC41MjggMTAuODY1IDk1LjcxMyAxMC42NjQgMTQyIC4wNDVWNDA2LjU2aC0xNlYzNzcuOGMtMTYuMzMyIDQuNzQ3LTMxLjI4MyA3LjUyLTQ2IDguMzI2djExLjQzM2gtMTh2LTExLjQzNGMtMTQuNzE3LS44MDYtMjkuNjY4LTMuNTgtNDYtOC4zMjZ6TTQxIDM5MC41NnYxNGgyMy4xNGMtLjA5LTQuNjY3LS4xNDMtOS4zMzQtLjE2My0xNEg0MXptNDA3LjAxMiAwYy0uMDI3IDQuNjYzLS4wODMgOS4zMy0uMTggMTRINDcxdi0xNGgtMjIuOTg4ek0xMzcgNDA2LjU2djE5Ljc5OGM2LjEzNyA3LjIxNCAxMS4yMjIgOS43NyAxNC45MzQgOS44NDQgMy43MzQuMDc1IDguNjk3LTIuMTIyIDE1LjA2Ni05Ljc5VjQwNi41NmgtNnY3aC0xOHYtN2gtNnptMjA4IDB2MTkuNzk4YzYuMTM3IDcuMjE0IDExLjIyMiA5Ljc3IDE0LjkzNCA5Ljg0NCAzLjczNC4wNzUgOC42OTctMi4xMjIgMTUuMDY2LTkuNzlWNDA2LjU2aC02djdoLTE4di03aC02em0tMzA0IDE2djM1LjE1NGM1LjU5NiA1LjUxIDguNjc3IDguMjUgMTEuODQ2IDkuMzA2IDIuNDU0LjgxOCA3LjcxMyAxLjE1IDE1LjA0NSAxLjMxNy0xLjU0NC0xNS4yNS0yLjU4Ni0zMC41MS0zLjIwNC00NS43NzhINDF6bTQwNi4yNyAwYy0uNjI4IDE1LjIyNC0xLjY3NCAzMC40ODMtMy4yMSA0NS43OCA3LjM1OC0uMTY4IDEyLjYzNS0uNSAxNS4wOTQtMS4zMiAzLjE3LTEuMDU2IDYuMjUtMy43OTUgMTEuODQ2LTkuMzA2VjQyMi41NmgtMjMuNzN6TTE4NSA0NDAuODQydjQ5LjQ5OGM0Ny41NSAxLjUxIDk0Ljg3NyAxLjQ0NiAxNDItLjA3NFY0NDAuOWMtNDYuMzE2IDEwLjAzLTkzLjc0IDEwLjE4NS0xNDItLjA1N3ptLTQ4IDkuMTIzdjM4LjMxOGMxMC4wMS41NCAyMC4wMSAxLjAwOCAzMCAxLjQwOHYtMzkuNjc4Yy00Ljg2IDIuNzg2LTEwLjAxIDQuMjkzLTE1LjQzIDQuMTg0LTUuMTkyLS4xMDQtMTAuMDM2LTEuNjI0LTE0LjU3LTQuMjMyem0yMDggMHYzOS42NTRjMTAuMDEtLjQwMyAyMC4wMS0uODc4IDMwLTEuNDEydi0zOC4xOTRjLTQuODYgMi43ODYtMTAuMDEgNC4yOTMtMTUuNDMgNC4xODQtNS4xOTItLjEwNC0xMC4wMzYtMS42MjQtMTQuNTctNC4yMzJ6IiBmaWxsPSJ1cmwoI2RlbGFwb3VpdGUtYmFja3BhY2stZ3JhZGllbnQtMSkiIHN0cm9rZT0iIzRhNGE0YSIgc3Ryb2tlLW9wYWNpdHk9IjEiIHN0cm9rZS13aWR0aD0iNCIgZmlsdGVyPSJ1cmwoI3NoYWRvdy0xKSI+PC9wYXRoPjwvZz48L3N2Zz4=">
         <ul class="list-group list-group-flush">
           {#if gameSession.character.skills}
-            {#await translate(gameSession.character.skills)}
-              {#each gameSession.character.skills as skill}
-                {skill}<br />
-              {/each}
-            {:then translation}
-              {#each translation.translations as t, i}
-                <li class="list-group-item d-flex justify-content-between align-items-left">
-                  <span>
-                    <button
-                  on:click={() => dropSkill(i)}
-                  type="button"
-                  class="btn btn-dark btn-sm"
-                  style="max-width: 32px;">
-                  <img
-                    width="16px"
-                    height="16px"
-                    style="margin-right: 10px"
-                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iaGVpZ2h0OiAxNnB4OyB3aWR0aDogMTZweDsiPjxwYXRoIGQ9Ik0wIDBoNTEydjUxMkgweiIgZmlsbD0idXJsKCNwYXR0ZXJuKSIgZmlsbC1vcGFjaXR5PSIxIj48L3BhdGg+PGcgY2xhc3M9IiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNCwtMikiIHN0eWxlPSIiPjxwYXRoIGQ9Ik0yMC42MjUgMTZjLTEuNzQuMDUyLTIuOTU2LjM5NC0zLjU5NCAxLjAzLTEwLjIgMTAuMjAzIDU4LjY1IDE3MC44NSA3Ni41IDE3OC41IDUuMDIgMi4xNTIgMTUuODY1LTMuNTYzIDI4LjcyLTEzLjI4aC4wM0wxOTYgMjU2bC03My43MiA3My43NWMtMTIuODYzLTkuNzI2LTIzLjcyOC0xNS40MzMtMjguNzUtMTMuMjgtMTcuODUgNy42NS04Ni43IDE2OC4yOTctNzYuNSAxNzguNSAxMC4yMDMgMTAuMiAxNzAuODUtNTguNjUgMTc4LjUtNzYuNSAyLjE1My01LjAyMi0zLjU1NC0xNS44ODctMTMuMjgtMjguNzVMMjU2IDMxNmw3My43NSA3My43NWMtOS43MTcgMTIuODU1LTE1LjQzMiAyMy43LTEzLjI4IDI4LjcyIDcuNjUgMTcuODUgMTY4LjI5NyA4Ni43IDE3OC41IDc2LjUgMTAuMi0xMC4yMDMtNTguNjUtMTcwLjg1LTc2LjUtMTc4LjUtNS4wMi0yLjE1Mi0xNS44NjUgMy41NjMtMjguNzIgMTMuMjhMMzE2IDI1Nmw3My43NS03My43NWMxMi44NTUgOS43MTcgMjMuNyAxNS40MzIgMjguNzIgMTMuMjggMTcuODUtNy42NSA4Ni43LTE2OC4yOTcgNzYuNS0xNzguNS0xMC4yMDMtMTAuMi0xNzAuODUgNTguNjUtMTc4LjUgNzYuNS0yLjE1MyA1LjAyMiAzLjU1NCAxNS44ODcgMTMuMjggMjguNzVMMjU2IDE5NmwtNzMuNzUtNzMuNzJjLjAwNS0uMDA2LS4wMDUtLjAyMyAwLS4wMyA5LjcxNy0xMi44NTUgMTUuNDMyLTIzLjcgMTMuMjgtMjguNzJDMTg4LjM2IDc2Ljc5NiA0Ni43MSAxNS4yMjUgMjAuNjI2IDE2eiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIxIj48L3BhdGg+PC9nPjwvc3ZnPg=="
-                    alt="icon" />
-                </button>
-                    <img style="margin-right: 10px" src={t.png} alt="icon" />
-                    {t.de}
-                  </span>
-                  <InfoPopup tooltip={t.tooltip} title={t.de} />
-                </li>
-              {/each}
-              <li class="list-group-item d-flex justify-content-between align-items-left" />
-            {/await}
-          {:else}
-            Keine<br />
+            {#each gameSession.character.skills as skill}
+              <li class="list-group-item d-flex justify-content-between align-items-left">
+                <span>
+                  <img width="32px"
+                  height="32px"
+                  style="margin-right: 10px" src={skill.image} alt="icon" />
+                  {skill.text}
+                </span>
+                <InfoPopup tooltip={skill.tooltip} title={skill.text} />
+              </li>
+            {/each}
+            <li class="list-group-item d-flex justify-content-between align-items-left" />
           {/if}
         </ul>
       </IconCard>

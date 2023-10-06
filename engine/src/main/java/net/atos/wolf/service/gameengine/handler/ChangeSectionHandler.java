@@ -1,8 +1,8 @@
 package net.atos.wolf.service.gameengine.handler;
 
+import net.atos.wolf.data.Action;
 import net.atos.wolf.data.GameSession;
 import net.atos.wolf.service.gameengine.AbstractActionHandler;
-import net.atos.wolf.data.Action;
 import net.atos.wolf.service.gameengine.ActionHandler;
 import net.atos.wolf.service.gameengine.ActionType;
 
@@ -19,10 +19,7 @@ public class ChangeSectionHandler extends AbstractActionHandler {
         if (action.skill() != null) {
             return session.character().skills().contains(action.skill());
         }
-        if (action.specialItem() != null) {
-            return session.character().specialItemsList().contains(action.specialItem());
 
-        }
 
         if (action.numberOfSkills() != null && action.numberOfSkills() != 0) {
             return session.character().skills().size() >= action.numberOfSkills();

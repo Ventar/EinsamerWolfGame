@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import net.atos.wolf.data.*;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Base64;
@@ -42,12 +43,18 @@ public class BookRepository {
     }
 
     private String getItemImage(String fileName) {
+        LOG.trace("Try to load image ::= [{}]", fileName);
         try {
             InputStream imageStream = BookRepository.class.getResourceAsStream("/img/" + fileName);
             return "data:image/svg+xml;base64," + Base64.getEncoder().encodeToString(imageStream.readAllBytes());
         } catch (Exception e) {
             LOG.debug("Could not resolve image ::= [{}]", fileName);
-            throw new RuntimeException(e);
+            InputStream imageStream = BookRepository.class.getResourceAsStream("/img/cancel.svg");
+            try {
+                return "data:image/svg+xml;base64," + Base64.getEncoder().encodeToString(imageStream.readAllBytes());
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
         }
     }
 
