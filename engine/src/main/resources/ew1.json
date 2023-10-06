@@ -295,6 +295,8 @@
       "text": "Ledertasche",
       "tooltip": "Ledertasche",
       "image": "hazard-sign.svg"
+
+
     }
   ],
   "skills": [
@@ -447,9 +449,19 @@
         },
         {
           "type": "CHANGE_SECTION",
-          "mandatory": false,
           "targetSection": 203,
           "text": "Bleibe auf der Hauptstraße"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 5,
+      "text": "Schnell holst du dein Seil aus dem Rucksack und schlingst es um ein  dickes, ledergebundenes Buch, das du auf dem Kartentisch des  Großmeisters gefunden hast. Geschickt wirfst du das Seil und das  Buch nach oben durch das Geländer, dann ziehst du das Seil straff,  bis das Buch fest zwischen zwei Holzstreben sitzt, und prüfst rasch  die Stabilität mit deinem Gewicht. Als du schließlich sicher bist, dass  es hält, kletterst du nach oben und schwingst dich über die  Balustrade. Nachdem du dein Seil eingeholt und in deinem Rucksack  verstaut hast, setzt du deinen Weg entlang der Galerie fort, um zu  der Leiter zu gelangen, die auf das Dach führt.",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 186,
+          "text": "Weiter"
         }
       ]
     },
@@ -879,6 +891,17 @@
       ]
     },
     {
+      "sectionNumber": 156,
+      "text": "Deine übernatürlichen Sinne sind durch die vielfachen Gefahren um dich herum geschärft worden. Instinktiv wird dein Blick von dem Drakkar angezogen, der sich gerade anschickt, seine Armbrust abzufeuern. Du spürst, dass er für dich in diesem Augenblick die größte Gefahr darstellt. Rasch konzentrierst du dich auf seinen schwarzen Helm und richtest eine Welle reiner mentaler Energie auf ihn. Der Impuls, den du freisetzt, ist schwach und unbeständig, aber er reicht aus, um den Feind beim Zielen zu stören und so dein Leben zu retten. Als der Drakkar seinen stählernen Bolzen abfeuert, fliegt dieser geradewegs auf dich zu … und verfehlt dich um Haaresbreite.",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "text": "Weiter",
+          "targetSection": 291
+        }
+      ]
+    },
+    {
       "sectionNumber": 166,
       "text": "Du ziehst deine Axt aus dem Gürtel und schleuderst sie den dunklen Korridor hinunter. Dein Wurf war gut und wohl gezielt, und mit einem dumpfen „Tock“ schlägt die wirbelnde Klinge in den Hinterkopf der Kreatur, spaltet ihren eisernen Helm und gräbt sich tief in ihr Gehirn. Der Giak ist bereits tot, als sein schlaffer Körper zwischen den Leichen seiner abscheulichen Kameraden zu Boden stürzt. So schnell du kannst, rennst du den Gang hinunter, besorgt, dein Freund könnte schwer verletzt sein. Glücklicherweise sieht die Wunde schlimmer aus, als sie tatsächlich ist, und Schneefalke ist schon bald in der Lage, die Blutung mithilfe seiner eigenen Kai Heilkunst zu stillen. „Du warst schon immer der beste Werfer beim Greel“, sagt er mit einem Grinsen, während du ihm mit dem Saum deines Kai-Umhangs vorsichtig das Blut aus den Augen wischst. Als er schließlich wieder richtig sehen kann, greifst du nach unten und ziehst deine Axt aus dem Schädel des toten Giak. Dann säuberst du die Klinge an dessen Tunika, bevor du die Waffe wieder in deinen Gürtel steckst.  „Gut für dich, dass ich jeden Tag geübt habe!“, erwiderst du. „Ich danke dir, mein Freund“, sagt Schneefalke. „Du hast mir das Leben gerettet. Ich hoffe, dass ich diesen Gefallen eines Tages erwidern kann, doch nun muss ich mich in den Kampf stürzen. Die Giak sind überall, und ich fürchte, dass die Abtei fallen wird. Komm mit mir! Wir werden Seite an Seite kämpfen, wie wahre Kai-Brüder.“ Du erklärst Schneefalke, dass du einen wichtigen Auftrag für Meister Sternenfeuer ausführen musst, dass du dich ihm jedoch anschließen wirst, sobald dieser erledigt ist. „Dann sei Kai mit dir, Lautloser Wolf“, ruft er, als er forteilt, um sich der Schlacht anzuschließen. „Möge Kai an diesem Tag mit uns allen sein“, antwortest du, dann salutierst du und blickst deinem tapferen Freund nach, bis er hinter der nächsten Ecke verschwunden ist. Mit einem wachsenden Gefühl des Grauens kehrst du zur Tür der Rüstkammer zurück, stößt sie auf und betrittst den Raum. ",
       "actions": [
@@ -886,6 +909,18 @@
           "type": "CHANGE_SECTION",
           "targetSection": 447,
           "text": "Weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 186,
+      "text": " ",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 416,
+          "text": "Weiter",
+          "itemId": "KAI_BATTLECRYSTAL"
         }
       ]
     },
@@ -913,6 +948,22 @@
       ]
     },
     {
+      "sectionNumber": 220,
+      "text": "Als der dritte Regler einrastet, hörst du das dumpfe Klicken von Stein. Dann schwingt, fast geräuschlos, das große Portal auf und gibt den Blick auf einen von Fackeln erhellten Gang frei. Regentaube wünscht dir viel Glück, und du hältst kurz inne, um ihm die Hand zu schütteln und seine Äußerung zu erwidern, bevor du dich schließlich auf den Weg durch den Gang machst.\u0002 Der enge Steinkorridor führt dich zu einer stabilen Holztür. Sie ist mit glänzenden Messingbändern verstärkt und mit breiten, silbernen Nägeln beschlagen, die im flackernden Fackelschein schimmern. Als du den schweren Knauf drehst, stellst du erleichtert fest, dass die Tür unverschlossen ist.\u0002 Hinter der Tür liegt die große Versammlungshalle der Kai. Hier finden die wichtigsten formellen Anlässe statt, hier tafeln die hochrangigeren der Kai-Lords und empfangen ihre königlichen und adeligen Gäste. Dies ist die am reichsten dekorierte Halle der Abtei, doch nun steht die gewaltige Kammer vollkommen leer, und die Stille ist bedrohlich und unheimlich. Abgesehen vom leisen Knistern des Feuers, das in dem prächtigen Marmorkamin der Halle lodert, ist nur noch der Lärm des tobenden Kampfes zu hören, der von weit hinter dem mächtigen Haupttor des Saales zu dir herüberdringt. Schnell siehst du dich in der Halle um und überzeugst dich davon, dass niemand der hohen Würdenträger der Kai anwesend ist. Alle, die noch am Leben sind, befinden sich draußen im Kampf gegen die eindringenden Giak.\u0002 Alle der großen, nach draußen führenden Türen wurden verschlossen und von innen vernagelt. Unter einer großen Steintreppe, deren schimmernde weiße Marmorstufen zur oberen Etage führen, befindet sich eine kleinere Tür, doch als du ihre glänzende goldene Klinke herunterdrückst, stellst du fest, dass sie verschlossen ist. Der einzige Weg, die große Halle zu verlassen, ist der Gang, der dich zurück zur Kai-Kapelle führen würde. Daher bleibt dir nur die breite Steintreppe, die sich in der Nordost-Ecke des Saales befindet",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 66,
+          "text": "Durchsuche den Raum nach gegenständen"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 518,
+          "text": "Steige die Mamortreppe Hinauf und setze deine Mission fort"
+        }
+      ]
+    },
+    {
       "sectionNumber": 242,
       "text": "Als du das obere Ende der Treppe erreicht hast, läufst du geduckt an der zinnenbewehrten Brustwehr entlang, um die Vorgänge auf der Brücke unter dir zu beobachten. Der Zugang zu den Brückentürmen und der Weg zum Durnenstein sind übersät mit den Überresten einer Schlacht, die hier kurz nach Sonnenaufgang stattgefunden hat, nachdem der Feind seinen Überraschungsangriff auf die Alemabrücke gestartet hatte. Zwar wurden die Brückenwächter überrumpelt, doch kämpften sie dennoch heldenhaft und konnten mehrere Stunden lang standhalten, bevor sie schließlich vom Feind überrannt wurden. Die Brückenstraße ist übersät von zerstörten Wagen und zerstreuten Frachtgütern und getränkt vom dem Blut derer, die in den frühen Morgenstunden hier erschlagen wurden. Ein nicht enden wollender Strom feindlicher Nachschubtruppen bahnt sich in diesem Augenblick einen Weg durch die Trümmer zur Brückenmitte, wo auf dem Durnenstein ein erbitterter Kampf tobt. Du siehst dich um und bemerkst zwei höher liegende Laufgänge, die parallel zu beiden Seiten der Brücke verlaufen. Zwar beherrschen die feindlichen Truppen die Brücke, aber nur wenige von ihnen benutzen diese erhöhten Überwege. Das ist deine Chance! Schnell und lautlos überquerst du den Bogen des Torhauses und schlägst den Weg über einen der Laufgänge ein. Ohne größere Schwierigkeiten lässt du den ersten Brückenabschnitt hinter dir und erreichst ein Tor am nächsten Brückenturm. Leider ist das Tor verriegelt, und dir bleibt keine andere Wahl, als dich auf die Straße hinunter zu begeben, um von dort aus zu versuchen, den zweiten Brückenabschnitt durch den Torbogen zu erreichen. Indem du die umgestürzten Wagen und ihre verstreute Ladung als Deckung benutzt, gelangst du schließlich ungesehen zu den Bogentürmen am anderen Ende dieses Abschnitts. Gerade hast du angehalten, um dich hinter einem umgestürzten Handkarren und seiner verstreuten Fracht aus Fässern zu verstecken, als du zwei Giak bemerkst, die aus dem Schatten des zweiten Torbogens treten. Sie sind gerade dabei, ein Fass zu einem großen Loch in der steinernen Brückenbrüstung zu rollen. Nachdem sie es in den Fluss geworfen haben, kehren sie um, um ein weiteres Fass zu holen. Diese Fässer gleichen denen, hinter denen du dich gerade versteckt hältst. Als du eines davon näher in Augenschein nimmst, entdeckst du an seiner Seite ein gelbes Hinweisschild aus Pergament, auf dem in leuchtendroten Buchstaben steht: Sofort wird dir die Bedeutung dieser Fässer klar: Sie enthalten Sprengpulver. Dies ist keine gewöhnliche Fracht und war sicherlich auch nicht für den Markt bestimmt. Die Fässer wurden von Prinz Pelethars Männern einzig und allein zu dem Zweck hergeschafft, einen Teil der Brücke zu sprengen und so den Feind am Vorrücken zu hindern. Doch bevor sie die Fässer platzieren und zünden konnten, müssen die Pioniertruppen des Prinzen vom Feind überrannt und zum Durnenstein zurückgedrängt worden sein. Aus einem zugestopften Loch in der Seitenwand eines der Pulverfässer hängt ein Stück graue Kordel. Es handelt sich um eine Lunte, abgemessen, zurechtgeschnitten und bereit zur Zündung. .",
       "actions": [
@@ -925,8 +976,7 @@
         {
           "type": "CHANGE_SECTION",
           "targetSection": 359,
-          "text": "Geh Weiter",
-          "noOtherOption": true
+          "text": "Geh Weiter"
         }
       ]
     },
@@ -1027,6 +1077,17 @@
               }
             ]
           }
+        }
+      ]
+    },
+    {
+      "sectionNumber": 291,
+      "text": "Du lenkst dein Pferd zur Kai-Kapelle, wo ein gutes Dutzend Giak  gerade versucht, sich einen Weg durch die teilweise eingeschlagene  Tür zu bahnen. Zwei junge Kai-Initianden verteidigen den Eingang,  indem sie mit ihren Schwertern nach jedem Gegner schlagen und  stechen, der versucht, sich durch das ausgefranste, v-förmige Loch in  der Tür zu zwängen. Dein tapferes Pferd trägt dich direkt in die eng  stehende Gruppe der Angreifer, zerstreut ihre hinteren Reihen und  zertrampelt jene in der Mitte mit seinen eisenbeschlagenen Hufen.  Wieder und wieder bäumt es sich auf und lässt seine Vorderbeine  wie gewaltige Hämmer in einer schnellen Abfolge tödlicher Hiebe auf  die Köpfe der Angreifer herabdonnern.  Als deine Füße den schwarzen, blutgetränkten Boden berühren,  wirst du sofort von einer Handvoll rachsüchtiger, geifernder Giak  angegriffen.  Du ziehst deine Waffe und springst vom Rücken des Pferdes. Als  deine Füße den schwarzen, blutgetränkten Boden berühren, wirst du  sofort von einer Handvoll rachsüchtiger, geifernder Giak angegriffen.  Du erschlägst zwei von ihnen und zerschmetterst einem Dritten mit  einem schnellen Rückhandhieb den Kiefer.  „Hier herein, Lautloser Wolf!“, ertönt ein Ruf aus der Kapelle. Es ist  die Stimme von Regentaube, einem deiner Freunde und  Mitinitianden. Seinem Ruf folgend, hechtest du mit dem Kopf voran  durch den schmalen Spalt in der Kapellentür und kommst mit einem  gekonnten Überschlag auf dem Steinboden auf. Nachdem du in  Sicherheit bist, versperren Regentaube und sein tapferer Begleiter  Eisenhimmel den Eingang mit einer der schweren Holzbänke der  Kapelle. Die Giak hämmern wie wild gegen die hastig  verbarrikadierte Tür, doch sie scheint tatsächlich zu halten – vorerst  zumindest.  In der Kapelle befinden sich weniger als ein Dutzend Kai-Krieger, die  hier Schutz vor der Schlacht gesucht haben. Alle von ihnen sind  blutbefleckt und von den Kämpfen gezeichnet. Zwei junge Kai\u0002Akolythen, beide selbst schwer verletzt, versuchen gerade einem Kai\u0002Wanderer zu helfen, dessen linke Hand am Gelenk abgetrennt  wurde. Gemeinsam benutzen sie ihre Fähigkeiten der Heilung, um  die schwere Blutung zu stillen. Es berührt dich tief, wie diese jungen  Kai ihrem älteren Ordensbruder helfen, ohne auf ihre eigenen  Bedürfnisse Rücksicht zu nehmen.  „Du hast gut gekämpft, Lautloser Wolf“, sagt Eisenhimmel. „Wir  sahen dich aus dem Stall reiten. Ich hätte nie gedacht, dass du es  lebend über das Übungsgelände schaffst.“  „Ich habe keine Sekunde lang gezweifelt“, erwidert Regentaube. „Ich  wusste, du würdest es schaffen.“  Rasch erzählst du deinen Freunden von der dringenden Aufgabe, die  dir Kai-Meister Sternenfeuer aufgetragen hat. Auch sie kennen das  Portal, das von der Sakristei der Kapelle zur Eingangshalle des  Turms der Sonne führt, und Regentaube drängt dich dazu, sofort  aufzubrechen.  Gemeinsam eilt ihr zum Altar, der am Nordende der Gebetshalle  liegt. Seine goldene Oberfläche ist mit den Sonnensymbolen des  Gottes Kai und den Mondsymbolen der Göttin Ishir verziert.  Während du den Altar umrundest, sprichst du im Geiste ein kurzes  Gebet und bittest die Götter darum, dich und deine Kameraden an  diesem Tag zu beschützen. Dann betretet ihr die kleine  Sakristeikammer, in der die heiligen Roben und gesegneten  Artefakte des Kai-Ordens aufbewahrt werden.  An der Westwand der Sakristei befindet sich ein großes, steinernes  Grabmal, die letzte Ruhestätte von Eisenperle, einem früheren  Großmeister des Ordens.  In einer Halterung auf der steinernen Grabplatte siehst du die  Nachbildung von Eisenperles berühmtem Breitschwert. (Du kannst  diese Waffe aus ihrer Halterung lösen und mitnehmen, wenn du  willst. In den Überlieferungen der Kai heißt es ausdrücklich, dass  diese Klinge nur dann eingesetzt werden darf, wenn das Kloster  angegriffen wird. Besitzt du bereits zwei Waffen, musst du  allerdings eine davon von deinem Aktionsblatt streichen.)  Regentaube zieht einen großen, schweren Vorhang aus goldenem  Samt zur Seite, der von einer stabilen hölzernen Leiste hängt, die  neben dem Grabmal an der Wand befestigt ist. Dahinter befindet  sich eine Steintür, die zur unteren Halle des Turms der Sonne führt.  Diese schwere Tür besitzt jedoch keinen Griff, sondern lediglich drei  zylindrische Regler, die mit Ziffern versehen sind. Um die Tür zu  öffnen, musst du die drei Regler so einstellen, dass der korrekte  dreistellige Zahlencode auf ihrer Oberfläche erscheint.  Die erste Nummer ist die Anzahl der Punkte, die du zu deiner  KAMPFSTÄRKE addieren darfst, wenn du die Disziplin Waffenkunde  besitzt und dich mit der Waffe, die du gemeistert hast, in einen  Kampf wirfst.  Die zweiter Nummer ist die Anzahl der Punkte, die du zu deiner  KAMPFSTÄRKE addieren darfst, wenn du die Disziplin Gedankenstrahl  im Kampf gegen einen Feind einsetzt.  Die dritte Zahl ist der Wert an AUSDAUERPUNKTEN, ab welchem  Einsamer Wolf stirbt.  Wenn du die Antworten auf diese drei Fragen weißt, schreibe sie in  der richtigen Reihenfolge auf und lies bei diesem Abschnitt weiter.",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 361,
+          "text": "Kennst du die Antwort nicht gehe hier weiter"
         }
       ]
     },
@@ -1212,6 +1273,45 @@
               }
             ]
           }
+        }
+      ]
+    },
+    {
+      "sectionNumber": 352,
+      "text": "In deinem Versteck wartest du auf eine Gelegenheit, weiter vorzurücken. Ein Trupp Giak, der sicher als Verstärkung zum Durnenstein entsandt wurde, eilt nah an dir vorbei, und aus der entgegengesetzten Richtung kommt ein stetiger Strom von Toten und Verletzten, die auf Bahren zur Alema Mitra zurückgetragen werden. Mit jeder Minute, die verstreicht, verstärken sich die feindlichen Aktivitäten, und es ist zu gefährlich für dich, noch länger hier auf der Brückenstraße zu verweilen. Nur auf den hochgelegenen Wehrgängen entlang der Brücke befinden sich keine feindlichen Truppen, aber du siehst nirgendwo Treppen in der Nähe, die dort hinaufführen. Um diese Wehrgänge zu erreichen, musst du an der hohen Brüstungsmauer hinaufklettern.",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 377,
+          "text": "Steige die Treppe hinab"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 115,
+          "text": "Benutze das Seil",
+          "itemId": "ROPE"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 361,
+      "text": "So sehr du dich auch bemühst die richtige Kombination für das Öffnen des Schlosses zu finden – das Steinportal bleibt verriegelt. Verärgert über die Verzögerung nimmst du das Breitschwert von Eisenperles Grabstätte und versuchst die schwere Tür damit aufzustemmen. Doch es ist zwecklos: Diese Tür lässt sich nicht mit Gewalt öffnen. Mit einem Mal erschüttert eine gewaltige Explosion die angrenzende Kapelle, und die Druckwelle stößt dich und deinen Begleiter zu Boden. Der Feind hat einen starken magischen Sprengsatz benutzt, um die verbarrikadierte Tür zu zerstören. Taumelnd kommst du auf die Beine, als dich eine zweite Explosion – noch lauter und gewaltiger als die erste – quer durch die Sakristei schleudert und hart an die gegenüberliegende Wand schmettert. Der Feind hat eine zweite Ladung über der Kapelle gezündet, die das gesamte Dach zum Einsturz gebracht hat – mit verheerenden Folgen. Bevor du wieder bei Sinnen bist und dich aufrappeln kannst, wirst du von einem herabstürzenden Deckenbalken erschlagen und unter einer Flut zerborstener Dachziegel begraben. Dunkelheit umfängt dich, aber du spürst keinen Schmerz. Du hast an diesem Tag wie ein wahrer Kai-Lord gekämpft, mit viel Geschick und großer Tapferkeit. Doch leider gehörst du nun zu all jenen, die an diesem schicksalhaften Fehmarnmorgen gefallen sind. Tragischerweise enden dein Leben und deine edle Mission hier in der Sakristei der Kai-Kapelle.",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 4004,
+          "text": "Leider endet dein Abendteuer hier"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 362,
+      "text": "Der Pfad führt eine Anhöhe entlang und windet sich dann zwischen mehreren kleinen, bewaldeten Hügeln hindurch, bevor er schließlich die Richtung nach Osten hin ändert. ",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 111,
+          "text": "Weiter"
         }
       ]
     },
@@ -1470,6 +1570,24 @@
           "type": "CHANGE_SECTION",
           "targetSection": 58,
           "text": "Weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 518,
+      "text": "Dein Blick streift über die Reihe echter Waffen in dem Regal vor dir. Du siehst Dolche, Streitkolben, Schwerter und viele andere Waffen. Du überlegst dir gerade, welche Waffe du am besten nehmen solltest, als du Meister Sternenfeuers zornige Stimme hörst: „Lautloser Wolf – zu mir, SOFORT!“. Greife zufällig eine Waffe, um dem drängenden Befehl deines Meisters Folge zu leisten.",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 5,
+          "text": "Besitzt du ein Seil mache hier weiter",
+          "weaponId": "AXE"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 302,
+          "text": "Weiter",
+          "noOtherOption": true
         }
       ]
     },
