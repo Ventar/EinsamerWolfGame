@@ -17,7 +17,7 @@
    * @type {string}
    */
   let character = "Charakter";
-
+  
   /**
    * @type {any}
    */
@@ -26,12 +26,16 @@
 
   let showLoad = false;
 
+  onMount(async () => {
+    loadSessions();
+  });
+
   async function loadSessions() {
     const res = await fetch("http://" + host + ":8080/session/list/", {
       method: "GET",
     });
 
-    return await res.json();
+    nameList = await res.json();
   }
 
   /**
@@ -58,6 +62,8 @@
         id: gameSession.id,
       }),
     });
+
+    loadSessions();
     
   }
 
@@ -147,19 +153,17 @@
         caption="Laden"
         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iaGVpZ2h0OiA0OHB4OyB3aWR0aDogNDhweDsiPjxkZWZzPjxyYWRpYWxHcmFkaWVudCBpZD0iZGVsYXBvdWl0ZS1jbG91ZC1kb3dubG9hZC1ncmFkaWVudC0wIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTU2ZGUyIiBzdG9wLW9wYWNpdHk9IjEiPjwvc3RvcD48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxNTZkZTIiIHN0b3Atb3BhY2l0eT0iMSI+PC9zdG9wPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxnIGNsYXNzPSIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsMCkiIHN0eWxlPSIiPjxwYXRoIGQ9Ik0yMDAuMSAzMS4yQTEzMC4xIDEzMi40IDAgMCAwIDcwLjAzIDE2My42YTEzMC4xIDEzMi40IDAgMCAwIC41NSAxMS4zIDgwLjk4IDczLjQ3IDAgMCAwLTUyLjIxIDY4LjZBODAuOTggNzMuNDcgMCAwIDAgOTkuMzUgMzE3YTgwLjk4IDczLjQ3IDAgMCAwIDM3LjI1LTguMyAxODkuMyA4MC45NyAwIDAgMCA3OC40IDE2LjV2LTQ5LjloODJ2NTAuMWExODkuMyA4MC45NyAwIDAgMCAzOS41LTUuNyA5MS4wOSA2Ny44IDAgMCAwIDY2IDIxLjEgOTEuMDkgNjcuOCAwIDAgMCA5MS4xLTY3LjggOTEuMDkgNjcuOCAwIDAgMC01OC02My4xIDcwLjEgODEuNzIgMjAuNjEgMCAwIDIuNi02LjIgNzAuMSA4MS43MiAyMC42MSAwIDAtMzYuOC0xMDEuMiA3MC4xIDgxLjcyIDIwLjYxIDAgMC03Ni45IDIyLjggMTMwLjEgMTMyLjQgMCAwIDAtMTI0LjQtOTQuMXpNMjMzIDI5My4zdjExMmgtNTEuM2w3NC4zIDc0LjMgNzQuMy03NC4zSDI3OXYtMTEyaC00NnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMSI+PC9wYXRoPjwvZz48L3N2Zz4="
       >
-        {#await loadSessions()}
-          LOAD SESSIONS<br />
-        {:then sessions}
+        {#if nameList}
           <table class="table table-hover">
             <tbody>
-              {#each sessions.names as name, i}
+              {#each nameList.names as name, i}
                 <tr class="table-dark">
                   <td on:click={() => loadGameSession(name)}>{name}</td>
                 </tr>
               {/each}
             </tbody>
           </table>
-        {/await}
+          {/if}
       </IconCard>
       <IconCard
         cols={4}
@@ -167,17 +171,18 @@
         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iaGVpZ2h0OiA0OHB4OyB3aWR0aDogNDhweDsiPjxkZWZzPjxyYWRpYWxHcmFkaWVudCBpZD0iZGVsYXBvdWl0ZS1jbG91ZC11cGxvYWQtZ3JhZGllbnQtMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE1NmRlMiIgc3RvcC1vcGFjaXR5PSIxIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTU2ZGUyIiBzdG9wLW9wYWNpdHk9IjEiPjwvc3RvcD48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48ZyBjbGFzcz0iIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLDApIiBzdHlsZT0iIj48cGF0aCBkPSJNMjAwLjEgMzEuMkExMzAuMSAxMzIuNCAwIDAgMCA3MC4wMyAxNjMuNmExMzAuMSAxMzIuNCAwIDAgMCAuNTUgMTEuMyA4MC45OCA3My40NyAwIDAgMC01Mi4yMSA2OC42QTgwLjk4IDczLjQ3IDAgMCAwIDk5LjM1IDMxN2E4MC45OCA3My40NyAwIDAgMCAzNy4yNS04LjMgMTg5LjMgODAuOTcgMCAwIDAgNzAuNCAxNS42bDQ5LTQ5IDQ5LjIgNDkuMmExODkuMyA4MC45NyAwIDAgMCAzMS4zLTQuOCA5MS4wOSA2Ny44IDAgMCAwIDY2IDIxLjEgOTEuMDkgNjcuOCAwIDAgMCA5MS4xLTY3LjggOTEuMDkgNjcuOCAwIDAgMC01OC02My4xIDcwLjEgODEuNzIgMjAuNjEgMCAwIDIuNi02LjIgNzAuMSA4MS43MiAyMC42MSAwIDAtMzYuOC0xMDEuMiA3MC4xIDgxLjcyIDIwLjYxIDAgMC03Ni45IDIyLjggMTMwLjEgMTMyLjQgMCAwIDAtMTI0LjQtOTQuMXpNMjU2IDMwMC43TDE4MS43IDM3NUgyMzN2MTEyaDQ2VjM3NWg1MS4zTDI1NiAzMDAuN3oiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMSI+PC9wYXRoPjwvZz48L3N2Zz4="
       >
         <label for="nameToStore" style="margin-left: 10px"class="form-label mt-2">Charaktername</label>
-        <div class="flexwrap">
-          <input type="text" style="margin: 10px" bind:value={character} class="flexwrap" id="nameToStore" placeholder="Chrarakternamen eingeben..." />
-          <button on:click={() => saveGameSession()} style="margin: 10px" type="button" class="btn btn-dark btn-sm">
+        <div style="float: left; display: inline-flex;">
+          <input type="text" bind:value={character} style="float: left; width: 80%; margin: 10px" id="nameToStore" placeholder="Chrarakternamen eingeben..." />
+          <button on:click={() => saveGameSession()} style="float: left; width: 15%; margin: 10px" type="button" class="btn btn-dark btn-sm">
             <img
               width="16px"
               height="16px"
               src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iaGVpZ2h0OiA0OHB4OyB3aWR0aDogNDhweDsiPjxkZWZzPjxyYWRpYWxHcmFkaWVudCBpZD0iZGVsYXBvdWl0ZS1jbG91ZC11cGxvYWQtZ3JhZGllbnQtMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE1NmRlMiIgc3RvcC1vcGFjaXR5PSIxIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTU2ZGUyIiBzdG9wLW9wYWNpdHk9IjEiPjwvc3RvcD48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48ZyBjbGFzcz0iIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLDApIiBzdHlsZT0iIj48cGF0aCBkPSJNMjAwLjEgMzEuMkExMzAuMSAxMzIuNCAwIDAgMCA3MC4wMyAxNjMuNmExMzAuMSAxMzIuNCAwIDAgMCAuNTUgMTEuMyA4MC45OCA3My40NyAwIDAgMC01Mi4yMSA2OC42QTgwLjk4IDczLjQ3IDAgMCAwIDk5LjM1IDMxN2E4MC45OCA3My40NyAwIDAgMCAzNy4yNS04LjMgMTg5LjMgODAuOTcgMCAwIDAgNzAuNCAxNS42bDQ5LTQ5IDQ5LjIgNDkuMmExODkuMyA4MC45NyAwIDAgMCAzMS4zLTQuOCA5MS4wOSA2Ny44IDAgMCAwIDY2IDIxLjEgOTEuMDkgNjcuOCAwIDAgMCA5MS4xLTY3LjggOTEuMDkgNjcuOCAwIDAgMC01OC02My4xIDcwLjEgODEuNzIgMjAuNjEgMCAwIDIuNi02LjIgNzAuMSA4MS43MiAyMC42MSAwIDAtMzYuOC0xMDEuMiA3MC4xIDgxLjcyIDIwLjYxIDAgMC03Ni45IDIyLjggMTMwLjEgMTMyLjQgMCAwIDAtMTI0LjQtOTQuMXpNMjU2IDMwMC43TDE4MS43IDM3NUgyMzN2MTEyaDQ2VjM3NWg1MS4zTDI1NiAzMDAuN3oiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMSI+PC9wYXRoPjwvZz48L3N2Zz4="
               alt="icon"
             />
-          </button>
+          
         </div>
+        <div style="flex-grow: 1;"/>
       </IconCard>
 
       <IconCard
