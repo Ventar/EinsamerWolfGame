@@ -948,6 +948,22 @@
       ]
     },
     {
+      "sectionNumber": 205,
+      "text": "Du reißt deinen Kopf zur Seite, um dem heranfliegenden Geschoss zu entgehen, doch der Bolzen trifft und reißt ein Stück Haut und Fleisch aus deinem Nacken. (Du verlierst 3 AUSDAUERPUNKTE.) Immerhin hat dich dein verzweifelter Ausweichversuch vor dem sicheren Tod bewahrt. Trotz der plötzlichen, brennenden Schmerzen beißt du die Zähne zusammen und greifst mit der linken Hand an deinem verletzten Nacken, um die Blutung zu stillen. ",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 66,
+          "text": "Durchsuche den Raum nach gegenständen"
+        },
+        {
+          "type":"MODIFY_ATTRIBUTE",
+          "mandatory": true,
+          "value": 3
+        }
+      ]
+    },
+    {
       "sectionNumber": 220,
       "text": "Als der dritte Regler einrastet, hörst du das dumpfe Klicken von Stein. Dann schwingt, fast geräuschlos, das große Portal auf und gibt den Blick auf einen von Fackeln erhellten Gang frei. Regentaube wünscht dir viel Glück, und du hältst kurz inne, um ihm die Hand zu schütteln und seine Äußerung zu erwidern, bevor du dich schließlich auf den Weg durch den Gang machst.\u0002 Der enge Steinkorridor führt dich zu einer stabilen Holztür. Sie ist mit glänzenden Messingbändern verstärkt und mit breiten, silbernen Nägeln beschlagen, die im flackernden Fackelschein schimmern. Als du den schweren Knauf drehst, stellst du erleichtert fest, dass die Tür unverschlossen ist.\u0002 Hinter der Tür liegt die große Versammlungshalle der Kai. Hier finden die wichtigsten formellen Anlässe statt, hier tafeln die hochrangigeren der Kai-Lords und empfangen ihre königlichen und adeligen Gäste. Dies ist die am reichsten dekorierte Halle der Abtei, doch nun steht die gewaltige Kammer vollkommen leer, und die Stille ist bedrohlich und unheimlich. Abgesehen vom leisen Knistern des Feuers, das in dem prächtigen Marmorkamin der Halle lodert, ist nur noch der Lärm des tobenden Kampfes zu hören, der von weit hinter dem mächtigen Haupttor des Saales zu dir herüberdringt. Schnell siehst du dich in der Halle um und überzeugst dich davon, dass niemand der hohen Würdenträger der Kai anwesend ist. Alle, die noch am Leben sind, befinden sich draußen im Kampf gegen die eindringenden Giak.\u0002 Alle der großen, nach draußen führenden Türen wurden verschlossen und von innen vernagelt. Unter einer großen Steintreppe, deren schimmernde weiße Marmorstufen zur oberen Etage führen, befindet sich eine kleinere Tür, doch als du ihre glänzende goldene Klinke herunterdrückst, stellst du fest, dass sie verschlossen ist. Der einzige Weg, die große Halle zu verlassen, ist der Gang, der dich zurück zur Kai-Kapelle führen würde. Daher bleibt dir nur die breite Steintreppe, die sich in der Nordost-Ecke des Saales befindet",
       "actions": [
@@ -1475,6 +1491,26 @@
         {
           "type": "CHANGE_SECTION",
           "targetSection": 93,
+          "text": "Weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 464,
+      "text": "Der Drakkar-Krieger feuert seine Armbrust ab, und der Stahlbolzen surrt mit tödlicher Präzision quer über das Schlachtfeld auf dich zu. ",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "randomSection": [
+            205,
+            205,
+            205,
+            205,
+            84,
+            84,
+            84,
+            84
+          ],
           "text": "Weiter"
         }
       ]
