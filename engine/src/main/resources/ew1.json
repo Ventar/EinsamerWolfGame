@@ -438,6 +438,34 @@
       ]
     },
     {
+      "sectionNumber": 2,
+      "text": "Der Schankwirt steckt deine Goldmünzen ein und holt einen Krug hervor, den er mit Bier aus einem großen Fass unter der Theke füllt. Als er den Krug auf dem Tresen abstellt, sagt er: „Wenn du eine Nachricht für König Ulnar hast, solltest du besser dort rüber gehen und einen der Hofschreiber fragen, die dort sitzen.“ Er deutet auf einen Tisch an der Feuerstelle. „Sie arbeiten am Hof des Königs.“ Der Wirt wendet seine Aufmerksamkeit einem der anderen Gäste zu, und du nimmst einen Schluck Bier. Es schmeckt fade und sauer, kaum besser als Spülwasser. Du bist weit davon entfernt, dieses unappetitliche Gebräu auszutrinken, und so stößt du den Krug beiseite und verlässt die Theke.",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 434,
+          "text": "Weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 3,
+      "text": "<p>Du folgst dem Oberst, während er  sein  Pferd durch die Menschenmenge treibt und sich dabei wenig darum schert, ob ihm die Leute noch rechtzeitig ausweichen können.</p><p> Dir ist es unmöglich,deinen sommerlendischen Landsleuten gegenüber ein  derartgewissenloses Verhalten an den Tag zu legen, und so hast du den rücksichtslosen Offizier schon bald aus den Augen verloren.Die  breite Prachtstraße, die  sich  am  anderen Ende  des  Platzesanschließt, ist ebenso bevölkert wie der Platz selbst, und dein Pferdist dir auch hier nicht von Vorteil, so dass du widerwillig beschließtabzusteigen und deinen Weg zu Fuß fortzusetzen.</p><p>Nach etwa fünfzig Metern siehst du eine weitere Straße, die nachlinks  führt.  Auf  einem Schild, das  an  der  Ecke  einer  Taverneangebracht ist, steht \"Farisallee\".</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 249,
+          "text": "Du besitzt denn Skill Spurensuche",
+          "skillId": "TRACKING"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 368,
+          "text": "Du besitzt die Fähigkeit nicht"
+        }
+      ]
+    },
+    {
       "sectionNumber": 4,
       "text": "<p>Du folgst dem Oberst, während er  sein  Pferd durch die Menschenmenge treibt und sich dabei wenig darum schert, ob ihm die Leute noch rechtzeitig ausweichen können.</p><p> Dir ist es unmöglich,deinen sommerlendischen Landsleuten gegenüber ein  derartgewissenloses Verhalten an den Tag zu legen, und so hast du den rücksichtslosen Offizier schon bald aus den Augen verloren.Die  breite Prachtstraße, die  sich  am  anderen Ende  des  Platzesanschließt, ist ebenso bevölkert wie der Platz selbst, und dein Pferdist dir auch hier nicht von Vorteil, so dass du widerwillig beschließtabzusteigen und deinen Weg zu Fuß fortzusetzen.</p><p>Nach etwa fünfzig Metern siehst du eine weitere Straße, die nachlinks  führt.  Auf  einem Schild, das  an  der  Ecke  einer  Taverneangebracht ist, steht \"Farisallee\".</p>",
       "actions": [
@@ -461,6 +489,66 @@
         {
           "type": "CHANGE_SECTION",
           "targetSection": 186,
+          "text": "Weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 6,
+      "text": "Du untersuchst das Einmann-Kanu und stellst fest, dass es sich in sehr schlechtem Zustand befindet. Das Holz des Rumpfes ist zersplittert und verzogen, und das wackelige kleine Boot leckt an mehreren Stellen. Schnell flickst du die gröbsten Löcher mit etwas Lehm und schöpfst das Wasser heraus, das sich am Boden gesammelt hat. Diese notdürftige Reparatur scheint fürs Erste auszureichen, und nachdem du deine Sachen unter dem Sitz verstaut hast, stößt du dich ab. Mit einem Stück Treibholz, das dir als behelfsmäßiges Paddel dient, ruderst du stromabwärts. Kurze Zeit später hörst du am linken Flussufer Pferde auf dich zugaloppieren",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 326,
+          "text": "Weiter",
+          "skillId": "SIXTH_SENSE"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 107,
+          "text": "Verstecke dich im Kanu"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 253,
+          "text": "Lenke die aufmerksamkeit auf dich"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 7,
+      "text": "Nach einer guten Stunde Marsch bemerkst du, dass der Pfad dich nach und nach immer weiter in Richtung Osten führt. Schließlich gelangst du an eine seichte Furt über einen reißenden Bach, der in einem steinigen und abschüssigen Bett nach Süden fließt. Auf der anderen Seite trifft der Pfad auf einen breiteren Weg, der von Norden nach Süden verläuft. Dir ist klar, dass die Nordroute dich noch weiter von der Hauptstadt fortführt, also wendest du dich an der Gabelung nach rechts und folgst dem Pfad nach Süden.",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 155,
+          "text": "Weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 8,
+      "text": "In einiger Entfernung hörst du die Geräusche galoppierender Pferde, die auf dich zukommen. Rasch gehst du hinter einem Baumstumpf in Deckung und wartest ab, während sich die Reiter nähern. An ihren prächtigen weiß-goldenen Uniformen erkennst du schließlich, dass es sich um die Reiterei der Garde von König Ulnar handelt.",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 267,
+          "text": "Mache dich mit Lautem rufen bemerkbar"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 295,
+          "text": "Setze deinen weg ohne entdeckt zu werden fort"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 9,
+      "text": "Nach einer guten Stunde Marsch bemerkst du, dass der Pfad dich nach und nach immer weiter in Richtung Osten führt. Schließlich gelangst du an eine seichte Furt über einen reißenden Bach, der in einem steinigen und abschüssigen Bett nach Süden fließt. Auf der anderen Seite trifft der Pfad auf einen breiteren Weg, der von Norden nach Süden verläuft. Dir ist klar, dass die Nordroute dich noch weiter von der Hauptstadt fortführt, also wendest du dich an der Gabelung nach rechts und folgst dem Pfad nach Süden.",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": ,
           "text": "Weiter"
         }
       ]
@@ -886,12 +974,12 @@
       "actions": [
         {
           "type": "CHANGE_SECTION",
-          "text": "Du willst die am nächsten liegende Leiter hochklettern und\nversuchen, über die Ladeluke in den flussabwärts gelegenen Turm\neinzudringen,",
+          "text": "Du willst die am nächsten liegende Leiter hochklettern und versuchen, über die Ladeluke in den flussabwärts gelegenen Turm einzudringen,",
           "targetSection": 62
         },
         {
           "type": "CHANGE_SECTION",
-          "text": "Du willst lieber unter der Brücke durch gehen und dann die Leiter\nerklimmen, die am Fuß des flussaufwärts liegenden Turms\nbefestigt ist, ",
+          "text": "Du willst lieber unter der Brücke durch gehen und dann die Leiter erklimmen, die am Fuß des flussaufwärts liegenden Turms befestigt ist, ",
           "targetSection": 119
         }
       ]
@@ -963,7 +1051,7 @@
     },
     {
       "sectionNumber": 129,
-      "text": "Du stößt die quietschende Tür auf und entdeckst dahinter einen\nkleinen Laden. Im Innern ist es dunkel und muffig, und die vielen\ndeckenhohen Regale ringsum an den Wänden sind gefüllt mit\nBüchern und Flaschen aller Größen und Farben.\nAls du die Tür schließt, beginnt ein kleiner schwarzer Hund dich\nanzukläffen, worauf ein kahlköpfiger Mann hinter einem großen\nParavent hervorkommt und dich willkommen heißt. Er fragt dich\nhöflich nach dem Grund deines Besuchs und lädt dich ein, die Waren\nin seinem Glastresen näher zu betrachten.",
+      "text": "Du stößt die quietschende Tür auf und entdeckst dahinter einen kleinen Laden. Im Innern ist es dunkel und muffig, und die vielen deckenhohen Regale ringsum an den Wänden sind gefüllt mit Büchern und Flaschen aller Größen und Farben. Als du die Tür schließt, beginnt ein kleiner schwarzer Hund dich anzukläffen, worauf ein kahlköpfiger Mann hinter einem großen Paravent hervorkommt und dich willkommen heißt. Er fragt dich höflich nach dem Grund deines Besuchs und lädt dich ein, die Waren in seinem Glastresen näher zu betrachten.",
       "actions": [
         {
           "type": "CHANGE_SECTION",
@@ -1013,17 +1101,6 @@
       ]
     },
     {
-      "sectionNumber": 156,
-      "text": "Deine übernatürlichen Sinne sind durch die vielfachen Gefahren um dich herum geschärft worden. Instinktiv wird dein Blick von dem Drakkar angezogen, der sich gerade anschickt, seine Armbrust abzufeuern. Du spürst, dass er für dich in diesem Augenblick die größte Gefahr darstellt. Rasch konzentrierst du dich auf seinen schwarzen Helm und richtest eine Welle reiner mentaler Energie auf ihn. Der Impuls, den du freisetzt, ist schwach und unbeständig, aber er reicht aus, um den Feind beim Zielen zu stören und so dein Leben zu retten. Als der Drakkar seinen stählernen Bolzen abfeuert, fliegt dieser geradewegs auf dich zu … und verfehlt dich um Haaresbreite.",
-      "actions": [
-        {
-          "type": "CHANGE_SECTION",
-          "text": "Weiter",
-          "targetSection": 291
-        }
-      ]
-    },
-    {
       "sectionNumber": 166,
       "text": "Du ziehst deine Axt aus dem Gürtel und schleuderst sie den dunklen Korridor hinunter. Dein Wurf war gut und wohl gezielt, und mit einem dumpfen „Tock“ schlägt die wirbelnde Klinge in den Hinterkopf der Kreatur, spaltet ihren eisernen Helm und gräbt sich tief in ihr Gehirn. Der Giak ist bereits tot, als sein schlaffer Körper zwischen den Leichen seiner abscheulichen Kameraden zu Boden stürzt. So schnell du kannst, rennst du den Gang hinunter, besorgt, dein Freund könnte schwer verletzt sein. Glücklicherweise sieht die Wunde schlimmer aus, als sie tatsächlich ist, und Schneefalke ist schon bald in der Lage, die Blutung mithilfe seiner eigenen Kai Heilkunst zu stillen. „Du warst schon immer der beste Werfer beim Greel“, sagt er mit einem Grinsen, während du ihm mit dem Saum deines Kai-Umhangs vorsichtig das Blut aus den Augen wischst. Als er schließlich wieder richtig sehen kann, greifst du nach unten und ziehst deine Axt aus dem Schädel des toten Giak. Dann säuberst du die Klinge an dessen Tunika, bevor du die Waffe wieder in deinen Gürtel steckst.  „Gut für dich, dass ich jeden Tag geübt habe!“, erwiderst du. „Ich danke dir, mein Freund“, sagt Schneefalke. „Du hast mir das Leben gerettet. Ich hoffe, dass ich diesen Gefallen eines Tages erwidern kann, doch nun muss ich mich in den Kampf stürzen. Die Giak sind überall, und ich fürchte, dass die Abtei fallen wird. Komm mit mir! Wir werden Seite an Seite kämpfen, wie wahre Kai-Brüder.“ Du erklärst Schneefalke, dass du einen wichtigen Auftrag für Meister Sternenfeuer ausführen musst, dass du dich ihm jedoch anschließen wirst, sobald dieser erledigt ist. „Dann sei Kai mit dir, Lautloser Wolf“, ruft er, als er forteilt, um sich der Schlacht anzuschließen. „Möge Kai an diesem Tag mit uns allen sein“, antwortest du, dann salutierst du und blickst deinem tapferen Freund nach, bis er hinter der nächsten Ecke verschwunden ist. Mit einem wachsenden Gefühl des Grauens kehrst du zur Tür der Rüstkammer zurück, stößt sie auf und betrittst den Raum. ",
       "actions": [
@@ -1036,7 +1113,7 @@
     },
     {
       "sectionNumber": 186,
-      "text": " ",
+      "text": " Vor der Leiter liegt die Leiche eines Kai-Meisters. Er hat eine Vielzahl tiefer Wunden an Nacken, Kopf und Schultern davongetragen und ist kaum wiederzuerkennen. Trotz der furchtbaren Verletzungen verrät dir jedoch die einzigartige Machart seiner Kai-Fibel, wessen lebloser Körper hier vor dir liegt: Es handelt sich um Meister Rechter Weg, einen der besten Kundschafter des Ordens. Als du seine leblose Hand ergreifst, spürst du, dass sie noch immer warm ist. Er muss seit weniger als einer Stunde tot sein. Auf einem Hebel neben dem Fuß der Leiter entdeckst du seinen blutigen Handabdruck, und langsam wird dir klar, was diesem tapferen Mann in seinen letzten Minuten widerfahren sein muss. Meister Rechter Weg wurde von Großmeister Tapfere Klinge mit derselben Aufgabe betraut, die nun auf deinen Schultern lastet: das Entzünden des kristallenen Leuchtfeuers. Nach der Art seiner Wunden zu urteilen, muss er von mehreren Feinden in dem Augenblick angegriffen worden sein, als er versuchte, auf das Dach des Turms zu klettern. Sein linker Knöchel ist ebenfalls gebrochen, was darauf schließen lässt, dass er von der Leiter stürzte und hier aufgeschlagen ist. Während der letzten Minuten seines Lebens muss er furchtbare Qualen gelitten haben, dennoch war es ihm möglich, den Hebel zu betätigen, um die Luke zu verriegeln und so seinen Mördern den Zugang zu dieser Kammer zu versperren. Außerdem gelang es ihm, die Leiter an der Galerie zu zerstören, was selbst bei einem Durchbruch der Feinde durch die Luke ihr Vordringen verzögert hätte. Deine Kehle schnürt sich zu, als dir bewusst wird, dass die Mörder von Meister Rechter Weg aller Wahrscheinlichkeit nach noch immer auf dem Dach warten und auf den nächsten Kai lauern, der versucht, das Leuchtfeuer zu erreichen. All deine Überlebensinstinkte warnen dich eindringlich davor, auf das Dach zu steigen, aber du hast einen Auftrag zu erfüllen, und je länger du wartest, desto wahrscheinlicher wird es, dass der Feind einen Weg findet, das Signalfeuer zu zerstören, noch bevor es entzündet werden kann. Voller Angst vor dem Schicksal, das dich dort oben erwartet, überlegst du, wie du deine Chancen verbessern kannst, diesen letzten und gefährlichsten Teil deiner Mission zu überleben. ",
       "actions": [
         {
           "type": "CHANGE_SECTION",
