@@ -864,6 +864,128 @@
       ]
     },
     {
+      "sectionNumber": 124,
+      "text": "<p>Als du dich vorsichtig näherst und einen Blick hinter den Felsen wirfst, siehst du einen Soldaten, der dort auf dem Rücken liegt.</p><p> Neben ihm liegen ein Speer und ein Schild, der ein geflügeltes weißes Pferd und drei Sterne zeigt.</p><p> Das ist das Wappen des Prinzen von Sommerlund! Dieser Mann muss einer seiner Soldaten sein.</p><p> Er ist bewusstlos, und seine Uniform ist stark verschmutzt und zerrissen.</p><p> Eine tiefe Wunde klafft an seinem linken Arm, und er scheint viel Blut verloren zu haben.</p><p>Als du an ihn herantrittst, flattern seine Augenlieder auf und er stöhnt: „Bitte heilt mich, mein Herr. Ich … ich kann meinen Arm nicht spüren.</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "text": "Du beherrschst die Disziplin Heilung ",
+         "skill": "HEAL",
+          "targetSection": 323
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "text": "Geh den anderen Weg ",
+          "targetSection": 43
+        }
+      ]
+    },
+    {
+      "sectionNumber": 125,
+      "text": "<p>Du rennst quer über die Straße und wirfst dich zwischen den Büschen in Deckung.</p><p> Als du sicher bist, dass man dich nicht entdeckt hat, verlässt du die Zollstraße und robbst zum Ufer hinunter. Hier ruhst du dich kurze Zeit zwischen den hohen Gräsern aus, die die Flussböschung säumen, und bewunderst die Pracht der Alemabrücke.</p><p> Dieser antike Viadukt über den Fluss ist etwas mehr als eine Meile lang und besteht aus einer Reihe eleganter Steinbögen, zwischen denen in regelmäßigen Abständen mächtige Türme und gewaltige Granitpfeiler emporragen.</p><p> In der Mitte der Brücke steht der Durnenstein. Seit vielen Jahrhunderten ist dieser weitläufige, zentrale Pfeiler der Alemabrücke ein Ort des Handels. Kaufleute aus Holmgard und Toran kommen hierher, um Fisch, Holz und Erz von den Frylandern zu erwerben – jenen unbeugsamen Sommerlendingen des Westens, die in den Wäldern und Hügeln am Fuße der Schroffsteinberge ihr Auskommen finden.</p><p>In diesem Augenblick tobt eine wilde Schlacht auf dem Durnenstein. Inmitten von Rauch und Flammen entdeckst du die Standarten des geflügelten Pferdes – das Wappen Kronprinz Pelethars – sowie die Schlachtenbanner des zerbrochenen Schädels, die von der Vorhut des Schwarzen Lords Zagarna getragen werden.</p><p> Vom Signal des kristallenen Leuchtfeuers alarmiert, hat der Prinz in aller Eile seine Elitetruppen zusammengerufen und ist vom Königspalast in Holmgard hierher geeilt. Die Alemabrücke ist von hohem strategischem Wert, denn gelänge es Prinz Pelethar, die Einnahme der Brücke durch die Speerspitze von Zagarnas Streitmacht zu verhindern, dann wäre dem Feind der kürzeste Weg vom Schroffsteingebirge nach Holmgard verwehrt.</p><p> Dies würde König Ulnar einen oder auch zwei zusätzliche Tage verschaffen, um die sommerlendische Armee in Bereitschaft zu versetzen und das Reich zu verteidigen. Du kommst zu dem Schluss, dass deine besten Überlebenschancen im Moment darin bestehen, dich dem Prinzen und seiner Leibgarde anzuschließen. Wenn es dir gelingt, die Reihen seiner Soldaten zu erreichen, wird er dir sicherlich dabei helfen, deine Mission erfolgreich zum Abschluss zu bringen.</p><p> Der Prinz und seine tapferen Männer sind nur eine halbe Meile weit entfernt, aber um sie zu erreichen, musst du zunächst einen Weg durch die Reihen des Feindes finden, der diese Hälfte der großen Brücke besetzt hält.</p><p> Nirgendwo am Flussufer sind Boote festgemacht, und das Wasser ist viel zu kalt, um darin eine Meile zum gegenüberliegenden Ufer zu schwimmen. Da dir sonst nichts anderes übrigbleibt, beschließt du dir einen Weg zu suchen, um so schnell wie möglich über die Brücke zu kommen. Durch das hohe Ufergras schleichst du stromaufwärts zum nächstgelegenen der beiden Brückentürme.</p><p> Am Fuße jedes Turms befindet sich eine Eisenleiter, die zu einer Frachtluke direkt unterhalb des breiten mittleren Brückenbogens führt. Wenn es dir gelingt, eine dieser Leitern zu erklettern und dir durch die Luke Zugang zum Turm zu verschaffen, musst du nicht die belebte Zugangsrampe benutzen, wo die Ansammlung der feindlichen Truppen am größten ist.</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "text": "Du willst die am nächsten liegende Leiter hochklettern und\nversuchen, über die Ladeluke in den flussabwärts gelegenen Turm\neinzudringen,",
+          "targetSection": 62
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "text": "Du willst lieber unter der Brücke durch gehen und dann die Leiter\nerklimmen, die am Fuß des flussaufwärts liegenden Turms\nbefestigt ist, ",
+          "targetSection": 119
+        }
+      ]
+    },
+    {
+      "sectionNumber": 126,
+      "text": "<p>In einer Wolke aus Staub und losen Steinen schlitterst du den steilen Abhang hinunter, während der Kraan über dir noch immer seine Kreise zieht.</p><p> Anscheinend wartet er auf die Giak, um sie dir auf die Fährte zu hetzen.</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "text": "Weiter",
+          "randomSection":[
+
+            75,
+            75,
+            418,
+            418,
+            486,
+            486,
+            486,
+            486,
+            486
+        ]
+        }
+
+      ]
+    },
+    {
+      "sectionNumber": 127,
+      "text": "<p>Die Nacht bricht an und hüllt dich schon bald in völlige Finsternis. Weiterzureisen wäre jetzt sowohl sinnlos als auch gefährlich, denn nur allzu leicht könntest du dich verirren oder mit einem verborgenen Feind zusammenstoßen.</p><p> So beschließt du ein paar Stunden zu ruhen, um dann bei Tagesanbruch deinen Weg fortzusetzen. Nachdem du dein Pferd an einen Baum gebunden hast, findest du in der Nähe einen bequemen Platz zum Schlafen.</p><p> Du wickelst dich in deinen warmen Umhang und fällst sofort in einen tiefen, erholsamen Schlaf, durch den du 3 AUSDAUERPUNKTE zurückgewinnst.</p> ",
+      "actions": [
+
+        {
+          "type": "MODIFY_ATTRIBUTE",
+          "text": "Du verlierst einen Ausdauerpunkt",
+          "mandatory": true,
+          "value": 1
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "text": "Weiter",
+          "targetSection": 23
+        }
+      ]
+    },
+    {
+      "sectionNumber": 128,
+      "text": "<p>Von deinem Hieb tödlich getroffen, taumelt der Drakkar-Feldwebel zurück und bricht dann mit einem Fluch auf den blutbedeckten Lippen zusammen.</p><p> In dem Augenblick, als sein Kopf auf der Brückenstraße aufschlägt, gibt es hinter dir eine gewaltige Explosion. </p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "text": "Weiter",
+          "randomSection":[
+
+           484,
+            484,
+            484,
+            484,
+            484,
+            484,
+            265,
+            265,
+            265,
+            265
+          ]
+        }
+
+      ]
+    },
+    {
+      "sectionNumber": 129,
+      "text": "Du stößt die quietschende Tür auf und entdeckst dahinter einen\nkleinen Laden. Im Innern ist es dunkel und muffig, und die vielen\ndeckenhohen Regale ringsum an den Wänden sind gefüllt mit\nBüchern und Flaschen aller Größen und Farben.\nAls du die Tür schließt, beginnt ein kleiner schwarzer Hund dich\nanzukläffen, worauf ein kahlköpfiger Mann hinter einem großen\nParavent hervorkommt und dich willkommen heißt. Er fragt dich\nhöflich nach dem Grund deines Besuchs und lädt dich ein, die Waren\nin seinem Glastresen näher zu betrachten.",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "text": "Weiter",
+          "randomSection":[
+
+            484,
+            484,
+            484,
+            484,
+            484,
+            484,
+            265,
+            265,
+            265,
+            265
+          ]
+        }
+
+      ]
+    },
+    {
       "sectionNumber": 150,
       "text": "Auf der anderen Seite des Durchgangs entdeckst du eine kurze, grob gehauene Steintreppe. Schnell eilst du die Stufen hinauf und gelangst in einen kleinen, spärlich beleuchteten Raum. Drei Ausgänge führen aus dieser höhlenartigen Kammer: Der Ausgang direkt vor dir ist durch eine stabile schwarze Eisenplatte versperrt, aber die zu deiner Linken und Rechten sind offen und unbewacht.",
       "actions": [
