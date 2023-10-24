@@ -548,8 +548,86 @@
       "actions": [
         {
           "type": "CHANGE_SECTION",
-          "targetSection": ,
+          "targetSection": 34,
           "text": "Weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 10,
+      "text": " Deine Kai-Sinne warnen dich vor einem wilden Gefecht, das im Süden tobt. Diese Richtung ist allerdings auch die schnellste Route zur Hauptstadt.",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 99,
+          "text": "Weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 11,
+      "text": " Mit wachsendem Entsetzen stellst du fest, dass du dich nicht mehr bewegen kannst. Eine starke unsichtbare Kraft hält dich umklammert, und deine Augen werden unablässig vom offenen Mund des Skeletts angezogen. Aus der Tiefe der Erde hörst du ein dumpfes Grollen, wie von einer Million wütender Bienen. Ein rotes Glühen erscheint nun in den leeren Augenhöhlen des toten Herrschers, und das summende Geräusch verstärkt sich, bis deine Ohren von einem betäubenden Dröhnen erfüllt sind. Du bist in den Machtbereich eines uralten Bösen geraten – viel älter und stärker noch als selbst der Schwarze Lord Zagarna.",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 353,
+          "text": "Weiter",
+          "itemId": "VORDAKJUWEL"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 446,
+          "text": "Weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 12,
+      "text": " Der Weg führt dich zu einer Ansammlung von Hütten in nicht allzu weiter Entfernung. Du bist vom langen Marschieren müde und durstig und brauchst dringend eine Pause.",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 161,
+          "text": "Ruhe dich in der Hütte aus"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 118,
+          "text": "Gehe weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 13,
+      "text": " Der Helghast wendet sich an König Ulnar und Prinzessin Madelon und unterbreitet ihnen ein beängstigendes Angebot: „Gebt mir den Kai, und eure Leben sollen verschont werden.“ ",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 523,
+          "text": "Stelle dich dem Helghast"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 138,
+          "text": "Du bist dir sicher das diese Kreatur keine Gnade kennt"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 14,
+      "text": " Der Helghast wendet sich an König Ulnar und Prinzessin Madelon und unterbreitet ihnen ein beängstigendes Angebot: „Gebt mir den Kai, und eure Leben sollen verschont werden.“ ",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 398,
+          "text": "Du giebst 12 gold aus",
+          "modifyAttribute": "GOLD",
+          "value": 12
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 372,
+          "text": "Du willst das gold nicht zahlen"
         }
       ]
     },
@@ -584,6 +662,112 @@
           "type": "CHANGE_SECTION",
           "targetSection": 317,
           "text": "Willst du stattdessen deinen Weg durch den Wald fortsetzen"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 17,
+      "text": "<p>Du erreichst die Kuppe eines kleinen bewaldeten Hügels, auf dem mehrere Felsblöcke zu einem groben Steinkreis angeordnet wurden. Plötzlich hörst du ein lautes Knurren hinter einem der Felsblöcke zu deiner Linken.</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 60,
+          "text": "Ziehe deine Waffe."
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 148,
+          "text": "Fliehe und suche deckung."
+        }
+      ]
+    },
+    {
+      "sectionNumber": 18,
+      "text": "<p>Als du das Ende der Stufen erreichst, die in diese Kammer hinabführen, wirft der Vermummte einen Blick über seine Schulter. Flüchtig siehst du sein dünnes, abgemagertes Gesicht und die kränkliche gelbe Farbe seiner Haut. Die Augen des Mannes lodern auf vor Überraschung und Wut, doch unterbricht er seine schaurige Darbietung nicht. Stattdessen entfernt er einen der Zapfen, die in einer Reihe über den Tasten angebracht sind, und mit einem Mal steigert sich die Lautstärke der Orgel um das Zehnfache. Der gewaltige Klang der Orgel trifft dich wie ein Hammerschlag, und der furchtbare Lärm bereitet dir Kopfschmerzen und lässt deine Umgebung vor dir verschwimmen. Du spürst, dass du hier mehr als nur ohrenbetäubendem Lärm ausgesetzt bist: Du wirst von einer mächtigen psychischen Kraft angegriffen, die dir das Bewusstsein rauben will.</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 514,
+          "skillId": "MENTAL_DEFENCE",
+          "text": "Du besitzt den Skill Gedankensperre"
+        },
+        {
+          "type": "MODIFY_ATTRIBUTE",
+          "mandatory": true,
+          "attribute": "ENDURANCE",
+          "value": 3
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 226,
+          "text": "Du hast die fähigkeit nicht"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 19,
+      "text": "<p>Durch einen langen, dunklen Tunnel aus überhängenden Ästen gelangst du schließlich auf eine große Lichtung im Wald. Auf einem Steinsockel in der Mitte der Lichtung liegt ein Schwert in einer schwarzen Lederscheide. Eine handgeschriebene Nachricht in einer dir fremden Sprache ist am Schwertknauf befestigt. (Wenn du die Waffe mitnehmen willst, vermerke sie auf deinem Aktionsblatt.) Außerdem siehst du drei Wege, auf denen du die Lichtung verlassen kannst.</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 307,
+          "text": "Folge dem Östlichen Pfad"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 296,
+          "text": "Folge dem Westlichen Pfad"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 49,
+          "text": "Folge dem Südlichen Pfad"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 20,
+      "text": "<p>Du schaffst es, eines der Pferde von seinem Geschirr zu befreien, und steigst auf, bevor es sich losreißen und davonlaufen kann. Die Witterung der herannahenden Wölfe und die grausamen Schreie der Giak-Reiter haben das Pferd völlig verängstigt, aber du ziehst deine Waffe und zwingst das widerwillige Tier in Richtung der nahenden Angreifer. Diese sind nun weniger als fünfzig Meter entfernt und richten ihre Speere auf dich. Entschlossen trittst du deinem Pferd in die Flanken und gehst in den Galopp über. Die Giak stoßen einen furchterregenden Schlachtruf aus, während ihre Unheilswölfe mit voller Geschwindigkeit auf dich zustürmen. Der Zusammenstoß steht jetzt unmittelbar bevor.</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 281,
+          "text": "Gehe weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 21,
+      "text": "Du hebst deine Waffe, um dem Ungeheuer einen Hieb zu verpassen, als das riesige Maul mit seinen rasiermesserscharfen Fängen nur wenige Zoll von deinem Kopf entfernt zuschnappt. Durch die mächtigen Flügelschläge aus dem Gleichgewicht gebracht, ist es für dich schwierig, einen sicheren Stand zu bewahren. Ziehe dir 1 Punkt von deiner KAMPFSTÄRKE ab und kämpfe gegen den Kraan.",
+      "actions": [
+        {
+          "type": "BATTLE",
+          "text": "Starte den Kampf",
+          "battle": {
+            "enemy": [
+              {
+                "name": "Kraan",
+                "battleStrength": 16,
+                "endurance": 24
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "text": "Weiter",
+          "randomSection": [
+            75,
+            418,
+            418,
+            486,
+            486,
+            486,
+            486,
+            486,
+            486,
+            486
+          ]
         }
       ]
     },
@@ -644,6 +828,51 @@
       ]
     },
     {
+      "sectionNumber": 23,
+      "text": "<p>Du wirst vom Lärm marschierender Truppen geweckt. Müde rappelst du dich auf und wirfst einen Blick zurück auf den in der Ferne liegenden See. Als du deine scharfen Augen auf das Ufer richtest, entdeckst du dort eine Kolonne schwarz gewandeter Gestalten. Es handelt sich um Drakkarim, die von einem Rudel Unheilswölfe eskortiert werden, auf denen Giak reiten. Plötzlich erscheint ein Kraan über den Bäumen und landet auf dem Dach der Fährstation. Auf seinem Rücken sitzt eine Gestalt, die in einen roten Kapuzenmantel gehüllt ist. Der vermummte Kraan-Reiter scheint sich mit dem Anführer der Drakkarim zu unterhalten, und einige Minuten später setzt die Kolonne ihren Marsch entlang des Seeufers fort, während der Kraan sich erneut in die Luft erhebt und über den See fliegt – genau auf dein Versteck zu!</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 160,
+          "skillId": "CAMOUFLAGE",
+          "mandatory": true,
+          "text": "Weiter"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 360,
+          "text": "Besteige dein Pferd"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 41,
+          "text": "Weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 24,
+      "text": "<p>Du bist kaum fünfzig Meter weit gekommen, als du vor dir eine Gruppe dunkelroter Sträucher erblickst. Du erkennst sie sofort als Galgenbusch, eine dornige Strauchart mit scharfen, blutroten Stacheln. Der volkstümliche Name für diese Waldsträucher ist „Schlafzahn“, da die Dornen sehr scharf sind und ein leichtes Gift enthalten, das jeden, der sich an ihnen verletzt, müde und schwach werden lässt. </p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 98,
+          "skillId": "TRACKING",
+          "text": "Du beherrschst den Skill Spurensuche"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 413,
+          "text": "Meide den Schlafzahn und gehe deinen Weg weiter."
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 167,
+          "text": "Dringe tiefer in den Wald vor"
+        }
+      ]
+    },
+    {
       "sectionNumber": 25,
       "text": "Als er sieht, dass du deine Waffe ziehst, gibt der Räuberhauptmann seinen Männern sofort den Befehl, dich anzugreifen. Wenn du gegen die Banditen kämpfen willst, musst du dir einen nach dem anderen vornehmen.",
       "actions": [
@@ -676,6 +905,190 @@
               }
             ]
           }
+        }
+      ]
+    },
+    {
+      "sectionNumber": 26,
+      "text": "<p>Wer auch immer hier Zuflucht gesucht hat – er scheint diesen Ort vor kurzem in großer Eile verlassen zu haben: Eine halb aufgegessene Mahlzeit steht auf dem Tisch, und die Tasse mit schwarzem Jala daneben fühlt sich noch immer warm an. Als du einen Kleiderschrank durchsuchst, findest du einen Rucksack, genug Essen für zwei Mahlzeiten und einen Dolch. Wenn du diese Gegenstände mitnehmen willst, vermerke sie auf deinem Aktionsblatt. Anschließend setzt du deine Mission fort.</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 415,
+          "text": "Weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 27,
+      "text": "<p>Du stößt die unverschlossene Tür zur Rüstkammer auf und trittst ein. Die meisten der sonst hier aufbewahrten Waffen wurden bereits von deinen Kai-Brüdern mitgenommen, und so sind in den Ständern der Rüstkammer nur noch die folgenden zu finden. Wenn du eine oder mehrere der aufgeführten Waffen an dich nehmen willst, vermerke sie auf deinem Aktionsblatt. Denke jedoch daran, dass du nicht mehr als zwei Waffen gleichzeitig tragen kannst.</p>",
+      "actions": [
+        {
+          "type": "TAKE_WEAPON",
+          "text": "Nimm den Dolch",
+          "hand": 1,
+          "weaponId": "DAGGER"
+        },
+        {
+          "type": "TAKE_WEAPON",
+          "text": "Nimm den Dolch",
+          "hand": 2,
+          "weaponId": "DAGGER"
+        },
+        {
+          "type": "TAKE_WEAPON",
+          "text": "Nimm den Kriegshammer",
+          "hand": 1,
+          "weaponId": "WAR_HAMMER"
+        },
+        {
+          "type": "TAKE_WEAPON",
+          "text": "Nimm den Kriegshammer",
+          "hand": 2,
+          "weaponId": "WAR_HAMMER"
+        },
+        {
+          "type": "TAKE_WEAPON",
+          "text": "Nimm das Schwert",
+          "hand": 1,
+          "weaponId": "SWORD"
+        },
+        {
+          "type": "TAKE_WEAPON",
+          "text": "Nimm das Schwert",
+          "hand": 2,
+          "weaponId": "SWORD"
+        },
+        {
+          "type": "TAKE_WEAPON",
+          "text": "Nimm den Speer",
+          "hand": 1,
+          "weaponId": "SPEAR"
+        },
+        {
+          "type": "TAKE_WEAPON",
+          "text": "Nimm den Speer",
+          "hand": 2,
+          "weaponId": "SPEAR"
+        },
+        {
+          "type": "TAKE_WEAPON",
+          "text": "Nimm den Kampfstab",
+          "hand": 1,
+          "weaponId": "BATTLE_STAFF"
+        },
+        {
+          "type": "TAKE_WEAPON",
+          "text": "Nimm den Kampfstab",
+          "hand": 2,
+          "weaponId": "BATTLE_STAFF"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 93,
+          "text": "Weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 28,
+      "text": "<p>Du hast etwa zwei Meilen durch das Baumdickicht zurückgelegt, als der Boden vor dir zunehmend sumpfiger wird. Jetzt musst du eine Zufallszahl ermitteln. </p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "randomSection": [
+            480,
+            480,
+            480,
+            480,
+            480,
+            277,
+            277,
+            277,
+            277,
+            277,
+            4004,
+            4004
+          ],
+          "text": "Weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 29,
+      "text": "<p>Du stößt den Soldaten zur Seite und rennst über die wackelige Brücke. Kaum hast du die Hälfte der Strecke geschafft, als dir das unheilvolle Geräusch einer soeben gespannten Armbrust einen Schauer über den Rücken jagt. Ermittle eine Zufallszahl.</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "randomSection": [
+            264,
+            264,
+            264,
+            264,
+            264,
+            204,
+            204,
+            204,
+            204,
+            204
+          ],
+          "text": "Weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 30,
+      "text": "<p>Instinktiv springst du vom oberen Ende der Treppe fort und rollst dich ab, als du auf dem Boden der kleinen Steinkammer aufkommst, in welche die Treppe hinabführt. Die Schnelligkeit deiner Reaktion und deine angeborene Gewandtheit haben dir in diesem Fall das Leben gerettet: Ein großer Steinblock hat sich von der Decke gelöst und die Stufen zerschmettert, auf denen du noch einen Augenblick zuvor gestanden hast. Das war knapp! Etwas gebeutelt rappelst du dich auf und machst dich daran, den Schaden zu begutachten. Ein trübes, graues Licht fällt nun von oben in die Kammer, genau an der Stelle, wo sich zuvor der Steinblock befand. Am oberen Ende dieser schachtartigen Öffnung kannst du dicke Stränge von Grabkraut und den bewölkten, grauen Himmel erkennen. Das fahle Licht gibt dir erneut die Hoffnung, aus dieser albtraumhaften Unterwelt zu entkommen. Ohne größere Schwierigkeiten gelingt es dir, den Schacht hinaufzuklettern, doch bevor du die Oberfläche erreicht hast, musst du dir mit der Waffe einen Weg durch das wild wuchernde Grabkraut bahnen. Dabei ziehst du dir einige Kratzer am Handrücken und im Gesicht zu. (Du verlierst 1 AUSDAUERPUNKT.) Schließlich krabbelst du aus der Öffnung heraus und stehst wieder inmitten der Totenstadt, in der Nähe eines schmalen Weges, der zwischen zwei schwarzen Steinmausoleen hindurchführt. Als du in das Loch hinunterblickst, aus dem du gerade entkommen bist, bemerkst du ein pulsierendes grünes Leuchten, das stetig stärker wird. Dann hörst du ein grausames, unmenschliches Gelächter, das direkt aus dem Boden zu deinen Füßen zu kommen scheint. Während es durch den nebelverhangenen Friedhof hallt, spürst du eine Woge der Panik in dir aufsteigen. Zitternd und von plötzlicher Furcht gepackt, wendest du dich von dem Loch ab und läufst, so schnell du kannst, in Richtung Südtor, um diesen verfluchten Ort zu verlassen. </p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 87,
+          "text": "Weiter"
+        },
+        {
+          "type": "MODIFY_ATTRIBUTE",
+          "value": 1,
+          "attribute": "ENDURANCE"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 31,
+      "text": "<p>Der Korridor weitet sich schon bald zu einer großen Halle, an deren anderen Ende eine steinerne Treppe zu einer gewaltigen Tür hinaufführt. Zwei schwarze Kerzen zu beiden Seiten der Stufen tauchen die Kammer in ein düsteres, unnatürliches Licht. Du bemerkst, dass ihr Wachs nicht geschmolzen ist, und als du näher kommst, spürst du, dass auch keine Wärme von ihnen ausgeht. Uralte Verzierungen bedecken den Boden, die Wände und sogar die Decke dieser Kammer. Darauf bedacht, diese düstere Gruft so schnell wie möglich zu verlassen, untersuchst du die große Tür nach einem Schloss oder Riegel. Ein verzierter Stift scheint die Tür fest zu verschließen, aber dann entdeckst du auch ein Schlüsselloch in der Mitte des uralten Türbeschlags.</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 212,
+          "text": "Setze Geist über Materie ein.",
+          "skillId": "MIND_OVER_MATTER"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 212,
+          "text": "Du hast einen Goldenen Schlüssel",
+          "itemId": "GOLD_KEY"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 524,
+          "text": "Ziehe den Stift raus"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 32,
+      "text": "<p>Du bist bereits ein Stück in den Raum hineingelaufen, als du plötzlich eine Bewegung über dir auf der Galerie bemerkst und wie angewurzelt stehen bleibst. Du siehst Schatten und hörst die unverkennbaren Stimmen von Giak. Eilig versteckst du dich hinter einer der vielen Säulen, die in der Kammer zu einem großen Kreis angeordnet sind. </p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 135,
+          "text": "Setze die Fähigkeit Tarnung ein",
+          "skillId": "CAMOUFLAGE"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 531,
+          "text": "Du hast die Fähigkeit nicht"
         }
       ]
     },
@@ -958,7 +1371,7 @@
         {
           "type": "CHANGE_SECTION",
           "text": "Du beherrschst die Disziplin Heilung ",
-         "skill": "HEAL",
+         "skillId": "HEAL",
           "targetSection": 323
         },
         {
