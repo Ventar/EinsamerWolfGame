@@ -1093,17 +1093,98 @@
       ]
     },
     {
-      "sectionNumber": 35,
-      "text": "<p>Ein weiterer Trupp Giak bestürmt nun den Spalt zwischen den Toren der Abtei.</p><p> Meister Sternenfeuer streckt die beiden ersten mit einem mächtigen Hieb seiner Axt nieder, doch einem anderen Paar gelingt es, an ihm vorbeizuschlüpfen, bevor er erneut zum Schlag ausholen kann.</p><p> Einer dieser Giak ist mit einem Kettenflegel bewaffnet. Er läuft auf dich zu und wirbelt die Waffe über seinem Kopf, bevor er sie voller Bosheit und Hass auf dein Gesicht niederfahren lässt.</p><p> Du wehrst den Schlag ab, aber die Kette des Flegels wickelt sich um deine Waffe und reißt sie dir aus der Hand.</p><p> In einer geschmeidigen, eleganten Bewegung zieht Sternenfeuer daraufhin mit der Linken sein Schwert und wirft es dir zu.</p><p> Du fängst die Waffe am Griff und hältst sie vor dich, gerade noch rechtzeitig, um den Axthieb des zweiten Giak zu parieren.</p><p> Die beiden Unholde kreischen vor Wut und Enttäuschung und stürzen sich nun mit wilden Hieben auf dich.</p>",
+      "sectionNumber": 33,
+      "text": "<p>Als der Leibwächter tot zu seinen Füßen zusammenbricht, ergreift den Händler die Panik. An den Fahrer und seinen Begleiter gewandt, schreit er hysterisch: „Ich werde angegriffen – verlasst die Kutsche, verlasst die Kutsche!“ Der Händler flüchtet sich in den vorderen Teil des geräumigen Wagens, wo er an dem Riegel einer kleinen Klappe hantiert, die in Bodennähe in die Wandverkleidung eingelassen ist. Hastig reißt er die Fluchtluke auf, zwängt sich durch die Öffnung und verschwindet mit einem kurzen Schrei Kopf voran in der Dunkelheit. Der Fahrer und sein Begleiter haben sich ebenfalls durch einen Sprung in Sicherheit gebracht, und so gerät die Kutsche langsam außer Kontrolle. </p>",
       "actions": [
         {
           "type": "CHANGE_SECTION",
-          "targetSection": 535,
-          "text": "Lies Weiter (535)"
+          "targetSection": 350,
+          "text": "Folge dem Händler durch die Luke"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 268,
+          "text": "Folge dem Händler nicht"
         }
       ]
     },
     {
+      "sectionNumber": 34,
+      "text": "<p>Mit einem kraftvollen Sprung überwindest du die Kluft und landest derart hart auf dem gegenüberliegenden Dach, dass es dir die Luft aus den Lungen presst und du auf dem Rücken liegen bleibst. In deinem Kopf dreht sich alles, und du brauchst ein paar Minuten, bis dir vollends klar wird, dass du es tatsächlich sicher auf die andere Straßenseite geschafft hast. Nachdem die Benommenheit endlich verflogen ist, springst du auf und jubelst vor Freude über deinen Mut und deine Geschicklichkeit. Schnell findest du einen Weg über das letzte Dach und steigst an einer langen Regenrinne auf die Straße hinunter. Direkt gegenüber dem Gebäude siehst du die mächtigen eisenbeschlagenen Tore des Königspalastes. Gerade öffnen sie sich, um einen Planwagen passieren zu lassen, der von einem Gespann aus sechs großen Pferden gezogen wird. Die Pferde sind durch die lärmenden Menschenmassen verängstigt, und die beiden vordersten steigen auf die Hinterhand, wodurch eine der Radnaben des Wagens gegen das eiserne Tor schlägt und zerbirst. In dem entstehenden Durcheinander erkennst du deine Chance hineinzukommen. Kühn läufst du auf das Tor zu, schlängelst dich durch die Menge und schlüpfst an dem Wagen vorbei, während die Torwachen abgelenkt sind. </p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 195,
+          "text": "Weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 35,
+      "text": "Ein weiterer Trupp Giak bestürmt nun den Spalt zwischen den Toren der Abtei. Meister Sternenfeuer streckt die beiden ersten mit einem mächtigen Hieb seiner Axt nieder, doch einem anderen Paar gelingt es, an ihm vorbeizuschlüpfen, bevor er erneut zum Schlag ausholen kann. Einer dieser Giak ist mit einem Kettenflegel bewaffnet. Er läuft auf dich zu und wirbelt die Waffe über seinem Kopf, bevor er sie voller Bosheit und Hass auf dein Gesicht niederfahren lässt. Du wehrst den Schlag ab, aber die Kette des Flegels wickelt sich um deine Waffe und reißt sie dir aus der Hand. In einer geschmeidigen, eleganten Bewegung zieht Sternenfeuer daraufhin mit der Linken sein Schwert und wirft es dir zu. Du fängst die Waffe am Griff und hältst sie vor dich, gerade noch rechtzeitig, um den Axthieb des zweiten Giak zu parieren. Die beiden Unholde kreischen vor Wut und Enttäuschung und stürzen sich nun mit wilden Hieben auf dich.",
+      "actions": [
+        {
+          "type": "BATTLE",
+          "targetSection": 535,
+          "text": "Starte Kampf",
+          "battle": {
+            "enemy": [
+              {
+                "name": "Giak-Sturmtruppe",
+                "battleStrength": 16,
+                "endurance": 14,
+                "thoughRayResistance": false
+              }
+            ],
+            "targetSectionBattleRound": [
+              {
+                "min": 0,
+                "max": 99,
+                "targetSection": 535
+              }
+            ]
+          }
+        }
+      ]
+    },
+        {
+          "sectionNumber": 36,
+          "text": "<p>Eine gute Stunde lang eilst du den Waldweg entlang und behältst dabei sorgsam den Himmel im Auge, um nach Kraan Ausschau zu halten. Dann gelangst du an eine Stelle, an der ein großer Baumstamm auf den Weg gestürzt ist. Als du näher kommst, kannst du von der anderen Seite des mächtigen Stammes leise Stimmen hören.</p>",
+          "actions": [
+            {
+              "type": "CHANGE_SECTION",
+              "targetSection": 375,
+              "text": "Erforsche den Gang in dem Du dich befindest"
+            },
+            {
+              "type": "CHANGE_SECTION",
+              "targetSection": 141,
+              "text": "Nimm den Sudtunnel"
+            },
+            {
+              "type": "CHANGE_SECTION",
+              "targetSection": 458,
+              "text": "Nimm den Westtunnel"
+            }
+          ]
+        },
+        {
+          "sectionNumber": 37,
+          "text": "<p>Vorsichtig ertastest du dir einen Weg durch die Dunkelheit, bis du eine Stelle erreichst, an der der Gang abrupt nach Osten abknickt. Irgendwo hinter dieser Ecke kannst du ein mattes grünes Leuchten ausmachen, das auf dem feuchten Steinboden schimmert und den klebrigen grauen Pilzbelag, der auf seiner Oberfläche wuchert, in ein fahles Licht taucht.</p>",
+          "actions": [
+            {
+              "type": "CHANGE_SECTION",
+              "targetSection": 376,
+              "text": "Zieh deine Waffe für einen Angriff"
+            },
+            {
+              "type": "CHANGE_SECTION",
+              "targetSection": 73,
+              "text": "Lausche und Höre den Stimmen zu"
+            }
+          ]
+        },
+        {
       "sectionNumber": 38,
       "text": "<p>Verborgen in der Wand der Kammer findest du eine Geheimtür, die sich öffnet, als du auf eine der Wandfliesen drückst. Nach kurzem Zögern betrittst du den engen Gang dahinter. Als du im folgst, stößt du auf ein Bücherregal, das in die Wand hinein gehauen wurde und eine Reihe von Geheimdokumenten enthält. Sie scheinen dem Hohepriester zu gehören und sind allesamt in einer Geheimschrift verfasst, die du nicht lesen kannst. Als du dich daran machst, sie zu vernichten, entdeckst du eingerollt in einem der Pergamente einen Laumspur-Trank. <span class='text-success'><i>(Dieser Heiltrank gibt dir nach einem Kampf 4 AUSDAUERPUNKTE zurück. Er reicht für eine Anwendung.)</i></span></p><p>Der Geheimgang scheint an einer soliden Steinwand zu enden, aber nach einer eingehenden Untersuchung entdeckst du einen weiteren versteckten Hebel. Als du ihn benutzt, gleitet die Wand lautlos zur Seite und gibt den Weg in einen kleinen, spärlich beleuchteten Raum frei. Drei Ausgänge führen aus dieser höhlenartigen Kammer: Der Ausgang direkt vor dir ist durch eine stabile schwarze Eisenplatte versperrt, aber die zu deiner Linken und Rechten sind offen und unbewacht.</p>",
       "actions": [
@@ -1124,6 +1205,81 @@
         }
       ]
     },
+        {
+          "sectionNumber": 39,
+          "text": "<p>Nach nur wenigen hundert Metern trifft der Weg auf einen weiteren Pfad, der von Norden nach Süden verläuft.</p>",
+          "actions": [
+            {
+              "type": "CHANGE_SECTION",
+              "targetSection": 181,
+              "text": "Gehe nach Norden"
+            },
+            {
+              "type": "CHANGE_SECTION",
+              "targetSection": 207,
+              "text": "Gehe nach Süden"
+            }
+          ]
+        },
+        {
+          "sectionNumber": 40,
+          "text": "<p>Du holst die Flasche aus deinem Rucksack und wirfst sie nach oben durch das Loch über deinem Kopf, in Richtung der gefangenen Kreatur in der Grube. Du hörst, wie die Steingutflasche zerschellt und kurz darauf Flammen auflodern. Als sich das Feuer ausbreitet und das Netz aus Ranken entzündet, die um den Torso des Wesens geschlungen sind, werden die stöhnenden Geräusche immer lauter und verwandeln sich bald darauf in grauenvolle, furchterfüllte Schmerzensschreie. (Vergiss nicht, die Brandflasche von deinem Aktionsblatt zu streichen.)</p>",
+          "actions": [
+            {
+              "type": "CHANGE_SECTION",
+              "targetSection": 498,
+              "text": "Setze deinen Weg fort"
+            }
+          ]
+        },
+    {
+      "sectionNumber": 41,
+      "text": "Dir ist klar, dass der Kraan und sein Reiter genau wissen, wo du dich aufhältst. Ein Kampf ist nun unvermeidbar, und schicksalsergeben machst du dich bereit, während das geflügelte Ungeheuer näher kommt. Als der Kraan in den Sturzflug übergeht, stößt sein Reiter einen Schrei aus, der dir das Blut in den Adern gefrieren lässt. Diese Kreatur ist ein Vordak, ein grausamer Hauptmann der Schwarzen Lords. Er lenkt den Kraan direkt über dich, lehnt sich aus dem Sattel und versucht dir mit seinem großen, schwarzen Streitkolben den Schädel einzuschlagen.",
+      "actions": [
+        {
+          "type": "BATTLE",
+          "targetSection": 410,
+          "text": "Starte Kampf",
+          "battle": {
+            "enemy": [
+              {
+                "name": "Vordak und Kraan",
+                "battleStrength": 17,
+                "endurance": 25,
+                "thoughRayResistance": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sectionNumber": 42,
+      "text": "<p>Die Flüchtlinge sind müde und hungrig. Voller Verzweiflung haben sie in dieser Nacht viele Meilen zurückgelegt, um aus ihrer zerstörten, brennenden Stadt zu entkommen. Plötzlich hörst du von Norden her das Schlagen riesiger Flügel. „Kraan, Kraan! Versteckt euch!“, erschallt der Ruf überall entlang der Straße. Ein kurzes Stück vor dir bleibt ein Karren, auf dem ein paar kleine Kinder sitzen, mit dem rechten Rad in einer tiefen Furche stecken. Von den sich nähernden Kraan in Panik versetzt, schreien die Kinder voller Angst.</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 285,
+          "text": "Helfe den Kindern"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 396,
+          "text": "Die kinder Interresieren dich nicht und du suchst lieber Schutz"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 43,
+      "text": "<p>Du versuchst es dem Verletzten so bequem wie möglich zu machen, aber er hat schwere Wunden erlitten und viel Blut verloren. Schon bald versinkt er erneut in Bewusstlosigkeit. Da du hier nichts mehr für ihn tun kannst, deckst du ihn mit seinem Umhang zu, wendest dich ab und dringst weiter in den Wald vor</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 400,
+          "text": "Setze deinen Weg fort"
+        }
+      ]
+    },
     {
       "sectionNumber": 44,
       "text": "<p>Du bist dem Waldpfad etwa drei Meilen weit gefolgt, als du in der Ferne die unverkennbaren Umrisse von Giak ausmachst.</p><p> Sie stehen in einer Gruppe mitten auf dem Weg und scheinen dich noch nicht bemerkt zu haben.</p><p> Hoch über den Bäumen hörst du die Schreie von Kraan, die westwärts ziehen.</p><p> Sie haben diese Giak gerade auf dem Waldweg abgesetzt und kehren nun zu den Bergen zurück, um einen weiteren Trupp feindlicher Späher abzuholen.</p>",
@@ -1137,6 +1293,82 @@
           "type": "CHANGE_SECTION",
           "targetSection": 255,
           "text": "Willst du lieber um sie herrum Reiten lies weiter bei (255)"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 45,
+      "text": "<p>Als du durch den beschädigten, staubverhangenen Wehrgang auf den zweiten Torturm zuläufst, erbebt der Boden und eine Ladung Putz regnet von der Decke auf dich herab. Rasch stößt du die Turmtür auf und wirst Zeuge einer Szene, die dich vor Wut und Empörung aufschreien lässt: Eine Explosion hat ein großes Loch in die äußere Turmwand gerissen, die drei Kai-Schildwachen getötet, die hier postiert waren, und es dem Feind erlaubt, ohne Gegenwehr einzudringen. Zwei Giak kauern gerade über den Leichen deiner toten Kameraden und verstümmeln sie voller Häme mit ihren langen, gezackten Messern. Rasend vor Wut und Abscheu, ziehst du deine Waffe und stürzt dich auf die Unholde, bevor sie sich mit ihren grausamen Klingen zur Wehr setzen können.</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "randomSection": [
+            182,
+            182,
+            182,
+            182,
+            182,
+            546,
+            546,
+            546,
+            546,
+            546
+          ],
+          "text": "Weiter"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 46,
+      "text": "<p>Der Boden der Höhle ist trocken und staubig. Als du im dämmrigen Licht weiter ins Innere vordringst, bemerkst du den widerlichen Geruch von verwestem Fleisch. In einer Felsspalte entdeckst du schließlich Knochen, Fellreste und die Zähne vieler kleiner Tiere. Zwischen den Überresten findest du einen kleinen Stoffbeutel, der zu deiner Überraschung 3 Goldkronen enthält. Nachdem du die Münzen eingesteckt hast, verlässt du diesen Ort, bei dem es sich um den Bau einer Bergkatze zu handeln scheint, steigst vorsichtig den Hügel hinunter und begibst dich wieder in den Wald. </p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 373,
+          "text": "Setze deinen Weg fort"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 47,
+      "text": "<p>Als du dich dem Wagentor näherst, entdeckt dich ein aufmerksamer Wachposten auf den Palisaden und benachrichtigt seinen Feldwebel. Daraufhin wird sofort ein Trio grimmig dreinblickender Soldaten ausgeschickt, um dich aufzuhalten. Anscheinend befürchten sie, du könntest ein feindlicher Späher sein, der die Schwachstellen in ihrer Verteidigung aufdecken soll. Als die Soldaten näher kommen, richten sie ihre geladenen Armbrüste auf dich. Da du nicht das Wagnis eingehen möchtest, versehentlich von einem deiner eigenen Leute erschossen zu werden, hebst du vorsichtshalber die Hände und ergibst dich.<p> Obwohl sie nicht versuchen, dich zu entwaffnen oder deine Ausrüstung zu beschlagnahmen, bleiben die sommerlendischen Soldaten wachsam. Sie halten weiterhin ihre Armbrüste bereit und lassen dich auf dem Weg zum Tor keine Sekunde lang aus den Augen. Erst als du ins Innere der Befestigung gebracht und vor den Feldwebel geführt wirst, erkennt man deine wahre Identität. Sofort erteilt der kampfesmüde Offizier seinen Männern den Befehl, ihre Waffen zu senken.<p> „Mein Herr“, sagt er respektvoll, „wo bleiben die Kai? Wir benötigen dringend ihre Führung und Unterstützung, denn der Feind bedrängt uns gnadenlos am äußeren nördlichen Wall, und unsere Verluste sind hoch.“<p> Traurig klärst du den tapferen Soldaten über das furchtbare Schicksal deiner Kameraden auf und betonst die Dringlichkeit deiner Nachricht an den königlichen Rat. Sprachlos und sichtlich bestürzt schickt der Feldwebel seine Männer auf ihre Gefechtsstationen am äußeren Wall zurück und bittet dich anschließend, ihm zu folgen, während er versucht, den befehlshabenden Offizier ausfindig zu machen.<p> Schließlich findet er den Offizier, einen jungen Leutnant, der gerade fieberhaft damit beschäftigt ist, die Verstärkung der Flusskähne zu überwachen. Als du ihm von den Geschehnissen berichtest und wie du alleine deinen Weg hierher gefunden hast, ist er ebenfalls sichtlich schockiert. Mit zitternden Händen bedeutet er dem Feldwebel, zwei Pferde zu holen. Während ihr darauf wartet, dass sein Befehl ausgeführt wird, bietet dir der Leutnant etwas zu essen und Wein aus seinem Rucksack an. (Du erhältst 3 AUSDAUERPUNKTE zurück.)<p> Als der Feldwebel schließlich mit zwei Pferden zurückkehrt, hast du gerade deine Mahlzeit beendet. Der blonde Leutnant bittet dich, ihm zu folgen, und gemeinsam besteigt ihr die Tiere und reitet durch das Feldlager auf das Stadttor von Holmgard zu.</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 373,
+          "text": "Setze deinen Weg fort"
+        }
+      ]
+    },
+    {
+      "sectionNumber": 48,
+      "text": "Ohne Vorwarnung stößt eine furchtbare Erscheinung auf dem\nRücken eines Kraan aus dem morgendlichen Himmel herab. Die\nKreatur ist in einen dunkelroten Kapuzenmantel gehüllt, und ihr\nhöllischer Schrei lässt dir das Blut in den Adern gefrieren. Es handelt\nsich um einen Vordak, einen grausamen Hauptmann der Schwarzen\nLords. Schon stürzen sich er und sein geflügeltes Reittier auf dich,\nund du bist gezwungen, bis zum Tod gegen sie zu kämpfen.Wenn du nicht über die Kai-Disziplin Gedankensperre verfügst,\nmusst du 2 Punkte von deiner KAMPFSTÄRKE abziehen, denn der\nVordak greift dich sowohl mit einem mächtigen, schwarzen\nStreitkolben als auch mit seiner Gedankenkraft an.",
+      "actions": [
+        {
+          "type": "BATTLE",
+          "targetSection": 508,
+          "text": "Starte Kampf",
+          "battle": {
+            "enemy": [
+              {
+                "name": "Vordak und Kraan",
+                "battleStrength": 17,
+                "endurance": 25,
+                "thoughRayResistance": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sectionNumber": 49,
+      "text": "<p>Der Wald wird nun immer dichter, und der Weg, auf dem du dich\nbefindest, verschwindet zunehmend unter wild wucherndem\nDornengestrüpp.\nDann bemerkst du einen weiteren Pfad, der fast völlig verborgen im\nUnterholz in Richtung Osten führt. Da sich dein Weg hier im\nDornengestrüpp zu verlieren scheint, beschließt du dem neuen Pfad\nnach Osten zu folgen.\nDer Wald wird nun immer dichter, und der Weg, auf dem du dich\nbefindest, verschwindet zunehmend unter wild wucherndem\nDornengestrüpp.\nDann bemerkst du einen weiteren Pfad, der fast völlig verborgen im\nUnterholz in Richtung Osten führt. Da sich dein Weg hier im\nDornengestrüpp zu verlieren scheint, beschließt du dem neuen Pfad\nnach Osten zu folgen.\n</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "targetSection": 307,
+          "text": "Setze deinen Weg fort"
         }
       ]
     },
