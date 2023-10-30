@@ -1342,7 +1342,7 @@
     },
     {
       "sectionNumber": 48,
-      "text": "Ohne Vorwarnung stößt eine furchtbare Erscheinung auf dem\nRücken eines Kraan aus dem morgendlichen Himmel herab. Die\nKreatur ist in einen dunkelroten Kapuzenmantel gehüllt, und ihr\nhöllischer Schrei lässt dir das Blut in den Adern gefrieren. Es handelt\nsich um einen Vordak, einen grausamen Hauptmann der Schwarzen\nLords. Schon stürzen sich er und sein geflügeltes Reittier auf dich,\nund du bist gezwungen, bis zum Tod gegen sie zu kämpfen.Wenn du nicht über die Kai-Disziplin Gedankensperre verfügst,\nmusst du 2 Punkte von deiner KAMPFSTÄRKE abziehen, denn der\nVordak greift dich sowohl mit einem mächtigen, schwarzen\nStreitkolben als auch mit seiner Gedankenkraft an.",
+      "text": "Ohne Vorwarnung stößt eine furchtbare Erscheinung auf dem Rücken eines Kraan aus dem morgendlichen Himmel herab. Die Kreatur ist in einen dunkelroten Kapuzenmantel gehüllt, und ihr höllischer Schrei lässt dir das Blut in den Adern gefrieren. Es handelt sich um einen Vordak, einen grausamen Hauptmann der Schwarzen Lords. Schon stürzen sich er und sein geflügeltes Reittier auf dich, und du bist gezwungen, bis zum Tod gegen sie zu kämpfen.Wenn du nicht über die Kai-Disziplin Gedankensperre verfügst, musst du 2 Punkte von deiner KAMPFSTÄRKE abziehen, denn der Vordak greift dich sowohl mit einem mächtigen, schwarzen Streitkolben als auch mit seiner Gedankenkraft an.",
       "actions": [
         {
           "type": "BATTLE",
@@ -1363,7 +1363,7 @@
     },
     {
       "sectionNumber": 49,
-      "text": "<p>Der Wald wird nun immer dichter, und der Weg, auf dem du dich\nbefindest, verschwindet zunehmend unter wild wucherndem\nDornengestrüpp.\nDann bemerkst du einen weiteren Pfad, der fast völlig verborgen im\nUnterholz in Richtung Osten führt. Da sich dein Weg hier im\nDornengestrüpp zu verlieren scheint, beschließt du dem neuen Pfad\nnach Osten zu folgen.\nDer Wald wird nun immer dichter, und der Weg, auf dem du dich\nbefindest, verschwindet zunehmend unter wild wucherndem\nDornengestrüpp.\nDann bemerkst du einen weiteren Pfad, der fast völlig verborgen im\nUnterholz in Richtung Osten führt. Da sich dein Weg hier im\nDornengestrüpp zu verlieren scheint, beschließt du dem neuen Pfad\nnach Osten zu folgen.\n</p>",
+      "text": "<p>Der Wald wird nun immer dichter, und der Weg, auf dem du dich befindest, verschwindet zunehmend unter wild wucherndem Dornengestrüpp. Dann bemerkst du einen weiteren Pfad, der fast völlig verborgen im Unterholz in Richtung Osten führt. Da sich dein Weg hier im Dornengestrüpp zu verlieren scheint, beschließt du dem neuen Pfad nach Osten zu folgen. Der Wald wird nun immer dichter, und der Weg, auf dem du dich befindest, verschwindet zunehmend unter wild wucherndem Dornengestrüpp. Dann bemerkst du einen weiteren Pfad, der fast völlig verborgen im Unterholz in Richtung Osten führt. Da sich dein Weg hier im Dornengestrüpp zu verlieren scheint, beschließt du dem neuen Pfad nach Osten zu folgen. </p>",
       "actions": [
         {
           "type": "CHANGE_SECTION",
@@ -1714,6 +1714,59 @@
             265,
             265
           ]
+        }
+
+      ]
+    },
+    {
+      "sectionNumber": 130,
+      "text": "<p>Du springst auf und nimmst die Beine in die Hand – und keinen Augenblick zu früh, denn ein Hagel aus schwarzen Pfeilen kommt pfeifend aus dem Wald geflogen, und die Geschosse spicken den Boden genau an der Stelle, wo du eben noch gekauert hast.</p><p> Während du davonläufst, ziehst du deinen Umhang enger um dich und versuchst so mit dem dichten Laubwerk zu verschmelzen. Die ganze Gegend ist mit Giak verseucht, und dir ist klar, dass du so schnell wie möglich entkommen musst.</p><p>Mehr als eine Stunde lang läufst du ohne Pause, bis du schließlich auf einen Waldweg stößt, der nach Osten führt. Während du diesem Pfad folgst, hältst du aufmerksam Ausschau nach dem Feind.</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "text": "Weiter",
+          "targetSection": 16
+        }
+
+      ]
+    },
+    {
+      "sectionNumber": 132,
+      "text": "<p>Von deinem tödlichen Hieb getroffen, stößt der Giak-Hauptmann einen gurgelnden Todesschrei aus. Während sein massiger Körper an der Brustwehr des Turms zusammensackt und schließlich regungslos auf dem Wehrgang liegen bleibt, steckst du deine blutbefleckte Waffe in die Scheide und widmest deine Aufmerksamkeit wieder dem Fuß der Kristallturmspitze.</p><p> Rasch greifst du nach unten, schiebst das Geheimfach auf und drückst den metallenen Kontrollschalter. Mit einem ohrenbetäubenden Krachen flackert das kristallene Leuchtfeuer auf.</p><p> Seine facettenreiche Oberfläche sendet einen gebündelten Strahl orangefarbenen Lichts aus, der durch den düsteren Himmel nach Südosten schießt und innerhalb eines Wimpernschlags die ferne Stadt Holmgard erreicht hat. Über den Lärm der Schlacht, die unter dir tobt, erhebt sich nun ein vielstimmiges Wutgeheul. Deine Feinde haben in ihrem Ansinnen, den Alarm zu verhindern, versagt, und sie wissen, dass ihr rachsüchtiger Herr – der Schwarze Lord Zagarna – einen furchtbaren Preis für ihr Scheitern einfordern wird.</p><p> Ihre Schreie erfüllen dich mit Freude, doch die Vollendung deiner Aufgabe bringt nun erneute Gefahr mit sich: Die Kraan, die bisher um den Turm ihre Kreise gezogen haben, sammeln sich jetzt, um sich an dir zu rächen. Du musst das Turmdach schleunigst verlassen, wenn du ihrem drohenden Angriff entgehen willst.</p> ",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "text": "Verlasse das Dach durch die Luke ",
+          "targetSection": 503
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "text": "Durchsuch die Leiche",
+          "targetSection": 309
+        }
+
+      ]
+    },
+    {
+      "sectionNumber": 133,
+      "text": "Als der Kräuterhändler sieht, dass du seinen Sohn erschlagen hast, dreht er sich um und flieht durch die Hintertür aus dem Laden. Du versuchst die Verfolgung aufzunehmen, musst jedoch schnell feststellen, dass die Tür von der anderen Seite her verriegelt wurde. Du verfluchst diesen feigen Komplizen und kehrst zu dem Leichnam des Mannes zurück, der dich fast getötet hätte. Als du seine Kleidung durchsuchst, findest du im Innern seiner Weste einen Steckbrief. Die beiden Männer, die darauf abgebildet sind, sehen genau aus wie der tote Jüngling und der Alte, der gerade entkommen ist. Der Text unter den Bildern weist sie als Mordral den Mörder und seinen wahnsinnigen Sohn Vort aus. Bei der Durchsuchung des Ladens entdeckst du einen Dolch, 12 Goldkronen in einer Geldbörse, die Mordral bei seiner überstürzten Flucht verloren hat, sowie weitere 4 Goldkronen in einem Holzkästchen hinter dem Paravent. Als du den feuchtkalten Keller durchsuchst, machst du einen weiteren, noch viel grausigeren Fund: Dort liegt die Leiche des wahren Ladenbesitzers, der von Mordral ermordet wurde, als dieser mit seinem bösartigen Sohn vor zwei Tagen hier auftauchte. Nach dieser schrecklichen Entdeckung kehrst du in den Laden zurück und untersuchst die Tränke und den Zauberstab, bemerkst aber schnell, dass es sich dabei ausnahmslos um Fälschungen handelt. Tatsächlich ist der ganze Laden voll mit billigen Imitaten und Quacksalbermitteln. Betrübt und wütend über dein Erlebnis verlässt du das Geschäft und schlägst die knarrende Tür hinter dir zu. Als du draußen auf der Hauptstraße auf eine Gelegenheit wartest, dich durch die dichte Menschenmenge zu drängen, fällt dir über deinem Kopf ein verblasstes Straßenschild an der Wand auf. Darauf steht: Schattenallee. Soeben hast du zum ersten – und hoffentlich letzten – Mal Bekanntschaft mit der verruchtesten Gegend Holmgards gemacht.",
+      "actions": [
+        {
+          "type": "MODIFY_ATTRIBUTE",
+          "value": 16,
+          "attribute": "GOLD",
+          "mandatory": true,
+          "text": "Nimm das Gold"
+        },
+        {
+          "type": "TAKE_WEAPON",
+          "weaponId" : "DAGGER",
+          "text": "Nimm den Dolch"
+        },
+        {
+          "type": "CHANGE_SECTION",
+          "text": "Weiter",
+          "targetSection": 9
         }
 
       ]
