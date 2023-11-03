@@ -1373,6 +1373,28 @@
       ]
     },
     {
+      "sectionNumber": 50,
+      "text": "<p>Vorsichtig bewegst du dich durch das Dorf und folgst den Schildern,\num den Weg zur Schmiede zu finden. Dort angekommen, benutzt du\nden Eisenschlüssel, um die verschlossene Tür zu öffnen. Drinnen\nstellst du fest, dass die Schmiede dem Dorf gleichzeitig auch als\nWerkzeugladen dient: Die Regale sind angefüllt mit Bergwerks- und\nLandwirtschaftsgeräten. Außerdem finden sich hier noch eine\nKohlenfeuerstelle für die Schmiedearbeiten und ein kleiner Vorrat\nLampenöl in Steingutflaschen.\nAuf einer Bank hinter der Feuerstelle entdeckst du schließlich, was\ndu hier zu finden hofftest: das Zahnrad. (Vermerke es als\nRucksackgegenstand auf deinem Aktionsblatt. Wenn dein Rucksack\nbereits voll ist, musst du einen Gegenstand deiner Wahl ablegen, um\nPlatz zu schaffen.) Außerdem findest du zwei weitere Gegenstände,\ndie sich als nützlich erweisen könnten: einen Feuerstein und einen\nEisendorn.\nDeine Begeisterung über den Fund des Zahnrades wird jedoch rasch\ngedämpft, als du von draußen die Geräusche marschierender\nTruppen hörst. Es sind die stampfenden Schritte von Giakstiefeln,\nund sie kommen direkt auf die Schmiede zu. Durch ein Astloch in\nder hölzernen Wand erspähst du ein gutes Dutzend Giak, die sich in\nzwei Reihen vor der Vordertür formieren. Sie stehen mit dem\nRücken zum Gebäude, und obwohl nichts darauf hindeutet, dass sie\nvorhaben, die Schmiede zu durchsuchen, hindert dich doch ihre\nAnwesenheit daran, das Haus wieder zu verlassen.\nDie Minuten verstreichen und du wirst langsam ungeduldig. Wenn\ndu dein Versprechen einlösen willst, musst du diesen Ort bald\nverlassen. Die Giak haben sich seit ihrer Aufstellung draußen noch\nnicht bewegt, und so beschließt du den Versuch zu wagen, durch die\nhölzerne Rückwand zu fliehen. Es gibt hier viele Werkzeuge, mit\ndenen du eine Öffnung schaffen könntest, aber mit keinem davon\nwird dies leise vonstatten gehen. Besorgt darüber, dass das kleinste\nGeräusch die Giak auf dich aufmerksam machen könnte, wird dir\nklar, dass nur ein Ablenkungsmanöver dir helfen kann. Ein\nvielversprechender Plan reift in dir heran, der dich allerdings auch in\nSchwierigkeiten bringen könnte, falls er fehlschlägt.\nDu nimmst einen der Ölkrüge vom Regal und gießt den Inhalt rings\num die Vordertür. Dann greifst du dir eine große Axt aus dem\nWerkzeugschrank und stellst sie gegen die Rückwand. Mit einem\nStück glühender Kohle entzündest du das Öl, und sofort fangen die\nTür und der Holzboden Feuer. Der Rauch und das laute Prasseln der\nFlammen haben schon bald die Aufmerksamkeit der Giak erregt, die\nden Lärm nun noch mit ihren Alarmrufen verstärken. Innerhalb\nweniger Minuten brennt die Schmiede lichterloh. Nahezu jeder Giak\nim Dorf kommt herbeigelaufen, um zu sehen, was vor sich geht, doch\nkeiner macht sich die Mühe, die Flammen zu löschen. Du nutzt das\nFeuer und den Lärm als Ablenkung und schlägst mit der Axt rasch\nein Loch in die Rückwand, durch das du aus der brennenden\nSchmiede entkommst.</p>",
+      "actions": [
+        {
+          "type": "CHANGE_SECTION",
+          "randomSection": [
+            91,
+            91,
+            91,
+            91,
+            91,
+            435,
+            435,
+            435,
+            435,
+            435
+          ],
+          "text": "Weiter"
+        }
+      ]
+    },
+    {
       "sectionNumber": 58,
       "text": "<p>Du rennst, so schnell du kannst, um Sternenfeuer einzuholen, während dieser auf das Haupttor der Abtei zuläuft.</p><p> Gleichzeitig, und ohne dabei seinen Schritt zu verlangsamen, zieht er mit der Linken sein Schwert und löst mit der Rechten eine zweiblättrige Streitaxt von seinem Gürtel.</p><p> Dann wirft er sich todesmutig den kreischenden Giak entgegen, die durch den Spalt zwischen den Toren eindringen.</p><p> Mit tödlicher Schnelligkeit versetzt er dem ersten seiner Gegner einen Aufwärtshieb mit der Axt, der das hässliche graue Gesicht vom Kinn bis zum Scheitel spaltet.</p><p> Als der tote Giak in einer Fontäne schwarzen Blutes zurücktaumelt, lässt Sternenfeuer laut und kraftvoll seinen Schlachtruf „Für Sommerlund und die Kai!“ erschallen.</p><p> Dann setzt er seinen Angriff fort.</p><p> Mit einer Reihe tödlicher Schwerthiebe enthauptet er die drei nachfolgenden Giak, doch Zeit zum Verschnaufen bleibt ihm kaum: Nur wenige Augenblicke später drängt ein Dutzend weiterer Giak vorwärts, begierig, deinen Kai-Meister durch ihre schiere Übermacht in die Knie zu zwingen.</p><p><br/><br/>{IMG:58}<br/><span class='text-center'><i>Der Anführer befiehlt fünfen seiner Späher, dich anzugreifen, und sofort eröffnen sie mit ihren Bögen das Feuer auf dich.</p><p></i></span><br/><br/>Einer dieser Giak, bewaffnet mit einem Speer, löst sich von der Gruppe und stürzt auf dich zu, um dich von deinem umzingelten Meister fernzuhalten.</p><p> Du schlägst nach seinem Kopf, doch dein Hieb war nicht schnell genug, um die Kreatur zu treffen.</p><p> <span class='text-danger'><i><b>(Du verlierst 1 AUSDAUERPUNKT)</b></i></span><br/><br/>Der Giak duckt sich, holt mit seinem Speerschaft in einem weiten Bogen aus und trifft dich am Knie, so dass du zu Boden stürzt.</p><p> Es gelingt dir zwar, deine Waffe festzuhalten, doch bevor du wieder auf den Beinen bist, ist der Giak heran und hebt seinen Speer, um dir den Todesstoß zu versetzen.</p>",
       "actions": [
